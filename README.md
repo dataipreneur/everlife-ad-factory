@@ -1,4 +1,4 @@
-# Everlife creative skills
+# Everlife ad factory
 
 Claude Code skills that make compliant EverlifeMD ads, one skill per product, all sharing one toolkit.
 
@@ -18,8 +18,8 @@ install.sh                    links every skill into ~/.claude/skills/
 ```
 
 ## Setup (each person, once)
-1. `git clone <repo-url> ~/everlife-creative-skills`
-2. `bash ~/everlife-creative-skills/install.sh` (links the skills; an older unlinked copy is moved to `~/.claude/skills-backup/`)
+1. `git clone <repo-url> ~/everlife-ad-factory`
+2. `bash ~/everlife-ad-factory/install.sh` (links the skills; an older unlinked copy is moved to `~/.claude/skills-backup/`)
 3. `bash ~/.claude/skills/everlife-restora-z/core/scripts/preflight.sh --install`
 4. Higgsfield: `higgsfield auth login`, Everlife workspace. Creatify: connect the creatify-ad-agent plugin.
 
