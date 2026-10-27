@@ -1,0 +1,7 @@
+{
+ "project_id": "50a9f279-0648-4f29-a90d-3974daaa5017",
+ "bottle": "assets/b385ac83_rz_bottle.png",
+ "capsule": "assets/2754c1c0_rz_capsule.png",
+ "note": "Persistent Creatify project with the real Restora-Z renders + the type specimen already imported. Reuse it for every image; pass aspect_ratio per job. It belongs to the account that created it: if composer_project_get fails (e.g. a teammate's account), create a new project, upload + import assets/rz_bottle.png, assets/rz_capsule.png and assets/type_specimen.png, and rewrite the paths in this file.",
+ "type_specimen": "assets/2cae0c93_type_specimen.png"
+}

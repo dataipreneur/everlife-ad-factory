@@ -1,0 +1,23 @@
+{
+  "_note": "Verbatim Trustpilot reviews (✅ list of reviews.md), captured 2026-10-27 from https://www.trustpilot.com/review/everlifemd.com?search=restora. Display names = first name + last initial. Text must never be edited; 'excerpt' only cuts whole sentences with '…'. Refresh before each campaign.",
+  "R1": {"name": "Mike Z.", "initials": "MZ", "count": "4 reviews", "stars": 5, "date": "Oct 15, 2026",
+         "title": "A Great Night's Sleep with Restora-Z",
+         "text": "I have had sleeping problems for years. After finding Everlife MD and Restora-Z, I am getting more good sleep than I have in many years, which is extremely important for my overall health."},
+  "R2": {"name": "Linda", "initials": "LI", "count": "2 reviews", "stars": 5, "date": "Sep 9, 2026",
+         "title": "I have been taking Restora Z for the…",
+         "text": "I have been taking Restora Z for the past few months. I have been able to sleep through the night, I wake up refreshed and this has allowed me to have productive days."},
+  "R3": {"name": "David", "initials": "DA", "count": "1 review", "stars": 5, "date": "Sep 11, 2026",
+         "title": "Love the product",
+         "text": "Love the product. Definitely helps me fall and stay asleep. I've struggled with sleep my whole life. So I've tried many products. Most of them ruin my morning. Restora Z helps me wake refreshed and ready to go. I'll be using it ongoing!!!",
+         "excerpt": "Love the product. Definitely helps me fall and stay asleep. … Restora Z helps me wake refreshed and ready to go."},
+  "R4": {"name": "Sandra G.", "initials": "SG", "count": "2 reviews", "stars": 5, "date": "Oct 2, 2026",
+         "title": "Everlife has trusted professionals and…",
+         "text": "Everlife has trusted professionals and a very supportive customer service staff. I'm loving my Restora-Z…, best sleep I've had in years. Customer service is very informative and responsive."},
+  "R6": {"name": "Deionne M.", "initials": "DM", "count": "1 review", "stars": 5, "date": "Oct 4, 2026",
+         "title": "Great customer service!",
+         "text": "This company is extremely good at communicating and handling any concerns right away. The Restora-Z product definitely helps me sleep. I've had little success with other sleep products. I will definitely continue to order with the company.",
+         "excerpt": "This company is extremely good at communicating and handling any concerns right away. The Restora-Z product definitely helps me sleep."},
+  "R7": {"name": "Kathleen", "initials": "KA", "count": "5 reviews", "stars": 4, "date": "Sep 17, 2026",
+         "title": "Restora Z has helped me sleep better…",
+         "text": "Restora Z has helped me sleep better for sure"}
+}

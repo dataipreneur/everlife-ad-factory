@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+# Everlife ad factory preflight (shared): checks every connection and tool, prints ✅ / ❌ with the fix.
+# Run it through a product skill's core link so it finds that skill's product.env:
+#   bash <skill-dir>/core/scripts/preflight.sh            # check only
+#   bash <skill-dir>/core/scripts/preflight.sh --install  # also install the finishing toolkit (after the user agrees)
+# (or set SKILL_DIR=<skill-dir> when running it from the repo directly)
+SKILL="${SKILL_DIR:-$(cd "$(dirname "$0")/../.." && pwd)}"
+CORE="$SKILL/core"
+if [ ! -f "$SKILL/product.env" ]; then
+  echo "❌ No product.env in $SKILL (run via <skill-dir>/core/scripts/preflight.sh or set SKILL_DIR)"; exit 1
+fi
+. "$SKILL/product.env"
+T="${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}"
+OUT="$OUT_DIR"
+LOG="$COPY_LOG"
+ok=0; bad=0
+pass() { echo "✅ $1"; ok=$((ok+1)); }
+fail() { echo "❌ $1"; echo "   → fix: $2"; bad=$((bad+1)); }
+
+echo "== $PRODUCT_NAME ad factory preflight =="
+
+# 1. Higgsfield CLI
+if command -v higgsfield >/dev/null 2>&1; then
+  pass "Higgsfield CLI installed ($(higgsfield version 2>/dev/null | head -1))"
+  # 2. logged in + workspace
+  WS=$(higgsfield workspace list 2>&1)
+  if echo "$WS" | grep -qiE "not authenticated|session expired|login"; then
+    fail "Higgsfield not logged in" "run:  ! higgsfield auth login"
+  else
+    SEL=$(echo "$WS" | awk '/✓/{print $2; for(i=1;i<=NF;i++) if($i ~ /^[0-9.]+$/) c=$i} END{}' | head -1)
+    CRED=$(echo "$WS" | awk '/✓/{for(i=1;i<=NF;i++) if($i ~ /^[0-9]+(\.[0-9]+)?$/) c=$i; print c}' | head -1)
+    if echo "$WS" | grep "✓" | grep -qi everlife; then
+      pass "Workspace = Everlife (shared team credits: ${CRED:-?})"
+      if [ -n "$CRED" ] && awk "BEGIN{exit !($CRED < 100)}"; then
+        fail "Low credits (${CRED})" "tell the creative lead before generating"
+      fi
+    else
+      fail "Selected workspace is '${SEL:-unknown}', not Everlife" "higgsfield workspace list → select the Everlife workspace (never spend personal credits)"
+    fi
+    # 3. Marketing Studio product
+    PID=$(higgsfield marketing-studio products list --json 2>/dev/null | python3 -c "
+import json,sys
+try:
+  d=json.load(sys.stdin); d=d.get('items',d) if isinstance(d,dict) else d
+  print(next((p['id'] for p in d if p.get('title','').lower()=='$(echo "$PRODUCT_NAME" | tr '[:upper:]' '[:lower:]')'),''))
+except Exception: print('')")
+    if [ -n "$PID" ]; then
+      pass "$PRODUCT_NAME registered in Marketing Studio (product id $PID)"
+      echo "[\"$PID\"]" > "$SKILL/assets/product_ids.json"
+    else
+      fail "$PRODUCT_NAME not registered in Marketing Studio (needed for realistic UGC)" \
+           "B=\$(higgsfield upload create \"$SKILL/assets/$BOTTLE\" --json | grep -oE '[0-9a-f-]{36}' | head -1); C=\$(higgsfield upload create \"$SKILL/assets/$PILL\" --json | grep -oE '[0-9a-f-]{36}' | head -1); higgsfield marketing-studio products create --title \"$PRODUCT_NAME\" --image \$B --image \$C"
+    fi
+  fi
+else
+  fail "Higgsfield CLI not installed" "run:  ! curl -fsSL https://raw.githubusercontent.com/higgsfield-ai/cli/main/install.sh | sh   (then: ! higgsfield auth login)"
+fi
+
+# 4. Finishing toolkit
+if [ "$1" = "--install" ]; then
+  echo "… installing finishing toolkit into $T"
+  mkdir -p "$T/assets"
+  cp "$CORE"/tools/*.py "$T/" && cp -R "$CORE"/tools/assets/. "$T/assets/"
+  [ -f "$T/assets/type_specimen.png" ] || cp "$SKILL/assets/type_specimen.png" "$T/assets/"
+  [ -x "$T/venv/bin/python" ] || python3 -m venv "$T/venv"
+  "$T/venv/bin/pip" -q install --disable-pip-version-check imageio-ffmpeg faster-whisper pillow numpy "opencv-python-headless==4.10.0.84" >/dev/null 2>&1
+fi
+if [ -f "$T/full_layout.py" ] && [ -f "$T/finish_modern.py" ] && [ -f "$T/finish_batch.py" ] && [ -f "$T/assets/fonts/InstrumentSerif-Regular.ttf" ] && [ -f "$T/assets/proof_row_clear.png" ] && [ -f "$T/assets/footer/badge_dark.png" ]; then
+  pass "Finishing scripts present ($T)"
+else
+  fail "Finishing scripts missing in $T" "bash \"$0\" --install"
+fi
+if [ -x "$T/venv/bin/python" ] && FF=$("$T/venv/bin/python" -c "import imageio_ffmpeg,faster_whisper,PIL;print(imageio_ffmpeg.get_ffmpeg_exe())" 2>/dev/null); then
+  pass "Toolkit venv ready (ffmpeg + whisper + Pillow)"; echo "   FF=$FF"; echo "   PY=$T/venv/bin/python"
+else
+  fail "Toolkit venv missing or incomplete" "bash \"$0\" --install"
+fi
+
+# 5. Product renders
+for f in $RENDERS; do
+  [ -f "$SKILL/assets/$f" ] || fail "Missing render $f" "copy it from the Drive asset library ($DRIVE_FOLDER folder) into $SKILL/assets/"
+done
+[ -f "$SKILL/assets/$BOTTLE" ] && [ -f "$SKILL/assets/$PILL" ] && pass "Real product renders present (bottle + pill)"
+
+# 6. Copy log + output folder
+mkdir -p "$OUT"
+if [ ! -f "$LOG" ]; then
+  mkdir -p "$(dirname "$LOG")"
+  if [ -f "$SKILL/assets/copy-log-seed.md" ]; then
+    cp "$SKILL/assets/copy-log-seed.md" "$LOG"
+    pass "Copy log seeded from the bundle ($(grep -c '^|' "$LOG") rows already used: $LOG)"
+  else
+    printf "# $PRODUCT_NAME copy log — lines already used (do not reuse)\n\n"'| Ad | Header | VO lines | End head | CTA |\n|---|---|---|---|---|\n' > "$LOG"
+    pass "Copy log created ($LOG)"
+  fi
+else
+  pass "Copy log found ($(grep -c '^|' "$LOG") rows)"
+fi
+pass "Output folder: $OUT"
+
+# 7. Optional connectors (informational)
+echo "ℹ️  Optional: Google Drive connector (pull new renders / reference ads), Playwright browser (study reference videos)."
+
+echo "== $ok passed, $bad to fix =="
+[ $bad -eq 0 ]
