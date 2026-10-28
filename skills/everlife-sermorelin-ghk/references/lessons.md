@@ -46,6 +46,13 @@ Compliance traps:
 - What worked first time: real 500 bottle label (incl. "500 MCG"), the green "S" tablet, exact Tier A strings, clothed
   mature talent, text-only 3-in-1 tiles (no made-up ingredient pills), "Save up to 47%" badge.
 
+## Video discipline (creative lead, 2026-10-27; from the Restora-Z lessons, applies to every product)
+- A video costs 45–75 Higgsfield credits (= 45–75 Creatify images). Review the script AND the full prompt line by line, then
+  review again, before offering "Approve & generate". Never send a first draft to the video model.
+- Realistic people talking/acting → Marketing Studio UGC (75 cr / 15 s, 720p). Seedance humans were rejected; Seedance only for
+  comedic, stylised or animated ideas.
+- Prove the angle with a 1-credit static before spending on a video of it.
+
 ## Footer + legibility
 - Proof is ALWAYS the approved footer art (`tools/assets/footer/`), never typed stars, never generated.
 - Type minimums: 24 px (disclaimer), 36 px (subline), 72 px (headline), cards 32+.

@@ -190,3 +190,7 @@ Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extr
 - `skills/everlife-sermorelin-ghk/assets/sghk1000_bottle.png`: transparent 1000 bottle made locally from the user's "1000 on white"
   JPG (white removed from the outer edge only; label untouched; 1 px edge trim to remove a JPEG fringe). Checked on dark, grey
   and light backgrounds. Marked as a stand-in in MISSING_RENDERS.md until the official NOBG file arrives. 1000 videos unblocked.
+
+## 2026-10-28 — Sermorelin GHK lessons: video discipline
+Copied Mitansh's "Video discipline" lessons (creative lead, 2026-10-27) into the Sermorelin GHK `lessons.md`: review script and
+prompt twice before approval; Marketing Studio for real people; prove the angle with a 1-credit static first. Restora unchanged.
