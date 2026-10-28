@@ -9,6 +9,7 @@ core/                         shared by every product skill
   references/                 global-rules.md, static-refs/ (generic reference ads by framework)
 skills/
   everlife-restora-z/         one folder per product
+  everlife-sermorelin-ghk-1000/  (renders still missing: see its assets/MISSING_RENDERS.md)
     SKILL.md                  the producer flow
     product.env               product name, renders, output folder, copy log
     assets/                   real bottle + pill renders, Creatify project, copy-log seed
@@ -35,8 +36,14 @@ install.sh                    links every skill into ~/.claude/skills/
 3. The product must have an ad disclaimer on file in the creative bible (Part A products only); otherwise the skill stops at the compliance gate.
 4. `bash install.sh`, then run its preflight.
 
-## Known Restora-specific bits still in core (fix before a second product ships)
-- `core/tools/build_layers.py`: Restora disclaimer, benefits, CTA, ingredient claims and render names are hard-coded constants.
-- `core/tools/composite.py` and `full_layout.py`: default paths point at `~/.claude/skills/everlife-restora-z/` (assets, reviews.json).
-- `core/tools/finish_modern.py`, `review_burst.py`, `styles.py`, `core/scripts/finish_image.py`: Restora-Z / sleep defaults and examples.
+## Product-specific settings in core (2026-10-28)
+Video finishing (`full_layout.py` + `styles.py` + `review_burst.py`) takes every product value from the job's `copy.json`:
+copy, disclaimer, render names, plus `keep_case` (names never re-cased, e.g. "GHK"), `highlight` (review-burst regex) and
+`reviews_json`. `composite.py` reads the renders from `$EVERLIFE_SKILL_DIR/product.env`. All of these fall back to the
+Restora-Z values, so old Restora jobs render unchanged. A new product's `finishing.md` must set them.
+
+Still Restora-only (don't use for other products until generalised):
+- `core/tools/finish_modern.py`: its "keep type off the product" detector looks for Restora's teal bottle + blue capsule; notify card has a moon icon. Other products use `finish_batch.py`.
+- `core/tools/build_layers.py` standalone run (`__main__`): the old Restora layer builder. `full_layout.py` overrides its constants from copy.json.
+- `core/scripts/finish_image.py`: Restora defaults (e.g. kicker "SLEEP NOTES"); set every key in copy.json. `compare` layout is Restora-vs-Ambien only.
 - Copy logs live per person in `~/Everlife-Creative/`; they are not shared through git.

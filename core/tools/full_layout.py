@@ -13,7 +13,10 @@ usage:
 <project_dir>/copy.json holds the product copy (all of it must come from the bible / brief):
   {"head": ["LINE 1", "LINE 2"], "sub": "...", "end_head": ["...", "..."], "benefits": ["..", "..", ".."],
    "cta": "EXPLORE ...", "disclaimer": "<verbatim bible ad disclaimer>",
-   "bottle": "bottle.png", "pill": "pill.png", "vocab": "product names to help whisper"}
+   "bottle": "bottle.png", "pill": "pill.png", "vocab": "product names to help whisper",
+   "reviews_json": "<skill>/references/reviews.json", "highlight": "<product-name regex for the review burst>",
+   "keep_case": ["names styles.py must not re-case"]}
+  (the last three default to Restora-Z values so older jobs render unchanged)
 <project_dir>/source/ holds the bottle and pill renders (transparent PNGs from the Drive asset library).
 Output: <project_dir>/out/<tag>_15s_9x16.mp4
 """
@@ -34,7 +37,7 @@ ap.add_argument("--zoom", type=float, default=1.0, help="punch in, anchored to t
 ap.add_argument("--reviews", default="", help="review-burst insert: comma list of review ids from reviews.json, e.g. R1,R3,R4,R2")
 ap.add_argument("--reviews-at", type=float, default=9.5, help="review burst start (s)")
 ap.add_argument("--reviews-dur", type=float, default=2.4, help="review burst length (s)")
-ap.add_argument("--reviews-json", default=os.path.expanduser("~/.claude/skills/everlife-restora-z/references/reviews.json"))
+ap.add_argument("--reviews-json", default="", help="default: copy.json reviews_json, else Restora-Z's")
 a = ap.parse_args()
 P = os.path.abspath(a.project)
 
@@ -51,6 +54,8 @@ import build_layers as bl  # noqa: E402
 C = json.load(open(f"{P}/copy.json"))
 bl.END_HEAD, bl.BENEFITS, bl.CTA_TEXT = C["end_head"], C["benefits"], C["cta"]
 bl.DISCLAIMER, bl.BOTTLE, bl.PILL = C["disclaimer"], C["bottle"], C["pill"]
+REVIEWS_JSON = os.path.expanduser(a.reviews_json or C.get("reviews_json")
+                                  or "~/.claude/skills/everlife-restora-z/references/reviews.json")
 
 L = f"{P}/layers_full"
 os.makedirs(L, exist_ok=True)
@@ -315,7 +320,8 @@ burst = None
 if a.reviews:
     # verbatim Trustpilot review cards slamming in (covers the video + captions for ~dur s; proof bar stays on top)
     import review_burst
-    R = json.load(open(a.reviews_json))
+    review_burst.HIGHLIGHT = C.get("highlight", review_burst.HIGHLIGHT)
+    R = json.load(open(REVIEWS_JSON))
     bdir = f"{L}/review_burst"
     shutil.rmtree(bdir, ignore_errors=True)
     nfr = review_burst.render(R, a.reviews.split(","), bdir, 1080, 1920, 24, a.reviews_dur)

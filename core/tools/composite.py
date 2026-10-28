@@ -10,7 +10,15 @@ import numpy as np
 from PIL import Image, ImageFilter, ImageOps, ImageChops
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SKILL_ASSETS = os.path.expanduser("~/.claude/skills/everlife-restora-z/assets")
+# renders default to the product skill named by EVERLIFE_SKILL_DIR (its product.env BOTTLE/PILL); else Restora-Z
+SKILL_DIR = os.path.expanduser(os.environ.get("EVERLIFE_SKILL_DIR", "~/.claude/skills/everlife-restora-z"))
+SKILL_ASSETS = f"{SKILL_DIR}/assets"
+ENV = {}
+if os.path.exists(f"{SKILL_DIR}/product.env"):
+    for ln in open(f"{SKILL_DIR}/product.env"):
+        k, _, v = ln.split("#")[0].partition("=")
+        if v.strip():
+            ENV[k.strip()] = v.strip().strip('"')
 SIZES = {"1:1": (1080, 1080), "4:5": (1080, 1350), "9:16": (1080, 1920)}
 
 
@@ -73,8 +81,8 @@ def main():
     ap.add_argument("--height", type=float, default=0.34)
     ap.add_argument("--capsule", default="right", choices=["right", "left", "none"])
     ap.add_argument("--light", default="right", choices=["left", "right"])
-    ap.add_argument("--bottle", default=f"{SKILL_ASSETS}/rz_bottle.png")
-    ap.add_argument("--pill", default=f"{SKILL_ASSETS}/rz_capsule.png")
+    ap.add_argument("--bottle", default=f"{SKILL_ASSETS}/{ENV.get('BOTTLE', 'rz_bottle.png')}")
+    ap.add_argument("--pill", default=f"{SKILL_ASSETS}/{ENV.get('PILL', 'rz_capsule.png')}")
     a = ap.parse_args()
     W, H = SIZES[a.ratio]
     scene = ImageOps.fit(Image.open(a.scene).convert("RGB"), (W, H), Image.LANCZOS).convert("RGBA")

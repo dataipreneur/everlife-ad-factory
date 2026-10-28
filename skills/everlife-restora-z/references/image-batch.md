@@ -19,9 +19,19 @@ disclaimer (creative lead 2026-10-27: "35% smaller and transparent").
   "Hard NO conflict" (Insomnia Solved, Knock Out Insomnia, The Last Sleep Medication…, Non-Addictive Safe Long-Term).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
-**References (rework freely):** headlines, hooks and the headline bank are tone examples. Write fresh, punchy headlines:
-wordplay, a twist, a short line in the style of the reference ad. Every claim inside must still be approved. Lead with
-"sleep" where it reads naturally (bible creative direction), not forced. Never repeat a headline in the copy log.
+> ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
+> `_originals/2026-10-28/`). It replaces the 2026-10-27 "rework freely" rule because the global gate (CLAUDE.md, which ranks
+> above skills) says headlines come only from the bible/brief and new hooks need explicit approval. Remove this note once
+> the creative lead and Jeremy confirm, or revert if they don't.
+
+**Headline tiers:**
+- **Tier A (default):** a bible headline/hook (product page or headline bank) word for word, or lightly trimmed, never a
+  line flagged "Hard NO conflict", "Weak headline" or "Pending approval". Lead with "sleep" where it reads naturally.
+- **Tier B (max 2 per batch):** fresh wording (wordplay, a twist) whose every claim maps to an approved claim, **or** a
+  winner's headline that isn't in the bible. Mark it **PROPOSED** in the batch table; it needs the user's explicit OK for
+  that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
+- Never repeat a headline in the copy log. When unused Tier A headlines run low, say so and ask whether to allow more
+  Tier B or request new approved headlines from Jeremy.
 
 ## 1. The frameworks (reference ads in `core/references/static-refs/<folder>/`, overview: `core/references/static-refs/OVERVIEW.jpg`)
 | Code | Framework | Folder | Everlife recipe |
@@ -50,9 +60,11 @@ visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which ma
    **Never ask the user for pain points or style here.** Claude picks them automatically from the bible: a different approved
    pain point per ad where it fits, each paired with its matching approved claim. Show the picks in the batch table instead.
 2. Read the bible + copy log (one cat). For each slot: pick a framework, **look at 1 reference ad from its folder** (Read the jpg),
-   and write: concept (1 line), headline (fresh, compliant), up to 3 short supporting lines (approved claims, exact),
-   and the prompt (template below). Show ONE compact table: # · framework · pain point (auto) · headline · supporting lines · ≈1 credit.
-   One AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click is the approval.**
+   and write: concept (1 line), headline (Tier A by default, see §0 ⚠ pending), up to 3 short supporting lines (approved
+   claims, exact), and the prompt (template below). Show ONE compact table: # · framework · pain point (auto) · headline ·
+   tier (A / B PROPOSED) · supporting lines · ≈1 credit.
+   One AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch
+   and its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, capsule, type_specimen], out='gen/b<date>_<n>.png',
    aspect_ratio=<MODEL_RATIO>)` from `assets/creatify.json`. **Max 4 in flight per project**: start 4, then the next as each finishes.
    MODEL_RATIO = the final ratio itself (4:5 → "4:5", 9:16 → "9:16", 1:1 → "1:1"). For "4:5 + 9:16", generate both ratios.
