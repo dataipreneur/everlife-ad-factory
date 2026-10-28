@@ -30,9 +30,49 @@ ls -la ~/.claude/skills/ | grep -i everlife
 cd ~/.claude/skills/everlife-restora-z 2>/dev/null && cat tools/*.py scripts/*.py | shasum | cut -c1-12
 ```
 - If it prints **`4d128f8be668`**: same tools as the tested baseline. Continue.
-- If it prints something else, or the folder layout differs (e.g. no `tools/` folder, or it's already a link into a repo):
-  **STOP.** Tell Mitansh, and send Priestley the `tools/` and `scripts/` folders so the before/after check can be run
-  against this exact version first.
+- If it prints something else (e.g. `3be3a588e802`, Mitansh's Mac on 2026-10-28): his version is **newer** than the one
+  this branch was built from. **Do NOT merge the pull request or run `install.sh`** (that would replace his newer tools
+  with older ones). Do **step 1b** instead, then come back to step 2.
+
+## Step 1b — Bring Mitansh's newer Restora work into the branch (only if step 1 didn't match)
+Goal: the repo gets his improvements, in the new layout, and the before/after check proves his output is unchanged.
+1. Backup first (step 2 below), then get the repo (step 3 below) and make a working branch:
+   `cd ~/everlife-ad-factory && git checkout product-config && git checkout -b mitansh-sync`
+2. See what he changed since the version this branch started from (the tag `restora-known-good`). Old → new layout:
+   `tools/` → `core/tools/` · `scripts/` → `core/scripts/` · `references/global-rules.md` → `core/references/global-rules.md` ·
+   `references/static-refs/` → `core/references/static-refs/` · everything else → `skills/everlife-restora-z/`.
+   ```bash
+   M=~/.claude/skills/everlife-restora-z; K=$(mktemp -d); git archive restora-known-good | tar -x -C "$K"
+   diff -rq "$M/tools" "$K/core/tools"; diff -rq "$M/scripts" "$K/core/scripts"
+   diff -rq "$M/references" "$K/skills/everlife-restora-z/references"; diff -q "$M/SKILL.md" "$K/skills/everlife-restora-z/SKILL.md"
+   diff -rq "$M/assets" "$K/skills/everlife-restora-z/assets"
+   ```
+   Show Mitansh the list and a one-line summary per changed file. Ignore pure path differences (`scripts/…` vs `core/scripts/…`).
+3. Port each change onto `mitansh-sync` (`git diff restora-known-good -- <file>` shows what this branch changed in the same file):
+   - **Tool code** → `core/tools/` / `core/scripts/`. Keep this branch's rule: **no product names or product values in
+     tool code.** Anything Restora-specific he added (text, colours, file names, the disclaimer) goes into
+     `skills/everlife-restora-z/product.json` and is read through `product.py`, like the existing settings.
+   - **Instructions, lessons, prompts, styles, bible, reviews, assets** → `skills/everlife-restora-z/…`. Keep this branch's
+     additions: `"product": "restora-z"` in copy.json templates, `--product` for `finish_batch.py`, and the headline-tier
+     note marked PENDING CREATIVE-LEAD CONFIRMATION (if his version changed headline rules, keep both and flag it to Priestley).
+   - New files of his: same mapping. Don't delete anything of his; if unsure, ask Mitansh.
+4. Prove it: render with **his** installed tools as the baseline and with the branch, and compare.
+   ```bash
+   cd ~/everlife-ad-factory; PY=~/Everlife-Creative/tools/venv/bin/python; T=$(mktemp -d); mkdir -p "$T/core"
+   cp -R ~/.claude/skills/everlife-restora-z/tools "$T/core/tools"; cp -R ~/.claude/skills/everlife-restora-z/scripts "$T/core/scripts"
+   $PY -I core/tests/regression.py run "$T/core" "$T/before"
+   $PY -I core/tests/regression.py run core "$T/after"
+   $PY -I core/tests/regression.py compare "$T/before" "$T/after"
+   $PY -I core/tests/regression.py smoke core "$T/smoke"
+   ```
+   Expected: only `video_editorial/layers_full/top.png` differs (the intended "Restora-Z" casing fix), unless one of his own
+   changes intentionally alters that output (say which). Smoke `12/12`. Anything else → fix the port, re-run. If his tools
+   fail the `run` itself (missing assets etc.), tell Priestley.
+5. Update the fingerprint line in step 1 of this file to his version's value, add a CHANGELOG entry ("Mitansh's
+   post-zip Restora changes ported"), commit, `git push -u origin mitansh-sync`, and open a pull request **into
+   `product-config`** for Priestley to review: `gh pr create --base product-config --head mitansh-sync` (or on github.com).
+6. Stop here. After Priestley merges that, PR #1 (`product-config` → `main`) contains both people's work; then do steps
+   5–8 below on this Mac (step 4 is already done).
 
 Also check (read-only) and report: does `~/.claude/CLAUDE.md` contain "EverlifeMD Creative Gates"? Does
 `~/.claude/everlife/creative-bible.md` exist? Both came with the original package and the skills rely on them. If either is

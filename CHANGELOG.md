@@ -97,3 +97,10 @@ At Priestley's request; one skill now covers Sermorelin GHK 500 mcg and 1000 mcg
   a real-job Restora check, rollback, day-to-day, and starting the Sermorelin GHK skill (what's ready / what's not).
 - Step 4 was run here exactly as written: `identical: 123 different: 1` (the intended casing fix), smoke 12/12.
 - README points existing zip users to it.
+
+## 2026-10-28 — Handoff: step 1b for Mitansh's newer version
+Mitansh's tool fingerprint is `3be3a588e802`, not the tested `4d128f8be668`, and matches no package on Priestley's Mac: he
+kept working after the 17:49 zip. HANDOFF-MITANSH.md gains step 1b: don't merge or install; on a `mitansh-sync` branch,
+diff his installed skill against `restora-known-good`, port his changes into the new layout (product values into
+product.json, not tool code), prove with the before/after check using HIS tools as the baseline, then open a pull
+request into `product-config` for Priestley to review.
