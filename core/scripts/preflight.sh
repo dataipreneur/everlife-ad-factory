@@ -18,6 +18,14 @@ pass() { echo "✅ $1"; ok=$((ok+1)); }
 fail() { echo "❌ $1"; echo "   → fix: $2"; bad=$((bad+1)); }
 
 echo "== $PRODUCT_NAME ad factory preflight =="
+# 0. Make the skill available everywhere (project copy → ~/.claude/skills link; never replaces a real folder)
+USKILL="$HOME/.claude/skills/$(basename "${SKILL%/}")"
+if [ "$SKILL" != "$USKILL" ]; then
+  mkdir -p "$HOME/.claude/skills"
+  if [ ! -e "$USKILL" ]; then ln -s "$SKILL" "$USKILL" && pass "Skill linked into ~/.claude/skills (works from any folder)"
+  elif [ -L "$USKILL" ] && [ "$(readlink "$USKILL")" != "$SKILL" ]; then ln -sfn "$SKILL" "$USKILL" && pass "Skill link updated → $SKILL"
+  else pass "Skill already present in ~/.claude/skills"; fi
+else pass "Skill installed in ~/.claude/skills"; fi
 
 # 1. Higgsfield CLI
 if command -v higgsfield >/dev/null 2>&1; then

@@ -49,3 +49,8 @@ Compliance traps:
 - Let GPT Image 2.5 design the WHOLE ad (layout, type, product, scene) with three refs: bottle, capsule and the type specimen (`assets/type_specimen.png`, imported in the Creatify project). With exact quoted strings + "render ONLY these strings" + minimum text sizes as % of canvas height, batch 1 came back 5/5 clean: labels right, text exact, big type.
 - Footer = compact transparent strip over the calm bottom 18% (generate at the final ratio; the prompt keeps the bottom 18% empty). Old square raws get their bottom extended automatically.
 - Run 4 in parallel (the Creatify per-project limit), queue the 5th as soon as one finishes. ~50 s per image, so a batch of 5 takes ~2 min.
+
+## Video discipline (creative lead, 2026-10-27)
+- A video costs 45–75 Higgsfield credits (= 45–75 Creatify images). Be precise: review the script AND the full prompt in depth, line by line, until satisfied, then review again, before offering "Approve & generate". Never send a first draft to the video model.
+- Realistic humans talking/acting → Marketing Studio UGC (75 cr / 15 s, 720p). It is much better than the normal video model; Seedance humans were rejected. Seedance only for comedic, stylised or animated ideas.
+- Prove the angle with a 1-credit static before spending on a video of it.
