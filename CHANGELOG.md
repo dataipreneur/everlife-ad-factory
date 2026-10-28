@@ -34,6 +34,19 @@ Later the same day:
 - `skills/everlife-sermorelin-ghk/SKILL.md` (original in `_originals/2026-10-28/`): description no longer claims
   "let's make Sermorelin ads"; it asks which product and points plain Sermorelin to `everlife-sermorelin`.
 
+Renders + tests (same day, evening):
+- Added `sermorelin_tablet.png` (round orange "S", small: ~250 px tablet) and `sermorelin1000_bottle.png` (+ a
+  white-flattened `_ref.jpg`) from the user's asset-library downloads; bottle checked against the live page (same jar and
+  label as the site's 500 mcg bottle). Injection images downloaded alongside were not added (no needles in creative).
+- `core/tools/full_layout.py`, `core/tools/styles.py` (originals in `_originals/2026-10-28/core/tools/`): new optional
+  product.json `pill_end_scale` (default 1) scales the end-card pill. Round tablets drawn at the capsule size covered the
+  label line and dwarfed the bottle. Plain Sermorelin sets 0.62; Restora-Z and Sermorelin GHK don't set it.
+- `core/tests/regression.py` (original in `_originals/2026-10-28/core/tests/`): smoke now also renders plain Sermorelin
+  (3 video looks, finish_batch, disclaimer guard, composite). tiktok uses a shorter third row (the long growth-hormone
+  row collided; a 30-character CTA overflows its button) — written into the skill's `finishing.md`.
+- Before/after (`main` core vs this branch): identical 124, different 0. Smoke: 18/18 passed. Preflight: 9/10 (Marketing
+  Studio registration pending). Not yet done: a real generated video.
+
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
 Diffed against the unzipped original (`~/Downloads/everlife-restora-z.zip`, 27 Oct 21:51); everything else was identical.

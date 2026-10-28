@@ -5,8 +5,8 @@
  "renders": {"bottle": "sermorelin1000_bottle.png", "pill": "sermorelin_tablet.png"},
  "strengths": {
   "_about": "Tablet assumed shared (confirm). renders.bottle is the default; a job showing the other strength sets \"bottle\" in copy.json.",
-  "1000": {"bottle": "sermorelin1000_bottle.png", "bottle_ref": "sermorelin1000_bottle_ref.jpg", "label": "double strength (read the label from the render)"},
-  "500": {"bottle": "sermorelin500_bottle.png", "bottle_ref": "sermorelin500_bottle_ref.jpg", "label": "read the label from the render"}
+  "1000": {"bottle": "sermorelin1000_bottle.png", "bottle_ref": "sermorelin1000_bottle_ref.jpg", "label": "SERMORELIN · 30 SUBLINGUAL TABS · 1000 MCG"},
+  "500": {"bottle": "sermorelin500_bottle.png", "bottle_ref": "sermorelin500_bottle_ref.jpg", "label": "SERMORELIN · 30 SUBLINGUAL TABS · 500 MCG"}
  },
  "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
  "keep_case": ["Sermorelin"],
@@ -17,5 +17,6 @@
  "notify_app": "Sermorelin",
  "notify_icon": "dot",
  "compare_allowed": false,
+ "pill_end_scale": 0.62,
  "product_zones": null
 }

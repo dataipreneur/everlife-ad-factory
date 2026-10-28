@@ -211,6 +211,35 @@ def smoke(core, out):
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "x.png")], False, "--product")
     expect("composite takes Restora-Z renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_rz.png"), "--product", "restora-z"], True)
+
+    # Plain Sermorelin (not GHK): single ingredient, so tiktok/editorial end-card rows carry its approved benefits
+    sp = {"product": "sermorelin", "head": ["DOUBLE STRENGTH", "SERMORELIN"], "sub": "Supports Energy + Stamina",
+          "end_head": ["STRENGTH FOR TODAY,", "VITALITY FOR LIFE"],
+          "benefits": ["Supports Energy + Stamina", "Supports Strength + Vitality", "Supports Natural Growth Hormone Activity"],
+          "ingredients_label": "DOCTOR-PRESCRIBED SERMORELIN",
+          "ingredients": [["ENERGY", "Supports Energy + Stamina"], ["STRENGTH", "Supports Strength + Vitality"],
+                          ["GROWTH HORMONE", "Supports Natural Growth Hormone Activity"]],
+          "cta": "EXPLORE SERMORELIN", "vocab": "Sermorelin."}
+    for style in ("default", "tiktok", "editorial"):
+        d = os.path.join(out, f"sp_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        job = dict(sp, style=style)
+        if style == "tiktok":  # the long growth-hormone row collides in this look (see the skill's finishing.md)
+            job["ingredients"] = sp["ingredients"][:2] + [["DELIVERY", "Easy sublingual delivery"]]
+        json.dump(job, open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "ENERGY FADING BY 3 P.M.?", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"plain Sermorelin video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "12.8"], True)
+    d = os.path.join(out, "sp_static"); os.makedirs(d)
+    expect("finish_batch takes the plain Sermorelin disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "sermorelin"], True)
+    expect("plain Sermorelin refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "sermorelin",
+            "--disclaimer", RZ_DISC], False, "differs")
+    expect("composite takes plain Sermorelin renders from --product",
+           [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

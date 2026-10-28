@@ -57,6 +57,7 @@ C["disclaimer"] = PR["disclaimer"]
 C.setdefault("bottle", PR["renders"]["bottle"])
 C.setdefault("pill", PR["renders"]["pill"])
 C["keep_case"] = PR["keep_case"]
+C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
 for f in (C["bottle"], C["pill"]):
     if not os.path.exists(f"{P}/source/{f}"):
         shutil.copy(product.asset(PR, f), f"{P}/source/{f}")
@@ -233,7 +234,7 @@ def ingredient_end_layers():
         note(((W - d.textlength(ln, font=f)) / 2, y, (W + d.textlength(ln, font=f)) / 2, y + f.size), "end headline")
         y += int(f.size * 1.02)
     paste_render(base, C["bottle"], 300, (W // 2 + 100, y + 175))
-    paste_render(base, C["pill"], 300, (W // 2 - 120, y + 235), by="width")
+    paste_render(base, C["pill"], round(300 * C.get("pill_scale", 1)), (W // 2 - 120, y + 235), by="width")
     ly = y + 350
     bl.centered(d, ly, C["ingredients_label"], ING_LABEL, bl.GOLD)
     cy0 = ly + 56

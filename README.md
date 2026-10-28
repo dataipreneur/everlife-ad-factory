@@ -12,7 +12,7 @@ core/                         shared by every product skill
 skills/
   everlife-restora-z/         one folder per product
   everlife-sermorelin-ghk/  (transparent bottle still missing: see its assets/MISSING_RENDERS.md)
-  everlife-sermorelin/      plain Sermorelin, NOT Sermorelin GHK (no renders yet: see its assets/MISSING_RENDERS.md)
+  everlife-sermorelin/      plain Sermorelin, NOT Sermorelin GHK (1000 mcg renders in; 500 mcg missing: see its assets/MISSING_RENDERS.md)
     SKILL.md                  the producer flow
     product.json              everything the shared tools need to know about the product (data only)
     product.env               product name, renders, output folder, copy log (read by preflight)

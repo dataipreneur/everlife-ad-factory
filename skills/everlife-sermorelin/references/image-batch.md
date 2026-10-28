@@ -97,6 +97,9 @@ vials, no mirrors showing bodies.
 LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands).
 9:16 only: keep the top 8% free of text.
 ```
-Bottle wording for the PRODUCT block, per strength: **fill in only after `sermorelin1000_bottle_ref.jpg` /
-`sermorelin500_bottle_ref.jpg` are added and checked** (read the label off the asset-library render: name, strength,
-tablet count). QA that the label shows the session's strength. Never describe the tablet in words.
+Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; orange label with the
+vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERMORELIN', small text 'PRESCRIPTION',
+'30 SUBLINGUAL TABS'"), plus:
+- **1000 mcg** (checked against `assets/sermorelin1000_bottle.png`, 2026-10-28): '1000 MCG'.
+- **500 mcg** (read from the website's bottle, 2026-10-28; recheck against the asset-library render when it's added): '500 MCG'.
+QA that the label shows the session's strength. Never describe the tablet in words.
