@@ -2,6 +2,30 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
+New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
+tablet, bottle, offer "Save up to 65%", landing page). Built per README "Adding a product skill", same flow as the
+Sermorelin GHK skill. Data only: no `core/` changes.
+- `references/product-bible.md`: bible Part A "Sermorelin — Men / Women" + "more claims" copied verbatim (diff-checked
+  against `~/.claude/everlife/creative-bible.md` lines 88–211), plus a labelled compliance pre-screen for Jeremy:
+  ❌ "From Dad Bod to Man Bod", "Targets Visceral Fat", every injections line; ⚠ "Get Toned and Lean", "Lean Muscle
+  Definition", "Metabolism + Body Tone", "60/50 Is the New 40/30", "The Power of Growth Hormone in a Tablet",
+  "Save 70% compared to HGH", "$95/month", "…With Your TRT". Leaves a small clean pool (3 men's / 4 women's headlines,
+  3 benefits).
+- Sublingual tablet only (the bible also lists injections; creative never shows or mentions them).
+- `product.json` / `product.env`: id `sermorelin`, verbatim disclaimer, renders `sermorelin_bottle.png` /
+  `sermorelin_tablet.png` (**not added**: see `assets/MISSING_RENDERS.md`; past ads show two different orange tablets, so
+  which one is current must be confirmed).
+- `assets/type_specimen.png`: new, drawn with the repo fonts from approved lines (the GHK skill's specimen is Restora's
+  sleep one).
+- `references/winners/winners.md`: no CPA-ranked winners yet; notes from ~300 past plain-Sermorelin ads (user's Drive
+  downloads "Sermorelin M/F") on layouts worth keeping and a long don't-copy list.
+- Video `tiktok`/`editorial` end cards need an `ingredients` list (`core/tools/styles.py`): `finishing.md` fills it with
+  the three ✅ benefits instead of changing core.
+- Not changed: the Sermorelin GHK skill. Its description still says "even if they only say 'let's make Sermorelin ads'",
+  which overlaps with this skill; the new skill asks which product when it's ambiguous. Worth tightening the GHK
+  description on its own branch.
+
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
 Diffed against the unzipped original (`~/Downloads/everlife-restora-z.zip`, 27 Oct 21:51); everything else was identical.
