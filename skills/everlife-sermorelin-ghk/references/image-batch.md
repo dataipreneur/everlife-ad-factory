@@ -2,8 +2,8 @@
 
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
 mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle
-and tablet; `finish_batch.py` adds only the approved footer (Everlife logo, Trustpilot 4.9 / Doctor Prescribed / Ships Free
-art, verbatim disclaimer) as a compact transparent strip over the calm bottom ~18%.
+and tablet; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor
+Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip over the calm bottom ~18%.
 
 **Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
 
@@ -61,7 +61,7 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    ONE table: # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
    its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
-3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet, type_specimen], out='gen/b<date>_<n>.png',
+3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
    aspect_ratio=<final ratio>)` from `assets/creatify.json`. Max 4 in flight.
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
@@ -71,6 +71,32 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    (the verbatim disclaimer comes from product.json).
 6. Save to `~/Everlife-Creative/output/Sermorelin-GHK/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
    open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
+
+## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
+Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
+in one batch, never the same look two batches in a row, and never default to the old "serif + purple accent" specimen.
+Pick per ad and write it into the prompt's TYPOGRAPHY & COLOUR block (legibility rules still apply: 50+ readers, no
+shadows or outlines on type, product name big).
+
+| Headline face (pick one) | Partner for supporting text |
+|---|---|
+| Heavy condensed grotesque, all caps (the winners' look) | light humanist sans |
+| Elegant high-contrast serif, roman | clean geometric sans |
+| Serif with ONE italic word | small-caps sans |
+| Wide extended sans, bold | regular sans |
+| Slab serif, bold | light sans |
+| Chunky rounded sans | mono-spaced labels |
+| Brush / handwritten accent word inside a sans headline | regular sans |
+| Thin editorial sans, tracked out, all caps | serif body |
+
+Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
+charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
+Product rules win: women's creative only pinks, tans, beige, cream, mocha, rose, burgundy (no orange, no green);
+Restora-Z moods navy / lavender / blush / cream / pale sky. Vary the headline placement too (top-left, centred, bottom-
+third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
+
+The type specimen (`assets/type_specimen.png`) is no longer attached by default. Attach it only when the brief asks for
+the house editorial look, and then say "match image 3".
 
 ## 3. Prompt template (fill everything; keep the quotes exact)
 ```
@@ -82,12 +108,13 @@ invent, alter, or substitute a different pill. Use the attached bottle reference
 label facing camera, sharp, never mirrored, never redesigned. The TABLET is the hero (large, in focus, foreground); the
 bottle, if shown, is large and legible.
 
-TYPOGRAPHY: image 3 is the type specimen. Headline in an elegant high-contrast serif (like Instrument Serif) with ONE
-phrase in an accent colour; other text in a clean geometric sans (like Inter). For readers aged 50+: headline at least
-9% of canvas height per line; every other line at least 3.5%; strong contrast; max 3 supporting lines.
+TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from the
+menu, e.g. "a heavy condensed grotesque in all caps">, with ONE phrase picked out in <accent colour from the palette>;
+supporting text in <its partner face>. For readers aged 50+: headline at least 9% of canvas height per line; every other
+line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines.
 
 TEXT: render ONLY these strings, exactly, nothing else (no extra words, logos, stars, badges, prices, website, disclaimer):
-  Headline: "<headline>"   (accent on: "<phrase>")
+  Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
@@ -96,8 +123,10 @@ wear, natural build (NOT a bodybuilder), calm and candid.>
 <WOMEN: palette blush pink, tan, beige, cream (no orange, no green); any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
-LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands).
-9:16 only: keep the top 8% free of text.
+LAYOUT: 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
+the Everlife logo is laid there. The BOTTOM 18% is calm continuation of the background (no text, product or hands): the
+proof footer is laid there.
+(For 4:5 and 1:1 the top band is 10%.)
 ```
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
 the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:

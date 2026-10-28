@@ -38,3 +38,10 @@ Compliance traps:
 ## Footer + legibility
 - Proof is ALWAYS the approved footer art (`tools/assets/footer/`), never typed stars, never generated.
 - Type minimums: 24 px (disclaimer), 36 px (subline), 72 px (headline), cards 32+.
+
+## Creative lead, 2026-10-28: logo at the top, and stop repeating the same type
+- **The Everlife logo sits at the TOP of every static**, never in the footer. `finish_batch.py` now lays it in the top
+  safe band and nudges the image down if the generation left no headroom; the prompt asks for a calm top 12% (10% feed).
+- **Fonts and colours must change from ad to ad.** The batch kept coming back as the same serif with the same purple
+  accent on white: "they don't need to be always the same". Use `image-batch.md` §2b: a different pairing and a
+  different accent for every ad, the type specimen only when the house look is asked for.

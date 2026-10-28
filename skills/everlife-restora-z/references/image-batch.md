@@ -5,7 +5,7 @@ random by default, mobile friendly, the new creative font, easy to read for olde
 
 The image model (GPT Image 2.5 on Creatify) designs the **whole ad**: layout, headline, benefits and scene, with the
 real bottle and capsule. We add only the **approved footer** (`finish_batch.py`): a COMPACT, TRANSPARENT strip (~17% of the height) laid over the
-ad's calm bottom on a soft gradient: Everlife logo, the Trustpilot 4.9 / Doctor Prescribed / Ships Free art and the verbatim
+ad's calm bottom on a soft gradient: the Trustpilot 4.9 / Doctor Prescribed / Ships Free art and the verbatim
 disclaimer (creative lead 2026-10-27: "35% smaller and transparent").
 
 ## 0. Copy rules: hard stops vs references
@@ -65,7 +65,7 @@ visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which ma
    tier (A / B PROPOSED) · supporting lines · ≈1 credit.
    One AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch
    and its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
-3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, capsule, type_specimen], out='gen/b<date>_<n>.png',
+3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, capsule]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
    aspect_ratio=<MODEL_RATIO>)` from `assets/creatify.json`. **Max 4 in flight per project**: start 4, then the next as each finishes.
    MODEL_RATIO = the final ratio itself (4:5 → "4:5", 9:16 → "9:16", 1:1 → "1:1"). For "4:5 + 9:16", generate both ratios.
 4. QA every result (Read it), strictly:
@@ -79,6 +79,32 @@ visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which ma
 6. Save to `~/Everlife-Creative/output/Restora-Z/<date>_batch-<n>/` (FINAL files + `prompts.md` + `contact_sheet.jpg`), open the
    contact sheet, append headlines to the copy log, and offer: "Another batch?" / "Variations of #k" / "9:16 versions of the winners".
 
+## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
+Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
+in one batch, never the same look two batches in a row, and never default to the old "serif + purple accent" specimen.
+Pick per ad and write it into the prompt's TYPOGRAPHY & COLOUR block (legibility rules still apply: 50+ readers, no
+shadows or outlines on type, product name big).
+
+| Headline face (pick one) | Partner for supporting text |
+|---|---|
+| Heavy condensed grotesque, all caps (the winners' look) | light humanist sans |
+| Elegant high-contrast serif, roman | clean geometric sans |
+| Serif with ONE italic word | small-caps sans |
+| Wide extended sans, bold | regular sans |
+| Slab serif, bold | light sans |
+| Chunky rounded sans | mono-spaced labels |
+| Brush / handwritten accent word inside a sans headline | regular sans |
+| Thin editorial sans, tracked out, all caps | serif body |
+
+Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
+charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
+Product rules win: women's creative only pinks, tans, beige, cream, mocha, rose, burgundy (no orange, no green);
+Restora-Z moods navy / lavender / blush / cream / pale sky. Vary the headline placement too (top-left, centred, bottom-
+third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
+
+The type specimen (`assets/type_specimen.png`) is no longer attached by default. Attach it only when the brief asks for
+the house editorial look, and then say "match image 3".
+
 ## 3. Prompt template (fill everything; keep the quotes exact)
 ```
 Design a finished, premium static social ad for "Restora-Z", a prescription sleep product, in the style of a modern
@@ -88,14 +114,14 @@ PRODUCT: image 1 is the real Restora-Z bottle and image 2 the real capsule. Use 
 label (EVERLIFE vertical wordmark, "RESTORA-Z", white Rx box), label facing camera, sharp, never mirrored, never
 redesigned. At most one capsule unless the concept needs a few. Make the bottle a clear hero (about 30–45% of the canvas height).
 
-TYPOGRAPHY: image 3 is the type specimen. Match it: headline in an elegant high-contrast serif (like Instrument Serif)
-with ONE phrase in italic accent colour; all other text in a clean geometric sans (like Inter). Mobile-first and for
-readers aged 50+: headline at least 9% of the canvas height per line; every other text line at least 3.5% of the
-canvas height; strong contrast; no thin grey text; max 3 supporting lines.
+TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from the
+menu, e.g. "a heavy condensed grotesque in all caps">, with ONE phrase picked out in <accent colour from the palette>;
+supporting text in <its partner face>. For readers aged 50+: headline at least 9% of canvas height per line; every other
+line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines.
 
 TEXT: render ONLY these strings, exactly as written, nothing else (no extra words, no logos, no stars, no badges, no prices,
 no website, no disclaimer):
-  Headline: "<headline>"   (italic accent on: "<phrase>")
+  Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
   <Framework-specific text, e.g. Notes title, sticky note words, Myth / Fact labels>
 
@@ -103,9 +129,10 @@ SCENE & STYLE: <scene, props, single colour mood (navy / lavender / blush / crea
 light, calm and premium, lots of air, nothing cluttered. Women-focused looks: pinks, tans and beige. No beds-with-couples
 or bedroom intimacy. Any person: real-looking 45–65, calm, candid, no before/after.
 
-LAYOUT: keep a 5% clear margin on every edge. The BOTTOM 18% of the canvas is calm, plain continuation of the background
-(surface, fabric, wall): no text, no product, no hands or key objects there (a transparent footer is laid over it).
-Put the product base above that line. 9:16 only: also keep the top 8% free of text.
+LAYOUT: keep a 5% clear margin on every edge. The TOP 12% of the canvas is calm, plain continuation of the background
+(no text, no product): the Everlife logo is laid there. The BOTTOM 18% is calm, plain continuation of the background
+(surface, fabric, wall): no text, no product, no hands or key objects there (the transparent proof footer is laid over it).
+Put the product base above that line. (For 4:5 and 1:1 the top band is 10%.)
 ```
 
 ## 4. After the batch
