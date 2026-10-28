@@ -9,6 +9,7 @@ each ingredient's own bible claim, the 100,000+ line and the CTA. Only the look 
   editorial  quiet premium look: thin serif italic headline, lowercase serif subtitles with no
              boxes, dark end card with ingredient columns and an outline CTA
 """
+import re
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 import safezones as sz
 
@@ -22,6 +23,14 @@ HN = "/System/Library/Fonts/HelveticaNeue.ttc"
 
 def _font(bl, path, size, name):
     return bl.font(path, size, name)
+
+
+def _cased(text, C):
+    """Undo .title()/.lower() damage to names that must keep their casing ("GHK", not "Ghk").
+    The list is the product's "keep_case" (product.json), set on C by full_layout."""
+    for name in C["keep_case"]:
+        text = re.sub(re.escape(name), name, text, flags=re.I)
+    return text
 
 
 def _logo(bl, P, color, width):
@@ -87,7 +96,7 @@ class TikTok:
     def top(self):
         img = self.bl.canvas()
         img.alpha_composite(_logo(self.bl, self.P, (255, 255, 255), 230), ((W - 230) // 2, SY0 + 8))
-        heads = [h.title() for h in self.C["head"]]
+        heads = [_cased(h.title(), self.C) for h in self.C["head"]]
         d0 = ImageDraw.Draw(img)
         f = self.head
         while max(d0.textlength(h, font=f) for h in heads) + 52 > SAFE_W and f.size > 30:
@@ -138,16 +147,17 @@ class TikTok:
         d = ImageDraw.Draw(base)
         base.alpha_composite(_logo(bl, P, self.NAVY, 240), ((W - 240) // 2, SY0 + 8))
         tf = _font(bl, HN, 60, "Bold")
-        while max(d.textlength(ln.title(), font=tf) for ln in C["end_head"]) > SAFE_W and tf.size > 30:
+        heads = [_cased(ln.title(), C) for ln in C["end_head"]]
+        while max(d.textlength(ln, font=tf) for ln in heads) > SAFE_W and tf.size > 30:
             tf = _font(bl, HN, tf.size - 2, "Bold")
-        for i, ln in enumerate(C["end_head"]):
-            bl.centered(d, 205 + 68 * i, ln.title(), tf, self.NAVY)
+        for i, ln in enumerate(heads):
+            bl.centered(d, 205 + 68 * i, ln, tf, self.NAVY)
         b = _render(P, C["bottle"], 300)
         base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
         c = _render(P, C["pill"], 300, by="width")
         base.alpha_composite(c, (W // 2 - 130 - c.width // 2, 560 - c.height // 2))
         lab = _font(bl, HN, 32, "Bold")
-        bl.centered(d, 668, C["ingredients_label"].title().replace("3-In-1", "3-in-1"), lab, self.NAVY)
+        bl.centered(d, 668, _cased(C["ingredients_label"].title().replace("3-In-1", "3-in-1"), C), lab, self.NAVY)
         layers = [("end.png", self.end_t, 99)]
         base.save(f"{L}/end.png")
         nf, cf = _font(bl, HN, 36, "Bold"), _font(bl, HN, 30, "Medium")
@@ -158,7 +168,7 @@ class TikTok:
             dd.rounded_rectangle([SX0 + 4, y, SX1 - 4, y + 56], 28, fill=(255, 255, 255, 255))
             dd.ellipse([SX0 + 22, y + 16, SX0 + 46, y + 40], fill=(0, 182, 122))
             dd.text((SX0 + 28, y + 12), "✓", font=_font(bl, f"{SUP}/Arial Unicode.ttf", 22, "Regular"), fill="white")
-            dd.text((SX0 + 62, y + 9), name.title(), font=nf, fill=self.NAVY)
+            dd.text((SX0 + 62, y + 9), _cased(name.title(), C), font=nf, fill=self.NAVY)
             cf2 = cf
             while dd.textlength(claim, font=cf2) > SAFE_W - 300 and cf2.size > 20:
                 cf2 = _font(bl, HN, cf2.size - 1, "Medium")
@@ -170,7 +180,7 @@ class TikTok:
         fd = ImageDraw.Draw(foot)
         bl.centered(fd, 916, "Over 100,000 happy customers", self.small, self.NAVY)
         fd.rounded_rectangle([(W - 560) / 2, 956, (W + 560) / 2, 1022], 33, fill=self.NAVY)
-        bl.centered(fd, 965, C["cta"].title().replace("Restora-Z", "Restora-Z"), _font(bl, HN, 40, "Bold"), (255, 255, 255))
+        bl.centered(fd, 965, _cased(C["cta"].title(), C), _font(bl, HN, 40, "Bold"), (255, 255, 255))
         if 1022 > self.block_top - 6:
             self.issues.append(f"tiktok end-card CTA collides with proof block ({self.block_top})")
         foot.save(f"{L}/end_foot.png")
@@ -203,7 +213,7 @@ class Editorial:
             bl.centered(d, 214, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
         y = 252
         for i, ln in enumerate(self.C["head"]):
-            t = ln.capitalize() if i == 0 else ln.lower()
+            t = _cased(ln.capitalize() if i == 0 else ln.lower(), self.C)
             fi = self.serif_i
             while d.textlength(t, font=fi) > SAFE_W and fi.size > 30:
                 fi = _font(bl, f"{SUP}/Baskerville.ttc", fi.size - 2, "Italic")
@@ -218,7 +228,7 @@ class Editorial:
         for i, cap in enumerate(caps):
             img = bl.canvas()
             d = ImageDraw.Draw(img)
-            text = cap[2].lower().replace("restora-z", "Restora-Z")
+            text = _cased(cap[2].lower(), self.C)
             if len(text) > 30:  # long lines drop a size so they stay on one line
                 f = _font(bl, f"{SUP}/Baskerville.ttc", 40, "Regular")
             else:
@@ -250,6 +260,7 @@ class Editorial:
         hf = _font(bl, f"{SUP}/Baskerville.ttc", 60, "Italic")
         for i, ln in enumerate(C["end_head"]):
             t = ln.title() if "+" in ln else (ln.capitalize() if i == 0 else ln.lower())  # keep drug names capitalised
+            t = _cased(t, C)
             f = hf
             while d.textlength(t, font=f) > SAFE_W and f.size > 30:
                 f = _font(bl, f"{SUP}/Baskerville.ttc", f.size - 2, "Italic")
@@ -271,13 +282,13 @@ class Editorial:
             x = x0 + i * colw
             if i:
                 dd.line([(x, 722), (x, 852)], fill=self.GOLD + (180,), width=1)
-            nm = name.title()
+            nm = _cased(name.title(), C)
             nf2 = nf
             while dd.textlength(nm, font=nf2) > colw - 16 and nf2.size > 22:
                 nf2 = _font(bl, f"{SUP}/Baskerville.ttc", nf2.size - 2, "SemiBold")
             dd.text((x + (colw - dd.textlength(nm, font=nf2)) / 2, 728), nm, font=nf2, fill=self.IVORY)
             ty = 782
-            for ln in bl.wrap(dd, claim.lower(), cf, colw - 30)[:2]:
+            for ln in bl.wrap(dd, _cased(claim.lower(), C), cf, colw - 30)[:2]:
                 dd.text((x + (colw - dd.textlength(ln, font=cf)) / 2, ty), ln, font=cf, fill=(250, 238, 212))
                 ty += 36
             img.save(f"{L}/end_ing{i}.png")
@@ -286,7 +297,7 @@ class Editorial:
         fd = ImageDraw.Draw(foot)
         bl.centered(fd, 880, "Over 100,000 happy customers", _font(bl, HN, 26, "Regular"), self.IVORY)
         fd.rounded_rectangle([(W - 540) / 2, 926, (W + 540) / 2, 998], 36, outline=self.GOLD, width=3)
-        cta = C["cta"].title().replace("Restora-Z", "Restora-Z")
+        cta = _cased(C["cta"].title(), C)
         bl.centered(fd, 942, cta, _font(bl, f"{SUP}/Baskerville.ttc", 38, "SemiBold"), self.IVORY)
         if 998 > self.block_top - 6:
             self.issues.append(f"editorial end-card CTA collides with proof block ({self.block_top})")

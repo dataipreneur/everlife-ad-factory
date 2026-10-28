@@ -1,5 +1,5 @@
 """Review-burst animation: verbatim Trustpilot review cards that slam in one after another into a collage,
-with "Restora-Z" highlighted (the style the team liked in the "Moon Sheep" ad). Renders a transparent-free
+with the product name highlighted (the style the team liked in the "Moon Sheep" ad). Renders a transparent-free
 PNG frame sequence (white background) that full_layout.py overlays as a ~2.4 s insert.
 
 usage (standalone): review_burst.py <reviews.json> R1,R3,R4,R2 <out_dir> [--w 1080 --h 1920 --fps 24 --dur 2.4]
@@ -10,6 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 AV = "/System/Library/Fonts/Avenir Next.ttc"
 GREEN, INK, GREY, HL = (0, 182, 122), (25, 25, 28), (110, 110, 118), (255, 236, 61)
 AVATAR = [(230, 120, 170), (250, 214, 180), (120, 150, 160), (180, 120, 110), (200, 225, 200), (190, 200, 240)]
+HIGHLIGHT = None  # product-name regex to highlight; full_layout sets it from product.json "review_highlight"
 
 
 def font(size, name="Regular"):
@@ -44,8 +45,8 @@ def wrap(d, text, f, maxw):
 
 
 def draw_highlighted(d, x, y, line, f, progress=1.0):
-    """Draw a line; yellow-highlight every 'Restora-Z' / 'Restora Z' (highlight grows with progress)."""
-    for m in re.finditer(r"Restora[- ]?Z", line, flags=re.I):
+    """Draw a line; yellow-highlight every product-name match of HIGHLIGHT (highlight grows with progress)."""
+    for m in (re.finditer(HIGHLIGHT, line, flags=re.I) if HIGHLIGHT else ()):
         x0 = x + d.textlength(line[:m.start()], font=f)
         x1 = x + d.textlength(line[:m.end()], font=f)
         x1 = x0 + (x1 - x0) * max(0.0, min(1.0, progress))
@@ -147,6 +148,8 @@ if __name__ == "__main__":
     ap.add_argument("reviews"); ap.add_argument("ids"); ap.add_argument("out")
     ap.add_argument("--w", type=int, default=1080); ap.add_argument("--h", type=int, default=1920)
     ap.add_argument("--fps", type=int, default=24); ap.add_argument("--dur", type=float, default=2.4)
+    ap.add_argument("--highlight", default="", help="product-name regex to highlight (product.json review_highlight)")
     a = ap.parse_args()
+    HIGHLIGHT = a.highlight or None
     R = json.load(open(a.reviews))
     print(render(R, a.ids.split(","), a.out, a.w, a.h, a.fps, a.dur), "frames")

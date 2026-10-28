@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 venv/
 .venv/
+_originals/
+skills/*/assets/product_ids.json

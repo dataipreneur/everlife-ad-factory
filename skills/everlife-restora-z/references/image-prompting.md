@@ -61,7 +61,7 @@ small text "TRAZODONE · HYDROXYZINE · DOXEPIN", white "Rx" box, the large word
 ## Finishing (the type): `finish_modern.py` is the default
 `$T/venv/bin/python -I $T/finish_modern.py <raw.png> <copy.json> <out.png> --ratio 4:5 --template <hero|strip|notify|toggle|chips> [--tone auto|dark|light]`
 - **Fonts:** Instrument Serif (headline, with ONE *italic accent* in lavender or violet) + Inter (UI/proof). No condensed all-caps, no boxes behind headlines, no shadows or outlines.
-- **Copy keys:** `m_head` ("Line one.|*Accent line.*"; bible headline in sentence case), optional `m_sub`, `strip_line`, `notify` {app, time, title, body}, `toggles` [[time, label, on]], `chips` ["Ingredient · its own bible claim", …], `disclaimer` (verbatim).
+- **Copy keys:** `"product": "restora-z"` (required; the verbatim disclaimer comes from product.json), `m_head` ("Line one.|*Accent line.*"; bible headline in sentence case), optional `m_sub`, `strip_line`, `notify` {time, title, body}, `toggles` [[time, label, on]], `chips` ["Ingredient · its own bible claim", …].
 - **Every ad still carries:** the small Everlife mark (top) or the strip logo, one proof line "★★★★★ Trustpilot rated 4.9 Excellent · Doctor Prescribed · Ships Free From Pharmacy", and the verbatim disclaimer.
 - The old `finish_image.py` layouts are only for the formats the modern set lacks (`compare` for the gated Ambien table, `quote`, `article`, `letter`); keep their copy short.
 

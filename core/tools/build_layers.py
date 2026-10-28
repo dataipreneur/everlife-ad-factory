@@ -1,6 +1,8 @@
 """Build 1080x1920 overlay layers for the Restora-Z UGC ads.
 
-All copy is from the Restora-Z winner (Base207) or the Restora-Z bible page.
+LEGACY: run on its own, this is the original Restora-Z-only layer builder (its copy below is from the Restora-Z winner
+Base207 / the Restora-Z bible page). full_layout.py imports it only for fonts, colours and drawing helpers, and replaces
+every product value (disclaimer, benefits, CTA, renders) from the job's product.json + copy.json. Don't add product copy here.
 Everything important sits inside the 9:16 safe band y 143-1275.
 """
 import sys

@@ -1,16 +1,18 @@
 """Put the REAL product renders into an AI-generated EMPTY scene (the image model never draws the product).
-usage: composite.py <scene.png> <out.png> [--ratio 4:5|1:1|9:16] [--x 0.5] [--base 0.78] [--height 0.34]
+usage: composite.py <scene.png> <out.png> --product <id> [--ratio 4:5|1:1|9:16] [--x 0.5] [--base 0.78] [--height 0.34]
                     [--capsule right|left|none] [--light left|right] [--bottle PNG] [--pill PNG]
+  --product the renders come from that product's skill assets (product.json "renders"); --bottle/--pill override
   --base    where the bottle's base sits (fraction of frame height: the tabletop/surface line)
   --height  bottle height as a fraction of frame height
 Adds a contact shadow, a soft cast shadow away from the light, a light colour/brightness match and grain,
 so the product sits in the scene. Label pixels stay exactly the approved render."""
-import argparse, os
+import argparse, os, sys
 import numpy as np
 from PIL import Image, ImageFilter, ImageOps, ImageChops
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SKILL_ASSETS = os.path.expanduser("~/.claude/skills/everlife-restora-z/assets")
+sys.path.insert(0, HERE)
+import product  # noqa: E402
 SIZES = {"1:1": (1080, 1080), "4:5": (1080, 1350), "9:16": (1080, 1920)}
 
 
@@ -73,9 +75,16 @@ def main():
     ap.add_argument("--height", type=float, default=0.34)
     ap.add_argument("--capsule", default="right", choices=["right", "left", "none"])
     ap.add_argument("--light", default="right", choices=["left", "right"])
-    ap.add_argument("--bottle", default=f"{SKILL_ASSETS}/rz_bottle.png")
-    ap.add_argument("--pill", default=f"{SKILL_ASSETS}/rz_capsule.png")
+    ap.add_argument("--product", default="", help="product id, e.g. restora-z (renders from its skill assets)")
+    ap.add_argument("--bottle", default="")
+    ap.add_argument("--pill", default="")
     a = ap.parse_args()
+    if not (a.bottle and a.pill):
+        if not a.product:
+            raise SystemExit("❌ pass --product <id> (or both --bottle and --pill); the product is never guessed")
+        PR = product.load(a.product)
+        a.bottle = a.bottle or product.asset(PR, PR["renders"]["bottle"])
+        a.pill = a.pill or product.asset(PR, PR["renders"]["pill"])
     W, H = SIZES[a.ratio]
     scene = ImageOps.fit(Image.open(a.scene).convert("RGB"), (W, H), Image.LANCZOS).convert("RGBA")
     b = Image.open(a.bottle).convert("RGBA")

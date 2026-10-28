@@ -1,9 +1,11 @@
-"""Brand a generated Restora-Z image into a finished static ad.
+"""Brand a generated image into a finished static ad (legacy layouts; Batch Mode uses finish_batch.py).
 
 usage: finish_image.py <raw image> <copy.json> <out.png> [--ratio 4:5|1:1|9:16] [--layout NAME]
 
+copy.json must name the product ("product": "<id>"); its product.json supplies the verbatim disclaimer and the
+defaults below (article kicker, split titles) and says whether the compare layout is allowed at all.
 Every layout adds the fixed brand pieces: Everlife logo, the transparent Trustpilot / Doctor Prescribed /
-Ships Free row and the verbatim disclaimer (from copy.json). The middle of the ad depends on --layout:
+Ships Free row and the verbatim disclaimer. The middle of the ad depends on --layout:
 
   standard   headline (+kicker), 3 ingredient or benefit cards, CTA pill
   checklist  headline, ❌/✅ list            copy: "checklist": [["x","Another gummy"],["check","Restora-Z …"]]
@@ -18,7 +20,7 @@ Ships Free row and the verbatim disclaimer (from copy.json). The middle of the a
 
 All words come from copy.json (bible copy only). The generated picture must contain no text.
 """
-import argparse, json, os
+import argparse, json, os, sys
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 T = os.environ.get("EVERLIFE_TOOLS", os.path.expanduser("~/Everlife-Creative/tools"))
@@ -252,7 +254,7 @@ class Ad:
         y0 = y_top + 10
         panel(self.img, [50, y0, W - 50, y0 + h], (255, 255, 255, 246), 10)
         d = self.d
-        d.text((80, y0 + 24), C.get("kicker", "SLEEP NOTES").upper(), font=kf, fill=RED)
+        d.text((80, y0 + 24), C.get("kicker", self.PR["kicker_default"]).upper(), font=kf, fill=RED)
         y = y0 + 62
         for ln in hl:
             d.text((80, y), ln, font=hf, fill=INK)
@@ -296,8 +298,9 @@ class Ad:
         panel(self.img, [40, y0, 40 + colw, y0 + h], (20, 30, 60, 220), 20)
         panel(self.img, [60 + colw, y0, 60 + 2 * colw, y0 + h], (250, 238, 210, 235), 20)
         d = self.d
-        d.text((60, y0 + 14), C.get("split_titles", ["THE NIGHTS", "THE GOAL"])[0], font=hf, fill=GOLD)
-        d.text((80 + colw, y0 + 14), C.get("split_titles", ["THE NIGHTS", "THE GOAL"])[1], font=hf, fill=NAVY)
+        titles = C.get("split_titles", self.PR["split_titles"])
+        d.text((60, y0 + 14), titles[0], font=hf, fill=GOLD)
+        d.text((80 + colw, y0 + 14), titles[1], font=hf, fill=NAVY)
         for i in range(n):
             yy = y0 + 64 + i * 66
             if i < len(L):
@@ -324,7 +327,14 @@ def main():
                     choices=["standard", "checklist", "compare", "quote", "article", "letter", "split", "frame"])
     a = ap.parse_args()
     C = json.load(open(a.copy))
+    sys.path.insert(0, T)
+    import product
+    PR = product.for_copy(C, a.copy)
+    C["disclaimer"] = PR["disclaimer"]
+    if a.layout == "compare" and not PR.get("compare_allowed"):
+        raise SystemExit(f"❌ no approved comparison for {PR['name']} (product.json compare_allowed is false)")
     ad = Ad(a.raw, C, a.ratio)
+    ad.PR = PR
 
     if a.layout == "frame":
         ad.frame(Image.open(a.raw).size)

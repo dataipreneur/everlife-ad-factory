@@ -1,0 +1,21 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim.",
+ "id": "sermorelin-ghk",
+ "name": "Sermorelin GHK",
+ "renders": {"bottle": "sghk1000_bottle.png", "pill": "sghk_tablet.png"},
+ "strengths": {
+  "_about": "Same tablet for both. renders.bottle is the default; a job showing the other strength sets \"bottle\" in copy.json.",
+  "1000": {"bottle": "sghk1000_bottle.png", "bottle_ref": "sghk1000_bottle_ref.jpg", "label": "SERMORELIN GHK 1000 · 1000 MCG"},
+  "500": {"bottle": "sghk500_bottle.png", "bottle_ref": "sghk500_bottle_ref.jpg", "label": "SERMORELIN GHK · 500 MCG"}
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "keep_case": ["Sermorelin GHK", "Sermorelin", "GHK", "L-Citrulline Malate", "IGF-1", "GLP-1", "3-in-1"],
+ "review_highlight": "Sermorelin(\\s*\\+?\\s*GHK)?",
+ "reviews": "references/reviews.json",
+ "kicker_default": "STRENGTH · LONGEVITY",
+ "split_titles": ["THE STRUGGLE", "THE GOAL"],
+ "notify_app": "Sermorelin GHK",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "product_zones": null
+}
