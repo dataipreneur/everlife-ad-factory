@@ -138,3 +138,8 @@ request into `product-config` for Priestley to review.
 - Registered "Sermorelin GHK" in Higgsfield Marketing Studio (Everlife workspace) with the 500 bottle + tablet:
   product id a5b49393-165a-4230-8082-aaae6ba20ed3 (stored locally in product_ids.json, not in git). Preflight 10/10.
 - The "1000 on white" JPG received at 16:26 is the same picture as the existing 1000 reference; not added.
+
+## 2026-10-28 — Offer: the creative bible wins over landing pages
+Priestley's decision: ads use only the bible's offer ("Save up to 47%") even though the men's landing page shows 59% / 52%.
+Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extract), with the two current landing-page links
+(men m-fb-v9, women f-fb-v10) for the session sheet.

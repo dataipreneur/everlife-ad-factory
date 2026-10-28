@@ -14,7 +14,12 @@
 - **Always spell out "growth hormone"** (never "GH"; "HGH" appears only inside a bible ingredient claim that is ❌ below).
 - **Audiences (pick one per session):** **Men 35–60** (lean muscle, strength, growth hormone support; frame around muscle, fitness, performance, never the bedroom; fit, mature talent, not bodybuilders) · **Women 35–60** (tone, strength, skin glow; palette pinks, tans, beige, **no oranges or greens**).
 - **Approved language (product Hard NO):** "toned" and "lean". Say "supports", never "builds".
-- **Offer:** "Save up to 47%" (percent-off, usable). No $ prices.
+- **Offer:** "Save up to 47%" (percent-off, usable). No $ prices. **The bible wins over the landing pages** (Priestley,
+  2026-10-28): the current pages show other numbers (men m-fb-v9: "Save Up to 59%" / "52%"; women f-fb-v10: no number),
+  but ads use only the bible's offer. Never copy an offer, claim or proof figure from a landing page.
+- **Landing pages (where ads link, 2026-10-28):** men https://everlifemd.com/sermorelin-ghk/m-fb-v9 · women
+  https://everlifemd.com/sermorelin-ghk/f-fb-v10. Record the matching one per ad in the session sheet. Facts only from them
+  (both sell 500 mcg: Sermorelin 500mcg + GHK Peptide 2mg + L-Citrulline 50mg); their wording is not approved ad copy.
 - **Disclaimer (verbatim, both audiences):** `AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.`
 - **Landing page:** https://everlifemd.com/sermorelin-ghk/f-fb (last verified Aug. 28, 2026).
 
