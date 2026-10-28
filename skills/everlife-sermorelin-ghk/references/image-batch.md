@@ -55,8 +55,9 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
 2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad**:
    first a matching winner (its card + preview image: M8/M2 bold claim, M3 offer + callouts, M4 features & benefits,
-   M9 identity post, M10 tablet in hand, F2 brand mood, F1 article, F3 letter, F5 animated), else one from the generic
-   folder. Follow the card's "Don't copy" list. Write concept
+   M9 identity post, M10 tablet in hand, F2 brand mood, F1 article, F3 letter, F5 animated); else a Meta ref
+   (`core/references/meta-refs/<framework folder>/`, if any); else a Pinterest ref (`core/references/static-refs/<framework
+   folder>/`). Rule: `core/references/REFERENCE-PRIORITY.md`. Follow the card's "Don't copy" list. Write concept
    (1 line), headline (Tier A by default, see §0 ⚠ pending), ≤ 3 supporting lines (approved claims, exact), prompt. Show
    ONE table: # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and

@@ -145,3 +145,11 @@ for the GHK tablets (and "Get 47% Off Now!" on its button); 59% is the plain Ser
 the women's page shows 47% for the tablets.
 Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extract), with the two current landing-page links
 (men m-fb-v9, women f-fb-v10) for the session sheet.
+
+## 2026-10-28 — Reference priority rule (Sermorelin GHK only)
+- New `core/references/REFERENCE-PRIORITY.md`: pick reference ads in this order: 1 our winners → 2 Meta Ad Library →
+  3 Pinterest (`static-refs`: 50 board-1 pins, 20 board-2 pins, 20 DOC). References set idea and layout only; words come from
+  the bible; the generator never sees references; record the level and file used per ad.
+- New `core/references/meta-refs/SOURCES.md` (empty log + how to add Meta Ad Library references).
+- Wired into Sermorelin GHK only (`SKILL.md` reading table, `image-batch.md` step 2). **Restora-Z unchanged** at Priestley's
+  request: its owner decides whether to adopt the rule.

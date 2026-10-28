@@ -25,8 +25,9 @@ Read these when the step says so:
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
-| `references/winners/winners.md` | **any image or video concept**: our own top Sermorelin GHK ads (CPA-ranked) with "works / don't copy" cards; look at the card's preview image. Start here, before the generic refs |
-| `references/image-batch.md` | **any image request** (Batch Mode); generic layout refs in `core/references/static-refs/` (mostly sleep brands: layout only) |
+| `core/references/REFERENCE-PRIORITY.md` | picking any reference ad: **1 our winners → 2 Meta Ad Library → 3 Pinterest** (rules for all three) |
+| `references/winners/winners.md` | **any image or video concept** (priority 1): our own top Sermorelin GHK ads (CPA-ranked) with "works / don't copy" cards; look at the card's preview image |
+| `references/image-batch.md` | **any image request** (Batch Mode); Meta refs in `core/references/meta-refs/` (priority 2, if any); Pinterest refs in `core/references/static-refs/` (priority 3; mostly sleep brands, but the layouts work for any tablet product: layout only) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes, carried over from Restora-Z) |
 | `references/reviews.md` | any review / testimonial / social-proof quote (none on file yet → gated) |
