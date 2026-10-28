@@ -35,6 +35,17 @@ Compliance traps:
 - Build every copy.json fresh (retired lines sneak back via reused files).
 - Disclaimer stays the bible's verbatim text. The global AI-disclosure line differs from it: open question for Jeremy.
 
+## First Sermorelin GHK batch (2026-10-28, men, 5 statics, 7 credits incl. 2 re-rolls)
+- **Hyphens can render as "="** ("3=in=1", "Youthful=Looking"). Fix that worked: in TEXT add "every hyphen is a normal short
+  hyphen '-', never an equals sign" + a spelling check line for each hyphenated string. Add it up front next time.
+- **Product too low again** (the Restora trap): an identity-post photo put the bottle and tablet in the footer zone. Fix that
+  worked: give an explicit band, "the product group between 40% and 72% of the canvas height". Use it whenever a person is in shot.
+- **Type specimen is Restora's** ("Sleep deeper, wake clear", purple accent). Saying "ONLY a lettering style guide; ignore its
+  words, its purple colour and its layout" kept every ad clean. A Sermorelin-specific specimen would be safer (to do).
+- Tablet piles render a slightly deeper green than the reference; single tablets stay true. Acceptable; mention in QA.
+- What worked first time: real 500 bottle label (incl. "500 MCG"), the green "S" tablet, exact Tier A strings, clothed
+  mature talent, text-only 3-in-1 tiles (no made-up ingredient pills), "Save up to 47%" badge.
+
 ## Footer + legibility
 - Proof is ALWAYS the approved footer art (`tools/assets/footer/`), never typed stars, never generated.
 - Type minimums: 24 px (disclaimer), 36 px (subline), 72 px (headline), cards 32+.

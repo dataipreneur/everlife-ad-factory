@@ -102,7 +102,6 @@ LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of th
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
 the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:
 - **1000 mcg** (checked against `assets/sghk1000_bottle_ref.jpg`, 2026-10-28): white band 'SERMORELIN GHK 1000', '1000 MCG'.
-- **500 mcg** (wording read from the website's product image, 2026-10-28; recheck against the asset-library render
-  when it's added): white band 'SERMORELIN GHK', '500 MCG'.
+- **500 mcg** (checked against `assets/sghk500_bottle.png`, 2026-10-28): white band 'SERMORELIN GHK', '500 MCG'.
 - **Either:** use the bottle on file and its wording.
 QA that the label shows the session's strength (1000 vs 500), not the other one. Never describe the tablet in words.

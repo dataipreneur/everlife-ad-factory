@@ -1,7 +1,8 @@
 {
- "project_id": null,
- "bottle": null,
- "tablet": null,
- "type_specimen": null,
- "note": "Not created yet: the real renders are missing (see MISSING_RENDERS.md). Once they're in assets/: composer_project_create(aspect_ratio='9:16', resolution='1080p'), upload + composer_import_asset for assets/sghk1000_bottle_ref.jpg (and the 500 bottle when it's added), assets/sghk_tablet.png and assets/type_specimen.png, then write the project_id and the returned assets/<hash>_… paths here. Reuse that project for every image. It belongs to the account that created it; if composer_project_get fails (e.g. a teammate's account), create a new one the same way and rewrite this file."
+ "project_id": "b55ccce8-5930-4b81-89af-26da5b7fed60",
+ "bottle_500": "assets/57e4db4e_sghk500_bottle.png",
+ "tablet": "assets/34c34d64_sghk_tablet.png",
+ "type_specimen": "assets/dc571ed0_type_specimen.png",
+ "bottle_1000": null,
+ "note": "Created 2026-10-28 in Priestley's Creatify account (project aspect 1:1; pass aspect_ratio per job). Holds the transparent 500 bottle (the default for 'either'), the tablet and the shared type specimen (Restora's: prompts must say to ignore its words and purple colour). For 1000 jobs, upload + import assets/sghk1000_bottle_ref.jpg (or the transparent 1000 when it arrives) and add its path here. If composer_project_get fails (a teammate's account), create a new project the same way and rewrite this file."
 }
