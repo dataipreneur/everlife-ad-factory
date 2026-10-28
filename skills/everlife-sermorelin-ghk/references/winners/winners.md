@@ -100,10 +100,21 @@ Both Drive links on the page are dead (file moved or deleted). Ask the page owne
 - **Don't copy:** "needle-free" (banned); "Over **70,000**" and "**4.8**-star" (locked: 100,000+, 4.9 Excellent); "$149/mo" price; "GHK-Cu"; "targeted results"; "body's natural chemistry"; the disclaimer isn't the bible text and has no AI disclosure despite an AI doctor.
 - **Rebuild with:** letter lines assembled only from bible lines; "Easy sublingual delivery"; a doctor only with the verbatim disclaimer (AI depiction).
 
-### F4 · BASE125-00 · video (UGC creator) · ~$364 CPA (**11**) · `F4_BASE125-00.jpg` (thumbnail only)
-- **Format (from the thumbnail; the file is too big for the Drive connector):** a woman creator talking to camera in her home, logo + "SERMORELIN GHK" top, bottle top-left, tablet top-right, captions ("Here's the part that I think is going to interest…").
-- **Works:** creator-to-camera UGC (style 1A) has the most purchases of the women's winners.
-- **Check before reuse:** the script (first person? claims?) can't be verified until someone downloads the video for us.
+### F4 · BASE125-00 · video (real creator UGC, 30 s, 4:5) · ~$364 CPA (**11**) · `F4_BASE125-00.jpg` (thumbnail)
+Checked 2026-10-28 from the "For Pixel/Seb" Drive folder download (frames + transcript).
+- **Format:** a real woman creator (~45) talks to camera in her home, then hands-on product shots: opens the real bottle, tips the
+  green "S" tablets into her palm, holds one to the lens; "SERMORELIN · GHK · CITRULLINE" chips over the shots; back to her face
+  for the close ("the link is below"). Logo + "SERMORELIN GHK" + bottle + tablet pinned at the top, word-by-word captions.
+- **Script (transcript):** "Here's the part that I think is going to interest a lot of people who've been curious about peptides.
+  A physician-prescribed product called Sermorelin GHK that combines three ingredients in one daily sublingual tablet. Recovery,
+  lean muscle support, and body composition. Those things always matter. Everything starts with an online health evaluation. And
+  for me, physician oversight does matter. So the link is below and the evaluation only took me about five minutes."
+- **Works:** a real, believable person; the real product handled on camera (proves the tablet); curiosity hook ("people who've been
+  curious about peptides"); physician-prescribed + easy online evaluation as the trust angle; soft close.
+- **Don't copy:** first person ("for me", "took me") is banned; "body composition" is banned; "recovery" is fine only as
+  "Supports exercise recovery" (Citrulline). Rebuild as Marketing Studio UGC (style 1A) with no first person, e.g. "One daily
+  sublingual tablet, three ingredients… Doctor prescribed, ships free from the pharmacy."
+- **Product proof:** the tablets that come out of the real bottle are the green rounded-diamond "S" tablet (our tablet render).
 
 ### F5 · BASE297-00 · static · ~$460 CPA (7) · `F5_BASE297-00.jpg`
 - **Format:** 3D-animated, Pixar-style. A cartoon woman in a bathrobe touching her cheeks, a cute walking tablet character, the bottle, serif "SERMORELIN GHK", "Promotes Youthful-Looking Skin & Thicker Hair", three ingredient icons.

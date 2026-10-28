@@ -25,3 +25,5 @@ project (see `creatify.json`). Delete this file only when every row is ✅.
 
 ## ⚠ Open: tablets inside the bottle vs the tablet render (2026-10-28)
 Both bottle renders (500 and 1000) show **round tan tablets inside the jar**; the tablet render is a **green rounded diamond with an embossed "S"**. Every ad that shows the bottle and the tablet together (ours and the live winners) shows both. Ask Ed/Ronnel/pharmacy which tablet is real, and for a bottle render with the correct tablets inside. Until answered, ads showing both are held at review. Never repaint the jar's contents in a prompt (that alters the approved render).
+
+**Answered 2026-10-28 (real footage):** in winner BASE125 (a filmed creator video) the tablets that come out of the real Sermorelin GHK bottle are the **green rounded-diamond "S"**. The tablet render is right; the **bottle renders' tan tablets are placeholders**. Still needed: bottle renders (500 and 1000) with the green tablets inside, from the design team. Until then, ads showing the bottle carry the render's tan tablets: creative lead decides whether to run them.
