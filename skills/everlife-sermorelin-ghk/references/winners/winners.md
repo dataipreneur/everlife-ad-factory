@@ -2,7 +2,12 @@
 
 Source: the creative team's "Winning Ads Reference" page (claude.ai artifact 5gDbB7ibXwcNoWnKqcU9Sc), report week **Oct 9–15,
 2026**, ranked by CPA (spend ÷ purchases). Cards written 2026-10-28 after looking at every ad that could be opened. Images
-here are small previews (`<code>.jpg`); full files are on Drive (links on the page). **Refresh when the page updates.**
+here are small previews: `<code>.jpg` (square / 4:5) and `<code>_916.jpg` (vertical: use these for 9:16 batches).
+Full-resolution files of both ratios (videos included) are in `~/Everlife-Creative/reference-library/sermorelin-ghk/winners/`
+on Priestley's Mac (built 2026-10-28 from the page's Drive links and the "For Pixel/Seb" Drive folder; not in git, ~100 MB).
+`winners.json` is the same list as data (code, numbers, format, don't-copy, preview paths). **Refresh when the page updates.**
+9:16 note: the ID-named designs (M7–M10, F1) keep the top and bottom of the vertical frame empty; others (M2, M3, M6, F2, F5)
+fill it. Our own 9:16 ads always follow the safe zones (the finishers enforce them).
 
 All winners show the **500 mcg** bottle. For 1000 mcg they are **proxy** references (same product family, bottle design,
 tablet and audience).
@@ -29,7 +34,7 @@ tablet and audience).
 ## Men (10)
 
 ### M1 · VIDEO7-1.01 · video · ~$102 CPA (6 purchases, $609) · ⚠ FILE MISSING
-Both Drive links on the page are dead (file moved or deleted). Ask the page owner for the file; no card until it's seen.
+Both Drive links on the page are dead, and it isn't in the "For Pixel/Seb" folder either (checked 2026-10-28). Ask the page owner for the file; no card until it's seen.
 
 ### M2 · BASE210-01 · static · ~$119 CPA (3) · `M2_BASE210-01.jpg`
 - **Format:** bold claim, F2. Big "SERMORELIN GHK" left, a hand thrusting the bottle at camera, two tablets in the foreground, three benefit pills with icons, "LEAN. STRONG. READY." stacked right, dark gym.
@@ -58,8 +63,8 @@ Both Drive links on the page are dead (file moved or deleted). Ask the page owne
 ### M6 · BASE247-01 · static · ~$243 CPA (3) · `M6_BASE247-01.jpg`
 - Same layout as M3 in red with "LEAN INTO POWER" ("Lean Into Power" is a bible **Weak headline**). Same don't-copy list as M3.
 
-### M7 · ID328802-1.01 · static · ~$270 CPA (7) · `M7_ID328802-1.01.jpg` (preview only)
-- Dark/black version of M8. Same notes as M8.
+### M7 · ID328802-1.01 · static · ~$270 CPA (7) · `M7_ID328802-1.01.jpg`
+- Iteration of M8: black background in 1:1, a **light grey/red** layout in 9:16 (red stacked headline). Same don't-copy list as M8.
 
 ### M8 · ID328802 · static · ~$277 CPA (**23**, the most proven men's ad) · `M8_ID328802.jpg`
 - **Format:** bold claim + 3-in-1 tiles, F2/F4. "STAY TONED. GET LEAN." huge at top, "SERMORELIN GHK" banner, three benefit rows left, the bottle centre-right with two tablets, three ingredient tiles stacked right with "+" between them, red smoky background.
