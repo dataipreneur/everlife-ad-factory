@@ -29,8 +29,9 @@ Mitansh's Restora-Z package (`everlife-restora-z.zip`, 27 Oct, 17:49) is now a g
 ls -la ~/.claude/skills/ | grep -i everlife
 cd ~/.claude/skills/everlife-restora-z 2>/dev/null && cat tools/*.py scripts/*.py | shasum | cut -c1-12
 ```
-- If it prints **`4d128f8be668`**: same tools as the tested baseline. Continue.
-- If it prints something else (e.g. `3be3a588e802`, Mitansh's Mac on 2026-10-28): his version is **newer** than the one
+- If it prints **`3be3a588e802`** (Mitansh's Mac, 2026-10-28; his post-zip changes are ported in this branch) or
+  **`4d128f8be668`** (the original zip): same tools as the tested baseline. Continue.
+- If it prints something else: his version is **newer** than the one
   this branch was built from. **Do NOT merge the pull request or run `install.sh`** (that would replace his newer tools
   with older ones). Do **step 1b** instead, then come back to step 2.
 

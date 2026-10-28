@@ -2,6 +2,21 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
+Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
+Diffed against the unzipped original (`~/Downloads/everlife-restora-z.zip`, 27 Oct 21:51); everything else was identical.
+- `tools/composite.py`, `tools/full_layout.py`: he added an `$EVERLIFE_SKILL` override for the hard-coded
+  `~/.claude/skills/everlife-restora-z` path. Already covered here in a product-neutral form: both tools now resolve renders and
+  the reviews file through `product.py` (`$EVERLIFE_SKILLS_DIR`), so no code change was needed. `$EVERLIFE_SKILL` is not read.
+- `scripts/preflight.sh`: his new step 0 (link the skill into `~/.claude/skills` when preflight runs from a project copy) ported
+  product-neutrally into `core/scripts/preflight.sh` (link name = the skill folder's name; never replaces a real folder).
+- `references/lessons.md`: new section "Video discipline (creative lead, 2026-10-27)" copied verbatim.
+- `assets/product_ids.json`: his Marketing Studio product id (`14cd145c-…`, written by preflight on his Mac 2026-10-28) replaces
+  `01898c30-…`. ⚠ This file is machine-written per account; consider ignoring it in git so pulls don't flip it between Macs.
+- `README.md` in his skill folder is unchanged from the zip (not ported; the repo README replaced it in the reorganisation).
+- `HANDOFF-MITANSH.md` step 1 now accepts `3be3a588e802`.
+Before/after check (his installed tools vs this branch): see the pull request for the `compare` / `smoke` output.
+
 ## 2026-10-28 — Sermorelin GHK 1000 skill + product-neutral video finishing (branch `sermorelin-ghk-1000`)
 
 New skill `skills/everlife-sermorelin-ghk-1000/` (copied from the Restora-Z structure, all product copy rewritten):
