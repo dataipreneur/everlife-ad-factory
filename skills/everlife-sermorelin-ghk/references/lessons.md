@@ -69,10 +69,13 @@ Compliance traps:
   logo in the footer. After pulling a tool change, run `bash core/scripts/preflight.sh --install` (or copy the file) before
   finishing, and check the finisher's log line says `logo=top@…`.
 - **Long ingredient claims run into the footer** ("…glycosaminoglycan production" wrapped to 4 lines). Give the text block an
-  explicit end ("all text ends above 76% of the height"), or pick the shorter approved claim for narrow columns.
+  explicit end ("all text ends above 76% of the height"), or pick the shorter approved claim for narrow columns. It
+  overflowed again in batch 3 even with a band; in a two-column layout prefer "Promotes radiant, firmer, youthful-looking skin".
 - **Don't drop the bottle.** This batch went tablet-only to dodge the tan-tablets-in-bottle render; W2–W4 then never said
   what the product was (fails "identifiable in 2 seconds") and didn't look like our winners. Rule now: bottle + tablet in
   every ad until a corrected render is confirmed (image-batch.md step 3).
 - Pinterest layouts (level 3) translated well for women: split, cards, staircase, sticky note. Backgrounds still sneak in
   peach skies and plant greens → name them in the "avoid" line.
 - "Lean/Leaner" headlines with a person in shot need Jeremy (pre-screen ⚠: never with a body shot).
+- With the bottle in shot the model makes the BOTTLE the hero (W4, batch 3). Say "the tablet about twice the size it would
+  naturally be, in front of the bottle" and keep the logo band clear of props (a sticky note rose into it).
