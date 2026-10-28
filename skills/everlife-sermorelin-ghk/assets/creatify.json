@@ -1,7 +1,7 @@
 {
- "project_id": null,
- "bottle": null,
- "tablet": null,
- "type_specimen": null,
- "note": "Not created yet: the real renders are missing (see MISSING_RENDERS.md). Once they're in assets/: composer_project_create(aspect_ratio='9:16', resolution='1080p'), upload + composer_import_asset for assets/sghk1000_bottle_ref.jpg (and the 500 bottle when it's added), assets/sghk_tablet.png and assets/type_specimen.png, then write the project_id and the returned assets/<hash>_… paths here. Reuse that project for every image. It belongs to the account that created it; if composer_project_get fails (e.g. a teammate's account), create a new one the same way and rewrite this file."
+ "project_id": "22b8d181-1de7-404e-b4c7-2c6268db950a",
+ "bottle": "assets/9ee60cc7_sghk1000_bottle_ref.jpg",
+ "tablet": "assets/aaef4031_sghk_tablet.png",
+ "type_specimen": "assets/6f297a19_type_specimen.png",
+ "note": "Created 2026-10-28 in Mitansh's Creatify account (9:16, 1080p). bottle = the 1000 mcg reference JPG on black (not transparent). Add the 500 bottle with composer_import_asset when it arrives. If composer_project_get fails from another account, create a new project the same way and rewrite this file."
 }

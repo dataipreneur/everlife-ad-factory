@@ -1,10 +1,13 @@
 """Batch static finisher: the generated ad + a COMPACT, TRANSPARENT approved footer laid over its calm bottom.
 
 The image model designs the whole ad (headline, benefits, product, scene) and leaves the bottom ~18% calm. We lay a
-soft gradient + the footer there: Everlife logo, the approved Trustpilot 4.9 / Doctor Prescribed / Ships Free art (cut
-from the team's screenshots) and the verbatim disclaimer. The creative lead asked for it 35% smaller and transparent (2026-10-27).
+soft gradient + the footer there: the approved Trustpilot 4.9 / Doctor Prescribed / Ships Free art (cut from the team's
+screenshots) and the verbatim disclaimer. The creative lead asked for it 35% smaller and transparent (2026-10-27).
+The Everlife logo goes at the TOP (creative lead, 2026-10-28), centred in the top safe band. If the generated image left
+too little headroom above its headline, the image is nudged down (its calm bottom, under the footer, absorbs the shift).
 
 usage: finish_batch.py <generated.png> <out.png> --ratio 4:5|9:16|1:1 --product <id> [--tone auto|dark|light]
+       [--shift auto|<px>]  (auto = nudge the image down only as far as the logo needs; 0 = never)
        (--product takes the verbatim disclaimer from product.json; the older --disclaimer "<verbatim>" still works)
        finish_batch.py --content-ratio 4:5        prints the aspect ratio to request from the image model
 """
@@ -19,6 +22,9 @@ SIZES = {"4:5": (1080, 1350), "9:16": (1080, 1920), "1:1": (1080, 1080)}
 MODEL_RATIO = {"4:5": "4:5", "9:16": "9:16", "1:1": "1:1"}
 LIGHT = (251, 251, 246)
 DISC_SIZE, DISC_LH = 21, 26   # compact footer (creative lead: 35% smaller, transparent)
+LOGO_W = 200                   # Everlife logo at the top (creative lead, 2026-10-28)
+LOGO_TOP = {"9:16": 150, "4:5": 60, "1:1": 56}   # inside the safe band (9:16: Stories UI covers the top 144 px)
+MAX_SHIFT = 140
 
 
 def sans(size, weight="Regular"):
@@ -47,24 +53,17 @@ def art(name, tone, scale):
 
 
 def build_footer(W, tone, disclaimer):
-    """Compact transparent footer: logo, approved proof art row, disclaimer. Returns an RGBA layer (no background)."""
+    """Compact transparent footer: approved proof art row + disclaimer (the logo sits at the top). RGBA, no background."""
     fw = W - 80
     s = 0.56
     parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
     rh = max(p.height for p in parts)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
     lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw)
-    logo = Image.open(f"{T}/assets/logo_cream.png").convert("RGBA")
-    lw = 150
-    logo = logo.resize((lw, int(logo.height * lw / logo.width)), Image.LANCZOS)
-    ink = (16, 24, 44)
-    if tone == "light":
-        a = logo.split()[-1]; logo = Image.new("RGBA", logo.size, ink + (0,)); logo.putalpha(a)
-    h = 10 + logo.height + 8 + rh + 6 + DISC_LH * len(lines) + 22
+    h = 14 + rh + 6 + DISC_LH * len(lines) + 22
     foot = Image.new("RGBA", (W, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(foot)
-    y = 10
-    foot.alpha_composite(logo, ((W - lw) // 2, y)); y += logo.height + 8
+    y = 14
     gap = 22
     tw = sum(p.width for p in parts) + 4 * gap + 2
     x = (W - tw) // 2
@@ -79,6 +78,37 @@ def build_footer(W, tone, disclaimer):
     for ln in lines:
         d.text(((W - d.textlength(ln, font=f)) / 2, y), ln, font=f, fill=col); y += DISC_LH
     return foot
+
+
+def logo_layer(tone):
+    """The Everlife mark, cream on dark scenes, ink on light ones."""
+    logo = Image.open(f"{T}/assets/logo_cream.png").convert("RGBA")
+    logo = logo.resize((LOGO_W, int(logo.height * LOGO_W / logo.width)), Image.LANCZOS)
+    if tone == "light":
+        a = logo.split()[-1]; logo = Image.new("RGBA", logo.size, (16, 24, 44, 0)); logo.putalpha(a)
+    return logo
+
+
+def first_content_row(img, limit):
+    """First row (within the top `limit` px) that carries text or an edge: row-wise contrast across the middle 80%."""
+    g = np.asarray(img.convert("L"), dtype=np.float64)
+    x0, x1 = int(g.shape[1] * 0.1), int(g.shape[1] * 0.9)
+    band = g[:limit, x0:x1]
+    std = band.std(axis=1)
+    base = np.median(std[:max(4, limit // 20)])
+    hit = np.nonzero(std > max(28.0, base + 18.0))[0]
+    return int(hit[0]) if len(hit) else limit
+
+
+def top_fade(W, h, tone):
+    """Gentle fade behind the logo (strong at the very top, gone by h) so the mark reads on any photo."""
+    col = (8, 12, 26) if tone == "dark" else (250, 249, 245)
+    band = Image.new("RGBA", (W, h), col + (0,))
+    bd = ImageDraw.Draw(band)
+    for i in range(h):
+        t = 1 - i / h
+        bd.line([(0, i), (W, i)], fill=col + (int(120 * t ** 1.4),))
+    return band
 
 
 def scrim(W, h, tone, top_fade=120):
@@ -99,6 +129,7 @@ def main():
     ap.add_argument("--product", default="", help="product id: the verbatim disclaimer comes from its product.json")
     ap.add_argument("--disclaimer", default="", help="verbatim disclaimer (older usage; must match --product if both)")
     ap.add_argument("--tone", default="auto", choices=["auto", "dark", "light"])
+    ap.add_argument("--shift", default="auto", help="auto: nudge the image down only if the logo needs room; or a px value")
     ap.add_argument("--content-ratio", help="print the model aspect ratio for this final ratio and exit")
     a = ap.parse_args()
     if a.content_ratio:
@@ -136,6 +167,28 @@ def main():
         out.paste(g2, (0, 0), mask)
     else:
         out.paste(g2.crop((0, 0, W, H)), (0, 0))
+    # Everlife logo at the top: find the headroom above the ad's first text/edge and nudge the image down if needed
+    ly = LOGO_TOP[a.ratio]
+    logo_h = logo_layer("dark").height
+    need = ly + logo_h + 26
+    if a.shift == "auto":
+        shift = max(0, min(MAX_SHIFT, need - first_content_row(out, int(H * 0.3))))
+    else:
+        shift = max(0, min(MAX_SHIFT, int(a.shift)))
+    if shift:
+        from PIL import ImageFilter
+        shifted = Image.new("RGB", (W, H))
+        shifted.paste(out, (0, shift))
+        cap = out.crop((0, 0, W, max(8, shift // 6))).resize((W, shift + 40)).filter(ImageFilter.GaussianBlur(22))
+        shifted.paste(cap, (0, 0))
+        mask = Image.new("L", (W, 40), 0)
+        md = ImageDraw.Draw(mask)
+        for i in range(40):
+            md.line([(0, i), (W, i)], fill=int(255 * (1 - i / 40)))
+        shifted.paste(cap.crop((0, shift, W, shift + 40)), (0, shift), mask)
+        out = shifted
+    top_band = np.asarray(out.crop((0, 0, W, ly + logo_h + 20)).resize((64, 8))).reshape(-1, 3).astype(np.float64)
+    top_tone = "dark" if lum(top_band).mean() < 150 else "light"
     foot = build_footer(W, tone, a.disclaimer)
     bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # 9:16: same bottom line as the videos
     fy = H - foot.height - bottom_pad
@@ -143,9 +196,13 @@ def main():
     o = out.convert("RGBA")
     o.alpha_composite(sc_layer, (0, H - sc_layer.height))
     o.alpha_composite(foot, (0, fy))
+    lg = logo_layer(top_tone)
+    o.alpha_composite(top_fade(W, ly + logo_h + 30, top_tone), (0, 0))
+    o.alpha_composite(lg, ((W - lg.width) // 2, ly))
     out = o.convert("RGB")
     out.save(a.out, quality=95)
-    print(f"done {a.out}  tone={tone}  footer={foot.height}px ({foot.height / H * 100:.0f}% of height, transparent)")
+    print(f"done {a.out}  tone={tone}  logo=top@{ly}px({top_tone}) shift={shift}px  "
+          f"footer={foot.height}px ({foot.height / H * 100:.0f}% of height, transparent)")
 
 
 if __name__ == "__main__":
