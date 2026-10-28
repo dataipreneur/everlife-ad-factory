@@ -194,3 +194,7 @@ Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extr
 ## 2026-10-28 — Sermorelin GHK lessons: video discipline
 Copied Mitansh's "Video discipline" lessons (creative lead, 2026-10-27) into the Sermorelin GHK `lessons.md`: review script and
 prompt twice before approval; Marketing Studio for real people; prove the angle with a 1-credit static first. Restora unchanged.
+
+## 2026-10-28 — Sermorelin GHK women's test batch (batch 2) lessons
+Added the batch-2 lessons to the Sermorelin GHK `lessons.md` (re-install the toolkit after tool changes; keep long claims out
+of the footer; tablet-only default; palette drift; lean headlines with a person → Jeremy). Restora unchanged.

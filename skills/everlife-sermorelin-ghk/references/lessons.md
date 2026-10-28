@@ -63,3 +63,14 @@ Compliance traps:
 - **Fonts and colours must change from ad to ad.** The batch kept coming back as the same serif with the same purple
   accent on white: "they don't need to be always the same". Use `image-batch.md` §2b: a different pairing and a
   different accent for every ad, the type specimen only when the house look is asked for.
+
+## Second Sermorelin GHK batch (2026-10-28, women, 5 statics, 6 credits incl. 1 reposition)
+- **Re-install the toolkit after a tool changes in git.** The installed `finish_batch.py` was still the old one and put the
+  logo in the footer. After pulling a tool change, run `bash core/scripts/preflight.sh --install` (or copy the file) before
+  finishing, and check the finisher's log line says `logo=top@…`.
+- **Long ingredient claims run into the footer** ("…glycosaminoglycan production" wrapped to 4 lines). Give the text block an
+  explicit end ("all text ends above 76% of the height"), or pick the shorter approved claim for narrow columns.
+- Tablet-only prompts (no bottle) avoid the tan-tablets-in-bottle mismatch entirely; good default until new bottle renders.
+- Pinterest layouts (level 3) translated well for women: split, cards, staircase, sticky note. Backgrounds still sneak in
+  peach skies and plant greens → name them in the "avoid" line.
+- "Lean/Leaner" headlines with a person in shot need Jeremy (pre-screen ⚠: never with a body shot).
