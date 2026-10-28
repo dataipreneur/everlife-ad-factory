@@ -12,8 +12,8 @@ Why it works: the bible's first composition rule is "the pill/tablet is the hero
 - **Video:** slow push-in, the tablet settling in slow motion, light sweeping across.
 - **Finishing:** `finish_batch.py` (F2 / F12).
 
-## 4B — Tablet in hand
-- **Looks like:** an extreme close-up of a 45+ hand (real skin) holding ONE tablet up to warm window light; a gym or kitchen softly out of focus. (The past ads' strongest layout; keep the hand mature and the background calm.)
+## 4B — Tablet in hand ⭐ PROVEN (all-time top sellers)
+- **Looks like:** an extreme close-up of a 45+ hand (real skin) holding ONE tablet up to the lens; a gym, a face or a kitchen softly out of focus; a huge condensed headline on the other side, "SERMORELIN" as a small kicker. Women: a woman 40–55 holding the tablet toward camera. This is the format of ~1,500 Sermorelin sales (281319, 274068, 284172, 281136, 273390: `../winners/winners.md` ⭐).
 - **Guardrails:** exactly one tablet; no lips/mouth macro (past "tablet on the tongue" crops read as intimate); no swallowing several.
 
 ## 4C — Minimal bold name

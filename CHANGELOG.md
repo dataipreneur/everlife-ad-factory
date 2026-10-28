@@ -46,6 +46,10 @@ Renders + tests (same day, evening):
   row collided; a 30-character CTA overflows its button) — written into the skill's `finishing.md`.
 - Before/after (`main` core vs this branch): identical 124, different 0. Smoke: 18/18 passed. Preflight: 9/10 (Marketing
   Studio registration pending). Not yet done: a real generated video.
+- `references/winners/`: ⭐ all-time section from the Meta exports the user downloaded ("All-Time Top Ads by Account",
+  monthly "Top Ads by CPA" Jan–Jul 2025): Sermorelin target $400 / max $500; top sellers 273393-3.01 (454 sales),
+  281319-1.01 (332), 273400-2.04 (women, 137 at $248). Proven mechanic = one tablet held to the lens (~1,500 sales):
+  now batch slot 1 and marked ⭐ in style 4B. Video winners listed by ID; their files aren't on this Mac.
 
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.

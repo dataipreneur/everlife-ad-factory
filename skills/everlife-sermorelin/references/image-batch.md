@@ -45,7 +45,9 @@ Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip
 | F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life (warm stone, chalk, linen), one colour mood, short serif line |
 
 **Random (recommended):** N different frameworks (skip F5, F7), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8,
-F10, F11, F12). Weight towards F2, F4, F11, F6 (winners: M5 name lockup, M3 name box + icon lines, M2 "S" dumbbell plate).
+F10, F11, F12). **Slot 1 is always F2 as "tablet in hand"** (a real 45+ hand holding ONE tablet to the lens + a huge
+condensed Tier A headline): the all-time winners' format (~1,500 sales, `winners/winners.md` ⭐). Then weight towards
+F4, F11, F6, F12 (name/tablet hero).
 
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·

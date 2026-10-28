@@ -10,6 +10,45 @@ That page's catalog files three products under the Sermorelin card: **Sermorelin
 ("double-strength"), **Sermorelin 500 mcg** sublingual tablet, and the **Sermorelin 3 mg injection** (out of scope for
 creative). The men's winners are mostly 1000 mcg "Double Strength" ads.
 
+## ⭐ All-time proven at scale (read this first)
+Source: "Everlife_All-Time_Top_Ads_by_Account.xlsx" (Meta pixel purchases, pulled Oct 15 2026, account EVR = main
+account, Sept 2023 → Oct 2026) + monthly "Top Ads by CPA" Jan–Jul 2025 (user's downloads, 2026-10-28). **Sermorelin
+targets: $400 CPA target, $500 max.** These ads sold in the hundreds, so they outweigh the weekly cards below (3–8 sales).
+Preview: `ALLTIME_top12.jpg` (12 ads, labelled with sales and CPA).
+
+| # | Ad (EVR) | Sales | CPA | What it is |
+|---|---|---|---|---|
+| M1 | 273393-3.01 | 454 | $352 | shirtless gym man + bottle + 3 blue benefit bars, "Get Ripped and Lean or Get Your Money Back" |
+| M2 | 281319-1.01 | 332 | $347 | **hand holding ONE "S" tablet to camera**, huge condensed "Get Ripped and Lean", "Save 70% vs HGH" |
+| M3 | 274068-2.03 | 291 | $375 | **hand holding the oblong tablet to camera**, "Kiss your dad-bod goodbye", "Featured in NIH/Healthline/Mayo" |
+| M4 | 273610-2.01 | 290 | $343 | (only a 2.02 square + 1.01 9:16 on file; not viewed) |
+| M5 | 281319-3.01 | 267 | $393 | **tablet in hand** (man's face soft behind), "Sermorelin Sublingual Peptide", "Save 70% vs HGH" |
+| M6 | 284172-3.01 | 257 | $397 | **tablet in hand** + 4 dark benefit bars + bottle/vial, "Get Ripped and Lean" |
+| M8 | 273610-3.01 | 223 | **$252** | best CPA among the big ones (file not on this Mac) |
+| M9 | 281136-1.01 | 196 | $351 | **fist pushing the tablet at the lens** in a blue gym, "Featured in" logos |
+| F1 | 273400-2.04 | 137 | **$248** | oblong tablet over "SERMORELIN" ×5, dark textured background, 3 check lines |
+| F2/F22 | 273390-2.01 / -1.01 | 86 + 155 | $326 / $402 | **woman 40s holding the "S" tablet to camera**, "Stay Fit, Age Beautifully" (Tier A), bottle bottom-left, 5 benefit bars (red version beat blue on CPA) |
+| F3 | 301616-1.01 | 69 | $273 | orange/pink "SERMORELIN" header, woman training, 5 white benefit pills |
+| F4 | 273588-3.01 | 68 | $349 | giant tablet on orange, "Strength · Vitality · Burn" boxes |
+
+**The proven mechanic: ONE tablet held up to the lens by a real hand** (M2, M3, M5, M6, M9, F2/F22: ~1,500 sales
+between them), with a huge condensed headline on the other side and the product name as a small kicker. That is
+sub-style **4B Tablet in hand** / F2 Bold claim: make it the default first slot in every batch.
+Second: **name or tablet as the hero** (F1, F4, BASE130). Women: a woman 40–55 holding the tablet + a Tier A line.
+
+**Don't copy (all of them break a current rule):** "Get Ripped and Lean" / "Get Toned and Lean" (⚠), "or get your money
+back" (guarantee), "Save 70% vs HGH" (⚠), "Featured in NIH / Healthline / Mayo Clinic" (unsourced authority), "Kiss your
+dad-bod goodbye", "Increases Human Growth Hormone", fat loss / fat burning / "Burn", "Sublingual tablets or injection",
+the vial, shirtless bodies, "Skip the needles". Women's winners are orange-heavy: today's rule says pinks/tans/beige.
+
+**Video winners exist but none are on this Mac** (only M4 VIDEO82B below). Ask for these files (Drive / Ads Manager):
+- Men: **S3VIDEO2** (133 sales, $443), **Video#44A** (33, $392), **S3VIDEO4** (29, $310), **VID-7** (28, $349),
+  274068Video-2.01 (18, $364), Video#77B (12, $440), S3VIDEO1/3/5/6 (small).
+- Women: **272652Video** cuts (May–Jun 2025: 16–23 sales/month, $312–374), **Long Form 1** (Jun 2025: 23 sales, $351),
+  video8 (8, $173), video9 (6, $149), video3 (7, $478).
+- Analyst warning (monthly sheets): "Sermorelin Male #1 ID272651-3.01 ($66 CPA) rests on one $517 ad reporting 16
+  purchases: an attribution anomaly, not a real winner." Ignore it.
+
 ## How to use these cards (read before writing a batch)
 - Take **layout, format, hook mechanics, mood and product staging** from a card. Take **every word** from the bible
   (Tier A) or as an approved Tier B line. The image model never sees these ads, only you do.
