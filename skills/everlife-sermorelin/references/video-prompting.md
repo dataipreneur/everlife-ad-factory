@@ -5,8 +5,9 @@ growth hormone–releasing peptide in an easy sublingual tablet; plain Sermoreli
 35–65** (energy, strength, performance, natural growth hormone support) or **Women 35–65** (energy, strength, graceful
 aging), set in step 1. Every ad is 15 s, 9:16 unless asked.
 
-**Start from the past ads** (`winners/winners.md`): the strongest plain-Sermorelin patterns were the tablet held up to the
-lens by a real hand and the product name run huge. No CPA-ranked video winner is on file yet.
+**Start from the winners** (`winners/winners.md`): M4 VIDEO82B (a pattern-interrupt image from frame 1, a fixed "Now
+Double Strength" header that reads with sound off, the bottle in nearly every frame) is the proven video format; #83B
+(the men's #1) isn't on file yet. Keep the mechanics, never its creatures, injection lines or "strongest on the market".
 
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
 1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (a kettlebell set down hard at dawn, a 58-year-old

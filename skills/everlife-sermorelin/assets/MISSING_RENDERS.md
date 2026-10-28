@@ -1,13 +1,16 @@
-# Product renders: what's in, what's missing (plain Sermorelin, sublingual tablet)
+# Product renders: what's in, what's missing (plain Sermorelin, sublingual tablet, 1000 + 500 mcg)
 
 **Nothing is in yet.** Every generation is blocked until the files below are added and checked.
 
-| File | What | Status |
+| File | Strength | Status |
 |---|---|---|
-| `sermorelin_tablet.png` | the sublingual tablet, transparent PNG | ❌ needed. **Which tablet?** Past plain-Sermorelin ads (the "Sermorelin M" / "Sermorelin F" ad folders, Oct 2026) show two: a **round orange tablet with an embossed "S"** (most men's ads, incl. "Sermorelin 2X") and an **oblong orange tablet stamped "SERMORELIN"** (several women's ads). Confirm with Ed/Ronnel which one ships today (and whether the double-strength tablet differs) before adding it. |
-| `sermorelin_bottle_ref.jpg` | the sublingual-tablet bottle, any background | ❌ needed for image ads. Past ads show an amber jar with an orange label, vertical EVERLIFE wordmark and "RX" box. The label text (name, strength, tablet count) must be read from the asset-library render, not from ads. |
-| `sermorelin_bottle.png` | the same bottle as a **transparent PNG** ("NOBG"), ≥ 800 px wide | ❌ needed for video end cards, composites and Marketing Studio. |
-| double-strength bottle | if "Double Strength" is a separate bottle/label | ❓ ask: past men's ads say "Sermorelin 2X / Double Strength". If it's a different label, add `sermorelin2x_bottle_ref.jpg` / `.png` and note it here. |
+| `sermorelin_tablet.png` | both? | ❌ needed: the tablet, transparent PNG. **Likely the round orange tablet with an embossed "S"**: it's in every current men's winner (Oct 9–15, `references/winners/`). An older women's winner shows an **oblong orange tablet stamped "SERMORELIN"**. Confirm with Ed/Ronnel which one ships today and whether 500 and 1000 mcg share it. |
+| `sermorelin1000_bottle_ref.jpg` | 1000 ("double strength") | ❌ needed for image ads; most winners are 1000 mcg ads. Any background. |
+| `sermorelin1000_bottle.png` | 1000 | ❌ needed: transparent PNG ("NOBG"), ≥ 800 px wide, for video end cards, composites and Marketing Studio. The default bottle. |
+| `sermorelin500_bottle_ref.jpg` / `sermorelin500_bottle.png` | 500 | ❌ needed only for 500 mcg ads. |
+
+Past ads show an amber jar, orange label, vertical EVERLIFE wordmark and "RX" box. The label text (name, strength, tablet
+count) must be read from the asset-library render, not from ads.
 
 **Never use:** the injection **vial** that appears next to the bottle in most past ads (no needles, injections or vials in
 creative), any Sermorelin GHK render (red label, green tablet: a different product), or the website's product image

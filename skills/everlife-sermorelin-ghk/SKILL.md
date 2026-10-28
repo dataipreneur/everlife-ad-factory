@@ -1,6 +1,6 @@
 ---
 name: everlife-sermorelin-ghk
-description: EverlifeMD Sermorelin GHK ad factory. Guides the user step by step (connection checks → audience Men/Women → image or video → style → one script at a time for approval → generation → automatic branded finishing → local folder) to make compliant Sermorelin GHK video and image ads, for either strength (500 mcg or 1000 mcg). Use whenever the user asks for any Sermorelin GHK / Sermorelin + GHK / "3-in-1 peptide" / "growth hormone tablet" ad, video, image, static, UGC, hook, script or prompt, or says "make an ad for Sermorelin GHK", even if they only say "let's make Sermorelin ads". Not for plain Sermorelin (no GHK) or the GHK cream.
+description: EverlifeMD Sermorelin GHK ad factory. Guides the user step by step (connection checks → audience Men/Women → image or video → style → one script at a time for approval → generation → automatic branded finishing → local folder) to make compliant Sermorelin GHK video and image ads, for either strength (500 mcg or 1000 mcg). Use whenever the user asks for any Sermorelin GHK / Sermorelin + GHK / "3-in-1 peptide" / "growth hormone tablet" ad, video, image, static, UGC, hook, script or prompt, or says "make an ad for Sermorelin GHK". If the user only says "Sermorelin ads", ask whether they mean Sermorelin GHK or plain Sermorelin before starting. Not for plain Sermorelin (no GHK: use everlife-sermorelin) or the GHK cream.
 ---
 
 # Sermorelin GHK Ad Factory

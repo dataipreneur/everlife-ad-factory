@@ -45,13 +45,14 @@ Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip
 | F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life (warm stone, chalk, linen), one colour mood, short serif line |
 
 **Random (recommended):** N different frameworks (skip F5, F7), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8,
-F10, F11, F12). Weight towards F2, F11, F12, F6 (the past ads' strongest layouts were tablet-in-hand and bold name).
+F10, F11, F12). Weight towards F2, F4, F11, F6 (winners: M5 name lockup, M3 name box + icon lines, M2 "S" dumbbell plate).
 
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
-2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad**
-   (a past-ad pattern from winners.md, else one from the generic folder). Follow the "Don't copy" list. Write concept
+2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad**:
+   first a matching winner (its card + preview image: M5 bold name lockup, M3 features & benefits + offer, M2 visual
+   metaphor, F1 tablet hero / repeated name, M4 video), else one from the generic folder. Follow the card's "Don't copy" list. Write concept
    (1 line), headline (Tier A by default), ≤ 3 supporting lines (✅ benefits, exact), prompt. Show ONE table:
    # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
@@ -96,5 +97,6 @@ vials, no mirrors showing bodies.
 LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands).
 9:16 only: keep the top 8% free of text.
 ```
-Bottle wording for the PRODUCT block: **fill in only after `sermorelin_bottle_ref.jpg` is added and checked** (read the
-label off the asset-library render: name, strength, tablet count). Never describe the tablet in words.
+Bottle wording for the PRODUCT block, per strength: **fill in only after `sermorelin1000_bottle_ref.jpg` /
+`sermorelin500_bottle_ref.jpg` are added and checked** (read the label off the asset-library render: name, strength,
+tablet count). QA that the label shows the session's strength. Never describe the tablet in words.

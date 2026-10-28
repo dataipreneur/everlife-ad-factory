@@ -2,7 +2,12 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim. Plain Sermorelin (sublingual tablet), NOT Sermorelin GHK.",
  "id": "sermorelin",
  "name": "Sermorelin",
- "renders": {"bottle": "sermorelin_bottle.png", "pill": "sermorelin_tablet.png"},
+ "renders": {"bottle": "sermorelin1000_bottle.png", "pill": "sermorelin_tablet.png"},
+ "strengths": {
+  "_about": "Tablet assumed shared (confirm). renders.bottle is the default; a job showing the other strength sets \"bottle\" in copy.json.",
+  "1000": {"bottle": "sermorelin1000_bottle.png", "bottle_ref": "sermorelin1000_bottle_ref.jpg", "label": "double strength (read the label from the render)"},
+  "500": {"bottle": "sermorelin500_bottle.png", "bottle_ref": "sermorelin500_bottle_ref.jpg", "label": "read the label from the render"}
+ },
  "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
  "keep_case": ["Sermorelin"],
  "review_highlight": "Sermorelin(?!\\s*\\+?\\s*GHK)",

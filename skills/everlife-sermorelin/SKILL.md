@@ -27,7 +27,7 @@ Read these when the step says so:
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
-| `references/winners/winners.md` | **any image or video concept**: what past plain-Sermorelin ads did (no CPA ranking on file yet) and the long "don't copy" list |
+| `references/winners/winners.md` | **any image or video concept**: our own top Sermorelin ads (CPA-ranked, Oct 2026) with "works / don't copy / rebuild with" cards; look at the card's preview image. Start here, before the generic refs |
 | `references/image-batch.md` | **any image request** (Batch Mode); generic layout refs in `core/references/static-refs/` (layout only) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes from the other product skills) |
@@ -40,7 +40,7 @@ Paths: skill dir = this folder (`assets/` holds the real bottle + tablet renders
 ## Step 0 — Preflight + product gate
 
 1. **Which product?** If the request could mean either ("Sermorelin ads"), ask once: "Plain Sermorelin (Recommended for this skill)" / "Sermorelin GHK (switch to that skill)".
-2. **Renders gate (hard stop):** `assets/MISSING_RENDERS.md` lists what's in and what's missing. Image ads need `sermorelin_tablet.png` + `sermorelin_bottle_ref.jpg`; video end cards and Marketing Studio need the transparent `sermorelin_bottle.png`. Missing → STOP before generation and say which file is needed and where it lives (also: which of the two past tablets is current). You may still draft scripts/copy for review if the user asks, labelled "draft — no renders yet".
+2. **Renders gate (hard stop), per strength:** `assets/MISSING_RENDERS.md` lists what's in and what's missing. Every ad needs `sermorelin_tablet.png`. **1000 mcg** (default, "double strength"): image ads need `sermorelin1000_bottle_ref.jpg`, video end cards and Marketing Studio the transparent `sermorelin1000_bottle.png`. **500 mcg:** `sermorelin500_bottle_ref.jpg` / `.png`. Missing → STOP before generation and say which file is needed and where it lives (also: confirm which tablet is current). You may still draft scripts/copy for review if the user asks, labelled "draft — no renders yet".
 3. Run `bash <skill-dir>/core/scripts/preflight.sh` and read its report. Use **AskUserQuestion** to walk the user through anything that is not ✅, one item at a time:
 
 | Check | Fix to offer |
@@ -65,7 +65,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
 **One AskUserQuestion, 2–3 questions:**
 1. **Audience:** "Men 35–65 (Recommended)" / "Women 35–65" / "Both (5 each)". This picks the bible page (headlines, palette). Women → pinks, tans, beige in the scene; never orange or green backgrounds or accents (the orange product itself stays as it is).
-2. **Double strength?** (men only, and only once the double-strength bottle is confirmed in `assets/`): "Don't mention strength (Recommended)" / "Double Strength". "Double Strength Sermorelin" is a men's bible headline; never state a dose in mcg.
+2. **Strength:** "1000 mcg · Double Strength (Recommended for men)" / "1000 mcg, strength not mentioned (Recommended for women)" / "500 mcg". It decides which bottle the ad shows (QA checks the label). "Double Strength Sermorelin" is a men's bible headline and the hook of 4 of 5 men's winners: only with the 1000 mcg bottle in frame. Never state a dose in mcg.
 3. **What are we making?** "🖼️ Image ads: batch of 5 (Recommended)" / "🎬 Video ad".
 - **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).
 - **Video** → ONE AskUserQuestion with: **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1"; **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md`; **Angle** "✨ Auto (Recommended)" / 3 approved territories (energy + stamina · strength + vitality · natural growth hormone support · healthy aging).

@@ -22,9 +22,17 @@ Sermorelin GHK skill. Data only: no `core/` changes.
   downloads "Sermorelin M/F") on layouts worth keeping and a long don't-copy list.
 - Video `tiktok`/`editorial` end cards need an `ingredients` list (`core/tools/styles.py`): `finishing.md` fills it with
   the three ✅ benefits instead of changing core.
-- Not changed: the Sermorelin GHK skill. Its description still says "even if they only say 'let's make Sermorelin ads'",
-  which overlaps with this skill; the new skill asks which product when it's ambiguous. Worth tightening the GHK
-  description on its own branch.
+
+Later the same day:
+- `references/winners/`: CPA-ranked winners from the Winning Ads Reference page ("Sermorelin — Male", Oct 9–15; "Sermorelin
+  — Female", Oct 2–8, stale), matched by code to the "Sermorelin M/F" Drive downloads, looked at, and written up as cards
+  with small previews (M2 INT91, M3 ID323819 3.01 + 1.01, M4 VIDEO82B contact sheet + transcript, M5 BASE130-01, F1
+  ID273400-3.04). M1 VIDEO83B isn't in the downloads. Every winner breaks a current rule; cards say what to rebuild.
+- Findings applied: two strengths (1000 mcg "double strength", 500 mcg; catalog on that page), so renders are now
+  `sermorelin1000_bottle(_ref)` / `sermorelin500_bottle(_ref)` + `product.json` "strengths"; the round "S" tablet is in
+  every current men's winner (still to confirm); SKILL step 1 asks strength; batch/video guides start from the winners.
+- `skills/everlife-sermorelin-ghk/SKILL.md` (original in `_originals/2026-10-28/`): description no longer claims
+  "let's make Sermorelin ads"; it asks which product and points plain Sermorelin to `everlife-sermorelin`.
 
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.

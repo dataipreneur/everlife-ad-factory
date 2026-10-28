@@ -24,7 +24,7 @@ Boards show library ads as they ran, including some that break today's rules ("D
 | 3 | **Cinematic Big Idea** | `3-cinematic-big-idea.md` | 3A Movie-peg · 3B Comedic contrast · 3C Retro film · 3D Seasonal | ⭐⭐ | Video + image |
 | 5 | **Contrast & Comparison** | `5-contrast.md` | 5A Old routine vs Sermorelin checklist · 5B Versus battle (vs a problem) | ⭐ | Image + video |
 
-Product as Hero leads here (unlike GHK): the past plain-Sermorelin ads' strongest, cleanest layouts were the tablet held to camera and the name run huge, and the clean claim pool is small, so the product has to carry the ad.
+Product as Hero leads here (unlike GHK): every Sermorelin winner (`../winners/winners.md`) runs the name huge with the tablet up front, and the clean claim pool is small, so the product has to carry the ad. The winners' people are all shirtless or before/after (banned), so clothed lifestyle (6) is promising but untested.
 
 ## How to ask (minimal clicks)
 1. **"Pick a style direction"** (single select): "✨ Recommend for me" (you pick 1–3 sub-styles with one line why) · "Product as Hero" (statics ~1 Creatify cr, video Seedance ~45 cr) · "Lifestyle & Real People" (Marketing Studio, ~75 cr/video) · "Authority & Big Idea".

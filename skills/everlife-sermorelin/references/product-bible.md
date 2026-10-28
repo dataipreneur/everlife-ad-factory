@@ -22,11 +22,12 @@
 - **Form this skill advertises: the sublingual tablet only.** The bible says Sermorelin is "available as sublingual
   tablets or injections", but creative never mentions or shows needles, injections, vials or syringes (global rule), so
   injections are out of scope. Say "easy sublingual delivery". Never "all natural".
-- **The tablet is the hero.** Which tablet is current is not confirmed yet (see `assets/MISSING_RENDERS.md`): past ads
-  show both a round orange tablet with an embossed "S" and an oblong orange tablet stamped "SERMORELIN".
-- **Strength:** the men's page approves "Double Strength Sermorelin" and "Sublingual tablets with 2x the strength". Which
-  bottle is the double-strength one is not confirmed: until the asset-library render says so, copy may use the bible's
-  "Double Strength" headline only if the bottle shown is confirmed double strength (ask the user).
+- **The tablet is the hero.** Not confirmed yet (see `assets/MISSING_RENDERS.md`), but every current men's winner shows
+  a **round orange tablet with an embossed "S"**; an older women's winner shows an oblong tablet stamped "SERMORELIN".
+- **Strengths (this skill covers both tablets):** **1000 mcg** ("double strength") and **500 mcg** sublingual tablets,
+  same price, per the Winning Ads Reference catalog (2026-10-28; recheck on the landing page). The men's page approves
+  "Double Strength Sermorelin" and "Sublingual tablets with 2x the strength", and 4 of 5 men's winners lead with it. Use
+  them only with the **1000 mcg bottle** in frame. Copy never states a dose in mcg until the creative lead approves it.
 - **Audiences (pick one per session):** **Men 35–65+** (lean muscle, energy, strength, healthy aging; frame around muscle,
   fitness and performance, never the bedroom; fit, mature talent, not bodybuilders) · **Women 35–65+** (lean muscle,
   energy, graceful aging; palette pinks, tans, beige, **no oranges or greens** in the scene).
