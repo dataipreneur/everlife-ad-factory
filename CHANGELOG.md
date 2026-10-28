@@ -119,3 +119,13 @@ kept working after the 17:49 zip. HANDOFF-MITANSH.md gains step 1b: don't merge 
 diff his installed skill against `restora-known-good`, port his changes into the new layout (product values into
 product.json, not tool code), prove with the before/after check using HIS tools as the baseline, then open a pull
 request into `product-config` for Priestley to review.
+
+## 2026-10-28 — After merging #2: preflight old-copy warning, product_ids.json out of git, handoff paths
+- `core/scripts/preflight.sh` (step 0 from #2): an old, unlinked copy in `~/.claude/skills/<skill>` is now a ❌ with the fix
+  (`install.sh`), instead of a ✅ "already present" while Claude keeps using the old copy. Tested on Priestley's Mac (old copy
+  present → ❌, nothing moved).
+- `skills/*/assets/product_ids.json` removed from git and ignored: preflight writes it per account/Mac. Existing local copies
+  stay; after a pull it may disappear and the next preflight recreates it.
+- `HANDOFF-MITANSH.md`: repo path note (Mitansh's clone is `~/Desktop/everlife-ad-factory`); step 5 says where he starts.
+- Checked on the merged branch: vs `restora-known-good` 123/124 identical, vs Mitansh's tools (3be3a588e802) 123/124
+  identical (the one intended "Restora-Z" casing change in both), smoke 12/12.

@@ -90,6 +90,7 @@ ls "$B"
 Tell Mitansh the backup path. (Copy logs and `output/` are never touched by this update.)
 
 ## Step 3 — Get the repo (doesn't change his install yet)
+**Paths:** the commands below use `~/everlife-ad-factory`. If the repo already lives somewhere else (Mitansh: `~/Desktop/everlife-ad-factory`), use that path everywhere instead, including step 7 and the rollback.
 ```bash
 cd ~ && git clone https://github.com/dataipreneur/everlife-ad-factory.git   # needs access to the repo
 cd ~/everlife-ad-factory && git fetch --all --tags
@@ -119,6 +120,7 @@ touch the product on those test images); they must be the same in both runs.
 **Anything else → STOP** and send Priestley the full output.
 
 ## Step 5 — Install
+(Mitansh, 2026-10-28: steps 1–4 and 1b are done; PR #2 and PR #1 are merged. Start here: `cd ~/Desktop/everlife-ad-factory && git checkout main && git pull`, then the commands below.)
 ```bash
 cd ~/everlife-ad-factory
 bash install.sh                 # links both skills into ~/.claude/skills; moves the old Restora copy to ~/.claude/skills-backup/

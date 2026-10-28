@@ -24,7 +24,9 @@ if [ "$SKILL" != "$USKILL" ]; then
   mkdir -p "$HOME/.claude/skills"
   if [ ! -e "$USKILL" ]; then ln -s "$SKILL" "$USKILL" && pass "Skill linked into ~/.claude/skills (works from any folder)"
   elif [ -L "$USKILL" ] && [ "$(readlink "$USKILL")" != "$SKILL" ]; then ln -sfn "$SKILL" "$USKILL" && pass "Skill link updated → $SKILL"
-  else pass "Skill already present in ~/.claude/skills"; fi
+  elif [ -L "$USKILL" ]; then pass "Skill already linked in ~/.claude/skills"
+  else fail "An older, unlinked copy of this skill sits in $USKILL (Claude uses that one, not $SKILL)" \
+            "bash <repo>/install.sh   (moves the old copy to ~/.claude/skills-backup/ and links this one)"; fi
 else pass "Skill installed in ~/.claude/skills"; fi
 
 # 1. Higgsfield CLI
