@@ -153,3 +153,11 @@ Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extr
 - New `core/references/meta-refs/SOURCES.md` (empty log + how to add Meta Ad Library references).
 - Wired into Sermorelin GHK only (`SKILL.md` reading table, `image-batch.md` step 2). **Restora-Z unchanged** at Priestley's
   request: its owner decides whether to adopt the rule.
+
+## 2026-10-28 — Sermorelin GHK Pinterest references (priority 3)
+- New `skills/everlife-sermorelin-ghk/references/pinterest/` (19 images, 1.5 MB, `SOURCES.md`): screened 661 pins from four
+  Pinterest idea pages (supplement advertising, supplement creative ads, us-vs-them ad examples, male ad); kept supplement /
+  wellness / skincare ads for the ad types our winners don't cover: Us vs Them, phone UI, question, reasons why, sticky note,
+  visual metaphor, features, brand mood, and a new 13_EXTRA_Identity_Age (men 50+ / active seniors). Dropped a GLP-1 fat-loss
+  ad and an art poster with a violent line. Each row: what to take (layout) and what not to copy.
+- Sermorelin GHK checks its own Pinterest folder before the shared sleep-heavy `static-refs`. Restora-Z unchanged.

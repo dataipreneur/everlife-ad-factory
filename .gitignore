@@ -5,3 +5,4 @@ venv/
 .venv/
 _originals/
 skills/*/assets/product_ids.json
+.claude/worktrees/
