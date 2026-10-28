@@ -28,7 +28,7 @@ Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip
 - Never repeat a headline in the copy log. **The Tier A pool is very small** (3 men's, 4 women's): say so up front and ask
   whether to allow Tier B, use a ⚠ line with the user's OK, or request new approved headlines from Jeremy.
 
-## 1. Frameworks (reference ads in `core/references/static-refs/<folder>/`, overview `OVERVIEW.jpg`)
+## 1. Frameworks (references: see §2 priority order; generic set in `core/references/static-refs/<folder>/`, overview `OVERVIEW.jpg`)
 | Code | Framework | Folder | Sermorelin recipe |
 |---|---|---|---|
 | F1 | Old way vs New way | 01_Us_vs_Them | "Old routine" (more coffee, more pre-workout) vs "Doctor-prescribed Sermorelin, easy sublingual delivery". Categories only; no HGH, injections or bodies |
@@ -52,9 +52,13 @@ F4, F11, F6, F12 (name/tablet hero).
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
-2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad**:
-   first a matching winner (its card + preview image: M5 bold name lockup, M3 features & benefits + offer, M2 visual
-   metaphor, F1 tablet hero / repeated name, M4 video), else one from the generic folder. Follow the card's "Don't copy" list. Write concept
+2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad in
+   priority order** (`core/references/REFERENCE-PRIORITY.md`): **1** a matching winner (⭐ all-time: tablet in hand
+   M2/M5/M6/F2, name/tablet hero F1/F4; weekly: M5 name lockup, M3 features & benefits + offer, M2 visual metaphor,
+   M4 video) → **2** a Meta Ad Library ref in `core/references/meta-refs/<framework folder>/`, if any → **3** a Pinterest
+   ref: this skill's `references/pinterest/<framework folder>/` first (read its `SOURCES.md` row: what to take, what not
+   to copy), then `core/references/static-refs/<framework folder>/`. Follow the "Don't copy" lists. Record the level
+   and file for each ad in `prompts.md` and SESSION.md. Write concept
    (1 line), headline (Tier A by default), ≤ 3 supporting lines (✅ benefits, exact), prompt. Show ONE table:
    # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and

@@ -50,6 +50,12 @@ Renders + tests (same day, evening):
   monthly "Top Ads by CPA" Jan–Jul 2025): Sermorelin target $400 / max $500; top sellers 273393-3.01 (454 sales),
   281319-1.01 (332), 273400-2.04 (women, 137 at $248). Proven mechanic = one tablet held to the lens (~1,500 sales):
   now batch slot 1 and marked ⭐ in style 4B. Video winners listed by ID; their files aren't on this Mac.
+- Reference priority (1 winners → 2 Meta → 3 Pinterest) wired into plain Sermorelin like Sermorelin GHK:
+  `core/references/REFERENCE-PRIORITY.md` and `core/references/meta-refs/SOURCES.md` copied **byte-identical** from branch
+  `sermorelin-first-batch` (so the merge is clean). ⚠ After both branches merge, update its line "Wired into: Sermorelin
+  GHK only" to include plain Sermorelin (not edited here, to avoid a conflict).
+- `references/pinterest/`: the same 19 screened pins as Sermorelin GHK, re-checked for plain Sermorelin, with a new
+  header (best fits, green/orange backgrounds banned for women, wording traps). SKILL.md + image-batch §2 follow the order.
 
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.

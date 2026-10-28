@@ -27,8 +27,9 @@ Read these when the step says so:
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
-| `references/winners/winners.md` | **any image or video concept**: our own top Sermorelin ads (CPA-ranked, Oct 2026) with "works / don't copy / rebuild with" cards; look at the card's preview image. Start here, before the generic refs |
-| `references/image-batch.md` | **any image request** (Batch Mode); generic layout refs in `core/references/static-refs/` (layout only) |
+| `core/references/REFERENCE-PRIORITY.md` | picking any reference ad: **1 our winners → 2 Meta Ad Library → 3 Pinterest** (rules for all three) |
+| `references/winners/winners.md` | **any image or video concept** (priority 1): the ⭐ all-time Meta top sellers first, then the weekly CPA cards, with "works / don't copy / rebuild with"; look at the preview image |
+| `references/image-batch.md` | **any image request** (Batch Mode); Meta refs in `core/references/meta-refs/` (priority 2, if any); Pinterest refs (priority 3): this skill's `references/pinterest/` (read its `SOURCES.md`), then the shared `core/references/static-refs/` (layout only) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes from the other product skills) |
 | `references/reviews.md` | any review / testimonial / social-proof quote (none on file yet → gated) |
