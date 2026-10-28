@@ -68,9 +68,16 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    doesn't say what's for sale. The tan tablets inside the bottle render are a known issue (`assets/MISSING_RENDERS.md`):
    keep using the render until design or the pharmacy confirms a corrected one; never drop the bottle to avoid it, and
    flag it in the session sheet.
+   **Vary the product per ad** (Restora feedback, Berna): write each ad's own product arrangement (held in fingertips,
+   floating and tilted, on a plinth, on a step, leaning on the bottle, in a hand beside the face…); never the same angle
+   or position twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
    people look 35–60, fit but not bodybuilders, clothed; women's ads in pink/tan/beige; nothing breaks a Hard NO;
+   the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
+   width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
+   across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
+   (finishing adds the real one);
    **the bottle is in shot, large, with "SERMORELIN GHK" legible** (product identifiable in under 2 seconds).
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
 5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin-ghk`
@@ -111,15 +118,19 @@ in the style of a modern DTC wellness brand. Framework: <name>: <layout from the
 
 PRODUCT: image 1 is the real bottle and image 2 the real tablet. Use the attached tablet reference exactly; do not
 invent, alter, or substitute a different pill. Use the attached bottle reference exactly: same shape, colours and label,
-label facing camera, sharp, never mirrored, never redesigned. The TABLET is the hero (large, in focus, foreground); the
-bottle is in every ad, large and legible, beside or just behind the tablet.
+label facing camera, sharp, never mirrored, never redesigned; the label wraps around the bottle and follows its angle and
+perspective. The TABLET is the hero (large, in focus, foreground, at least 15% of the canvas width), shown as the real
+tablet only: never as glowing orbs, glass spheres, icons or abstract shapes. The bottle is in every ad, large and
+legible. ARRANGEMENT for this ad: <this ad's own product arrangement, different from every other ad in the batch>.
 
 TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from the
 menu, e.g. "a heavy condensed grotesque in all caps">, with ONE phrase picked out in <accent colour from the palette>;
 supporting text in <its partner face>. For readers aged 50+: headline at least 9% of canvas height per line; every other
-line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines.
+line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines (a benefits block has exactly 3). Never
+split "Sermorelin" or "GHK" across two lines or hyphenate them.
 
-TEXT: render ONLY these strings, exactly, nothing else (no extra words, logos, stars, badges, prices, website, disclaimer):
+TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
+badges, prices, website, disclaimer):
   Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 

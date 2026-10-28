@@ -17,8 +17,13 @@ shirtless casting or claims.
    support", "Doctor prescribed", "Easy sublingual delivery", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear, specific CTA. Spoken lines finish by ~12 s.
 
-Spoken budget: **≤ 35 words**. Say "growth hormone", never "GH". Spoken product name at most twice: write it
-"ser-mo-REL-in G-H-K" for TTS/model voices.
+**Timing (Restora feedback + our first video, 2026-10-28):** Marketing Studio fills the WHOLE clip with speech at ~2 words
+per second, so budget ≈ 2 words per second of speaking time and write "finished speaking by <t> s". The end card stays on
+screen **at least 4 s** (benefits must be readable for 50+): for a short clip, hold the last frame (see `finishing.md`).
+**Shots:** at most 3 shots per 8 s, each at least 2 s; never several mini-scenes in one prompt (they come out split-second
+and rushed). Old budget, kept for Seedance VO: ≤ 35 words. Say "growth hormone", never "GH". Spoken product name at most twice: write it
+"ser-mo-REL-in G-H-K" for TTS/model voices. At most 2 hard names per spoken line (Sermorelin, Citrulline, IGF-1), write
+"3-in-1" as "three-in-one", and LISTEN to every take (our first takes came out "Sermoregin" and "three in a one").
 
 ## Copy rules
 - Headlines, benefits, ingredient claims, CTAs: only `product-bible.md` (audience page; ✅ lines; ⚠ only with the user's OK).
@@ -38,6 +43,8 @@ Spoken budget: **≤ 35 words**. Say "growth hormone", never "GH". Spoken produc
    or substitute a different pill or bottle. Label readable, never mirrored; exactly one tablet." Never describe the tablet
    in words.
 3. **CAST:** age, build ("fit, natural build, not a bodybuilder"), wardrobe (clothed, training or casual), energy. Same people throughout.
+   Always add "fresh, healthy, well-rested look, age 48–55, glowing skin, bright eyes" (Restora feedback: the models came
+   out older and tired; ours asked for 52 and looked 60–65). Still real and candid, never airbrushed.
 4. **Timed beats** with camera moves.
 5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.

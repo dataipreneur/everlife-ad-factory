@@ -86,6 +86,10 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
    - **On-screen copy**: header, end-card headline, 3 ingredient claims (Sermorelin / GHK / L-Citrulline Malate, each on its own ingredient, ✅ lines only), CTA, all from the bible
    - **Compliance notes**: the bible line behind each claim; any ⚠ pre-screen line used (needs the user's explicit OK now, Jeremy later); any Tier B line marked PROPOSED FOR APPROVAL
    - The full generation prompt in a collapsed code block
+2b. **Preview before video credits** (Restora feedback + our first video): make 2 Creatify stills (≈2 credits, same
+   renders attached) of the cast in the setting and of the product moment (the tablet in hand / the bottle shot), show
+   them, and fix cast, setting or product problems there. A wrong pill or a tired-looking model costs 1 credit to see in a
+   still and 40–75 to find in a video. Ask "Preview stills (≈2 credits)" before the script approval when it's a new cast or setting.
 3. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style". Label each concept with its sub-style code.
 4. On approval: job folder `~/Everlife-Creative/output/Sermorelin-GHK/<YYYY-MM-DD>_<slug>/` with `prompt.txt`, `copy.json`, `source/` (copy the `assets/` renders); run the cost check, submit **in the background**, append the concept to the copy log.
 

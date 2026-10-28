@@ -214,3 +214,12 @@ lesson corrected. Originals in `_originals/2026-10-28/bottle-rule/`. Restora unc
 - `core/tools/styles.py` (shared, tiktok end card): a tall pill render is lifted so it can't cover the label; new opt-in
   `"end_rows": "benefits"` shows the benefits instead of ingredient name + claim rows. Regression: 124/124 identical
   (Restora unchanged). Sermorelin GHK `finishing.md` notes it, plus the hold-last-frame trick for short clips.
+
+## 2026-10-28 — Sermorelin GHK: Restora team feedback applied (skill only)
+From the "Claude Ad Factory (Restora-Z) Feedback" doc (Stephen, Berna, Michael), Sermorelin GHK skill only:
+SKILL.md step 2b preview stills before video credits; video-prompting.md timing (≈2 words/s, end card ≥ 4 s, ≤ 3 shots
+per 8 s, each ≥ 2 s), pronunciation (≤ 2 hard names per line, listen to every take), casting (fresh, well-rested, 48–55);
+image-batch.md per-ad product arrangement, no shared framework/accent in a batch, tablet ≥ 15% width and never orbs/icons,
+label follows the bottle's perspective, no split "Sermorelin"/"GHK", exactly 3 benefits, no model-drawn logos.
+Shared-toolkit items (fades, end-card spacing/variety, 9:16 header size, ghost voice-over) not touched. Restora unchanged.
+Originals in `_originals/2026-10-28/restora-feedback/`.
