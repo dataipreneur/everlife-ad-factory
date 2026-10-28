@@ -22,3 +22,6 @@ list these folders (it only sees files shared directly), so download them by han
 Before adding (product-correctness gate): open each image and check it against the live product page. Never trust a filename.
 When the 1000 transparent bottle is in: run preflight (registers the product in Marketing Studio) and create the Creatify
 project (see `creatify.json`). Delete this file only when every row is ✅.
+
+## ⚠ Open: tablets inside the bottle vs the tablet render (2026-10-28)
+Both bottle renders (500 and 1000) show **round tan tablets inside the jar**; the tablet render is a **green rounded diamond with an embossed "S"**. Every ad that shows the bottle and the tablet together (ours and the live winners) shows both. Ask Ed/Ronnel/pharmacy which tablet is real, and for a bottle render with the correct tablets inside. Until answered, ads showing both are held at review. Never repaint the jar's contents in a prompt (that alters the approved render).
