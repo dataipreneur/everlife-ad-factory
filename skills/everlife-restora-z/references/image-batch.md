@@ -74,7 +74,8 @@ visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which ma
    - every text line large (would read on a phone at arm's length);
    - nothing breaks a Hard NO.
    Fail → one automatic re-roll with the fix named in the prompt (≈1 credit, inside the approved batch budget). Still bad → flag it, don't ship.
-5. Finish: `$T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --disclaimer "<verbatim bible disclaimer>"`.
+5. Finish: `$T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product restora-z` (the verbatim
+   disclaimer comes from product.json; the older `--disclaimer "<verbatim>"` still works and must match it).
 6. Save to `~/Everlife-Creative/output/Restora-Z/<date>_batch-<n>/` (FINAL files + `prompts.md` + `contact_sheet.jpg`), open the
    contact sheet, append headlines to the copy log, and offer: "Another batch?" / "Variations of #k" / "9:16 versions of the winners".
 

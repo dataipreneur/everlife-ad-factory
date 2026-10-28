@@ -1,4 +1,4 @@
-# Style system — index (Sermorelin GHK 1000)
+# Style system — index (Sermorelin GHK)
 
 Source: the team's style library "Everlife Ad Style Examples" (Drive folder `1aQv40GQ3vwsF2EkJ_L41vnvZDYInTckF`), condensed into 6 categories. Same structure as the Restora-Z skill; the fit and recipes are rewritten for Sermorelin GHK. Example boards (library thumbnails, all products) are in `../style-boards/board_1..6.jpg`:
 

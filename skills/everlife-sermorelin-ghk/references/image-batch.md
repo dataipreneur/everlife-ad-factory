@@ -1,4 +1,4 @@
-# Sermorelin GHK 1000 IMAGE ads: Batch Mode (the default for every image request)
+# Sermorelin GHK IMAGE ads: Batch Mode (the default for every image request)
 
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
 mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle
@@ -53,7 +53,10 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
-2. Read the bible + copy log (one cat). Per slot: pick a framework, **look at 1 reference ad from its folder**, write concept
+2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad**:
+   first a matching winner (its card + preview image: M8/M2 bold claim, M3 offer + callouts, M4 features & benefits,
+   M9 identity post, M10 tablet in hand, F2 brand mood, F1 article, F3 letter, F5 animated), else one from the generic
+   folder. Follow the card's "Don't copy" list. Write concept
    (1 line), headline (Tier A by default, see §0 ⚠ pending), ≤ 3 supporting lines (approved claims, exact), prompt. Show
    ONE table: # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
@@ -64,8 +67,9 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
    people look 35–60, fit but not bodybuilders, clothed; women's ads in pink/tan/beige; nothing breaks a Hard NO.
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
-5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --disclaimer "<verbatim disclaimer>"`.
-6. Save to `~/Everlife-Creative/output/Sermorelin-GHK-1000/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
+5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin-ghk`
+   (the verbatim disclaimer comes from product.json).
+6. Save to `~/Everlife-Creative/output/Sermorelin-GHK/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
    open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
 
 ## 3. Prompt template (fill everything; keep the quotes exact)
@@ -95,7 +99,10 @@ skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringe
 LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands).
 9:16 only: keep the top 8% free of text.
 ```
-Bottle wording, checked against the real render on 2026-10-28 (`assets/sghk1000_bottle_ref.jpg`). Add it to the PRODUCT
-block: "amber glass jar with a black ribbed cap; deep red label with the vertical white EVERLIFE wordmark, a white 'RX'
-box top right, a white band reading 'SERMORELIN GHK 1000', small text 'PRESCRIPTION', '30 TABLETS', '1000 MCG'". QA that
-it says **1000**, not 500. Never describe the tablet in words.
+Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
+the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:
+- **1000 mcg** (checked against `assets/sghk1000_bottle_ref.jpg`, 2026-10-28): white band 'SERMORELIN GHK 1000', '1000 MCG'.
+- **500 mcg** (wording read from the website's product image, 2026-10-28; recheck against the asset-library render
+  when it's added): white band 'SERMORELIN GHK', '500 MCG'.
+- **Either:** use the bottle on file and its wording.
+QA that the label shows the session's strength (1000 vs 500), not the other one. Never describe the tablet in words.

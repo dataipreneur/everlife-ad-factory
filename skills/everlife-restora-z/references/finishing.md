@@ -23,16 +23,17 @@ Meta's UI covers: Stories top 144 px + centre-bottom 664×248 reply bar; Reels l
 ## 2. Video finishing
 Write `<job>/copy.json` (all copy from the bible, all new against the copy log):
 ```json
-{"style": "house|tiktok|editorial", "kicker": "optional label for editorial",
+{"product": "restora-z", "style": "house|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house style only)",
  "end_head": ["END LINE 1", "END LINE 2"],
  "ingredients_label": "3-IN-1 SLEEP FORMULA",
  "ingredients": [["TRAZODONE","<bible claim>"],["HYDROXYZINE","<bible claim>"],["DOXEPIN","<bible claim>"]],
- "cta": "<bible CTA in caps>",
- "disclaimer": "<verbatim Restora-Z ad disclaimer from product-bible.md>",
- "bottle": "rz_bottle.png", "pill": "rz_capsule.png", "vocab": "Restora-Z."}
+ "cta": "<bible CTA in caps>", "vocab": "Restora-Z."}
 ```
-Keep `vocab` to "Restora-Z." only (longer vocab makes whisper drop those caption lines).
+`"product"` is required (since 2026-10-28): the verbatim disclaimer, the renders, name casing, the review highlight and
+the reviews file all come from this skill's `product.json`, and the tools refuse a job without it. Don't type the
+disclaimer; if it's in copy.json it must match product.json exactly. Older job folders need `"product": "restora-z"` added
+before re-running. Keep `vocab` to "Restora-Z." only (longer vocab makes whisper drop those caption lines).
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
 
@@ -55,7 +56,7 @@ Use `finish_modern.py --template hero|strip|notify|toggle|chips` for every stati
 
 Legacy layouts:
 `$T/venv/bin/python -I <skill>/core/scripts/finish_image.py <raw.png> <job>/copy.json <out.png> --ratio 4:5 --layout <standard|checklist|compare|quote|article|letter|split|frame>`
-Every layout adds the logo, the transparent Trustpilot / Doctor Prescribed / Ships Free row and the verbatim disclaimer; the layout adds the middle (cards, ❌✅ list, Restora-vs-Ambien table with both pills, review card, article panel, letter, pain→benefit split, or the ad placed inside a frame). The copy.json keys for each layout are listed at the top of `finish_image.py`. Make 1:1 and 9:16 versions from the same raw image only after the 4:5 master is approved (`--ratio`). Check the result, then save `<job>/FINAL_<Tag>_<ratio>.png` and `open` it.
+copy.json needs `"product": "restora-z"` (same for `finish_modern.py`). Every layout adds the logo, the transparent Trustpilot / Doctor Prescribed / Ships Free row and the verbatim disclaimer (from product.json); the layout adds the middle (cards, ❌✅ list, Restora-vs-Ambien table with both pills, review card, article panel, letter, pain→benefit split, or the ad placed inside a frame). The copy.json keys for each layout are listed at the top of `finish_image.py`. Make 1:1 and 9:16 versions from the same raw image only after the 4:5 master is approved (`--ratio`). Check the result, then save `<job>/FINAL_<Tag>_<ratio>.png` and `open` it.
 
 ## 4. Report to the user
 One block per asset: the file path, what it is (hook, look), the cost, and any known issue in plain words.

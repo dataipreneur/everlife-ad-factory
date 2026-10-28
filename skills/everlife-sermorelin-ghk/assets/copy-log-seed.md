@@ -1,4 +1,4 @@
-# Sermorelin GHK 1000 copy log — lines already used (do not reuse)
+# Sermorelin GHK copy log — lines already used (do not reuse)
 
 | Ad | Audience | Header | VO lines | End head | CTA |
 |---|---|---|---|---|---|

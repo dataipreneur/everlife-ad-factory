@@ -1,4 +1,4 @@
-# Sermorelin GHK 1000 — creative bible (verbatim extract)
+# Sermorelin GHK — creative bible (verbatim extract)
 
 > Source: ~/.claude/everlife/creative-bible.md (Part A, pages "Sermorelin GHK — Men / Women", headline banks, ingredient claims), copied 2026-10-28. Re-copy when the bible changes. The verbatim section below is the ONLY approved copy for Sermorelin GHK. Global rules: `core/references/global-rules.md` (they win over anything here).
 
@@ -7,7 +7,8 @@
 > - **REFERENCES (rework freely):** headlines & hooks and the headline banks are *examples of tone*. New headline wording is fine **as long as every claim inside it maps to an approved claim** and passes the Hard NOs. Never revive a line flagged "Hard NO conflict" or "Weak headline" (unless the brief asks).
 
 ## Product facts for this skill
-- **Product name on creative:** "Sermorelin GHK" (or "Sermorelin + GHK"). Never "GHK-Cu", "-Cu" or "copper peptide". The bible has no "1000" strength. Checked 2026-10-28: the label reads "SERMORELIN GHK 1000 · 1000 MCG", and the landing page sells 1000 mcg through its strength switch (the page's default image and copy show 500 mcg: Sermorelin 500mcg + GHK Peptide 2mg + L-Citrulline 50mg). **Still open for the creative lead: may ad copy say "1000" / "1000 mcg", or does the number appear only on the label?** Never state doses beyond what the label shows.
+- **Product name on creative:** "Sermorelin GHK" (or "Sermorelin + GHK"). Never "GHK-Cu", "-Cu" or "copper peptide". 
+- **Strengths (this skill covers both):** **500 mcg** (the landing page default: Sermorelin 500mcg + GHK Peptide 2mg + L-Citrulline 50mg) and **1000 mcg** (sold through the page's strength switch; label "SERMORELIN GHK 1000 · 1000 MCG"; full 1000 formula not confirmed). Same tablet. The bible has one Sermorelin GHK page for both and doesn't mention strengths. Default: copy never states a strength or dose; the bottle in the picture shows it. **Open for the creative lead: may copy say "500" / "1000 mcg"?** "Double strength" needs Jeremy (only approved on plain Sermorelin's page) and the confirmed 1000 formula.
 - **Ingredient list reads:** Sermorelin, GHK, Citrulline (ingredient-claim cards may say "L-Citrulline Malate", as the bible does).
 - **Form:** sublingual tablet → the **tablet is the hero**. Say "easy sublingual delivery"; never mention needles or injections (not even "needle-free"). Never "all natural". Peptides *support the body's own production* — that is the limit.
 - **Always spell out "growth hormone"** (never "GH"; "HGH" appears only inside a bible ingredient claim that is ❌ below).

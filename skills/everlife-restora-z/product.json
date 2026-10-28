@@ -1,0 +1,20 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim.",
+ "id": "restora-z",
+ "name": "Restora-Z",
+ "renders": {"bottle": "rz_bottle.png", "pill": "rz_capsule.png"},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded sleep medication.",
+ "keep_case": ["Restora-Z"],
+ "review_highlight": "Restora[- ]?Z",
+ "reviews": "references/reviews.json",
+ "kicker_default": "SLEEP NOTES",
+ "split_titles": ["THE NIGHTS", "THE GOAL"],
+ "notify_app": "Restora-Z",
+ "notify_icon": "moon",
+ "compare_allowed": true,
+ "product_zones": {
+  "_about": "finish_modern finds the product by colour (HSV; hue in degrees, sat/val 0-1) so type never touches it.",
+  "bottle": {"hue": [150, 200], "sat_min": 0.30, "val_min": 0.22, "frac": 0.012, "extend_up": 0.62},
+  "pill": {"hue": [205, 235], "sat_min": 0.85, "val_min": 0.55, "frac": 0.004}
+ }
+}

@@ -4,7 +4,8 @@ The image model designs the whole ad (headline, benefits, product, scene) and le
 soft gradient + the footer there: Everlife logo, the approved Trustpilot 4.9 / Doctor Prescribed / Ships Free art (cut
 from the team's screenshots) and the verbatim disclaimer. The creative lead asked for it 35% smaller and transparent (2026-10-27).
 
-usage: finish_batch.py <generated.png> <out.png> --ratio 4:5|9:16|1:1 --disclaimer "<verbatim>" [--tone auto|dark|light]
+usage: finish_batch.py <generated.png> <out.png> --ratio 4:5|9:16|1:1 --product <id> [--tone auto|dark|light]
+       (--product takes the verbatim disclaimer from product.json; the older --disclaimer "<verbatim>" still works)
        finish_batch.py --content-ratio 4:5        prints the aspect ratio to request from the image model
 """
 import argparse, os
@@ -95,13 +96,23 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("gen", nargs="?"); ap.add_argument("out", nargs="?")
     ap.add_argument("--ratio", default="4:5", choices=SIZES)
-    ap.add_argument("--disclaimer", default="")
+    ap.add_argument("--product", default="", help="product id: the verbatim disclaimer comes from its product.json")
+    ap.add_argument("--disclaimer", default="", help="verbatim disclaimer (older usage; must match --product if both)")
     ap.add_argument("--tone", default="auto", choices=["auto", "dark", "light"])
     ap.add_argument("--content-ratio", help="print the model aspect ratio for this final ratio and exit")
     a = ap.parse_args()
     if a.content_ratio:
         print(MODEL_RATIO[a.content_ratio]); return
-    assert a.disclaimer, "pass the verbatim bible disclaimer with --disclaimer"
+    if a.product:
+        import sys
+        sys.path.insert(0, T)
+        import product
+        PR = product.load(a.product)
+        if a.disclaimer and a.disclaimer != PR["disclaimer"]:
+            raise SystemExit(f"❌ --disclaimer differs from {a.product}'s product.json (it must be the bible text, verbatim)")
+        a.disclaimer = PR["disclaimer"]
+    if not a.disclaimer:
+        raise SystemExit("❌ pass --product <id> (or the verbatim bible disclaimer with --disclaimer)")
     W, H = SIZES[a.ratio]
     gen = Image.open(a.gen).convert("RGB")
     g = np.asarray(gen.resize((64, 64))).reshape(-1, 3).astype(np.float64)

@@ -11,13 +11,12 @@ usage:
   venv/bin/python -I full_layout.py <project_dir> <clip.mp4> <tag> [--end 12.8] [--mirror-until 6.46]
 
 <project_dir>/copy.json holds the product copy (all of it must come from the bible / brief):
-  {"head": ["LINE 1", "LINE 2"], "sub": "...", "end_head": ["...", "..."], "benefits": ["..", "..", ".."],
-   "cta": "EXPLORE ...", "disclaimer": "<verbatim bible ad disclaimer>",
-   "bottle": "bottle.png", "pill": "pill.png", "vocab": "product names to help whisper",
-   "reviews_json": "<skill>/references/reviews.json", "highlight": "<product-name regex for the review burst>",
-   "keep_case": ["names styles.py must not re-case"]}
-  (the last three default to Restora-Z values so older jobs render unchanged)
-<project_dir>/source/ holds the bottle and pill renders (transparent PNGs from the Drive asset library).
+  {"product": "<id, e.g. restora-z>", "head": ["LINE 1", "LINE 2"], "sub": "...", "end_head": ["...", "..."],
+   "benefits": ["..", "..", ".."], "cta": "EXPLORE ...", "vocab": "product names to help whisper"}
+Everything product-specific (verbatim disclaimer, renders, name casing, review highlight, reviews file) comes from the
+product's skills/everlife-<id>/product.json (see product.py). copy.json may repeat the disclaimer only verbatim, and may
+name other renders with "bottle"/"pill".
+<project_dir>/source/ holds the bottle and pill renders; missing ones are copied from the product's skill assets.
 Output: <project_dir>/out/<tag>_15s_9x16.mp4
 """
 import argparse, json, os, shutil, subprocess, sys
@@ -37,7 +36,7 @@ ap.add_argument("--zoom", type=float, default=1.0, help="punch in, anchored to t
 ap.add_argument("--reviews", default="", help="review-burst insert: comma list of review ids from reviews.json, e.g. R1,R3,R4,R2")
 ap.add_argument("--reviews-at", type=float, default=9.5, help="review burst start (s)")
 ap.add_argument("--reviews-dur", type=float, default=2.4, help="review burst length (s)")
-ap.add_argument("--reviews-json", default="", help="default: copy.json reviews_json, else Restora-Z's")
+ap.add_argument("--reviews-json", default="", help="default: the product's reviews file (product.json \"reviews\")")
 a = ap.parse_args()
 P = os.path.abspath(a.project)
 
@@ -50,12 +49,20 @@ for f in ("logo_cream.png", "proof_row_clear.png"):
 sys.argv = [sys.argv[0], P]
 sys.path.insert(0, T)
 import build_layers as bl  # noqa: E402
+import product  # noqa: E402
 
 C = json.load(open(f"{P}/copy.json"))
+PR = product.for_copy(C, f"{P}/copy.json")
+C["disclaimer"] = PR["disclaimer"]
+C.setdefault("bottle", PR["renders"]["bottle"])
+C.setdefault("pill", PR["renders"]["pill"])
+C["keep_case"] = PR["keep_case"]
+for f in (C["bottle"], C["pill"]):
+    if not os.path.exists(f"{P}/source/{f}"):
+        shutil.copy(product.asset(PR, f), f"{P}/source/{f}")
 bl.END_HEAD, bl.BENEFITS, bl.CTA_TEXT = C["end_head"], C["benefits"], C["cta"]
 bl.DISCLAIMER, bl.BOTTLE, bl.PILL = C["disclaimer"], C["bottle"], C["pill"]
-REVIEWS_JSON = os.path.expanduser(a.reviews_json or C.get("reviews_json")
-                                  or "~/.claude/skills/everlife-restora-z/references/reviews.json")
+REVIEWS_JSON = os.path.expanduser(a.reviews_json or product.path(PR, PR["reviews"]))
 
 L = f"{P}/layers_full"
 os.makedirs(L, exist_ok=True)
@@ -320,7 +327,7 @@ burst = None
 if a.reviews:
     # verbatim Trustpilot review cards slamming in (covers the video + captions for ~dur s; proof bar stays on top)
     import review_burst
-    review_burst.HIGHLIGHT = C.get("highlight", review_burst.HIGHLIGHT)
+    review_burst.HIGHLIGHT = PR["review_highlight"]
     R = json.load(open(REVIEWS_JSON))
     bdir = f"{L}/review_burst"
     shutil.rmtree(bdir, ignore_errors=True)
@@ -337,7 +344,12 @@ if END_DY and END_BG:
     # rebuild the card: logo strip unchanged, then the card's own background stretched to fill the gap, then the content
     _c = Image.open(f"{L}/{END_BG}").convert("RGBA")
     _n = _c.copy()
-    _fill = _c.crop((0, LOGO_H, W, LOGO_H + 6)).resize((W, END_DY), Image.BILINEAR)
+    # stretch a plain-background strip: the one under the logo unless type runs through it (a long end headline),
+    # else the nearest clean strip below (a strip with letters in it would stretch into vertical bars)
+    import numpy as np
+    _a = np.asarray(_c.convert("RGB"), dtype=np.int16)
+    _fy = next((y for y in range(LOGO_H, LOGO_H + 400) if np.abs(np.diff(_a[y:y + 6], axis=1)).max() <= 12), LOGO_H)
+    _fill = _c.crop((0, _fy, W, _fy + 6)).resize((W, END_DY), Image.BILINEAR)
     _n.paste(_fill, (0, LOGO_H))
     _n.paste(_c.crop((0, LOGO_H, W, H - END_DY)), (0, LOGO_H + END_DY))
     _n.save(f"{L}/end_shifted.png")

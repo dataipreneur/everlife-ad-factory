@@ -27,8 +27,8 @@ def _font(bl, path, size, name):
 
 def _cased(text, C):
     """Undo .title()/.lower() damage to names that must keep their casing ("GHK", not "Ghk").
-    copy.json "keep_case": ["Sermorelin GHK", "GHK", ...]; defaults to Restora-Z for older jobs."""
-    for name in C.get("keep_case", ["Restora-Z"]):
+    The list is the product's "keep_case" (product.json), set on C by full_layout."""
+    for name in C["keep_case"]:
         text = re.sub(re.escape(name), name, text, flags=re.I)
     return text
 

@@ -82,6 +82,13 @@ for f in $RENDERS; do
 done
 [ -f "$SKILL/assets/$BOTTLE" ] && [ -f "$SKILL/assets/$PILL" ] && pass "Real product renders present (bottle + pill)"
 
+# 5b. Product settings the shared tools read (product.json)
+if PID=$(python3 -c "import json,sys; d=json.load(open(sys.argv[1])); [d[k] for k in ('id','name','renders','disclaimer','keep_case','review_highlight','reviews','kicker_default','split_titles','notify_app')]; print(d['id'])" "$SKILL/product.json" 2>/dev/null); then
+  pass "product.json valid (product id: $PID; use \"product\": \"$PID\" in every copy.json)"
+else
+  fail "product.json missing or incomplete in $SKILL" "copy another skill's product.json and fill in this product's values (disclaimer verbatim from the bible)"
+fi
+
 # 6. Copy log + output folder
 mkdir -p "$OUT"
 if [ ! -f "$LOG" ]; then

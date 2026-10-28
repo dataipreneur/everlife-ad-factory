@@ -39,3 +39,61 @@ Changed at Priestley's request; marked "PENDING CREATIVE-LEAD CONFIRMATION" in e
   `skills/everlife-sermorelin-ghk-1000/SKILL.md` (golden rule 1), `skills/everlife-sermorelin-ghk-1000/references/image-batch.md`
   (§0, §2 step 2; also added "Citrulline is not a peptide").
 - To close: the creative lead and Jeremy confirm → remove the ⚠ notes; or they reject → restore the originals.
+
+## 2026-10-28 — Product-neutral shared tools (branch `product-config`, from checkpoint 512785f)
+Originals in `_originals/2026-10-28/`. Why: every new product meant editing shared tools, with Restora-Z values as
+silent fallbacks. Now a product is data only, and the tools refuse rather than guess.
+- New `core/tools/product.py`: loads `skills/everlife-<id>/product.json` (lookup dir `$EVERLIFE_SKILLS_DIR`, default
+  `~/.claude/skills`). Jobs name their product in copy.json (`"product": "<id>"`); missing product → refused; a copy.json
+  disclaimer that differs from product.json → refused.
+- New `skills/everlife-restora-z/product.json` and `skills/everlife-sermorelin-ghk-1000/product.json`: disclaimer (verbatim),
+  renders, keep_case, review_highlight, reviews, kicker_default, split_titles, notify_app/notify_icon, compare_allowed,
+  product_zones (Restora's teal-bottle / blue-capsule colours moved here from code; Sermorelin: not calibrated yet).
+- `full_layout.py`: disclaimer, renders, keep_case, reviews file and highlight from product.json (copy.json keys
+  reviews_json / highlight / keep_case removed); copies missing renders from the skill's assets.
+  Also fixed an existing bug: when the end card shifts down, the stretched filler strip could cut through a long end
+  headline and turn into vertical bars (seen with Sermorelin); it now picks the nearest clean strip. Restora unchanged.
+- `styles.py`, `review_burst.py`: no Restora defaults (review_burst gains `--highlight` for standalone use).
+- `composite.py`: `--product <id>` (or explicit `--bottle`/`--pill`); no default product.
+- `finish_modern.py`: product colours + notification app/icon from product.json; refuses products without product_zones.
+- `finish_image.py`: disclaimer, article kicker and split titles from product.json; `compare` only if compare_allowed.
+- `finish_batch.py`: `--product <id>` supplies the verbatim disclaimer (`--disclaimer` still works, must match).
+- `build_layers.py`: docstring marks the standalone run as legacy Restora-only. `preflight.sh`: checks product.json.
+- New `core/tests/regression.py` + fixtures (3 Restora raws, resized): `run` / `compare` / `smoke`.
+- Skill docs (both): copy.json templates use `"product"`; finish_batch uses `--product`.
+- Verified: Restora-Z 124/124 images identical to the checkpoint; vs original main, 1 intended difference (editorial
+  headline now prints "Restora-Z" instead of "restora-z", from the earlier casing fix). Smoke 12/12 (Sermorelin renders
+  with its own disclaimer, casing and kicker; every guard refuses correctly).
+- Rollout: `git pull` → `bash install.sh` (links skills, so the tools can find product.json) → preflight `--install`.
+  Older Restora job folders need `"product": "restora-z"` added to copy.json before re-running.
+- Noted, not changed: Restora's tiktok end card prints "3-In-1" (old behaviour); adding "3-in-1" to Restora's keep_case
+  would fix it but changes Restora output, so it's left for the creative lead to decide.
+
+## 2026-10-28 — Skill renamed: `everlife-sermorelin-ghk-1000` → `everlife-sermorelin-ghk` (both strengths)
+At Priestley's request; one skill now covers Sermorelin GHK 500 mcg and 1000 mcg. Pre-rename copy in
+`_originals/2026-10-28/skills/everlife-sermorelin-ghk-1000-before-rename/`.
+- Folder, product id (`sermorelin-ghk`), product name, output folder (`~/Everlife-Creative/output/Sermorelin-GHK`) and copy
+  log (`~/Everlife-Creative/sermorelin-ghk-copy-log.md`) renamed; the local copy log and output folder were empty and were moved.
+- Tablet renamed `sghk_tablet.png` (shared by both strengths). 1000 bottle files keep their names.
+- product.json: new `strengths` block (500 / 1000 bottle files and label text). SKILL.md: new setup question
+  "Strength: Either (Recommended) / 1000 / 500" and an "Audience: Both (5 each)" option; renders gate is per strength.
+- 500 bottle renders are NOT added: product images must come from the Drive asset library, not the website image.
+  500 ads wait for `sghk500_bottle_ref.jpg` / `sghk500_bottle.png` (see assets/MISSING_RENDERS.md).
+- Copy still never states a strength or dose by default (open question for the creative lead; "double strength" needs Jeremy).
+- Bible extract re-checked: verbatim section identical. Smoke test 12/12 with the new id. Earlier entries keep the old name.
+- Anyone who installed the old skill name: run `bash install.sh` again (it links the new folder; remove the stale
+  `~/.claude/skills/everlife-sermorelin-ghk-1000` link if present).
+
+## 2026-10-28 — Sermorelin GHK winner cards
+- New `skills/everlife-sermorelin-ghk/references/winners/`: `winners.md` (one card per winner from the Winning Ads page,
+  week Oct 9–15: numbers, format, works / don't copy / rebuild-with) + 14 small preview images (≈840 KB).
+- 13 of 15 checked by eye (12 statics + VIDEO49 frames and transcript). Not checkable: M1 VIDEO7-1.01 (both Drive links
+  dead) and F4 BASE125-00 video (over the Drive connector's 10 MB limit; thumbnail only).
+- Skill wired to them: SKILL.md reading table, image-batch.md step 2 (winner first, generic refs second), video-prompting.md.
+
+## 2026-10-28 — Handoff instructions for Mitansh
+- New `HANDOFF-MITANSH.md`: written for Mitansh's Claude Code. Version check (tool fingerprint `4d128f8be668` = the
+  tested baseline), backups, clone + `product-config`, the before/after check on his Mac before installing, install,
+  a real-job Restora check, rollback, day-to-day, and starting the Sermorelin GHK skill (what's ready / what's not).
+- Step 4 was run here exactly as written: `identical: 123 different: 1` (the intended casing fix), smoke 12/12.
+- README points existing zip users to it.

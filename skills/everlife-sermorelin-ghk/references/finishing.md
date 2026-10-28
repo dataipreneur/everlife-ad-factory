@@ -24,20 +24,18 @@ Feed (4:5, 1:1): 60 px margin.
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
-{"style": "house|tiktok|editorial", "kicker": "optional label for editorial",
+{"product": "sermorelin-ghk", "style": "house|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<bible>", "<bible>", "<bible>"],
  "ingredients_label": "3-IN-1 PEPTIDE SUPPORT",
  "ingredients": [["SERMORELIN","<✅ Sermorelin claim>"],["GHK","<✅ GHK claim>"],["L-CITRULLINE MALATE","<✅ Citrulline claim>"]],
- "cta": "<bible CTA in caps>",
- "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
- "bottle": "sghk1000_bottle.png", "pill": "sghk1000_tablet.png", "vocab": "Sermorelin GHK.",
- "keep_case": ["Sermorelin GHK", "Sermorelin", "GHK", "L-Citrulline Malate", "IGF-1", "3-in-1"],
- "highlight": "Sermorelin(\\s*\\+?\\s*GHK)?",
- "reviews_json": "~/.claude/skills/everlife-sermorelin-ghk-1000/references/reviews.json"}
+ "cta": "<bible CTA in caps>", "vocab": "Sermorelin GHK."}
 ```
-`keep_case` stops the tiktok/editorial looks from printing "Ghk"; `highlight` and `reviews_json` point the review burst at
-this product (keep them even while the burst is gated, so it can never fall back to Restora-Z reviews).
+`"product"` is required: the tools take everything product-specific from `product.json` in this skill (verbatim
+disclaimer, renders, name casing so nothing prints "Ghk", review highlight and reviews file) and refuse a job without it.
+Don't type the disclaimer into copy.json; if it's there, it must match product.json exactly. Until the transparent
+bottle exists, add `"bottle": "sghk1000_bottle_ref.jpg"` (shows its black background on the end card: preview only).
+500 mcg jobs set `"bottle": "sghk500_bottle.png"` (once it's in assets/); the tablet is the same for both strengths.
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
 
@@ -50,10 +48,11 @@ Looks: `house` · `tiktok` · `editorial`; vary across a batch. Women: prefer `t
 is fine; check nothing reads orange).
 
 ## 3. Image finishing
-Batch Mode: `finish_batch.py` (see `image-batch.md`). Don't use `finish_modern.py` for this product yet: its
-"keep type off the product" detector is tuned to Restora-Z's teal bottle and blue capsule, so it can't see this bottle.
-Legacy `core/scripts/finish_image.py` layouts work (`standard`, `checklist`, `article`, `letter`, `split`, `frame`) if
-copy.json sets every key (e.g. `kicker`, otherwise it defaults to Restora's "SLEEP NOTES"); never `compare`.
+Batch Mode: `finish_batch.py --product sermorelin-ghk` (see `image-batch.md`). `finish_modern.py` refuses this
+product until its `product_zones` (the colours that let it find the bottle and tablet in a photo) are calibrated in
+product.json. Legacy `core/scripts/finish_image.py` layouts work (`standard`, `checklist`, `article`, `letter`, `split`,
+`frame`) with `"product"` in copy.json (article kicker defaults to "STRENGTH · LONGEVITY"); `compare` is refused
+(no approved comparison for this product).
 
 ## 4. Report to the user
 One block per asset: path, what it is (audience, hook, look), cost, any known issue in plain words.

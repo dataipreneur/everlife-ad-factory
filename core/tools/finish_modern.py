@@ -1,4 +1,5 @@
-"""Modern-brand finishing for static ads (the default look for Restora-Z statics).
+"""Modern-brand finishing for static ads (photo + overlaid type). Needs the product's "product_zones" in its
+product.json to keep type off the product; products without it are refused (use finish_batch.py).
 
 Design rules (from the team's Pinterest references): one short sentence-case line, an elegant serif with ONE
 italic accent, lots of air, a single colour mood, the brand quiet and small. Proof = the team's APPROVED footer
@@ -14,13 +15,13 @@ usage: finish_modern.py <raw image> <copy.json> <out.png> [--ratio 4:5|1:1|9:16]
 templates
   hero     centred headline at the top (serif, accent in italic), optional subline, quiet footer
   strip    left-aligned headline (editorial) + approved footer panel; "strip_line" becomes the subline
-  notify   headline + a frosted iOS-style notification card            copy: "notify": {"app": "Restora-Z", "title": "...", "body": "..."}
+  notify   headline + a frosted iOS-style notification card            copy: "notify": {"title": "...", "body": "..."} (app = product.json notify_app)
   toggle   headline + two iOS toggle rows (off → on)                  copy: "toggles": [["3:00 am", "Wide awake", false], ["7:00 am", "Rested", true]]
   chips    headline + 3 thin frosted chips with line icons            copy: "chips": ["Trazodone · aids in falling asleep", ...]
 
 copy keys: "m_head": "Non-addictive.|*No grogginess.*"  ("|" = line break, *…* = italic accent)
-           "m_sub": "optional one short line", "disclaimer": "<verbatim>", "cta": optional (strip shows it small)
-All words come from copy.json (bible copy only).
+           "product": "<id>" (required), "m_sub": "optional one short line", "cta": optional (strip shows it small)
+All words come from copy.json (bible copy only); the disclaimer comes from product.json (verbatim).
 """
 import argparse, json, math, os, re
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps, ImageStat
@@ -83,6 +84,7 @@ import sys
 import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import safezones as sz  # noqa: E402
+import product  # noqa: E402
 
 
 def busy_map(img):
@@ -119,25 +121,31 @@ def _box(mask, frac=0.012):
     return [int(c0), int(r0), int(c1), int(r1)]
 
 
-def product_zones(img, pad=40):
-    """Untouchable zones: the Restora-Z bottle (+ its white cap above the teal body) and the capsule,
-    found separately by colour so type can sit beside them."""
+def _colour_box(h, s_, v, spec):
+    return _box((h > spec["hue"][0]) & (h < spec["hue"][1]) & (s_ > spec["sat_min"]) & (v > spec["val_min"]),
+                frac=spec.get("frac", 0.012))
+
+
+def product_zones(img, Z, pad=40):
+    """Untouchable zones: the bottle (extended up over its cap/shoulder) and the pill, found separately by colour
+    so type can sit beside them. Z = product.json "product_zones" (e.g. Restora-Z: teal label, fully saturated
+    capsule, whose satin highlights sit ~0.67 saturation, hence its 0.85 floor)."""
     hsv = np.asarray(img.convert("RGB").convert("HSV"), dtype=np.float32)
     h, s_, v = hsv[..., 0] * 360 / 255, hsv[..., 1] / 255, hsv[..., 2] / 255
     zones = []
-    b = _box((h > 150) & (h < 200) & (s_ > 0.30) & (v > 0.22))
+    b = _colour_box(h, s_, v, Z["bottle"])
     if b:
         bh = b[3] - b[1]
-        b[1] = int(b[1] - 0.62 * bh)  # shoulder + white cap sit above the teal label
+        b[1] = int(b[1] - Z["bottle"].get("extend_up", 0) * bh)
         zones.append(b)
-    c = _box((h > 205) & (h < 235) & (s_ > 0.85) & (v > 0.55), frac=0.004)  # capsule is fully saturated; satin highlights sit ~0.67
+    c = _colour_box(h, s_, v, Z["pill"])
     if c and (not b or not (b[0] <= c[0] and c[2] <= b[2] and b[1] <= c[1] and c[3] <= b[3])):
         zones.append(c)
     return [(z[0] - pad, z[1] - pad, z[2] + pad, z[3] + pad) for z in zones]
 
 
-def product_box(img, pad=40):
-    z = product_zones(img, pad)
+def product_box(img, Z, pad=40):
+    z = product_zones(img, Z, pad)
     if not z:
         return None
     return (min(a[0] for a in z), min(a[1] for a in z), max(a[2] for a in z), max(a[3] for a in z))
@@ -152,8 +160,8 @@ class Collision(Exception):
 
 
 class Modern:
-    def __init__(self, raw, C, ratio, tone):
-        self.C = C
+    def __init__(self, raw, C, ratio, tone, PR):
+        self.C, self.PR, self.Z = C, PR, PR["product_zones"]
         self.W, self.H = SIZES[ratio]
         src = Image.open(raw).convert("RGB")
         if tone == "auto":
@@ -187,9 +195,9 @@ class Modern:
         self.free_floor = int(self.H * 0.22)
         top = self.em[: int(self.H * 0.25)]
         self.calm = float(np.percentile(top, 60)) + 6.0
-        self.zones = product_zones(self.img)     # untouchable zones (bottle + cap, capsule; with margin)
-        self.zones_tight = product_zones(self.img, pad=0)
-        self.prod = product_box(self.img)
+        self.zones = product_zones(self.img, self.Z)     # untouchable zones (bottle + cap, pill; with margin)
+        self.zones_tight = product_zones(self.img, self.Z, pad=0)
+        self.prod = product_box(self.img, self.Z)
 
     # ---------------- layout: footer size, headline size, photo placement
     def art(self, name, scale):
@@ -252,7 +260,7 @@ class Modern:
     def place_photo(self, src):
         """Scale + position the raw so the product sits centred between the headline and the footer panel."""
         W, H = self.W, self.H
-        zs = product_zones(src, pad=0)
+        zs = product_zones(src, self.Z, pad=0)
         if zs:
             px0, py0 = min(z[0] for z in zs), min(z[1] for z in zs)
             px1, py1 = max(z[2] for z in zs), max(z[3] for z in zs)
@@ -469,11 +477,14 @@ class Modern:
             self.warnings.append(f"notification card overlaps busy image area (cost {c:.0f}); regenerate with more empty space")
         self.frosted((x0, y0, x0 + cw, y0 + ch), 36, light=True)
         d = self.d
-        # app icon
+        # app icon (product.json "notify_icon")
         d.rounded_rectangle([x0 + 28, y0 + 30, x0 + 98, y0 + 100], 18, fill=NAVY)
-        d.ellipse([x0 + 46, y0 + 46, x0 + 80, y0 + 80], fill=(201, 186, 255))
-        d.ellipse([x0 + 56, y0 + 40, x0 + 90, y0 + 74], fill=NAVY)  # crescent moon
-        d.text((x0 + 120, y0 + 26), n.get("app", "Restora-Z").upper(), font=sans(26, "SemiBold"), fill=(70, 74, 90))
+        if self.PR.get("notify_icon") == "moon":
+            d.ellipse([x0 + 46, y0 + 46, x0 + 80, y0 + 80], fill=(201, 186, 255))
+            d.ellipse([x0 + 56, y0 + 40, x0 + 90, y0 + 74], fill=NAVY)  # crescent moon
+        else:
+            d.ellipse([x0 + 49, y0 + 51, x0 + 77, y0 + 79], fill=CREAM)
+        d.text((x0 + 120, y0 + 26), n.get("app", self.PR["notify_app"]).upper(), font=sans(26, "SemiBold"), fill=(70, 74, 90))
         d.text((x0 + cw - 28 - d.textlength(n.get("time", "now"), font=sans(26)), y0 + 26), n.get("time", "now"), font=sans(26), fill=(90, 94, 110))
         d.text((x0 + 120, y0 + 66), n["title"], font=sans(38, "SemiBold"), fill=(20, 22, 30))
         d.text((x0 + 120, y0 + 120), n["body"], font=sans(32), fill=(50, 54, 66))
@@ -581,9 +592,14 @@ def main():
     ap.add_argument("--tone", default="auto", choices=["auto", "dark", "light"])
     a = ap.parse_args()
     C = json.load(open(a.copy))
+    PR = product.for_copy(C, a.copy)
+    C["disclaimer"] = PR["disclaimer"]
+    if not PR.get("product_zones"):
+        raise SystemExit(f"❌ finish_modern can't find {PR['name']} in a photo yet (no \"product_zones\" in its product.json), "
+                         "so it can't keep type off the product. Use finish_batch.py, or calibrate product_zones first.")
     order = [a.template] + [t for t in ("hero",) if t != a.template]
     for tpl in order:
-        m = Modern(a.raw, C, a.ratio, a.tone)
+        m = Modern(a.raw, C, a.ratio, a.tone, PR)
         getattr(m, "t_" + tpl)()
         if not m.warnings:
             break
