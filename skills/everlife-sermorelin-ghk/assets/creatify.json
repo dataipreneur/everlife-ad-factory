@@ -1,8 +1,0 @@
-{
- "project_id": "b55ccce8-5930-4b81-89af-26da5b7fed60",
- "bottle_500": "assets/57e4db4e_sghk500_bottle.png",
- "tablet": "assets/34c34d64_sghk_tablet.png",
- "type_specimen": "assets/dc571ed0_type_specimen.png",
- "bottle_1000": null,
- "note": "Created 2026-10-28 in Priestley's Creatify account (project aspect 1:1; pass aspect_ratio per job). Holds the transparent 500 bottle (the default for 'either'), the tablet and the shared type specimen (Restora's: prompts must say to ignore its words and purple colour). For 1000 jobs, upload + import assets/sghk1000_bottle_ref.jpg (or the transparent 1000 when it arrives) and add its path here. If composer_project_get fails (a teammate's account), create a new project the same way and rewrite this file."
-}

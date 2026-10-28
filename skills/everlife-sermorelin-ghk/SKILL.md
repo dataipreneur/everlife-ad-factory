@@ -55,7 +55,7 @@ Paths: skill dir = this folder (`assets/` holds the real bottle + tablet renders
 | Sermorelin GHK registered in Marketing Studio | preflight prints the product id or the create command (needs the renders) |
 | Finishing toolkit | preflight offers `--install`; run it after the user agrees |
 | Copy log exists | preflight creates it |
-| Creatify connector (images) | call `composer_billing_state`; images are made on Creatify. `assets/creatify.json` has no project yet: create it once (see that file) after the renders are in |
+| Creatify connector (images) | call `composer_billing_state`; images are made on Creatify. `assets/creatify.json` is per person (not in git): if it's missing, copy `assets/creatify.example.json` to it and follow its note (create the project, import the renders) once |
 
 If everything is ✅, say so in one line and go straight to step 1.
 
