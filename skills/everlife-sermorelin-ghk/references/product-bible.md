@@ -15,8 +15,9 @@
 - **Audiences (pick one per session):** **Men 35–60** (lean muscle, strength, growth hormone support; frame around muscle, fitness, performance, never the bedroom; fit, mature talent, not bodybuilders) · **Women 35–60** (tone, strength, skin glow; palette pinks, tans, beige, **no oranges or greens**).
 - **Approved language (product Hard NO):** "toned" and "lean". Say "supports", never "builds".
 - **Offer:** "Save up to 47%" (percent-off, usable). No $ prices. **The bible wins over the landing pages** (Priestley,
-  2026-10-28): the current pages show other numbers (men m-fb-v9: "Save Up to 59%" / "52%"; women f-fb-v10: no number),
-  but ads use only the bible's offer. Never copy an offer, claim or proof figure from a landing page.
+  2026-10-28): checked 2026-10-28: each page sells the GHK tablets AND plain Sermorelin injectable. GHK tablets: men m-fb-v9 card
+  "Save up to 52%" (its button says "Get 47% Off Now!"), women f-fb-v10 "Save up to 47%". The "59%" (men's banner) is the
+  plain Sermorelin injection, not this product. Ads use only the bible's offer. Never copy an offer, claim or proof figure from a landing page.
 - **Landing pages (where ads link, 2026-10-28):** men https://everlifemd.com/sermorelin-ghk/m-fb-v9 · women
   https://everlifemd.com/sermorelin-ghk/f-fb-v10. Record the matching one per ad in the session sheet. Facts only from them
   (both sell 500 mcg: Sermorelin 500mcg + GHK Peptide 2mg + L-Citrulline 50mg); their wording is not approved ad copy.

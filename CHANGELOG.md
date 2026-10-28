@@ -140,6 +140,8 @@ request into `product-config` for Priestley to review.
 - The "1000 on white" JPG received at 16:26 is the same picture as the existing 1000 reference; not added.
 
 ## 2026-10-28 — Offer: the creative bible wins over landing pages
-Priestley's decision: ads use only the bible's offer ("Save up to 47%") even though the men's landing page shows 59% / 52%.
+Priestley's decision: ads use only the bible's offer ("Save up to 47%"). Corrected the same day: the men's page shows 52%
+for the GHK tablets (and "Get 47% Off Now!" on its button); 59% is the plain Sermorelin injection sold on the same page;
+the women's page shows 47% for the tablets.
 Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extract), with the two current landing-page links
 (men m-fb-v9, women f-fb-v10) for the session sheet.
