@@ -70,7 +70,9 @@ Compliance traps:
   finishing, and check the finisher's log line says `logo=top@…`.
 - **Long ingredient claims run into the footer** ("…glycosaminoglycan production" wrapped to 4 lines). Give the text block an
   explicit end ("all text ends above 76% of the height"), or pick the shorter approved claim for narrow columns.
-- Tablet-only prompts (no bottle) avoid the tan-tablets-in-bottle mismatch entirely; good default until new bottle renders.
+- **Don't drop the bottle.** This batch went tablet-only to dodge the tan-tablets-in-bottle render; W2–W4 then never said
+  what the product was (fails "identifiable in 2 seconds") and didn't look like our winners. Rule now: bottle + tablet in
+  every ad until a corrected render is confirmed (image-batch.md step 3).
 - Pinterest layouts (level 3) translated well for women: split, cards, staircase, sticky note. Backgrounds still sneak in
   peach skies and plant greens → name them in the "avoid" line.
 - "Lean/Leaner" headlines with a person in shot need Jeremy (pre-screen ⚠: never with a body shot).

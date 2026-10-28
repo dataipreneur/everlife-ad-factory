@@ -198,3 +198,8 @@ prompt twice before approval; Marketing Studio for real people; prove the angle 
 ## 2026-10-28 — Sermorelin GHK women's test batch (batch 2) lessons
 Added the batch-2 lessons to the Sermorelin GHK `lessons.md` (re-install the toolkit after tool changes; keep long claims out
 of the footer; tablet-only default; palette drift; lean headlines with a person → Jeremy). Restora unchanged.
+
+## 2026-10-28 — Sermorelin GHK: bottle in every image ad
+Priestley: include the bottle until the corrected render is confirmed. `image-batch.md` step 3 (always attach bottle + tablet;
+never drop the bottle to dodge the tan-tablet render), QA line (bottle in shot, name legible), template wording; the batch-2
+lesson corrected. Originals in `_originals/2026-10-28/bottle-rule/`. Restora unchanged.

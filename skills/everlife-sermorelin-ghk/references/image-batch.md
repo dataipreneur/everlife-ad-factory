@@ -64,9 +64,14 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
    aspect_ratio=<final ratio>)` from `assets/creatify.json`. Max 4 in flight.
+   **Always attach the bottle AND the tablet** (Priestley, 2026-10-28): our winners show both, and without the bottle the ad
+   doesn't say what's for sale. The tan tablets inside the bottle render are a known issue (`assets/MISSING_RENDERS.md`):
+   keep using the render until design or the pharmacy confirms a corrected one; never drop the bottle to avoid it, and
+   flag it in the session sheet.
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 35–60, fit but not bodybuilders, clothed; women's ads in pink/tan/beige; nothing breaks a Hard NO.
+   people look 35–60, fit but not bodybuilders, clothed; women's ads in pink/tan/beige; nothing breaks a Hard NO;
+   **the bottle is in shot, large, with "SERMORELIN GHK" legible** (product identifiable in under 2 seconds).
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
 5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin-ghk`
    (the verbatim disclaimer comes from product.json).
@@ -107,7 +112,7 @@ in the style of a modern DTC wellness brand. Framework: <name>: <layout from the
 PRODUCT: image 1 is the real bottle and image 2 the real tablet. Use the attached tablet reference exactly; do not
 invent, alter, or substitute a different pill. Use the attached bottle reference exactly: same shape, colours and label,
 label facing camera, sharp, never mirrored, never redesigned. The TABLET is the hero (large, in focus, foreground); the
-bottle, if shown, is large and legible.
+bottle is in every ad, large and legible, beside or just behind the tablet.
 
 TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from the
 menu, e.g. "a heavy condensed grotesque in all caps">, with ONE phrase picked out in <accent colour from the palette>;
