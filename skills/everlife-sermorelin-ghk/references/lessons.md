@@ -79,3 +79,16 @@ Compliance traps:
 - "Lean/Leaner" headlines with a person in shot need Jeremy (pre-screen ⚠: never with a body shot).
 - With the bottle in shot the model makes the BOTTLE the hero (W4, batch 3). Say "the tablet about twice the size it would
   naturally be, in front of the bottle" and keep the logo band clear of props (a sticky note rose into it).
+
+## First Sermorelin GHK video (2026-10-28, women, UGC 1A, 15 s, 75 credits, failed QA)
+- **Check the product images AS HIGGSFIELD SEES THEM.** The tablet PNG hid red/magenta streaks under its transparent
+  background; Creatify ignores them, Higgsfield showed a glitchy black tablet. Combined with the bottle render's round tan
+  tablets, the video invented a dish of mixed green and round white pills. Fixed: hidden pixels set to white (visible
+  pixels unchanged), product re-registered in Marketing Studio (dc55181a…). Preflight now warns on hidden junk.
+- **No dishes, piles or open bottles.** One tablet between fingertips in a hands-only close-up; "no other pills anywhere".
+- **Marketing Studio stretches dialogue to fill the clip** (~2 words/s, same as winner F4). 32 words ran to 14.5 s and
+  left no room for the end card. Budget ≈ 2 words per second of speech time, and say "finish speaking by <t> s".
+- **MS starts talking at 0 s** unless told "silent for the first 2 seconds".
+- **Watch the winner video itself, not only its card.** F4 cuts between a talking head and separate hands-only product
+  close-ups and pins a product bar (logo + name + bottle + tablet) for the whole video.
+- Shorter is cheaper: MS UGC 720p costs 40 (8 s) / 50 (10 s) / 60 (12 s) / 75 (15 s). 8 s is a proven length (winner M5).
