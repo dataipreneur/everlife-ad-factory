@@ -74,12 +74,13 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    doesn't say what's for sale. The tan tablets inside the bottle render are a known issue (`assets/MISSING_RENDERS.md`):
    keep using the render until design or the pharmacy confirms a corrected one; never drop the bottle to avoid it, and
    flag it in the session sheet.
-   **Vary the product per ad** (Restora feedback, Berna): write each ad's own product arrangement (held in fingertips,
-   floating and tilted, on a plinth, on a step, leaning on the bottle, in a hand beside the face…); never the same angle
-   or position twice in a batch. **No two ads in a batch share a framework or an accent colour.**
+   **The tablet is HELD** (bible v3, 2026-10-29): between thumb and index finger in a "pull" toward the camera, or
+   resting in an open palm, sharp and in the foreground, beside the bottle (never covering its label). **Vary the hold per
+   ad** (Restora feedback, Berna): fingertips raised to the lens, open palm low in frame, hand beside the face, hand
+   resting on a bench with the palm up, two fingers offering it forward…; never the same hold or angle twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 35–60, fit but not bodybuilders, clothed; women's ads in the bible palette (pinks, tans, beige; no orange, no green) and not all pink (at most one pink-led ad per batch); nothing breaks a Hard NO;
+   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK by Everlife" present; the tablet held (fingers or palm); women's ads in the bible palette (pinks, tans, beige; no orange, no green) and not all pink (at most one pink-led ad per batch); nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -146,12 +147,14 @@ split "Sermorelin" or "GHK" across two lines or hyphenate them.
 
 TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
 badges, prices, website, disclaimer):
+  Name: "SERMORELIN GHK by Everlife"   (big; "by Everlife" smaller; every ad, bible v3 + team feedback 2026-10-29)
   Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
-<MEN: palette warm stone, charcoal, sand, brass; any person a fit, mature man 40–60, fully clothed in training or casual
-wear, natural build (NOT a bodybuilder), calm and candid.>
+<MEN: palette warm stone, charcoal, sand, brass; any person a man 42–50, a fit silver fox with a hardcore fitness-model
+physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training
+tee or long sleeve, no bare torso, no flexing poses.>
 <WOMEN: lead colour <this ad's own lead from the rotation in §2b: tan / camel / sand / beige / cream / taupe / mocha /
 burgundy / rose / blush; pink-led at most once per batch>, rest of the palette from pinks, tans and beige (no orange, no green); any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.

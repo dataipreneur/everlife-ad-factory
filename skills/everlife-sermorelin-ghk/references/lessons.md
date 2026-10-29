@@ -145,3 +145,11 @@ Compliance traps:
   fail, not fixable in edit). For women's interiors say "interior wall only, the window NOT in frame, no outdoor view, no plants".
 - **"Sublingual" is mispronounced too** ("sub-single", "subliberal"). Keep it on screen, not spoken, or over a hands shot.
 - The Seed Audio clone fixes names in 1 of 3 takes reliably; spelling "Sir-mor-ELL-in" or plain "Sermorelin" worked best.
+
+## Team feedback on the men's "Track" video (2026-10-29: Emily, Sarah, Jeremy, Justin)
+- "He needs to start talking way sooner": no silent openings; speech in the first second, hook within 2.5 s.
+- "Sermorelin GHK needs to be on the screen from the start… this applies to every product": the header is the product name.
+- "Too old… not ripped enough… hardcore fitness model 40's to 50s, tats or no tats" / "a fit silver fox… men look at him and
+  want to look like this dude": casting changed (video-prompting.md CAST). Kept fully clothed (Priestley).
+- Bible v3 adds "[Product] by Everlife" in every intro and a held tablet (thumb + index or open palm).
+- Safe zones: already enforced by the finishers (same numbers as the bible's safe-zone page).

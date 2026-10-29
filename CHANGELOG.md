@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: team feedback on the men's video + bible v3 creative direction (branch `sermorelin-first-batch`)
+Logged before editing. Team chat after the "Track" video (Emily, Sarah, Jeremy, Justin), approved by Priestley for the
+Sermorelin GHK skill ONLY (Restora, plain Sermorelin and the shared toolkit unchanged):
+- **Men only (casting):** 40s–50s "fit silver fox", hardcore fitness-model build (visibly muscular, lean, athletic;
+  tattoos optional), a serious gym-goer (bible v3: "rugged, strong and unmistakably masculine — a serious gym-goer with a
+  hardcore training feel"); Jeremy: "too old, not ripped enough… hardcore fitness model 40's to 50s". Priestley: fully
+  clothed in a fitted training tee or long sleeve; no bare torso, no flexing or body-focus poses.
+- **Men + women:** "SERMORELIN GHK" on screen from the first frame (Emily: "applies to every product"); speech starts in the
+  first second and the hook lands within 2.5 s (Emily "start talking way sooner", Jeremy's one-pager, bible v3);
+  "Sermorelin GHK by Everlife" in every intro: copy, scripts, voiceovers (bible v3); the tablet is held: thumb + index
+  "pull" or resting in an open palm, sharp in the foreground (bible v3).
+- Files: `SKILL.md` (product truths), `references/video-prompting.md` (timing, casting, header), `references/image-batch.md`
+  (name line, held tablet, men's casting), `references/finishing.md` (QA + copy.json header), `references/lessons.md`.
+- Safe zones (Justin): already enforced by the finishers with the bible's numbers; no change.
+Originals in `_originals/2026-10-29/team-feedback/`.
+
 ## 2026-10-29 — Local creative bible re-imported from the master (v3, 48 pages) (outside the repo)
 Logged before editing. Priestley exported the master ("Creative Messaging.pdf", Claude Design project 8cc4e3fe…, file
 "Creative Messaging Reference.dc.html") and approved update 1 only: replace `~/.claude/everlife/creative-bible.md`

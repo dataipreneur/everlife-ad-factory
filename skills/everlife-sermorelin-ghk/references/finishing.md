@@ -15,7 +15,7 @@ Feed (4:5, 1:1): 60 px margin.
 - Pass/fail (tell the user every fail):
   - **product correctness:** the tablet matches the tablet render exactly (shape, colour, markings) and the bottle label
     matches its render; not mirrored (`--mirror-until <cut>`); exactly one tablet
-  - people: real-looking, the right age, fit but NOT bodybuilders, fully clothed; no bedroom (men); palette right (women)
+  - people: real-looking, the right age (men 40s–50s fitness-model build, fitted top), fully clothed; speech starts in the first second; "SERMORELIN GHK" on screen from frame 1 (copy.json `head`, e.g. `["SERMORELIN GHK BY EVERLIFE"]`); no bedroom (men); palette right (women)
   - no needles/syringes/vials, no gym-mirror body shots, no garbled text on props, no second phone (`--zoom 1.2`)
   - "growth hormone" said in full; product name pronounced clearly
   - last spoken line ends before ~10.5 s (15 s clip); if it runs later, start the end card after the last word or re-roll
