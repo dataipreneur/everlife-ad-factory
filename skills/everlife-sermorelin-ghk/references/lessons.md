@@ -159,9 +159,9 @@ Compliance traps:
 - Bible v3 adds "[Product] by Everlife" in every intro and a held tablet (thumb + index or open palm).
 - Safe zones: already enforced by the finishers (same numbers as the bible's safe-zone page).
 
-## Justin's women's colour direction (2026-10-29)
-- Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
-  Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
+## Justin's women's colour direction (2026-10-29) — superseded the same day
+- Justin's direction (white + teal, explore slots) was replaced by the gates' women's palette: pinks, tans, beige; no oranges
+  or greens, teal included (Priestley, 2026-10-29). Batch 10's teal ad (W2) no longer fits. Rules in image-batch.md §2b.
 
 ## Shared creative system (2026-10-29)
 The creative team member's Restora-Z improvements were distilled into `core/references/creative-system.md` (product-agnostic:

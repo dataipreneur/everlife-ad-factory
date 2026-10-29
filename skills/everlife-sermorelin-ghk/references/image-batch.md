@@ -111,7 +111,7 @@ that file.
    resting on a bench with the palm up, two fingers offering it forward…; never the same hold or angle twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
+   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: pinks / tans / beige only, no orange, green or teal (except the real tablet and label), at most one pink-led ad; nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -169,18 +169,17 @@ pick from: heavy condensed grotesque (the winners' look), wide extended bold san
 keep "SERMORELIN GHK" big in type (bible: "Product names run big"). The serif rows stay available for women.
 
 Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
-charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
-Product rules win. **Bible v3 (29 Oct) dropped the women's "pinks, tans and beige; no oranges or greens" rule** for every
-product except GHK-Cu Cream and Glow Stack, so Sermorelin GHK women's ads may use any warm palette.
-**Women: Justin's colour & typography direction (2026-10-29)**, "preferred options, not strict limitations":
-- **No colour is banned.** Preferred (they have performed): pinks, tans, neutrals, warm tones, **white** and **teal**.
-  Most ads in a women's batch lead with one of these.
-- **Explore:** up to 2 of every 5 women's ads use a current colour or type trend that suits the concept and imagery.
-- **Advertorial / article ads sit on a white background.**
-- **At least one teal-led or teal-accent ad per women's batch.** Teal harmonises with the green-teal tablet; keep it soft
-  or pale so it doesn't fight the bottle's deep red label.
-- Still: at most one pink-led ad per batch, no two women's ads with the same lead colour, pink fine as an accent, varied
+charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white
+(forest and teal for men only).
+Product rules win.
+**Women's palette (gates, 2026-10-29; Priestley: applies to Sermorelin):** pinks, tans, beige; **no oranges or
+greens** (teal counts as green). Cream, ivory and warm white are fine as neutral backgrounds (advertorials on white or
+cream). The real product keeps its own colours: the green-teal tablet and the red label are never recoloured, and they
+are not a reason to add green or teal elsewhere. This replaces Justin's 29 Oct direction (white + teal, explore slots).
+- Every women's ad leads with a pink, tan or beige (blush, rose, dusty pink, camel, sand, taupe, mocha, cream).
+- At most one pink-led ad per batch; no two women's ads with the same lead colour; pink fine as an accent; varied
   fonts (§2b menu; serif rows allowed for women).
+- Scenes: no green plants, lawns, sea or teal props; interiors with "the window NOT in frame, no outdoor view".
 Restora-Z moods navy / lavender / blush / cream / pale sky. Vary the headline placement too (top-left, centred, bottom-
 third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
 
@@ -225,9 +224,8 @@ SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-l
 <MEN: scene and light from this ad's row in §2c (not always a dark gym); any person a man 42–50, a fit silver fox with a hardcore fitness-model
 physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training
 tee or long sleeve, no bare torso, no flexing poses.>
-<WOMEN: lead colour <this ad's own lead per §2b (Justin): preferred pinks / tans / neutrals / warm tones / white / teal (soft
-or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white background for advertorial ads; pink-led at most
-once per batch>; any person a woman 40–60, natural, candid, glowing
+<WOMEN: lead colour <this ad's own lead per §2b: a pink, tan or beige; cream or warm white background for advertorial
+ads; pink-led at most once per batch; NO orange, green or teal anywhere except the real tablet and label>; any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
 LAYOUT (9:16, Sermorelin GHK, 2026-10-29: "use as much of the artboard as possible around the safe zones"): the TOP 12%

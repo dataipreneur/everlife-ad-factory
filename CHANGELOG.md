@@ -29,6 +29,13 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
 - Follow-up (logged before editing): Priestley reverted that: the women's palette line follows Mitansh's version
   ("Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens."). Note: the Sermorelin GHK skill's
   women's colour rules (Justin, teal/white) are looser than this gate; the gate wins.
+- Follow-up (logged before editing): Priestley: the women's palette applies to Sermorelin too. Both Sermorelin skills
+  (GHK + plain) now use pinks, tans, beige (cream / warm white as neutral backgrounds); no oranges or greens, teal
+  included; the real product keeps its colours (green-teal GHK tablet, plain Sermorelin's orange label). Replaces
+  Justin's 29 Oct direction (white + teal, "no colour banned", explore slots, >=1 teal ad): tell Justin.
+  Files: GHK SKILL.md, image-batch.md §2b + template, lessons.md, product-bible.md note; plain Sermorelin SKILL.md,
+  image-batch.md §2b + checklist + template, video-prompting.md, product-bible.md. Originals in
+  `_originals/2026-10-29/sermorelin-womens-palette/`.
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
