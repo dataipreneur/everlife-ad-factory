@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — tiktok end-card safe-area shift becomes a product opt-in (Restora-Z stays as on main)
+Logged before editing. Pre-merge regression (main vs this branch) showed Restora-Z's tiktok end card changed (5 layers):
+our safe-area fix (card 44 px lower, tablet 250 px) applied to every product. Priestley: keep Restora unchanged.
+- `core/tools/styles.py`: the shift applies only when the product opts in (`C["_end_safe_shift"]`); otherwise main's
+  layout (no shift, 300 px tablet).
+- `core/tools/full_layout.py`: passes product.json `"end_card_safe_shift"` to the style.
+- `skills/everlife-sermorelin-ghk/product.json`: `"end_card_safe_shift": true`.
+Mitansh can roll it out to every product later (flip the default in styles.py). Originals in `_originals/2026-10-29/end-card-opt-in/`.
+
 ## 2026-10-29 — Sermorelin GHK lesson: never place the product name "beside" a prop
 Logged before editing. Batch-9 ad 5: "SERMORELIN GHK" asked "beside the bottle on the right" landed on the coffee mug and
 read as a mug print. `references/image-batch.md` §2c + `lessons.md`: name placements are fixed text positions (top, under

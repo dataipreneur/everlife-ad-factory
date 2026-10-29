@@ -151,7 +151,8 @@ class TikTok:
         d = ImageDraw.Draw(base)
         base.alpha_composite(_logo(bl, P, self.NAVY, 373), ((W - 373) // 2, SY0 + 8))
         # safe-area footer (no END_DY shift): start the card below the taller logo and keep the tablet off the label
-        dy, pw = (0, 300) if sz.BOTTOM_MODE else (44, 250)
+        # (product opt-in "end_card_safe_shift"; other products keep the original layout)
+        dy, pw = (44, 250) if C.get("_end_safe_shift") and not sz.BOTTOM_MODE else (0, 300)
         if C.get("head_always") and C.get("head"):
             # the product line stays on screen the whole time, end card included (Sermorelin GHK feedback, 2026-10-29)
             bf = _font(bl, HN, 34, "Bold")

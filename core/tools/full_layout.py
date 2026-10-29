@@ -59,6 +59,7 @@ C.setdefault("bottle", _b)
 if "pill" not in C:
     C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
+C["_end_safe_shift"] = bool(PR.get("end_card_safe_shift"))   # product opt-in: tiktok end card clears the taller logo
 for f in (C["bottle"], C["pill"]):
     if f and not os.path.exists(f"{P}/source/{f}"):
         shutil.copy(product.asset(PR, f), f"{P}/source/{f}")
