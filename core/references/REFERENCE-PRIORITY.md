@@ -10,6 +10,10 @@ reference in this order and take the first one that fits the chosen ad type:
 | **2** | **Meta Ad Library** (other brands' ads currently running on Meta) | `core/references/meta-refs/` (shared) or `skills/<product>/references/meta-refs/` (product-specific) | Only "if they had something": use when the folder has an ad for this ad type. See "Adding Meta references" below. |
 | **3** | **Pinterest** | a skill's own `references/pinterest/` first (Sermorelin GHK: 32 themed ads from its own category, the way Restora's are sleep ads), then the shared `core/references/static-refs/` (12 ad-type folders, `OVERVIEW.jpg`) | 50 pins from board 1 (`pinNN`), 20 from board 2 (`b2pinNN`), 20 from a document (`DOC_NN`). Mostly sleep brands: they work for any tablet product, but take the **layout only**, never their theme, colours or words. |
 
+**Winners lead the batch, not only the tie-break** (Priestley, 2026-10-29, Sermorelin GHK): pick the winners first and take
+their ad types; at least 3 of every 5 ads start from a winner for that audience. Only the remaining slots choose an ad type
+first and fall through to Meta / Pinterest. (Picking the ad type first let 4 of 5 women's ads in batch 2 fall to Pinterest.)
+
 The ad types are the same at every level (F1–F12 in each skill's `image-batch.md`), so one ad type can be matched in all three.
 
 ## Rules that apply to every level

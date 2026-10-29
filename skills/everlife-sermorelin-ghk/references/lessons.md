@@ -92,3 +92,8 @@ Compliance traps:
 - **Watch the winner video itself, not only its card.** F4 cuts between a talking head and separate hands-only product
   close-ups and pins a product bar (logo + name + bottle + tablet) for the whole video.
 - Shorter is cheaper: MS UGC 720p costs 40 (8 s) / 50 (10 s) / 60 (12 s) / 75 (15 s). 8 s is a proven length (winner M5).
+
+## Reference priority in practice (2026-10-29)
+- **Pick the winners first, then the frameworks.** Batches 2–3 (women) picked a framework per slot and then looked for a
+  matching winner, so W1–W4 fell to Pinterest and only W5 built on a winner. Rule now (image-batch.md step 2): at least
+  3 of 5 slots start from a winner for the audience; Pinterest fills the rest.

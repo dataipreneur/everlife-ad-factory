@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: winners lead every image batch (branch `sermorelin-first-batch`)
+Priestley: "priority is winners". The women's batches built only 1 of 5 ads on a winner because the batch step picked a
+framework first and then looked for a matching winner.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` step 2: pick winners first; at least 3 of every 5 slots start
+  from a winner for that audience (per audience for "Both"); remaining slots may use Meta / Pinterest. The approval table
+  gains a source column and a count line ("3 winners · 2 Pinterest").
+- `core/references/REFERENCE-PRIORITY.md`: the same rule, noted as Sermorelin GHK's (Restora-Z unchanged).
+- `skills/everlife-sermorelin-ghk/references/lessons.md`: lesson added.
+Originals in `_originals/2026-10-29/winners-first/`.
+
 ## 2026-10-28 — Creative lead: Everlife logo at the TOP of statics; vary type and colour per ad (branch `logo-top-type-variety`)
 Two rules from Mitansh after the first Sermorelin GHK batch, applied to every product skill:
 - `core/tools/finish_batch.py`: the logo moved out of the footer to the top safe band (9:16 y=150, feed y=60/56; 200 px wide,

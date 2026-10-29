@@ -53,13 +53,19 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
-2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad**:
-   first a matching winner (its card + preview image: M8/M2 bold claim, M3 offer + callouts, M4 features & benefits,
-   M9 identity post, M10 tablet in hand, F2 brand mood, F1 article, F3 letter, F5 animated); else a Meta ref
+2. Read the bible + copy log + `winners/winners.md` (one cat). **Winners first, then frameworks** (Priestley, 2026-10-29):
+   - **At least 3 of every 5 slots (6 of 10, 9 of 15) start from a winner for this audience**: pick the winner first, take
+     its framework, look at its card + preview image (M8/M2 bold claim, M3 offer + callouts, M4 features & benefits,
+     M9 identity post, M10 tablet in hand, F2 brand mood, F1 article, F3 letter, F5 animated). Use a different winner per
+     slot; if the audience has fewer usable winners than that, use them all and say so in the table.
+   - "Both" audiences: count per audience (men's slots from M winners, women's from F winners).
+   - Only the remaining slots pick a framework first (for variety, or a framework no winner covers) and **look at 1
+     reference ad** for it: a matching winner if one is left; else a Meta ref
    (`core/references/meta-refs/<framework folder>/`, if any); else a Pinterest ref: this skill's `references/pinterest/<framework folder>/`
    first (read its `SOURCES.md` row: what to take, what not to copy), then `core/references/static-refs/<framework folder>/`. Rule: `core/references/REFERENCE-PRIORITY.md`. Follow the card's "Don't copy" list. Write concept
    (1 line), headline (Tier A by default, see §0 ⚠ pending), ≤ 3 supporting lines (approved claims, exact), prompt. Show
-   ONE table: # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
+   ONE table: # · source (winner ID / Meta / Pinterest file) · framework · territory · headline · tier (A / B PROPOSED) ·
+   supporting lines · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest").
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
    its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
