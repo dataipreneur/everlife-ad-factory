@@ -101,3 +101,14 @@ Compliance traps:
 ## Video length (2026-10-29)
 - **15 s is the standard, as Restora-Z**; the bible sets no length. The end card starts at 11 s (not Restora's 12.8) so it
   stays up 4 s for 50+ readers; speech ≤ 18 words, finished by ~10.5 s. 8 s only for a simple hook + product idea.
+
+## First 15 s men's video "Kettlebell" (2026-10-29, 2 + 75 credits)
+- **Preview stills worked:** cast (fit, ~50, clothed) and the single green "S" tablet came out right in the video too.
+- **"Finish speaking by 10.5 s" was not obeyed:** 17 words ran 2.6–12.4 s (MS still stretches). Hold the last frame
+  (~1.7 s) so the end card keeps 4 s; next time try ≤ 14 words, or accept a ~17 s finished file.
+- **Product name likely mispronounced** ("Semrigin GK KH" to two whisper models) even with the pronunciation line. The name
+  is said over the hands-only shot, so a re-voiced line could be dropped in there without lip-sync. Listen before review.
+- **Tablet in front of the bottle hides the product name** on the label. Ask for "the tablet held to the side of the
+  bottle, never covering its label".
+- **End card looks:** `"style": "house"` crashes (the house look is `"default"`); the default and editorial end cards cut
+  the long ingredient claims off. `tiktok` + `"end_rows": "benefits"` is the only clean one for this product today.
