@@ -27,7 +27,7 @@ Read these when the step says so:
 | `references/video-prompting.md` | writing a video script/prompt |
 | `core/references/REFERENCE-PRIORITY.md` | picking any reference ad: **1 our winners → 2 Meta Ad Library → 3 Pinterest** (rules for all three) |
 | `references/winners/winners.md` | **any image or video concept** (priority 1): our own top Sermorelin GHK ads (CPA-ranked) with "works / don't copy" cards; look at the card's preview image |
-| `references/image-batch.md` | **any image request** (Batch Mode); Meta refs in `core/references/meta-refs/` (priority 2, if any); Pinterest refs (priority 3): first this skill's own `references/pinterest/` (19 supplement/wellness ads for the ad types our winners don't cover; log in `SOURCES.md`), then the shared `core/references/static-refs/` (mostly sleep brands: layout only) |
+| `references/image-batch.md` | **any image request** (Batch Mode); Meta refs in `core/references/meta-refs/` (priority 2, if any); Pinterest refs (priority 3): first this skill's own `references/pinterest/` (32 themed ads: men 45+ vitality/strength/testosterone/longevity, women 40+ collagen/glow/strength, tablet-led heroes; log in `SOURCES.md`), then the shared `core/references/static-refs/` (mostly sleep brands: layout only) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes, carried over from Restora-Z) |
 | `references/reviews.md` | any review / testimonial / social-proof quote (none on file yet → gated) |
