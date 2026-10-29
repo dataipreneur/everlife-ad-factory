@@ -2,8 +2,9 @@
 
 Same machine as the Restora-Z and Sermorelin GHK batches (creative lead, 2026-10-27: "speed, Creatify, batches of at least
 5 different types, mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad**
-with the real bottle and tablet; `finish_batch.py` adds only the approved footer (Everlife logo, Trustpilot 4.9 / Doctor
-Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip over the calm bottom ~18%.
+with the real bottle and tablet; `finish_batch.py` adds only the Everlife logo and the approved footer (Trustpilot 4.9 /
+Doctor Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip over the calm bottom band
+(prompt asks for 22%).
 
 **Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
 
@@ -46,34 +47,83 @@ Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip
 
 **Random (recommended):** N different frameworks (skip F5, F7), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8,
 F10, F11, F12). **Slot 1 is always F2 as "tablet in hand"** (a real 45+ hand holding ONE tablet to the lens + a huge
-condensed Tier A headline): the all-time winners' format (~1,500 sales, `winners/winners.md` ⭐). Then weight towards
-F4, F11, F6, F12 (name/tablet hero).
+condensed Tier A headline): the all-time winners' format (~1,500 sales, `winners/winners.md` ⭐); it counts as one of
+the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/tablet hero).
 
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
-2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework, **look at 1 reference ad in
-   priority order** (`core/references/REFERENCE-PRIORITY.md`): **1** a matching winner (⭐ all-time: tablet in hand
-   M2/M5/M6/F2, name/tablet hero F1/F4; weekly: M5 name lockup, M3 features & benefits + offer, M2 visual metaphor,
-   M4 video) → **2** a Meta Ad Library ref in `core/references/meta-refs/<framework folder>/`, if any → **3** a Pinterest
-   ref: this skill's `references/pinterest/<framework folder>/` first (read its `SOURCES.md` row: what to take, what not
-   to copy), then `core/references/static-refs/<framework folder>/`. Follow the "Don't copy" lists. Record the level
-   and file for each ad in `prompts.md` and SESSION.md. Write concept
-   (1 line), headline (Tier A by default), ≤ 3 supporting lines (✅ benefits, exact), prompt. Show ONE table:
-   # · framework · territory · headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit.
+2. Read the bible + copy log + `winners/winners.md` (one cat). **Winners first, then frameworks** (hand-off from the GHK
+   skill, 2026-10-29; rule `core/references/REFERENCE-PRIORITY.md`):
+   - **At least 3 of every 5 slots (6 of 10, 9 of 15) start from a winner for this audience**: pick the winner first,
+     take its framework, look at its card + preview (⭐ all-time: tablet in hand M2/M5/M6/F2, name/tablet hero F1/F4;
+     weekly: M5 name lockup, M3 features & benefits + offer, M2 visual metaphor). A different winner per slot; if the
+     audience has fewer usable winners (women have few), use them all and say so in the table.
+   - "Both" audiences: count per audience (men's slots from M winners, women's from F winners).
+   - Only the remaining slots pick a framework first and look at 1 reference: a matching winner if one is left → a Meta
+     Ad Library ref in `core/references/meta-refs/<framework folder>/`, if any → a Pinterest ref: this skill's
+     `references/pinterest/<framework folder>/` first (read its `SOURCES.md` row: what to take, what not to copy), then
+     `core/references/static-refs/<framework folder>/`.
+   Follow the "Don't copy" lists. Record the source for each ad in `prompts.md` and SESSION.md. Write concept (1 line),
+   headline (Tier A by default), ≤ 3 supporting lines (✅ benefits, exact), its font + colour (§2b), prompt. Show ONE
+   table: # · source (winner ID / Meta / Pinterest file) · framework · territory · headline · tier (A / B PROPOSED) ·
+   supporting lines · font / colour · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest").
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
    its Tier A lines; each Tier B or ⚠ line needs its own explicit OK first** (ask before the generate question).
-3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet, type_specimen], out='gen/b<date>_<n>.png',
-   aspect_ratio=<final ratio>)` from `assets/creatify.json`. Max 4 in flight.
-4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
-   not mirrored); the **tablet is identical to the tablet render** (no invented pill, not the other past tablet shape);
-   **no vial, syringe or second container**; every line big enough for 50+; people look 35–65, fit but not bodybuilders,
-   clothed; women's ads in pink/tan/beige with no orange in the scene; nothing breaks a Hard NO.
+3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet] (add type_specimen only for the house
+   editorial look, §2b), out='gen/b<date>_<n>.png', aspect_ratio=<final ratio>)` from `assets/creatify.json`. Max 4 in flight.
+   **The tablet is HELD** (bible v3 page 4): between thumb and index finger in a "pull" toward the camera, or resting in
+   an open palm; sharp, foreground, **beside the bottle, never covering its label**. Vary the hold per ad (fingertips
+   raised to the lens, open palm low in frame, hand beside the face, palm up on a bench, two fingers offering it
+   forward); never the same hold or angle twice in a batch. No two ads in a batch share a framework or an accent colour.
+4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SERMORELIN by Everlife" present; the bottle
+   label matches the render (not garbled, not mirrored); the **tablet is identical to the tablet render** (no invented
+   pill, not the other past tablet shape), held, at least ~15% of the canvas width (17% when a person shares the frame);
+   **no vial, syringe or second container**; every line big enough for 50+; men 42–50, hardcore fitness-model build,
+   fitted top, never shirtless or flexing; women 40–60, clothed; men's headline not in an elegant/italic serif or script;
+   women's batch: ≤ 1 pink-led ad, ≥ 1 teal ad, advertorials on white, ≤ 2 of 5 "explore" colours; no Everlife logo or
+   wordmark drawn by the model (finishing adds the real one); nothing breaks a Hard NO.
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
 5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin`
    (the verbatim disclaimer comes from product.json).
 6. Save to `~/Everlife-Creative/output/Sermorelin/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
    open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
+
+## 2b. Type & colour: different every time (creative lead 2026-10-28; men's rule + Justin's women's colours 2026-10-29)
+Fonts and colours are not house-locked. Every ad in a batch gets its own pairing and accent; never two alike in a batch,
+never the same look two batches running. Write it into the prompt's TYPOGRAPHY & COLOUR block (50+ legibility, no
+shadows or outlines on type, product name big).
+
+| Headline face (pick one) | Partner for supporting text |
+|---|---|
+| Heavy condensed grotesque, all caps (the winners' look) | light humanist sans |
+| Elegant high-contrast serif, roman | clean geometric sans |
+| Serif with ONE italic word | small-caps sans |
+| Wide extended sans, bold | regular sans |
+| Slab serif, bold | light sans |
+| Chunky rounded sans | mono-spaced labels |
+| Brush / handwritten accent word inside a sans headline | regular sans |
+| Thin editorial sans, tracked out, all caps | serif body |
+
+**Men's ads:** never the elegant serif, the serif with an italic word, or the brush/handwritten accent (reviewer,
+2026-10-29: "men shouldn't use that font"). Men pick from heavy condensed grotesque (every men's winner), wide extended
+bold sans, bold slab serif, chunky bold sans. The serif rows stay available for women.
+
+Accent colour: from the scene or the product, never from habit (the label orange, brass/gold, deep navy, charcoal on
+cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white). Bible v3
+sets no palette limit for Sermorelin.
+**Women (Justin's direction, 2026-10-29, "preferred options, not strict limitations"):**
+- No colour is banned. Preferred (they have performed): pinks, tans, neutrals, warm tones, **white** and **teal**; most
+  ads in a women's batch lead with one of these.
+- Up to 2 of every 5 women's ads explore a current colour or type trend that suits the concept.
+- Advertorial / article ads sit on a **white** background.
+- At least one teal-led or teal-accent ad per women's batch; keep the teal soft/pale so it sets off the orange label.
+- At most one pink-led ad per batch; no two women's ads with the same lead colour.
+Vary the headline placement (top-left, centred, bottom third above the footer band, split around the product) and the
+light (morning, golden hour, soft overcast, studio).
+
+The type specimen (`assets/type_specimen.png`) is not attached by default: only when the brief asks for the house
+editorial look, and then say "match image 3".
 
 ## 3. Prompt template (fill everything; keep the quotes exact)
 ```
@@ -82,28 +132,41 @@ style of a modern DTC wellness brand. Framework: <name>: <layout from the refere
 
 PRODUCT: image 1 is the real bottle and image 2 the real tablet. Use the attached tablet reference exactly; do not
 invent, alter, or substitute a different pill. Use the attached bottle reference exactly: same shape, colours and label,
-label facing camera, sharp, never mirrored, never redesigned. The TABLET is the hero (large, in focus, foreground); the
-bottle, if shown, is large and legible. Show ONLY this bottle and tablet: no vial, no second container.
+label facing camera, sharp, never mirrored, never redesigned; the label wraps around the bottle and follows its angle.
+The TABLET is the hero: real tablet only (never glowing orbs, spheres or icons), large, in focus, foreground, at least
+15% of the canvas width, HELD <this ad's hold: between thumb and index finger pulled toward the camera / resting in an
+open palm / …>, beside the bottle and never covering its label. The bottle is large and legible (at least 30% of the
+canvas height). Show ONLY this bottle and tablet: no vial, no second container. ARRANGEMENT for this ad: <its own
+product arrangement, different from every other ad in the batch>.
 
-TYPOGRAPHY: image 3 is the type specimen. Headline in an elegant high-contrast serif (like Instrument Serif) with ONE
-phrase in an accent colour; other text in a clean geometric sans (like Inter). For readers aged 50+: headline at least
-9% of canvas height per line; every other line at least 3.5%; strong contrast; max 3 supporting lines.
+TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from §2b,
+e.g. "a heavy condensed grotesque in all caps">, with ONE phrase picked out in <accent colour>; supporting text in <its
+partner face>. For readers aged 50+: headline at least 9% of canvas height per line; every other line at least 3.5%;
+strong contrast; no thin grey text; max 3 supporting lines. Never split or hyphenate "Sermorelin".
 
-TEXT: render ONLY these strings, exactly, nothing else (no extra words, logos, stars, badges, prices, website, disclaimer):
-  Headline: "<headline>"   (accent on: "<phrase>")
+TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
+badges, prices, website, disclaimer):
+  Name: "SERMORELIN by Everlife"   (big; "by Everlife" smaller; every ad, bible v3)
+  Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 
-SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
-<MEN: palette warm stone, charcoal, sand, brass; any person a fit, mature man 40–65, fully clothed in training or casual
-wear, natural build (NOT a bodybuilder), calm and candid.>
-<WOMEN: palette blush pink, tan, beige, cream (no orange and no green in the scene; the product keeps its own colours);
-any person a woman 40–65, natural, candid, clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or
-vials, no mirrors showing bodies.
+SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, premium.
+<MEN: palette <this ad's own>; any person a man 42–50, a fit silver fox with a hardcore fitness-model physique (visibly
+muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training tee or long
+sleeve, no bare torso, no flexing poses; a real gym or hard training.>
+<WOMEN: lead colour <this ad's own per §2b: pinks / tans / neutrals / warm tones / white / soft teal, or an "explore"
+trend colour for up to 2 of 5; white background for advertorials; pink-led at most once per batch>; any person a woman
+40–60, natural fit build, candid, clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or vials, no
+mirrors showing bodies.
 
-LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands);
-the bottle's base sits at or above 78% of the canvas height and the bottle is at least 30% of the canvas height (small,
-low bottles come out with garbled label text). 9:16 only: keep the top 8% free of text.
+LAYOUT: 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no product): the
+Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the proof
+footer is laid there. The whole product (bottle, tablet, hands, plinth tops) ends ABOVE 72% of the canvas height and all
+text above 76%.
 ```
+Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked (GHK batch 4, 2026-10-29: "between
+45% and 78%" needed 6 reposition edits in 7; "ends above 72%" needed 0 in 3). Until `main`'s logo-at-the-top finisher is
+merged into this branch, `finish_batch.py` still puts the logo in the footer; the calm top band is harmless meanwhile.
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; orange label with the
 vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERMORELIN', small text 'PRESCRIPTION',
 '30 SUBLINGUAL TABS'"), plus:

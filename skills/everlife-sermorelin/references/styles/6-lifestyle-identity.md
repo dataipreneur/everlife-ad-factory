@@ -10,7 +10,7 @@ Why it still works: the bible frames Sermorelin around **muscle, fitness and per
 ---
 
 ## 6A — Prime-time training (men)
-- **Looks like:** a fit, mature man 45–65, clothed in training gear, early-morning sun: a heavy farmer's carry, a sled push, a rowing sprint, a trail run. Real sweat, calm focus.
+- **Looks like:** a rugged 42–50 "fit silver fox" with a hardcore fitness-model build, fully clothed in a fitted training tee, early-morning sun: a heavy farmer's carry, a sled push, a rowing sprint, a boxing bag. Real sweat, hard-training intensity; no flexing.
 - **Beats:** 0–2 a sound-led hook (a kettlebell set down hard, breath) → 2–6 the effort → 6–10 the tablet in his palm at the gym bag, bottle beside it → 10–12 he nods and goes again.
 - **Copy:** men Tier A (*Built for Men Who Still Want More*); benefit *Supports Strength + Vitality*.
 - **Finishing:** `house`.
@@ -21,9 +21,9 @@ Why it still works: the bible frames Sermorelin around **muscle, fitness and per
 - **Finishing:** `tiktok`.
 
 ## 6C — Thrive after 35 (women)
-- **Looks like:** a woman 40–65 in pink/tan/beige light: a pilates reformer session, a morning hike, a tennis rally, then the tablet at a sunlit counter.
+- **Looks like:** a woman 45–52 in warm light (lead colours per `image-batch.md` §2b): a pilates reformer session, a morning hike, a tennis rally, then the tablet at a sunlit counter.
 - **Copy:** women Tier A (*Thrive After 35*, *Rediscover Energy and Vitality*, *Stay Fit, Age Beautifully*); benefit *Supports Energy + Stamina*.
-- **Guardrails:** no oranges or greens in the scene; no body-shape focus, no sports-bra ab shots (common in past ads); never "Get Ripped".
+- **Guardrails:** no body-shape focus, no sports-bra ab shots (common in past ads); never "Get Ripped".
 - **Finishing:** `editorial`.
 
 ## 6D — Strength for today (both)

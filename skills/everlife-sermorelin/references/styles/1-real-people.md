@@ -5,7 +5,7 @@ Why it works: the highest trust for a 35–65 buyer; a real face naming the goal
 
 **Engine: Marketing Studio UGC** (`--mode ugc --product_ids @<skill>/assets/product_ids.json --duration 15 --resolution 720p --aspect_ratio 9:16 --generate-audio true`), 75 credits. Never Seedance or still-image lip-sync for these.
 
-Universal prompt lines: "ultra-realistic creator UGC, real handheld phone shake, real skin texture, real room audio, no beauty filter; the filming phone is NEVER visible; exactly ONE tablet; no vial or second container; label readable and never mirrored; fully clothed, natural build, not a bodybuilder; nobody says 'I' or 'my'; say 'Sermorelin' as 'ser-mo-REL-in'; keep the bottom 25% free of faces."
+Universal prompt lines: "ultra-realistic creator UGC, real handheld phone shake, real skin texture, real room audio, no beauty filter; the filming phone is NEVER visible; exactly ONE tablet; no vial or second container; label readable and never mirrored; fully clothed, no bare torso, no flexing poses (men: the CAST line in `video-prompting.md`); nobody says 'I' or 'my'; keep the bottom 25% free of faces." The product-name line goes over the hands-only shot and is re-voiced in the actor's cloned voice (`finishing.md` §1b).
 
 ---
 

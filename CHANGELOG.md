@@ -74,6 +74,28 @@ Output + hand-off sheet: `~/Everlife-Creative/output/Sermorelin/2026-10-29_SESSI
   (docs said `house`, which crashes); lessons (voice, word budget ≤ 22, small-label garbling, bottle above the footer);
   image prompt LAYOUT now sizes/places the bottle; finishing notes how to run the branch toolkit without `--install`.
 
+## 2026-10-29 — Plain Sermorelin aligned with bible v3 + the GHK hand-off (branch `sermorelin`)
+Sources: bible v3 (`~/.claude/everlife/creative-bible.md`, imported 2026-10-29, pages 4 + 7–10) and
+`~/Downloads/Sermorelin-handoff-2026-10-29.md` (from the GHK session, PR #4). Skill files only (`skills/everlife-sermorelin/`);
+originals in `_originals/2026-10-29/skills/everlife-sermorelin/`. No GHK claims, headlines or casting quotes copied.
+- `product-bible.md`: verbatim section re-copied from v3. New: men's talent line ("rugged, strong and unmistakably
+  masculine…"), "Supports Sleep Quality + Recovery" (both), "2x-Strength Growth Hormone Support" (men),
+  "Supports Toned Strength After 35" (women). Pre-screen: sleep/recovery ✅, 2x-Strength ✅ with care (1000 mcg only),
+  Toned Strength ⚠ Jeremy. Women's "no orange/green" limit removed (v3 keeps it only for GHK-Cu Cream and Glow Stack).
+- Images: winners lead (≥ 3 of every 5 slots); tablet held (thumb + index "pull" or open palm, beside the bottle);
+  per-ad font + colour menu, no elegant/italic serif or script on men's headlines; Justin's women's colour direction
+  (preferred incl. white + teal, advertorials on white, ≥ 1 teal ad, ≤ 1 pink-led, ≤ 2 of 5 explore); "SERMORELIN by
+  Everlife" on every ad; product ends above 72%, text above 76%, calm top 14% / bottom 22%.
+- Video: 15 s, end card 11–15 s, speech ≤ 20 words from the first second, finished by ~10.5 s; hook by 2.5 s;
+  "Sermorelin by Everlife" in the first line and header (`"head": ["SERMORELIN BY EVERLIFE"]`, `"head_always": true`);
+  men cast 42–50 "fit silver fox", hardcore fitness-model build, fully clothed (replaces "natural build, not a
+  bodybuilder"; ⚠ the global CLAUDE.md still says "not bodybuilders"); cloned-voice product line for on-camera actors
+  (Marketing Studio), Creatify TTS stays for no-dialogue Seedance cuts.
+- Also brought in line: `SKILL.md`, `finishing.md` (§1a header, §1b voice, `--end 11`), `lessons.md` (GHK's 29 Oct
+  lessons), `styles/1-real-people.md`, `4-product-hero.md`, `6-lifestyle-identity.md` (casting, colours).
+- Needs PR #4 merged into `main` (then `main` into this branch) for `head_always`, the bible-v3 logo size and the 2-line
+  disclaimer; until then this branch's finishers ignore `head_always` and keep the old logo/disclaimer.
+
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
 Diffed against the unzipped original (`~/Downloads/everlife-restora-z.zip`, 27 Oct 21:51); everything else was identical.

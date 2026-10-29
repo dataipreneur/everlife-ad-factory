@@ -8,7 +8,7 @@ Why it works: the bible's first composition rule is "the pill/tablet is the hero
 ---
 
 ## 4A — Premium still life
-- **Men:** the tablet large in the foreground on warm stone or a chalked barbell collar, bottle behind, sun-lit, texture and depth. **Women:** the tablet on blush linen or travertine with soft morning light (the orange tablet is the only orange in frame).
+- **Men:** the tablet large in the foreground on warm stone or a chalked barbell collar, bottle behind, sun-lit, texture and depth. **Women:** the tablet on blush linen, white stone, travertine or soft teal with soft morning light (lead colours per `image-batch.md` §2b).
 - **Video:** slow push-in, the tablet settling in slow motion, light sweeping across.
 - **Finishing:** `finish_batch.py` (F2 / F12).
 

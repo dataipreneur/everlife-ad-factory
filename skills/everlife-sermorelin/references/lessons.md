@@ -32,7 +32,7 @@ Seen in the first test (2026-10-29: 1 Seedance video + 5 Creatify statics, `~/Ev
   `ffmpeg -i raw.mp4 -i vo.wav -map 0:v -map 1:a -c:v copy -af "apad=whole_dur=<clip s>" -c:a aac -t <clip s> raw_vo.mp4`
   (plain `apad` + `-shortest` never ends). Next time ask Seedance for **"no dialogue, ambient sound only"** so the foley
   survives under the TTS line.
-- **25 spoken words ran to 14.8 s** at a calm pace: budget ≤ 22 words for this voice, or the last line plays over the end card.
+- **25 spoken words ran to 14.8 s** at a calm pace: budget ≤ 20 words (end card now starts at 11 s), or the last line plays over the end card.
 - **GPT Image garbles the bottle's small label text** ("30 SUBLINGUAS", missing "TABS") when the bottle is small or low
   in frame; a re-roll edit didn't fix it. 4 of 5 were clean when the bottle was medium/large. Fix: ask for a large bottle,
   or composite the real render (`composite.py --product sermorelin`) instead of re-rolling.
@@ -41,15 +41,33 @@ Seen in the first test (2026-10-29: 1 Seedance video + 5 Creatify statics, `~/Ev
 - What worked: the round "S" tablet came out exactly right in all 6 images and the video; tablet-in-hand framing (men and
   women) looks like the winners; women's pink/beige palettes held with the orange product.
 
+Learned on Sermorelin GHK the same day (hand-off 2026-10-29; same models, same team, so they apply here):
+- **Team review of a men's video** (Emily, Sarah, Jeremy, Justin): "start talking way sooner" (speech in the first
+  second, hook by 2.5 s); the product name on screen from the start, with the logo, "this applies to every product";
+  talent "too old… not ripped enough" → 42–50 "fit silver fox", hardcore fitness-model build, kept fully clothed.
+- **Men's fonts:** an elegant serif with a gold italic word was "not right… men shouldn't use that font": men's headlines
+  use heavy condensed / wide bold / slab / chunky sans (every men's winner uses heavy condensed caps).
+- **Winners first:** picking frameworks first left most slots on Pinterest; picking ≥ 3 of 5 winners first gave the
+  strongest ads.
+- **Marketing Studio ignores "say this line over the hands-only shot"** and mispronounced "Sermorelin" in every take
+  ("Surmergene", "Surmeasine"); "sublingual" too ("sub-single", "subliberal"). Plan the cloned-voice edit (finishing §1b).
+- **Video models age actors** (asked 48–55, looked 58–60): cast a few years younger and add "fresh, well-rested look".
+- **Any window shows the outdoors** (orange walls, trees): "the window NOT in frame, no outdoor view, no plants" when the
+  scene's colours matter.
+- **A tablet held in front of the bottle hides the product name**: "held beside the bottle, never covering its label".
+- **The product lands low in GPT Image 2.5:** "ends above 72%, bottom 22% calm" came out right first time; "between 45%
+  and 78%" needed 6 reposition edits in 7.
+- **Women's batches all in pink look the same**: rotate the lead colour, at most one pink-led ad (image-batch §2b).
+
 Sermorelin-specific risks to watch (expected, not yet seen):
 - **The injection vial comes back.** Almost every past plain-Sermorelin ad shows the bottle next to an orange-capped vial;
   models trained on similar ads will add one → "no vial, no second container" in every prompt, check every frame.
 - **Mixed up with Sermorelin GHK.** Same family name, different product: never attach a GHK render, never write GHK copy,
   check Marketing Studio picked "Sermorelin", not "Sermorelin GHK".
 - **Two tablet shapes in past ads** (round "S" vs oblong "SERMORELIN"): only the confirmed render; QA the shape.
-- "Fit man at the gym" prompts drift to shirtless, bodybuilder or mirror-selfie bodies → "fully clothed, natural build, not a bodybuilder, no mirrors".
+- "Hardcore fitness-model" casting drifts to shirtless, flexing or mirror-selfie bodies → "fully clothed in a fitted
+  training tee, no bare torso, no flexing poses, no mirrors".
 - Any "toned/lean" visual can turn into a body before/after → never show two states of one body.
-- Women's scenes pick up the product's orange → name the palette and the two banned colours for the scene.
 
 Compliance traps:
 - Rx is never shared: only the person's OWN pharmacy delivery.
