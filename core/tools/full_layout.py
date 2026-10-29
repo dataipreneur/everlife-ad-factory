@@ -112,6 +112,7 @@ def captions():
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
 import safezones as sz  # noqa: E402
 
+# disclaimer stays 21 px and wraps (Mitansh, 2026-10-29: kept over bible v3's 2-line/13 px rule)
 SX0, SY0, SX1, SY1 = sz.SAFE
 SAFE_W = sz.SAFE_W
 BLOCK_BOTTOM = sz.FOOTER_BOTTOM          # proof row + disclaimer end (bottom of frame by default; see safezones.PROOF_AT)
@@ -147,7 +148,7 @@ def top_layer():
     bl.logo(img, SY0 + 8, 435)
     note(((W - 435) / 2, SY0 + 8, (W + 435) / 2, SY0 + 70), "logo")
     d = ImageDraw.Draw(img)
-    y = 210
+    y = 238
     for ln in C["head"]:
         f = fit(ln, bl.AV_COND, 66, "Heavy Italic", SAFE_W)
         bl.centered(d, y, ln, f, bl.GOLD)
@@ -307,6 +308,8 @@ else:
 # keep the headline off faces: hide it while a head would sit under it (heads tracked with OpenCV)
 top_segments = [(0.0, a.end)]
 try:
+    if C.get("head_always"):   # product asks for the logo + header on screen the whole time (Sermorelin GHK, 2026-10-29)
+        raise ImportError("head_always")
     import faces
     import numpy as np
     _al = np.asarray(Image.open(f"{L}/top.png").split()[-1])
@@ -325,8 +328,9 @@ try:
             top_segments = [(round(x, 2), round(y, 2)) for x, y in nxt if y - x > 0.3]
         if _blocked:
             print("headline hidden over faces:", _blocked)
-except ImportError:
-    print("NOTE: faces.py/opencv missing; headline not face-checked")
+except ImportError as _e:
+    print("headline kept on the whole time (head_always)" if str(_e) == "head_always"
+          else "NOTE: faces.py/opencv missing; headline not face-checked")
 layers = [("top.png", s_, e_) for s_, e_ in top_segments] + cap_layers
 burst = None
 if a.reviews:

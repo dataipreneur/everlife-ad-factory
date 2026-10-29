@@ -3,7 +3,7 @@
 Library folders: Movie-Peg · Wild-Creative/Surreal · Retro · Elite/Celebrity Secret · New Year · Billboard.
 Fit ⭐⭐: one bold idea stops the scroll, but the Restora-Z lesson stands: **don't build surreal ads from scratch**. Keep people close and expressive, keep scenes grounded, 720p for hero pieces, and ask "would a 50+ buyer believe this was filmed?".
 
-**Engine:** Seedance 2.0 with bottle + tablet references (45 cr; 67.5 at 720p). Universal lines: "use the attached tablet and bottle references exactly; exactly one tablet; no on-screen text; fully clothed; no needles; narration finishes by 12 s."
+**Engine:** Seedance 2.0 with bottle + tablet references (45 cr; 67.5 at 720p). Universal lines: "use the attached tablet and bottle references exactly; exactly one tablet; no on-screen text; fully clothed; no needles; narration finishes by 10.5 s."
 
 ---
 

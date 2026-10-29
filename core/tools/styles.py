@@ -33,6 +33,10 @@ def _cased(text, C):
     return text
 
 
+LOGO916 = 432   # bible v3 §03: logo 40% of the 1080 px width on 9:16
+HEAD_DY = 28    # opening headers sit lower to clear the taller logo
+
+
 def _logo(bl, P, color, width):
     """Everlife logo recoloured (the source PNG is cream; its alpha is the mark)."""
     lg = Image.open(f"{P}/source/logo_cream.png").convert("RGBA")
@@ -101,7 +105,7 @@ class TikTok:
         f = self.head
         while max(d0.textlength(h, font=f) for h in heads) + 52 > SAFE_W and f.size > 30:
             f = _font(self.bl, HN, f.size - 2, "Bold")
-        self._sticker_lines(img, heads, 212, f, (255, 255, 255, 250), self.INK)
+        self._sticker_lines(img, heads, 212 + HEAD_DY, f, (255, 255, 255, 250), self.INK)
         return img
 
     def caption_layers(self, caps, L, tag):
@@ -156,7 +160,8 @@ class TikTok:
         if C.get("pill"):
             base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
             c = _render(P, C["pill"], 300, by="width")
-            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, 560 - c.height // 2))
+            cy = min(560, 652 - c.height // 2)  # a tall pill render (e.g. a wide tablet) would cover the label at 668
+            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, cy - c.height // 2))
         else:
             base.alpha_composite(b, (W // 2 - b.width // 2, 345))
         lab = _font(bl, HN, 32, "Bold")
@@ -164,19 +169,27 @@ class TikTok:
         layers = [("end.png", self.end_t, 99)]
         base.save(f"{L}/end.png")
         nf, cf = _font(bl, HN, 36, "Bold"), _font(bl, HN, 30, "Medium")
-        for i, (name, claim) in enumerate(C["ingredients"]):
+        # "end_rows": "benefits" lists the approved benefits instead of name + claim rows (for long ingredient claims)
+        rows = [("", b) for b in C["benefits"]] if C.get("end_rows") == "benefits" else C["ingredients"]
+        for i, (name, claim) in enumerate(rows):
             img = bl.canvas()
             dd = ImageDraw.Draw(img)
             y = 716 + i * 64
             dd.rounded_rectangle([SX0 + 4, y, SX1 - 4, y + 56], 28, fill=(255, 255, 255, 255))
             dd.ellipse([SX0 + 22, y + 16, SX0 + 46, y + 40], fill=(0, 182, 122))
             dd.text((SX0 + 28, y + 12), "✓", font=_font(bl, f"{SUP}/Arial Unicode.ttf", 22, "Regular"), fill="white")
-            dd.text((SX0 + 62, y + 9), _cased(name.title(), C), font=nf, fill=self.NAVY)
-            cf2 = cf
-            while dd.textlength(claim, font=cf2) > SAFE_W - 300 and cf2.size > 20:
-                cf2 = _font(bl, HN, cf2.size - 1, "Medium")
-            tw = dd.textlength(claim, font=cf2)
-            dd.text((SX1 - 22 - tw, y + 13), claim, font=cf2, fill=(90, 96, 108))
+            if name:
+                dd.text((SX0 + 62, y + 9), _cased(name.title(), C), font=nf, fill=self.NAVY)
+                cf2 = cf
+                while dd.textlength(claim, font=cf2) > SAFE_W - 300 and cf2.size > 20:
+                    cf2 = _font(bl, HN, cf2.size - 1, "Medium")
+                tw = dd.textlength(claim, font=cf2)
+                dd.text((SX1 - 22 - tw, y + 13), claim, font=cf2, fill=(90, 96, 108))
+            else:
+                bf = _font(bl, HN, 32, "Bold")
+                while dd.textlength(claim, font=bf) > SAFE_W - 90 and bf.size > 24:
+                    bf = _font(bl, HN, bf.size - 1, "Bold")
+                dd.text((SX0 + 62, y + 11), claim, font=bf, fill=self.NAVY)
             img.save(f"{L}/end_ing{i}.png")
             layers.append((f"end_ing{i}.png", round(self.end_t + 0.25 + 0.3 * i, 2), 99))
         foot = bl.canvas()
@@ -213,8 +226,8 @@ class Editorial:
         d = ImageDraw.Draw(img)
         kicker = self.C.get("kicker", "")
         if kicker:
-            bl.centered(d, 214, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
-        y = 252
+            bl.centered(d, 214 + HEAD_DY, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
+        y = 252 + HEAD_DY
         for i, ln in enumerate(self.C["head"]):
             t = _cased(ln.capitalize() if i == 0 else ln.lower(), self.C)
             fi = self.serif_i
