@@ -131,6 +131,9 @@ Priestley, after the second test: images never say "by Everlife"; the name reads
 Everlife logo carries the brand). This overrides bible v3's "[Product] by Everlife in every intro" for statics only;
 videos keep it in the header and first spoken line. Changed: `SKILL.md`, `image-batch.md` (template Name line + QA),
 `product-bible.md` (Intro fact). Originals of today's versions in `_originals/2026-10-29b/`.
+Then (Priestley: "why is it the same guy in every picture?", "women have no product name?"): `image-batch.md` now
+requires a different person per ad (own CAST per ad: age, ethnicity, hair, beard, wardrobe) and QA rejects look-alikes;
+QA also requires "SERMORELIN" as one of the two biggest texts. Originals in `_originals/2026-10-29c/`.
 
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the

@@ -76,7 +76,13 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    an open palm; sharp, foreground, **beside the bottle, never covering its label**. Vary the hold per ad (fingertips
    raised to the lens, open palm low in frame, hand beside the face, palm up on a bench, two fingers offering it
    forward); never the same hold or angle twice in a batch. No two ads in a batch share a framework or an accent colour.
-4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SERMORELIN" present and big, and **no "by Everlife"** anywhere; the bottle
+   **Every ad gets its own person** (Priestley, 2026-10-29: "why the same guy in every picture?"; batch 2 used one
+   casting line 5 times and got one face 5 times). Write a different CAST per ad and never paste the same description
+   twice: vary age within the range (men 42–50, women 40–58), ethnicity, hair (colour, length, grey level, shaved),
+   beard/stubble/clean-shaven, build within the brief, wardrobe colour. Add each ad's casting to the planning table.
+4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SERMORELIN" present and one of the two
+   biggest pieces of text (bible: "Product names run big"; Priestley, 2026-10-29: a small name line counts as "no
+   product name"), and **no "by Everlife"** anywhere; no two ads in the batch show the same-looking person; the bottle
    label matches the render (not garbled, not mirrored); the **tablet is identical to the tablet render** (no invented
    pill, not the other past tablet shape), held, at least ~15% of the canvas width (17% when a person shares the frame);
    **no vial, syringe or second container**; every line big enough for 50+; men 42–50, hardcore fitness-model build,
@@ -151,12 +157,14 @@ badges, prices, website, disclaimer):
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, premium.
-<MEN: palette <this ad's own>; any person a man 42–50, a fit silver fox with a hardcore fitness-model physique (visibly
+<MEN: palette <this ad's own>; any person: <THIS ad's own man: age 42–50, ethnicity, hair, beard, wardrobe colour,
+all different from every other ad in the batch>, a fit silver fox with a hardcore fitness-model physique (visibly
 muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training tee or long
 sleeve, no bare torso, no flexing poses; a real gym or hard training.>
 <WOMEN: lead colour <this ad's own per §2b: pinks / tans / neutrals / warm tones / white / soft teal, or an "explore"
-trend colour for up to 2 of 5; white background for advertorials; pink-led at most once per batch>; any person a woman
-40–60, natural fit build, candid, clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or vials, no
+trend colour for up to 2 of 5; white background for advertorials; pink-led at most once per batch>; any person: <THIS
+ad's own woman: age 40–58, ethnicity, hair, wardrobe, all different from every other ad>, natural fit build, candid,
+clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or vials, no
 mirrors showing bodies.
 
 LAYOUT (4:5 / 1:1): 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no
