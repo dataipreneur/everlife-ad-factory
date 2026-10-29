@@ -26,6 +26,9 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
   **keep our women's palette rule** (bible v3: "no oranges or greens" applies only to GHK-Cu Cream and Glow Stack; other
   women's creative has no palette limit; Justin's Sermorelin GHK direction allows teal/white). Mitansh has not tested
   women's ads. Restored that one line.
+- Follow-up (logged before editing): Priestley reverted that: the women's palette line follows Mitansh's version
+  ("Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens."). Note: the Sermorelin GHK skill's
+  women's colour rules (Justin, teal/white) are looser than this gate; the gate wins.
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
