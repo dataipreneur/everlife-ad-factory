@@ -6,8 +6,8 @@ These gates apply to ALL creative work for EverlifeMD: scripts, prompts, images,
 
 **Before any product work, read that product's section of `~/.claude/everlife/creative-bible.md`.** It holds the approved positioning, headlines, benefits, ingredient claims, CTAs, proof, offers, product Hard NOs and the verbatim ad disclaimer.
 
-## 1. Brief gate (before any work starts)
-- Brief must state: concept direction, approved benefits/headlines, deliverables, **dimensions/ratios**, deadline. Missing any → flag in Asana and stop. Direction is settled at brief, never at review.
+## 1. Claims sources
+- No Asana brief is required to start work: never ask about one or stop for a missing one. The product skill's own flow decides what to make.
 - Benefits, headlines, CTAs, offers come ONLY from the brief's approved list or the product's bible page — and must also pass sections 2–3. Never invent new claims.
 - Headline status in the bible: lines marked **Hard NO conflict** → never use. **Pending approval** (and every "PROPOSED FOR APPROVAL" hook in Parts B/C) → only with explicit approval. **Weak headline / Weak benefit** → avoid unless the brief asks for it.
 - Offers marked [PLACEHOLDER] are not usable — flag.
@@ -40,7 +40,7 @@ Proof:
 - Every ad carries visible social proof: customer count, rating, or both.
 - Authority = sourced trust signals only (100,000+, Trustpilot, Doctor Prescribed / "Dr. Prescribed, Direct From Pharmacy", Ships Free From Pharmacy). No adjectives as authority.
 Disclaimers & AI disclosure:
-- Use the product's **Ad disclaimer verbatim** from the bible — never written, paraphrased or invented. **No disclaimer on file → STOP and flag.** (Bible v3, 29 Oct 2026: most product pages carry one; pages marked "Disclaimer pending" — e.g. GHK-Cu Cream, MOTS-c, Tesamorelin, BPC-157, TB-500, LDN, Epithalon — have none.)
+- Use the product's **Ad disclaimer verbatim** — from the bible, or from the product skill's `product.json` when the bible has none (e.g. BPC-157). Never written, paraphrased or invented. Don't stop over a missing bible disclaimer when the skill has one.
 - Every AI-generated image/video carries the AI disclosure; nothing AI-generated goes live without it. Wording is "AI depictions", never "AI deceptions". Global line: "ADVERTISEMENT: AI-generated depiction and simulated portrayal. Not an actual patient or medical provider." (Differs from product disclaimers' wording — open question for Jeremy; flag until resolved.)
 
 ## 3. Creative standards gate
@@ -51,7 +51,7 @@ Disclaimers & AI disclosure:
 - Must hold up in square and vertical. Never end on a passive frame — last frame is benefits + a clear, specific CTA.
 - **Everlife logo on every ad.**
 - Imagery: warm, sun-lit, candid, real people, calm moments; pharmacy framing as a trust cue (45+). No generic stock-style couples.
-- Women's palette (bible v3, 29 Oct 2026): "pinks, tans and beige. No oranges or greens." applies only to GHK-Cu Cream and Glow Stack; other women's creative has no palette limit.
+- Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens.
 - Intimate wellness (Lovara, PT-141, Spark): tasteful, product-led, no beds/bedroom scenes; PT-141 video stays shoulder-up.
 - Sermorelin: frame around muscle, fitness, performance — not the bedroom. Male talent: fit, mature, not bodybuilders.
 - Reference top-performing, lowest-CPA creative before generating new iterations. Cap at five iterations per base concept.
@@ -88,6 +88,7 @@ Concept direction · approved benefits/subheaders · full section 2 pass · sect
 Higgsfield uses shared Everlife team credits: run a cost estimate and get the user's OK before any paid generation.
 
 ## Known gaps (flag when touched)
-- 11 product pages say "Disclaimer pending" in bible v3 (29 Oct 2026).
+- NAD+ (non-Optima) product page not imported.
+- No ad disclaimers on file for Parts B/C products.
 - AI disclosure wording mismatch (global vs product disclaimer).
 - Bible source: Claude Design project 8cc4e3fe-5189-436d-aaba-6eb2320f14c6 (standalone Claude Design closes 14 Dec 2026). Re-import when it changes.
