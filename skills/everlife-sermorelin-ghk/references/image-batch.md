@@ -75,8 +75,9 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    (`core/references/meta-refs/<framework folder>/`, if any); else a Pinterest ref: this skill's `references/pinterest/<framework folder>/`
    first (read its `SOURCES.md` row: what to take, what not to copy), then `core/references/static-refs/<framework folder>/`. Rule: `core/references/REFERENCE-PRIORITY.md`. Follow the card's "Don't copy" list. Write concept
    (1 line), headline (Tier A by default, see §0 ⚠ pending), ≤ 3 supporting lines (approved claims, exact), prompt. Show
-   ONE table: # · source (winner ID / Meta / Pinterest file) · framework · territory · headline · tier (A / B PROPOSED) ·
-   supporting lines · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest").
+   ONE table: # · source (winner ID / Meta / Pinterest file) · framework · **scene · light · composition** · territory ·
+   headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest")
+   and a variety line under it ("scenes 5/5 different · 2 bright · 0 repeats"). Fill it from §2c before writing prompts.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
    its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
@@ -106,6 +107,24 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    (the verbatim disclaimer comes from product.json).
 6. Save to `~/Everlife-Creative/output/Sermorelin-GHK/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
    open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
+
+## 2c. Variety plan: no two ads may read as the same picture (Priestley, 2026-10-29)
+Fonts and colours alone don't make a batch varied (batch 9: five dark-gym ads with the same "name on top, hand left,
+bottle right" picture). Before writing prompts, give every ad its own row in each rotation; no value twice in one batch:
+- **Scene:** gym / outdoor (sunrise trail, track, beach, park) / home (kitchen counter, morning coffee, bathroom shelf) /
+  clean studio product shot (seamless backdrop, plinth) / pharmacy or doctor trust cue (bible: pharmacy framing for 45+) /
+  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch**; the "rugged, hardcore
+  training" direction is about the MAN (casting), not the setting: he can be on a trail or in a kitchen.
+  Women: studio / home / outdoor / article page / pharmacy; not two linen-and-stone still lifes.
+- **Light:** at least 2 of every 5 ads bright (daylight, white or pale studio, sunrise); the rest moody, golden hour,
+  overcast soft. Never 4 dark ads.
+- **Composition:** person-led photo / macro product close-up (tablet fills the frame, bottle behind) / text-led article or
+  letter / split screen / still life on a surface / product held toward the lens. At most 2 "hand + bottle side by side".
+- **Name placement:** "SERMORELIN GHK" top, lower third, beside the product, on a band, or as part of the headline:
+  not the same spot twice in a row.
+- **Winners give layout and structure only.** Their scene, haze and colour are NOT copied (all men's winners are dark
+  gyms); pick the scene from the rotation above.
+- **After generating,** look at the contact sheet: two ads that read as the same picture → re-roll one before showing.
 
 ## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
 Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
@@ -173,7 +192,7 @@ badges, prices, website, disclaimer):
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
-<MEN: palette warm stone, charcoal, sand, brass; any person a man 42–50, a fit silver fox with a hardcore fitness-model
+<MEN: scene and light from this ad's row in §2c (not always a dark gym); any person a man 42–50, a fit silver fox with a hardcore fitness-model
 physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training
 tee or long sleeve, no bare torso, no flexing poses.>
 <WOMEN: lead colour <this ad's own lead per §2b (Justin): preferred pinks / tans / neutrals / warm tones / white / teal (soft

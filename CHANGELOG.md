@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: per-batch variety plan (scene, light, composition, name placement), men + women
+Logged before editing. Batch 9 (men) came out as five near-identical dark-gym ads ("is it always using the same theme?").
+Root causes: the variety rules covered font, accent, ad type, headline and hold but not scene / light / composition;
+winners-first carried the winners' dark-gym mood along with their layout; the men's "hardcore training" direction (meant for
+casting) was applied to every scene; the 9:16 safe-zone layout + "name big" + "tablet held" settled into one composition;
+all prompts written from one template in one pass. Approved by Priestley for men and women.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md`: new §2c "Variety plan" (scene, light, composition, name
+  placement rotations; distinct per ad; men max 2 gym scenes; at least 2 of 5 bright; winners give layout only; the men's
+  direction is casting, not scenery); the approval table gains scene · light · composition columns; the men's scene line
+  in the template no longer fixes a dark palette; contact-sheet check after generation.
+- `references/lessons.md`: the root cause.
+Originals in `_originals/2026-10-29/variety-plan/`.
+
 ## 2026-10-29 — Sermorelin GHK 9:16: 2-line bottom disclaimer; pictures use more of the frame (team feedback)
 Logged before editing. Feedback on the latest image with the bottom disclaimer: "always keep that disclaimer to 2 lines
 total (not 3)" and "use as much of the artboard as possible around the safe zones".

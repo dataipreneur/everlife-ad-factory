@@ -171,3 +171,8 @@ Compliance traps:
   the end card); trim pauses inside cloned takes (atrim + concat); put the clip's own room tone under a held end card.
 - The model can give the actor a second bottle in face shots: check every frame; cut before it.
 - Opener product shots still come out framed low (label under the footer for 1–4 s) despite "top half" in the prompt.
+
+## Batch 9 looked like one ad five times (2026-10-29)
+- Variety rules covered font / colour / ad type / headline / hold, but not scene, light or composition, so those defaulted
+  to "dark gym, name on top, hand left, bottle right". Winners-first also copied the winners' dark-gym mood, and the men's
+  "hardcore training" direction was applied to every scene instead of to the casting. Fix: §2c variety plan (image-batch.md).
