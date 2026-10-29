@@ -111,6 +111,13 @@ def captions():
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
 import safezones as sz  # noqa: E402
 
+# bible v3 §04: the disclaimer stays on at most 2 lines, never under 13 px
+_d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+for _s in range(21, 12, -1):
+    DISC = bl.font(bl.AV, _s, "Medium")
+    if len(bl.wrap(_d0, C["disclaimer"], DISC, sz.FOOT_W)) <= 2:
+        break
+
 SX0, SY0, SX1, SY1 = sz.SAFE
 SAFE_W = sz.SAFE_W
 BLOCK_BOTTOM = sz.FOOTER_BOTTOM          # proof row + disclaimer end (bottom of frame by default; see safezones.PROOF_AT)
@@ -143,10 +150,10 @@ def block_layout():
 def top_layer():
     img = bl.canvas()
     bl.gradient_band(img, 0, 520, 190, 0)
-    bl.logo(img, SY0 + 8, 280)
-    note(((W - 280) / 2, SY0 + 8, (W + 280) / 2, SY0 + 48), "logo")
+    bl.logo(img, SY0 + 8, 432)   # bible v3 §03: 40% of the width
+    note(((W - 432) / 2, SY0 + 8, (W + 432) / 2, SY0 + 70), "logo")
     d = ImageDraw.Draw(img)
-    y = 210
+    y = 238
     for ln in C["head"]:
         f = fit(ln, bl.AV_COND, 66, "Heavy Italic", SAFE_W)
         bl.centered(d, y, ln, f, bl.GOLD)
@@ -226,7 +233,7 @@ def ingredient_end_layers():
     ImageDraw.Draw(glow).ellipse([200, 300, 880, 720], fill=bl.TEAL + (120,))
     base.alpha_composite(glow.filter(ImageFilter.GaussianBlur(110)))
     d = ImageDraw.Draw(base)
-    bl.logo(base, SY0 + 8, 260)
+    bl.logo(base, SY0 + 8, 432)
     y = 205
     for ln in C["end_head"]:
         f = fit(ln, bl.AV_COND, 70, "Heavy Italic", SAFE_W)
@@ -303,6 +310,8 @@ else:
 # keep the headline off faces: hide it while a head would sit under it (heads tracked with OpenCV)
 top_segments = [(0.0, a.end)]
 try:
+    if C.get("head_always"):   # product asks for the logo + header on screen the whole time (Sermorelin GHK, 2026-10-29)
+        raise ImportError("head_always")
     import faces
     import numpy as np
     _al = np.asarray(Image.open(f"{L}/top.png").split()[-1])
@@ -321,8 +330,9 @@ try:
             top_segments = [(round(x, 2), round(y, 2)) for x, y in nxt if y - x > 0.3]
         if _blocked:
             print("headline hidden over faces:", _blocked)
-except ImportError:
-    print("NOTE: faces.py/opencv missing; headline not face-checked")
+except ImportError as _e:
+    print("headline kept on the whole time (head_always)" if str(_e) == "head_always"
+          else "NOTE: faces.py/opencv missing; headline not face-checked")
 layers = [("top.png", s_, e_) for s_, e_ in top_segments] + cap_layers
 burst = None
 if a.reviews:

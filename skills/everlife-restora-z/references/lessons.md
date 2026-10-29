@@ -54,3 +54,10 @@ Compliance traps:
 - A video costs 45–75 Higgsfield credits (= 45–75 Creatify images). Be precise: review the script AND the full prompt in depth, line by line, until satisfied, then review again, before offering "Approve & generate". Never send a first draft to the video model.
 - Realistic humans talking/acting → Marketing Studio UGC (75 cr / 15 s, 720p). It is much better than the normal video model; Seedance humans were rejected. Seedance only for comedic, stylised or animated ideas.
 - Prove the angle with a 1-credit static before spending on a video of it.
+
+## Creative lead, 2026-10-28: logo at the top, and stop repeating the same type
+- **The Everlife logo sits at the TOP of every static**, never in the footer. `finish_batch.py` now lays it in the top
+  safe band and nudges the image down if the generation left no headroom; the prompt asks for a calm top 12% (10% feed).
+- **Fonts and colours must change from ad to ad.** The batch kept coming back as the same serif with the same purple
+  accent on white: "they don't need to be always the same". Use `image-batch.md` §2b: a different pairing and a
+  different accent for every ad, the type specimen only when the house look is asked for.

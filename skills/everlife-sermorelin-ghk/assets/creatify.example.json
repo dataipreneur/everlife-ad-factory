@@ -1,0 +1,8 @@
+{
+ "project_id": null,
+ "bottle_500": null,
+ "bottle_1000": null,
+ "tablet": null,
+ "type_specimen": null,
+ "note": "Template. Each person keeps their OWN assets/creatify.json (not in git: a Creatify project belongs to one account). If assets/creatify.json is missing, copy this file to it, then: composer_project_create(aspect_ratio='1:1', resolution='1080p'); upload + composer_import_asset for assets/sghk500_bottle.png, assets/sghk_tablet.png and assets/type_specimen.png (and assets/sghk1000_bottle_ref.jpg for 1000 jobs); write the project_id and the returned assets/<hash>_... paths here. Pass aspect_ratio per job."
+}

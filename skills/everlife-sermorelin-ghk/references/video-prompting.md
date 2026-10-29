@@ -9,16 +9,41 @@ growth hormone support) or **Women 35–60** (tone, strength, skin glow), set in
 shirtless casting or claims.
 
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
-1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (a barbell dropped back on the rack in slow-mo, a
-   55-year-old beating his son up a hill, a woman catching her reflection in a sunlit shop window and smiling). Never open on a logo.
+**Standard length: 15 s, as Restora-Z** (Priestley, 2026-10-29). The bible sets no length; the hard timing points are a visual
+hook by 1–3 s and product + benefit identifiable by 2 s (creative gates §3, §5). Unlike Restora's 12.8–15 s end card, ours
+starts at **11 s** so it stays up 4 s (Restora feedback: benefits must be readable for 50+). **8 s** (40 credits, winner M5)
+is the cheaper option for a simple hook + product idea only; it needs the hold-last-frame trick (`finishing.md`).
+**Team feedback on "Track" + bible v3 (2026-10-29), these override anything below:** talking starts in the FIRST second
+(no silent openings; Emily: "start talking way sooner"); the hook lands within **2.5 s** (bible v3, Jeremy's one-pager);
+**"SERMORELIN GHK BY EVERLIFE" is on screen with the logo from frame 1 to the end card** (copy.json header with `"head_always": true`, finishing.md §1a); the first spoken line or the header
+says **"Sermorelin GHK by Everlife"** (bible v3: "[Product] by Everlife" in every intro). Plan the product line over the
+hands-only shot so a mispronunciation can be re-voiced (lessons.md).
+1. **Hook, 0–2.5 s:** a visual pattern interrupt WITH the first words already spoken (a barbell dropped back on the rack, a
+   hard set finished as he turns to camera mid-sentence, a woman catching her reflection and smiling as she speaks). Never
+   open on a logo. The product name is on screen from frame 1 (header) and the benefit is clear by 2.5 s.
 2. **Authority + emotion, 2–5 s:** ONE approved territory, shown more than said (pronoun-free: "Lost a step?"). Avoid the bible's Weak lines, e.g. "Not bouncing back like you used to?".
-3. **Visual element / reveal, 5–9 s:** the real tablet (hero, macro) and the bottle, label to camera.
-4. **Structure / connection, 9–12.5 s:** one bible line: an ingredient claim on its own ingredient, "3-in-1 peptide
+3. **Visual element / reveal, 5–8.5 s:** the real tablet (hero, macro) and the bottle, label to camera.
+4. **Structure / connection, 8.5–11 s:** one bible line: an ingredient claim on its own ingredient, "3-in-1 peptide
    support", "Doctor prescribed", "Easy sublingual delivery", "Ships free from the pharmacy".
-5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear, specific CTA. Spoken lines finish by ~12 s.
+5. **Payoff, 11–15 s:** the end card (added in finishing, `--end 11`): benefits + a clear, specific CTA. Spoken lines
+   finish by ~10.5 s: speech runs ≈ 0.5–10.5 s, so **≤ 20 spoken words** (8 s clip: ≤ 12).
 
-Spoken budget: **≤ 35 words**. Say "growth hormone", never "GH". Spoken product name at most twice: write it
-"ser-mo-REL-in G-H-K" for TTS/model voices.
+**Timing (Restora feedback + our first video, 2026-10-28):** Marketing Studio fills the WHOLE clip with speech at ~2 words
+per second, so budget ≈ 2 words per second of speaking time and write "finished speaking by <t> s". The end card stays on
+screen **at least 4 s** (benefits must be readable for 50+): for a short clip, hold the last frame (see `finishing.md`).
+**Shots:** at most 3 shots per 8 s, each at least 2 s; never several mini-scenes in one prompt (they come out split-second
+and rushed). Seedance VO uses the same ≤ 18-word budget (the old ≤ 35 ran under the end card). Say "growth hormone", never "GH". Spoken product name at most twice: write it
+"ser-mo-REL-in G-H-K" for TTS/model voices. At most 2 hard names per spoken line (Sermorelin, Citrulline, IGF-1), write
+"3-in-1" as "three-in-one", and LISTEN to every take (our first takes came out "Sermoregin" and "three in a one").
+
+## The product line is always voiced in edit (planned step, 2026-10-29)
+Marketing Studio mispronounced the drug names in every take ("Surmergene", "Cermalacup", "GKKH", "subliberal") and puts
+lines where it likes. So every script is built for one fixed edit step (`finishing.md` §1b, ≈0.9 Higgsfield credits):
+- **On camera, only easy words:** the hook and lines like "Doctor prescribed, direct from the pharmacy."
+- **The product-name line** ("Sermorelin GHK by Everlife…", ingredient claims) is written for the **hands-only shot** and is
+  always re-voiced afterwards in the actor's cloned voice, whatever the take sounds like.
+- **Hard words stay on screen, not spoken:** "sublingual", "Citrulline", "IGF-1".
+- Keep at least one clean on-camera line of 1.5 s+ (the clone needs the actor's own voice as its reference).
 
 ## Copy rules
 - Headlines, benefits, ingredient claims, CTAs: only `product-bible.md` (audience page; ✅ lines; ⚠ only with the user's OK).
@@ -26,7 +51,10 @@ Spoken budget: **≤ 35 words**. Say "growth hormone", never "GH". Spoken produc
   product gives you muscle".
 - No "I"/"my", no testimonials, no "Are you…?" (pronoun-free questions OK). No disease words, no "clinically" for the
   product, no guarantees, no "all natural", no $ prices ("Save up to 47%" is the only offer).
-- **Men:** gym, trail, court, workshop, early-morning training; never the bedroom; never shirtless; fit, mature, not bodybuilders.
+- **Men:** a real gym or hard training (weights, sled, rower, boxing bag), early-morning light; never the bedroom; never
+  shirtless. **Talent (team + Jeremy, 2026-10-29):** 40s–50s "fit silver fox", hardcore fitness-model build (visibly
+  muscular, lean, athletic; tattoos optional), rugged and unmistakably masculine, "men look at him and want to look like
+  him"; fully clothed in a fitted training tee or long sleeve; no bare torso, no flexing or body-focus poses.
 - **Women:** strength + glow (pilates, hiking, morning skincare light); pinks, tans, beige; no oranges or greens.
 - No needles, syringes, vials or injection pens anywhere in frame.
 - Check the copy log; every header, line, end-card headline and CTA must be new.
@@ -37,7 +65,11 @@ Spoken budget: **≤ 35 words**. Say "growth hormone", never "GH". Spoken produc
 2. **PRODUCT:** "Use the attached tablet reference exactly and the attached bottle reference exactly; do not invent, alter,
    or substitute a different pill or bottle. Label readable, never mirrored; exactly one tablet." Never describe the tablet
    in words.
-3. **CAST:** age, build ("fit, natural build, not a bodybuilder"), wardrobe (clothed, training or casual), energy. Same people throughout.
+3. **CAST:** age, build, wardrobe (clothed, training or casual), energy. Same people throughout. Always add "fresh,
+   healthy, well-rested look, glowing skin, bright eyes" (models come out older and tired: "Track" asked 48–55 and looked
+   58–60). **Men:** "age 42–50, a fit silver fox with a hardcore fitness-model physique: visibly muscular shoulders, arms
+   and chest, lean and athletic (tattoos optional), rugged and confident; fully clothed in a fitted training t-shirt or
+   long sleeve; no bare torso, no flexing poses". **Women:** "age 45–52, natural fit build". Real and candid, never airbrushed.
 4. **Timed beats** with camera moves.
 5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.

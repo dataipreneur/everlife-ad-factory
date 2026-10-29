@@ -96,6 +96,210 @@ originals in `_originals/2026-10-29/skills/everlife-sermorelin/`. No GHK claims,
 - Needs PR #4 merged into `main` (then `main` into this branch) for `head_always`, the bible-v3 logo size and the 2-line
   disclaimer; until then this branch's finishers ignore `head_always` and keep the old logo/disclaimer.
 
+## 2026-10-29 — `main` (with PR #4) merged into `sermorelin`
+PR #4 merged into `main` (ec0f334, Priestley's go-ahead), then `main` into this branch. Our versions backed up in
+`_originals/2026-10-29/` (`core/tools/styles.py`, `core/references/REFERENCE-PRIORITY.md`, `CHANGELOG.md`). Conflicts:
+- `core/tools/styles.py`: kept both: our `pill_scale` (round tablet smaller on the end card) and main's cap that keeps a
+  tall tablet off the label line.
+- `core/references/REFERENCE-PRIORITY.md`: main's version (adds "winners lead the batch"), plus plain Sermorelin in
+  "Wired into" and its 58 same-category Pinterest ads.
+- `CHANGELOG.md`: every entry from both sides kept.
+Now live here: `head_always`, bible-v3 logo size (31% / 40%), 2-line disclaimer, logo at the top of statics.
+
+## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
+Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
+copy log. Priestley approved reuse: bible headlines / CTAs may come back, least-recently-used first; never twice in one
+batch; never the same headline with the same layout (framework) it had before. Variety comes from layout, casting, colour.
+- `skills/everlife-sermorelin-ghk/SKILL.md` golden rule 6 and `references/image-batch.md` §0 updated.
+Originals in `_originals/2026-10-29/copy-reuse/`.
+
+## 2026-10-29 — Video header + logo stay on screen the whole time (opt-in; Sermorelin GHK on) (branch `sermorelin-first-batch`)
+Logged before editing. Feedback on the men's "Gym" video, relayed by Priestley for men and women: "I would keep
+['Sermorelin GHK by Everlife'] up at the top with the logo the whole time." The finisher hid the whole top band (logo +
+header) whenever a face moved under it.
+- `core/tools/full_layout.py`: new copy.json key `"head_always": true` skips the face check, so the top band (logo + header)
+  stays on from 0 s to the end card. Default unchanged (Restora-Z output is not affected).
+- `skills/everlife-sermorelin-ghk/references/finishing.md` + `video-prompting.md`: every Sermorelin GHK video sets
+  `"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true`; prompts keep faces below the top 25% so the header
+  never covers a face.
+Originals in `_originals/2026-10-29/head-always/`.
+
+## 2026-10-29 — Sermorelin GHK: Justin's women's colour & typography direction (branch `sermorelin-first-batch`)
+Logged before editing. Justin (owns Sermorelin GHK marketing), relayed by Priestley: pinks, tans, neutrals and warm tones
+"still strongly encouraged"; "incorporate more white and teal", "particularly white backgrounds for advertorial-style
+ads"; "preferred options, not strict limitations"; keep exploring current colour and typography trends.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` (§2b, template, QA): no colour banned for women; preferred
+  colours (pinks, tans, neutrals, warm tones, white, teal) lead most ads; up to 2 of every 5 women's ads explore new colour
+  and type trends; article/advertorial ads on a white background; at least one teal-led or teal-accent ad per women's
+  batch; keep teal soft/pale next to the bottle's deep red label; still at most one pink-led ad, no two ads with the same
+  lead colour, varied fonts.
+- `references/lessons.md`: direction recorded.
+Originals in `_originals/2026-10-29/justin-colours/`.
+
+## 2026-10-29 — Shared finishing tools: bible v3 logo size + 2-line disclaimer (branch `sermorelin-first-batch`)
+Logged before editing. Bible v3 "Creative direction guidelines" (§03 logo sizing, §04 disclaimers). Approved by Priestley
+after before/after images (statics MA/WB/ME, video Track); **this changes Restora-Z's output too** (bigger logo, 2-line
+disclaimer); tell Mitansh. Restora's skill files are untouched.
+- `core/tools/finish_batch.py`: logo width 31% (4:5, 1:1) / 40% (9:16) of the canvas (was a fixed 200 px ≈ 18%); disclaimer
+  auto-fits to at most 2 lines (font 21 px down to the 13 px minimum, line width W-56).
+- `core/tools/full_layout.py`, `core/tools/styles.py`: video logo 432 px (40% of 1080) in all looks (was 210–280); the
+  opening header moves down 28 px to clear the taller logo; the disclaimer auto-fits to at most 2 lines (min 13 px).
+- `skills/everlife-sermorelin-ghk/references/image-batch.md`: the prompt's calm top band 11% → 14% for the bigger logo.
+- Installed toolkit (`~/Everlife-Creative/tools`) synced. Regression: expected differences in every finished picture
+  (logo/disclaimer); smoke test must pass.
+Originals in `_originals/2026-10-29/v3-logo-disclaimer/`.
+
+## 2026-10-29 — Align with bible v3: women's palette, skill bible header, global rules file (branch `sermorelin-first-batch`)
+Logged before editing. Approved by Priestley:
+- `skills/everlife-sermorelin-ghk/references/image-batch.md`: v3 dropped "Women's creative: pinks, tans and beige. No
+  oranges or greens." from the general standards (kept only on GHK-Cu Cream and Glow Stack) → no palette limit for
+  Sermorelin GHK women; keep rotating the lead colour (at most one pink-led ad per batch).
+- `skills/everlife-sermorelin-ghk/references/product-bible.md`: header marks the copy as checked against v3 (29 Oct; the
+  Sermorelin GHK pages are identical); women's palette line in "Product facts" updated.
+- `~/.claude/CLAUDE.md` (Priestley's global rules, outside the repo; backup in `~/.claude/everlife/_originals/2026-10-29/`):
+  women's palette line → only GHK-Cu Cream / Glow Stack; known gaps: NAD+ page no longer missing; the "Parts B/C have no
+  disclaimer" lines → v3 has disclaimers on most pages, "Disclaimer pending" on 11 (stop and flag those).
+Pending: logo 40%/31% + 2-line disclaimer in the shared finisher (before/after to be shown first).
+
+## 2026-10-29 — Sermorelin GHK: the cloned-voice product line is a planned step in every video (branch `sermorelin-first-batch`)
+Logged before editing. Priestley: write it into the skill so anyone making a video follows the same path (no credits to
+write; ~0.9 Higgsfield credits per video to run). Every Marketing Studio take today mispronounced the drug names and put
+lines where it liked; re-generating (75 cr) doesn't fix that reliably.
+- `skills/everlife-sermorelin-ghk/references/video-prompting.md`: script rule: on camera only easy words (hook, "Doctor
+  prescribed…"); the product-name line is written for the hands-only shot and always voiced afterwards in the actor's
+  cloned voice; hard words ("sublingual", "Citrulline") on screen, not spoken.
+- `references/finishing.md`: new required §1b "Video check + product-line voice": transcribe + find cuts, clone the voice,
+  3 takes, pick, place inside the hands shot with the original MUTED, cut any mispronounced on-camera line, hold the last
+  frame for a 4 s end card, re-caption, re-check; exact commands included.
+Originals in `_originals/2026-10-29/voice-step/`.
+
+## 2026-10-29 — Sermorelin GHK: team feedback on the men's video + bible v3 creative direction (branch `sermorelin-first-batch`)
+Logged before editing. Team chat after the "Track" video (Emily, Sarah, Jeremy, Justin), approved by Priestley for the
+Sermorelin GHK skill ONLY (Restora, plain Sermorelin and the shared toolkit unchanged):
+- **Men only (casting):** 40s–50s "fit silver fox", hardcore fitness-model build (visibly muscular, lean, athletic;
+  tattoos optional), a serious gym-goer (bible v3: "rugged, strong and unmistakably masculine — a serious gym-goer with a
+  hardcore training feel"); Jeremy: "too old, not ripped enough… hardcore fitness model 40's to 50s". Priestley: fully
+  clothed in a fitted training tee or long sleeve; no bare torso, no flexing or body-focus poses.
+- **Men + women:** "SERMORELIN GHK" on screen from the first frame (Emily: "applies to every product"); speech starts in the
+  first second and the hook lands within 2.5 s (Emily "start talking way sooner", Jeremy's one-pager, bible v3);
+  "Sermorelin GHK by Everlife" in every intro: copy, scripts, voiceovers (bible v3); the tablet is held: thumb + index
+  "pull" or resting in an open palm, sharp in the foreground (bible v3).
+- Files: `SKILL.md` (product truths), `references/video-prompting.md` (timing, casting, header), `references/image-batch.md`
+  (name line, held tablet, men's casting), `references/finishing.md` (QA + copy.json header), `references/lessons.md`.
+- Safe zones (Justin): already enforced by the finishers with the bible's numbers; no change.
+Originals in `_originals/2026-10-29/team-feedback/`.
+
+## 2026-10-29 — Local creative bible re-imported from the master (v3, 48 pages) (outside the repo)
+Logged before editing. Priestley exported the master ("Creative Messaging.pdf", Claude Design project 8cc4e3fe…, file
+"Creative Messaging Reference.dc.html") and approved update 1 only: replace `~/.claude/everlife/creative-bible.md`
+(27 Oct import of Parts A/B/C) with the full v3 text. Old copy backed up to `~/.claude/everlife/_originals/2026-10-29/`.
+What v3 changes (reviewed with Priestley; NOT yet applied to any skill or tool):
+- Creative standards: "Women's creative: pinks, tans and beige. No oranges or greens." removed (palette now only on
+  GHK-Cu Cream and Glow Stack pages).
+- New "Creative direction guidelines" page: tablets held (thumb + index "pull" or open palm); "[Product] by Everlife" in
+  every intro; video hook within 2.5 s; logo 40% width (9:16) / 31% (4:5), 3.5% height; disclaimer at the bottom, 2 lines
+  max, 13 px min; mobile text minimum blank ("confirm w/ Justin"); 50% trust-focused / 50% minimalist trust callouts
+  (conflicts with the global "every ad carries visible social proof").
+- New "Safe zones" page (matches the toolkit). Sermorelin GHK: Justin's update now in the master; new men's direction
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel."
+- New product pages (Wolverine, Klow, GHK-Cu/Epithalon, Glow Stack, NAD+); plain Sermorelin adds "Double Strength
+  Sermorelin" lines; Restora-Z page changed (Restora skill untouched; for Mitansh).
+Skill and toolkit updates (items 2–4) were offered and not approved yet.
+
+## 2026-10-29 — Sermorelin GHK lesson: mute (don't duck) the original voice under a re-voiced line (branch `sermorelin-first-batch`)
+Logged before editing. Priestley heard "two voices" in the Pilates video: the original (mispronounced) line was only
+turned down to 5% under the cloned-voice line. Fixed in Pilates and Kettlebell v2 (volume 0 for that window).
+- `skills/everlife-sermorelin-ghk/references/lessons.md`: the re-voice lesson now says mute, plus the batch-5 video lessons
+  (Marketing Studio ignores "say this over the hands shot"; re-cut instead; Pilates take 1 failed on orange/green outside).
+Originals in `_originals/2026-10-29/revoice-mute/`.
+
+## 2026-10-29 — Sermorelin GHK: no elegant / italic serif headlines on men's ads (branch `sermorelin-first-batch`)
+Logged before editing. Reviewer on batch 4 M3 ("The Edge You've Been Missing": elegant high-contrast serif with a gold
+italic word): "men shouldn't use that font IMO". The bible has no font rule; this is review feedback relayed by Priestley.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` §2b: a men's rule under the font menu: no elegant
+  high-contrast serif, no serif-with-italic-word, no brush/handwritten accent for men's headlines; men pick from heavy
+  condensed grotesque (the winners' look), wide extended sans, slab serif, or bold sans; product name big in type.
+- `references/lessons.md`: the open question replaced by this decision.
+Originals in `_originals/2026-10-29/men-font/`.
+
+## 2026-10-29 — Sermorelin GHK: women's colours opened up within the bible (branch `sermorelin-first-batch`)
+Logged before editing. Reviewer feedback on batch 4: "Pink is great for most women, but everything pink like that looks
+the same." Priestley: "open up colors". The bible says "Women's creative: pinks, tans and beige. No oranges or greens."
+(Creative & page standards); it never says pink must lead, and batch 4 made pink the main colour in 4 of 5 ads.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` §2b, §3 template, QA: women's lead colour rotates through
+  tan, camel, sand, beige, cream, taupe, mocha, burgundy, rose, blush; **at most one pink-led ad per batch**; no two
+  women's ads share a lead colour; pink can be an accent anywhere. Still no orange, no green (bible).
+- `references/lessons.md`: feedback recorded.
+Men's font: no change (the bible has no font rule; noted in lessons for the creative lead).
+Originals in `_originals/2026-10-29/women-colours/`.
+
+## 2026-10-29 — Sermorelin GHK: image prompts aim the product higher (lesson from batch 4) (branch `sermorelin-first-batch`)
+Logged before editing. Batch 4 (10 statics): 6 of the 7 prompts with "bottom 18% calm / product between 45% and 78%"
+came back with the product or text under the footer (6 reposition edits); the 3 prompts with "bottom 22% calm / product
+ends above 70–72%" came back clear first time.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` §3 template: bottom band 18% → 22%, top band 10% → 11%, and
+  an explicit "the whole product ends above 72% / all text above 76%" line.
+- `references/lessons.md`: batch-4 lessons.
+Originals in `_originals/2026-10-29/batch4-layout/`.
+
+## 2026-10-29 — Sermorelin GHK: Justin's approved Creative Messaging Reference added to the skill's bible (branch `sermorelin-first-batch`)
+Logged BEFORE the edit (Priestley: "Make sure you log this change before making any"). Source: `Sermorelin-GHK-Creative-Messaging-Reference.docx`
+(Downloads, 2026-10-29), approved per Priestley; Justin Junior owns marketing for this product. Copy of the doc + the old
+`product-bible.md` in `_originals/2026-10-29/justin-messaging-doc/`.
+Planned change, `skills/everlife-sermorelin-ghk/references/product-bible.md` only:
+- New top section "APPROVED UPDATE (Justin, 2026-10-29)", verbatim from the doc; it wins over the older bible copy where they differ.
+- New usable lines: quick-hits "Supports Natural Growth Hormone Production" (both), "Supports Workout Pumps + Endurance",
+  "Supports Exercise Recovery" (men), "One Daily Tablet for Muscle, Skin + Hair", "Supports Firmer, Glowing Skin From Within"
+  (women); Sermorelin "Supports natural growth hormone production"; GHK "…youthful-looking skin and fuller hair".
+- Removed by the doc: Sermorelin "A growth hormone–releasing hormone analog", "A safer long-term alternative to synthetic HGH";
+  GHK "Reduces inflammation, oxidative stress, and signs of aging" (Justin: high risk).
+- Justin's Hard NOs added: "No direct claims"; say "exercise recovery", never "muscle recovery".
+- Pre-screen: the two high-risk lines become ❌ per Justin, plus "muscle recovery" and direct claims; the other lines that
+  collide with GLOBAL Hard NOs keep their status (❌ fat loss, DNA repair; ⚠ wound healing/hair regrowth, accelerate,
+  "lean, defined physique"); women's hair claims stay ⚠ (open question for Justin/Jeremy).
+- The global creative bible (`~/.claude/everlife/creative-bible.md`) is NOT changed: it needs re-importing from its source
+  when the bible owner adds Justin's lines.
+
+## 2026-10-29 — Sermorelin GHK: lessons from the first 15 s men's video (branch `sermorelin-first-batch`)
+- `skills/everlife-sermorelin-ghk/references/finishing.md`: the house look's style key is "default" ("house" crashes);
+  use `tiktok` + `end_rows: benefits` until the shared end card stops cutting long ingredient claims.
+- `references/lessons.md`: "Kettlebell" lessons (speech ran to 12.4 s, mispronounced name, tablet hid the label) and the
+  0.3-credit re-voice fix (cloned voice over the hands-only shot).
+Originals in `_originals/2026-10-29/kettlebell/`.
+
+## 2026-10-29 — Sermorelin GHK: video timing follows Restora-Z's 15 s, with a 4 s end card (branch `sermorelin-first-batch`)
+The bible sets no video length; Restora-Z uses 15 s for every video. Priestley: "lets work according to it".
+- `skills/everlife-sermorelin-ghk/references/video-prompting.md`: 15 s standard with its sources; beats 0–2 hook (product or
+  benefit clear by 2 s), 2–5, 5–8.5 reveal, 8.5–11 proof, 11–15 end card (Restora's is 12.8–15; ours keeps the 4 s minimum
+  from the Restora feedback); speech ≤ 18 words, done by ~10.5 s; 8 s kept as the cheap option for simple ideas.
+- `finishing.md`: `--end 11`, QA "last spoken line before ~10.5 s". `styles/1-real-people.md`, `styles/6-lifestyle-identity.md`,
+  `styles/3-cinematic-big-idea.md`: beats and narration end moved to match. `lessons.md`: lesson added.
+Restora-Z unchanged. Originals in `_originals/2026-10-29/video-timing/`.
+
+## 2026-10-29 — Sermorelin GHK: winners lead every image batch (branch `sermorelin-first-batch`)
+Priestley: "priority is winners". The women's batches built only 1 of 5 ads on a winner because the batch step picked a
+framework first and then looked for a matching winner.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` step 2: pick winners first; at least 3 of every 5 slots start
+  from a winner for that audience (per audience for "Both"); remaining slots may use Meta / Pinterest. The approval table
+  gains a source column and a count line ("3 winners · 2 Pinterest").
+- `core/references/REFERENCE-PRIORITY.md`: the same rule, noted as Sermorelin GHK's (Restora-Z unchanged).
+- `skills/everlife-sermorelin-ghk/references/lessons.md`: lesson added.
+Originals in `_originals/2026-10-29/winners-first/`.
+
+## 2026-10-28 — Creative lead: Everlife logo at the TOP of statics; vary type and colour per ad (branch `logo-top-type-variety`)
+Two rules from Mitansh after the first Sermorelin GHK batch, applied to every product skill:
+- `core/tools/finish_batch.py`: the logo moved out of the footer to the top safe band (9:16 y=150, feed y=60/56; 200 px wide,
+  ink on light scenes, cream on dark, soft top fade). If the generation left too little headroom above its first text/edge
+  the image is nudged down (max 140 px; the calm bottom under the footer absorbs it); `--shift auto|<px>`. The footer keeps
+  the proof art row + verbatim disclaimer. Regression vs main: only the 3 `batch.png` fixtures differ (expected); smoke 12/12.
+- `skills/*/references/image-batch.md`: new §2b "Type & colour: be different every time" (a menu of 8 headline pairings and
+  accent colours, product palettes still win; never two alike in a batch; placement and light vary too). The prompt's
+  TYPOGRAPHY block is now per-ad; the type specimen is no longer attached by default (house look only). LAYOUT asks for a
+  calm top 12% (9:16) / 10% (feed) for the logo.
+- `skills/*/references/lessons.md`: both rules recorded as creative-lead lessons (2026-10-28).
+- `skills/everlife-sermorelin-ghk/assets/creatify.json`: the Creatify project created on Mitansh's account for batch 1.
+Video looks (`styles.py` house / tiktok / editorial) and `finish_modern.py` already carry the logo at the top; unchanged.
+
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
 Diffed against the unzipped original (`~/Downloads/everlife-restora-z.zip`, 27 Oct 21:51); everything else was identical.
@@ -223,3 +427,89 @@ request into `product-config` for Priestley to review.
 - `HANDOFF-MITANSH.md`: repo path note (Mitansh's clone is `~/Desktop/everlife-ad-factory`); step 5 says where he starts.
 - Checked on the merged branch: vs `restora-known-good` 123/124 identical, vs Mitansh's tools (3be3a588e802) 123/124
   identical (the one intended "Restora-Z" casing change in both), smoke 12/12.
+
+## 2026-10-28 — Sermorelin GHK: 500 bottle renders added; 500 is the default bottle (branch `sermorelin-first-batch`)
+- Added `assets/sghk500_bottle.png` (transparent, 864×1891, from "SERMORELINGHK NOBG 2.webp") and `assets/sghk500_bottle_ref.jpg`
+  (500 on white, 584×1280). Labels checked: SERMORELIN GHK · 30 TABLETS · 500 MCG, same render as the site.
+- product.json `renders.bottle` and product.env `BOTTLE`/`RENDERS` now default to the 500 bottle (the only transparent bottle
+  on file; also the site's default strength). 1000 jobs set `"bottle"` per strength; 1000 videos still need `sghk1000_bottle.png`.
+- Registered "Sermorelin GHK" in Higgsfield Marketing Studio (Everlife workspace) with the 500 bottle + tablet:
+  product id a5b49393-165a-4230-8082-aaae6ba20ed3 (stored locally in product_ids.json, not in git). Preflight 10/10.
+- The "1000 on white" JPG received at 16:26 is the same picture as the existing 1000 reference; not added.
+
+## 2026-10-28 — Offer: the creative bible wins over landing pages
+Priestley's decision: ads use only the bible's offer ("Save up to 47%"). Corrected the same day: the men's page shows 52%
+for the GHK tablets (and "Get 47% Off Now!" on its button); 59% is the plain Sermorelin injection sold on the same page;
+the women's page shows 47% for the tablets.
+Recorded in the Sermorelin GHK bible page's facts section (not the verbatim extract), with the two current landing-page links
+(men m-fb-v9, women f-fb-v10) for the session sheet.
+
+## 2026-10-28 — Reference priority rule (Sermorelin GHK only)
+- New `core/references/REFERENCE-PRIORITY.md`: pick reference ads in this order: 1 our winners → 2 Meta Ad Library →
+  3 Pinterest (`static-refs`: 50 board-1 pins, 20 board-2 pins, 20 DOC). References set idea and layout only; words come from
+  the bible; the generator never sees references; record the level and file used per ad.
+- New `core/references/meta-refs/SOURCES.md` (empty log + how to add Meta Ad Library references).
+- Wired into Sermorelin GHK only (`SKILL.md` reading table, `image-batch.md` step 2). **Restora-Z unchanged** at Priestley's
+  request: its owner decides whether to adopt the rule.
+
+## 2026-10-28 — Sermorelin GHK Pinterest references (priority 3)
+- New `skills/everlife-sermorelin-ghk/references/pinterest/` (19 images, 1.5 MB, `SOURCES.md`): screened 661 pins from four
+  Pinterest idea pages (supplement advertising, supplement creative ads, us-vs-them ad examples, male ad); kept supplement /
+  wellness / skincare ads for the ad types our winners don't cover: Us vs Them, phone UI, question, reasons why, sticky note,
+  visual metaphor, features, brand mood, and a new 13_EXTRA_Identity_Age (men 50+ / active seniors). Dropped a GLP-1 fat-loss
+  ad and an art poster with a violent line. Each row: what to take (layout) and what not to copy.
+- Sermorelin GHK checks its own Pinterest folder before the shared sleep-heavy `static-refs`. Restora-Z unchanged.
+
+## 2026-10-28 — Merged main (#3 logo-top + type variety) into sermorelin-first-batch; Creatify note per person
+- Brought #3 (Mitansh: logo at the top of statics, varied type/colour) into this branch. Both sides kept in the Sermorelin GHK
+  `image-batch.md` and `lessons.md` (his §2b + logo band; our reference order, Pinterest folder, strength label wording).
+- `skills/everlife-sermorelin-ghk/assets/creatify.json` is no longer in git (a Creatify project belongs to one account: Mitansh
+  and Priestley each made one today). Each Mac keeps its own; new `creatify.example.json` explains how to create one.
+  SKILL.md setup row updated. Restora's creatify.json untouched.
+- Checks after the merge: vs new main 124/124 identical, smoke 12/12, both preflights 10/10, Restora 0 lines changed.
+  Today's 5 Sermorelin ads re-finished with the new finish_batch (logo top, shifts 38–53 px): all clean
+  (`~/Everlife-Creative/output/Sermorelin-GHK/2026-10-28_batch-1/refinish-logo-top/`).
+
+## 2026-10-28 — Sermorelin GHK: 1000 bottle cut-out (stand-in)
+- `skills/everlife-sermorelin-ghk/assets/sghk1000_bottle.png`: transparent 1000 bottle made locally from the user's "1000 on white"
+  JPG (white removed from the outer edge only; label untouched; 1 px edge trim to remove a JPEG fringe). Checked on dark, grey
+  and light backgrounds. Marked as a stand-in in MISSING_RENDERS.md until the official NOBG file arrives. 1000 videos unblocked.
+
+## 2026-10-28 — Sermorelin GHK lessons: video discipline
+Copied Mitansh's "Video discipline" lessons (creative lead, 2026-10-27) into the Sermorelin GHK `lessons.md`: review script and
+prompt twice before approval; Marketing Studio for real people; prove the angle with a 1-credit static first. Restora unchanged.
+
+## 2026-10-28 — Sermorelin GHK women's test batch (batch 2) lessons
+Added the batch-2 lessons to the Sermorelin GHK `lessons.md` (re-install the toolkit after tool changes; keep long claims out
+of the footer; tablet-only default; palette drift; lean headlines with a person → Jeremy). Restora unchanged.
+
+## 2026-10-28 — Sermorelin GHK: bottle in every image ad
+Priestley: include the bottle until the corrected render is confirmed. `image-batch.md` step 3 (always attach bottle + tablet;
+never drop the bottle to dodge the tan-tablet render), QA line (bottle in shot, name legible), template wording; the batch-2
+lesson corrected. Originals in `_originals/2026-10-28/bottle-rule/`. Restora unchanged.
+
+## 2026-10-28 — Sermorelin GHK: clean tablet render, preflight hidden-pixel warning, video lessons
+- `sghk_tablet.png`: transparent pixels' hidden RGB set to white (visible pixels verified identical). The hidden red/magenta
+  streaks showed in Higgsfield and caused wrong pills in the first video. Original in `_originals/2026-10-28/tablet-clean/`.
+- Marketing Studio: new "Sermorelin GHK" product dc55181a… with the clean tablet (old a5b49393… left in place; preflight picks the newest).
+- `core/scripts/preflight.sh` (shared): warns when a product PNG hides coloured/dark pixels under transparency. Warning only;
+  pass counts unchanged. It now warns on Restora's `rz_bottle.png` (46%): Restora files NOT changed; for Mitansh to decide.
+- Sermorelin GHK `lessons.md`: first video lessons.
+- `core/tools/styles.py` (shared, tiktok end card): a tall pill render is lifted so it can't cover the label; new opt-in
+  `"end_rows": "benefits"` shows the benefits instead of ingredient name + claim rows. Regression: 124/124 identical
+  (Restora unchanged). Sermorelin GHK `finishing.md` notes it, plus the hold-last-frame trick for short clips.
+
+## 2026-10-28 — Sermorelin GHK: Restora team feedback applied (skill only)
+From the "Claude Ad Factory (Restora-Z) Feedback" doc (Stephen, Berna, Michael), Sermorelin GHK skill only:
+SKILL.md step 2b preview stills before video credits; video-prompting.md timing (≈2 words/s, end card ≥ 4 s, ≤ 3 shots
+per 8 s, each ≥ 2 s), pronunciation (≤ 2 hard names per line, listen to every take), casting (fresh, well-rested, 48–55);
+image-batch.md per-ad product arrangement, no shared framework/accent in a batch, tablet ≥ 15% width and never orbs/icons,
+label follows the bottle's perspective, no split "Sermorelin"/"GHK", exactly 3 benefits, no model-drawn logos.
+Shared-toolkit items (fades, end-card spacing/variety, 9:16 header size, ghost voice-over) not touched. Restora unchanged.
+Originals in `_originals/2026-10-28/restora-feedback/`.
+
+## 2026-10-28 — Sermorelin GHK: themed Pinterest references
+Replaced the generic "supplement" Pinterest set with a themed one (like Restora's sleep refs): 25 new picks (795 pins
+screened, men 45+ vitality/strength/testosterone/longevity, women 40+ collagen/glow/strength, tablet-led heroes) + 7
+on-theme pins kept from the first set; 12 off-theme removed. SOURCES.md rewritten (take / don't copy / sources / gaps).
+SKILL.md and REFERENCE-PRIORITY.md counts updated. Old set in `_originals/2026-10-28/pinterest-old/`. Restora unchanged.

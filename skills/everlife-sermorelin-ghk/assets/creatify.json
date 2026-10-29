@@ -1,7 +1,0 @@
-{
- "project_id": null,
- "bottle": null,
- "tablet": null,
- "type_specimen": null,
- "note": "Not created yet: the real renders are missing (see MISSING_RENDERS.md). Once they're in assets/: composer_project_create(aspect_ratio='9:16', resolution='1080p'), upload + composer_import_asset for assets/sghk1000_bottle_ref.jpg (and the 500 bottle when it's added), assets/sghk_tablet.png and assets/type_specimen.png, then write the project_id and the returned assets/<hash>_… paths here. Reuse that project for every image. It belongs to the account that created it; if composer_project_get fails (e.g. a teammate's account), create a new one the same way and rewrite this file."
-}

@@ -1,6 +1,6 @@
 # Reference priority
 
-Rule agreed 2026-10-28 (Priestley, from the Restora-Z team). **Wired into: Sermorelin GHK only** (for now; Restora-Z is
+Rule agreed 2026-10-28 (Priestley, from the Restora-Z team). **Wired into: Sermorelin GHK and plain Sermorelin** (for now; Restora-Z is
 unchanged and adopts it only if its owner decides to). When you pick the idea and layout for an ad, look for a
 reference in this order and take the first one that fits the chosen ad type:
 
@@ -8,7 +8,11 @@ reference in this order and take the first one that fits the chosen ad type:
 |---|---|---|---|
 | **1** | **Our own performing winners** | `skills/<product>/references/winners/` (`winners.md` cards + previews, `winners.json`) | From the Winning Ads report (CPA-ranked). Prefer high-purchase winners; 3-purchase ones are ideas to test, not proof. A skill without a winners folder yet skips to 2. |
 | **2** | **Meta Ad Library** (other brands' ads currently running on Meta) | `core/references/meta-refs/` (shared) or `skills/<product>/references/meta-refs/` (product-specific) | Only "if they had something": use when the folder has an ad for this ad type. See "Adding Meta references" below. |
-| **3** | **Pinterest** | a skill's own `references/pinterest/` first (Sermorelin GHK: 19 supplement/wellness ads), then the shared `core/references/static-refs/` (12 ad-type folders, `OVERVIEW.jpg`) | 50 pins from board 1 (`pinNN`), 20 from board 2 (`b2pinNN`), 20 from a document (`DOC_NN`). Mostly sleep brands: they work for any tablet product, but take the **layout only**, never their theme, colours or words. |
+| **3** | **Pinterest** | a skill's own `references/pinterest/` first (Sermorelin GHK: 32 themed ads from its own category, the way Restora's are sleep ads; plain Sermorelin: 58 same-category ads), then the shared `core/references/static-refs/` (12 ad-type folders, `OVERVIEW.jpg`) | 50 pins from board 1 (`pinNN`), 20 from board 2 (`b2pinNN`), 20 from a document (`DOC_NN`). Mostly sleep brands: they work for any tablet product, but take the **layout only**, never their theme, colours or words. |
+
+**Winners lead the batch, not only the tie-break** (Priestley, 2026-10-29, Sermorelin GHK): pick the winners first and take
+their ad types; at least 3 of every 5 ads start from a winner for that audience. Only the remaining slots choose an ad type
+first and fall through to Meta / Pinterest. (Picking the ad type first let 4 of 5 women's ads in batch 2 fall to Pinterest.)
 
 The ad types are the same at every level (F1–F12 in each skill's `image-batch.md`), so one ad type can be matched in all three.
 
