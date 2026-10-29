@@ -43,6 +43,12 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
 - Follow-up (logged before editing): Priestley: keep Justin's women's colour direction for **Sermorelin and Sermorelin
   GHK**. The gates' palette line keeps Mitansh's wording for every other product and gains that exception (pinks,
   tans, neutrals, warm tones preferred; white and teal welcome, white for advertorials; preferences, not limits).
+- Follow-up (logged before editing): **zip distribution** (Priestley: the team may get a zipped folder instead of GitHub).
+  New `ONBOARDING-ZIP.md` (no GitHub account: unzip to ~/everlife-ad-factory, one pasted setup prompt, updates = a new
+  zip); `core/scripts/make_zip.sh` builds the zip from a git commit (`git archive`: no .git, no _originals, symlinks
+  kept; tested with Finder/ditto and unzip); `update.sh` works without git (zip installs: skips the pull, re-installs
+  and checks); `install.sh` re-creates a skill's `core` link if an unzip tool flattened it. README points to both.
+  Originals in `_originals/2026-10-29/onboarding-zip/`.
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,

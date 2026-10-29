@@ -16,6 +16,10 @@ mkdir -p "$DEST"
 for skill in "$REPO"/skills/*/; do
   name="$(basename "$skill")"
   target="$DEST/$name"
+  # a skill reaches the shared toolkit through skills/<name>/core -> ../../core; some unzip tools flatten that link
+  if [ ! -L "${skill}core" ] || [ ! -d "${skill}core/tools" ]; then
+    rm -rf "${skill}core" && ln -s ../../core "${skill}core" && echo "… repaired the core link in $name"
+  fi
   if [ -L "$target" ]; then
     rm "$target"
   elif [ -e "$target" ]; then

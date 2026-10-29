@@ -26,7 +26,9 @@ ONBOARDING.md                 Day-1 guide for non-technical teammates
 ```
 
 ## Setup (each person, once)
-Non-technical teammates: follow `ONBOARDING.md` (one pasted prompt; Claude Code does the steps). Already running the
+Non-technical teammates: follow `ONBOARDING.md` (GitHub route; one pasted prompt; Claude Code does the steps) or
+`ONBOARDING-ZIP.md` (no GitHub: we send a zip built with `bash core/scripts/make_zip.sh main ~/Desktop`; new versions
+are new zips). Already running the
 original Restora-Z package (zip)? Follow `HANDOFF-MITANSH.md` instead: it checks your version, backs it up, tests the new
 tools on your Mac before installing, and has a rollback.
 
