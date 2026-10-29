@@ -36,6 +36,15 @@ and rushed). Seedance VO uses the same ≤ 18-word budget (the old ≤ 35 ran un
 "ser-mo-REL-in G-H-K" for TTS/model voices. At most 2 hard names per spoken line (Sermorelin, Citrulline, IGF-1), write
 "3-in-1" as "three-in-one", and LISTEN to every take (our first takes came out "Sermoregin" and "three in a one").
 
+## The product line is always voiced in edit (planned step, 2026-10-29)
+Marketing Studio mispronounced the drug names in every take ("Surmergene", "Cermalacup", "GKKH", "subliberal") and puts
+lines where it likes. So every script is built for one fixed edit step (`finishing.md` §1b, ≈0.9 Higgsfield credits):
+- **On camera, only easy words:** the hook and lines like "Doctor prescribed, direct from the pharmacy."
+- **The product-name line** ("Sermorelin GHK by Everlife…", ingredient claims) is written for the **hands-only shot** and is
+  always re-voiced afterwards in the actor's cloned voice, whatever the take sounds like.
+- **Hard words stay on screen, not spoken:** "sublingual", "Citrulline", "IGF-1".
+- Keep at least one clean on-camera line of 1.5 s+ (the clone needs the actor's own voice as its reference).
+
 ## Copy rules
 - Headlines, benefits, ingredient claims, CTAs: only `product-bible.md` (audience page; ✅ lines; ⚠ only with the user's OK).
 - Mechanism first, then benefit: "Sermorelin stimulates natural growth hormone production" → downstream benefit. Never "this

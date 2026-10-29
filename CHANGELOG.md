@@ -2,6 +2,18 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: the cloned-voice product line is a planned step in every video (branch `sermorelin-first-batch`)
+Logged before editing. Priestley: write it into the skill so anyone making a video follows the same path (no credits to
+write; ~0.9 Higgsfield credits per video to run). Every Marketing Studio take today mispronounced the drug names and put
+lines where it liked; re-generating (75 cr) doesn't fix that reliably.
+- `skills/everlife-sermorelin-ghk/references/video-prompting.md`: script rule: on camera only easy words (hook, "Doctor
+  prescribed…"); the product-name line is written for the hands-only shot and always voiced afterwards in the actor's
+  cloned voice; hard words ("sublingual", "Citrulline") on screen, not spoken.
+- `references/finishing.md`: new required §1b "Video check + product-line voice": transcribe + find cuts, clone the voice,
+  3 takes, pick, place inside the hands shot with the original MUTED, cut any mispronounced on-camera line, hold the last
+  frame for a 4 s end card, re-caption, re-check; exact commands included.
+Originals in `_originals/2026-10-29/voice-step/`.
+
 ## 2026-10-29 — Sermorelin GHK: team feedback on the men's video + bible v3 creative direction (branch `sermorelin-first-batch`)
 Logged before editing. Team chat after the "Track" video (Emily, Sarah, Jeremy, Justin), approved by Priestley for the
 Sermorelin GHK skill ONLY (Restora, plain Sermorelin and the shared toolkit unchanged):

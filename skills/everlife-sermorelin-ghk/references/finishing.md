@@ -21,6 +21,28 @@ Feed (4:5, 1:1): 60 px margin.
   - last spoken line ends before ~10.5 s (15 s clip); if it runs later, start the end card after the last word or re-roll
 - Fails finishing can't fix → offer a re-roll with its cost (max 2 per concept).
 
+## 1b. Video check + product-line voice (REQUIRED for every video, before finishing)
+Cost ≈ 0.9 Higgsfield credits (3 voice takes at 0.3); ask before spending, show the cost. Work in `<job>/revoice/`.
+`FF=$($T/venv/bin/python -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")`
+1. **Transcribe with word times and find the cuts:**
+   `$T/venv/bin/python -I -c "from faster_whisper import WhisperModel as W; m=W('medium',compute_type='int8'); [print(' '.join(f'{w.word}@{w.start:.2f}' for w in s.words)) for s in m.transcribe('<job>/out/raw.mp4',language='en',word_timestamps=True)[0]]"`
+   `$FF -i <job>/out/raw.mp4 -vf "select='gt(scene,0.3)',showinfo" -f null - 2>&1 | grep -o "pts_time:[0-9.]*"`
+   Note: where each line falls, the hands-only shot's start/end, when speech ends, any mispronounced word.
+2. **Voice reference:** 2.5–4 s of the actor's own clean speech (no drug names), mono 24 kHz:
+   `$FF -ss <a> -to <b> -i raw.mp4 -vn -ac 1 -ar 24000 voice_ref.wav` (join two clips with `concat` if needed).
+3. **Three takes** of the product line, different spellings ("Sermorelin", "Sir-mor-ELL-in", "Sermorelin G. H. K."):
+   `higgsfield generate create seed_audio --prompt "<line>" --audio voice_ref.wav --wait --json > takeN.json`
+   The result is the URL containing `/hf_` (the first URL in the JSON is your uploaded reference).
+4. **Pick** the take both whisper `small` and `medium` hear closest; check its length fits inside the hands shot
+   (trim leading silence with `atrim`, speed up to ×1.15 with `atempo` if needed). If none is clean, LISTEN and ask the user.
+5. **Build the cut:** keep the hands shot; place the take inside it; **mute the original audio there (volume=0, never a
+   duck: at 5% it is heard as a second voice)**; drop any on-camera line that was mispronounced (trim + `concat`); then hold
+   the last frame so the end card gets ≥ 4 s: `-vf tpad=stop_mode=clone:stop_duration=<s> -af apad=pad_dur=<s>` as its
+   own pass (inside a trim chain it can silently fail; check the video length after).
+6. **Re-caption** `layers_full/<Tag>_caps.json` to the new timings (correct spellings), run `full_layout.py … --end <after
+   the last word>`, then re-transcribe the FINAL once: one voice per line, every name right, nothing under the end card.
+7. Record in SESSION.md: which line was re-voiced, the take, the cut times, the cost. Tell the user to LISTEN to the names.
+
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
