@@ -19,8 +19,11 @@ Double Strength" header that reads with sound off, the bottle in nearly every fr
    "Easy sublingual delivery", "24/7 access to doctor support", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear, specific CTA. Spoken lines finish by ~12 s.
 
-Spoken budget: **≤ 22 words** for Seedance's narrator (25 words ran to 14.8 s in the first test), ≤ 35 for UGC. Seedance
-mispronounced the name as "Sermoral" in the first test: prefer a separate TTS voice line muxed over the clip (see lessons). Say "growth hormone", never "GH". Spoken product name at most twice: write it
+**Narration (Seedance / Boreal): never let the video model speak.** Seedance said "Sermoral" in the first test. Prompt
+"No dialogue or narration; ambient sound only", then voice the approved script with Creatify `composer_voice_line`
+(default voice Fabian `9nZr75s2rhJ2gFpei7j3`, ~0.1 cr, ask the user if they want another), check it with Whisper, and
+mux it over the clip (command in lessons). Budget: ≤ 25 words (≈ 11 s with Fabian). UGC (Marketing Studio): ≤ 35 words,
+and check the name is said "ser-mo-REL-in"; re-voice the same way if not. Say "growth hormone", never "GH". Spoken product name at most twice: write it
 "ser-mo-REL-in" for TTS/model voices.
 
 ## Copy rules
@@ -43,7 +46,8 @@ mispronounced the name as "Sermoral" in the first test: prefer a separate TTS vo
    container." Never describe the tablet in words.
 3. **CAST:** age, build ("fit, natural build, not a bodybuilder"), wardrobe (clothed, training or casual), energy. Same people throughout.
 4. **Timed beats** with camera moves.
-5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
+5. **Dialogue:** Seedance/Boreal: "No dialogue or narration; ambient sound only" (the VO is added after, see above).
+   UGC only: every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.
 7. **Safe-zone composition (always for 9:16):** "Keep faces, the bottle, the tablet, hands and every key action inside the
    central column (8% in from the left and right edges) and between 8% and 63% of the frame height; the top 8% and the

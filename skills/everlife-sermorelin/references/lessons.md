@@ -27,6 +27,11 @@ Seen in the first test (2026-10-29: 1 Seedance video + 5 Creatify statics, `~/Ev
 - **Seedance's voice says "Sermoral"** (drops "-lin") and slurs "sublingual", even with "ser-mo-REL-in" in the prompt.
   Check with Whisper `small` + an `initial_prompt`; plan the VO as a separate TTS line (Creatify `composer_voice_line`,
   ~0.1 cr, or Higgsfield audio) muxed over the clip, or ask Seedance for no dialogue at all.
+  **Proven fix (same day):** Creatify voice "Fabian — American English" (`9nZr75s2rhJ2gFpei7j3`, calm narration) said
+  "Sermorelin" and "sublingual" correctly from plain text, 25 words in 11 s. Mux with a fixed length:
+  `ffmpeg -i raw.mp4 -i vo.wav -map 0:v -map 1:a -c:v copy -af "apad=whole_dur=<clip s>" -c:a aac -t <clip s> raw_vo.mp4`
+  (plain `apad` + `-shortest` never ends). Next time ask Seedance for **"no dialogue, ambient sound only"** so the foley
+  survives under the TTS line.
 - **25 spoken words ran to 14.8 s** at a calm pace: budget ≤ 22 words for this voice, or the last line plays over the end card.
 - **GPT Image garbles the bottle's small label text** ("30 SUBLINGUAS", missing "TABS") when the bottle is small or low
   in frame; a re-roll edit didn't fix it. 4 of 5 were clean when the bottle was medium/large. Fix: ask for a large bottle,
