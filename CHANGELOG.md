@@ -2,6 +2,18 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Align with bible v3: women's palette, skill bible header, global rules file (branch `sermorelin-first-batch`)
+Logged before editing. Approved by Priestley:
+- `skills/everlife-sermorelin-ghk/references/image-batch.md`: v3 dropped "Women's creative: pinks, tans and beige. No
+  oranges or greens." from the general standards (kept only on GHK-Cu Cream and Glow Stack) → no palette limit for
+  Sermorelin GHK women; keep rotating the lead colour (at most one pink-led ad per batch).
+- `skills/everlife-sermorelin-ghk/references/product-bible.md`: header marks the copy as checked against v3 (29 Oct; the
+  Sermorelin GHK pages are identical); women's palette line in "Product facts" updated.
+- `~/.claude/CLAUDE.md` (Priestley's global rules, outside the repo; backup in `~/.claude/everlife/_originals/2026-10-29/`):
+  women's palette line → only GHK-Cu Cream / Glow Stack; known gaps: NAD+ page no longer missing; the "Parts B/C have no
+  disclaimer" lines → v3 has disclaimers on most pages, "Disclaimer pending" on 11 (stop and flag those).
+Pending: logo 40%/31% + 2-line disclaimer in the shared finisher (before/after to be shown first).
+
 ## 2026-10-29 — Sermorelin GHK: the cloned-voice product line is a planned step in every video (branch `sermorelin-first-batch`)
 Logged before editing. Priestley: write it into the skill so anyone making a video follows the same path (no credits to
 write; ~0.9 Higgsfield credits per video to run). Every Marketing Studio take today mispronounced the drug names and put

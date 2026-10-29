@@ -1,6 +1,6 @@
 # Sermorelin GHK — creative bible (verbatim extract)
 
-> Source: ~/.claude/everlife/creative-bible.md (Part A, pages "Sermorelin GHK — Men / Women", headline banks, ingredient claims), copied 2026-10-28. Re-copy when the bible changes. **Updated 2026-10-29 with Justin Junior's approved Creative Messaging Reference** (Justin owns marketing for this product; approved per Priestley): the "APPROVED UPDATE" section below **wins over the older bible copy where they differ**. That section plus the older verbatim section are the ONLY approved copy for Sermorelin GHK. Global rules: `core/references/global-rules.md` (they win over anything here).
+> Source: ~/.claude/everlife/creative-bible.md (Part A, pages "Sermorelin GHK — Men / Women", headline banks, ingredient claims), copied 2026-10-28; **checked against the v3 master export on 2026-10-29: the Sermorelin GHK pages are identical to the "APPROVED UPDATE" section below** (v3 also adds the men's direction "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel." and drops the women's palette rule). Re-copy when the bible changes. **Updated 2026-10-29 with Justin Junior's approved Creative Messaging Reference** (Justin owns marketing for this product; approved per Priestley): the "APPROVED UPDATE" section below **wins over the older bible copy where they differ**. That section plus the older verbatim section are the ONLY approved copy for Sermorelin GHK. Global rules: `core/references/global-rules.md` (they win over anything here).
 
 > **How to use this page (same rules as the Restora-Z skill, creative lead 2026-10-27):**
 > - **HARD STOPS (never cross):** the approved claims (quick-hit benefits, more approved benefits, per-ingredient claims, each claim only on its own ingredient); every Hard NO (product + global); the verbatim disclaimer; the proof wording; the pre-screen ❌ list below.
@@ -12,7 +12,7 @@
 - **Ingredient list reads:** Sermorelin, GHK, Citrulline (ingredient-claim cards may say "L-Citrulline Malate", as the bible does).
 - **Form:** sublingual tablet → the **tablet is the hero**. Say "easy sublingual delivery"; never mention needles or injections (not even "needle-free"). Never "all natural". Peptides *support the body's own production* — that is the limit.
 - **Always spell out "growth hormone"** (never "GH"; "HGH" appears only inside a bible ingredient claim that is ❌ below).
-- **Audiences (pick one per session):** **Men 35–60** (lean muscle, strength, growth hormone support; frame around muscle, fitness, performance, never the bedroom; fit, mature talent, not bodybuilders) · **Women 35–60** (tone, strength, skin glow; palette pinks, tans, beige, **no oranges or greens**).
+- **Audiences (pick one per session):** **Men 35–60** (lean muscle, strength, growth hormone support; frame around muscle, fitness, performance, never the bedroom; fit, mature talent, not bodybuilders) · **Women 35–60** (tone, strength, skin glow; v3 has no palette limit for this product).
 - **Approved language (product Hard NO):** "toned" and "lean". Say "supports", never "builds".
 - **Offer:** "Save up to 47%" (percent-off, usable). No $ prices. **The bible wins over the landing pages** (Priestley,
   2026-10-28): checked 2026-10-28: each page sells the GHK tablets AND plain Sermorelin injectable. GHK tablets: men m-fb-v9 card
