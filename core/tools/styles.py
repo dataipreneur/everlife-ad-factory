@@ -166,6 +166,8 @@ class TikTok:
             tf = _font(bl, HN, tf.size - 2, "Bold")
         for i, ln in enumerate(heads):
             bl.centered(d, 205 + dy + 68 * i, ln, tf, self.NAVY)
+        if C.get("head_always") and C.get("head"):
+            dy += 18 * (len(heads) - 1)   # product line + a two-line end headline: keep the bottle cap clear of it
         b = _render(P, C["bottle"], 300)
         if C.get("pill"):
             base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345 + dy))

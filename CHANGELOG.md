@@ -2,6 +2,20 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK 9:16: disclaimer alone at the very bottom (product opt-in; Restora / PT-141 unchanged)
+Logged before editing. Team feedback relayed by Priestley: "Disclaimer should always be nested at very bottom" — only the
+disclaimer; the Trustpilot / Doctor Prescribed / Ships Free row stays in the Meta safe area (Mitansh's footer). Scoped to
+Sermorelin GHK until Mitansh updates the shared core ("for now keep it to us").
+- `skills/everlife-sermorelin-ghk/product.json`: `"disclaimer_at": "bottom"`.
+- `core/tools/finish_batch.py` (9:16): when the product sets it, the proof row ends at y 1385 as before and the verbatim
+  disclaimer is drawn alone, full width (W−80), ending 40 px above the frame bottom, on a soft band.
+- `core/tools/full_layout.py` (9:16 video): same split; captions sit above the proof row. The bottom disclaimer is an
+  intentional exception to the safe-area check (it sits in Reels' bottom 535 px, so Reels' caption/CTA can partly cover
+  it; Stories shows it below the reply bar) — flagged for Jeremy.
+Products without the key render exactly as before. Also `styles.py`: with the `head_always` product line, a two-line tiktok end
+headline moves the bottle 18 px lower so its cap clears the text; `full_layout.py` keeps captions above the Reels profile
+corner when the disclaimer is at the bottom. Originals in `_originals/2026-10-29/disclaimer-bottom/`.
+
 ## 2026-10-29 — Merged main after PR #5 (Mitansh's pt-141-skill) into `sermorelin-first-batch`: Mitansh's version kept
 Merged origin/main (24045d7, PR #5) into this branch. Shared tools taken from main exactly (`finish_batch.py`,
 `safezones.py` identical to main); our additive features re-applied on top of his code: `full_layout.py` per-job

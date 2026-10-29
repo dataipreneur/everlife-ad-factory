@@ -134,10 +134,13 @@ def fit(text, path, size, name, maxw):
     return f
 
 
+DISC_BOTTOM = PR.get("disclaimer_at") == "bottom" and not sz.BOTTOM_MODE   # product opt-in (Sermorelin GHK, 2026-10-29)
+
+
 def block_layout():
     """Positions of the bottom proof block inside the safe area: (row_y, disc_y, block_top)."""
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = bl.wrap(d0, bl.DISCLAIMER, DISC, sz.FOOT_W)
+    lines = [] if DISC_BOTTOM else bl.wrap(d0, bl.DISCLAIMER, DISC, sz.FOOT_W)
     row = Image.open(f"{P}/source/proof_row_clear.png")
     rh = int(row.height * sz.FOOT_W / row.width)
     top = BLOCK_BOTTOM - (rh + 12 + 27 * len(lines))
@@ -176,12 +179,23 @@ def bottom_layer():
     for ln in lines:
         bl.centered(d, ty, ln, DISC, (236, 236, 232))
         ty += 27
-    note((sz.FOOT_X0, disc_y, W - sz.FOOT_X0, ty), "disclaimer")
+    if lines:
+        note((sz.FOOT_X0, disc_y, W - sz.FOOT_X0, ty), "disclaimer")
+    if DISC_BOTTOM:   # the disclaimer alone at the very bottom, full width (intentional exception to the safe area)
+        dl = bl.wrap(d, bl.DISCLAIMER, DISC, W - 80)
+        bl.gradient_band(img, H - 27 * len(dl) - 200, H, 0, 225)
+        ty = H - 48 - 27 * len(dl)
+        for ln in dl:
+            bl.centered(d, ty, ln, DISC, (236, 236, 232))
+            ty += 27
     return img
 
 
 def cap_y():
-    return block_layout()[2] - 96   # caption line sits just above the proof block
+    y = block_layout()[2] - 96   # caption line sits just above the proof block
+    if DISC_BOTTOM:   # a shorter proof block sits lower: keep captions above the Reels profile corner
+        y = min(y, sz.NOTCH[1] - 76)
+    return y
 
 
 def caption(text):
