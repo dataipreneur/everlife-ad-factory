@@ -46,9 +46,12 @@ are doing in one plain sentence per step, and only stop when you need me to clic
 5. Creatify plugin (makes the image ads): run
    "claude plugin marketplace add creatify-ai/creatify-ad-agent-skill" and then
    "claude plugin install creatify-ad-agent@creatify-ad-agent". If either says it already exists, that is fine.
-6. Higgsfield (makes the video ads): if the "higgsfield" command is missing, install it with
+6. Creatify image models (Nano Banana, picked per image batch): run
+   "claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp".
+   If it says the server already exists, that is fine.
+7. Higgsfield (makes the video ads): if the "higgsfield" command is missing, install it with
    "curl -fsSL https://raw.githubusercontent.com/higgsfield-ai/cli/main/install.sh | sh".
-7. Show me every ❌ line from step 4 and tell me in plain words what I need to do. The only things I should have to do
+8. Show me every ❌ line from step 4 and tell me in plain words what I need to do. The only things I should have to do
    myself are the sign-ins in Step 3 of the guide.
 ```
 
@@ -65,6 +68,8 @@ Everlife logins from Step 1.
 - `! higgsfield auth login`: a browser opens, sign in.
 - `! higgsfield workspace list`: then tell Claude "select the Everlife workspace". It must say **Everlife**, never Private.
 - Type `/mcp`, pick **creatify-ad-agent**, and sign in with the Everlife Creatify account.
+- Still in `/mcp`, pick **creatify** (the image models server: Nano Banana) and sign in with the same Everlife Creatify
+  account. Same credits; GPT Image 2.5 stays the default, so you only need this when you pick Nano Banana.
 
 Then type: `check my Everlife ad setup`. Claude re-runs the checks. Repeat until every line is ✅.
 

@@ -2,6 +2,26 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Day-1 onboarding for non-technical teammates (branch onboarding-day-one)
+Logged before editing. Priestley: help a non-technical person start using the repo and the skills as smoothly as possible.
+- `ONBOARDING.md`: rewritten as a Day-1 guide for a brand-new person (before you start: GitHub invite, Claude Code,
+  Apple developer tools; one pasted setup prompt that signs in to GitHub, downloads the repo and installs everything;
+  logins; first test batch; a "what to type" cheat sheet; who to ask). The version-2 upgrade guide it replaces is kept
+  in `_originals/2026-10-29/onboarding-day-one/`.
+- `core/claude/everlife-gates.md`: the EverlifeMD creative gates (copied verbatim from Priestley's ~/.claude/CLAUDE.md)
+  and `core/claude/creative-bible.md` (the bible v3 import from ~/.claude/everlife/), so every teammate works under the
+  same rules. **Jeremy to confirm before merge** (the gates are the compliance checklist).
+- `install.sh`: also adds the gates to the user's ~/.claude/CLAUDE.md as one managed import block (skipped when the
+  gates are already there; an existing CLAUDE.md is backed up, never replaced), links the bible to
+  ~/.claude/everlife/creative-bible.md when the user has none, and adds a short list of read-only commands to Claude
+  Code's allow list (never anything that spends credits).
+- `core/scripts/update.sh`: "update my ad tools" in one step (pull main, re-link skills, re-install the toolkit, check).
+- `README.md`: setup section points to ONBOARDING.md and update.sh.
+Originals in `_originals/2026-10-29/onboarding-day-one/`.
+- Follow-up (logged before editing): ONBOARDING.md also connects the **Creatify general server** (`claude mcp add
+  --transport http --scope user creatify https://api.creatify.ai/mcp`, sign-in via `/mcp`), which the image setup needs
+  for the Nano Banana models (the Ad Agent plugin only runs GPT Image 2.5). Same Everlife Creatify account and credits.
+
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
 tablet, bottle, offer "Save up to 65%", landing page). Built per README "Adding a product skill", same flow as the
@@ -62,23 +82,6 @@ Renders + tests (same day, evening):
   wellness ads; Claude looked at all 66 shortlisted and kept 58 (`references/pinterest/<type>/cat_*.jpg`, 7 MB) with a
   table (layout to take, what not to copy, source page). Dropped 8 (same-person before/after, abs shot, intimate, lips
   macro, sauna towel, stroke ad, duplicate). Still thin: sticky notes, men 50+ training, "new and improved" side-by-sides.
-
-## 2026-10-29 — Day-1 onboarding for non-technical teammates (branch onboarding-day-one)
-Logged before editing. Priestley: help a non-technical person start using the repo and the skills as smoothly as possible.
-- `ONBOARDING.md`: rewritten as a Day-1 guide for a brand-new person (before you start: GitHub invite, Claude Code,
-  Apple developer tools; one pasted setup prompt that signs in to GitHub, downloads the repo and installs everything;
-  logins; first test batch; a "what to type" cheat sheet; who to ask). The version-2 upgrade guide it replaces is kept
-  in `_originals/2026-10-29/onboarding-day-one/`.
-- `core/claude/everlife-gates.md`: the EverlifeMD creative gates (copied verbatim from Priestley's ~/.claude/CLAUDE.md)
-  and `core/claude/creative-bible.md` (the bible v3 import from ~/.claude/everlife/), so every teammate works under the
-  same rules. **Jeremy to confirm before merge** (the gates are the compliance checklist).
-- `install.sh`: also adds the gates to the user's ~/.claude/CLAUDE.md as one managed import block (skipped when the
-  gates are already there; an existing CLAUDE.md is backed up, never replaced), links the bible to
-  ~/.claude/everlife/creative-bible.md when the user has none, and adds a short list of read-only commands to Claude
-  Code's allow list (never anything that spends credits).
-- `core/scripts/update.sh`: "update my ad tools" in one step (pull main, re-link skills, re-install the toolkit, check).
-- `README.md`: setup section points to ONBOARDING.md and update.sh.
-Originals in `_originals/2026-10-29/onboarding-day-one/`.
 
 ## 2026-10-29 — First real test of the plain Sermorelin skill (branch `sermorelin`)
 Approved by Priestley: 1 Seedance video (480p, 45 Higgsfield cr) + 5 Creatify statics (6 cr incl. one re-roll).
