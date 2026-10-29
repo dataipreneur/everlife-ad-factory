@@ -127,3 +127,11 @@ Compliance traps:
   "Supports Exercise Recovery", "Supports Firmer, Glowing Skin From Within".
 - **Women's Tier A headlines are nearly used up**: left unused: "Your GLP-1 Complement for Lean Muscle + Glow",
   "GLP-1 Complement: Lean. Strong. Radiant.", "The GLP-1 Complement for Muscle, Skin + Hair" (hair ⚠). Ask Justin for more.
+
+## Review feedback on batch 4 (2026-10-29)
+- **Women: "Pink is great for most women, but everything pink like that looks the same."** 4 of 5 women's ads were
+  pink-led. The bible allows pinks, tans AND beige; rotate the lead colour, at most one pink-led ad per batch (image-batch.md §2b).
+- **Men: the font on M3 ("The Edge You've Been Missing", elegant serif with a gold italic) was called "not right".** The
+  bible has no font rule; the serif came from the creative lead's "vary fonts" rule. The bible lines that point the way:
+  "Product names run big" (M3 showed the name only on the label) and "Reference top-performing, lowest-CPA creative"
+  (every men's winner uses heavy condensed caps). Open question for the creative lead whether men's ads keep to bold sans.

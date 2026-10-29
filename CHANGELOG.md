@@ -2,6 +2,17 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: women's colours opened up within the bible (branch `sermorelin-first-batch`)
+Logged before editing. Reviewer feedback on batch 4: "Pink is great for most women, but everything pink like that looks
+the same." Priestley: "open up colors". The bible says "Women's creative: pinks, tans and beige. No oranges or greens."
+(Creative & page standards); it never says pink must lead, and batch 4 made pink the main colour in 4 of 5 ads.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` §2b, §3 template, QA: women's lead colour rotates through
+  tan, camel, sand, beige, cream, taupe, mocha, burgundy, rose, blush; **at most one pink-led ad per batch**; no two
+  women's ads share a lead colour; pink can be an accent anywhere. Still no orange, no green (bible).
+- `references/lessons.md`: feedback recorded.
+Men's font: no change (the bible has no font rule; noted in lessons for the creative lead).
+Originals in `_originals/2026-10-29/women-colours/`.
+
 ## 2026-10-29 — Sermorelin GHK: image prompts aim the product higher (lesson from batch 4) (branch `sermorelin-first-batch`)
 Logged before editing. Batch 4 (10 statics): 6 of the 7 prompts with "bottom 18% calm / product between 45% and 78%"
 came back with the product or text under the footer (6 reposition edits); the 3 prompts with "bottom 22% calm / product

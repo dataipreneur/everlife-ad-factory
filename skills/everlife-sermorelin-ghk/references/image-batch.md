@@ -79,7 +79,7 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    or position twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 35–60, fit but not bodybuilders, clothed; women's ads in pink/tan/beige; nothing breaks a Hard NO;
+   people look 35–60, fit but not bodybuilders, clothed; women's ads in the bible palette (pinks, tans, beige; no orange, no green) and not all pink (at most one pink-led ad per batch); nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -110,7 +110,11 @@ shadows or outlines on type, product name big).
 
 Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
 charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
-Product rules win: women's creative only pinks, tans, beige, cream, mocha, rose, burgundy (no orange, no green);
+Product rules win: women's creative only pinks, tans, beige, cream, mocha, rose, burgundy (no orange, no green).
+**Women: open it up within the bible** (reviewer, 2026-10-29: "everything pink like that looks the same"). Rotate the
+LEAD colour per ad through tan, camel, sand, beige, cream, taupe, mocha, burgundy, rose, blush; **at most one pink-led ad
+per batch**, no two women's ads with the same lead colour; pink can still be an accent anywhere. The bible says "pinks,
+tans and beige": tans and beige are as approved as pink.
 Restora-Z moods navy / lavender / blush / cream / pale sky. Vary the headline placement too (top-left, centred, bottom-
 third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
 
@@ -143,7 +147,8 @@ badges, prices, website, disclaimer):
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
 <MEN: palette warm stone, charcoal, sand, brass; any person a fit, mature man 40–60, fully clothed in training or casual
 wear, natural build (NOT a bodybuilder), calm and candid.>
-<WOMEN: palette blush pink, tan, beige, cream (no orange, no green); any person a woman 40–60, natural, candid, glowing
+<WOMEN: lead colour <this ad's own lead from the rotation in §2b: tan / camel / sand / beige / cream / taupe / mocha /
+burgundy / rose / blush; pink-led at most once per batch>, rest of the palette from pinks, tans and beige (no orange, no green); any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
 LAYOUT: 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
