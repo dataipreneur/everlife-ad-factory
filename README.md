@@ -28,8 +28,8 @@ ONBOARDING.md                 Day-1 guide for non-technical teammates
 ## Setup (each person, once)
 Non-technical teammates: follow `ONBOARDING.md` (GitHub route; one pasted prompt; Claude Code does the steps) or
 `ONBOARDING-ZIP.md` (no GitHub: we send a zip built with `bash core/scripts/make_zip.sh main ~/Desktop`; new versions
-are new zips). Already running the
-original Restora-Z package (zip)? Follow `HANDOFF-MITANSH.md` instead: it checks your version, backs it up, tests the new
+are new zips). Both cover Mac and Windows (Windows runs everything inside WSL/Ubuntu; Apple fonts fall back to the
+bundled Inter/Fraunces in `build_layers.font()`). Already running the original Restora-Z package (zip)? Follow `HANDOFF-MITANSH.md` instead: it checks your version, backs it up, tests the new
 tools on your Mac before installing, and has a rollback.
 
 1. `gh repo clone dataipreneur/everlife-ad-factory ~/everlife-ad-factory` (private repo: needs a GitHub invite)
