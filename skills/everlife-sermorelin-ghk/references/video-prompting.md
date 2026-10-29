@@ -79,9 +79,11 @@ lines where it likes. So every script is built for one fixed edit step (`finishi
 4. **Timed beats** with camera moves.
 5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.
-7. **Safe-zone composition (always for 9:16):** "Keep faces, the bottle, the tablet, hands and every key action inside the
-   central column (8% in from the left and right edges) and between 8% and 63% of the frame height; the top 8% and the
-   bottom 37% contain only background."
+7. **Safe-zone composition (always for 9:16; Sermorelin GHK finishes with `"proof_at": "safe"`):** "Keep faces, the bottle,
+   the tablet, hands and every key action inside the central column (8% in from the left and right edges) and between 8%
+   and 50% of the frame height, framed high; the bottom half of the frame is calm background only (table top, floor,
+   torso out of focus)." The captions, Trustpilot row and disclaimer sit at ~52–63% in safe mode and would cover anything
+   lower (2026-10-29: they covered the tablet and label in three videos).
 8. **Headroom:** "Keep every person's head and face below the top 25% of the frame for the whole clip."
 9. **Closing guards:** "No on-screen text, captions, logos or watermarks; no readable words except the product label.
    Nobody says 'I' or 'my'. No before-and-after imagery, no shirtless bodies, no needles, syringes or vials."

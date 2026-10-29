@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: compose videos for the safe-zone footer (branch `sermorelin-first-batch`)
+Logged before editing. Re-finishing today's four videos with `"proof_at": "safe"` put the captions, Trustpilot row and
+disclaimer across the product shots (tablet and "SERMORELIN GHK" label covered in Gym, Pilates, Boxing): those videos
+were composed for the bottom footer. The four finals were restored to the bottom footer (safe versions kept as
+`out/SAFE_MODE_*.mp4`). For new videos:
+- `skills/everlife-sermorelin-ghk/references/video-prompting.md` prompt block 7: faces, bottle, tablet, hands and key
+  action between 8% and 50% of the frame height (the safe-mode captions + footer sit at ~52–63%); the bottom 50% is calm
+  background (table, floor, torso out of focus).
+
 ## 2026-10-29 — Sermorelin GHK videos: safe-zone footer + product-line opener (branch `sermorelin-first-batch`)
 Logged before editing. Priestley, after the Stories safe-zone template ("Safe Zone - Story.jpg") showed our captions in
 the reply-bar box and the proof/disclaimer in the Reels bottom 535 px (bible v3 "Safe zones": keep them out):
