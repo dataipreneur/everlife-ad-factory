@@ -25,10 +25,13 @@ else echo "✅ updated: $(git log --oneline "$before..$after" | wc -l | tr -d ' 
 
 bash "$REPO/install.sh"
 # one preflight --install copies the shared toolkit to ~/Everlife-Creative/tools; then check every product
-first=""
+first=""; fails=0
 for s in "$REPO"/skills/*/; do
   [ -f "$s/product.env" ] || continue
-  if [ -z "$first" ]; then first="$s"; bash "$HOME/.claude/skills/$(basename "$s")/core/scripts/preflight.sh" --install
-  else bash "$HOME/.claude/skills/$(basename "$s")/core/scripts/preflight.sh"; fi
+  pf="$HOME/.claude/skills/$(basename "$s")/core/scripts/preflight.sh"
+  if [ -z "$first" ]; then first="$s"; bash "$pf" --install || fails=$((fails+1))
+  else bash "$pf" || fails=$((fails+1)); fi
   echo
 done
+if [ "$fails" -eq 0 ]; then echo "✅ every product checks out"
+else echo "❌ $fails product check(s) have something to fix (see the ❌ lines above)"; exit 1; fi
