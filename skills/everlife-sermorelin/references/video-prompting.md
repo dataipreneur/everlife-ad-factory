@@ -56,8 +56,8 @@ Plan for it:
   unmistakably masculine… hardcore training feel", 2026-10-29):** 40s–50s "fit silver fox", hardcore fitness-model build
   (visibly muscular, lean, athletic; tattoos optional), rugged; fully clothed in a fitted training tee or long sleeve; no
   bare torso, no flexing or body-focus poses.
-- **Women:** strength + energy (pilates, hiking, morning light). Pinks, tans, beige; no oranges or greens, teal included
-  (team gates; `image-batch.md` §2b); no green plants, lawns or sea in frame. Interiors: "the window NOT in frame, no outdoor
+- **Women:** strength + energy (pilates, hiking, morning light). No colour limit (bible v3); lean on Justin's preferred
+  pinks, tans, neutrals, warm tones, white, teal (`image-batch.md` §2b). Interiors: "the window NOT in frame, no outdoor
   view" when the scene's colours matter (windows always show the outside).
 - No needles, syringes, vials or injection pens anywhere in frame. Never "GHK", "Citrulline" or "3-in-1".
 - Check the copy log; every header, line, end-card headline and CTA must be new.

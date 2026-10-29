@@ -70,7 +70,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
 **One AskUserQuestion, 3 questions:**
-1. **Audience:** "Men 35–60 (Recommended)" / "Women 35–60" / "Both (5 each)". This picks the bible page (headlines), the casting (men: 40s–50s fitness-model build, clothed) and the colours (women: pinks, tans, beige; no oranges or greens, teal included; image-batch.md §2b); women: drop "& Thicker Hair" (pre-screen ⚠).
+1. **Audience:** "Men 35–60 (Recommended)" / "Women 35–60" / "Both (5 each)". This picks the bible page (headlines), the casting (men: 40s–50s fitness-model build, clothed) and the colours (women: Justin's preferred pinks, tans, neutrals, warm tones, white, teal; no colour banned; image-batch.md §2b); women: drop "& Thicker Hair" (pre-screen ⚠).
 2. **Strength:** "Either: strength not mentioned (Recommended)" / "1000 mcg" / "500 mcg". It decides which bottle the ad shows (QA checks the label says that strength). Copy never states a strength, dose or "double strength" until the creative lead (and, for "double strength", Jeremy) approves it; the live winners never do.
 3. **What are we making?** "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad".
 - **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).

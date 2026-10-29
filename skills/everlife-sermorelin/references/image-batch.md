@@ -89,7 +89,7 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    pill, not the other past tablet shape), held, at least ~15% of the canvas width (17% when a person shares the frame);
    **no vial, syringe or second container**; every line big enough for 50+; men 42–50, hardcore fitness-model build,
    fitted top, never shirtless or flexing; women 40–60, clothed; men's headline not in an elegant/italic serif or script;
-   women's batch: pinks / tans / beige only, no orange (except the real label), green or teal, ≤ 1 pink-led ad; no Everlife logo or
+   women's batch: ≤ 1 pink-led ad, ≥ 1 teal ad, advertorials on white, ≤ 2 of 5 "explore" colours; no Everlife logo or
    wordmark drawn by the model (finishing adds the real one); nothing breaks a Hard NO.
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
 5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin`
@@ -118,14 +118,15 @@ shadows or outlines on type, product name big).
 bold sans, bold slab serif, chunky bold sans. The serif rows stay available for women.
 
 Accent colour: from the scene or the product, never from habit (the label orange, brass/gold, deep navy, charcoal on
-cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white; forest and teal for men only).
-**Women's palette (gates, 2026-10-29; Priestley: applies to Sermorelin):** pinks, tans, beige; **no oranges or
-greens** (teal counts as green). Cream, ivory and warm white are fine as neutral backgrounds (advertorials on white or
-cream). The real product keeps its own colours: the orange label and the tablet are never recoloured, and the label is
-not a reason to add orange elsewhere. This replaces Justin's 29 Oct direction (white + teal, explore slots).
-- Every women's ad leads with a pink, tan or beige (blush, rose, dusty pink, camel, sand, taupe, mocha, cream).
+cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white). Bible v3
+sets no palette limit for Sermorelin.
+**Women (Justin's direction, 2026-10-29, "preferred options, not strict limitations"):**
+- No colour is banned. Preferred (they have performed): pinks, tans, neutrals, warm tones, **white** and **teal**; most
+  ads in a women's batch lead with one of these.
+- Up to 2 of every 5 women's ads explore a current colour or type trend that suits the concept.
+- Advertorial / article ads sit on a **white** background.
+- At least one teal-led or teal-accent ad per women's batch; keep the teal soft/pale so it sets off the orange label.
 - At most one pink-led ad per batch; no two women's ads with the same lead colour.
-- Scenes: no green plants, lawns, sea or teal props; interiors with "the window NOT in frame, no outdoor view".
 Vary the headline placement (top-left, centred, bottom third above the footer band, split around the product) and the
 light (morning, golden hour, soft overcast, studio).
 
@@ -162,8 +163,8 @@ SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-l
 all different from every other ad in the batch>, a fit silver fox with a hardcore fitness-model physique (visibly
 muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training tee or long
 sleeve, no bare torso, no flexing poses; a real gym or hard training.>
-<WOMEN: lead colour <this ad's own per §2b: a pink, tan or beige; cream or warm white background for advertorials;
-pink-led at most once per batch; NO orange (except the real label), green or teal anywhere>; any person: <THIS
+<WOMEN: lead colour <this ad's own per §2b: pinks / tans / neutrals / warm tones / white / soft teal, or an "explore"
+trend colour for up to 2 of 5; white background for advertorials; pink-led at most once per batch>; any person: <THIS
 ad's own woman: age 40–58, ethnicity, hair, wardrobe, all different from every other ad>, natural fit build, candid,
 clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or vials, no
 mirrors showing bodies.

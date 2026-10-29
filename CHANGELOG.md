@@ -36,6 +36,10 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
   Files: GHK SKILL.md, image-batch.md §2b + template, lessons.md, product-bible.md note; plain Sermorelin SKILL.md,
   image-batch.md §2b + checklist + template, video-prompting.md, product-bible.md. Originals in
   `_originals/2026-10-29/sermorelin-womens-palette/`.
+- Follow-up (logged before editing): **reverted** the entry above (commit 382c1be). It came from a misread question
+  ("did Justin's GHK suggestion apply to plain Sermorelin too?"), not a request. Both Sermorelin skills are back to
+  Justin's women's colour direction; the gates keep Mitansh's palette line. Open: which rule wins for Sermorelin
+  women's ads (ask Justin).
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,

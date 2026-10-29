@@ -33,9 +33,9 @@
   fitness and performance, never the bedroom; v3 talent: "rugged, strong and unmistakably masculine — a serious gym-goer
   with a hardcore training feel", cast as in `video-prompting.md` CAST, always fully clothed) · **Women 35–65+** (lean
   muscle, energy, graceful aging).
-- **Colour:** bible v3 keeps "pinks, tans and beige; no oranges or greens" only for GHK-Cu Cream and Glow Stack, but the
-  team gates apply it to Sermorelin too (Priestley, 2026-10-29): women's ads use pinks, tans, beige, no oranges or greens
-  (`image-batch.md` §2b). The orange bottle and tablet are never recoloured.
+- **Colour:** bible v3 keeps "pinks, tans and beige; no oranges or greens" only for GHK-Cu Cream and Glow Stack, so
+  Sermorelin has no palette limit. Women's colours follow Justin's preferences (`image-batch.md` §2b). The orange bottle
+  and tablet are never recoloured.
 - **Intro:** images say "SERMORELIN" only, never "by Everlife" (Priestley, 2026-10-29: overrides the bible line below
   for statics; the Everlife logo is on every ad). Videos KEEP it (Priestley, 2026-10-29): "Sermorelin by Everlife" in the header and first spoken line
   (bible v3 page 4, "Product first, then

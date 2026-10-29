@@ -65,7 +65,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
 **One AskUserQuestion, 2–3 questions:**
-1. **Audience:** "Men 35–65 (Recommended)" / "Women 35–65" / "Both (5 each)". This picks the bible page (headlines, benefits). Women's colours: pinks, tans, beige; no oranges or greens, teal included (team gates, 2026-10-29; `image-batch.md` §2b).
+1. **Audience:** "Men 35–65 (Recommended)" / "Women 35–65" / "Both (5 each)". This picks the bible page (headlines, benefits). Bible v3 sets no colour limit for Sermorelin; women's colours follow Justin's direction in `image-batch.md` §2b (preferred pinks, tans, neutrals, warm tones, white, teal).
 2. **Strength:** "1000 mcg · Double Strength (Recommended for men)" / "1000 mcg, strength not mentioned (Recommended for women)" / "500 mcg". It decides which bottle the ad shows (QA checks the label). "Double Strength Sermorelin" is a men's bible headline and the hook of 4 of 5 men's winners: only with the 1000 mcg bottle in frame. Never state a dose in mcg.
 3. **What are we making?** "🖼️ Image ads: batch of 5 (Recommended)" / "🎬 Video ad".
 - **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).
