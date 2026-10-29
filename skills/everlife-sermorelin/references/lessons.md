@@ -23,6 +23,19 @@ Generation traps:
 - GPT Image 2.5 on Creatify places the product LOWER than asked → one cheap reposition edit on the raw.
 - Cropping 4:5 to 9:16 puts the footer on the product → generate 9:16 natively.
 
+Seen in the first test (2026-10-29: 1 Seedance video + 5 Creatify statics, `~/Everlife-Creative/output/Sermorelin/2026-10-29_SESSION.md`):
+- **Seedance's voice says "Sermoral"** (drops "-lin") and slurs "sublingual", even with "ser-mo-REL-in" in the prompt.
+  Check with Whisper `small` + an `initial_prompt`; plan the VO as a separate TTS line (Creatify `composer_voice_line`,
+  ~0.1 cr, or Higgsfield audio) muxed over the clip, or ask Seedance for no dialogue at all.
+- **25 spoken words ran to 14.8 s** at a calm pace: budget ≤ 22 words for this voice, or the last line plays over the end card.
+- **GPT Image garbles the bottle's small label text** ("30 SUBLINGUAS", missing "TABS") when the bottle is small or low
+  in frame; a re-roll edit didn't fix it. 4 of 5 were clean when the bottle was medium/large. Fix: ask for a large bottle,
+  or composite the real render (`composite.py --product sermorelin`) instead of re-rolling.
+- **Bottles land low** and their base sits behind the transparent footer row (17% of height): ask for the bottle's base
+  at ≤ 78% of the canvas height.
+- What worked: the round "S" tablet came out exactly right in all 6 images and the video; tablet-in-hand framing (men and
+  women) looks like the winners; women's pink/beige palettes held with the orange product.
+
 Sermorelin-specific risks to watch (expected, not yet seen):
 - **The injection vial comes back.** Almost every past plain-Sermorelin ad shows the bottle next to an orange-capped vial;
   models trained on similar ads will add one → "no vial, no second container" in every prompt, check every frame.

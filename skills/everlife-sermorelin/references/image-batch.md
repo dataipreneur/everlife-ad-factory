@@ -100,8 +100,9 @@ wear, natural build (NOT a bodybuilder), calm and candid.>
 any person a woman 40–65, natural, candid, clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or
 vials, no mirrors showing bodies.
 
-LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands).
-9:16 only: keep the top 8% free of text.
+LAYOUT: 5% clear margin on every edge. The BOTTOM 18% is calm continuation of the background (no text, product or hands);
+the bottle's base sits at or above 78% of the canvas height and the bottle is at least 30% of the canvas height (small,
+low bottles come out with garbled label text). 9:16 only: keep the top 8% free of text.
 ```
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; orange label with the
 vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERMORELIN', small text 'PRESCRIPTION',

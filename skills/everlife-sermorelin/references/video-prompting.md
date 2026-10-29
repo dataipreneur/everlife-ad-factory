@@ -19,7 +19,8 @@ Double Strength" header that reads with sound off, the bottle in nearly every fr
    "Easy sublingual delivery", "24/7 access to doctor support", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear, specific CTA. Spoken lines finish by ~12 s.
 
-Spoken budget: **≤ 35 words**. Say "growth hormone", never "GH". Spoken product name at most twice: write it
+Spoken budget: **≤ 22 words** for Seedance's narrator (25 words ran to 14.8 s in the first test), ≤ 35 for UGC. Seedance
+mispronounced the name as "Sermoral" in the first test: prefer a separate TTS voice line muxed over the clip (see lessons). Say "growth hormone", never "GH". Spoken product name at most twice: write it
 "ser-mo-REL-in" for TTS/model voices.
 
 ## Copy rules

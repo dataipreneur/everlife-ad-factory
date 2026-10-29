@@ -63,6 +63,16 @@ Renders + tests (same day, evening):
   table (layout to take, what not to copy, source page). Dropped 8 (same-person before/after, abs shot, intimate, lips
   macro, sauna towel, stroke ad, duplicate). Still thin: sticky notes, men 50+ training, "new and improved" side-by-sides.
 
+## 2026-10-29 — First real test of the plain Sermorelin skill (branch `sermorelin`)
+Approved by Priestley: 1 Seedance video (480p, 45 Higgsfield cr) + 5 Creatify statics (6 cr incl. one re-roll).
+Output + hand-off sheet: `~/Everlife-Creative/output/Sermorelin/2026-10-29_SESSION.md`. Finishing ran on this branch's toolkit.
+- Video: generated, QA'd, finished end to end (FINAL_SERM01, draft). Product correct (round "S" tablet, label, no vial).
+  **Defect: the voice says "Sermoral"**; VO ran to 14.8 s. Needs a re-voice before review.
+- Statics: 4 finished (FINAL_1–4), product exact in all; #5 flagged, not shipped (bottle label text garbled twice).
+- Creatify project created (`assets/creatify.json`). Skill fixes from the test: `"style": "default"` is the house look
+  (docs said `house`, which crashes); lessons (voice, word budget ≤ 22, small-label garbling, bottle above the footer);
+  image prompt LAYOUT now sizes/places the bottle; finishing notes how to run the branch toolkit without `--install`.
+
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
 Diffed against the unzipped original (`~/Downloads/everlife-restora-z.zip`, 27 Oct 21:51); everything else was identical.

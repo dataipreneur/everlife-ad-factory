@@ -26,7 +26,7 @@ Feed (4:5, 1:1): 60 px margin.
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
-{"product": "sermorelin", "style": "house|tiktok|editorial", "kicker": "optional label for editorial",
+{"product": "sermorelin", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "cta": "<bible CTA in caps>", "vocab": "Sermorelin."}
@@ -58,7 +58,10 @@ one-word chunks, restore "?", re-run. Check 4 frames (hook, mid, product, end ca
 
 **Review burst:** gated (no screened reviews yet, see `reviews.md`).
 
-Looks: `house` · `tiktok` · `editorial`; vary across a batch. Women: prefer `tiktok`/`editorial` (the `house` navy/gold
+Looks: `house` · `tiktok` · `editorial`; vary across a batch. **In copy.json the house look is `"style": "default"`**
+(`"house"` crashes `styles.make`; found in the 2026-10-29 test). Run finishing with this skill's toolkit until the
+`pill_end_scale` change is installed: `EVERLIFE_TOOLS=<repo>/core/tools EVERLIFE_SKILLS_DIR=<repo>/skills` and `cd` into
+`<repo>/core/tools` (don't run preflight `--install` from a branch: it overwrites the shared toolkit other sessions use). Women: prefer `tiktok`/`editorial` (the `house` navy/gold
 is fine; check nothing in the scene reads orange besides the product).
 
 ## 3. Image finishing
