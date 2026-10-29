@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Static finisher: stronger backing behind the 9:16 safe-zone footer (branch `sermorelin-first-batch`)
+Logged before editing. Priestley: "the footer should be clearly visible". In `--proof-at safe` the band behind the
+Trustpilot row + disclaimer is now ~88% opaque (was ~73%); `scrim()` gains an `opacity` argument (default unchanged, so
+the bottom footer and Restora output are identical). No cropping: the image stays full-frame.
+
 ## 2026-10-29 — Static finisher: safe-zone footer for 9:16 image ads (opt-in) (branch `sermorelin-first-batch`)
 Logged before editing. Priestley: safe zones "should" apply to images too. 9:16 statics put the Trustpilot row and the
 disclaimer at the very bottom (Reels bottom 535 px; proof row partly in the Stories reply box). 4:5 / 1:1 feed ads have no

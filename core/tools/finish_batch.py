@@ -123,14 +123,14 @@ def top_fade(W, h, tone):
     return band
 
 
-def scrim(W, h, tone, top_fade=120):
+def scrim(W, h, tone, top_fade=120, opacity=185):
     """Soft gradient behind the footer so it reads on any photo (transparent at the top, ~70% at the bottom)."""
     col = (8, 12, 26) if tone == "dark" else (250, 249, 245)
     band = Image.new("RGBA", (W, h + top_fade), col + (0,))
     bd = ImageDraw.Draw(band)
     for i in range(band.height):
         t = min(1.0, i / top_fade)
-        bd.line([(0, i), (W, i)], fill=col + (int(185 * t ** 1.2),))
+        bd.line([(0, i), (W, i)], fill=col + (int(opacity * t ** 1.2),))
     return band
 
 
@@ -210,7 +210,7 @@ def main():
         # safe zones (bible v3): inside x 156-924, above the Reels notch at y 1216; up to 3 disclaimer lines
         foot = build_footer(768, tone, a.disclaimer, max_lines=3)
         fy = 1206 - foot.height
-        band = scrim(W, foot.height + 40, tone)
+        band = scrim(W, foot.height + 40, tone, opacity=225)   # stronger backing: the footer must read clearly
         fade = Image.new("L", band.size, 255)
         fd = ImageDraw.Draw(fade)
         for i in range(60):   # fade the band out below the footer too
