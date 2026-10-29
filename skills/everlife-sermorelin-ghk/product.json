@@ -20,7 +20,10 @@
   }
  },
  "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
  "keep_case": [
+  "Sermorelin GHK by Everlife",
   "Sermorelin GHK",
   "Sermorelin",
   "GHK",

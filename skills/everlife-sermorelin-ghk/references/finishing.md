@@ -23,7 +23,8 @@ Feed (4:5, 1:1): 60 px margin.
 
 ## 1a. Header + logo on screen the whole time (every Sermorelin GHK video, men and women)
 Feedback 2026-10-29: "keep 'Sermorelin GHK by Everlife' up at the top with the logo the whole time." In copy.json set
-`"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true` (otherwise the finisher hides the logo + header whenever a
+`"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true` (the captions, Trustpilot row and disclaimer already sit
+in Meta's safe area by default for every product, Mitansh 2026-10-29) (otherwise the finisher hides the logo + header whenever a
 face passes under it). The prompt's HEADROOM line keeps faces below the top 25%, so the header never sits on a face; check
 it in QA.
 
@@ -81,6 +82,10 @@ Looks: `house` (style "default") · `tiktok` · `editorial`; vary across a batch
 is fine; check nothing reads orange).
 
 ## 3. Image finishing
+**Disclaimer at the very bottom (team feedback, 2026-10-29; product setting `"disclaimer_at": "bottom"`):** on 9:16 statics
+and videos the Trustpilot / Doctor Prescribed / Ships Free row stays in the Meta safe area (ends at y 1385) and the verbatim
+disclaimer sits alone at the bottom of the frame, full width. Automatic for Sermorelin GHK; no flag needed. (Reels' caption
+and CTA can partly cover the bottom 535 px; flagged for Jeremy.)
 9:16 statics: the proof footer ends at y 1385 (bottom of the Reels safe area; see image-batch.md "Footer position"), never at the bottom of the frame.
 
 Batch Mode: `finish_batch.py --product sermorelin-ghk` (see `image-batch.md`). `finish_modern.py` refuses this

@@ -168,3 +168,19 @@ The creative team member's Restora-Z improvements were distilled into `core/refe
 structural variety, article slot, product-angle rotation, named typefaces, own palette, hero ≥35% and real, CTA string + QA, real
 logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it before every batch table; tools: `reposition_916.py`,
 `unfade_cta.py`, `logo_in_box.py`, `compose916.py`, `finish_batch.py --logo-w 40%`. Nothing lives only in an output folder.
+
+## Final-rules test videos (Boxing v2 / Morning v2, 2026-10-29)
+- **Captions get overwritten on a re-cut.** `full_layout.py` re-transcribes a changed clip and replaces the hand-fixed
+  `<Tag>_caps.json` ("CERMERELLIN" went out in a draft). After ANY re-cut: rewrite the caps file, re-run, and read the
+  caption list it prints before sharing.
+- **Dead air reads as "the video stopped".** Cut on action right after the last spoken line (no still, silent shot before
+  the end card); trim pauses inside cloned takes (atrim + concat); put the clip's own room tone under a held end card.
+- The model can give the actor a second bottle in face shots: check every frame; cut before it.
+- Opener product shots still come out framed low (label under the footer for 1–4 s) despite "top half" in the prompt.
+
+## Batch 9 looked like one ad five times (2026-10-29)
+- Variety rules covered font / colour / ad type / headline / hold, but not scene, light or composition, so those defaulted
+  to "dark gym, name on top, hand left, bottle right". Winners-first also copied the winners' dark-gym mood, and the men's
+  "hardcore training" direction was applied to every scene instead of to the casting. Fix: §2c variety plan (image-batch.md).
+- Product name asked "beside the bottle" was printed on the coffee mug next to it. Place the name in a text position
+  (top / under the headline / band / panel), never next to a prop.

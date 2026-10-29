@@ -352,6 +352,9 @@ def main():
     if a.product:
         import product
         PR = product.load(a.product)
+        if PR.get("disclaimer_at") in ("bottom", "footer"):   # product.json may pin the 9:16 disclaimer position (Sermorelin GHK: bottom)
+            global DISC_AT
+            DISC_AT = PR["disclaimer_at"]
         if a.disclaimer and a.disclaimer != PR["disclaimer"]:
             raise SystemExit(f"❌ --disclaimer differs from {a.product}'s product.json (it must be the bible text, verbatim)")
         a.disclaimer = PR["disclaimer"]
