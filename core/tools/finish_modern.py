@@ -435,7 +435,7 @@ class Modern:
 
     def mark(self):
         """Everlife mark at the top centre."""
-        return self.logo(190, (self.W - 190) / 2, max(int(self.H * 0.035), self.safe[1] + 8), None if self.dark else NAVY)
+        return self.logo(296, (self.W - 296) / 2, max(int(self.H * 0.035), self.safe[1] + 8), None if self.dark else NAVY)
 
     # ---------------- templates
     def t_hero(self):

@@ -3,7 +3,17 @@
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
 mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle
 and tablet; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor
-Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip over the calm bottom ~18%.
+Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
+
+**Footer position (2026-10-29):** on 9:16 the footer ends at y 1385, the bottom of the Reels safe area (the reference ad's band sits at ~63–72% of the frame; the footer may cross the lower-left profile notch, Mitansh 2026-10-29) (`core/tools/safezones.py`,
+team Safe zones page), because the bottom ~535 px of a Reel sits under Meta's "Learn more" button and caption
+(`core/references/safe-zones/reels_placement_2026-10-29.jpg`). So a 9:16 raw must keep everything in its top ~52%
+(LAYOUT block below); `finish_batch.py` refuses (exit 2) when a raw's content runs under the footer. Fix = ONE reposition
+edit on the raw (Creatify `composer_edit_image`, 1 credit): "Keep everything identical (headline, type, colours, product,
+scene, light). Scale the product and the text block down together (about 35%) and move them up so the lowest element ends
+at 50% of the canvas height. Fill the bottom half with calm, plain continuation of the same background: no text, no
+product, no hands." Then re-run `finish_batch.py`. Feed ratios (4:5, 1:1) are unchanged: footer over the calm bottom ~18%.
+
 
 **Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
 
@@ -167,12 +177,18 @@ or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white backgrou
 once per batch>; any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
-LAYOUT: 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no product; the bigger bible-v3 logo sits there):
-the Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the
-proof footer is laid there. The whole product (bottle, tablets, hands, plinth tops) ends ABOVE 72% of the canvas height
-and all text above 76%.
-(For 4:5 and 1:1 the top band is 14% too.) Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked
-(batch 4, 2026-10-29: "between 45% and 78%" gave 6 reposition edits in 7; "ends above 72%" gave 0 in 3).
+LAYOUT (9:16): 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
+the Everlife logo is laid there. EVERYTHING ELSE (headline, benefits, bottle, tablet) sits in the TOP 52% of the canvas;
+the lowest element ends at 50% height. The BOTTOM 48% is calm continuation of the background (surface, wall, fabric: no
+text, no product, no hands, no key objects): the proof footer is laid at ~61–72% and Meta's Reels/Stories UI covers the rest.
+LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
+```
+> GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at
+> 58–65%). Ask for the lowest element at **40%** (cap/nozzle tip at 13%) to get ~50%. `finish_batch.py` then shifts the image up by
+> whatever headroom is left under the logo band (max 320 px) before it refuses; a refusal means one reposition edit (1 credit).
+```
+> Sermorelin batch 4 (2026-10-29, main): asking high works ("ends above 72%" gave 0 reposition edits in 3 vs 6 in 7 for a loose
+> range). With the safe-area footer, say "the lowest element ends at 40%" with the same firmness.
 ```
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
 the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:

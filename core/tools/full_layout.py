@@ -54,12 +54,14 @@ import product  # noqa: E402
 C = json.load(open(f"{P}/copy.json"))
 PR = product.for_copy(C, f"{P}/copy.json")
 C["disclaimer"] = PR["disclaimer"]
-C.setdefault("bottle", PR["renders"]["bottle"])
-C.setdefault("pill", PR["renders"]["pill"])
+_b, _p = product.renders_for(PR, C)
+C.setdefault("bottle", _b)
+if "pill" not in C:
+    C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
 C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
 for f in (C["bottle"], C["pill"]):
-    if not os.path.exists(f"{P}/source/{f}"):
+    if f and not os.path.exists(f"{P}/source/{f}"):
         shutil.copy(product.asset(PR, f), f"{P}/source/{f}")
 bl.END_HEAD, bl.BENEFITS, bl.CTA_TEXT = C["end_head"], C["benefits"], C["cta"]
 bl.DISCLAIMER, bl.BOTTLE, bl.PILL = C["disclaimer"], C["bottle"], C["pill"]
@@ -111,13 +113,7 @@ def captions():
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
 import safezones as sz  # noqa: E402
 
-# bible v3 §04: the disclaimer stays on at most 2 lines, never under 13 px
-_d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-for _s in range(21, 12, -1):
-    DISC = bl.font(bl.AV, _s, "Medium")
-    if len(bl.wrap(_d0, C["disclaimer"], DISC, sz.FOOT_W)) <= 2:
-        break
-
+# disclaimer stays 21 px and wraps (Mitansh, 2026-10-29: kept over bible v3's 2-line/13 px rule)
 SX0, SY0, SX1, SY1 = sz.SAFE
 SAFE_W = sz.SAFE_W
 BLOCK_BOTTOM = sz.FOOTER_BOTTOM          # proof row + disclaimer end (bottom of frame by default; see safezones.PROOF_AT)
@@ -150,8 +146,8 @@ def block_layout():
 def top_layer():
     img = bl.canvas()
     bl.gradient_band(img, 0, 520, 190, 0)
-    bl.logo(img, SY0 + 8, 432)   # bible v3 §03: 40% of the width
-    note(((W - 432) / 2, SY0 + 8, (W + 432) / 2, SY0 + 70), "logo")
+    bl.logo(img, SY0 + 8, 435)
+    note(((W - 435) / 2, SY0 + 8, (W + 435) / 2, SY0 + 70), "logo")
     d = ImageDraw.Draw(img)
     y = 238
     for ln in C["head"]:
@@ -233,15 +229,18 @@ def ingredient_end_layers():
     ImageDraw.Draw(glow).ellipse([200, 300, 880, 720], fill=bl.TEAL + (120,))
     base.alpha_composite(glow.filter(ImageFilter.GaussianBlur(110)))
     d = ImageDraw.Draw(base)
-    bl.logo(base, SY0 + 8, 432)
+    bl.logo(base, SY0 + 8, 404)
     y = 205
     for ln in C["end_head"]:
         f = fit(ln, bl.AV_COND, 70, "Heavy Italic", SAFE_W)
         bl.centered(d, y, ln, f, bl.GOLD)
         note(((W - d.textlength(ln, font=f)) / 2, y, (W + d.textlength(ln, font=f)) / 2, y + f.size), "end headline")
         y += int(f.size * 1.02)
-    paste_render(base, C["bottle"], 300, (W // 2 + 100, y + 175))
-    paste_render(base, C["pill"], round(300 * C.get("pill_scale", 1)), (W // 2 - 120, y + 235), by="width")
+    if C.get("pill"):
+        paste_render(base, C["bottle"], 300, (W // 2 + 100, y + 175))
+        paste_render(base, C["pill"], round(300 * C.get("pill_scale", 1)), (W // 2 - 120, y + 235), by="width")
+    else:                                # no tablet/capsule for this form: the bottle alone, centred
+        paste_render(base, C["bottle"], 300, (W // 2, y + 175))
     ly = y + 350
     bl.centered(d, ly, C["ingredients_label"], ING_LABEL, bl.GOLD)
     cy0 = ly + 56
@@ -350,7 +349,7 @@ if a.reviews:
 END_DY = int((BLOCK_BOTTOM - (sz.NOTCH[1] - 10)) * 0.5) if sz.BOTTOM_MODE else 0
 end_names = {f for f, _, _ in end_layers}
 END_BG = end_layers[0][0] if end_layers else None          # the opaque card background (+ logo + content)
-LOGO_H = SY0 + 70                                         # logo strip stays pinned at the top
+LOGO_H = SY0 + 80                                         # logo strip stays pinned at the top
 if END_DY and END_BG:
     # rebuild the card: logo strip unchanged, then the card's own background stretched to fill the gap, then the content
     _c = Image.open(f"{L}/{END_BG}").convert("RGBA")

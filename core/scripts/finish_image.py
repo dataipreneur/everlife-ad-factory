@@ -101,7 +101,7 @@ class Ad:
         W, k, C = self.W, self.k, self.C
         fade(self.img, 0, int(340 * k), 215, 0)
         lg = Image.open(f"{T}/assets/logo_cream.png").convert("RGBA")
-        lw = 240
+        lw = 373
         lg = lg.resize((lw, int(lg.height * lw / lg.width)), Image.LANCZOS)
         self.img.alpha_composite(lg, ((W - lw) // 2, int(38 * k)))
         y = int(38 * k) + lg.height + 14

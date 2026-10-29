@@ -32,6 +32,20 @@ def for_copy(C, where="copy.json"):
     return P
 
 
+def renders_for(P, C=None):
+    """(bottle, pill) for a job: the form named in copy.json ("form": "<id>") when product.json lists "forms", else the
+    product's default renders. pill may be None (a product form without a tablet/capsule, e.g. a nasal spray)."""
+    C = C or {}
+    forms = P.get("forms") or {}
+    fid = C.get("form")
+    if fid:
+        if fid not in forms:
+            raise SystemExit(f"❌ copy.json names form '{fid}' but {P['id']}'s product.json has forms {sorted(forms)}")
+        F = forms[fid]
+        return F.get("bottle") or P["renders"]["bottle"], F.get("pill")
+    return P["renders"]["bottle"], P["renders"].get("pill")
+
+
 def asset(P, name):
     return os.path.join(P["_dir"], "assets", name)
 
