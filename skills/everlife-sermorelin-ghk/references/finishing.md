@@ -23,9 +23,8 @@ Feed (4:5, 1:1): 60 px margin.
 
 ## 1a. Header + logo on screen the whole time (every Sermorelin GHK video, men and women)
 Feedback 2026-10-29: "keep 'Sermorelin GHK by Everlife' up at the top with the logo the whole time." In copy.json set
-`"head": ["SERMORELIN GHK BY EVERLIFE"]`, `"head_always": true` and `"proof_at": "safe"` (captions, Trustpilot row and
-disclaimer inside Meta's safe area, out of the Stories reply bar and the Reels bottom 535 px; the disclaimer may run to 3
-lines there: exception to bible v3's 2-line rule, flagged for Justin, 2026-10-29) (otherwise the finisher hides the logo + header whenever a
+`"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true` (the captions, Trustpilot row and disclaimer already sit
+in Meta's safe area by default for every product, Mitansh 2026-10-29) (otherwise the finisher hides the logo + header whenever a
 face passes under it). The prompt's HEADROOM line keeps faces below the top 25%, so the header never sits on a face; check
 it in QA.
 
@@ -54,7 +53,7 @@ Cost ≈ 0.9 Higgsfield credits (3 voice takes at 0.3); ask before spending, sho
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
-{"product": "sermorelin-ghk", "style": "default|tiktok|editorial" (house look = "default"; "house" crashes), "kicker": "optional label for editorial",
+{"product": "sermorelin-ghk", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<bible>", "<bible>", "<bible>"],
  "ingredients_label": "3-IN-1 PEPTIDE SUPPORT",
@@ -74,17 +73,12 @@ one-word chunks, restore "?", re-run. Check 4 frames (hook, mid, product, end ca
 
 **Review burst:** gated (no screened reviews yet, see `reviews.md`).
 
-**`tiktok` end card:** Sermorelin GHK's ingredient names and claims are too long for its name + claim rows (they overlap).
-Set `"end_rows": "benefits"` and `"ingredients_label": "SERMORELIN + GHK + CITRULLINE"`: the rows then show the 3 bible
-benefits. **Clip shorter than its speech + end card?** Marketing Studio fills the whole clip with speech, so hold the last
-frame (`ffmpeg -vf tpad=stop_mode=clone:stop_duration=2.5 -af apad=pad_dur=2.5`) and start the end card after the last word.
-
-Looks: `house` (style "default") · `tiktok` · `editorial`; vary across a batch. **Until the shared end card is fixed, use `tiktok` with `"end_rows": "benefits"`:** the house and editorial end cards cut Sermorelin GHK's ingredient claims off after 2 lines (2026-10-29). Women: prefer `tiktok`/`editorial` (the `house` navy/gold
+Looks: `default` (house navy/gold) · `tiktok` · `editorial`; vary across a batch. Women: prefer `tiktok`/`editorial` (the `house` navy/gold
 is fine; check nothing reads orange).
 
 ## 3. Image finishing
-**9:16 statics:** always `--proof-at safe` (proof row + disclaimer inside Meta's safe area; Priestley 2026-10-29). 4:5 and
-1:1 feed ads have no Meta overlay: default footer.
+9:16 statics: the proof footer ends at y 1385 (bottom of the Reels safe area; see image-batch.md "Footer position"), never at the bottom of the frame.
+
 Batch Mode: `finish_batch.py --product sermorelin-ghk` (see `image-batch.md`). `finish_modern.py` refuses this
 product until its `product_zones` (the colours that let it find the bottle and tablet in a photo) are calibrated in
 product.json. Legacy `core/scripts/finish_image.py` layouts work (`standard`, `checklist`, `article`, `letter`, `split`,

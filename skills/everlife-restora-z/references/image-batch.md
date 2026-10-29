@@ -8,6 +8,16 @@ real bottle and capsule. We add only the **approved footer** (`finish_batch.py`)
 ad's calm bottom on a soft gradient: the Trustpilot 4.9 / Doctor Prescribed / Ships Free art and the verbatim
 disclaimer (creative lead 2026-10-27: "35% smaller and transparent").
 
+**Footer position (2026-10-29):** on 9:16 the footer ends at y 1385, the bottom of the Reels safe area (the reference ad's band sits at ~63–72% of the frame; the footer may cross the lower-left profile notch, Mitansh 2026-10-29) (`core/tools/safezones.py`,
+team Safe zones page), because the bottom ~535 px of a Reel sits under Meta's "Learn more" button and caption
+(`core/references/safe-zones/reels_placement_2026-10-29.jpg`). So a 9:16 raw must keep everything in its top ~52%
+(LAYOUT block below); `finish_batch.py` refuses (exit 2) when a raw's content runs under the footer. Fix = ONE reposition
+edit on the raw (Creatify `composer_edit_image`, 1 credit): "Keep everything identical (headline, type, colours, product,
+scene, light). Scale the product and the text block down together (about 35%) and move them up so the lowest element ends
+at 50% of the canvas height. Fill the bottom half with calm, plain continuation of the same background: no text, no
+product, no hands." Then re-run `finish_batch.py`. Feed ratios (4:5, 1:1) are unchanged: footer over the calm bottom ~18%.
+
+
 ## 0. Copy rules: hard stops vs references
 **Hard stops (never cross):**
 - Pain points: ONLY the bible's 12 *Approved pain points*.
@@ -129,10 +139,17 @@ SCENE & STYLE: <scene, props, single colour mood (navy / lavender / blush / crea
 light, calm and premium, lots of air, nothing cluttered. Women-focused looks: pinks, tans and beige. No beds-with-couples
 or bedroom intimacy. Any person: real-looking 45–65, calm, candid, no before/after.
 
-LAYOUT: keep a 5% clear margin on every edge. The TOP 12% of the canvas is calm, plain continuation of the background
-(no text, no product): the Everlife logo is laid there. The BOTTOM 18% is calm, plain continuation of the background
-(surface, fabric, wall): no text, no product, no hands or key objects there (the transparent proof footer is laid over it).
-Put the product base above that line. (For 4:5 and 1:1 the top band is 10%.)
+LAYOUT (9:16): keep a 5% clear margin on every edge. The TOP 12% of the canvas is calm, plain continuation of the
+background (no text, no product): the Everlife logo is laid there. EVERYTHING ELSE (headline, benefits, bottle, capsule)
+sits in the TOP 52% of the canvas; the lowest element ends at 50% height. The BOTTOM 48% is calm, plain continuation of
+the background (surface, fabric, wall): no text, no product, no hands or key objects there. The transparent proof footer
+is laid at 52–63%; Meta's Reels/Stories UI covers the rest.
+LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
+```
+> GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at
+> 58–65%). Ask for the lowest element at **40%** (cap/nozzle tip at 13%) to get ~50%. `finish_batch.py` then shifts the image up by
+> whatever headroom is left under the logo band (max 320 px) before it refuses; a refusal means one reposition edit (1 credit).
+```
 ```
 
 ## 4. After the batch

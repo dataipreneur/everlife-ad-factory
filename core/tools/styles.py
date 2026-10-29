@@ -33,10 +33,6 @@ def _cased(text, C):
     return text
 
 
-LOGO916 = 432   # bible v3 §03: logo 40% of the 1080 px width on 9:16
-HEAD_DY = 28    # opening headers sit lower to clear the taller logo
-
-
 def _logo(bl, P, color, width):
     """Everlife logo recoloured (the source PNG is cream; its alpha is the mark)."""
     lg = Image.open(f"{P}/source/logo_cream.png").convert("RGBA")
@@ -99,13 +95,13 @@ class TikTok:
 
     def top(self):
         img = self.bl.canvas()
-        img.alpha_composite(_logo(self.bl, self.P, (255, 255, 255), LOGO916), ((W - LOGO916) // 2, SY0 + 8))
+        img.alpha_composite(_logo(self.bl, self.P, (255, 255, 255), 358), ((W - 358) // 2, SY0 + 8))
         heads = [_cased(h.title(), self.C) for h in self.C["head"]]
         d0 = ImageDraw.Draw(img)
         f = self.head
         while max(d0.textlength(h, font=f) for h in heads) + 52 > SAFE_W and f.size > 30:
             f = _font(self.bl, HN, f.size - 2, "Bold")
-        self._sticker_lines(img, heads, 212 + HEAD_DY, f, (255, 255, 255, 250), self.INK)
+        self._sticker_lines(img, heads, 212, f, (255, 255, 255, 250), self.INK)
         return img
 
     def caption_layers(self, caps, L, tag):
@@ -149,7 +145,7 @@ class TikTok:
         # bottom fade so the transparent proof row stays legible on a light card
         bl.gradient_band(base, self.block_top - 380, H, 0, 255)
         d = ImageDraw.Draw(base)
-        base.alpha_composite(_logo(bl, P, self.NAVY, LOGO916), ((W - LOGO916) // 2, SY0 + 8))
+        base.alpha_composite(_logo(bl, P, self.NAVY, 373), ((W - 373) // 2, SY0 + 8))
         tf = _font(bl, HN, 60, "Bold")
         heads = [_cased(ln.title(), C) for ln in C["end_head"]]
         while max(d.textlength(ln, font=tf) for ln in heads) > SAFE_W and tf.size > 30:
@@ -157,10 +153,12 @@ class TikTok:
         for i, ln in enumerate(heads):
             bl.centered(d, 205 + 68 * i, ln, tf, self.NAVY)
         b = _render(P, C["bottle"], 300)
-        base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
-        c = _render(P, C["pill"], 300, by="width")
-        cy = min(560, 652 - c.height // 2)  # a tall pill render (e.g. a wide tablet) would cover the label at 668
-        base.alpha_composite(c, (W // 2 - 130 - c.width // 2, cy - c.height // 2))
+        if C.get("pill"):
+            base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
+            c = _render(P, C["pill"], 300, by="width")
+            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, 560 - c.height // 2))
+        else:
+            base.alpha_composite(b, (W // 2 - b.width // 2, 345))
         lab = _font(bl, HN, 32, "Bold")
         bl.centered(d, 668, _cased(C["ingredients_label"].title().replace("3-In-1", "3-in-1"), C), lab, self.NAVY)
         layers = [("end.png", self.end_t, 99)]
@@ -219,12 +217,12 @@ class Editorial:
         bl = self.bl
         img = bl.canvas()
         bl.gradient_band(img, 0, 520, 150, 0)
-        img.alpha_composite(_logo(bl, self.P, self.IVORY, LOGO916), ((W - LOGO916) // 2, SY0 + 10))
+        img.alpha_composite(_logo(bl, self.P, self.IVORY, 327), ((W - 327) // 2, SY0 + 10))
         d = ImageDraw.Draw(img)
         kicker = self.C.get("kicker", "")
         if kicker:
-            bl.centered(d, 214 + HEAD_DY, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
-        y = 252 + HEAD_DY
+            bl.centered(d, 214, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
+        y = 252
         for i, ln in enumerate(self.C["head"]):
             t = _cased(ln.capitalize() if i == 0 else ln.lower(), self.C)
             fi = self.serif_i
@@ -269,7 +267,7 @@ class Editorial:
         ImageDraw.Draw(glow).ellipse([200, 360, 880, 800], fill=(196, 160, 98, 70))
         base.alpha_composite(glow.filter(ImageFilter.GaussianBlur(130)))
         d = ImageDraw.Draw(base)
-        base.alpha_composite(_logo(bl, P, self.IVORY, LOGO916), ((W - LOGO916) // 2, SY0 + 8))
+        base.alpha_composite(_logo(bl, P, self.IVORY, 358), ((W - 358) // 2, SY0 + 8))
         hf = _font(bl, f"{SUP}/Baskerville.ttc", 60, "Italic")
         for i, ln in enumerate(C["end_head"]):
             t = ln.title() if "+" in ln else (ln.capitalize() if i == 0 else ln.lower())  # keep drug names capitalised
@@ -279,9 +277,12 @@ class Editorial:
                 f = _font(bl, f"{SUP}/Baskerville.ttc", f.size - 2, "Italic")
             bl.centered(d, 214 + 72 * i, t, f, self.IVORY)
         b = _render(P, C["bottle"], 290)
-        base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 360))
-        c = _render(P, C["pill"], 290, by="width")
-        base.alpha_composite(c, (W // 2 - 125 - c.width // 2, 570 - c.height // 2))
+        if C.get("pill"):
+            base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 360))
+            c = _render(P, C["pill"], 290, by="width")
+            base.alpha_composite(c, (W // 2 - 125 - c.width // 2, 570 - c.height // 2))
+        else:
+            base.alpha_composite(b, (W // 2 - b.width // 2, 360))
         bl.centered(d, 680, "   ".join(C["ingredients_label"].upper()), self.label, self.GOLD)
         base.save(f"{L}/end.png")
         layers = [("end.png", self.end_t, 99)]
