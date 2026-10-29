@@ -68,3 +68,12 @@ Compliance traps:
   "Learn more" button and caption. The toolkit is back in safe mode: the 9:16 footer ends at y 1385, so the raw keeps
   everything in its top ~52% (LAYOUT block) and `finish_batch.py` refuses when content runs under the footer. Old raws
   composed to the bottom need one reposition edit; an automatic scale-down-and-extend was tried and rejected.
+
+## Final-rules test videos (Boxing v2 / Morning v2, 2026-10-29)
+- **Captions get overwritten on a re-cut.** `full_layout.py` re-transcribes a changed clip and replaces the hand-fixed
+  `<Tag>_caps.json` ("CERMERELLIN" went out in a draft). After ANY re-cut: rewrite the caps file, re-run, and read the
+  caption list it prints before sharing.
+- **Dead air reads as "the video stopped".** Cut on action right after the last spoken line (no still, silent shot before
+  the end card); trim pauses inside cloned takes (atrim + concat); put the clip's own room tone under a held end card.
+- The model can give the actor a second bottle in face shots: check every frame; cut before it.
+- Opener product shots still come out framed low (label under the footer for 1–4 s) despite "top half" in the prompt.

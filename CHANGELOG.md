@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK lessons: re-check captions after every re-cut; no dead air (branch `sermorelin-first-batch`)
+Logged before editing. Morning v2 showed "CERMERELLIN": re-running `full_layout.py` on a re-cut clip re-transcribed and
+overwrote the hand-fixed captions. Boxing v2 "stopped": ~2 s with no speech and a still shot before the end card.
+- `skills/everlife-sermorelin-ghk/references/lessons.md`: rewrite `<Tag>_caps.json` after every re-cut and check the
+  printed caption list before sharing; cut on action right after the last line; no silent gap > 0.5 s mid-line (trim
+  pauses inside cloned takes); put room tone under a held/silent end card.
+
 ## 2026-10-29 — tiktok end card fits the 9:16 safe-area layout (shared tool; tell Mitansh)
 Logged before editing. With the safe-area footer (Mitansh's default) the end card is no longer shifted down, so its
 headline touched the bigger logo and the 300 px tablet overlapped the "Sermorelin + GHK + Citrulline" label (seen in the
