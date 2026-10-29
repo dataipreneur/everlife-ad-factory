@@ -2,6 +2,162 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
+New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
+tablet, bottle, offer "Save up to 65%", landing page). Built per README "Adding a product skill", same flow as the
+Sermorelin GHK skill. Data only: no `core/` changes.
+- `references/product-bible.md`: bible Part A "Sermorelin — Men / Women" + "more claims" copied verbatim (diff-checked
+  against `~/.claude/everlife/creative-bible.md` lines 88–211), plus a labelled compliance pre-screen for Jeremy:
+  ❌ "From Dad Bod to Man Bod", "Targets Visceral Fat", every injections line; ⚠ "Get Toned and Lean", "Lean Muscle
+  Definition", "Metabolism + Body Tone", "60/50 Is the New 40/30", "The Power of Growth Hormone in a Tablet",
+  "Save 70% compared to HGH", "$95/month", "…With Your TRT". Leaves a small clean pool (3 men's / 4 women's headlines,
+  3 benefits).
+- Sublingual tablet only (the bible also lists injections; creative never shows or mentions them).
+- `product.json` / `product.env`: id `sermorelin`, verbatim disclaimer, renders `sermorelin_bottle.png` /
+  `sermorelin_tablet.png` (**not added**: see `assets/MISSING_RENDERS.md`; past ads show two different orange tablets, so
+  which one is current must be confirmed).
+- `assets/type_specimen.png`: new, drawn with the repo fonts from approved lines (the GHK skill's specimen is Restora's
+  sleep one).
+- `references/winners/winners.md`: no CPA-ranked winners yet; notes from ~300 past plain-Sermorelin ads (user's Drive
+  downloads "Sermorelin M/F") on layouts worth keeping and a long don't-copy list.
+- Video `tiktok`/`editorial` end cards need an `ingredients` list (`core/tools/styles.py`): `finishing.md` fills it with
+  the three ✅ benefits instead of changing core.
+
+Later the same day:
+- `references/winners/`: CPA-ranked winners from the Winning Ads Reference page ("Sermorelin — Male", Oct 9–15; "Sermorelin
+  — Female", Oct 2–8, stale), matched by code to the "Sermorelin M/F" Drive downloads, looked at, and written up as cards
+  with small previews (M2 INT91, M3 ID323819 3.01 + 1.01, M4 VIDEO82B contact sheet + transcript, M5 BASE130-01, F1
+  ID273400-3.04). M1 VIDEO83B isn't in the downloads. Every winner breaks a current rule; cards say what to rebuild.
+- Findings applied: two strengths (1000 mcg "double strength", 500 mcg; catalog on that page), so renders are now
+  `sermorelin1000_bottle(_ref)` / `sermorelin500_bottle(_ref)` + `product.json` "strengths"; the round "S" tablet is in
+  every current men's winner (still to confirm); SKILL step 1 asks strength; batch/video guides start from the winners.
+- `skills/everlife-sermorelin-ghk/SKILL.md` (original in `_originals/2026-10-28/`): description no longer claims
+  "let's make Sermorelin ads"; it asks which product and points plain Sermorelin to `everlife-sermorelin`.
+
+Renders + tests (same day, evening):
+- Added `sermorelin_tablet.png` (round orange "S", small: ~250 px tablet) and `sermorelin1000_bottle.png` (+ a
+  white-flattened `_ref.jpg`) from the user's asset-library downloads; bottle checked against the live page (same jar and
+  label as the site's 500 mcg bottle). Injection images downloaded alongside were not added (no needles in creative).
+- `core/tools/full_layout.py`, `core/tools/styles.py` (originals in `_originals/2026-10-28/core/tools/`): new optional
+  product.json `pill_end_scale` (default 1) scales the end-card pill. Round tablets drawn at the capsule size covered the
+  label line and dwarfed the bottle. Plain Sermorelin sets 0.62; Restora-Z and Sermorelin GHK don't set it.
+- `core/tests/regression.py` (original in `_originals/2026-10-28/core/tests/`): smoke now also renders plain Sermorelin
+  (3 video looks, finish_batch, disclaimer guard, composite). tiktok uses a shorter third row (the long growth-hormone
+  row collided; a 30-character CTA overflows its button) — written into the skill's `finishing.md`.
+- Before/after (`main` core vs this branch): identical 124, different 0. Smoke: 18/18 passed. Preflight: 9/10 (Marketing
+  Studio registration pending). Not yet done: a real generated video.
+- `references/winners/`: ⭐ all-time section from the Meta exports the user downloaded ("All-Time Top Ads by Account",
+  monthly "Top Ads by CPA" Jan–Jul 2025): Sermorelin target $400 / max $500; top sellers 273393-3.01 (454 sales),
+  281319-1.01 (332), 273400-2.04 (women, 137 at $248). Proven mechanic = one tablet held to the lens (~1,500 sales):
+  now batch slot 1 and marked ⭐ in style 4B. Video winners listed by ID; their files aren't on this Mac.
+- Reference priority (1 winners → 2 Meta → 3 Pinterest) wired into plain Sermorelin like Sermorelin GHK:
+  `core/references/REFERENCE-PRIORITY.md` and `core/references/meta-refs/SOURCES.md` copied **byte-identical** from branch
+  `sermorelin-first-batch` (so the merge is clean). ⚠ After both branches merge, update its line "Wired into: Sermorelin
+  GHK only" to include plain Sermorelin (not edited here, to avoid a conflict).
+- `references/pinterest/`: the same 19 screened pins as Sermorelin GHK, re-checked for plain Sermorelin, with a new
+  header (best fits, green/orange backgrounds banned for women, wording traps). SKILL.md + image-batch §2 follow the order.
+- Pinterest, Restora method: Restora-Z's set (Mitansh's package; board links never recorded) is ~70 pins of **same-category**
+  modern DTC ads (sleep brands) + 20 DOC examples, sorted into 12 ad types; the GHK set was generic idea-page searches.
+  A helper agent searched ~65 Pinterest Ideas pages (~735 pins) for men's health / healthy aging / longevity / women 40+
+  wellness ads; Claude looked at all 66 shortlisted and kept 58 (`references/pinterest/<type>/cat_*.jpg`, 7 MB) with a
+  table (layout to take, what not to copy, source page). Dropped 8 (same-person before/after, abs shot, intimate, lips
+  macro, sauna towel, stroke ad, duplicate). Still thin: sticky notes, men 50+ training, "new and improved" side-by-sides.
+
+## 2026-10-29 — First real test of the plain Sermorelin skill (branch `sermorelin`)
+Approved by Priestley: 1 Seedance video (480p, 45 Higgsfield cr) + 5 Creatify statics (6 cr incl. one re-roll).
+Output + hand-off sheet: `~/Everlife-Creative/output/Sermorelin/2026-10-29_SESSION.md`. Finishing ran on this branch's toolkit.
+- Video: generated, QA'd, finished end to end (FINAL_SERM01, draft). Product correct (round "S" tablet, label, no vial).
+  **Defect: the voice says "Sermoral"**; VO ran to 14.8 s. **Fixed the same day:** re-voiced with a Creatify TTS line
+  (voice Fabian, 0.1 cr), verified by Whisper, ends at 11.0 s; re-finished as `FINAL_SERM01_15s_9x16.mp4`.
+- Statics: 4 finished (FINAL_1–4), product exact in all; #5 flagged, not shipped (bottle label text garbled twice).
+- Creatify project created (`assets/creatify.json`). Skill fixes from the test: `"style": "default"` is the house look
+  (docs said `house`, which crashes); lessons (voice, word budget ≤ 22, small-label garbling, bottle above the footer);
+  image prompt LAYOUT now sizes/places the bottle; finishing notes how to run the branch toolkit without `--install`.
+
+## 2026-10-29 — Plain Sermorelin aligned with bible v3 + the GHK hand-off (branch `sermorelin`)
+Sources: bible v3 (`~/.claude/everlife/creative-bible.md`, imported 2026-10-29, pages 4 + 7–10) and
+`~/Downloads/Sermorelin-handoff-2026-10-29.md` (from the GHK session, PR #4). Skill files only (`skills/everlife-sermorelin/`);
+originals in `_originals/2026-10-29/skills/everlife-sermorelin/`. No GHK claims, headlines or casting quotes copied.
+- `product-bible.md`: verbatim section re-copied from v3. New: men's talent line ("rugged, strong and unmistakably
+  masculine…"), "Supports Sleep Quality + Recovery" (both), "2x-Strength Growth Hormone Support" (men),
+  "Supports Toned Strength After 35" (women). Pre-screen: sleep/recovery ✅, 2x-Strength ✅ with care (1000 mcg only),
+  Toned Strength ⚠ Jeremy. Women's "no orange/green" limit removed (v3 keeps it only for GHK-Cu Cream and Glow Stack).
+- Images: winners lead (≥ 3 of every 5 slots); tablet held (thumb + index "pull" or open palm, beside the bottle);
+  per-ad font + colour menu, no elegant/italic serif or script on men's headlines; Justin's women's colour direction
+  (preferred incl. white + teal, advertorials on white, ≥ 1 teal ad, ≤ 1 pink-led, ≤ 2 of 5 explore); "SERMORELIN by
+  Everlife" on every ad; product ends above 72%, text above 76%, calm top 14% / bottom 22%.
+- Video: 15 s, end card 11–15 s, speech ≤ 20 words from the first second, finished by ~10.5 s; hook by 2.5 s;
+  "Sermorelin by Everlife" in the first line and header (`"head": ["SERMORELIN BY EVERLIFE"]`, `"head_always": true`);
+  men cast 42–50 "fit silver fox", hardcore fitness-model build, fully clothed (replaces "natural build, not a
+  bodybuilder"; ⚠ the global CLAUDE.md still says "not bodybuilders"); cloned-voice product line for on-camera actors
+  (Marketing Studio), Creatify TTS stays for no-dialogue Seedance cuts.
+- Also brought in line: `SKILL.md`, `finishing.md` (§1a header, §1b voice, `--end 11`), `lessons.md` (GHK's 29 Oct
+  lessons), `styles/1-real-people.md`, `4-product-hero.md`, `6-lifestyle-identity.md` (casting, colours).
+- Needs PR #4 merged into `main` (then `main` into this branch) for `head_always`, the bible-v3 logo size and the 2-line
+  disclaimer; until then this branch's finishers ignore `head_always` and keep the old logo/disclaimer.
+
+## 2026-10-29 — `main` (with PR #4) merged into `sermorelin`
+PR #4 merged into `main` (ec0f334, Priestley's go-ahead), then `main` into this branch. Our versions backed up in
+`_originals/2026-10-29/` (`core/tools/styles.py`, `core/references/REFERENCE-PRIORITY.md`, `CHANGELOG.md`). Conflicts:
+- `core/tools/styles.py`: kept both: our `pill_scale` (round tablet smaller on the end card) and main's cap that keeps a
+  tall tablet off the label line.
+- `core/references/REFERENCE-PRIORITY.md`: main's version (adds "winners lead the batch"), plus plain Sermorelin in
+  "Wired into" and its 58 same-category Pinterest ads.
+- `CHANGELOG.md`: every entry from both sides kept.
+Now live here: `head_always`, bible-v3 logo size (31% / 40%), 2-line disclaimer, logo at the top of statics.
+
+## 2026-10-29 — Plain Sermorelin 500 mcg bottle added (branch `sermorelin`)
+`assets/sermorelin500_bottle.png` (user download "SERMORELIN 500 MCG BOTTLE .png", looked at and pixel-diffed against
+the 1000 render: same jar and label, only the strength line and a re-set name band differ) + `sermorelin500_bottle_ref.jpg`
+(flattened on white). `product.json` already pointed at these names. `MISSING_RENDERS.md` (original backed up) and
+`image-batch.md` updated. The downloaded tablet is identical to the one on file.
+
+## 2026-10-29 — Plain Sermorelin: second video winner card (branch `sermorelin`)
+Priestley shared the "Sermorelin M" / "Sermorelin F" Drive folders (Emily's): the same folders as the 2026-10-28 zips;
+the Drive connector can't list them. Re-checking the men's zip found winner 274068Video-2.01 (18 sales, $364) under
+another filename: looked at, carded as MV2 in `winners/winners.md` (original backed up) with `MV2_274068Video.jpg`.
+Then the men's zip's Base56 / Base57 videos (Aug 2026), which the all-time export lists as winners (Base56-05 13 sales):
+watched + transcribed, carded as MV3 (Base56, 28 s framed monster battle) and MV4 (Base57, 11 s viking split frame) with
+`MV3_BASE56.jpg` / `MV4_BASE57.jpg`. The "Sermorelin F" zip has no videos.
+
+## 2026-10-29 — Plain Sermorelin: 9:16 static layout for the Reels-safe footer (branch `sermorelin`)
+Ahead of Mitansh's PR #5 (open): `image-batch.md` (original from earlier today in `_originals/2026-10-29/`) now has a
+separate 9:16 LAYOUT (content in the top half, lowest element asked at 40%, bottom 55% calm) and a note pointing at the
+shared safe-zone rule as the source of truth, with the 1-credit reposition fix. Skill file only; the finisher change
+arrives with PR #5. Not pushed (Priestley: no push for now).
+
+## 2026-10-29 — Plain Sermorelin images: no "by Everlife" (branch `sermorelin`)
+Priestley, after the second test: images never say "by Everlife"; the name reads "SERMORELIN" only (the finisher's
+Everlife logo carries the brand). This overrides bible v3's "[Product] by Everlife in every intro" for statics only;
+videos keep it in the header and first spoken line. Changed: `SKILL.md`, `image-batch.md` (template Name line + QA),
+`product-bible.md` (Intro fact). Originals of today's versions in `_originals/2026-10-29b/`.
+Then (Priestley: "why is it the same guy in every picture?", "women have no product name?"): `image-batch.md` now
+requires a different person per ad (own CAST per ad: age, ethnicity, hair, beard, wardrobe) and QA rejects look-alikes;
+QA also requires "SERMORELIN" as one of the two biggest texts. Originals in `_originals/2026-10-29c/`.
+
+## 2026-10-29 — `main` (with PR #5, PT-141 + Reels-safe footer) merged into `sermorelin`
+PR #5 merged into `main` by the other session (24045d7); then `main` into this branch (local, not pushed). Our versions
+backed up in `_originals/2026-10-29c/`. Conflicts: `core/tools/full_layout.py` + `styles.py` (×2): kept main's "no
+tablet → bottle alone, centred" branch (PT-141 spray) with our `pill_scale` inside it; `CHANGELOG.md`: both sides kept.
+
+## 2026-10-29 — Plain Sermorelin video composition for the Reels-safe footer (branch `sermorelin`)
+`video-prompting.md` (original in `_originals/2026-10-29c/`): key action now 8–55% of the frame height, bottom 45%
+background only (was 8–63%). Since PR #5 the 9:16 video footer + captions sit at ~55–72%; the re-finished test video
+had the bottle label under the footer. Only this skill (Priestley: "just update our Sermorelin skill for now"); the
+GHK, PT-141 and Restora video prompts still say 8–63%. Known, not fixed here: the 9:16 video disclaimer wraps to 3
+lines in safe mode (shared `full_layout.py`).
+Then: the regenerated video's man came out as a Sylvester Stallone look-alike (rejected, not finished). Casting in
+`video-prompting.md` + `image-batch.md` now always names a specific look and adds "ordinary, non-famous face; must not
+resemble any celebrity"; `lessons.md` adds that and the upload-ID workaround for repeated "no response received".
+## 2026-10-29 — `main` (with PR #7, GHK bottom disclaimer) merged into `sermorelin`; plain Sermorelin opts in
+PR #7 merged by the other session (20:41); then `main` into this branch (local, not pushed). Ours backed up in
+`_originals/2026-10-29d/`. Conflicts: `styles.py` (kept main's end-card shift `dy`/`pw` with our `pill_scale` on `pw`),
+`full_layout.py` (both setting lines kept), `CHANGELOG.md` (both sides kept).
+Plain Sermorelin now matches Sermorelin GHK (Priestley: "disclaimer should be two lines at the bottom"):
+- `product.json`: `"disclaimer_at": "bottom"`, `"end_card_safe_shift": true`, `keep_case` + "Sermorelin by Everlife".
+- `video-prompting.md`: action 8–58%, full-bleed scene (GHK's numbers). `image-batch.md`: 9:16 LAYOUT = GHK's (text in
+  the central column, pictures full-bleed down to 56%) + the bottom-disclaimer note. `finishing.md`: stale PR #4 note
+  replaced by the 9:16 footer description.
 ## 2026-10-29 — Animated still (BPC-157): approved static + 8 s Seedance motion
 New Question A option in `skills/everlife-bpc-157` (`references/animated-still.md`): the batch RAW goes to Seedance image-to-video
 (8 s, 9:16; Unlimited mode in Chrome for 0 credits, else CLI ≈ 36–56 cr), then the new shared `core/tools/animate_still.py` lays the

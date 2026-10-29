@@ -1,0 +1,7 @@
+{
+ "project_id": "ec689fbe-5c13-4420-a8ba-57989c5545d9",
+ "bottle": "assets/d9e7de31_sermorelin1000_bottle_ref.jpg",
+ "tablet": "assets/338551b5_sermorelin_tablet.png",
+ "type_specimen": "assets/31edeedd_type_specimen.png",
+ "note": "Created 2026-10-29 on priestley@everlifemd.com's Creatify workspace (9:16, 1080p) with the 1000 mcg bottle (flattened ref), the round 'S' tablet and the Sermorelin type specimen. Reuse it for every image. It belongs to the account that created it; if composer_project_get fails (e.g. a teammate's account), create a new one the same way (composer_project_create, upload_file + PUT, composer_import_asset) and rewrite this file. Add the 500 mcg bottle here when it's in assets/. Never import a Sermorelin GHK asset into this project."
+}

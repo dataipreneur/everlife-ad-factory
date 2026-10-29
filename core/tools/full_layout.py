@@ -59,6 +59,7 @@ C.setdefault("bottle", _b)
 if "pill" not in C:
     C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
+C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
 C["_end_safe_shift"] = bool(PR.get("end_card_safe_shift"))   # product opt-in: tiktok end card clears the taller logo
 for f in (C["bottle"], C["pill"]):
     if f and not os.path.exists(f"{P}/source/{f}"):
@@ -258,7 +259,7 @@ def ingredient_end_layers():
         y += int(f.size * 1.02)
     if C.get("pill"):
         paste_render(base, C["bottle"], 300, (W // 2 + 100, y + 175))
-        paste_render(base, C["pill"], 300, (W // 2 - 120, y + 235), by="width")
+        paste_render(base, C["pill"], round(300 * C.get("pill_scale", 1)), (W // 2 - 120, y + 235), by="width")
     else:                                # no tablet/capsule for this form: the bottle alone, centred
         paste_render(base, C["bottle"], 300, (W // 2, y + 175))
     ly = y + 350

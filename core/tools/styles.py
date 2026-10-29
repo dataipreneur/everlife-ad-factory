@@ -172,7 +172,7 @@ class TikTok:
         b = _render(P, C["bottle"], 300)
         if C.get("pill"):
             base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345 + dy))
-            c = _render(P, C["pill"], pw, by="width")
+            c = _render(P, C["pill"], round(pw * C.get("pill_scale", 1)), by="width")
             cy = min(560, 652 - c.height // 2)  # a tall pill render (e.g. a wide tablet) would cover the label at 668
             base.alpha_composite(c, (W // 2 - 130 - c.width // 2, cy + dy - c.height // 2))
         else:
@@ -299,7 +299,7 @@ class Editorial:
         b = _render(P, C["bottle"], 290)
         if C.get("pill"):
             base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 360))
-            c = _render(P, C["pill"], 290, by="width")
+            c = _render(P, C["pill"], round(290 * C.get("pill_scale", 1)), by="width")
             base.alpha_composite(c, (W // 2 - 125 - c.width // 2, 570 - c.height // 2))
         else:
             base.alpha_composite(b, (W // 2 - b.width // 2, 360))
