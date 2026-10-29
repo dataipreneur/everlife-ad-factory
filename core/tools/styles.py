@@ -95,7 +95,7 @@ class TikTok:
 
     def top(self):
         img = self.bl.canvas()
-        img.alpha_composite(_logo(self.bl, self.P, (255, 255, 255), 230), ((W - 230) // 2, SY0 + 8))
+        img.alpha_composite(_logo(self.bl, self.P, (255, 255, 255), 358), ((W - 358) // 2, SY0 + 8))
         heads = [_cased(h.title(), self.C) for h in self.C["head"]]
         d0 = ImageDraw.Draw(img)
         f = self.head
@@ -145,7 +145,7 @@ class TikTok:
         # bottom fade so the transparent proof row stays legible on a light card
         bl.gradient_band(base, self.block_top - 380, H, 0, 255)
         d = ImageDraw.Draw(base)
-        base.alpha_composite(_logo(bl, P, self.NAVY, 240), ((W - 240) // 2, SY0 + 8))
+        base.alpha_composite(_logo(bl, P, self.NAVY, 373), ((W - 373) // 2, SY0 + 8))
         tf = _font(bl, HN, 60, "Bold")
         heads = [_cased(ln.title(), C) for ln in C["end_head"]]
         while max(d.textlength(ln, font=tf) for ln in heads) > SAFE_W and tf.size > 30:
@@ -153,9 +153,12 @@ class TikTok:
         for i, ln in enumerate(heads):
             bl.centered(d, 205 + 68 * i, ln, tf, self.NAVY)
         b = _render(P, C["bottle"], 300)
-        base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
-        c = _render(P, C["pill"], 300, by="width")
-        base.alpha_composite(c, (W // 2 - 130 - c.width // 2, 560 - c.height // 2))
+        if C.get("pill"):
+            base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
+            c = _render(P, C["pill"], 300, by="width")
+            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, 560 - c.height // 2))
+        else:
+            base.alpha_composite(b, (W // 2 - b.width // 2, 345))
         lab = _font(bl, HN, 32, "Bold")
         bl.centered(d, 668, _cased(C["ingredients_label"].title().replace("3-In-1", "3-in-1"), C), lab, self.NAVY)
         layers = [("end.png", self.end_t, 99)]
@@ -206,7 +209,7 @@ class Editorial:
         bl = self.bl
         img = bl.canvas()
         bl.gradient_band(img, 0, 520, 150, 0)
-        img.alpha_composite(_logo(bl, self.P, self.IVORY, 210), ((W - 210) // 2, SY0 + 10))
+        img.alpha_composite(_logo(bl, self.P, self.IVORY, 327), ((W - 327) // 2, SY0 + 10))
         d = ImageDraw.Draw(img)
         kicker = self.C.get("kicker", "")
         if kicker:
@@ -256,7 +259,7 @@ class Editorial:
         ImageDraw.Draw(glow).ellipse([200, 360, 880, 800], fill=(196, 160, 98, 70))
         base.alpha_composite(glow.filter(ImageFilter.GaussianBlur(130)))
         d = ImageDraw.Draw(base)
-        base.alpha_composite(_logo(bl, P, self.IVORY, 230), ((W - 230) // 2, SY0 + 8))
+        base.alpha_composite(_logo(bl, P, self.IVORY, 358), ((W - 358) // 2, SY0 + 8))
         hf = _font(bl, f"{SUP}/Baskerville.ttc", 60, "Italic")
         for i, ln in enumerate(C["end_head"]):
             t = ln.title() if "+" in ln else (ln.capitalize() if i == 0 else ln.lower())  # keep drug names capitalised
@@ -266,9 +269,12 @@ class Editorial:
                 f = _font(bl, f"{SUP}/Baskerville.ttc", f.size - 2, "Italic")
             bl.centered(d, 214 + 72 * i, t, f, self.IVORY)
         b = _render(P, C["bottle"], 290)
-        base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 360))
-        c = _render(P, C["pill"], 290, by="width")
-        base.alpha_composite(c, (W // 2 - 125 - c.width // 2, 570 - c.height // 2))
+        if C.get("pill"):
+            base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 360))
+            c = _render(P, C["pill"], 290, by="width")
+            base.alpha_composite(c, (W // 2 - 125 - c.width // 2, 570 - c.height // 2))
+        else:
+            base.alpha_composite(b, (W // 2 - b.width // 2, 360))
         bl.centered(d, 680, "   ".join(C["ingredients_label"].upper()), self.label, self.GOLD)
         base.save(f"{L}/end.png")
         layers = [("end.png", self.end_t, 99)]

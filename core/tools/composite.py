@@ -76,6 +76,7 @@ def main():
     ap.add_argument("--capsule", default="right", choices=["right", "left", "none"])
     ap.add_argument("--light", default="right", choices=["left", "right"])
     ap.add_argument("--product", default="", help="product id, e.g. restora-z (renders from its skill assets)")
+    ap.add_argument("--form", default="", help="product form from product.json \"forms\" (e.g. spray / sublingual)")
     ap.add_argument("--bottle", default="")
     ap.add_argument("--pill", default="")
     a = ap.parse_args()
@@ -83,8 +84,11 @@ def main():
         if not a.product:
             raise SystemExit("❌ pass --product <id> (or both --bottle and --pill); the product is never guessed")
         PR = product.load(a.product)
-        a.bottle = a.bottle or product.asset(PR, PR["renders"]["bottle"])
-        a.pill = a.pill or product.asset(PR, PR["renders"]["pill"])
+        _b, _p = product.renders_for(PR, {"form": a.form} if a.form else None)
+        a.bottle = a.bottle or product.asset(PR, _b)
+        a.pill = a.pill or (product.asset(PR, _p) if _p else "")
+        if not a.pill:
+            a.capsule = "none"
     W, H = SIZES[a.ratio]
     scene = ImageOps.fit(Image.open(a.scene).convert("RGB"), (W, H), Image.LANCZOS).convert("RGBA")
     b = Image.open(a.bottle).convert("RGBA")

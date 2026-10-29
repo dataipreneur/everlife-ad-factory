@@ -2,6 +2,38 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — 9:16 proof footer back inside the Meta safe area (Mitansh, after a live Reels screenshot)
+The bottom-anchored footer (2026-10-27) sat under Meta's "Learn more" button and caption in a real Reels placement
+(`core/references/safe-zones/reels_placement_2026-10-29.jpg`; numbers confirmed against the team's Safe zones page).
+- `core/tools/safezones.py`: `EVERLIFE_PROOF_AT` defaults to `safe` again (footer ends at y 1385, the bottom of the Reels safe area; the footer may cross the profile notch, Mitansh 2026-10-29); `bottom` kept behind the env var for old jobs. `full_layout.py` / `finish_modern.py` / `styles.py` follow it.
+- `core/tools/finish_batch.py`: 9:16 footer ends at y 1385 inside the 768 px safe column (disclaimer wraps to 4 lines), scrim fades
+  in above and out below it; refuses (exit 2) when the raw's content runs under the footer (edge-density `content_bottom`);
+  safe-zone check on footer + logo; `--fit force` for QA previews. Feed ratios unchanged. A `--fit auto` inset was tried and dropped.
+- Prompts: 9:16 LAYOUT block in all three `image-batch.md` (everything in the top 52%, bottom 48% calm), "Footer position" note with
+  the one-edit fix for old raws; lessons + finishing.md updated. Smoke 12/12.
+- Existing 9:16 finals (PT-141 batches 1–3, Restora batch-2/3 + cosmic-20, Sermorelin batch-1) were composed to the bottom and need
+  the reposition edit before re-finishing (credits → user OK).
+
+## 2026-10-28 — Everlife logo bigger at the top (Mitansh: +35%, then +15% more ≈ 1.55×), all products
+Shared tools, so every product skill picks it up (`skills/*/core` → `core/`): `finish_batch.py` LOGO_W 200→311; `full_layout.py`
+280→435 / 260→404 (LOGO_H strip SY0+70→SY0+80 to clear the taller mark); `build_layers.py` 300→466; `styles.py` 230→358, 240→373,
+210→327; `finish_modern.py` 190→296; `core/scripts/finish_image.py` 240→373. Logo asset is 1684×242, so heights grow 29→45 px (batch) and 40→63 px (video).
+Originals in `_originals/2026-10-28/logo-135/`. PT-141 batch 2 re-finished with the new size.
+
+## 2026-10-28 — PT-141 skill (branch `pt-141-skill`, local only, not pushed)
+New skill `skills/everlife-pt-141/` built with Mitansh: two forms (nasal spray + sublingual tablet, both in scope), audience Men /
+Women / Both, the agreed angle ("everyone else sells the ability; PT-141 sells the wanting"; unplanned nights; your body changed).
+- `product.json` adds `"forms"` (per-form bottle/pill renders + label wording); copy.json names the form (`"form": "spray|sublingual"`).
+- Shared tools: `product.renders_for()`; the pill render is now optional (`full_layout.py`, `build_layers.py`, `styles.py` centre the
+  bottle alone when a form has no tablet); `composite.py --form`. Regression vs `logo-top-type-variety`: identical 124 / different 0;
+  smoke 12/12. PT-141 end cards rendered for both forms (no credits).
+- References: bible page (verbatim + pre-screen + the agreed angle), image-batch (F13 "Portrait + line", form-aware prompt template),
+  video-prompting (shoulder-up, no beds), 6 style files, lessons (incl. the creative team's Restora feedback), research brief for the
+  Pinterest reference library, 9 team references picked from Emily's PT-141 Drive folder (`references/team-refs/`), winners placeholder.
+- Docs fix: the video look key is `default` (house), not `house` (Sermorelin finishing.md corrected too).
+- Open: Marketing Studio registration for PT-141 (preflight prints the command); Jeremy on the three "Pending approval" headlines and
+  "Gentle on the Vascular System"; a larger transparent tablet render; PT-141 performance data for winner cards; screened reviews.
+
 ## 2026-10-28 — Creative lead: Everlife logo at the TOP of statics; vary type and colour per ad (branch `logo-top-type-variety`)
 Two rules from Mitansh after the first Sermorelin GHK batch, applied to every product skill:
 - `core/tools/finish_batch.py`: the logo moved out of the footer to the top safe band (9:16 y=150, feed y=60/56; 200 px wide,

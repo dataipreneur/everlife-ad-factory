@@ -24,7 +24,7 @@ Feed (4:5, 1:1): 60 px margin.
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
-{"product": "sermorelin-ghk", "style": "house|tiktok|editorial", "kicker": "optional label for editorial",
+{"product": "sermorelin-ghk", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<bible>", "<bible>", "<bible>"],
  "ingredients_label": "3-IN-1 PEPTIDE SUPPORT",
@@ -44,10 +44,12 @@ one-word chunks, restore "?", re-run. Check 4 frames (hook, mid, product, end ca
 
 **Review burst:** gated (no screened reviews yet, see `reviews.md`).
 
-Looks: `house` · `tiktok` · `editorial`; vary across a batch. Women: prefer `tiktok`/`editorial` (the `house` navy/gold
+Looks: `default` (house navy/gold) · `tiktok` · `editorial`; vary across a batch. Women: prefer `tiktok`/`editorial` (the `house` navy/gold
 is fine; check nothing reads orange).
 
 ## 3. Image finishing
+9:16 statics: the proof footer ends at y 1385 (bottom of the Reels safe area; see image-batch.md "Footer position"), never at the bottom of the frame.
+
 Batch Mode: `finish_batch.py --product sermorelin-ghk` (see `image-batch.md`). `finish_modern.py` refuses this
 product until its `product_zones` (the colours that let it find the bottle and tablet in a photo) are calibrated in
 product.json. Legacy `core/scripts/finish_image.py` layouts work (`standard`, `checklist`, `article`, `letter`, `split`,
