@@ -2,6 +2,23 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Local creative bible re-imported from the master (v3, 48 pages) (outside the repo)
+Logged before editing. Priestley exported the master ("Creative Messaging.pdf", Claude Design project 8cc4e3fe…, file
+"Creative Messaging Reference.dc.html") and approved update 1 only: replace `~/.claude/everlife/creative-bible.md`
+(27 Oct import of Parts A/B/C) with the full v3 text. Old copy backed up to `~/.claude/everlife/_originals/2026-10-29/`.
+What v3 changes (reviewed with Priestley; NOT yet applied to any skill or tool):
+- Creative standards: "Women's creative: pinks, tans and beige. No oranges or greens." removed (palette now only on
+  GHK-Cu Cream and Glow Stack pages).
+- New "Creative direction guidelines" page: tablets held (thumb + index "pull" or open palm); "[Product] by Everlife" in
+  every intro; video hook within 2.5 s; logo 40% width (9:16) / 31% (4:5), 3.5% height; disclaimer at the bottom, 2 lines
+  max, 13 px min; mobile text minimum blank ("confirm w/ Justin"); 50% trust-focused / 50% minimalist trust callouts
+  (conflicts with the global "every ad carries visible social proof").
+- New "Safe zones" page (matches the toolkit). Sermorelin GHK: Justin's update now in the master; new men's direction
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel."
+- New product pages (Wolverine, Klow, GHK-Cu/Epithalon, Glow Stack, NAD+); plain Sermorelin adds "Double Strength
+  Sermorelin" lines; Restora-Z page changed (Restora skill untouched; for Mitansh).
+Skill and toolkit updates (items 2–4) were offered and not approved yet.
+
 ## 2026-10-29 — Sermorelin GHK lesson: mute (don't duck) the original voice under a re-voiced line (branch `sermorelin-first-batch`)
 Logged before editing. Priestley heard "two voices" in the Pilates video: the original (mispronounced) line was only
 turned down to 5% under the cloned-voice line. Fixed in Pilates and Kettlebell v2 (volume 0 for that window).
