@@ -2,6 +2,18 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK 9:16: 2-line bottom disclaimer; pictures use more of the frame (team feedback)
+Logged before editing. Feedback on the latest image with the bottom disclaimer: "always keep that disclaimer to 2 lines
+total (not 3)" and "use as much of the artboard as possible around the safe zones".
+- `core/tools/finish_batch.py` + `full_layout.py` (only with the product's `"disclaimer_at": "bottom"`): the bottom
+  disclaimer fits 2 lines across the full width (≈19 px for the Sermorelin GHK text; never below the 13 px minimum).
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` 9:16 LAYOUT: only TEXT (logo band, headline, lines, badges)
+  is held to the safe column; pictures (product, hands, people, background) run full-bleed and down to ~64% of the height
+  (just above the Trustpilot row at y ≈1280); ask for the lowest element at ~56% because the model lands it lower.
+- `references/video-prompting.md` block 7: faces / product / hands between 8% and 58% (captions now sit just above the
+  Trustpilot row), full-bleed scene.
+Originals in `_originals/2026-10-29/disc2-fullbleed/`.
+
 ## 2026-10-29 — Sermorelin GHK setup question: women's colour note brought in line with Justin's direction
 Logged before editing. SKILL.md step 1 still said "Women → pinks, tans, beige; never orange or green" (pre-Justin). Now
 points to image-batch.md §2b (preferred pinks/tans/neutrals/warm/white/teal, no colour banned) and adds the men's casting.

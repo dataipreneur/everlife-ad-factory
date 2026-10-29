@@ -181,12 +181,16 @@ def bottom_layer():
         ty += 27
     if lines:
         note((sz.FOOT_X0, disc_y, W - sz.FOOT_X0, ty), "disclaimer")
-    if DISC_BOTTOM:   # the disclaimer alone at the very bottom, full width (intentional exception to the safe area)
-        dl = bl.wrap(d, bl.DISCLAIMER, DISC, W - 80)
+    if DISC_BOTTOM:   # the disclaimer alone at the very bottom, full width, 2 lines (intentional exception to the safe area)
+        df, _s = DISC, 21
+        while len(bl.wrap(d, bl.DISCLAIMER, df, W - 80)) > 2 and _s > 13:
+            _s -= 1
+            df = bl.font(bl.AV, _s, "Medium")
+        dl = bl.wrap(d, bl.DISCLAIMER, df, W - 80)
         bl.gradient_band(img, H - 27 * len(dl) - 200, H, 0, 225)
         ty = H - 48 - 27 * len(dl)
         for ln in dl:
-            bl.centered(d, ty, ln, DISC, (236, 236, 232))
+            bl.centered(d, ty, ln, df, (236, 236, 232))
             ty += 27
     return img
 

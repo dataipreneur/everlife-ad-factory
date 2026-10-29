@@ -80,10 +80,9 @@ lines where it likes. So every script is built for one fixed edit step (`finishi
 5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.
 7. **Safe-zone composition (always for 9:16; the footer sits in Meta's safe area by default, ending at y 1385):** "Keep faces, the bottle,
-   the tablet, hands and every key action inside the central column (8% in from the left and right edges) and between 8%
-   and 50% of the frame height, framed high; the bottom half of the frame is calm background only (table top, floor,
-   torso out of focus)." The captions, Trustpilot row and disclaimer sit just above y 1385 (~55–72%) and would cover anything
-   lower (2026-10-29: they covered the tablet and label in three videos).
+   the tablet, hands and every key action between 8% and 58% of the frame height; the scene fills the whole frame
+   edge to edge; below 60% only the scene continues (table top, floor, torso out of focus)." Captions sit at ~59–63% and
+   the Trustpilot row at ~67–72%; the disclaimer is alone at the very bottom (Sermorelin GHK, 2026-10-29).
 8. **Headroom:** "Keep every person's head and face below the top 25% of the frame for the whole clip."
 9. **Closing guards:** "No on-screen text, captions, logos or watermarks; no readable words except the product label.
    Nobody says 'I' or 'my'. No before-and-after imagery, no shirtless bodies, no needles, syringes or vials."

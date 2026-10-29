@@ -181,10 +181,12 @@ or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white backgrou
 once per batch>; any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
-LAYOUT (9:16): 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
-the Everlife logo is laid there. EVERYTHING ELSE (headline, benefits, bottle, tablet) sits in the TOP 52% of the canvas;
-the lowest element ends at 50% height. The BOTTOM 48% is calm continuation of the background (surface, wall, fabric: no
-text, no product, no hands, no key objects): the proof footer is laid at ~61–72% and Meta's Reels/Stories UI covers the rest.
+LAYOUT (9:16, Sermorelin GHK, 2026-10-29: "use as much of the artboard as possible around the safe zones"): the TOP 12%
+is calm continuation of the background (the Everlife logo is laid there). ALL TEXT (headline, name, lines, badges) stays
+inside the central column (15% in from the left and right edges). PICTURES are full-bleed: the product, hands, person and
+scene may use the whole width and come down to 56% of the canvas height (the model lands ~8% lower; the Trustpilot row
+sits at ~67–72%). Below that, the scene simply continues (floor, surface, fabric) with no text, product or hands: Meta's
+UI and the bottom disclaimer sit there.
 LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
 ```
 > GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at

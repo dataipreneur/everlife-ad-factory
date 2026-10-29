@@ -271,7 +271,14 @@ def main():
         sc_layer = scrim(W, foot.height, tone, top_fade=120, bottom_fade=160)
         o.alpha_composite(sc_layer, (0, fy - 120))
         if DB:   # product opt-in (Sermorelin GHK feedback 2026-10-29): the disclaimer alone at the very bottom of the frame
+            global DISC_SIZE, DISC_LH
+            _keep = (DISC_SIZE, DISC_LH)
+            _d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+            while len(wrap(_d0, a.disclaimer, sans(DISC_SIZE), W - 80)) > 2 and DISC_SIZE > 13:   # 2 lines (team, 2026-10-29)
+                DISC_SIZE -= 1
+                DISC_LH = int(round(DISC_SIZE * 1.25))
             dfoot = build_footer(W, tone, a.disclaimer, W - 80, parts_on=False)
+            DISC_SIZE, DISC_LH = _keep
             dsc = scrim(W, dfoot.height + 40, tone)
             o.alpha_composite(dsc, (0, H - dsc.height))
             o.alpha_composite(dfoot, (0, H - dfoot.height - 40))
