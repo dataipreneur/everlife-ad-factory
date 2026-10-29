@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK lesson: never place the product name "beside" a prop
+Logged before editing. Batch-9 ad 5: "SERMORELIN GHK" asked "beside the bottle on the right" landed on the coffee mug and
+read as a mug print. `references/image-batch.md` §2c + `lessons.md`: name placements are fixed text positions (top, under
+the headline, lower-third band, split panel), never "beside" an object; props stay plain.
+
 ## 2026-10-29 — Sermorelin GHK: per-batch variety plan (scene, light, composition, name placement), men + women
 Logged before editing. Batch 9 (men) came out as five near-identical dark-gym ads ("is it always using the same theme?").
 Root causes: the variety rules covered font, accent, ad type, headline and hold but not scene / light / composition;

@@ -120,8 +120,9 @@ bottle right" picture). Before writing prompts, give every ad its own row in eac
   overcast soft. Never 4 dark ads.
 - **Composition:** person-led photo / macro product close-up (tablet fills the frame, bottle behind) / text-led article or
   letter / split screen / still life on a surface / product held toward the lens. At most 2 "hand + bottle side by side".
-- **Name placement:** "SERMORELIN GHK" top, lower third, beside the product, on a band, or as part of the headline:
-  not the same spot twice in a row.
+- **Name placement:** "SERMORELIN GHK" at the top, directly under the headline, on a lower-third band, in the text panel
+  of a split layout, or as part of the headline: not the same spot twice in a row. Never "beside" an object (batch 9: it
+  landed on a coffee mug and read as a mug print); props stay plain, and the name is always big.
 - **Winners give layout and structure only.** Their scene, haze and colour are NOT copied (all men's winners are dark
   gyms); pick the scene from the rotation above.
 - **After generating,** look at the contact sheet: two ads that read as the same picture → re-roll one before showing.

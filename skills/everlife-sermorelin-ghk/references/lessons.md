@@ -176,3 +176,5 @@ Compliance traps:
 - Variety rules covered font / colour / ad type / headline / hold, but not scene, light or composition, so those defaulted
   to "dark gym, name on top, hand left, bottle right". Winners-first also copied the winners' dark-gym mood, and the men's
   "hardcore training" direction was applied to every scene instead of to the casting. Fix: §2c variety plan (image-batch.md).
+- Product name asked "beside the bottle" was printed on the coffee mug next to it. Place the name in a text position
+  (top / under the headline / band / panel), never next to a prop.
