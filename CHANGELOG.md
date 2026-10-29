@@ -56,6 +56,12 @@ Renders + tests (same day, evening):
   GHK only" to include plain Sermorelin (not edited here, to avoid a conflict).
 - `references/pinterest/`: the same 19 screened pins as Sermorelin GHK, re-checked for plain Sermorelin, with a new
   header (best fits, green/orange backgrounds banned for women, wording traps). SKILL.md + image-batch §2 follow the order.
+- Pinterest, Restora method: Restora-Z's set (Mitansh's package; board links never recorded) is ~70 pins of **same-category**
+  modern DTC ads (sleep brands) + 20 DOC examples, sorted into 12 ad types; the GHK set was generic idea-page searches.
+  A helper agent searched ~65 Pinterest Ideas pages (~735 pins) for men's health / healthy aging / longevity / women 40+
+  wellness ads; Claude looked at all 66 shortlisted and kept 58 (`references/pinterest/<type>/cat_*.jpg`, 7 MB) with a
+  table (layout to take, what not to copy, source page). Dropped 8 (same-person before/after, abs shot, intimate, lips
+  macro, sauna towel, stroke ad, duplicate). Still thin: sticky notes, men 50+ training, "new and improved" side-by-sides.
 
 ## 2026-10-28 — Mitansh's post-zip Restora changes ported (branch `mitansh-sync`)
 Mitansh's Mac (fingerprint `3be3a588e802`) differed from the zip this repo started from (`4d128f8be668`) in five files.
