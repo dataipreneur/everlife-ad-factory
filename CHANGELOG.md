@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: 9:16 statics test (safe zone) and the workflow that passed (branch `sermorelin-first-batch`)
+Logged before editing. Test (1 men + 1 women, 9:16, `--proof-at safe`): first takes failed (the model put the product
+low, the footer covered the tablet / label; men's pills ran into the side zones). Priestley chose "native 9:16 + fix
+edits". What passed: one reposition edit per image (top 15% empty, all text 15% in from the sides, product ends above
+52%, below 55% calm) and, if the finisher's logo nudge pushes the product into the footer, `--shift <px>` (60 worked).
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` (9:16 note) + `lessons.md`: that workflow.
+Cost of the test: 4 Creatify credits.
+
 ## 2026-10-29 — Static finisher: stronger backing behind the 9:16 safe-zone footer (branch `sermorelin-first-batch`)
 Logged before editing. Priestley: "the footer should be clearly visible". In `--proof-at safe` the band behind the
 Trustpilot row + disclaimer is now ~88% opaque (was ~73%); `scrim()` gains an `opacity` argument (default unchanged, so
