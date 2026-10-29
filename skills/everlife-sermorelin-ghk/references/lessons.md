@@ -157,3 +157,4 @@ Compliance traps:
 ## Justin's women's colour direction (2026-10-29)
 - Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
   Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
+- Statics: product name only ("SERMORELIN GHK"), no "by Everlife" (Priestley, 2026-10-29). Videos keep "by Everlife".

@@ -81,7 +81,7 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    resting on a bench with the palm up, two fingers offering it forward…; never the same hold or angle twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK by Everlife" present; the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
+   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -154,7 +154,7 @@ split "Sermorelin" or "GHK" across two lines or hyphenate them.
 
 TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
 badges, prices, website, disclaimer):
-  Name: "SERMORELIN GHK by Everlife"   (big; "by Everlife" smaller; every ad, bible v3 + team feedback 2026-10-29)
+  Name: "SERMORELIN GHK"   (big, every ad; NO "by Everlife" on statics: the logo is at the top; Priestley, 2026-10-29)
   Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 

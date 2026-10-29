@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK statics: product name without "by Everlife" (branch `sermorelin-first-batch`)
+Logged before editing. Priestley: "for Image Ads we don't need 'by Everlife' along with 'Sermorelin GHK'". Statics show
+"SERMORELIN GHK" big (the Everlife logo already sits at the top); videos keep "Sermorelin GHK by Everlife" in the header
+and the spoken intro (bible v3 "[Product] by Everlife" in intros, scripts and voiceovers).
+- `skills/everlife-sermorelin-ghk/references/image-batch.md`: template Name line and QA; `SKILL.md` product truths;
+  `references/lessons.md` note.
+Originals in `_originals/2026-10-29/statics-name/`.
+
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
 copy log. Priestley approved reuse: bible headlines / CTAs may come back, least-recently-used first; never twice in one
