@@ -37,7 +37,7 @@
   Sermorelin has no palette limit. Women's colours follow Justin's preferences (`image-batch.md` §2b). The orange bottle
   and tablet are never recoloured.
 - **Intro:** images say "SERMORELIN" only, never "by Everlife" (Priestley, 2026-10-29: overrides the bible line below
-  for statics; the Everlife logo is on every ad). Videos: "Sermorelin by Everlife" in the header and first spoken line
+  for statics; the Everlife logo is on every ad). Videos KEEP it (Priestley, 2026-10-29): "Sermorelin by Everlife" in the header and first spoken line
   (bible v3 page 4, "Product first, then
   brand").
 - **Offer:** "Save up to 65%" (percent-off, usable). No $ prices by default (creative standard: percent-off unless a price
