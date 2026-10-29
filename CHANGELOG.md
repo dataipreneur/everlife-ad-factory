@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — "Sermorelin GHK by Everlife" on the end card too, with a lowercase "by" (branch `sermorelin-first-batch`)
+Logged before editing. Priestley: the product line should show the whole time (end card included) and read "by", not "By".
+- `skills/everlife-sermorelin-ghk/product.json` `keep_case`: adds "Sermorelin GHK by Everlife" (first), so the title-cased
+  header keeps a lowercase "by".
+- `core/tools/styles.py` TikTok end card: when a job sets `"head_always"`, the header line is drawn under the logo on the
+  end card too and the card moves down 44 px more (only jobs with `head_always`; other output unchanged).
+Originals in `_originals/2026-10-29/brandline/`.
+
 ## 2026-10-29 — Sermorelin GHK lessons: re-check captions after every re-cut; no dead air (branch `sermorelin-first-batch`)
 Logged before editing. Morning v2 showed "CERMERELLIN": re-running `full_layout.py` on a re-cut clip re-transcribed and
 overwrote the hand-fixed captions. Boxing v2 "stopped": ~2 s with no speech and a still shot before the end card.

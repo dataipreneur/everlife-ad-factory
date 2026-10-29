@@ -148,6 +148,14 @@ class TikTok:
         base.alpha_composite(_logo(bl, P, self.NAVY, 373), ((W - 373) // 2, SY0 + 8))
         # safe-area footer (no END_DY shift): start the card below the taller logo and keep the tablet off the label
         dy, pw = (0, 300) if sz.BOTTOM_MODE else (44, 250)
+        if C.get("head_always") and C.get("head"):
+            # the product line stays on screen the whole time, end card included (Sermorelin GHK feedback, 2026-10-29)
+            bf = _font(bl, HN, 34, "Bold")
+            brand = _cased(C["head"][0].title(), C)
+            while d.textlength(brand, font=bf) > SAFE_W and bf.size > 24:
+                bf = _font(bl, HN, bf.size - 1, "Bold")
+            bl.centered(d, 214 + dy, brand, bf, self.NAVY)
+            dy += 44
         tf = _font(bl, HN, 60, "Bold")
         heads = [_cased(ln.title(), C) for ln in C["end_head"]]
         while max(d.textlength(ln, font=tf) for ln in heads) > SAFE_W and tf.size > 30:
