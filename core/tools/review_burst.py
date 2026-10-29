@@ -14,6 +14,9 @@ HIGHLIGHT = None  # product-name regex to highlight; full_layout sets it from pr
 
 
 def font(size, name="Regular"):
+    if not os.path.exists(AV) or os.environ.get("EVERLIFE_FONT_FALLBACK") == "1":   # Windows (WSL) / Linux
+        import build_layers
+        return build_layers._fallback(AV, size, name)
     for i in range(20):
         try:
             f = ImageFont.truetype(AV, size, index=i)

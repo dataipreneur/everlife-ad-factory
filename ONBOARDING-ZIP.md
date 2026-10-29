@@ -5,9 +5,32 @@ You do not need a GitHub account, git, Python or the command line: Claude Code d
 
 Allow about 40 minutes. Nothing in steps 1 to 4 spends credits.
 
-**A Mac is required.** The tools don't run on Windows yet: talk to Mitansh first if you only have a Windows PC.
+Works on a **Mac** or a **Windows PC** (Windows: do Step 0 first).
 
 The zip contains Everlife's creative bible and compliance rules. Keep it to yourself: don't forward or upload it.
+
+---
+
+## Step 0. Windows only: set up Ubuntu first (20 minutes, once)
+
+The ad tools run inside **Ubuntu**, Microsoft's built-in Linux for Windows (called WSL). You need Windows 10 (version
+2004 or newer) or Windows 11. On a Mac, skip to Step 1.
+
+1. Click Start, type **PowerShell**, right-click it and choose **Run as administrator**.
+2. Type `wsl --install` and press Enter. When it finishes, **restart the PC**.
+3. After the restart an **Ubuntu** window opens. Choose a username and password (any you like; write the password down:
+   you'll need it once more). If no window opens, click Start and type **Ubuntu**.
+4. In the Ubuntu window, paste this line and press Enter (it asks for that password; the typing stays invisible):
+   `sudo apt update && sudo apt install -y git unzip curl python3-venv python3-pip`
+5. Install **Claude Code inside Ubuntu** (ask Mitansh for the Linux install line), then start it by typing `claude` in
+   the Ubuntu window. **From now on, always open Claude Code from the Ubuntu window** for ad work.
+
+Windows tips:
+- Sign-ins (Higgsfield, Creatify, GitHub) print a web link: hold Ctrl and click it, or copy it into your browser.
+- Your finished ads live in Ubuntu. To open the folder in File Explorer, ask Claude: `open my ads folder in Explorer`
+  (it runs `explorer.exe ~/Everlife-Creative/output`). You can also paste
+  `\\wsl$\Ubuntu\home\<your Ubuntu username>\Everlife-Creative\output` into File Explorer's address bar.
+- Video ads made on Windows use open fonts (Inter, Fraunces) instead of Apple's, so the type looks slightly different.
 
 ---
 
@@ -24,9 +47,13 @@ for the install link.
 
 ## Step 2. Unzip it in the right place (2 minutes)
 
+**Mac:**
 1. Double-click the zip in your Downloads folder. A folder called **everlife-ad-factory** appears.
 2. Move that folder into your **home folder** (in Finder: Go → Home, or press Shift-Command-H), so it sits at
    `~/everlife-ad-factory`. It must stay there: the tools look for it in that exact place.
+
+**Windows:** leave the zip in your Windows Downloads folder and **don't** extract it with File Explorer (that breaks it).
+Claude unzips it into Ubuntu for you in Step 3.
 
 Don't rename the folder or move files around inside it.
 
@@ -41,10 +68,13 @@ Don't rename the folder or move files around inside it.
 Please set up the Everlife ad factory on this Mac for me. I am not technical: do every step yourself, explain what you
 are doing in one plain sentence per step, and only stop when you need me to click something. Do not spend any credits.
 
-1. Check that the folder ~/everlife-ad-factory exists and contains install.sh. If it is somewhere else (for example
-   still in Downloads), tell me and help me move it to my home folder.
-2. Apple developer tools: run "xcode-select -p". If they are missing, run "xcode-select --install", tell me to click
-   Install in the window that opens, and wait until I say it has finished.
+1. Find the ad tools. On a Mac: check that ~/everlife-ad-factory exists and contains install.sh; if it is somewhere
+   else (for example still in Downloads), help me move it to my home folder. On Windows (inside Ubuntu, WSL): find the
+   newest everlife-ad-factory_*.zip in /mnt/c/Users/*/Downloads and unzip it into my Ubuntu home folder with
+   "unzip -q <zip> -d ~" (never into /mnt/c), so the tools end up in ~/everlife-ad-factory.
+2. Basic tools. On a Mac: run "xcode-select -p"; if they are missing, run "xcode-select --install", tell me to click
+   Install in the window that opens, and wait until I say it has finished. On Windows (Ubuntu): check that git, unzip,
+   curl and "python3 -m venv" work; if not, ask me to paste the apt line from Step 0 of the guide.
 3. Install it: run "bash ~/everlife-ad-factory/core/scripts/update.sh". It links the product skills, adds the Everlife
    creative rules to Claude Code, installs the finishing toolkit and checks every product. It can take a few minutes.
 4. Creatify plugin (makes the image ads): run
@@ -99,7 +129,8 @@ When Mitansh sends a new zip:
 
 1. Quit Claude Code.
 2. Delete the old `everlife-ad-factory` folder from your home folder (your finished ads are elsewhere and stay safe).
-3. Unzip the new zip and move the new `everlife-ad-factory` folder into your home folder, exactly like Step 2.
+3. Unzip the new zip and move the new `everlife-ad-factory` folder into your home folder, exactly like Step 2
+   (Windows: ask Claude "unzip the new ad tools zip from my Downloads into my Ubuntu home folder").
 4. Open Claude Code and type `update my ad tools`. It re-links everything and runs the checks.
 5. Quit Claude Code and open it again.
 
@@ -130,6 +161,7 @@ ambiguous: say "Sermorelin GHK" or "plain Sermorelin".
   about 1 credit each; a 15-second video is about 75.
 - **Claims come only from the creative bible.** The skills will not invent claims, and they stop and tell you when a
   brief asks for something the rules don't allow. That's working as intended: ask Jeremy if you think the rule is wrong.
+- **Windows:** always start Claude Code from the Ubuntu window, not from Windows itself.
 - **Don't edit the files in ~/everlife-ad-factory.** A new zip replaces the whole folder, so any edit is lost. If something
   should change, tell Mitansh or Priestley.
 

@@ -8,6 +8,9 @@
 - **Zip installs** (no `.git` folder in the repo): a new version comes as a new zip that replaces the whole folder
   (ONBOARDING-ZIP.md, "Getting a new version"); `update.sh` then re-links and checks. "Which version do I have?":
   read `VERSION` in the repo folder.
+- **Windows (WSL/Ubuntu):** the tools run unchanged; to show a file or folder use `explorer.exe <path>` (or `wslview`)
+  instead of macOS `open`; sign-in links open in the Windows browser; keep the repo in the Linux home, never under /mnt/c.
+  Videos use the bundled open fonts (Inter, Fraunces) because Apple's fonts are missing.
 - The people using these skills are often not technical: do the steps yourself, keep questions few and in plain words,
   and never ask them to edit files or code.
 - Never spend credits (Creatify, Higgsfield) without an explicit approval that shows the cost. Shared Everlife team credits.

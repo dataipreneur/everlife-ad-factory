@@ -5,6 +5,7 @@ Base207 / the Restora-Z bible page). full_layout.py imports it only for fonts, c
 every product value (disclaimer, benefits, CTA, renders) from the job's product.json + copy.json. Don't add product copy here.
 Everything important sits inside the 9:16 safe band y 143-1275.
 """
+import os
 import sys
 from PIL import Image, ImageDraw, ImageFont
 
@@ -16,7 +17,32 @@ AV_COND = "/System/Library/Fonts/Avenir Next Condensed.ttc"
 AV = "/System/Library/Fonts/Avenir Next.ttc"
 
 
+_FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "fonts")
+_WEIGHTS = [("ultra light", "ExtraLight"), ("extralight", "ExtraLight"), ("light", "Light"), ("heavy", "Black"),
+            ("black", "Black"), ("extrabold", "ExtraBold"), ("demi bold", "SemiBold"), ("semibold", "SemiBold"),
+            ("bold", "Bold"), ("medium", "Medium")]
+
+
+def _fallback(path, size, name):
+    """Apple system fonts are missing on Windows (WSL) and Linux: use the bundled open fonts, weight matched by name.
+    Avenir Next / Helvetica Neue / Arial → Inter; Baskerville → Fraunces (italic file for italic styles)."""
+    n = name.lower()
+    weight = next((w for k, w in _WEIGHTS if k in n), "Regular")
+    if "baskerville" in path.lower():
+        file, vname = ("Fraunces-Italic.ttf", "Italic" if weight == "Regular" else f"{weight} Italic") if "italic" in n \
+            else ("Fraunces.ttf", weight)
+        if vname.startswith(("Medium", "ExtraLight", "ExtraBold")):   # Fraunces has no Medium/ExtraLight/ExtraBold
+            vname = vname.replace("Medium", "SemiBold").replace("ExtraLight", "Light").replace("ExtraBold", "Bold")
+    else:
+        file, vname = "Inter.ttf", weight
+    f = ImageFont.truetype(f"{_FONTS}/{file}", size)
+    f.set_variation_by_name(vname)
+    return f
+
+
 def font(path, size, name):
+    if not os.path.exists(path) or os.environ.get("EVERLIFE_FONT_FALLBACK") == "1":
+        return _fallback(path, size, name)
     for i in range(20):
         try:
             f = ImageFont.truetype(path, size, index=i)

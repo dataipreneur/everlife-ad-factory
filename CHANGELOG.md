@@ -49,6 +49,14 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
   kept; tested with Finder/ditto and unzip); `update.sh` works without git (zip installs: skips the pull, re-installs
   and checks); `install.sh` re-creates a skill's `core` link if an unzip tool flattened it. README points to both.
   Originals in `_originals/2026-10-29/onboarding-zip/`.
+- Follow-up (logged before editing): **Windows support via WSL** (Priestley: "don't limit to Mac"). The tools run
+  unchanged inside WSL (Ubuntu): bash, symlinks, Python venv, the bundled ffmpeg. The one blocker was Apple system
+  fonts (Avenir Next, Helvetica Neue, Baskerville, Arial Unicode): `core/tools/build_layers.py` `font()` now falls
+  back to the bundled open fonts when an Apple font file is missing (sans → Inter, Baskerville → Fraunces, weight
+  matched by name). **Mac output unchanged** (regression identical); Windows videos use Inter/Fraunces, so they look
+  slightly different (Mitansh to review). Both onboarding guides gain a Windows section (install WSL + Ubuntu, Claude
+  Code inside Ubuntu, unzip/clone into the Linux home, open outputs with explorer.exe). Originals in
+  `_originals/2026-10-29/windows-wsl/`.
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,

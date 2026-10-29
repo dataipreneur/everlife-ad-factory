@@ -4,7 +4,31 @@ This guide gets you from nothing to your first finished, on-brand Everlife ad. Y
 the command line: Claude Code does the technical steps for you. You only click a few buttons and sign in to three
 websites.
 
-Allow about 45 minutes. Nothing in steps 1 to 4 spends credits.
+Allow about 45 minutes. Nothing in steps 1 to 4 spends credits. Works on a **Mac** or a **Windows PC** (Windows: do
+Step 0 first).
+
+---
+
+## Step 0. Windows only: set up Ubuntu first (20 minutes, once)
+
+The ad tools run inside **Ubuntu**, Microsoft's built-in Linux for Windows (called WSL). You need Windows 10 (version
+2004 or newer) or Windows 11. On a Mac, skip to Step 1.
+
+1. Click Start, type **PowerShell**, right-click it and choose **Run as administrator**.
+2. Type `wsl --install` and press Enter. When it finishes, **restart the PC**.
+3. After the restart an **Ubuntu** window opens. Choose a username and password (any you like; write the password down:
+   you'll need it once more). If no window opens, click Start and type **Ubuntu**.
+4. In the Ubuntu window, paste this line and press Enter (it asks for that password; the typing stays invisible):
+   `sudo apt update && sudo apt install -y git unzip curl python3-venv python3-pip`
+5. Install **Claude Code inside Ubuntu** (ask Mitansh for the Linux install line), then start it by typing `claude` in
+   the Ubuntu window. **From now on, always open Claude Code from the Ubuntu window** for ad work.
+
+Windows tips:
+- Sign-ins (GitHub, Higgsfield, Creatify) print a web link: hold Ctrl and click it, or copy it into your browser.
+- Your finished ads live in Ubuntu. To open the folder in File Explorer, ask Claude: `open my ads folder in Explorer`
+  (it runs `explorer.exe ~/Everlife-Creative/output`). You can also paste
+  `\\wsl$\Ubuntu\home\<your Ubuntu username>\Everlife-Creative\output` into File Explorer's address bar.
+- Video ads made on Windows use open fonts (Inter, Fraunces) instead of Apple's, so the type looks slightly different.
 
 ---
 
@@ -32,11 +56,12 @@ ask Mitansh for the install link.
 Please set up the Everlife ad factory on this Mac for me. I am not technical: do every step yourself, explain what you
 are doing in one plain sentence per step, and only stop when you need me to click something. Do not spend any credits.
 
-1. Apple developer tools: run "xcode-select -p". If they are missing, run "xcode-select --install", tell me to click
-   Install in the window that opens, and wait until I say it has finished.
+1. Basic tools. On a Mac: run "xcode-select -p"; if they are missing, run "xcode-select --install", tell me to click
+   Install in the window that opens, and wait until I say it has finished. On Windows (inside Ubuntu, WSL): check that
+   git, unzip, curl and "python3 -m venv" work; if not, ask me to paste the apt line from Step 0 of the guide.
 2. GitHub sign-in: if the "gh" command is missing, install the GitHub CLI without admin rights (use Homebrew if it is
-   installed, otherwise download the latest macOS zip for this Mac's chip from github.com/cli/cli/releases into
-   ~/.local/bin). Then run "gh auth login --hostname github.com --git-protocol https --web" in the background, show me
+   installed, otherwise download the latest release for this computer, macOS zip or Linux tar.gz, from
+   github.com/cli/cli/releases into ~/.local/bin, and make sure ~/.local/bin is on the PATH). Then run "gh auth login --hostname github.com --git-protocol https --web" in the background, show me
    the one-time code and the link in big letters, and wait while I paste the code in the browser and click Authorize.
    Then run "gh auth setup-git".
 3. Download the ad factory: if ~/everlife-ad-factory does not exist, run
@@ -113,6 +138,7 @@ ambiguous: say "Sermorelin GHK" or "plain Sermorelin".
 - **Claims come only from the creative bible.** The skills will not invent claims, and they stop and tell you when a
   brief asks for something the rules don't allow. That's working as intended: ask Jeremy if you think the rule is wrong.
 - **Update every Monday** (or when Mitansh says so): type `update my ad tools`.
+- **Windows:** always start Claude Code from the Ubuntu window, not from Windows itself.
 - **Don't edit the files in ~/everlife-ad-factory.** If something should change, tell Mitansh or Priestley. The update
   stops and tells you if it finds local edits.
 
