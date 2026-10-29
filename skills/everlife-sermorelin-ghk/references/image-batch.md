@@ -161,11 +161,11 @@ tee or long sleeve, no bare torso, no flexing poses.>
 burgundy / rose / blush; pink-led at most once per batch>, any warm palette (bible v3: no colour limit for Sermorelin GHK women); any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
-LAYOUT: 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
+LAYOUT: 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no product; the bigger bible-v3 logo sits there):
 the Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the
 proof footer is laid there. The whole product (bottle, tablets, hands, plinth tops) ends ABOVE 72% of the canvas height
 and all text above 76%.
-(For 4:5 and 1:1 the top band is 11%.) Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked
+(For 4:5 and 1:1 the top band is 14% too.) Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked
 (batch 4, 2026-10-29: "between 45% and 78%" gave 6 reposition edits in 7; "ends above 72%" gave 0 in 3).
 ```
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with

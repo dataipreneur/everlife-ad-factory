@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Shared finishing tools: bible v3 logo size + 2-line disclaimer (branch `sermorelin-first-batch`)
+Logged before editing. Bible v3 "Creative direction guidelines" (§03 logo sizing, §04 disclaimers). Approved by Priestley
+after before/after images (statics MA/WB/ME, video Track); **this changes Restora-Z's output too** (bigger logo, 2-line
+disclaimer); tell Mitansh. Restora's skill files are untouched.
+- `core/tools/finish_batch.py`: logo width 31% (4:5, 1:1) / 40% (9:16) of the canvas (was a fixed 200 px ≈ 18%); disclaimer
+  auto-fits to at most 2 lines (font 21 px down to the 13 px minimum, line width W-56).
+- `core/tools/full_layout.py`, `core/tools/styles.py`: video logo 432 px (40% of 1080) in all looks (was 210–280); the
+  opening header moves down 28 px to clear the taller logo; the disclaimer auto-fits to at most 2 lines (min 13 px).
+- `skills/everlife-sermorelin-ghk/references/image-batch.md`: the prompt's calm top band 11% → 14% for the bigger logo.
+- Installed toolkit (`~/Everlife-Creative/tools`) synced. Regression: expected differences in every finished picture
+  (logo/disclaimer); smoke test must pass.
+Originals in `_originals/2026-10-29/v3-logo-disclaimer/`.
+
 ## 2026-10-29 — Align with bible v3: women's palette, skill bible header, global rules file (branch `sermorelin-first-batch`)
 Logged before editing. Approved by Priestley:
 - `skills/everlife-sermorelin-ghk/references/image-batch.md`: v3 dropped "Women's creative: pinks, tans and beige. No
