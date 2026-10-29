@@ -58,7 +58,9 @@ Please install version 2 of the Everlife ad factory for me. I am not technical: 
    bash ~/.claude/skills/everlife-restora-z/core/scripts/preflight.sh
    bash ~/.claude/skills/everlife-sermorelin-ghk/core/scripts/preflight.sh
    bash ~/.claude/skills/everlife-pt-141/core/scripts/preflight.sh
-6. For every ❌ line, tell me in plain words what I need to do. The only things I may have to do myself are logging in to Higgsfield and connecting the Creatify plugin (step 3 of the guide).
+6. Run: claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp
+   (If it says the server already exists, that is fine.)
+7. For every ❌ line, tell me in plain words what I need to do. The only things I may have to do myself are logging in to Higgsfield and connecting the Creatify plugin (step 3 of the guide).
 ```
 
 ---
@@ -71,17 +73,20 @@ Type these yourself in the Claude Code chat. The `!` at the start runs the comma
   and pick the **Everlife** workspace (shared team credits, never your personal ones).
 - Creatify (images): the creatify-ad-agent plugin must be connected in Claude Code. If the preflight says it is missing,
   ask Mitansh for the plugin link; it is a one-time install.
+- Creatify models (Nano Banana for image batches): paste this once, then type `/mcp`, pick **creatify** and approve the sign-in:
+  `! claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp`
+  (Step 2's install prompt already runs the add command for you; you only do the sign-in.)
 
 Run step 2's preflight lines again until every line is ✅.
 
 ---
 
-## Step 4. Make your first PT-141 batch (test run, about 5 credits)
+## Step 4. Make your first PT-141 batch (test run, about 4 credits)
 
-In Claude Code, type: `make 5 PT-141 image ads`
+In Claude Code, type: `make 4 PT-141 image ads`
 
 Claude asks two short rounds of questions (form, hook angle, boldness, mood, how many). Pick the recommended answers
-the first time. It then shows you a table of five ads to approve. Approving costs about 1 Creatify credit per image.
+the first time. It then shows you a table of four ads to approve. Approving costs about 1 Creatify credit per image.
 
 When it finishes it opens a contact sheet and tells you the folder:
 `~/Everlife-Creative/output/PT-141/<date>_batch-<n>/` with `FINAL_*.png`, the raws and a `prompts.md`.
