@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: no elegant / italic serif headlines on men's ads (branch `sermorelin-first-batch`)
+Logged before editing. Reviewer on batch 4 M3 ("The Edge You've Been Missing": elegant high-contrast serif with a gold
+italic word): "men shouldn't use that font IMO". The bible has no font rule; this is review feedback relayed by Priestley.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` §2b: a men's rule under the font menu: no elegant
+  high-contrast serif, no serif-with-italic-word, no brush/handwritten accent for men's headlines; men pick from heavy
+  condensed grotesque (the winners' look), wide extended sans, slab serif, or bold sans; product name big in type.
+- `references/lessons.md`: the open question replaced by this decision.
+Originals in `_originals/2026-10-29/men-font/`.
+
 ## 2026-10-29 — Sermorelin GHK: women's colours opened up within the bible (branch `sermorelin-first-batch`)
 Logged before editing. Reviewer feedback on batch 4: "Pink is great for most women, but everything pink like that looks
 the same." Priestley: "open up colors". The bible says "Women's creative: pinks, tans and beige. No oranges or greens."

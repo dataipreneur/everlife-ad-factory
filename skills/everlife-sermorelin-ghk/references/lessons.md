@@ -134,4 +134,5 @@ Compliance traps:
 - **Men: the font on M3 ("The Edge You've Been Missing", elegant serif with a gold italic) was called "not right".** The
   bible has no font rule; the serif came from the creative lead's "vary fonts" rule. The bible lines that point the way:
   "Product names run big" (M3 showed the name only on the label) and "Reference top-performing, lowest-CPA creative"
-  (every men's winner uses heavy condensed caps). Open question for the creative lead whether men's ads keep to bold sans.
+  (every men's winner uses heavy condensed caps). Reviewer follow-up: "men shouldn't use that font IMO" → rule now: no elegant / italic serif or brush headlines on
+  men's ads (image-batch.md §2b).

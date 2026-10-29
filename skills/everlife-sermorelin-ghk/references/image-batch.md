@@ -108,6 +108,11 @@ shadows or outlines on type, product name big).
 | Brush / handwritten accent word inside a sans headline | regular sans |
 | Thin editorial sans, tracked out, all caps | serif body |
 
+**Men's ads (reviewer, 2026-10-29: "men shouldn't use that font", about an elegant serif with a gold italic word):** never
+the elegant high-contrast serif, the serif with an italic word, or the brush/handwritten accent for a men's headline. Men
+pick from: heavy condensed grotesque (the winners' look), wide extended bold sans, bold slab serif, chunky/bold sans;
+keep "SERMORELIN GHK" big in type (bible: "Product names run big"). The serif rows stay available for women.
+
 Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
 charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
 Product rules win: women's creative only pinks, tans, beige, cream, mocha, rose, burgundy (no orange, no green).
