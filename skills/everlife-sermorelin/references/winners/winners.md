@@ -41,8 +41,10 @@ back" (guarantee), "Save 70% vs HGH" (⚠), "Featured in NIH / Healthline / Mayo
 dad-bod goodbye", "Increases Human Growth Hormone", fat loss / fat burning / "Burn", "Sublingual tablets or injection",
 the vial, shirtless bodies, "Skip the needles". Women's winners are orange-heavy: today's rule says pinks/tans/beige.
 
-**Video winners on this Mac: M4 VIDEO82B and MV2 274068Video** (cards below; MV2 found 2026-10-29 in the "Sermorelin M"
-zip as "2b_circle tablet_274068_1x1_before avatar v2.mp4"). The rest aren't in Emily's "Sermorelin M" / "Sermorelin F"
+**Video winners on this Mac: M4 VIDEO82B, MV2 274068Video, MV3 Base56 and MV4 Base57** (cards below; MV2–MV4 found
+2026-10-29 in the "Sermorelin M" zip, matched to the all-time Meta export: Base56-05 13 sales $407, Base56-03 7 / $327,
+Base56-06 3 / $262, Base57-03 8 / $480, Base57-02 3 / $281; all Aug 2026, the newest men's winners). The "Sermorelin F"
+zip has no videos. The rest aren't in Emily's "Sermorelin M" / "Sermorelin F"
 Drive folders as downloaded 2026-10-28. Ask for these files (Ads Manager or whoever made them):
 - Men: **S3VIDEO2** (133 sales, $443), **Video#44A** (33, $392), **S3VIDEO4** (29, $310), **VID-7** (28, $349),
   Video#77B (12, $440), S3VIDEO1/3/5/6 (small).
@@ -129,6 +131,37 @@ box + warm orange light; 3.01 = grey name box + cooler light. Same copy.
 - **Rebuild with:** open on the pinched tablet + "SERMORELIN BY EVERLIFE" header and a VO line in the first second
   (Tier A "Double Strength Sermorelin" with the 1000 bottle); the features card becomes the end card with three ✅
   benefits + a bible CTA; no talking avatar unless it's a real Marketing Studio actor (lip-sync on stills is banned).
+
+### MV3 · Base56 (03 / 05 / 06) · video, 28 s, 9:16 + 1:1 · 23 sales across cuts, best ~$262–407 CPA · `MV3_BASE56.jpg`
+- **Format:** a "framed video": a fixed branded frame carries all the information while a small video window plays a
+  surreal monster battle (a gorilla eats the "S" tablet, grows a mech suit, fights a Godzilla-type creature in a burning
+  city). Frame: "POWER UP YOUR SERMORELIN" header + a cut-specific subhead ("Build momentum. Not excuses." / "Double
+  strength. Stay ready."), three benefit tiles down the right, tablet + bottle + vial bottom left, "2X STRONGER
+  SUBLINGUAL TABS / 50% STRONGER INJECTIONS", Trustpilot, "Starting at $95" badge, Doctor Prescribed / Shipped Free,
+  bible disclaimer. One-line captions. VO: "Power up your Sermorelin. Same Sermorelin you already trust. Now turned all
+  the way up. Double strength is built for the man who's done doing the minimum. One daily step that works alongside your
+  body, not against it. Available as sublingual tablets or injections. Make the switch today."
+- **Works:** everything readable with the sound off from the first second (header, benefits, proof, offer locked in
+  place); "upgrade your Sermorelin" angle for existing users; the tablet eaten on screen; the cut variants test only the
+  subhead and background colour (red vs black).
+- **Don't copy:** "Support Lean Muscle Definition" (⚠), injections line and the vial, "$95" (⚠ brief only),
+  "built for the man" + creature muscles reads as "builds muscle"; 28 s (too long for us); surreal-from-scratch monsters
+  (the creative lead rejected that look for Restora: test only with the user's OK); "Shipped Free" wording (use the footer art).
+- **Rebuild with:** our full_layout header + footer already do the "frame"; keep a fixed "SERMORELIN BY EVERLIFE /
+  DOUBLE STRENGTH" header, three ✅ benefit tiles, 15 s, a grounded hard-training hook instead of monsters.
+
+### MV4 · Base57 (02 / 03) · video, 11 s, 9:16 · 11 sales across cuts, ~$281–480 CPA · `MV4_BASE57.jpg`
+- **Format:** split frame: left, a hand holding a phone showing an Instagram-style post of a bearded viking warrior who
+  pushes the "S" tablet out of the screen toward the viewer; right, a fixed black/red panel: "DOUBLE STRENGTH SERMORELIN /
+  DON'T COAST. KEEP CLIMBING.", three benefit icons, "2X STRONGER SUBLINGUAL TABS / 50% STRONGER INJECTIONS",
+  Trustpilot 4.9, "Starting at $95 / Direct from pharmacy", disclaimer. VO (8 words): "Momentum isn't built on excuses.
+  Double strength. Stay ready."
+- **Works:** very short (11 s, 8 spoken words); the tablet pushed toward the lens (bible v3 "pull"); "Double Strength
+  Sermorelin" as the header (Tier A, men); a fixed info panel for sound-off.
+- **Don't copy:** shirtless viking in a leather harness (no bare torso), "Lean Muscle Definition" (⚠), injections, "$95",
+  the phone-UI fake "liked by user and 1,234 others" (fake social proof), split-screen layouts (rejected for Restora).
+- **Rebuild with:** a clothed 42–50 "fit silver fox" pushing the tablet toward the lens in frame 1, the "Double
+  Strength Sermorelin" header, an 8–12 word VO, 11–15 s, our standard end card.
 
 ### M5 · BASE130-01 · static · ~$244 CPA (**43 purchases, $10,474**) · `M5_BASE130-01.jpg`
 The highest-volume Sermorelin ad by far.

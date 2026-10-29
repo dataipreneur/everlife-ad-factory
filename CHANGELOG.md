@@ -116,6 +116,9 @@ the 1000 render: same jar and label, only the strength line and a re-set name ba
 Priestley shared the "Sermorelin M" / "Sermorelin F" Drive folders (Emily's): the same folders as the 2026-10-28 zips;
 the Drive connector can't list them. Re-checking the men's zip found winner 274068Video-2.01 (18 sales, $364) under
 another filename: looked at, carded as MV2 in `winners/winners.md` (original backed up) with `MV2_274068Video.jpg`.
+Then the men's zip's Base56 / Base57 videos (Aug 2026), which the all-time export lists as winners (Base56-05 13 sales):
+watched + transcribed, carded as MV3 (Base56, 28 s framed monster battle) and MV4 (Base57, 11 s viking split frame) with
+`MV3_BASE56.jpg` / `MV4_BASE57.jpg`. The "Sermorelin F" zip has no videos.
 
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
