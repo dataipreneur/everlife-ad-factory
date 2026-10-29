@@ -20,8 +20,11 @@ The ad tools run inside **Ubuntu**, Microsoft's built-in Linux for Windows (call
    you'll need it once more). If no window opens, click Start and type **Ubuntu**.
 4. In the Ubuntu window, paste this line and press Enter (it asks for that password; the typing stays invisible):
    `sudo apt update && sudo apt install -y git unzip curl python3-venv python3-pip`
-5. Install **Claude Code inside Ubuntu** (ask Mitansh for the Linux install line), then start it by typing `claude` in
-   the Ubuntu window. **From now on, always open Claude Code from the Ubuntu window** for ad work.
+5. Install **Claude Code inside Ubuntu**: in the same Ubuntu window paste
+   `curl -fsSL https://claude.ai/install.sh | bash`, wait for the prompt to come back, close the Ubuntu window and open
+   it again (Start → Ubuntu). Type `claude --version` (it prints a version number), then `claude` and sign in with your
+   Everlife Claude account (hold Ctrl and click the link it prints). **From now on, always open Claude Code from the
+   Ubuntu window** for ad work.
 
 Windows tips:
 - Sign-ins (GitHub, Higgsfield, Creatify) print a web link: hold Ctrl and click it, or copy it into your browser.
@@ -42,8 +45,18 @@ You need:
 2. **The Everlife logins** for Higgsfield (videos) and Creatify (images). These are shared team accounts: ask Mitansh.
    Never use a personal account; the team credits are shared and tracked.
 
-You also need a Mac with **Claude Code** installed and signed in with your Everlife account. If you don't have it yet,
-ask Mitansh for the install link.
+### Install Claude Code (10 minutes, skip if you already have it)
+
+You need a paid Claude plan with Claude Code (your Everlife Team seat, or Pro/Max): the free plan doesn't include it.
+
+- **Mac** (macOS 13 or newer): press Command-Space, type **Terminal**, press Enter. Paste this line and press Enter:
+  `curl -fsSL https://claude.ai/install.sh | bash`
+  It shows no progress while it downloads; wait for the prompt to come back. Then close the window and open a new
+  Terminal window.
+- **Windows:** you already did this inside Ubuntu in Step 0.
+
+Check it worked: type `claude --version` (it prints a version number). Then type `claude`, press Enter and sign in with
+your Everlife Claude account in the browser window that opens. **Keep this window: this is where you talk to Claude.**
 
 ---
 
@@ -59,9 +72,10 @@ are doing in one plain sentence per step, and only stop when you need me to clic
 1. Basic tools. On a Mac: run "xcode-select -p"; if they are missing, run "xcode-select --install", tell me to click
    Install in the window that opens, and wait until I say it has finished. On Windows (inside Ubuntu, WSL): check that
    git, unzip, curl and "python3 -m venv" work; if not, ask me to paste the apt line from Step 0 of the guide.
-2. GitHub sign-in: if the "gh" command is missing, install the GitHub CLI without admin rights (use Homebrew if it is
-   installed, otherwise download the latest release for this computer, macOS zip or Linux tar.gz, from
-   github.com/cli/cli/releases into ~/.local/bin, and make sure ~/.local/bin is on the PATH). Then run "gh auth login --hostname github.com --git-protocol https --web" in the background, show me
+2. GitHub sign-in: if "gh --version" fails, install the GitHub CLI without admin rights with exactly this command
+   (latest release for this system and chip, into ~/.local/bin):
+   mkdir -p ~/.local/bin && cd "$(mktemp -d)" && V=$(curl -fsSL https://api.github.com/repos/cli/cli/releases/latest | grep -o '"tag_name": *"v[0-9.]*"' | grep -o '[0-9][0-9.]*') && A=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') && if [ "$(uname)" = Darwin ]; then curl -fsSLO "https://github.com/cli/cli/releases/download/v$V/gh_${V}_macOS_$A.zip" && unzip -q gh_*.zip && cp gh_*/bin/gh ~/.local/bin/; else curl -fsSL "https://github.com/cli/cli/releases/download/v$V/gh_${V}_linux_$A.tar.gz" | tar -xz && cp gh_*/bin/gh ~/.local/bin/; fi && ~/.local/bin/gh --version
+   From here on call it as ~/.local/bin/gh if plain "gh" is not found. Then run "gh auth login --hostname github.com --git-protocol https --web" in the background, show me
    the one-time code and the link in big letters, and wait while I paste the code in the browser and click Authorize.
    Then run "gh auth setup-git".
 3. Download the ad factory: if ~/everlife-ad-factory does not exist, run
@@ -92,7 +106,8 @@ Everlife logins from Step 1.
 
 - `! higgsfield auth login`: a browser opens, sign in.
 - `! higgsfield workspace list`: then tell Claude "select the Everlife workspace". It must say **Everlife**, never Private.
-- Type `/mcp`, pick **creatify-ad-agent**, and sign in with the Everlife Creatify account.
+- Type `/mcp`, pick **plugin:creatify-ad-agent:creatify-ad-agent** (the image ads), and sign in with the Everlife Creatify
+  account if it asks.
 - Still in `/mcp`, pick **creatify** (the image models server: Nano Banana) and sign in with the same Everlife Creatify
   account. Same credits; GPT Image 2.5 stays the default, so you only need this when you pick Nano Banana.
 
@@ -141,6 +156,11 @@ ambiguous: say "Sermorelin GHK" or "plain Sermorelin".
 - **Windows:** always start Claude Code from the Ubuntu window, not from Windows itself.
 - **Don't edit the files in ~/everlife-ad-factory.** If something should change, tell Mitansh or Priestley. The update
   stops and tells you if it finds local edits.
+
+## Lost or stuck?
+
+Once the ad tools are on your computer, type `Read ~/everlife-ad-factory/ONBOARDING.md and tell me which step I'm on`. Claude checks
+your setup against this guide and tells you the next step in plain words.
 
 ## Who to ask
 

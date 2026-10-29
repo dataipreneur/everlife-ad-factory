@@ -57,6 +57,12 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
   slightly different (Mitansh to review). Both onboarding guides gain a Windows section (install WSL + Ubuntu, Claude
   Code inside Ubuntu, unzip/clone into the Linux home, open outputs with explorer.exe). Originals in
   `_originals/2026-10-29/windows-wsl/`.
+- Follow-up (logged before editing): both guides made exact enough for Claude Code to follow from the start:
+  the official Claude Code install (`curl -fsSL https://claude.ai/install.sh | bash`, Mac/Linux/WSL, from
+  code.claude.com/docs/en/setup; paid Claude plan required) replaces "ask Mitansh"; the GitHub CLI step is an exact
+  command (latest release for macOS/Linux and the chip, into ~/.local/bin; tested on Apple silicon, Linux URL checked);
+  the `/mcp` names match what Claude Code shows (`plugin:creatify-ad-agent:creatify-ad-agent`, `creatify`); and a
+  "read the guide and set me up" shortcut once the folder is on the computer.
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
