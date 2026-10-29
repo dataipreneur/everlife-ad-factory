@@ -18,6 +18,12 @@ is the cheaper option for a simple hook + product idea only; it needs the hold-l
 **"SERMORELIN GHK BY EVERLIFE" is on screen with the logo from frame 1 to the end card** (copy.json header with `"head_always": true`, finishing.md §1a); the first spoken line or the header
 says **"Sermorelin GHK by Everlife"** (bible v3: "[Product] by Everlife" in every intro). Plan the product line over the
 hands-only shot so a mispronunciation can be re-voiced (lessons.md).
+**Opener + pacing (Emily, 2026-10-29: "too long where he is holding the tablet… nothing is happening"; "start off saying
+Sermorelin GHK supports…"):** the product name is SPOKEN within the first 2.5 s in every video. Default opener: a short
+MOVING product shot (0–2 s: the hand lifts the tablet into a "pull" toward the lens beside the bottle, or a focus pull from
+bottle to tablet) with "Sermorelin GHK by Everlife supports <approved benefit>." already playing, then cut to the face.
+Other openers (a punch, a mug set down) are fine if the name is spoken by 2.5 s. **Hands-only shots: 2 s max, always moving;
+never a still hold.** The product-name line still sits on the product shot, so it can be re-voiced (finishing.md §1b).
 1. **Hook, 0–2.5 s:** a visual pattern interrupt WITH the first words already spoken (a barbell dropped back on the rack, a
    hard set finished as he turns to camera mid-sentence, a woman catching her reflection and smiling as she speaks). Never
    open on a logo. The product name is on screen from frame 1 (header) and the benefit is clear by 2.5 s.
@@ -73,9 +79,10 @@ lines where it likes. So every script is built for one fixed edit step (`finishi
 4. **Timed beats** with camera moves.
 5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.
-7. **Safe-zone composition (always for 9:16):** "Keep faces, the bottle, the tablet, hands and every key action inside the
-   central column (8% in from the left and right edges) and between 8% and 63% of the frame height; the top 8% and the
-   bottom 37% contain only background."
+7. **Safe-zone composition (always for 9:16; the footer sits in Meta's safe area by default, ending at y 1385):** "Keep faces, the bottle,
+   the tablet, hands and every key action between 8% and 58% of the frame height; the scene fills the whole frame
+   edge to edge; below 60% only the scene continues (table top, floor, torso out of focus)." Captions sit at ~59–63% and
+   the Trustpilot row at ~67–72%; the disclaimer is alone at the very bottom (Sermorelin GHK, 2026-10-29).
 8. **Headroom:** "Keep every person's head and face below the top 25% of the frame for the whole clip."
 9. **Closing guards:** "No on-screen text, captions, logos or watermarks; no readable words except the product label.
    Nobody says 'I' or 'my'. No before-and-after imagery, no shirtless bodies, no needles, syringes or vials."

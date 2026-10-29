@@ -162,3 +162,19 @@ Compliance traps:
 ## Justin's women's colour direction (2026-10-29)
 - Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
   Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
+
+## Final-rules test videos (Boxing v2 / Morning v2, 2026-10-29)
+- **Captions get overwritten on a re-cut.** `full_layout.py` re-transcribes a changed clip and replaces the hand-fixed
+  `<Tag>_caps.json` ("CERMERELLIN" went out in a draft). After ANY re-cut: rewrite the caps file, re-run, and read the
+  caption list it prints before sharing.
+- **Dead air reads as "the video stopped".** Cut on action right after the last spoken line (no still, silent shot before
+  the end card); trim pauses inside cloned takes (atrim + concat); put the clip's own room tone under a held end card.
+- The model can give the actor a second bottle in face shots: check every frame; cut before it.
+- Opener product shots still come out framed low (label under the footer for 1–4 s) despite "top half" in the prompt.
+
+## Batch 9 looked like one ad five times (2026-10-29)
+- Variety rules covered font / colour / ad type / headline / hold, but not scene, light or composition, so those defaulted
+  to "dark gym, name on top, hand left, bottle right". Winners-first also copied the winners' dark-gym mood, and the men's
+  "hardcore training" direction was applied to every scene instead of to the casting. Fix: §2c variety plan (image-batch.md).
+- Product name asked "beside the bottle" was printed on the coffee mug next to it. Place the name in a text position
+  (top / under the headline / band / panel), never next to a prop.
