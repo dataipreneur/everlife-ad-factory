@@ -112,3 +112,8 @@ Compliance traps:
   bottle, never covering its label".
 - **End card looks:** `"style": "house"` crashes (the house look is `"default"`); the default and editorial end cards cut
   the long ingredient claims off. `tiktok` + `"end_rows": "benefits"` is the only clean one for this product today.
+- **Fix a mispronounced line for 0.3 credits** when it falls over a shot without a visible mouth: clone his voice with
+  `higgsfield generate create seed_audio --prompt "Sermorelin G. H. K. …" --audio <his own correct lines>.wav --wait --json`
+  (the result is the `/hf_…` URL; the first URL in the JSON is your uploaded reference), trim/atempo it to fit inside the
+  shot's cut times (`select='gt(scene,0.3)'`), duck the original voice there, splice, re-caption, re-finish.
+  "G. H. K." with dots read correctly in 3 of 3 takes. So: say the product name over a hands-only shot by design.

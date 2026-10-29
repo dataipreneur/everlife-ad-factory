@@ -5,7 +5,8 @@ Originals of every edited file are kept in `_originals/<date>/` (same relative p
 ## 2026-10-29 — Sermorelin GHK: lessons from the first 15 s men's video (branch `sermorelin-first-batch`)
 - `skills/everlife-sermorelin-ghk/references/finishing.md`: the house look's style key is "default" ("house" crashes);
   use `tiktok` + `end_rows: benefits` until the shared end card stops cutting long ingredient claims.
-- `references/lessons.md`: "Kettlebell" lessons (speech ran to 12.4 s, likely mispronounced name, tablet hid the label).
+- `references/lessons.md`: "Kettlebell" lessons (speech ran to 12.4 s, mispronounced name, tablet hid the label) and the
+  0.3-credit re-voice fix (cloned voice over the hands-only shot).
 Originals in `_originals/2026-10-29/kettlebell/`.
 
 ## 2026-10-29 — Sermorelin GHK: video timing follows Restora-Z's 15 s, with a 4 s end card (branch `sermorelin-first-batch`)
