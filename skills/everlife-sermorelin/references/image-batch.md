@@ -159,14 +159,30 @@ trend colour for up to 2 of 5; white background for advertorials; pink-led at mo
 40–60, natural fit build, candid, clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or vials, no
 mirrors showing bodies.
 
-LAYOUT: 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no product): the
-Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the proof
-footer is laid there. The whole product (bottle, tablet, hands, plinth tops) ends ABOVE 72% of the canvas height and all
-text above 76%.
+LAYOUT (4:5 / 1:1): 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no
+product): the Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or
+hands): the proof footer is laid there. The whole product (bottle, tablet, hands, plinth tops) ends ABOVE 72% of the
+canvas height and all text above 76%.
+LAYOUT (9:16): 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
+the Everlife logo is laid there. EVERYTHING ELSE (headline, supporting lines, bottle, tablet, hands) sits in the TOP
+half: the lowest element ends at 40% of the canvas height. The BOTTOM 55% is calm, plain continuation of the background
+(surface, fabric, wall): no text, no product, no hands or key objects there.
 ```
 Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked (GHK batch 4, 2026-10-29: "between
-45% and 78%" needed 6 reposition edits in 7; "ends above 72%" needed 0 in 3). Until `main`'s logo-at-the-top finisher is
-merged into this branch, `finish_batch.py` still puts the logo in the footer; the calm top band is harmless meanwhile.
+45% and 78%" needed 6 reposition edits in 7; "ends above 72%" needed 0 in 3; PT-141 batch 4: "base at 48%" came back at
+58–65%, so 9:16 asks for 40% to land near 50%).
+
+**9:16 statics: footer inside the Reels safe area** (Mitansh, 2026-10-29, PR #5). Meta's caption and "Learn more"
+button cover the bottom 535 px of a Reel, so the 9:16 proof footer ends at y 1385 (≈ 52–72% of the frame), not at the
+bottom, and the raw keeps its content in the top ~52%. Source of truth: the shared safe-zone rule
+(`core/tools/safezones.py`, `core/references/safe-zones/` once PR #5 is merged): if its numbers change, follow it, not
+this note. After PR #5, `finish_batch.py` refuses (exit 2) a 9:16 raw whose content runs under the footer; fix = ONE
+reposition edit (1 credit): "Keep everything identical (headline, type, colours, product, scene, light). Scale the
+product and the text block down together (about 35%) and move them up so the lowest element ends at 50% of the canvas
+height. Fill the bottom half with calm, plain continuation of the same background: no text, no product, no hands."
+**Until PR #5 is merged into this branch** the finisher still puts the 9:16 footer at the bottom of the frame and won't
+refuse: 9:16 tests made now are fine to generate, but re-finish them (free) after the merge before anyone reviews them.
+4:5 and 1:1 are unaffected.
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; orange label with the
 vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERMORELIN', small text 'PRESCRIPTION',
 '30 SUBLINGUAL TABS'"), plus:

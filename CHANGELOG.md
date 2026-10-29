@@ -120,6 +120,12 @@ Then the men's zip's Base56 / Base57 videos (Aug 2026), which the all-time expor
 watched + transcribed, carded as MV3 (Base56, 28 s framed monster battle) and MV4 (Base57, 11 s viking split frame) with
 `MV3_BASE56.jpg` / `MV4_BASE57.jpg`. The "Sermorelin F" zip has no videos.
 
+## 2026-10-29 — Plain Sermorelin: 9:16 static layout for the Reels-safe footer (branch `sermorelin`)
+Ahead of Mitansh's PR #5 (open): `image-batch.md` (original from earlier today in `_originals/2026-10-29/`) now has a
+separate 9:16 LAYOUT (content in the top half, lowest element asked at 40%, bottom 55% calm) and a note pointing at the
+shared safe-zone rule as the source of truth, with the 1-credit reposition fix. Skill file only; the finisher change
+arrives with PR #5. Not pushed (Priestley: no push for now).
+
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
 copy log. Priestley approved reuse: bible headlines / CTAs may come back, least-recently-used first; never twice in one
