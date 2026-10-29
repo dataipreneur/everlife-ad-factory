@@ -171,5 +171,5 @@ Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with 
 vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERMORELIN', small text 'PRESCRIPTION',
 '30 SUBLINGUAL TABS'"), plus:
 - **1000 mcg** (checked against `assets/sermorelin1000_bottle.png`, 2026-10-28): '1000 MCG'.
-- **500 mcg** (read from the website's bottle, 2026-10-28; recheck against the asset-library render when it's added): '500 MCG'.
+- **500 mcg** (checked against `assets/sermorelin500_bottle.png`, 2026-10-29): '500 MCG'.
 QA that the label shows the session's strength. Never describe the tablet in words.

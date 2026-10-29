@@ -106,6 +106,12 @@ PR #4 merged into `main` (ec0f334, Priestley's go-ahead), then `main` into this 
 - `CHANGELOG.md`: every entry from both sides kept.
 Now live here: `head_always`, bible-v3 logo size (31% / 40%), 2-line disclaimer, logo at the top of statics.
 
+## 2026-10-29 — Plain Sermorelin 500 mcg bottle added (branch `sermorelin`)
+`assets/sermorelin500_bottle.png` (user download "SERMORELIN 500 MCG BOTTLE .png", looked at and pixel-diffed against
+the 1000 render: same jar and label, only the strength line and a re-set name band differ) + `sermorelin500_bottle_ref.jpg`
+(flattened on white). `product.json` already pointed at these names. `MISSING_RENDERS.md` (original backed up) and
+`image-batch.md` updated. The downloaded tablet is identical to the one on file.
+
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
 copy log. Priestley approved reuse: bible headlines / CTAs may come back, least-recently-used first; never twice in one
