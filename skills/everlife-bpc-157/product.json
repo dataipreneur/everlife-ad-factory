@@ -1,0 +1,43 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. BPC-157 has ONE image on file (Mitansh, 2026-10-29): the compounded Rx vial render (label 3MG/ML, 5ML). The capsule form has no approved image and is out of scope until one exists. DISCLAIMER: the PT-141 wording, confirmed by Mitansh 2026-10-29 for BPC-157 (not in the docx or the bible); Jeremy to sign off.",
+ "id": "bpc-157",
+ "name": "BPC-157",
+ "renders": {
+  "bottle": "bpc157_vial.png",
+  "pill": null
+ },
+ "forms": {
+  "vial": {
+   "label": "compounded Rx vial",
+   "bottle": "bpc157_vial.png",
+   "pill": null,
+   "bottle_wording": "squat glass vial with a dark brushed-metal crimp cap and a slate-blue flip top; slate-blue label with the white EVERLIFE wordmark, 'BPC-157' large in white, '3MG/ML' under it, a thin white rule, 'RX ONLY' bottom left and '5ML' bottom right"
+  }
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "_disclaimer_status": "Confirmed by Mitansh 2026-10-29: same wording as PT-141 (the generic compounded-Rx line). Flag for Jeremy's sign-off in every SESSION.md until he confirms.",
+ "keep_case": [
+  "BPC-157",
+  "GHK",
+  "TB-500"
+ ],
+ "review_highlight": "BPC[- ]?157",
+ "reviews": "references/reviews.json",
+ "kicker_default": "RECOVERY",
+ "split_titles": [
+  "THE STRAIN",
+  "THE SUPPORT"
+ ],
+ "notify_app": "BPC-157",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "product_zones": null,
+ "_render_note": "Label confirmed by Mitansh 2026-10-29: 3 mg/mL · 5 mL is the shipping product. The docx offer line (2.5 mg/mL · 6 mL) is out of date. Copy still never states strength or volume.",
+ "hero": {
+  "element": "the compounded Rx vial (the only approved image)",
+  "min_width": 0.35,
+  "label": "wraps the curved glass, EVERLIFE / BPC-157 / 3MG/ML / RX ONLY / 5ML",
+  "never": "syringe, needle, pen, dropper, droplets, capsules, pills, tablets, a second vial",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ }
+}

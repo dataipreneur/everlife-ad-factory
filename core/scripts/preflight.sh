@@ -59,7 +59,7 @@ except Exception: print('')")
       echo "[\"$PID\"]" > "$SKILL/assets/product_ids.json"
     else
       fail "$PRODUCT_NAME not registered in Marketing Studio (needed for realistic UGC)" \
-           "B=\$(higgsfield upload create \"$SKILL/assets/$BOTTLE\" --json | grep -oE '[0-9a-f-]{36}' | head -1); C=\$(higgsfield upload create \"$SKILL/assets/$PILL\" --json | grep -oE '[0-9a-f-]{36}' | head -1); higgsfield marketing-studio products create --title \"$PRODUCT_NAME\" --image \$B --image \$C"
+           "$(if [ -n "$PILL" ]; then echo "B=\$(higgsfield upload create \"$SKILL/assets/$BOTTLE\" --json | grep -oE '[0-9a-f-]{36}' | head -1); C=\$(higgsfield upload create \"$SKILL/assets/$PILL\" --json | grep -oE '[0-9a-f-]{36}' | head -1); higgsfield marketing-studio products create --title \"$PRODUCT_NAME\" --image \$B --image \$C"; else echo "B=\$(higgsfield upload create \"$SKILL/assets/$BOTTLE\" --json | grep -oE '[0-9a-f-]{36}' | head -1); higgsfield marketing-studio products create --title \"$PRODUCT_NAME\" --image \$B"; fi)"
     fi
   fi
 else
@@ -90,11 +90,12 @@ fi
 for f in $RENDERS; do
   [ -f "$SKILL/assets/$f" ] || fail "Missing render $f" "copy it from the Drive asset library ($DRIVE_FOLDER folder) into $SKILL/assets/"
 done
-[ -f "$SKILL/assets/$BOTTLE" ] && [ -f "$SKILL/assets/$PILL" ] && pass "Real product renders present (bottle + pill)"
+if [ -n "$PILL" ]; then [ -f "$SKILL/assets/$BOTTLE" ] && [ -f "$SKILL/assets/$PILL" ] && pass "Real product renders present (bottle + pill)"
+else [ -f "$SKILL/assets/$BOTTLE" ] && pass "Real product render present (bottle; this product has no pill/tablet render)"; fi
 # 5a. Hidden junk under transparent pixels (Higgsfield shows it as a black/streaky background → wrong product in video)
 if [ -x "$T/venv/bin/python" ]; then
   for f in "$BOTTLE" "$PILL"; do
-    [ -f "$SKILL/assets/$f" ] || continue
+    [ -n "$f" ] && [ -f "$SKILL/assets/$f" ] || continue
     J=$("$T/venv/bin/python" -I -c "
 import sys
 from PIL import Image, ImageFilter
@@ -132,6 +133,8 @@ fi
 pass "Output folder: $OUT"
 
 # 7. Optional connectors (informational)
+if claude mcp list 2>/dev/null | grep -qE "^creatify: .*Connected"; then pass "Creatify MCP (Model Playground) connected: Nano Banana 2.1 / Pro available for image batches"
+else echo "ℹ️  Optional: Nano Banana batches need the Creatify MCP: claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp, then a new session and /mcp → sign in. GPT Image 2.5 works without it."; fi
 echo "ℹ️  Optional: Google Drive connector (pull new renders / reference ads), Playwright browser (study reference videos)."
 
 echo "== $ok passed, $bad to fix =="

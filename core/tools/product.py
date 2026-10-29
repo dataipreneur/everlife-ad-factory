@@ -18,6 +18,10 @@ def load(pid):
         raise SystemExit(f"❌ No product.json for '{pid}' at {path} (install the skill, or set EVERLIFE_SKILLS_DIR)")
     P = json.load(open(path))
     P["_dir"] = os.path.dirname(path)
+    if not (P.get("disclaimer") or "").strip():
+        why = P.get("_disclaimer_status", 'product.json "disclaimer" is empty')
+        raise SystemExit(f"❌ {pid}: no ad disclaimer on file ({why}). Nothing can be finished for this product until "
+                         "Jeremy's verbatim line is in product.json (compliance gate).")
     return P
 
 
