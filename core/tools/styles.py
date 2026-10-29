@@ -33,6 +33,10 @@ def _cased(text, C):
     return text
 
 
+LOGO916 = 432   # bible v3 §03: logo 40% of the 1080 px width on 9:16
+HEAD_DY = 28    # opening headers sit lower to clear the taller logo
+
+
 def _logo(bl, P, color, width):
     """Everlife logo recoloured (the source PNG is cream; its alpha is the mark)."""
     lg = Image.open(f"{P}/source/logo_cream.png").convert("RGBA")
@@ -101,7 +105,7 @@ class TikTok:
         f = self.head
         while max(d0.textlength(h, font=f) for h in heads) + 52 > SAFE_W and f.size > 30:
             f = _font(self.bl, HN, f.size - 2, "Bold")
-        self._sticker_lines(img, heads, 212, f, (255, 255, 255, 250), self.INK)
+        self._sticker_lines(img, heads, 212 + HEAD_DY, f, (255, 255, 255, 250), self.INK)
         return img
 
     def caption_layers(self, caps, L, tag):
@@ -166,7 +170,8 @@ class TikTok:
         if C.get("pill"):
             base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345 + dy))
             c = _render(P, C["pill"], pw, by="width")
-            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, 560 + dy - c.height // 2))
+            cy = min(560, 652 - c.height // 2)  # a tall pill render (e.g. a wide tablet) would cover the label at 668
+            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, cy + dy - c.height // 2))
         else:
             base.alpha_composite(b, (W // 2 - b.width // 2, 345 + dy))
         lab = _font(bl, HN, 32, "Bold")
@@ -233,8 +238,8 @@ class Editorial:
         d = ImageDraw.Draw(img)
         kicker = self.C.get("kicker", "")
         if kicker:
-            bl.centered(d, 214, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
-        y = 252
+            bl.centered(d, 214 + HEAD_DY, "  ·  ".join(kicker.upper().split()), self.label, self.GOLD)
+        y = 252 + HEAD_DY
         for i, ln in enumerate(self.C["head"]):
             t = _cased(ln.capitalize() if i == 0 else ln.lower(), self.C)
             fi = self.serif_i

@@ -2,39 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
-## 2026-10-29 — "Sermorelin GHK by Everlife" on the end card too, with a lowercase "by" (branch `sermorelin-first-batch`)
-Logged before editing. Priestley: the product line should show the whole time (end card included) and read "by", not "By".
-- `skills/everlife-sermorelin-ghk/product.json` `keep_case`: adds "Sermorelin GHK by Everlife" (first), so the title-cased
-  header keeps a lowercase "by".
-- `core/tools/styles.py` TikTok end card: when a job sets `"head_always"`, the header line is drawn under the logo on the
-  end card too and the card moves down 44 px more (only jobs with `head_always`; other output unchanged).
-Originals in `_originals/2026-10-29/brandline/`.
-
-## 2026-10-29 — Sermorelin GHK lessons: re-check captions after every re-cut; no dead air (branch `sermorelin-first-batch`)
-Logged before editing. Morning v2 showed "CERMERELLIN": re-running `full_layout.py` on a re-cut clip re-transcribed and
-overwrote the hand-fixed captions. Boxing v2 "stopped": ~2 s with no speech and a still shot before the end card.
-- `skills/everlife-sermorelin-ghk/references/lessons.md`: rewrite `<Tag>_caps.json` after every re-cut and check the
-  printed caption list before sharing; cut on action right after the last line; no silent gap > 0.5 s mid-line (trim
-  pauses inside cloned takes); put room tone under a held/silent end card.
-
-## 2026-10-29 — tiktok end card fits the 9:16 safe-area layout (shared tool; tell Mitansh)
-Logged before editing. With the safe-area footer (Mitansh's default) the end card is no longer shifted down, so its
-headline touched the bigger logo and the 300 px tablet overlapped the "Sermorelin + GHK + Citrulline" label (seen in the
-Boxing v2 / Morning v2 drafts). Approved by Priestley.
-- `core/tools/styles.py` TikTok end card: in safe mode the whole card moves down 44 px and the tablet render is 250 px
-  (bottom mode unchanged: 0 / 300). CTA still ends well above the proof block.
-Expected regression differences: tiktok end-card layers only. Originals in `_originals/2026-10-29/endcard-safe/`.
-
-## 2026-10-29 — Merged Mitansh's PR #5 (`pt-141-skill`) into `sermorelin-first-batch`: Mitansh's changes kept
-Priestley: "keep Mitansh changes all". Merged origin/main (PR #4) and origin/pt-141-skill; every overlap resolved to
-Mitansh's version: 9:16 footer in the Meta safe area by default for all products (ends at y 1385, may cross the Reels
-profile notch), his disclaimer wrapping, logo ≈1.55× (LOGO_W 311 / video 435), the raw-content refusal (`--fit force`).
-Dropped from our side: `finish_batch.py --proof-at safe` and the sample-matched footer (uncommitted, saved as a patch in the
-session scratchpad), the 2-line/3-line disclaimer fitting, the bible-v3 31%/40% logo sizes, the +28 px header and +30 px
-end-card nudges. Kept (no overlap, off unless a job asks): `"head_always"` and per-job `"proof_at"` in `full_layout.py`;
-`"end_rows": "benefits"` in `styles.py`; the hidden-pixel preflight warning. Sermorelin GHK skill text aligned (no
-`--proof-at`; 9:16 raws keep content in the top ~52%). Regression vs Mitansh's branch: 121/121 identical; smoke 12/12.
-Note: CLAUDE.md-level rule "follow the bible" for the Reels notch was superseded by this choice.
+## 2026-10-29 — Merged main after PR #5 (Mitansh's pt-141-skill) into `sermorelin-first-batch`: Mitansh's version kept
+Merged origin/main (24045d7, PR #5) into this branch. Shared tools taken from main exactly (`finish_batch.py`,
+`safezones.py` identical to main); our additive features re-applied on top of his code: `full_layout.py` per-job
+`"proof_at"` override; `styles.py` TikTok end card safe-area fit (+44 px, 250 px tablet, on top of his tall-pill guard) and
+the `head_always` product line on the end card. Sermorelin GHK guides: Mitansh's text kept; our final-test lessons restored.
+Check: vs new main only the 5 tiktok end-card layers differ (expected); smoke 12/12; preflights Sermorelin GHK 10/10,
+Restora 10/10, PT-141 9/10 (not registered in Marketing Studio). Test render of Boxing v2 OK.
+Incident: running preflight from a temporary PR #5 checkout re-linked `~/.claude/skills/everlife-{sermorelin-ghk,restora-z,
+pt-141}` to that checkout (then deleted); re-linked to this repo. Lesson: never run `preflight.sh` from a temporary
+worktree (its step 0 re-links the installed skill).
 
 ## 2026-10-29 — 9:16 proof footer back inside the Meta safe area (Mitansh, after a live Reels screenshot)
 The bottom-anchored footer (2026-10-27) sat under Meta's "Learn more" button and caption in a real Reels placement
@@ -67,63 +44,6 @@ Women / Both, the agreed angle ("everyone else sells the ability; PT-141 sells t
 - Docs fix: the video look key is `default` (house), not `house` (Sermorelin finishing.md corrected too).
 - Open: Marketing Studio registration for PT-141 (preflight prints the command); Jeremy on the three "Pending approval" headlines and
   "Gentle on the Vascular System"; a larger transparent tablet render; PT-141 performance data for winner cards; screened reviews.
-
-## 2026-10-29 — Sermorelin GHK: 9:16 statics test (safe zone) and the workflow that passed (branch `sermorelin-first-batch`)
-Logged before editing. Test (1 men + 1 women, 9:16, `--proof-at safe`): first takes failed (the model put the product
-low, the footer covered the tablet / label; men's pills ran into the side zones). Priestley chose "native 9:16 + fix
-edits". What passed: one reposition edit per image (top 15% empty, all text 15% in from the sides, product ends above
-52%, below 55% calm) and, if the finisher's logo nudge pushes the product into the footer, `--shift <px>` (60 worked).
-- `skills/everlife-sermorelin-ghk/references/image-batch.md` (9:16 note) + `lessons.md`: that workflow.
-Cost of the test: 4 Creatify credits.
-
-## 2026-10-29 — Static finisher: stronger backing behind the 9:16 safe-zone footer (branch `sermorelin-first-batch`)
-Logged before editing. Priestley: "the footer should be clearly visible". In `--proof-at safe` the band behind the
-Trustpilot row + disclaimer is now ~88% opaque (was ~73%); `scrim()` gains an `opacity` argument (default unchanged, so
-the bottom footer and Restora output are identical). No cropping: the image stays full-frame.
-
-## 2026-10-29 — Static finisher: safe-zone footer for 9:16 image ads (opt-in) (branch `sermorelin-first-batch`)
-Logged before editing. Priestley: safe zones "should" apply to images too. 9:16 statics put the Trustpilot row and the
-disclaimer at the very bottom (Reels bottom 535 px; proof row partly in the Stories reply box). 4:5 / 1:1 feed ads have no
-Meta overlay and are unchanged.
-- `core/tools/finish_batch.py`: new `--proof-at safe` (9:16 only): the proof row + disclaimer sit inside the safe column
-  (x 156–924), ending above y 1206 (Reels notch), disclaimer up to 3 lines (~17 px) like the videos; a soft band behind it.
-  Default stays `bottom` (Restora unaffected).
-- `skills/everlife-sermorelin-ghk/references/image-batch.md` + `finishing.md`: Sermorelin GHK 9:16 statics finish with
-  `--proof-at safe`; the 9:16 prompt keeps the product and text in the top ~55% (8–55%).
-Originals in `_originals/2026-10-29/static-safe/`.
-
-## 2026-10-29 — Sermorelin GHK: compose videos for the safe-zone footer (branch `sermorelin-first-batch`)
-Logged before editing. Re-finishing today's four videos with `"proof_at": "safe"` put the captions, Trustpilot row and
-disclaimer across the product shots (tablet and "SERMORELIN GHK" label covered in Gym, Pilates, Boxing): those videos
-were composed for the bottom footer. The four finals were restored to the bottom footer (safe versions kept as
-`out/SAFE_MODE_*.mp4`). For new videos:
-- `skills/everlife-sermorelin-ghk/references/video-prompting.md` prompt block 7: faces, bottle, tablet, hands and key
-  action between 8% and 50% of the frame height (the safe-mode captions + footer sit at ~52–63%); the bottom 50% is calm
-  background (table, floor, torso out of focus).
-
-## 2026-10-29 — Sermorelin GHK videos: safe-zone footer + product-line opener (branch `sermorelin-first-batch`)
-Logged before editing. Priestley, after the Stories safe-zone template ("Safe Zone - Story.jpg") showed our captions in
-the reply-bar box and the proof/disclaimer in the Reels bottom 535 px (bible v3 "Safe zones": keep them out):
-- `core/tools/full_layout.py`: copy.json `"proof_at": "safe"` puts captions, proof row and disclaimer inside the safe area
-  for that video (per job; default stays "bottom", Restora unaffected). In safe mode the disclaimer may use 3 lines
-  (~17 px, readable for 50+) instead of 2, because the safe column is only 768 px wide: **exception to bible v3's "two
-  lines maximum" for 9:16, flag for Justin.**
-- `core/tools/styles.py` + `full_layout.py`: in safe mode the end-card headline starts below the bigger v3 logo (it
-  collided with it).
-- Emily's feedback ("too long where he is holding the tablet… nothing is happening"; "start off saying Sermorelin GHK
-  supports…"): `skills/everlife-sermorelin-ghk/references/video-prompting.md` + `finishing.md`: product name spoken within
-  the first 2.5 s in every Sermorelin GHK video; hands-only shots 2 s max and always moving; default opener = a short
-  moving product shot with "Sermorelin GHK by Everlife supports…" (other openers allowed if the name lands by 2.5 s);
-  copy.json sets `"proof_at": "safe"`.
-Originals in `_originals/2026-10-29/safe-mode-opener/`.
-
-## 2026-10-29 — Sermorelin GHK statics: product name without "by Everlife" (branch `sermorelin-first-batch`)
-Logged before editing. Priestley: "for Image Ads we don't need 'by Everlife' along with 'Sermorelin GHK'". Statics show
-"SERMORELIN GHK" big (the Everlife logo already sits at the top); videos keep "Sermorelin GHK by Everlife" in the header
-and the spoken intro (bible v3 "[Product] by Everlife" in intros, scripts and voiceovers).
-- `skills/everlife-sermorelin-ghk/references/image-batch.md`: template Name line and QA; `SKILL.md` product truths;
-  `references/lessons.md` note.
-Originals in `_originals/2026-10-29/statics-name/`.
 
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the

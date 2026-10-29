@@ -53,7 +53,7 @@ Cost ≈ 0.9 Higgsfield credits (3 voice takes at 0.3); ask before spending, sho
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
-{"product": "sermorelin-ghk", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",
+{"product": "sermorelin-ghk", "style": "default|tiktok|editorial" (house look = "default"; "house" crashes), "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<bible>", "<bible>", "<bible>"],
  "ingredients_label": "3-IN-1 PEPTIDE SUPPORT",
@@ -73,7 +73,12 @@ one-word chunks, restore "?", re-run. Check 4 frames (hook, mid, product, end ca
 
 **Review burst:** gated (no screened reviews yet, see `reviews.md`).
 
-Looks: `default` (house navy/gold) · `tiktok` · `editorial`; vary across a batch. Women: prefer `tiktok`/`editorial` (the `house` navy/gold
+**`tiktok` end card:** Sermorelin GHK's ingredient names and claims are too long for its name + claim rows (they overlap).
+Set `"end_rows": "benefits"` and `"ingredients_label": "SERMORELIN + GHK + CITRULLINE"`: the rows then show the 3 bible
+benefits. **Clip shorter than its speech + end card?** Marketing Studio fills the whole clip with speech, so hold the last
+frame (`ffmpeg -vf tpad=stop_mode=clone:stop_duration=2.5 -af apad=pad_dur=2.5`) and start the end card after the last word.
+
+Looks: `house` (style "default") · `tiktok` · `editorial`; vary across a batch. **Until the shared end card is fixed, use `tiktok` with `"end_rows": "benefits"`:** the house and editorial end cards cut Sermorelin GHK's ingredient claims off after 2 lines (2026-10-29). Women: prefer `tiktok`/`editorial` (the `house` navy/gold
 is fine; check nothing reads orange).
 
 ## 3. Image finishing

@@ -73,7 +73,7 @@ def build_footer(W, tone, disclaimer, fw):
     gap = min(22, (fw - 2 - sum(p.width for p in parts)) // 4)   # 9:16: the row fits the 768 px safe column
     rh = max(p.height for p in parts)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw)
+    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw)   # 21 px, wraps inside the safe column (Mitansh, 2026-10-29: keep this over bible v3's 2-line/13 px rule)
     h = 14 + rh + 6 + DISC_LH * len(lines) + 22
     foot = Image.new("RGBA", (W, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(foot)

@@ -110,10 +110,11 @@ def captions():
 
 
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
-if C.get("proof_at") in ("safe", "bottom"):   # per-job footer placement (Sermorelin GHK: "safe", 2026-10-29)
+if C.get("proof_at") in ("safe", "bottom"):   # per-job footer placement override (default: safezones.PROOF_AT)
     os.environ["EVERLIFE_PROOF_AT"] = C["proof_at"]
 import safezones as sz  # noqa: E402
 
+# disclaimer stays 21 px and wraps (Mitansh, 2026-10-29: kept over bible v3's 2-line/13 px rule)
 SX0, SY0, SX1, SY1 = sz.SAFE
 SAFE_W = sz.SAFE_W
 BLOCK_BOTTOM = sz.FOOTER_BOTTOM          # proof row + disclaimer end (bottom of frame by default; see safezones.PROOF_AT)
@@ -149,7 +150,7 @@ def top_layer():
     bl.logo(img, SY0 + 8, 435)
     note(((W - 435) / 2, SY0 + 8, (W + 435) / 2, SY0 + 70), "logo")
     d = ImageDraw.Draw(img)
-    y = 210
+    y = 238
     for ln in C["head"]:
         f = fit(ln, bl.AV_COND, 66, "Heavy Italic", SAFE_W)
         bl.centered(d, y, ln, f, bl.GOLD)

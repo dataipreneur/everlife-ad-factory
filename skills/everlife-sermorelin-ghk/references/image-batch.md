@@ -191,6 +191,8 @@ LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for th
 > 58–65%). Ask for the lowest element at **40%** (cap/nozzle tip at 13%) to get ~50%. `finish_batch.py` then shifts the image up by
 > whatever headroom is left under the logo band (max 320 px) before it refuses; a refusal means one reposition edit (1 credit).
 ```
+> Sermorelin batch 4 (2026-10-29, main): asking high works ("ends above 72%" gave 0 reposition edits in 3 vs 6 in 7 for a loose
+> range). With the safe-area footer, say "the lowest element ends at 40%" with the same firmness.
 ```
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
 the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:
