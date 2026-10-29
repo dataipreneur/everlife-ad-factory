@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
+Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
+copy log. Priestley approved reuse: bible headlines / CTAs may come back, least-recently-used first; never twice in one
+batch; never the same headline with the same layout (framework) it had before. Variety comes from layout, casting, colour.
+- `skills/everlife-sermorelin-ghk/SKILL.md` golden rule 6 and `references/image-batch.md` §0 updated.
+Originals in `_originals/2026-10-29/copy-reuse/`.
+
 ## 2026-10-29 — Video header + logo stay on screen the whole time (opt-in; Sermorelin GHK on) (branch `sermorelin-first-batch`)
 Logged before editing. Feedback on the men's "Gym" video, relayed by Priestley for men and women: "I would keep
 ['Sermorelin GHK by Everlife'] up at the top with the logo the whole time." The finisher hid the whole top band (logo +

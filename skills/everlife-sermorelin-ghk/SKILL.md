@@ -13,7 +13,7 @@ Golden rules, all non-negotiable:
 3. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
 4. **Never spend credits without an explicit approval** of that specific script or batch, and the approval option must show the cost (shared Everlife team credits).
 5. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly; never call a weak take good.
-6. **Every script is new.** Check and append `~/Everlife-Creative/sermorelin-ghk-copy-log.md`; never repeat a header, end-card headline or CTA already logged.
+6. **Every script is new.** Check and append `~/Everlife-Creative/sermorelin-ghk-copy-log.md`; never repeat a header, end-card headline or CTA **within a batch**. The approved pool is used up (29 Oct), so bible headlines and CTAs may be reused across batches: least-recently-used first, and never the same headline with the same layout it had before (Priestley, 2026-10-29).
 7. Everything is a draft until creative review approves it and Jeremy signs off on compliance. Nothing is posted or uploaded anywhere.
 
 Read these when the step says so:

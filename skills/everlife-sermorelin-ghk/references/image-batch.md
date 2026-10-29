@@ -27,8 +27,9 @@ Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip
 - **Tier B (max 2 per batch):** fresh wording whose every claim maps to an approved claim, **or** a winner's headline
   that isn't in the bible (e.g. "Support your strongest era", "Lean. Strong. Ready."). Mark it **PROPOSED**; it needs the
   user's explicit OK for that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
-- Never repeat a headline in the copy log. The Tier A pool is small (≈20 men's, ≈13 women's usable lines): when it runs
-  low, say so and ask whether to allow more Tier B or request new approved headlines from Jeremy.
+- **Reuse (Priestley, 2026-10-29: the approved pool is used up):** a bible headline or CTA may be reused across batches,
+  least-recently-used first (check the copy log); never twice in one batch; never with the same framework/layout it had
+  before. New lines only as Tier B (max 2, approved line by line). Ask Justin for fresh headlines when the pool feels stale.
 - Facts: Citrulline is NOT a peptide ("2 peptides + 1", never "3 peptides").
 
 ## 1. Frameworks (reference ads in `core/references/static-refs/<folder>/`, overview `OVERVIEW.jpg`)
