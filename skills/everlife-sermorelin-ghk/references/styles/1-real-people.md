@@ -11,7 +11,7 @@ Universal prompt lines: "ultra-realistic creator UGC, real handheld phone shake,
 
 ## 1A — Creator to camera
 - **Looks like:** one person (men 45–60 in a garage gym or truck after training; women 40–60 in a sunlit kitchen) talking to their phone, bottle by the cheek.
-- **Beats:** 0–2 a pattern-interrupt action (sets down a heavy dumbbell mid-sentence) → 2–6 the goal as a pronoun-free question ("Recovery taking longer these days?") → 6–10 bottle up + ONE mechanism line ("Sermorelin stimulates natural growth hormone production") → 10–12 the tablet to the lens.
+- **Beats:** 0–2 a pattern-interrupt action (sets down a heavy dumbbell mid-sentence) → 2–5 the goal as a pronoun-free question ("Recovery taking longer these days?") → 5–8.5 bottle up + ONE mechanism line ("Sermorelin stimulates natural growth hormone production") → 8.5–11 the tablet to the lens → 11–15 end card.
 - **Finishing:** `tiktok`. **Guardrails:** describe the product, never their results.
 
 ## 1B — Training partner POV

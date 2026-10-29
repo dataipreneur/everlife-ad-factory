@@ -18,7 +18,7 @@ Feed (4:5, 1:1): 60 px margin.
   - people: real-looking, the right age, fit but NOT bodybuilders, fully clothed; no bedroom (men); palette right (women)
   - no needles/syringes/vials, no gym-mirror body shots, no garbled text on props, no second phone (`--zoom 1.2`)
   - "growth hormone" said in full; product name pronounced clearly
-  - last spoken line ends before ~12.5 s
+  - last spoken line ends before ~10.5 s (15 s clip); if it runs later, start the end card after the last word or re-roll
 - Fails finishing can't fix → offer a re-roll with its cost (max 2 per concept).
 
 ## 2. Video finishing
@@ -37,7 +37,7 @@ Don't type the disclaimer into copy.json; if it's there, it must match product.j
 bottle exists, add `"bottle": "sghk1000_bottle_ref.jpg"` (shows its black background on the end card: preview only).
 500 mcg jobs set `"bottle": "sghk500_bottle.png"` (once it's in assets/); the tablet is the same for both strengths.
 
-Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
+Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 11 [--mirror-until <s>] [--zoom 1.2]`
 
 Then fix whisper's spellings in `<job>/layers_full/<Tag>_caps.json` (Sermorelin, GHK, growth hormone, Citrulline), merge
 one-word chunks, restore "?", re-run. Check 4 frames (hook, mid, product, end card), copy to `<job>/FINAL_<Tag>_15s_9x16.mp4`, `open` it.

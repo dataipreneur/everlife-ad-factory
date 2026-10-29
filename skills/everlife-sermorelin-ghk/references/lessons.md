@@ -97,3 +97,7 @@ Compliance traps:
 - **Pick the winners first, then the frameworks.** Batches 2–3 (women) picked a framework per slot and then looked for a
   matching winner, so W1–W4 fell to Pinterest and only W5 built on a winner. Rule now (image-batch.md step 2): at least
   3 of 5 slots start from a winner for the audience; Pinterest fills the rest.
+
+## Video length (2026-10-29)
+- **15 s is the standard, as Restora-Z**; the bible sets no length. The end card starts at 11 s (not Restora's 12.8) so it
+  stays up 4 s for 50+ readers; speech ≤ 18 words, finished by ~10.5 s. 8 s only for a simple hook + product idea.

@@ -9,19 +9,25 @@ growth hormone support) or **Women 35–60** (tone, strength, skin glow), set in
 shirtless casting or claims.
 
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
+**Standard length: 15 s, as Restora-Z** (Priestley, 2026-10-29). The bible sets no length; the hard timing points are a visual
+hook by 1–3 s and product + benefit identifiable by 2 s (creative gates §3, §5). Unlike Restora's 12.8–15 s end card, ours
+starts at **11 s** so it stays up 4 s (Restora feedback: benefits must be readable for 50+). **8 s** (40 credits, winner M5)
+is the cheaper option for a simple hook + product idea only; it needs the hold-last-frame trick (`finishing.md`).
 1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (a barbell dropped back on the rack in slow-mo, a
-   55-year-old beating his son up a hill, a woman catching her reflection in a sunlit shop window and smiling). Never open on a logo.
+   55-year-old beating his son up a hill, a woman catching her reflection in a sunlit shop window and smiling). Never open
+   on a logo. The product or the benefit is clear by 2 s (a tablet, the bottle or a benefit word on screen).
 2. **Authority + emotion, 2–5 s:** ONE approved territory, shown more than said (pronoun-free: "Lost a step?"). Avoid the bible's Weak lines, e.g. "Not bouncing back like you used to?".
-3. **Visual element / reveal, 5–9 s:** the real tablet (hero, macro) and the bottle, label to camera.
-4. **Structure / connection, 9–12.5 s:** one bible line: an ingredient claim on its own ingredient, "3-in-1 peptide
+3. **Visual element / reveal, 5–8.5 s:** the real tablet (hero, macro) and the bottle, label to camera.
+4. **Structure / connection, 8.5–11 s:** one bible line: an ingredient claim on its own ingredient, "3-in-1 peptide
    support", "Doctor prescribed", "Easy sublingual delivery", "Ships free from the pharmacy".
-5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear, specific CTA. Spoken lines finish by ~12 s.
+5. **Payoff, 11–15 s:** the end card (added in finishing, `--end 11`): benefits + a clear, specific CTA. Spoken lines
+   finish by ~10.5 s: with a silent hook that is ≈ 2–10.5 s of speech, so **≤ 18 spoken words** (8 s clip: ≤ 10).
 
 **Timing (Restora feedback + our first video, 2026-10-28):** Marketing Studio fills the WHOLE clip with speech at ~2 words
 per second, so budget ≈ 2 words per second of speaking time and write "finished speaking by <t> s". The end card stays on
 screen **at least 4 s** (benefits must be readable for 50+): for a short clip, hold the last frame (see `finishing.md`).
 **Shots:** at most 3 shots per 8 s, each at least 2 s; never several mini-scenes in one prompt (they come out split-second
-and rushed). Old budget, kept for Seedance VO: ≤ 35 words. Say "growth hormone", never "GH". Spoken product name at most twice: write it
+and rushed). Seedance VO uses the same ≤ 18-word budget (the old ≤ 35 ran under the end card). Say "growth hormone", never "GH". Spoken product name at most twice: write it
 "ser-mo-REL-in G-H-K" for TTS/model voices. At most 2 hard names per spoken line (Sermorelin, Citrulline, IGF-1), write
 "3-in-1" as "three-in-one", and LISTEN to every take (our first takes came out "Sermoregin" and "three in a one").
 
