@@ -54,18 +54,21 @@ def art(name, tone, scale):
     return im.resize((int(im.width * scale), int(im.height * scale)), Image.LANCZOS)
 
 
-def build_footer(W, tone, disclaimer):
+def build_footer(W, tone, disclaimer, max_lines=2):
     """Compact transparent footer: approved proof art row + disclaimer (the logo sits at the top). RGBA, no background."""
     global DISC_SIZE, DISC_LH
     fw = W - 56
     s = 0.56
     parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
+    while sum(p.width for p in parts) + 4 * 22 + 2 > W - 16 and s > 0.36:   # narrow safe column: shrink the art row
+        s -= 0.02
+        parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
     rh = max(p.height for p in parts)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
     size = 21
     while True:   # bible v3: at most 2 lines, never under 13 px
         lines = wrap(d0, disclaimer, sans(size), fw)
-        if len(lines) <= 2 or size <= DISC_MIN:
+        if len(lines) <= max_lines or size <= DISC_MIN:
             break
         size -= 1
     DISC_SIZE, DISC_LH = size, int(round(size * 1.25))
@@ -139,6 +142,8 @@ def main():
     ap.add_argument("--disclaimer", default="", help="verbatim disclaimer (older usage; must match --product if both)")
     ap.add_argument("--tone", default="auto", choices=["auto", "dark", "light"])
     ap.add_argument("--shift", default="auto", help="auto: nudge the image down only if the logo needs room; or a px value")
+    ap.add_argument("--proof-at", default="bottom", choices=["bottom", "safe"],
+                    help="9:16 only: 'safe' keeps the proof row + disclaimer inside Meta's safe area (bible v3 safe zones)")
     ap.add_argument("--content-ratio", help="print the model aspect ratio for this final ratio and exit")
     a = ap.parse_args()
     if a.content_ratio:
@@ -200,13 +205,26 @@ def main():
         out = shifted
     top_band = np.asarray(out.crop((0, 0, W, ly + logo_h + 20)).resize((64, 8))).reshape(-1, 3).astype(np.float64)
     top_tone = "dark" if lum(top_band).mean() < 150 else "light"
-    foot = build_footer(W, tone, a.disclaimer)
-    bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # 9:16: same bottom line as the videos
-    fy = H - foot.height - bottom_pad
-    sc_layer = scrim(W, foot.height + bottom_pad, tone)
     o = out.convert("RGBA")
-    o.alpha_composite(sc_layer, (0, H - sc_layer.height))
-    o.alpha_composite(foot, (0, fy))
+    if a.proof_at == "safe" and (W, H) == (1080, 1920):
+        # safe zones (bible v3): inside x 156-924, above the Reels notch at y 1216; up to 3 disclaimer lines
+        foot = build_footer(768, tone, a.disclaimer, max_lines=3)
+        fy = 1206 - foot.height
+        band = scrim(W, foot.height + 40, tone)
+        fade = Image.new("L", band.size, 255)
+        fd = ImageDraw.Draw(fade)
+        for i in range(60):   # fade the band out below the footer too
+            fd.line([(0, band.height - 1 - i), (W, band.height - 1 - i)], fill=int(255 * i / 60))
+        band.putalpha(Image.composite(band.split()[-1], Image.new("L", band.size, 0), fade))
+        o.alpha_composite(band, (0, fy - 120))
+        o.alpha_composite(foot, (156, fy))
+    else:
+        foot = build_footer(W, tone, a.disclaimer)
+        bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # 9:16: same bottom line as the videos
+        fy = H - foot.height - bottom_pad
+        sc_layer = scrim(W, foot.height + bottom_pad, tone)
+        o.alpha_composite(sc_layer, (0, H - sc_layer.height))
+        o.alpha_composite(foot, (0, fy))
     lg = logo_layer(top_tone)
     o.alpha_composite(top_fade(W, ly + logo_h + 30, top_tone), (0, 0))
     o.alpha_composite(lg, ((W - lg.width) // 2, ly))

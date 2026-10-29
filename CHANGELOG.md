@@ -2,6 +2,17 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Static finisher: safe-zone footer for 9:16 image ads (opt-in) (branch `sermorelin-first-batch`)
+Logged before editing. Priestley: safe zones "should" apply to images too. 9:16 statics put the Trustpilot row and the
+disclaimer at the very bottom (Reels bottom 535 px; proof row partly in the Stories reply box). 4:5 / 1:1 feed ads have no
+Meta overlay and are unchanged.
+- `core/tools/finish_batch.py`: new `--proof-at safe` (9:16 only): the proof row + disclaimer sit inside the safe column
+  (x 156–924), ending above y 1206 (Reels notch), disclaimer up to 3 lines (~17 px) like the videos; a soft band behind it.
+  Default stays `bottom` (Restora unaffected).
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` + `finishing.md`: Sermorelin GHK 9:16 statics finish with
+  `--proof-at safe`; the 9:16 prompt keeps the product and text in the top ~55% (8–55%).
+Originals in `_originals/2026-10-29/static-safe/`.
+
 ## 2026-10-29 — Sermorelin GHK: compose videos for the safe-zone footer (branch `sermorelin-first-batch`)
 Logged before editing. Re-finishing today's four videos with `"proof_at": "safe"` put the captions, Trustpilot row and
 disclaimer across the product shots (tablet and "SERMORELIN GHK" label covered in Gym, Pilates, Boxing): those videos

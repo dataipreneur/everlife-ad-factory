@@ -83,6 +83,8 @@ Looks: `house` (style "default") · `tiktok` · `editorial`; vary across a batch
 is fine; check nothing reads orange).
 
 ## 3. Image finishing
+**9:16 statics:** always `--proof-at safe` (proof row + disclaimer inside Meta's safe area; Priestley 2026-10-29). 4:5 and
+1:1 feed ads have no Meta overlay: default footer.
 Batch Mode: `finish_batch.py --product sermorelin-ghk` (see `image-batch.md`). `finish_modern.py` refuses this
 product until its `product_zones` (the colours that let it find the bottle and tablet in a photo) are calibrated in
 product.json. Legacy `core/scripts/finish_image.py` layouts work (`standard`, `checklist`, `article`, `letter`, `split`,
