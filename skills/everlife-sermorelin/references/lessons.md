@@ -41,6 +41,21 @@ Seen in the first test (2026-10-29: 1 Seedance video + 5 Creatify statics, `~/Ev
 - What worked: the round "S" tablet came out exactly right in all 6 images and the video; tablet-in-hand framing (men and
   women) looks like the winners; women's pink/beige palettes held with the orange product.
 
+Second test, same day (10 statics 4:5 + one 720p Seedance video, after the v3/hand-off update; SESSION.md "Second test"):
+- **The tablet comes out ~half the size asked** (asked 15–18% of the width, got 6–9%) in most ads, worst when a
+  person or a big headline shares the frame. A 1-credit edit of the raw ("keep everything identical, make the tablet
+  about TWICE as large, matching image 2") fixed it cleanly 4 times; text-size fixes work the same way.
+- **"Ends above 66%"** put most products higher than yesterday, but bottles still land low; the finisher's top-logo
+  shift pushes them further down. The label band stayed readable above the footer in all 10.
+- **Creatify's voice check can fail on the name's first letter** ("Cermorelin"): not charged; retry with a new seed
+  and a comma after the name ("Sermorelin, by Everlife.") passed. Whisper with an `initial_prompt` invents words in
+  silent clips: check raw audio with `vad_filter=True` and no prompt.
+- **Higgsfield can return "no response received"** on submit: check `higgsfield account transactions` before
+  retrying (it wasn't charged).
+- The `tiktok` look title-cases the header ("Sermorelin By Everlife"); bible wording is lowercase "by".
+- What worked: the tablet-pull opening and the silver-fox casting came out right first time; per-ad fonts/colours
+  gave 10 visibly different ads; women's teal/pink/cream/white/tan leads held.
+
 Learned on Sermorelin GHK the same day (hand-off 2026-10-29; same models, same team, so they apply here):
 - **Team review of a men's video** (Emily, Sarah, Jeremy, Justin): "start talking way sooner" (speech in the first
   second, hook by 2.5 s); the product name on screen from the start, with the logo, "this applies to every product";
