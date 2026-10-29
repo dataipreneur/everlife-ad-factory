@@ -91,6 +91,22 @@ for f in $RENDERS; do
   [ -f "$SKILL/assets/$f" ] || fail "Missing render $f" "copy it from the Drive asset library ($DRIVE_FOLDER folder) into $SKILL/assets/"
 done
 [ -f "$SKILL/assets/$BOTTLE" ] && [ -f "$SKILL/assets/$PILL" ] && pass "Real product renders present (bottle + pill)"
+# 5a. Hidden junk under transparent pixels (Higgsfield shows it as a black/streaky background → wrong product in video)
+if [ -x "$T/venv/bin/python" ]; then
+  for f in "$BOTTLE" "$PILL"; do
+    [ -f "$SKILL/assets/$f" ] || continue
+    J=$("$T/venv/bin/python" -I -c "
+import sys
+from PIL import Image, ImageFilter
+import numpy as np
+im = Image.open(sys.argv[1])
+if im.mode != 'RGBA': print(0); sys.exit()
+a = np.array(im); near = np.array(im.getchannel('A').filter(ImageFilter.MaxFilter(11))) > 0
+t = a[(a[..., 3] == 0) & ~near][:, :3].astype(int)
+print(int(100 * (((t.max(1) - t.min(1)) > 40) | (t.max(1) < 60)).mean()) if len(t) else 0)" "$SKILL/assets/$f" 2>/dev/null)
+    [ "${J:-0}" -gt 20 ] && echo "⚠️  $f hides coloured/dark pixels under its transparent background (${J}%): Higgsfield may show them. Before registering it in Marketing Studio, set those pixels to white (visible pixels unchanged)."
+  done
+fi
 
 # 5b. Product settings the shared tools read (product.json)
 if PID=$(python3 -c "import json,sys; d=json.load(open(sys.argv[1])); [d[k] for k in ('id','name','renders','disclaimer','keep_case','review_highlight','reviews','kicker_default','split_titles','notify_app')]; print(d['id'])" "$SKILL/product.json" 2>/dev/null); then

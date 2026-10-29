@@ -2,7 +2,12 @@
 
 Source: the creative team's "Winning Ads Reference" page (claude.ai artifact 5gDbB7ibXwcNoWnKqcU9Sc), report week **Oct 9–15,
 2026**, ranked by CPA (spend ÷ purchases). Cards written 2026-10-28 after looking at every ad that could be opened. Images
-here are small previews (`<code>.jpg`); full files are on Drive (links on the page). **Refresh when the page updates.**
+here are small previews: `<code>.jpg` (square / 4:5) and `<code>_916.jpg` (vertical: use these for 9:16 batches).
+Full-resolution files of both ratios (videos included) are in `~/Everlife-Creative/reference-library/sermorelin-ghk/winners/`
+on Priestley's Mac (built 2026-10-28 from the page's Drive links and the "For Pixel/Seb" Drive folder; not in git, ~100 MB).
+`winners.json` is the same list as data (code, numbers, format, don't-copy, preview paths). **Refresh when the page updates.**
+9:16 note: the ID-named designs (M7–M10, F1) keep the top and bottom of the vertical frame empty; others (M2, M3, M6, F2, F5)
+fill it. Our own 9:16 ads always follow the safe zones (the finishers enforce them).
 
 All winners show the **500 mcg** bottle. For 1000 mcg they are **proxy** references (same product family, bottle design,
 tablet and audience).
@@ -29,7 +34,7 @@ tablet and audience).
 ## Men (10)
 
 ### M1 · VIDEO7-1.01 · video · ~$102 CPA (6 purchases, $609) · ⚠ FILE MISSING
-Both Drive links on the page are dead (file moved or deleted). Ask the page owner for the file; no card until it's seen.
+Both Drive links on the page are dead, and it isn't in the "For Pixel/Seb" folder either (checked 2026-10-28). Ask the page owner for the file; no card until it's seen.
 
 ### M2 · BASE210-01 · static · ~$119 CPA (3) · `M2_BASE210-01.jpg`
 - **Format:** bold claim, F2. Big "SERMORELIN GHK" left, a hand thrusting the bottle at camera, two tablets in the foreground, three benefit pills with icons, "LEAN. STRONG. READY." stacked right, dark gym.
@@ -58,8 +63,8 @@ Both Drive links on the page are dead (file moved or deleted). Ask the page owne
 ### M6 · BASE247-01 · static · ~$243 CPA (3) · `M6_BASE247-01.jpg`
 - Same layout as M3 in red with "LEAN INTO POWER" ("Lean Into Power" is a bible **Weak headline**). Same don't-copy list as M3.
 
-### M7 · ID328802-1.01 · static · ~$270 CPA (7) · `M7_ID328802-1.01.jpg` (preview only)
-- Dark/black version of M8. Same notes as M8.
+### M7 · ID328802-1.01 · static · ~$270 CPA (7) · `M7_ID328802-1.01.jpg`
+- Iteration of M8: black background in 1:1, a **light grey/red** layout in 9:16 (red stacked headline). Same don't-copy list as M8.
 
 ### M8 · ID328802 · static · ~$277 CPA (**23**, the most proven men's ad) · `M8_ID328802.jpg`
 - **Format:** bold claim + 3-in-1 tiles, F2/F4. "STAY TONED. GET LEAN." huge at top, "SERMORELIN GHK" banner, three benefit rows left, the bottle centre-right with two tablets, three ingredient tiles stacked right with "+" between them, red smoky background.
@@ -100,10 +105,21 @@ Both Drive links on the page are dead (file moved or deleted). Ask the page owne
 - **Don't copy:** "needle-free" (banned); "Over **70,000**" and "**4.8**-star" (locked: 100,000+, 4.9 Excellent); "$149/mo" price; "GHK-Cu"; "targeted results"; "body's natural chemistry"; the disclaimer isn't the bible text and has no AI disclosure despite an AI doctor.
 - **Rebuild with:** letter lines assembled only from bible lines; "Easy sublingual delivery"; a doctor only with the verbatim disclaimer (AI depiction).
 
-### F4 · BASE125-00 · video (UGC creator) · ~$364 CPA (**11**) · `F4_BASE125-00.jpg` (thumbnail only)
-- **Format (from the thumbnail; the file is too big for the Drive connector):** a woman creator talking to camera in her home, logo + "SERMORELIN GHK" top, bottle top-left, tablet top-right, captions ("Here's the part that I think is going to interest…").
-- **Works:** creator-to-camera UGC (style 1A) has the most purchases of the women's winners.
-- **Check before reuse:** the script (first person? claims?) can't be verified until someone downloads the video for us.
+### F4 · BASE125-00 · video (real creator UGC, 30 s, 4:5) · ~$364 CPA (**11**) · `F4_BASE125-00.jpg` (thumbnail)
+Checked 2026-10-28 from the "For Pixel/Seb" Drive folder download (frames + transcript).
+- **Format:** a real woman creator (~45) talks to camera in her home, then hands-on product shots: opens the real bottle, tips the
+  green "S" tablets into her palm, holds one to the lens; "SERMORELIN · GHK · CITRULLINE" chips over the shots; back to her face
+  for the close ("the link is below"). Logo + "SERMORELIN GHK" + bottle + tablet pinned at the top, word-by-word captions.
+- **Script (transcript):** "Here's the part that I think is going to interest a lot of people who've been curious about peptides.
+  A physician-prescribed product called Sermorelin GHK that combines three ingredients in one daily sublingual tablet. Recovery,
+  lean muscle support, and body composition. Those things always matter. Everything starts with an online health evaluation. And
+  for me, physician oversight does matter. So the link is below and the evaluation only took me about five minutes."
+- **Works:** a real, believable person; the real product handled on camera (proves the tablet); curiosity hook ("people who've been
+  curious about peptides"); physician-prescribed + easy online evaluation as the trust angle; soft close.
+- **Don't copy:** first person ("for me", "took me") is banned; "body composition" is banned; "recovery" is fine only as
+  "Supports exercise recovery" (Citrulline). Rebuild as Marketing Studio UGC (style 1A) with no first person, e.g. "One daily
+  sublingual tablet, three ingredients… Doctor prescribed, ships free from the pharmacy."
+- **Product proof:** the tablets that come out of the real bottle are the green rounded-diamond "S" tablet (our tablet render).
 
 ### F5 · BASE297-00 · static · ~$460 CPA (7) · `F5_BASE297-00.jpg`
 - **Format:** 3D-animated, Pixar-style. A cartoon woman in a bathrobe touching her cheeks, a cute walking tablet character, the bottle, serif "SERMORELIN GHK", "Promotes Youthful-Looking Skin & Thicker Hair", three ingredient icons.

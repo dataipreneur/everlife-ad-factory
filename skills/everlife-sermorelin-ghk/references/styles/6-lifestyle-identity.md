@@ -11,7 +11,7 @@ Why it works: the bible frames Sermorelin GHK around **muscle, fitness and perfo
 
 ## 6A — Prime-time training (men)
 - **Looks like:** a fit, mature man 45–60, clothed in training gear, early-morning sun: a heavy farmer's carry, a sled push, a rowing sprint, a trail run. Real sweat, calm focus.
-- **Beats:** 0–2 a sound-led hook (a kettlebell set down hard, breath) → 2–6 the effort → 6–10 the tablet in his palm at the gym bag, bottle beside it → 10–12 he nods and goes again.
+- **Beats:** 0–2 a sound-led hook (a kettlebell set down hard, breath) → 2–5 the effort → 5–8.5 the tablet in his palm at the gym bag, bottle beside it → 8.5–11 he nods and goes again → 11–15 end card.
 - **Copy:** men headlines (e.g. *Age Hits Growth Hormone. Hit Back.* as reference); benefit *Supports Lean Muscle + Performance*; a Citrulline claim fits training (*Supports exercise endurance*).
 - **Finishing:** `house`.
 

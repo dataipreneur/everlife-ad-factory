@@ -15,16 +15,44 @@ Feed (4:5, 1:1): 60 px margin.
 - Pass/fail (tell the user every fail):
   - **product correctness:** the tablet matches the tablet render exactly (shape, colour, markings) and the bottle label
     matches its render; not mirrored (`--mirror-until <cut>`); exactly one tablet
-  - people: real-looking, the right age, fit but NOT bodybuilders, fully clothed; no bedroom (men); palette right (women)
+  - people: real-looking, the right age (men 40s–50s fitness-model build, fitted top), fully clothed; speech starts in the first second; "SERMORELIN GHK" on screen from frame 1 (copy.json `head`, e.g. `["SERMORELIN GHK BY EVERLIFE"]`); no bedroom (men); palette right (women)
   - no needles/syringes/vials, no gym-mirror body shots, no garbled text on props, no second phone (`--zoom 1.2`)
   - "growth hormone" said in full; product name pronounced clearly
-  - last spoken line ends before ~12.5 s
+  - last spoken line ends before ~10.5 s (15 s clip); if it runs later, start the end card after the last word or re-roll
 - Fails finishing can't fix → offer a re-roll with its cost (max 2 per concept).
+
+## 1a. Header + logo on screen the whole time (every Sermorelin GHK video, men and women)
+Feedback 2026-10-29: "keep 'Sermorelin GHK by Everlife' up at the top with the logo the whole time." In copy.json set
+`"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true` (otherwise the finisher hides the logo + header whenever a
+face passes under it). The prompt's HEADROOM line keeps faces below the top 25%, so the header never sits on a face; check
+it in QA.
+
+## 1b. Video check + product-line voice (REQUIRED for every video, before finishing)
+Cost ≈ 0.9 Higgsfield credits (3 voice takes at 0.3); ask before spending, show the cost. Work in `<job>/revoice/`.
+`FF=$($T/venv/bin/python -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")`
+1. **Transcribe with word times and find the cuts:**
+   `$T/venv/bin/python -I -c "from faster_whisper import WhisperModel as W; m=W('medium',compute_type='int8'); [print(' '.join(f'{w.word}@{w.start:.2f}' for w in s.words)) for s in m.transcribe('<job>/out/raw.mp4',language='en',word_timestamps=True)[0]]"`
+   `$FF -i <job>/out/raw.mp4 -vf "select='gt(scene,0.3)',showinfo" -f null - 2>&1 | grep -o "pts_time:[0-9.]*"`
+   Note: where each line falls, the hands-only shot's start/end, when speech ends, any mispronounced word.
+2. **Voice reference:** 2.5–4 s of the actor's own clean speech (no drug names), mono 24 kHz:
+   `$FF -ss <a> -to <b> -i raw.mp4 -vn -ac 1 -ar 24000 voice_ref.wav` (join two clips with `concat` if needed).
+3. **Three takes** of the product line, different spellings ("Sermorelin", "Sir-mor-ELL-in", "Sermorelin G. H. K."):
+   `higgsfield generate create seed_audio --prompt "<line>" --audio voice_ref.wav --wait --json > takeN.json`
+   The result is the URL containing `/hf_` (the first URL in the JSON is your uploaded reference).
+4. **Pick** the take both whisper `small` and `medium` hear closest; check its length fits inside the hands shot
+   (trim leading silence with `atrim`, speed up to ×1.15 with `atempo` if needed). If none is clean, LISTEN and ask the user.
+5. **Build the cut:** keep the hands shot; place the take inside it; **mute the original audio there (volume=0, never a
+   duck: at 5% it is heard as a second voice)**; drop any on-camera line that was mispronounced (trim + `concat`); then hold
+   the last frame so the end card gets ≥ 4 s: `-vf tpad=stop_mode=clone:stop_duration=<s> -af apad=pad_dur=<s>` as its
+   own pass (inside a trim chain it can silently fail; check the video length after).
+6. **Re-caption** `layers_full/<Tag>_caps.json` to the new timings (correct spellings), run `full_layout.py … --end <after
+   the last word>`, then re-transcribe the FINAL once: one voice per line, every name right, nothing under the end card.
+7. Record in SESSION.md: which line was re-voiced, the take, the cut times, the cost. Tell the user to LISTEN to the names.
 
 ## 2. Video finishing
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
-{"product": "sermorelin-ghk", "style": "house|tiktok|editorial", "kicker": "optional label for editorial",
+{"product": "sermorelin-ghk", "style": "default|tiktok|editorial" (house look = "default"; "house" crashes), "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<bible>", "<bible>", "<bible>"],
  "ingredients_label": "3-IN-1 PEPTIDE SUPPORT",
@@ -37,14 +65,19 @@ Don't type the disclaimer into copy.json; if it's there, it must match product.j
 bottle exists, add `"bottle": "sghk1000_bottle_ref.jpg"` (shows its black background on the end card: preview only).
 500 mcg jobs set `"bottle": "sghk500_bottle.png"` (once it's in assets/); the tablet is the same for both strengths.
 
-Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
+Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 11 [--mirror-until <s>] [--zoom 1.2]`
 
 Then fix whisper's spellings in `<job>/layers_full/<Tag>_caps.json` (Sermorelin, GHK, growth hormone, Citrulline), merge
 one-word chunks, restore "?", re-run. Check 4 frames (hook, mid, product, end card), copy to `<job>/FINAL_<Tag>_15s_9x16.mp4`, `open` it.
 
 **Review burst:** gated (no screened reviews yet, see `reviews.md`).
 
-Looks: `house` · `tiktok` · `editorial`; vary across a batch. Women: prefer `tiktok`/`editorial` (the `house` navy/gold
+**`tiktok` end card:** Sermorelin GHK's ingredient names and claims are too long for its name + claim rows (they overlap).
+Set `"end_rows": "benefits"` and `"ingredients_label": "SERMORELIN + GHK + CITRULLINE"`: the rows then show the 3 bible
+benefits. **Clip shorter than its speech + end card?** Marketing Studio fills the whole clip with speech, so hold the last
+frame (`ffmpeg -vf tpad=stop_mode=clone:stop_duration=2.5 -af apad=pad_dur=2.5`) and start the end card after the last word.
+
+Looks: `house` (style "default") · `tiktok` · `editorial`; vary across a batch. **Until the shared end card is fixed, use `tiktok` with `"end_rows": "benefits"`:** the house and editorial end cards cut Sermorelin GHK's ingredient claims off after 2 lines (2026-10-29). Women: prefer `tiktok`/`editorial` (the `house` navy/gold
 is fine; check nothing reads orange).
 
 ## 3. Image finishing

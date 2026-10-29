@@ -22,7 +22,9 @@ SIZES = {"4:5": (1080, 1350), "9:16": (1080, 1920), "1:1": (1080, 1080)}
 MODEL_RATIO = {"4:5": "4:5", "9:16": "9:16", "1:1": "1:1"}
 LIGHT = (251, 251, 246)
 DISC_SIZE, DISC_LH = 21, 26   # compact footer (creative lead: 35% smaller, transparent)
-LOGO_W = 200                   # Everlife logo at the top (creative lead, 2026-10-28)
+LOGO_FRAC = {"9:16": 0.40, "4:5": 0.31, "1:1": 0.31}   # bible v3 §03: logo width 40% (9:16) / 31% (4:5) of the canvas
+LOGO_W = 200                   # set per ratio in main(); logo at the top (creative lead, 2026-10-28)
+DISC_MIN = 13                  # bible v3 §04: disclaimer 2 lines max, 13 px minimum
 LOGO_TOP = {"9:16": 150, "4:5": 60, "1:1": 56}   # inside the safe band (9:16: Stories UI covers the top 144 px)
 MAX_SHIFT = 140
 
@@ -54,12 +56,19 @@ def art(name, tone, scale):
 
 def build_footer(W, tone, disclaimer):
     """Compact transparent footer: approved proof art row + disclaimer (the logo sits at the top). RGBA, no background."""
-    fw = W - 80
+    global DISC_SIZE, DISC_LH
+    fw = W - 56
     s = 0.56
     parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
     rh = max(p.height for p in parts)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw)
+    size = 21
+    while True:   # bible v3: at most 2 lines, never under 13 px
+        lines = wrap(d0, disclaimer, sans(size), fw)
+        if len(lines) <= 2 or size <= DISC_MIN:
+            break
+        size -= 1
+    DISC_SIZE, DISC_LH = size, int(round(size * 1.25))
     h = 14 + rh + 6 + DISC_LH * len(lines) + 22
     foot = Image.new("RGBA", (W, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(foot)
@@ -168,6 +177,8 @@ def main():
     else:
         out.paste(g2.crop((0, 0, W, H)), (0, 0))
     # Everlife logo at the top: find the headroom above the ad's first text/edge and nudge the image down if needed
+    global LOGO_W
+    LOGO_W = int(round(W * LOGO_FRAC[a.ratio]))
     ly = LOGO_TOP[a.ratio]
     logo_h = logo_layer("dark").height
     need = ly + logo_h + 26
