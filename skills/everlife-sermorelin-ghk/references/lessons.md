@@ -184,3 +184,11 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
   "hardcore training" direction was applied to every scene instead of to the casting. Fix: §2c variety plan (image-batch.md).
 - Product name asked "beside the bottle" was printed on the coffee mug next to it. Place the name in a text position
   (top / under the headline / band / panel), never next to a prop.
+
+## Batch m1000 (2026-10-29, men, 1000 mcg, 4 × 9:16, 8 credits incl. 4 re-rolls)
+- "Lowest element ends at 40%" was ignored on 3 of 4 (bottles at 77–82%), and headlines started at ~7%, under the real logo.
+  What worked on the re-roll: a "poster printed only in the band 15%–50%" LAYOUT block with three explicit bands (0–15 empty,
+  15–50 everything, 50–100 plain scene). Use it from the first pass.
+- A person-led 9:16 still drifts: an open palm held forward lands in the bottom half (#3), and a tablet held beside the face goes
+  small (#4, ~6% width). For people shots, keep the hold at face height and name a minimum tablet width in pixels/percent twice.
+- An edit of a good raw ("keep everything, move down so the top 15% is empty") fixed #2 cleanly for 1 credit.

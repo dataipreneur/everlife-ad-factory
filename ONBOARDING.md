@@ -1,118 +1,169 @@
-# Everlife ad factory, version 2: update guide for the creative team
+# Everlife ad factory: Day 1 guide
 
-You already run version 1 (the Restora-Z and Sermorelin GHK skills). Version 2 adds the PT-141 skill, moves the
-Everlife logo to the top of every static, and moves the proof footer (Trustpilot, Doctor Prescribed, Ships Free,
-disclaimer) up into the Meta safe area so it is never hidden under the Reels "Learn more" button.
+This guide gets you from nothing to your first finished, on-brand Everlife ad. You do not need to know git, Python or
+the command line: Claude Code does the technical steps for you. You only click a few buttons and sign in to three
+websites.
 
-You do not need to know git or Python. Every step below is either "paste this into Claude Code" or "type this one line".
-Nothing here spends credits.
+Allow about 45 minutes. Nothing in steps 1 to 4 spends credits. Works on a **Mac** or a **Windows PC** (Windows: do
+Step 0 first).
 
 ---
 
-## Step 1. Save your own tweaks first (5 minutes)
+## Step 0. Windows only: set up Ubuntu first (20 minutes, once)
 
-You changed a few things in your copy (for example the logo size). Those must not be lost, so Claude will list them.
+The ad tools run inside **Ubuntu**, Microsoft's built-in Linux for Windows (called WSL). You need Windows 10 (version
+2004 or newer) or Windows 11. On a Mac, skip to Step 1.
 
-1. Open Claude Code the way you do for ads.
-2. Paste this whole box, press Enter, and say yes if it asks to read files:
+1. Click Start, type **PowerShell**, right-click it and choose **Run as administrator**.
+2. Type `wsl --install` and press Enter. When it finishes, **restart the PC**.
+3. After the restart an **Ubuntu** window opens. Choose a username and password (any you like; write the password down:
+   you'll need it once more). If no window opens, click Start and type **Ubuntu**.
+4. In the Ubuntu window, paste this line and press Enter (it asks for that password; the typing stays invisible):
+   `sudo apt update && sudo apt install -y git unzip curl python3-venv python3-pip`
+5. Install **Claude Code inside Ubuntu**: in the same Ubuntu window paste
+   `curl -fsSL https://claude.ai/install.sh | bash`, wait for the prompt to come back, close the Ubuntu window and open
+   it again (Start → Ubuntu). Type `claude --version` (it prints a version number), then `claude` and sign in with your
+   Everlife Claude account (hold Ctrl and click the link it prints). **From now on, always open Claude Code from the
+   Ubuntu window** for ad work.
+
+Windows tips:
+- Sign-ins (GitHub, Higgsfield, Creatify) print a web link: hold Ctrl and click it, or copy it into your browser.
+- Your finished ads live in Ubuntu. To open the folder in File Explorer, ask Claude: `open my ads folder in Explorer`
+  (it runs `explorer.exe ~/Everlife-Creative/output`). You can also paste
+  `\\wsl$\Ubuntu\home\<your Ubuntu username>\Everlife-Creative\output` into File Explorer's address bar.
+- Video ads made on Windows use open fonts (Inter, Fraunces) instead of Apple's, so the type looks slightly different.
+
+---
+
+## Step 1. Before you start (someone sends you two things)
+
+You need:
+
+1. **An invite to the ad factory on GitHub.** GitHub is where the ad tools live. Create a free account at
+   [github.com/signup](https://github.com/signup) if you don't have one, send your username to Priestley or Mitansh,
+   then accept the invite from the email GitHub sends you.
+2. **The Everlife logins** for Higgsfield (videos) and Creatify (images). These are shared team accounts: ask Mitansh.
+   Never use a personal account; the team credits are shared and tracked.
+
+### Install Claude Code (10 minutes, skip if you already have it)
+
+You need a paid Claude plan with Claude Code (your Everlife Team seat, or Pro/Max): the free plan doesn't include it.
+
+- **Mac** (macOS 13 or newer): press Command-Space, type **Terminal**, press Enter. Paste this line and press Enter:
+  `curl -fsSL https://claude.ai/install.sh | bash`
+  It shows no progress while it downloads; wait for the prompt to come back. Then close the window and open a new
+  Terminal window.
+- **Windows:** you already did this inside Ubuntu in Step 0.
+
+Check it worked: type `claude --version` (it prints a version number). Then type `claude`, press Enter and sign in with
+your Everlife Claude account in the browser window that opens. **Keep this window: this is where you talk to Claude.**
+
+---
+
+## Step 2. Let Claude set everything up (about 20 minutes)
+
+1. Open Claude Code.
+2. Paste this whole box, press Enter, and say **yes** when it asks for permission to run commands.
 
 ```
-Please help me make a list of every change that was made to my Everlife ad tools, so my team lead can copy those changes into the new version. I am not technical, so please do everything yourself and keep your questions to a minimum.
+Please set up the Everlife ad factory on this Mac for me. I am not technical: do every step yourself, explain what you
+are doing in one plain sentence per step, and only stop when you need me to click something. Do not spend any credits.
 
-What to do:
-1. Find my Everlife ad skills and tools on this computer. They are usually in ~/.claude/skills (folders starting with "everlife-") and in ~/Everlife-Creative/tools. Follow any shortcuts to the real folders.
-2. Work out what the original files looked like. Look for a git history, an "_originals" folder next to CHANGELOG.md, the CHANGELOG.md itself, or any zip or backup of the install. If none of those exist, use the file dates and say that you did.
-3. Find everything that is different from the original: numbers that changed (for example a logo size), words that changed in prompts or templates, new or replaced pictures and assets, and anything added to the lessons or copy-log files. For every change, record the exact old and new values.
-4. Write it all into one file on my Desktop called my-ad-changes.md, with:
-   - a short summary in plain English,
-   - a table with one row per changed file: file, what changed in plain words, old value -> new value, why if you can tell, and when,
-   - a list of new files or assets,
-   - a list of anything you could not confirm.
-5. Tell me when the file is ready and where it is.
-
-Important: only read and write that one file. Do not change, delete, regenerate or upload anything, and do not spend any credits.
+1. Basic tools. On a Mac: run "xcode-select -p"; if they are missing, run "xcode-select --install", tell me to click
+   Install in the window that opens, and wait until I say it has finished. On Windows (inside Ubuntu, WSL): check that
+   git, unzip, curl and "python3 -m venv" work; if not, ask me to paste the apt line from Step 0 of the guide.
+2. GitHub sign-in: if "gh --version" fails, install the GitHub CLI without admin rights with exactly this command
+   (latest release for this system and chip, into ~/.local/bin):
+   mkdir -p ~/.local/bin && cd "$(mktemp -d)" && V=$(curl -fsSL https://api.github.com/repos/cli/cli/releases/latest | grep -o '"tag_name": *"v[0-9.]*"' | grep -o '[0-9][0-9.]*') && A=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') && if [ "$(uname)" = Darwin ]; then curl -fsSLO "https://github.com/cli/cli/releases/download/v$V/gh_${V}_macOS_$A.zip" && unzip -q gh_*.zip && cp gh_*/bin/gh ~/.local/bin/; else curl -fsSL "https://github.com/cli/cli/releases/download/v$V/gh_${V}_linux_$A.tar.gz" | tar -xz && cp gh_*/bin/gh ~/.local/bin/; fi && ~/.local/bin/gh --version
+   From here on call it as ~/.local/bin/gh if plain "gh" is not found. Then run "gh auth login --hostname github.com --git-protocol https --web" in the background, show me
+   the one-time code and the link in big letters, and wait while I paste the code in the browser and click Authorize.
+   Then run "gh auth setup-git".
+3. Download the ad factory: if ~/everlife-ad-factory does not exist, run
+   "gh repo clone dataipreneur/everlife-ad-factory ~/everlife-ad-factory". If it exists, leave it.
+4. Install it: run "bash ~/everlife-ad-factory/core/scripts/update.sh". It links the product skills, adds the Everlife
+   creative rules to Claude Code, installs the finishing toolkit and checks every product. It can take a few minutes.
+5. Creatify plugin (makes the image ads): run
+   "claude plugin marketplace add creatify-ai/creatify-ad-agent-skill" and then
+   "claude plugin install creatify-ad-agent@creatify-ad-agent". If either says it already exists, that is fine.
+6. Creatify image models (Nano Banana, picked per image batch): run
+   "claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp".
+   If it says the server already exists, that is fine.
+7. Higgsfield (makes the video ads): if the "higgsfield" command is missing, install it with
+   "curl -fsSL https://raw.githubusercontent.com/higgsfield-ai/cli/main/install.sh | sh".
+8. Show me every ❌ line from step 4 and tell me in plain words what I need to do. The only things I should have to do
+   myself are the sign-ins in Step 3 of the guide.
 ```
 
-3. A file called `my-ad-changes.md` appears on your Desktop. Send it to Mitansh. He merges your tweaks into version 2.
+3. When it finishes, **quit Claude Code and open it again**. That loads the new skills and the Everlife rules. If Claude
+   asks whether to allow the files the rules point to, say yes.
 
 ---
 
-## Step 2. Install version 2 (10 minutes, Claude does it)
+## Step 3. Sign in to Higgsfield and Creatify (5 minutes)
 
-Paste this box into Claude Code and press Enter. Say yes when it asks permission to run commands. It downloads the
-new version, links the skills, and installs the finishing toolkit. Your old copy is moved to a backup folder, never deleted.
+Type each line below into the Claude Code chat yourself. The `!` at the start runs it on your Mac. Use the shared
+Everlife logins from Step 1.
 
-```
-Please install version 2 of the Everlife ad factory for me. I am not technical: do each step yourself, show me the result of each step, and stop and explain if anything fails. Do not spend any credits.
+- `! higgsfield auth login`: a browser opens, sign in.
+- `! higgsfield workspace list`: then tell Claude "select the Everlife workspace". It must say **Everlife**, never Private.
+- Type `/mcp`, pick **plugin:creatify-ad-agent:creatify-ad-agent** (the image ads), and sign in with the Everlife Creatify
+  account if it asks.
+- Still in `/mcp`, pick **creatify** (the image models server: Nano Banana) and sign in with the same Everlife Creatify
+  account. Same credits; GPT Image 2.5 stays the default, so you only need this when you pick Nano Banana.
 
-1. If the folder ~/everlife-ad-factory does not exist, run:
-   git clone https://github.com/dataipreneur/everlife-ad-factory.git ~/everlife-ad-factory
-   If it already exists, run "git -C ~/everlife-ad-factory pull" instead.
-2. Switch it to the version-2 branch: git -C ~/everlife-ad-factory checkout pt-141-skill && git -C ~/everlife-ad-factory pull
-   (If Mitansh has said the branch is merged, use "main" instead of "pt-141-skill".)
-3. Run: bash ~/everlife-ad-factory/install.sh
-   It links three skills into ~/.claude/skills: everlife-restora-z, everlife-sermorelin-ghk, everlife-pt-141. If it says it moved an old copy to ~/.claude/skills-backup, that is expected.
-4. Run: bash ~/.claude/skills/everlife-pt-141/core/scripts/preflight.sh --install
-   This installs the shared finishing toolkit into ~/Everlife-Creative/tools. It may take a few minutes.
-5. Run the preflight check for each skill and show me the ✅ / ❌ lines:
-   bash ~/.claude/skills/everlife-restora-z/core/scripts/preflight.sh
-   bash ~/.claude/skills/everlife-sermorelin-ghk/core/scripts/preflight.sh
-   bash ~/.claude/skills/everlife-pt-141/core/scripts/preflight.sh
-6. Run: claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp
-   (If it says the server already exists, that is fine.)
-7. For every ❌ line, tell me in plain words what I need to do. The only things I may have to do myself are logging in to Higgsfield and connecting the Creatify plugin (step 3 of the guide).
-```
+Then type: `check my Everlife ad setup`. Claude re-runs the checks. Repeat until every line is ✅.
 
 ---
 
-## Step 3. Log in to the two services (only if the preflight showed a ❌ for them)
+## Step 4. Your first ads (test run, about 4 credits)
 
-Type these yourself in the Claude Code chat. The `!` at the start runs the command on your Mac.
+Type: `make 4 Restora-Z image ads`
 
-- Higgsfield login: `! higgsfield auth login` and follow the browser window. Then `! higgsfield workspace list`
-  and pick the **Everlife** workspace (shared team credits, never your personal ones).
-- Creatify (images): the creatify-ad-agent plugin must be connected in Claude Code. If the preflight says it is missing,
-  ask Mitansh for the plugin link; it is a one-time install.
-- Creatify models (Nano Banana for image batches): paste this once, then type `/mcp`, pick **creatify** and approve the sign-in:
-  `! claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp`
-  (Step 2's install prompt already runs the add command for you; you only do the sign-in.)
+Claude asks one or two short rounds of questions. Pick the options marked **Recommended** the first time. It then shows
+you the ads it plans to make and the cost, and waits for your OK. Nothing is spent until you approve.
 
-Run step 2's preflight lines again until every line is ✅.
+When it finishes it opens a contact sheet and tells you the folder. Every finished ad is saved in
+`~/Everlife-Creative/output/<Product>/`.
+
+**Everything is a draft.** Creative review comes first, then Jeremy's compliance sign-off, before anything goes live.
 
 ---
 
-## Step 4. Make your first PT-141 batch (test run, about 4 credits)
+## What to type (cheat sheet)
 
-In Claude Code, type: `make 4 PT-141 image ads`
+| You want | Type |
+|---|---|
+| Image ads | `make 4 Restora-Z image ads` · `make Sermorelin GHK image ads for women` · `make PT-141 image ads` |
+| A video ad | `make a Sermorelin GHK video for men` · `make a Restora-Z video` |
+| Other products | `make BPC-157 image ads` · `make plain Sermorelin image ads` |
+| The latest tools | `update my ad tools` |
+| A setup check | `check my Everlife ad setup` |
+| Your credits | `how many Creatify and Higgsfield credits are left?` |
+| Something broke | paste the error and ask `what does this mean and how do I fix it?` |
 
-Claude asks two short rounds of questions (form, hook angle, boldness, mood, how many). Pick the recommended answers
-the first time. It then shows you a table of four ads to approve. Approving costs about 1 Creatify credit per image.
-
-When it finishes it opens a contact sheet and tells you the folder:
-`~/Everlife-Creative/output/PT-141/<date>_batch-<n>/` with `FINAL_*.png`, the raws and a `prompts.md`.
-
-Everything is a draft: creative review first, then Jeremy's compliance sign-off, before anything goes live.
-
----
-
-## What is different in version 2
-
-- **PT-141 skill.** Nasal spray and sublingual tablet. Product-only premium statics (no people until the new people
-  approach is approved). Copy comes only from the PT-141 bible page; every unflagged Tier A headline has now been used
-  once, so new headlines need Jeremy.
-- **Logo at the top** of every static, 311 px wide, dark on light scenes and cream on dark ones.
-- **Proof footer inside the Reels safe area.** On 9:16 it now ends at 72% of the frame (y 1385) instead of the bottom
-  edge, because the bottom of a Reel sits under Meta's button and caption. The image prompt keeps the product and
-  headline in the top half; if a generation comes back too low, the finisher shifts it up, and if that is not enough
-  it refuses and tells you to re-roll or do one reposition edit (1 credit).
-- **Type and colour vary per ad.** No more same serif and purple accent five times in a row.
-- **Shared tools read each product's product.json.** The disclaimer, renders and names come from the skill, so the
-  tools never mix products up.
+Products with a skill today: **Restora-Z, Sermorelin GHK, plain Sermorelin, PT-141, BPC-157.** "Sermorelin" alone is
+ambiguous: say "Sermorelin GHK" or "plain Sermorelin".
 
 ---
 
-## If something goes wrong
+## Good to know
 
-- Paste the exact error into Claude Code and ask it to explain and fix it. It will not spend credits unless you approve a generation.
-- To go back to version 1: your old skills are in `~/.claude/skills-backup/`. Ask Claude: "put my backed-up Everlife skills back".
-- Anything else: message Mitansh with a screenshot.
+- **Credits are shared team money.** Claude always shows the cost and waits for your OK before generating. Image ads are
+  about 1 credit each; a 15-second video is about 75.
+- **Claims come only from the creative bible.** The skills will not invent claims, and they stop and tell you when a
+  brief asks for something the rules don't allow. That's working as intended: ask Jeremy if you think the rule is wrong.
+- **Update every Monday** (or when Mitansh says so): type `update my ad tools`.
+- **Windows:** always start Claude Code from the Ubuntu window, not from Windows itself.
+- **Don't edit the files in ~/everlife-ad-factory.** If something should change, tell Mitansh or Priestley. The update
+  stops and tells you if it finds local edits.
+
+## Lost or stuck?
+
+Once the ad tools are on your computer, type `Read ~/everlife-ad-factory/ONBOARDING.md and tell me which step I'm on`. Claude checks
+your setup against this guide and tells you the next step in plain words.
+
+## Who to ask
+
+- Tools, setup, errors: **Mitansh**
+- Compliance (claims, disclaimers, "can we say this?"): **Jeremy**
+- Access (GitHub invite, logins): **Priestley** or **Mitansh**

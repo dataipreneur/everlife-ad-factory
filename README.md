@@ -19,20 +19,31 @@ skills/
     assets/                   real bottle + pill renders, Creatify project, copy-log seed
     references/               product bible, reviews, styles + boards, prompting, finishing, lessons
     core -> ../../core        link to the shared toolkit (committed to git)
-install.sh                    links every skill into ~/.claude/skills/
+core/claude/                  everlife-gates.md + everlife-team.md (imported into ~/.claude/CLAUDE.md), creative-bible.md
+core/scripts/update.sh        "update my ad tools": pull, install, toolkit, checks
+install.sh                    links every skill into ~/.claude/skills/ (+ gates, bible link, read-only allow list)
+ONBOARDING.md                 Day-1 guide for non-technical teammates
 ```
 
 ## Setup (each person, once)
-Already running the original Restora-Z package (zip)? Follow `HANDOFF-MITANSH.md` instead: it checks your version, backs
-it up, tests the new tools on your Mac before installing, and has a rollback.
+Non-technical teammates: follow `ONBOARDING.md` (GitHub route; one pasted prompt; Claude Code does the steps) or
+`ONBOARDING-ZIP.md` (no GitHub: we send a zip built with `bash core/scripts/make_zip.sh main ~/Desktop`; new versions
+are new zips). Both cover Mac and Windows (Windows runs everything inside WSL/Ubuntu; Apple fonts fall back to the
+bundled Inter/Fraunces in `build_layers.font()`). Already running the original Restora-Z package (zip)? Follow `HANDOFF-MITANSH.md` instead: it checks your version, backs it up, tests the new
+tools on your Mac before installing, and has a rollback.
 
-1. `git clone <repo-url> ~/everlife-ad-factory`
-2. `bash ~/everlife-ad-factory/install.sh` (links the skills; an older unlinked copy is moved to `~/.claude/skills-backup/`)
-3. `bash ~/.claude/skills/everlife-restora-z/core/scripts/preflight.sh --install`
-4. Higgsfield: `higgsfield auth login`, Everlife workspace. Creatify: connect the creatify-ad-agent plugin.
+1. `gh repo clone dataipreneur/everlife-ad-factory ~/everlife-ad-factory` (private repo: needs a GitHub invite)
+2. `bash ~/everlife-ad-factory/core/scripts/update.sh`: links the skills (`install.sh`: an older unlinked copy is moved
+   to `~/.claude/skills-backup/`), adds the creative gates (`core/claude/`) to `~/.claude/CLAUDE.md` as one managed
+   import block, links the creative bible, allows a few read-only commands, installs the toolkit, runs every preflight.
+3. Higgsfield: `higgsfield auth login`, Everlife workspace. Creatify: `claude plugin marketplace add
+   creatify-ai/creatify-ad-agent-skill`, `claude plugin install creatify-ad-agent@creatify-ad-agent`, sign in via `/mcp`.
 
 ## Day to day
-- Get the latest: `git pull`, then `bash install.sh` (links any new skill), then, if anything under `core/tools/` changed, run preflight `--install` again (it copies the toolkit to `~/Everlife-Creative/tools`). In that order: the tools find products through the linked skills in `~/.claude/skills`.
+- Get the latest: `bash core/scripts/update.sh` (pull main → `install.sh` → toolkit `--install` → every preflight; stops
+  if the copy has local edits). In that order: the tools find products through the linked skills in `~/.claude/skills`.
+- The creative gates and bible live in `core/claude/` (copied from Priestley's setup, 2026-10-29). Change them only
+  through a PR with Jeremy's sign-off; everyone's Claude Code reads them.
 - Change something: `git checkout -b <short-name>` → edit → `git commit` → `git push` → open a pull request → the other person reviews and merges.
 - Changes to `core/` affect every product: run the before/after check before merging (below).
 - Changes to a bible, disclaimer or claim file need Jeremy's sign-off before merge.

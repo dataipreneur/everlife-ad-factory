@@ -2,6 +2,68 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Day-1 onboarding for non-technical teammates (branch onboarding-day-one)
+Logged before editing. Priestley: help a non-technical person start using the repo and the skills as smoothly as possible.
+- `ONBOARDING.md`: rewritten as a Day-1 guide for a brand-new person (before you start: GitHub invite, Claude Code,
+  Apple developer tools; one pasted setup prompt that signs in to GitHub, downloads the repo and installs everything;
+  logins; first test batch; a "what to type" cheat sheet; who to ask). The version-2 upgrade guide it replaces is kept
+  in `_originals/2026-10-29/onboarding-day-one/`.
+- `core/claude/everlife-gates.md`: the EverlifeMD creative gates (copied verbatim from Priestley's ~/.claude/CLAUDE.md)
+  and `core/claude/creative-bible.md` (the bible v3 import from ~/.claude/everlife/), so every teammate works under the
+  same rules. **Jeremy to confirm before merge** (the gates are the compliance checklist).
+- `install.sh`: also adds the gates to the user's ~/.claude/CLAUDE.md as one managed import block (skipped when the
+  gates are already there; an existing CLAUDE.md is backed up, never replaced), links the bible to
+  ~/.claude/everlife/creative-bible.md when the user has none, and adds a short list of read-only commands to Claude
+  Code's allow list (never anything that spends credits).
+- `core/scripts/update.sh`: "update my ad tools" in one step (pull main, re-link skills, re-install the toolkit, check).
+- `README.md`: setup section points to ONBOARDING.md and update.sh.
+Originals in `_originals/2026-10-29/onboarding-day-one/`.
+- Follow-up (logged before editing): ONBOARDING.md also connects the **Creatify general server** (`claude mcp add
+  --transport http --scope user creatify https://api.creatify.ai/mcp`, sign-in via `/mcp`), which the image setup needs
+  for the Nano Banana models (the Ad Agent plugin only runs GPT Image 2.5). Same Everlife Creatify account and credits.
+- Follow-up (logged before editing): Mitansh aligned `core/claude/everlife-gates.md` with his tested local rules (no
+  Asana-brief stop; product.json disclaimer when the bible has none; known gaps). Priestley: follow Mitansh on those, but
+  **keep our women's palette rule** (bible v3: "no oranges or greens" applies only to GHK-Cu Cream and Glow Stack; other
+  women's creative has no palette limit; Justin's Sermorelin GHK direction allows teal/white). Mitansh has not tested
+  women's ads. Restored that one line.
+- Follow-up (logged before editing): Priestley reverted that: the women's palette line follows Mitansh's version
+  ("Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens."). Note: the Sermorelin GHK skill's
+  women's colour rules (Justin, teal/white) are looser than this gate; the gate wins.
+- Follow-up (logged before editing): Priestley: the women's palette applies to Sermorelin too. Both Sermorelin skills
+  (GHK + plain) now use pinks, tans, beige (cream / warm white as neutral backgrounds); no oranges or greens, teal
+  included; the real product keeps its colours (green-teal GHK tablet, plain Sermorelin's orange label). Replaces
+  Justin's 29 Oct direction (white + teal, "no colour banned", explore slots, >=1 teal ad): tell Justin.
+  Files: GHK SKILL.md, image-batch.md §2b + template, lessons.md, product-bible.md note; plain Sermorelin SKILL.md,
+  image-batch.md §2b + checklist + template, video-prompting.md, product-bible.md. Originals in
+  `_originals/2026-10-29/sermorelin-womens-palette/`.
+- Follow-up (logged before editing): **reverted** the entry above (commit 382c1be). It came from a misread question
+  ("did Justin's GHK suggestion apply to plain Sermorelin too?"), not a request. Both Sermorelin skills are back to
+  Justin's women's colour direction; the gates keep Mitansh's palette line. Open: which rule wins for Sermorelin
+  women's ads (ask Justin).
+- Follow-up (logged before editing): Priestley: keep Justin's women's colour direction for **Sermorelin and Sermorelin
+  GHK**. The gates' palette line keeps Mitansh's wording for every other product and gains that exception (pinks,
+  tans, neutrals, warm tones preferred; white and teal welcome, white for advertorials; preferences, not limits).
+- Follow-up (logged before editing): **zip distribution** (Priestley: the team may get a zipped folder instead of GitHub).
+  New `ONBOARDING-ZIP.md` (no GitHub account: unzip to ~/everlife-ad-factory, one pasted setup prompt, updates = a new
+  zip); `core/scripts/make_zip.sh` builds the zip from a git commit (`git archive`: no .git, no _originals, symlinks
+  kept; tested with Finder/ditto and unzip); `update.sh` works without git (zip installs: skips the pull, re-installs
+  and checks); `install.sh` re-creates a skill's `core` link if an unzip tool flattened it. README points to both.
+  Originals in `_originals/2026-10-29/onboarding-zip/`.
+- Follow-up (logged before editing): **Windows support via WSL** (Priestley: "don't limit to Mac"). The tools run
+  unchanged inside WSL (Ubuntu): bash, symlinks, Python venv, the bundled ffmpeg. The one blocker was Apple system
+  fonts (Avenir Next, Helvetica Neue, Baskerville, Arial Unicode): `core/tools/build_layers.py` `font()` now falls
+  back to the bundled open fonts when an Apple font file is missing (sans → Inter, Baskerville → Fraunces, weight
+  matched by name). **Mac output unchanged** (regression identical); Windows videos use Inter/Fraunces, so they look
+  slightly different (Mitansh to review). Both onboarding guides gain a Windows section (install WSL + Ubuntu, Claude
+  Code inside Ubuntu, unzip/clone into the Linux home, open outputs with explorer.exe). Originals in
+  `_originals/2026-10-29/windows-wsl/`.
+- Follow-up (logged before editing): both guides made exact enough for Claude Code to follow from the start:
+  the official Claude Code install (`curl -fsSL https://claude.ai/install.sh | bash`, Mac/Linux/WSL, from
+  code.claude.com/docs/en/setup; paid Claude plan required) replaces "ask Mitansh"; the GitHub CLI step is an exact
+  command (latest release for macOS/Linux and the chip, into ~/.local/bin; tested on Apple silicon, Linux URL checked);
+  the `/mcp` names match what Claude Code shows (`plugin:creatify-ad-agent:creatify-ad-agent`, `creatify`); and a
+  "read the guide and set me up" shortcut once the folder is on the computer.
+
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
 tablet, bottle, offer "Save up to 65%", landing page). Built per README "Adding a product skill", same flow as the
