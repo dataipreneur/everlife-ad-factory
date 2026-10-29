@@ -115,7 +115,7 @@ Compliance traps:
 - **Fix a mispronounced line for 0.3 credits** when it falls over a shot without a visible mouth: clone his voice with
   `higgsfield generate create seed_audio --prompt "Sermorelin G. H. K. …" --audio <his own correct lines>.wav --wait --json`
   (the result is the `/hf_…` URL; the first URL in the JSON is your uploaded reference), trim/atempo it to fit inside the
-  shot's cut times (`select='gt(scene,0.3)'`), duck the original voice there, splice, re-caption, re-finish.
+  shot's cut times (`select='gt(scene,0.3)'`), MUTE the original voice there (volume 0, not a duck: at 5% it is still heard as a second voice, Priestley 2026-10-29), splice, re-caption, re-finish.
   "G. H. K." with dots read correctly in 3 of 3 takes. So: say the product name over a hands-only shot by design.
 
 ## Batch 4 (2026-10-29, 5 men + 5 women, 9 winners + 1 Pinterest, 17 credits incl. 7 fixes)
@@ -136,3 +136,12 @@ Compliance traps:
   "Product names run big" (M3 showed the name only on the label) and "Reference top-performing, lowest-CPA creative"
   (every men's winner uses heavy condensed caps). Reviewer follow-up: "men shouldn't use that font IMO" → rule now: no elegant / italic serif or brush headlines on
   men's ads (image-batch.md §2b).
+
+## Batch-5 videos "Track" (men) + "Pilates" (women), 2026-10-29 (227 Higgsfield incl. one failed take)
+- **Marketing Studio ignores "say line 1 over the hands-only shot"**: both takes put every line on the face, and both said
+  "Sermorelin" wrong ("Surmergene", "Surmeasine", "Cermalacup"). Plan the edit instead: let the hands shot run silent or
+  with a throwaway line, re-voice the product line in the cloned voice over it, and cut the on-camera product line out.
+- **Any window shows the outside.** Pilates take 1 had an orange wall and green trees through the window (women's palette
+  fail, not fixable in edit). For women's interiors say "interior wall only, the window NOT in frame, no outdoor view, no plants".
+- **"Sublingual" is mispronounced too** ("sub-single", "subliberal"). Keep it on screen, not spoken, or over a hands shot.
+- The Seed Audio clone fixes names in 1 of 3 takes reliably; spelling "Sir-mor-ELL-in" or plain "Sermorelin" worked best.
