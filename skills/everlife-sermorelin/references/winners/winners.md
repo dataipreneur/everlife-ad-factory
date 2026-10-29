@@ -41,9 +41,11 @@ back" (guarantee), "Save 70% vs HGH" (⚠), "Featured in NIH / Healthline / Mayo
 dad-bod goodbye", "Increases Human Growth Hormone", fat loss / fat burning / "Burn", "Sublingual tablets or injection",
 the vial, shirtless bodies, "Skip the needles". Women's winners are orange-heavy: today's rule says pinks/tans/beige.
 
-**Video winners exist but none are on this Mac** (only M4 VIDEO82B below). Ask for these files (Drive / Ads Manager):
+**Video winners on this Mac: M4 VIDEO82B and MV2 274068Video** (cards below; MV2 found 2026-10-29 in the "Sermorelin M"
+zip as "2b_circle tablet_274068_1x1_before avatar v2.mp4"). The rest aren't in Emily's "Sermorelin M" / "Sermorelin F"
+Drive folders as downloaded 2026-10-28. Ask for these files (Ads Manager or whoever made them):
 - Men: **S3VIDEO2** (133 sales, $443), **Video#44A** (33, $392), **S3VIDEO4** (29, $310), **VID-7** (28, $349),
-  274068Video-2.01 (18, $364), Video#77B (12, $440), S3VIDEO1/3/5/6 (small).
+  Video#77B (12, $440), S3VIDEO1/3/5/6 (small).
 - Women: **272652Video** cuts (May–Jun 2025: 16–23 sales/month, $312–374), **Long Form 1** (Jun 2025: 23 sales, $351),
   video8 (8, $173), video9 (6, $149), video3 (7, $478).
 - Analyst warning (monthly sheets): "Sermorelin Male #1 ID272651-3.01 ($66 CPA) rests on one $517 ad reporting 16
@@ -112,6 +114,21 @@ box + warm orange light; 3.01 = grey name box + cooler light. Same copy.
 - **Rebuild with:** keep the "Now Double Strength" news header and sound-off design (Tier A "Double Strength
   Sermorelin"); a grounded pattern interrupt instead of creatures (3A movie-peg, 5B versus-a-problem); VO ≤ 35 words,
   15 s, end card with a bible CTA.
+
+### MV2 · 274068Video-2.01 · video, 12 s, 9:16 · ~$364 CPA (18 sales, all-time Meta export) · `MV2_274068Video.jpg` (1 fps contact sheet)
+- **Format:** 0–3 s: a giant round "S" tablet pinched between thumb and index finger toward the lens on a black/red
+  background, "SERMORELIN GROWTH PEPTIDE / KISS YOUR DAD-BOD GOODBYE…" in heavy condensed caps, a talking woman avatar in
+  a circle bubble, one-word captions. 3–12 s: a static features card: "HARNESS THE POWER OF GROWTH HORMONE", bottle + vial
+  + tablet in the centre, four icons with arrows around it, the avatar bubble top right; the VO runs to the end.
+- **Works:** the held tablet huge from frame 1 (exactly bible v3's thumb + index "pull"); speech from the first second;
+  a short 12 s cut; heavy condensed caps (the men's winners' face); product + benefits in one sound-off card.
+- **Don't copy:** "Dad-Bod" (❌), "Sermorelin Growth Peptide" / "the power of growth hormone" (implies the tablet is
+  growth hormone, ⚠), "Featured in NIH / Healthline / Mayo Clinic", "Clinically backed", "boosts muscle and burns fat",
+  "Get Ripped and Lean", "Trusted by Thousands" (now 100,000+), "Free Rush Shipping", the vial, a woman avatar fronting a
+  men's ad without casting intent.
+- **Rebuild with:** open on the pinched tablet + "SERMORELIN BY EVERLIFE" header and a VO line in the first second
+  (Tier A "Double Strength Sermorelin" with the 1000 bottle); the features card becomes the end card with three ✅
+  benefits + a bible CTA; no talking avatar unless it's a real Marketing Studio actor (lip-sync on stills is banned).
 
 ### M5 · BASE130-01 · static · ~$244 CPA (**43 purchases, $10,474**) · `M5_BASE130-01.jpg`
 The highest-volume Sermorelin ad by far.
