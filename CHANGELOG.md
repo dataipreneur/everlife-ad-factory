@@ -21,6 +21,11 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
 - Follow-up (logged before editing): ONBOARDING.md also connects the **Creatify general server** (`claude mcp add
   --transport http --scope user creatify https://api.creatify.ai/mcp`, sign-in via `/mcp`), which the image setup needs
   for the Nano Banana models (the Ad Agent plugin only runs GPT Image 2.5). Same Everlife Creatify account and credits.
+- Follow-up (logged before editing): Mitansh aligned `core/claude/everlife-gates.md` with his tested local rules (no
+  Asana-brief stop; product.json disclaimer when the bible has none; known gaps). Priestley: follow Mitansh on those, but
+  **keep our women's palette rule** (bible v3: "no oranges or greens" applies only to GHK-Cu Cream and Glow Stack; other
+  women's creative has no palette limit; Justin's Sermorelin GHK direction allows teal/white). Mitansh has not tested
+  women's ads. Restored that one line.
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,
