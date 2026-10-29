@@ -2,6 +2,10 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK setup question: women's colour note brought in line with Justin's direction
+Logged before editing. SKILL.md step 1 still said "Women → pinks, tans, beige; never orange or green" (pre-Justin). Now
+points to image-batch.md §2b (preferred pinks/tans/neutrals/warm/white/teal, no colour banned) and adds the men's casting.
+
 ## 2026-10-29 — Sermorelin GHK 9:16: disclaimer alone at the very bottom (product opt-in; Restora / PT-141 unchanged)
 Logged before editing. Team feedback relayed by Priestley: "Disclaimer should always be nested at very bottom" — only the
 disclaimer; the Trustpilot / Doctor Prescribed / Ships Free row stays in the Meta safe area (Mitansh's footer). Scoped to
