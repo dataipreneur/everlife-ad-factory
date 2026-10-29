@@ -8,6 +8,12 @@ real bottle and capsule. We add only the **approved footer** (`finish_batch.py`)
 ad's calm bottom on a soft gradient: the Trustpilot 4.9 / Doctor Prescribed / Ships Free art and the verbatim
 disclaimer (creative lead 2026-10-27: "35% smaller and transparent").
 
+**Superseded 2026-10-29 (creative-system §5): never buy a reposition edit. A raw whose text or product dips into the footer is fixed for free with `reposition_916.py` (full-bleed, edge-stretch slivers, no blur), then `finish_batch.py … --fit trusted`. The paragraph below is kept for history only.**
+
+**FINISHING RULE (Mitansh, 2026-10-29, all products): the raw is finished AS IS with `finish_batch.py --ratio 9:16 --product <id> --fit trusted --shift 0`. No repositioning, no scaling, no padding, no blur, no auto-shift: "0 blurring, the raw ones look better". Bake the layout into the prompt and QA it; a colliding raw is re-rolled or accepted.**
+
+**Disclaimer position (Mitansh, 2026-10-29, all products):** on 9:16 the proof row (Trustpilot 4.9 / Doctor Prescribed / Ships Free) stays in the safe area ending at y 1385; the row is ~32% bigger and ~1000 px wide (crosses the Reels side bands, accepted by Mitansh 2026-10-29); the verbatim disclaimer is laid separately at the very bottom of the frame (36 px margin) by `finish_batch.py` (default `EVERLIFE_DISC_AT=bottom`; `footer` = the old under-the-row placement). Feed ratios are unchanged (row + disclaimer at the bottom).
+
 **Footer position (2026-10-29):** on 9:16 the footer ends at y 1385, the bottom of the Reels safe area (the reference ad's band sits at ~63–72% of the frame; the footer may cross the lower-left profile notch, Mitansh 2026-10-29) (`core/tools/safezones.py`,
 team Safe zones page), because the bottom ~535 px of a Reel sits under Meta's "Learn more" button and caption
 (`core/references/safe-zones/reels_placement_2026-10-29.jpg`). So a 9:16 raw must keep everything in its top ~52%
@@ -17,6 +23,9 @@ scene, light). Scale the product and the text block down together (about 35%) an
 at 50% of the canvas height. Fill the bottom half with calm, plain continuation of the same background: no text, no
 product, no hands." Then re-run `finish_batch.py`. Feed ratios (4:5, 1:1) are unchanged: footer over the calm bottom ~18%.
 
+
+**Batch size (Mitansh, 2026-10-29): default 4, not 5.** Creatify runs 4 image tasks per project at once, so a batch of 4 finishes
+in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
 **Hard stops (never cross):**
@@ -62,9 +71,19 @@ product, no hands." Then re-run `finish_batch.py`. Feed ratios (4:5, 1:1) are un
 **Random (recommended):** pick N different frameworks (no repeats, skip F6), mixing text-heavy (F1, F3, F4, F9) and
 visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which match the winners.
 
+## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
+Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
+timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
+a **named typeface**, an **own palette**, a rotating **product-name treatment** and **headline placement**; the form's hero
+(`product.json → hero`) at **≥ 35% of the canvas width**, real and label-wrapped, with `hero.never` written into the prompt; the CTA
+and every line as exact strings in TEXT (then QA'd); "NO logo or wordmark anywhere" (or an empty masthead box for `logo_in_box.py`).
+Finishing: `reposition_916.py` (free, local) when anything dips into the footer; `unfade_cta.py` when a CTA sits just above it;
+`finish_batch.py --logo-w 40%` for the large real logo; 9:16 only via `compose916.py` from the approved 4:5. Checklist at the end of
+that file.
+
 ## 2. Flow (fast: 1 question, then generate)
 1. **One AskUserQuestion, 3 questions, each with a ✨ Recommended first option** (one Enter-press per question gets a great batch):
-   - **How many?** "5 (Recommended)" / "10" / "15".
+   - **How many?** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
    - **Placement:** "4:5 Feed (Recommended)" / "9:16 Stories/Reels" / "4:5 + 9:16" / "1:1".
    - **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" (then a multiSelect follow-up with the table).
    **Never ask the user for pain points or style here.** Claude picks them automatically from the bible: a different approved
@@ -76,7 +95,7 @@ visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which ma
    One AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch
    and its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, capsule]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
-   aspect_ratio=<MODEL_RATIO>)` from `assets/creatify.json`. **Max 4 in flight per project**: start 4, then the next as each finishes.
+   aspect_ratio=<MODEL_RATIO>)` for the default model; Nano Banana → §2c (Model Playground tools) from `assets/creatify.json`. **Max 4 in flight per project**: start 4, then the next as each finishes.
    MODEL_RATIO = the final ratio itself (4:5 → "4:5", 9:16 → "9:16", 1:1 → "1:1"). For "4:5 + 9:16", generate both ratios.
 4. QA every result (Read it), strictly:
    - text is EXACTLY the approved strings, spelled right, no invented words or badges;
@@ -114,6 +133,16 @@ third above the footer band, split either side of the product) and the light (mo
 
 The type specimen (`assets/type_specimen.png`) is no longer attached by default. Attach it only when the brief asks for
 the house editorial look, and then say "match image 3".
+
+## 2c. Image model (one more question in the setup round; shared rules in `core/references/image-models.md`)
+**Image model:** "GPT Image 2.5 via the connector (Recommended)" / "Nano Banana 2.1" / "Nano Banana Pro" (these three only,
+Mitansh 2026-10-29). One model per batch. Default = `composer_edit_image` as before. Nano Banana = the Creatify MCP server's
+Model Playground (`model_playground_get_model_schema` → `model_playground_generate(model_name="nano-banana-2.1/edit" |
+"nano-banana-pro/edit", input_params={prompt, image_urls:[<render cdn_url>], aspect_ratio:"9:16", resolution:"1K"})` →
+`model_playground_get` → curl the output into `gen/`). Needs the `creatify` MCP signed in (`/mcp`) and the render's `cdn_url` in
+`assets/creatify.json` (one-time, see the shared file). Same workspace credits: GPT Image 2.5 = 1 / image; Nano Banana 2.1 = 1 at
+1K (1.5 at 2K); Nano Banana Pro = 1.5. Same prompt, same QA, same finishing. Write the model into `prompts.md` and SESSION.md.
+If the `creatify` MCP tools are not in this session, say so (new session + `/mcp`) and offer GPT Image 2.5 for this batch.
 
 ## 3. Prompt template (fill everything; keep the quotes exact)
 ```

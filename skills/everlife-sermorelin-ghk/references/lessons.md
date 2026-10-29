@@ -162,3 +162,9 @@ Compliance traps:
 ## Justin's women's colour direction (2026-10-29)
 - Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
   Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
+
+## Shared creative system (2026-10-29)
+The creative team member's Restora-Z improvements were distilled into `core/references/creative-system.md` (product-agnostic:
+structural variety, article slot, product-angle rotation, named typefaces, own palette, hero ≥35% and real, CTA string + QA, real
+logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it before every batch table; tools: `reposition_916.py`,
+`unfade_cta.py`, `logo_in_box.py`, `compose916.py`, `finish_batch.py --logo-w 40%`. Nothing lives only in an output folder.

@@ -32,6 +32,7 @@ Read these when the step says so:
 |---|---|
 | `references/product-bible.md` | writing any copy (incl. the pre-screen table at the top) |
 | `core/references/global-rules.md` | writing any copy |
+| `core/references/creative-system.md` | **every batch table and every script**: the shared creative-system rules (structure rotation, article slot, product angle, named typeface, own palette, hero ≥35%, CTA string + QA, real logo/label composited, 9:16 from the approved 4:5) |
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
@@ -67,10 +68,13 @@ settings). `core/` = the shared Everlife toolkit. Tools = `$EVERLIFE_TOOLS` or `
 | Finishing toolkit | preflight offers `--install`; run it after the user agrees |
 | Copy log exists | preflight creates it |
 | Creatify connector (images) | call `composer_billing_state`. `assets/creatify.json` has no project yet: create it once (see that file) |
+| Creatify MCP (Nano Banana) | `claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp`, new session, `/mcp` → sign in. Only needed for Nano Banana batches |
 
 If everything is ✅, say so in one line and go straight to step 1.
 
 ## ⚡ Speed rules
+- **Image model is a question, not a default** (2026-10-29): the image setup round asks which Creatify model to use for the batch
+  (GPT Image 2.5 via the connector by default; Nano Banana 2.1 or Pro via the `creatify` MCP's Model Playground): `core/references/image-models.md`.
 - **At most 2 question rounds before the first generation** for images.
 - **Never read tool source code.** Copy keys, layouts and commands are in the reference files.
 - Read all references in ONE Bash call (`cat` them together), once per session.
@@ -102,7 +106,7 @@ say "use F2 and F8" in chat).
 7. **Start from a winner?** "Fresh concepts (Recommended)" / "Spin one of ours". If "Spin": ask in chat for the ad (a file path, a Drive
    link, or a `team-refs/` code like T1), look at it, and build the batch as 5 variations of its hook mechanics across 5 different
    frameworks, in the agreed register (never its old words, rating or faults).
-8. **How many:** "5 (Recommended)" / "10" / "15".
+8. **How many:** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
 Then `references/image-batch.md` §2 step 2 onward (the table, the persona pass, the approval question).
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·

@@ -2,18 +2,43 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim. PT-141 comes in TWO forms (nasal spray, sublingual tablet): 'forms' lists each; 'renders' is the default pair the video end card uses when copy.json doesn't name a form.",
  "id": "pt-141",
  "name": "PT-141",
- "renders": {"bottle": "pt141_spray.png", "pill": "pt141_tablet.png"},
+ "renders": {
+  "bottle": "pt141_spray.png",
+  "pill": "pt141_tablet.png"
+ },
  "forms": {
-  "spray": {"label": "nasal spray", "bottle": "pt141_spray.png", "pill": null, "bottle_wording": "clear glass nasal spray bottle with a white atomiser cap and a long white nozzle; bright cyan-blue label with the vertical white EVERLIFE wordmark, a white 'Rx' box top right, a white band reading 'PT-141', small text 'PRESCRIPTION PT-141 MEDICATION', '10ML'"},
-  "sublingual": {"label": "sublingual tablet", "bottle": "pt141_sublingual_bottle.png", "pill": "pt141_tablet.png", "bottle_wording": "deep navy pill bottle with a black cap and a thin cyan ring; label reads EVERLIFE, 'PT 141' large in white and cyan, a small star, '2MG SUBLINGUAL TABLETS', 'ON-DEMAND INTIMACY SUPPORT FOR MEN & WOMEN', '8 SUBLINGUAL TABLETS', 'PRESCRIPTION USE ONLY'"}
+  "spray": {
+   "label": "nasal spray",
+   "bottle": "pt141_spray.png",
+   "pill": null,
+   "bottle_wording": "clear glass nasal spray bottle with a white atomiser cap and a long white nozzle; bright cyan-blue label with the vertical white EVERLIFE wordmark, a white 'Rx' box top right, a white band reading 'PT-141', small text 'PRESCRIPTION PT-141 MEDICATION', '10ML'"
+  },
+  "sublingual": {
+   "label": "sublingual tablet",
+   "bottle": "pt141_sublingual_bottle.png",
+   "pill": "pt141_tablet.png",
+   "bottle_wording": "deep navy pill bottle with a black cap and a thin cyan ring; label reads EVERLIFE, 'PT 141' large in white and cyan, a small star, '2MG SUBLINGUAL TABLETS', 'ON-DEMAND INTIMACY SUPPORT FOR MEN & WOMEN', '8 SUBLINGUAL TABLETS', 'PRESCRIPTION USE ONLY'"
+  }
  },
  "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
- "keep_case": ["PT-141"],
+ "keep_case": [
+  "PT-141"
+ ],
  "review_highlight": "PT[- ]?141",
  "reviews": "references/reviews.json",
  "kicker_default": "INTIMATE WELLNESS",
- "split_titles": ["THE SIGNAL", "THE SUPPORT"],
+ "split_titles": [
+  "THE SIGNAL",
+  "THE SUPPORT"
+ ],
  "notify_app": "PT-141",
  "notify_icon": "moon",
- "compare_allowed": false
+ "compare_allowed": false,
+ "hero": {
+  "element": "the nasal spray bottle OR the sublingual tablet, whichever form the ad is for (one form per ad)",
+  "min_width": 0.35,
+  "label": "wraps the curved surface in perspective",
+  "never": "the other form in the same ad, needles, beds or bedroom scenes",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ }
 }
