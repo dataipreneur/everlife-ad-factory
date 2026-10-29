@@ -73,7 +73,10 @@ Plan for it:
    eyes" (video models age actors: cast a few years younger than the target). **Men:** "age 42–50, a fit silver fox with a
    hardcore fitness-model physique: visibly muscular shoulders, arms and chest, lean and athletic (tattoos optional),
    rugged and confident; fully clothed in a fitted training t-shirt or long sleeve; no bare torso, no flexing poses".
-   **Women:** "age 45–52, natural fit build". Real and candid, never airbrushed.
+   **Women:** "age 45–52, natural fit build". Real and candid, never airbrushed. **Always** name a specific look
+   (ethnicity, hair, beard) and add "an ordinary, non-famous face; must not resemble any celebrity, actor or public
+   figure": a bare "silver fox, hardcore physique" came back as a Sylvester Stallone look-alike (2026-10-29, rejected,
+   67.5 credits). QA every face for celebrity likeness; a likeness can't be fixed in edit.
 4. **Timed beats** with camera moves (speech from ~0.5 s; product-name line over the hands-only shot).
 5. **Dialogue:** Seedance/Boreal: "No dialogue or narration; ambient sound only" (the VO is added after, see above).
    UGC only: every line in quotes, who says it; the product-name line marked for the hands-only shot.

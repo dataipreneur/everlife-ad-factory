@@ -146,6 +146,9 @@ background only (was 8–63%). Since PR #5 the 9:16 video footer + captions sit 
 had the bottle label under the footer. Only this skill (Priestley: "just update our Sermorelin skill for now"); the
 GHK, PT-141 and Restora video prompts still say 8–63%. Known, not fixed here: the 9:16 video disclaimer wraps to 3
 lines in safe mode (shared `full_layout.py`).
+Then: the regenerated video's man came out as a Sylvester Stallone look-alike (rejected, not finished). Casting in
+`video-prompting.md` + `image-batch.md` now always names a specific look and adds "ordinary, non-famous face; must not
+resemble any celebrity"; `lessons.md` adds that and the upload-ID workaround for repeated "no response received".
 ## 2026-10-29 — 9:16 proof footer back inside the Meta safe area (Mitansh, after a live Reels screenshot)
 The bottom-anchored footer (2026-10-27) sat under Meta's "Learn more" button and caption in a real Reels placement
 (`core/references/safe-zones/reels_placement_2026-10-29.jpg`; numbers confirmed against the team's Safe zones page).

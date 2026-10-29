@@ -80,6 +80,8 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    casting line 5 times and got one face 5 times). Write a different CAST per ad and never paste the same description
    twice: vary age within the range (men 42–50, women 40–58), ethnicity, hair (colour, length, grey level, shaved),
    beard/stubble/clean-shaven, build within the brief, wardrobe colour. Add each ad's casting to the planning table.
+   Every cast line ends "an ordinary, non-famous face; must not resemble any celebrity" (a video drew a Stallone
+   look-alike, 2026-10-29); QA rejects any celebrity likeness.
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SERMORELIN" present and one of the two
    biggest pieces of text (bible: "Product names run big"; Priestley, 2026-10-29: a small name line counts as "no
    product name"), and **no "by Everlife"** anywhere; no two ads in the batch show the same-looking person; the bottle

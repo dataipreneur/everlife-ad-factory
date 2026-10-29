@@ -51,7 +51,11 @@ Second test, same day (10 statics 4:5 + one 720p Seedance video, after the v3/ha
   and a comma after the name ("Sermorelin, by Everlife.") passed. Whisper with an `initial_prompt` invents words in
   silent clips: check raw audio with `vad_filter=True` and no prompt.
 - **Higgsfield can return "no response received"** on submit: check `higgsfield account transactions` before
-  retrying (it wasn't charged).
+  retrying (it wasn't charged). When it repeats, the image UPLOAD is failing (a `cost` check without `--image` works):
+  pass the upload IDs of an earlier job instead of the file paths (`--image <uuid>`; IDs are in that job's
+  `out/job.json` under `params.medias[].data.id`, in the order they were passed). That worked first time.
+- **Video model drew a celebrity look-alike** (Stallone) from a generic "silver fox" cast: name a specific look and add
+  "ordinary, non-famous face; must not resemble any celebrity" (video-prompting CAST). Rejected, not shipped.
 - The `tiktok` look title-cases the header ("Sermorelin By Everlife"); bible wording is lowercase "by".
 - What worked: the tablet-pull opening and the silver-fox casting came out right first time; per-ad fonts/colours
   gave 10 visibly different ads; women's teal/pink/cream/white/tan leads held.
