@@ -70,7 +70,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 disclaimer, renders, name casing, review highlight and reviews file) and refuse a job without it. **Never** `"product":
 "sermorelin-ghk"` for this skill: that prints the other product's renders. Don't type the disclaimer into copy.json; if
 it's there, it must match product.json exactly. The default bottle is 1000 mcg; 500 mcg jobs set
-`"bottle": "sermorelin500_bottle.png"` (once it's in assets/).
+`"bottle": "sermorelin500_bottle.png"` (in assets/ since 2026-10-29).
 
 Single-ingredient product, but the `tiktok` and `editorial` end cards **require** `ingredients_label` + `ingredients`
 (`core/tools/styles.py`; `house` doesn't). Fill them with the three ✅ benefits, never a made-up ingredient claim:
