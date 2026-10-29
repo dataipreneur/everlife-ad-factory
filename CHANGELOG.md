@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — tiktok end card fits the 9:16 safe-area layout (shared tool; tell Mitansh)
+Logged before editing. With the safe-area footer (Mitansh's default) the end card is no longer shifted down, so its
+headline touched the bigger logo and the 300 px tablet overlapped the "Sermorelin + GHK + Citrulline" label (seen in the
+Boxing v2 / Morning v2 drafts). Approved by Priestley.
+- `core/tools/styles.py` TikTok end card: in safe mode the whole card moves down 44 px and the tablet render is 250 px
+  (bottom mode unchanged: 0 / 300). CTA still ends well above the proof block.
+Expected regression differences: tiktok end-card layers only. Originals in `_originals/2026-10-29/endcard-safe/`.
+
 ## 2026-10-29 — Merged Mitansh's PR #5 (`pt-141-skill`) into `sermorelin-first-batch`: Mitansh's changes kept
 Priestley: "keep Mitansh changes all". Merged origin/main (PR #4) and origin/pt-141-skill; every overlap resolved to
 Mitansh's version: 9:16 footer in the Meta safe area by default for all products (ends at y 1385, may cross the Reels
