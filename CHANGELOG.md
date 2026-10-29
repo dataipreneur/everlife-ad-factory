@@ -139,6 +139,13 @@ QA also requires "SERMORELIN" as one of the two biggest texts. Originals in `_or
 PR #5 merged into `main` by the other session (24045d7); then `main` into this branch (local, not pushed). Our versions
 backed up in `_originals/2026-10-29c/`. Conflicts: `core/tools/full_layout.py` + `styles.py` (×2): kept main's "no
 tablet → bottle alone, centred" branch (PT-141 spray) with our `pill_scale` inside it; `CHANGELOG.md`: both sides kept.
+
+## 2026-10-29 — Plain Sermorelin video composition for the Reels-safe footer (branch `sermorelin`)
+`video-prompting.md` (original in `_originals/2026-10-29c/`): key action now 8–55% of the frame height, bottom 45%
+background only (was 8–63%). Since PR #5 the 9:16 video footer + captions sit at ~55–72%; the re-finished test video
+had the bottle label under the footer. Only this skill (Priestley: "just update our Sermorelin skill for now"); the
+GHK, PT-141 and Restora video prompts still say 8–63%. Known, not fixed here: the 9:16 video disclaimer wraps to 3
+lines in safe mode (shared `full_layout.py`).
 ## 2026-10-29 — 9:16 proof footer back inside the Meta safe area (Mitansh, after a live Reels screenshot)
 The bottom-anchored footer (2026-10-27) sat under Meta's "Learn more" button and caption in a real Reels placement
 (`core/references/safe-zones/reels_placement_2026-10-29.jpg`; numbers confirmed against the team's Safe zones page).
