@@ -147,9 +147,11 @@ wear, natural build (NOT a bodybuilder), calm and candid.>
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
 LAYOUT: 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
-the Everlife logo is laid there. The BOTTOM 18% is calm continuation of the background (no text, product or hands): the
-proof footer is laid there.
-(For 4:5 and 1:1 the top band is 10%.)
+the Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the
+proof footer is laid there. The whole product (bottle, tablets, hands, plinth tops) ends ABOVE 72% of the canvas height
+and all text above 76%.
+(For 4:5 and 1:1 the top band is 11%.) Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked
+(batch 4, 2026-10-29: "between 45% and 78%" gave 6 reposition edits in 7; "ends above 72%" gave 0 in 3).
 ```
 Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
 the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:

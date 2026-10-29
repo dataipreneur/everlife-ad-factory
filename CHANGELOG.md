@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: image prompts aim the product higher (lesson from batch 4) (branch `sermorelin-first-batch`)
+Logged before editing. Batch 4 (10 statics): 6 of the 7 prompts with "bottom 18% calm / product between 45% and 78%"
+came back with the product or text under the footer (6 reposition edits); the 3 prompts with "bottom 22% calm / product
+ends above 70–72%" came back clear first time.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` §3 template: bottom band 18% → 22%, top band 10% → 11%, and
+  an explicit "the whole product ends above 72% / all text above 76%" line.
+- `references/lessons.md`: batch-4 lessons.
+Originals in `_originals/2026-10-29/batch4-layout/`.
+
 ## 2026-10-29 — Sermorelin GHK: Justin's approved Creative Messaging Reference added to the skill's bible (branch `sermorelin-first-batch`)
 Logged BEFORE the edit (Priestley: "Make sure you log this change before making any"). Source: `Sermorelin-GHK-Creative-Messaging-Reference.docx`
 (Downloads, 2026-10-29), approved per Priestley; Justin Junior owns marketing for this product. Copy of the doc + the old

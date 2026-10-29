@@ -117,3 +117,13 @@ Compliance traps:
   (the result is the `/hf_…` URL; the first URL in the JSON is your uploaded reference), trim/atempo it to fit inside the
   shot's cut times (`select='gt(scene,0.3)'`), duck the original voice there, splice, re-caption, re-finish.
   "G. H. K." with dots read correctly in 3 of 3 takes. So: say the product name over a hands-only shot by design.
+
+## Batch 4 (2026-10-29, 5 men + 5 women, 9 winners + 1 Pinterest, 17 credits incl. 7 fixes)
+- **Winners-first works:** 9 of 10 built on a winner; the strongest-looking ads are the winner rebuilds (M1 from M8, M2 from M3, W1 from F2).
+- **The product still lands low.** "Between 45% and 78%" → 6 reposition edits in 7. "Ends above 72%, bottom 22% calm"
+  → clean first time (W3, W5). Template updated (image-batch.md §3). Text blocks with 3 ingredient rows also run low (W1).
+- **Tablet size drifts small when a person shares the frame** (W4: 11% of the width). Say "at least 17% of the width" there.
+- **Justin's new lines render well:** "Supports Natural Growth Hormone Production", "Supports Workout Pumps + Endurance",
+  "Supports Exercise Recovery", "Supports Firmer, Glowing Skin From Within".
+- **Women's Tier A headlines are nearly used up**: left unused: "Your GLP-1 Complement for Lean Muscle + Glow",
+  "GLP-1 Complement: Lean. Strong. Radiant.", "The GLP-1 Complement for Muscle, Skin + Hair" (hair ⚠). Ask Justin for more.
