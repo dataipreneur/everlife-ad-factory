@@ -158,6 +158,43 @@ Plain Sermorelin now matches Sermorelin GHK (Priestley: "disclaimer should be tw
 - `video-prompting.md`: action 8–58%, full-bleed scene (GHK's numbers). `image-batch.md`: 9:16 LAYOUT = GHK's (text in
   the central column, pictures full-bleed down to 56%) + the bottom-disclaimer note. `finishing.md`: stale PR #4 note
   replaced by the 9:16 footer description.
+## 2026-10-29 — Animated still (BPC-157): approved static + 8 s Seedance motion
+New Question A option in `skills/everlife-bpc-157` (`references/animated-still.md`): the batch RAW goes to Seedance image-to-video
+(8 s, 9:16; Unlimited mode in Chrome for 0 credits, else CLI ≈ 36–56 cr), then the new shared `core/tools/animate_still.py` lays the
+logo + proof footer on every frame (`finish_batch.finish()` is now a reusable function; CLI unchanged). Reference V43 (Sculptra video
+pin) added to `vial-refs/`. Tested on a synthetic 3 s clip; smoke 12/12.
+
+## 2026-10-29 — Batch default 4 (Mitansh): Creatify runs 4 image tasks per project at once, so a batch of 4 finishes in one wave;
+the size question is now 4 / 8 / 12 in every skill and the onboarding guide.
+
+## 2026-10-29 — Image model choice per batch (Mitansh: "Claude asks which image generation model to use for this batch of 5")
+All images stay on Creatify. The Ad Agent connector only runs GPT Image 2.5 (tested: a request for another model still renders on
+gpt-image-2.5-sunburst), so Nano Banana runs through Creatify's general MCP server (`claude mcp add --transport http --scope user
+creatify https://api.creatify.ai/mcp`, sign in with `/mcp`): its Model Playground tools (`model_playground_list_models /
+get_model_schema / generate / get`) take any Creatify image model and bill the same workspace credits. Reference renders are uploaded
+once with `upload_file` and their cdn_url kept in each skill's `assets/creatify.json`. `core/tools/creatify_gen.py` (REST + API key in
+`~/Everlife-Creative/creatify.env`) stays as a fallback. Every skill's image setup round now asks
+"Image model" with three options (Mitansh: GPT Image 2.5 via the connector, Nano Banana 2.1, Nano Banana Pro); rules in `core/references/image-models.md`; preflight reports whether the key file exists.
+Prices from Creatify's model docs are in `image-models.md` (e.g. Nano Banana 2.1 = 1.0 credit at 1K, Seedream 5 Pro / Flux 2 Pro = 0.5,
+GPT Image 2.5 = 1.0 at quality high); the API spends Creatify API-plan credits, a separate pool from the workspace credits the
+connector uses. Untested against the live API until an API key is on this machine.
+
+## 2026-10-29 — BPC-157 skill (recovery peptide, Rx vial), built from the BPC-157 creative messaging docx
+`skills/everlife-bpc-157/`: SKILL.md modelled on the Restora-Z question flow (Question A, then one round: audience Men/Women/Both ·
+form vial/capsule/either · angle mix/bottleneck/comeback/inside-out · boldness; images add mood/density/people/how many), product.json
+vial-only (Mitansh: the vial render is the only product image; label 3 mg/mL · 5 mL confirmed, the docx offer's 2.5 mg/mL · 6 mL is
+stale; the capsule form is out of scope), bible extract with a compliance
+pre-screen (the docx's section 6 "approved benefits" is blocked as direct claims; the glow/skin hooks ⚠; one pronoun question ❌; three
+"Image – Pending approval" headlines ⏳), image-batch with the vial/capsule prompt template and a no-needle rule in every block,
+video-prompting, finishing, reference guide, personas (Lifter Marcus / Pilates Dana), lessons, 6 style files, and `mens-direction.md`
+(Mitansh: men's ads extremely masculine: hardcore gym, barbells, bodybuilders, tattoos; the Sermorelin "not bodybuilders" rule is
+product-specific and does not apply; references = team style boards Fighter UFC / Hero Fitness Guy / Retro, Sermorelin male winners M2/M3/M8).
+- Disclaimer: not in the docx or the bible; Mitansh confirmed the PT-141 wording for BPC-157 (Jeremy to sign off). While it was
+  missing, `core/tools/product.py` gained a guard that refuses to load any product with an empty disclaimer (kept: compliance gate
+  for every product). Smoke 12/12.
+- `core/scripts/preflight.sh`: a product with no pill render (PILL="") passes the render check and gets a bottle-only Marketing Studio
+  create command.
+- Open: Jeremy's sign-off on the disclaimer wording; Marketing Studio registration on the first session; live product page 404 on 2026-10-29 (renders verified against the asset library only).
 
 ## 2026-10-29 — tiktok end-card safe-area shift becomes a product opt-in (Restora-Z stays as on main)
 Logged before editing. Pre-merge regression (main vs this branch) showed Restora-Z's tiktok end card changed (5 layers):

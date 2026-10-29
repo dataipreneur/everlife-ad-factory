@@ -21,6 +21,7 @@ Read these when the step says so:
 |---|---|
 | `references/product-bible.md` | writing any copy (step 3) |
 | `core/references/global-rules.md` | writing any copy (step 3) |
+| `core/references/creative-system.md` | **every batch table and every script**: the shared creative-system rules (structure rotation, article slot, product angle, named typeface, own palette, hero ≥35%, CTA string + QA, real logo/label composited, 9:16 from the approved 4:5) |
 | `references/styles/INDEX.md` | asking the style question (step 2); then the chosen category file `references/styles/<n>-*.md` before writing |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
@@ -51,7 +52,9 @@ Run `bash <skill-dir>/core/scripts/preflight.sh` and read its report. Then use *
 
 If everything is ✅, say so in one line and go straight to step 1 (no "start?" confirm). If something can't be fixed, say exactly what is missing and stop.
 
-## ⚡ Speed rules (the creative lead's #1 complaint was "very very slow")
+## ⚡ Speed rules
+- **Image model is a question, not a default** (2026-10-29): the image setup round asks which Creatify model to use for the batch
+  (GPT Image 2.5 via the connector by default; Nano Banana 2.1 or Pro via the `creatify` MCP's Model Playground): `core/references/image-models.md`. (the creative lead's #1 complaint was "very very slow")
 - **At most 2 question rounds before the first generation** for images: round 1 = the setup call below; round 2 = pick one of 3 ideas, which is also the approval.
 - **Never read tool source code** (`finish_modern.py`, `full_layout.py`…). Everything you need (copy keys, templates, layout and composition) is in the reference files.
 - **Images: reuse the persistent Creatify project** in `assets/creatify.json` (renders already imported). Never create a project or upload renders per job unless `composer_project_get` fails.
@@ -60,10 +63,10 @@ If everything is ✅, say so in one line and go straight to step 1 (no "start?" 
 - Start the generation, then do the copy log and job folder while it renders.
 
 ## 🖼️ IMAGE ADS → Batch Mode
-If the user wants images (or picks "Image ads" in step 1), follow **`references/image-batch.md`** end to end: one setup question, a batch table of ≥5 different frameworks to approve, parallel Creatify GPT Image 2.5 generations, strict QA, `finish_batch.py` footer, contact sheet. Skip steps 2–3 and the image notes in step 5. (Video steps are unchanged.)
+If the user wants images (or picks "Image ads" in step 1), follow **`references/image-batch.md`** end to end: one setup question, a batch table of ≥4 different frameworks to approve, parallel Creatify GPT Image 2.5 generations, strict QA, `finish_batch.py` footer, contact sheet. Skip steps 2–3 and the image notes in step 5. (Video steps are unchanged.)
 
 ## Step 1 — Setup (keep it simple; every question has a ✨ Recommended first option)
-**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 5 (Recommended)" / "🎬 Video ad" / "🔁 Remake one of ours".
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🔁 Remake one of ours".
 - **Images** → go straight to `references/image-batch.md` (its own setup question; NEVER show video styles to an image run).
 - **Video** → ONE AskUserQuestion with 3 questions:
   1. **Placement:** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1".

@@ -22,6 +22,7 @@ Read these when the step says so:
 |---|---|
 | `references/product-bible.md` | writing any copy (incl. the pre-screen table at the top) |
 | `core/references/global-rules.md` | writing any copy |
+| `core/references/creative-system.md` | **every batch table and every script**: the shared creative-system rules (structure rotation, article slot, product angle, named typeface, own palette, hero ≥35%, CTA string + QA, real logo/label composited, 9:16 from the approved 4:5) |
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
@@ -60,6 +61,8 @@ Paths: skill dir = this folder (`assets/` holds the real bottle + tablet renders
 If everything is ✅, say so in one line and go straight to step 1.
 
 ## ⚡ Speed rules
+- **Image model is a question, not a default** (2026-10-29): the image setup round asks which Creatify model to use for the batch
+  (GPT Image 2.5 via the connector by default; Nano Banana 2.1 or Pro via the `creatify` MCP's Model Playground): `core/references/image-models.md`.
 - **At most 2 question rounds before the first generation** for images.
 - **Never read tool source code.** Copy keys, layouts and commands are in the reference files.
 - Read all references in ONE Bash call (`cat` them together), once per session.
@@ -69,7 +72,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 **One AskUserQuestion, 3 questions:**
 1. **Audience:** "Men 35–60 (Recommended)" / "Women 35–60" / "Both (5 each)". This picks the bible page (headlines), the casting (men: 40s–50s fitness-model build, clothed) and the colours (women: Justin's preferred pinks, tans, neutrals, warm tones, white, teal; no colour banned; image-batch.md §2b); women: drop "& Thicker Hair" (pre-screen ⚠).
 2. **Strength:** "Either: strength not mentioned (Recommended)" / "1000 mcg" / "500 mcg". It decides which bottle the ad shows (QA checks the label says that strength). Copy never states a strength, dose or "double strength" until the creative lead (and, for "double strength", Jeremy) approves it; the live winners never do.
-3. **What are we making?** "🖼️ Image ads: batch of 5 (Recommended)" / "🎬 Video ad".
+3. **What are we making?** "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad".
 - **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).
 - **Video** → ONE AskUserQuestion with: **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1"; **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md`; **Angle** "✨ Auto (Recommended)" / 3 approved benefit territories (lean muscle + performance · skin glow · energy + healthy blood flow · growth hormone support).
 

@@ -48,6 +48,8 @@ def violations(box, w=W, h=H, label="element"):
         s = (s[0], s[1], s[2], H - 40)
         if label.startswith(("proof", "disclaimer", "footer")):   # the approved full-width footer (40 px margins)
             s = (FOOT_X0 - 1, s[1], W - FOOT_X0 + 1, H - 40)
+    elif (w, h) == (W, H) and label.startswith(("proof", "disclaimer", "footer")):
+        s = (39, s[1], W - 39, s[3])   # the proof row may run wider than the safe column (Mitansh 2026-10-29: bigger row)
     out = []
     if x0 < s[0] - 1 or y0 < s[1] - 1 or x1 > s[2] + 1 or y1 > s[3] + 1:
         out.append(f"{label} {tuple(int(v) for v in box)} is outside the safe area {s}")

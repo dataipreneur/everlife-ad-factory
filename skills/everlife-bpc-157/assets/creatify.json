@@ -1,0 +1,11 @@
+{
+ "project_id": "34f00704-c0d3-4ba0-8621-d5e9cec9ed3f",
+ "vial": "assets/24e1ae13_bpc157_vial.png",
+ "type_specimen": null,
+ "note": "Ad Agent project created 2026-10-29 (9:16, 1080p) for BPC-157 image batches; the vial render is imported as the path in \"vial\". Reuse for every GPT Image 2.5 batch.",
+ "render_urls": {
+  "bpc157_vial.png": "https://cdn.creatify.ai/api_uploads/48429c90-8d9e-4691-a9ad-630252f41d21/684a1a90c8d4436f9a46055178a2163d/bpc157_vial.png"
+ },
+ "playground_note": "2026-10-29: Nano Banana Pro runs through the Creatify connector model playground (model nano-banana-pro/edit, workspace credits); no API keys needed. playground_project_id is set on the first generation.",
+ "playground_project_id": "9a3e8820-0a37-46ef-b65c-f32cca6323ca"
+}

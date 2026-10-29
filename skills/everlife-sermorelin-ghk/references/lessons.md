@@ -163,6 +163,12 @@ Compliance traps:
 - Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
   Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
 
+## Shared creative system (2026-10-29)
+The creative team member's Restora-Z improvements were distilled into `core/references/creative-system.md` (product-agnostic:
+structural variety, article slot, product-angle rotation, named typefaces, own palette, hero ≥35% and real, CTA string + QA, real
+logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it before every batch table; tools: `reposition_916.py`,
+`unfade_cta.py`, `logo_in_box.py`, `compose916.py`, `finish_batch.py --logo-w 40%`. Nothing lives only in an output folder.
+
 ## Final-rules test videos (Boxing v2 / Morning v2, 2026-10-29)
 - **Captions get overwritten on a re-cut.** `full_layout.py` re-transcribes a changed clip and replaces the hand-fixed
   `<Tag>_caps.json` ("CERMERELLIN" went out in a draft). After ANY re-cut: rewrite the caps file, re-run, and read the
