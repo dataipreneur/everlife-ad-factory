@@ -36,7 +36,9 @@
 - **Colour:** bible v3 keeps "pinks, tans and beige; no oranges or greens" only for GHK-Cu Cream and Glow Stack, so
   Sermorelin has no palette limit. Women's colours follow Justin's preferences (`image-batch.md` §2b). The orange bottle
   and tablet are never recoloured.
-- **Intro:** "Sermorelin by Everlife" in every intro: copy, scripts, voiceovers (bible v3 page 4, "Product first, then
+- **Intro:** images say "SERMORELIN" only, never "by Everlife" (Priestley, 2026-10-29: overrides the bible line below
+  for statics; the Everlife logo is on every ad). Videos: "Sermorelin by Everlife" in the header and first spoken line
+  (bible v3 page 4, "Product first, then
   brand").
 - **Offer:** "Save up to 65%" (percent-off, usable). No $ prices by default (creative standard: percent-off unless a price
   point is being tested); "Starting at $95/month" only when a brief asks for a price test.

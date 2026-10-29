@@ -76,7 +76,7 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    an open palm; sharp, foreground, **beside the bottle, never covering its label**. Vary the hold per ad (fingertips
    raised to the lens, open palm low in frame, hand beside the face, palm up on a bench, two fingers offering it
    forward); never the same hold or angle twice in a batch. No two ads in a batch share a framework or an accent colour.
-4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SERMORELIN by Everlife" present; the bottle
+4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SERMORELIN" present and big, and **no "by Everlife"** anywhere; the bottle
    label matches the render (not garbled, not mirrored); the **tablet is identical to the tablet render** (no invented
    pill, not the other past tablet shape), held, at least ~15% of the canvas width (17% when a person shares the frame);
    **no vial, syringe or second container**; every line big enough for 50+; men 42–50, hardcore fitness-model build,
@@ -146,7 +146,7 @@ strong contrast; no thin grey text; max 3 supporting lines. Never split or hyphe
 
 TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
 badges, prices, website, disclaimer):
-  Name: "SERMORELIN by Everlife"   (big; "by Everlife" smaller; every ad, bible v3)
+  Name: "SERMORELIN"   (big; every ad. Never add "by Everlife" on images: Priestley, 2026-10-29; the finisher adds the Everlife logo)
   Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 

@@ -126,6 +126,12 @@ separate 9:16 LAYOUT (content in the top half, lowest element asked at 40%, bott
 shared safe-zone rule as the source of truth, with the 1-credit reposition fix. Skill file only; the finisher change
 arrives with PR #5. Not pushed (Priestley: no push for now).
 
+## 2026-10-29 — Plain Sermorelin images: no "by Everlife" (branch `sermorelin`)
+Priestley, after the second test: images never say "by Everlife"; the name reads "SERMORELIN" only (the finisher's
+Everlife logo carries the brand). This overrides bible v3's "[Product] by Everlife in every intro" for statics only;
+videos keep it in the header and first spoken line. Changed: `SKILL.md`, `image-batch.md` (template Name line + QA),
+`product-bible.md` (Intro fact). Originals of today's versions in `_originals/2026-10-29b/`.
+
 ## 2026-10-29 — Sermorelin GHK: approved headlines and CTAs may be reused (pool exhausted) (branch `sermorelin-first-batch`)
 Logged before editing. Every usable bible headline (women) and nearly all (men), plus all 5 bible CTAs, are already in the
 copy log. Priestley approved reuse: bible headlines / CTAs may come back, least-recently-used first; never twice in one
