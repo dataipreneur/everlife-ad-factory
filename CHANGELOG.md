@@ -40,6 +40,9 @@ Originals in `_originals/2026-10-29/onboarding-day-one/`.
   ("did Justin's GHK suggestion apply to plain Sermorelin too?"), not a request. Both Sermorelin skills are back to
   Justin's women's colour direction; the gates keep Mitansh's palette line. Open: which rule wins for Sermorelin
   women's ads (ask Justin).
+- Follow-up (logged before editing): Priestley: keep Justin's women's colour direction for **Sermorelin and Sermorelin
+  GHK**. The gates' palette line keeps Mitansh's wording for every other product and gains that exception (pinks,
+  tans, neutrals, warm tones preferred; white and teal welcome, white for advertorials; preferences, not limits).
 
 ## 2026-10-28 — Plain Sermorelin skill (branch `sermorelin`, from `main`)
 New skill `skills/everlife-sermorelin/` for **plain Sermorelin** (a separate product from Sermorelin GHK: own bible pages,

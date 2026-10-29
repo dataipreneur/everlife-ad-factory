@@ -52,6 +52,7 @@ Disclaimers & AI disclosure:
 - **Everlife logo on every ad.**
 - Imagery: warm, sun-lit, candid, real people, calm moments; pharmacy framing as a trust cue (45+). No generic stock-style couples.
 - Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens.
+  **Exception: Sermorelin and Sermorelin GHK** follow Justin's direction (product owner, 2026-10-29): pinks, tans, neutrals and warm tones preferred; white and teal welcome (white backgrounds for advertorials); these are preferences, not limits — keep exploring trends. Their skills' rules apply.
 - Intimate wellness (Lovara, PT-141, Spark): tasteful, product-led, no beds/bedroom scenes; PT-141 video stays shoulder-up.
 - Sermorelin: frame around muscle, fitness, performance — not the bedroom. Male talent: fit, mature, not bodybuilders.
 - Reference top-performing, lowest-CPA creative before generating new iterations. Cap at five iterations per base concept.
