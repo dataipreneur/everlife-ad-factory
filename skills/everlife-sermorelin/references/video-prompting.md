@@ -77,6 +77,11 @@ Plan for it:
    (ethnicity, hair, beard) and add "an ordinary, non-famous face; must not resemble any celebrity, actor or public
    figure": a bare "silver fox, hardcore physique" came back as a Sylvester Stallone look-alike (2026-10-29, rejected,
    67.5 credits). QA every face for celebrity likeness; a likeness can't be fixed in edit.
+   **Cast from a preview still (standard step, as the GHK skill does):** before any video with a visible face, make 2–3
+   stills of different everyday-looking people holding the tablet (Creatify `composer_edit_image`, ~1 credit each),
+   let the user pick, then attach the pick as an extra image reference ("CAST: the man in image 3, exactly as he looks
+   there"). Upload it first (`higgsfield upload create <file> --json`) and pass the ID. This worked first time on
+   2026-10-29 after a look-alike and an "ip_detected" block.
 4. **Timed beats** with camera moves (speech from ~0.5 s; product-name line over the hands-only shot).
 5. **Dialogue:** Seedance/Boreal: "No dialogue or narration; ambient sound only" (the VO is added after, see above).
    UGC only: every line in quotes, who says it; the product-name line marked for the hands-only shot.
