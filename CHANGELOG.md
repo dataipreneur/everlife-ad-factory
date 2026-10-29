@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK videos: safe-zone footer + product-line opener (branch `sermorelin-first-batch`)
+Logged before editing. Priestley, after the Stories safe-zone template ("Safe Zone - Story.jpg") showed our captions in
+the reply-bar box and the proof/disclaimer in the Reels bottom 535 px (bible v3 "Safe zones": keep them out):
+- `core/tools/full_layout.py`: copy.json `"proof_at": "safe"` puts captions, proof row and disclaimer inside the safe area
+  for that video (per job; default stays "bottom", Restora unaffected). In safe mode the disclaimer may use 3 lines
+  (~17 px, readable for 50+) instead of 2, because the safe column is only 768 px wide: **exception to bible v3's "two
+  lines maximum" for 9:16, flag for Justin.**
+- `core/tools/styles.py` + `full_layout.py`: in safe mode the end-card headline starts below the bigger v3 logo (it
+  collided with it).
+- Emily's feedback ("too long where he is holding the tablet… nothing is happening"; "start off saying Sermorelin GHK
+  supports…"): `skills/everlife-sermorelin-ghk/references/video-prompting.md` + `finishing.md`: product name spoken within
+  the first 2.5 s in every Sermorelin GHK video; hands-only shots 2 s max and always moving; default opener = a short
+  moving product shot with "Sermorelin GHK by Everlife supports…" (other openers allowed if the name lands by 2.5 s);
+  copy.json sets `"proof_at": "safe"`.
+Originals in `_originals/2026-10-29/safe-mode-opener/`.
+
 ## 2026-10-29 — Sermorelin GHK statics: product name without "by Everlife" (branch `sermorelin-first-batch`)
 Logged before editing. Priestley: "for Image Ads we don't need 'by Everlife' along with 'Sermorelin GHK'". Statics show
 "SERMORELIN GHK" big (the Everlife logo already sits at the top); videos keep "Sermorelin GHK by Everlife" in the header

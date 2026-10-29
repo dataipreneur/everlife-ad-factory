@@ -108,13 +108,16 @@ def captions():
 
 
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
+if C.get("proof_at") in ("safe", "bottom"):   # per-job footer placement (Sermorelin GHK: "safe", 2026-10-29)
+    os.environ["EVERLIFE_PROOF_AT"] = C["proof_at"]
 import safezones as sz  # noqa: E402
 
 # bible v3 §04: the disclaimer stays on at most 2 lines, never under 13 px
 _d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+_max_lines = 2 if sz.BOTTOM_MODE else 3   # safe column is 768 px: 3 lines keep it ~17 px (exception flagged for Justin)
 for _s in range(21, 12, -1):
     DISC = bl.font(bl.AV, _s, "Medium")
-    if len(bl.wrap(_d0, C["disclaimer"], DISC, sz.FOOT_W)) <= 2:
+    if len(bl.wrap(_d0, C["disclaimer"], DISC, sz.FOOT_W)) <= _max_lines:
         break
 
 SX0, SY0, SX1, SY1 = sz.SAFE
@@ -346,7 +349,7 @@ if a.reviews:
     layers.append(burst)
 # bottom mode: the end card was laid out for the old (higher) proof block, so move it down to sit centred
 # between the logo and the proof block instead of leaving a dead gap above the footer
-END_DY = int((BLOCK_BOTTOM - (sz.NOTCH[1] - 10)) * 0.5) if sz.BOTTOM_MODE else 0
+END_DY = int((BLOCK_BOTTOM - (sz.NOTCH[1] - 10)) * 0.5) if sz.BOTTOM_MODE else 30   # safe mode: clear the taller v3 logo
 end_names = {f for f, _, _ in end_layers}
 END_BG = end_layers[0][0] if end_layers else None          # the opaque card background (+ logo + content)
 LOGO_H = SY0 + 70                                         # logo strip stays pinned at the top

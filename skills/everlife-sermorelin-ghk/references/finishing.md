@@ -23,7 +23,9 @@ Feed (4:5, 1:1): 60 px margin.
 
 ## 1a. Header + logo on screen the whole time (every Sermorelin GHK video, men and women)
 Feedback 2026-10-29: "keep 'Sermorelin GHK by Everlife' up at the top with the logo the whole time." In copy.json set
-`"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true` (otherwise the finisher hides the logo + header whenever a
+`"head": ["SERMORELIN GHK BY EVERLIFE"]`, `"head_always": true` and `"proof_at": "safe"` (captions, Trustpilot row and
+disclaimer inside Meta's safe area, out of the Stories reply bar and the Reels bottom 535 px; the disclaimer may run to 3
+lines there: exception to bible v3's 2-line rule, flagged for Justin, 2026-10-29) (otherwise the finisher hides the logo + header whenever a
 face passes under it). The prompt's HEADROOM line keeps faces below the top 25%, so the header never sits on a face; check
 it in QA.
 
