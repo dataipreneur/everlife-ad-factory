@@ -2,6 +2,18 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Sermorelin GHK: Justin's women's colour & typography direction (branch `sermorelin-first-batch`)
+Logged before editing. Justin (owns Sermorelin GHK marketing), relayed by Priestley: pinks, tans, neutrals and warm tones
+"still strongly encouraged"; "incorporate more white and teal", "particularly white backgrounds for advertorial-style
+ads"; "preferred options, not strict limitations"; keep exploring current colour and typography trends.
+- `skills/everlife-sermorelin-ghk/references/image-batch.md` (§2b, template, QA): no colour banned for women; preferred
+  colours (pinks, tans, neutrals, warm tones, white, teal) lead most ads; up to 2 of every 5 women's ads explore new colour
+  and type trends; article/advertorial ads on a white background; at least one teal-led or teal-accent ad per women's
+  batch; keep teal soft/pale next to the bottle's deep red label; still at most one pink-led ad, no two ads with the same
+  lead colour, varied fonts.
+- `references/lessons.md`: direction recorded.
+Originals in `_originals/2026-10-29/justin-colours/`.
+
 ## 2026-10-29 — Shared finishing tools: bible v3 logo size + 2-line disclaimer (branch `sermorelin-first-batch`)
 Logged before editing. Bible v3 "Creative direction guidelines" (§03 logo sizing, §04 disclaimers). Approved by Priestley
 after before/after images (statics MA/WB/ME, video Track); **this changes Restora-Z's output too** (bigger logo, 2-line

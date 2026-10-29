@@ -153,3 +153,7 @@ Compliance traps:
   want to look like this dude": casting changed (video-prompting.md CAST). Kept fully clothed (Priestley).
 - Bible v3 adds "[Product] by Everlife" in every intro and a held tablet (thumb + index or open palm).
 - Safe zones: already enforced by the finishers (same numbers as the bible's safe-zone page).
+
+## Justin's women's colour direction (2026-10-29)
+- Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
+  Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
