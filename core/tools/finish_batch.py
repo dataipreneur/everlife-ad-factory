@@ -66,22 +66,24 @@ def art(name, tone, scale):
     return im.resize((int(im.width * scale), int(im.height * scale)), Image.LANCZOS)
 
 
-def build_footer(W, tone, disclaimer, fw):
+def build_footer(W, tone, disclaimer, fw, parts_on=True, disc_on=True):
     """Compact transparent footer, `fw` px wide, centred: approved proof art row + disclaimer. RGBA, no background."""
     s = 0.56
     parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
     gap = min(22, (fw - 2 - sum(p.width for p in parts)) // 4)   # 9:16: the row fits the 768 px safe column
     rh = max(p.height for p in parts)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw)   # 21 px, wraps inside the safe column (Mitansh, 2026-10-29: keep this over bible v3's 2-line/13 px rule)
-    h = 14 + rh + 6 + DISC_LH * len(lines) + 22
+    if not parts_on:
+        rh = -14 - 6
+    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw) if disc_on else []   # 21 px, wraps inside the safe column (Mitansh, 2026-10-29: keep this over bible v3's 2-line/13 px rule)
+    h = 14 + rh + 6 + DISC_LH * len(lines) + (22 if disc_on else 0)
     foot = Image.new("RGBA", (W, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(foot)
     y = 14
     tw = sum(p.width for p in parts) + 4 * gap + 2
     x = (W - tw) // 2
     rule = (255, 255, 255, 90) if tone == "dark" else (16, 24, 44, 60)
-    for i, p in enumerate(parts):
+    for i, p in enumerate(parts if parts_on else []):
         foot.alpha_composite(p, (x, y + (rh - p.height) // 2)); x += p.width + gap
         if i < 2:
             d.line([(x, y + 8), (x, y + rh - 8)], fill=rule, width=1); x += 1 + gap
@@ -202,10 +204,12 @@ def main():
         if a.disclaimer and a.disclaimer != PR["disclaimer"]:
             raise SystemExit(f"❌ --disclaimer differs from {a.product}'s product.json (it must be the bible text, verbatim)")
         a.disclaimer = PR["disclaimer"]
+        a.disc_bottom = PR.get("disclaimer_at") == "bottom"   # product opt-in: 9:16 disclaimer alone at the frame bottom
     if not a.disclaimer:
         raise SystemExit("❌ pass --product <id> (or the verbatim bible disclaimer with --disclaimer)")
     W, H = SIZES[a.ratio]
     story = (W, H) == (sz.W, sz.H) and not sz.BOTTOM_MODE
+    DB = story and getattr(a, "disc_bottom", False)
     gen = Image.open(a.gen).convert("RGB")
     lum = lambda c: 0.299 * c[..., 0] + 0.587 * c[..., 1] + 0.114 * c[..., 2]
     # scale to the full width; if the generation is shorter than the canvas (e.g. an old 1:1), extend its own
@@ -224,7 +228,7 @@ def main():
     if a.shift == "auto":
         shift = max(0, min(MAX_SHIFT, need - first))
         if story:
-            fy0 = sz.FOOTER_BOTTOM - build_footer(W, "dark", a.disclaimer, fw).height
+            fy0 = sz.FOOTER_BOTTOM - build_footer(W, "dark", a.disclaimer, fw, disc_on=not DB).height
             over = content_bottom(out) - (fy0 - CONTENT_GAP)
             if over > 0:
                 shift = -max(0, min(MAX_UP, over, first - need))
@@ -245,7 +249,7 @@ def main():
         out = extend_bottom(out.crop((0, -shift, W, H)), W, H)
     # footer: 9:16 → ends at the bottom of the Meta safe area; feed (and the retired bottom mode) → bottom of the frame
     if story:
-        foot_probe = build_footer(W, "dark", a.disclaimer, fw)
+        foot_probe = build_footer(W, "dark", a.disclaimer, fw, disc_on=not DB)
         fy = sz.FOOTER_BOTTOM - foot_probe.height
         cb = content_bottom(out)
         if cb > fy - 6:            # the auto shift aims for CONTENT_GAP above the footer; allow the detector's 4 px steps
@@ -260,12 +264,24 @@ def main():
     else:
         band = np.asarray(out.crop((0, int(H * 0.85), W, H)).resize((64, 16))).reshape(-1, 3).astype(np.float64)
     tone = a.tone if a.tone != "auto" else ("dark" if lum(band).mean() < 150 else "light")
-    foot = build_footer(W, tone, a.disclaimer, fw)
+    foot = build_footer(W, tone, a.disclaimer, fw, disc_on=not DB)
     o = out.convert("RGBA")
     if story:
         fy = sz.FOOTER_BOTTOM - foot.height
         sc_layer = scrim(W, foot.height, tone, top_fade=120, bottom_fade=160)
         o.alpha_composite(sc_layer, (0, fy - 120))
+        if DB:   # product opt-in (Sermorelin GHK feedback 2026-10-29): the disclaimer alone at the very bottom of the frame
+            global DISC_SIZE, DISC_LH
+            _keep = (DISC_SIZE, DISC_LH)
+            _d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+            while len(wrap(_d0, a.disclaimer, sans(DISC_SIZE), W - 80)) > 2 and DISC_SIZE > 13:   # 2 lines (team, 2026-10-29)
+                DISC_SIZE -= 1
+                DISC_LH = int(round(DISC_SIZE * 1.25))
+            dfoot = build_footer(W, tone, a.disclaimer, W - 80, parts_on=False)
+            DISC_SIZE, DISC_LH = _keep
+            dsc = scrim(W, dfoot.height + 40, tone)
+            o.alpha_composite(dsc, (0, H - dsc.height))
+            o.alpha_composite(dfoot, (0, H - dfoot.height - 40))
     else:
         bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # retired bottom mode: same bottom line as the videos
         fy = H - foot.height - bottom_pad

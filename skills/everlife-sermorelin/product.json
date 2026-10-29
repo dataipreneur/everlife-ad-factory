@@ -9,7 +9,9 @@
   "500": {"bottle": "sermorelin500_bottle.png", "bottle_ref": "sermorelin500_bottle_ref.jpg", "label": "SERMORELIN · 30 SUBLINGUAL TABS · 500 MCG"}
  },
  "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
- "keep_case": ["Sermorelin"],
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "keep_case": ["Sermorelin by Everlife", "Sermorelin"],
  "review_highlight": "Sermorelin(?!\\s*\\+?\\s*GHK)",
  "reviews": "references/reviews.json",
  "kicker_default": "STRENGTH · LONGEVITY",

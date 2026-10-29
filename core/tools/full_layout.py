@@ -60,6 +60,7 @@ if "pill" not in C:
     C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
 C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
+C["_end_safe_shift"] = bool(PR.get("end_card_safe_shift"))   # product opt-in: tiktok end card clears the taller logo
 for f in (C["bottle"], C["pill"]):
     if f and not os.path.exists(f"{P}/source/{f}"):
         shutil.copy(product.asset(PR, f), f"{P}/source/{f}")
@@ -111,6 +112,8 @@ def captions():
 
 
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
+if C.get("proof_at") in ("safe", "bottom"):   # per-job footer placement override (default: safezones.PROOF_AT)
+    os.environ["EVERLIFE_PROOF_AT"] = C["proof_at"]
 import safezones as sz  # noqa: E402
 
 # disclaimer stays 21 px and wraps (Mitansh, 2026-10-29: kept over bible v3's 2-line/13 px rule)
@@ -133,10 +136,13 @@ def fit(text, path, size, name, maxw):
     return f
 
 
+DISC_BOTTOM = PR.get("disclaimer_at") == "bottom" and not sz.BOTTOM_MODE   # product opt-in (Sermorelin GHK, 2026-10-29)
+
+
 def block_layout():
     """Positions of the bottom proof block inside the safe area: (row_y, disc_y, block_top)."""
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = bl.wrap(d0, bl.DISCLAIMER, DISC, sz.FOOT_W)
+    lines = [] if DISC_BOTTOM else bl.wrap(d0, bl.DISCLAIMER, DISC, sz.FOOT_W)
     row = Image.open(f"{P}/source/proof_row_clear.png")
     rh = int(row.height * sz.FOOT_W / row.width)
     top = BLOCK_BOTTOM - (rh + 12 + 27 * len(lines))
@@ -175,12 +181,27 @@ def bottom_layer():
     for ln in lines:
         bl.centered(d, ty, ln, DISC, (236, 236, 232))
         ty += 27
-    note((sz.FOOT_X0, disc_y, W - sz.FOOT_X0, ty), "disclaimer")
+    if lines:
+        note((sz.FOOT_X0, disc_y, W - sz.FOOT_X0, ty), "disclaimer")
+    if DISC_BOTTOM:   # the disclaimer alone at the very bottom, full width, 2 lines (intentional exception to the safe area)
+        df, _s = DISC, 21
+        while len(bl.wrap(d, bl.DISCLAIMER, df, W - 80)) > 2 and _s > 13:
+            _s -= 1
+            df = bl.font(bl.AV, _s, "Medium")
+        dl = bl.wrap(d, bl.DISCLAIMER, df, W - 80)
+        bl.gradient_band(img, H - 27 * len(dl) - 200, H, 0, 225)
+        ty = H - 48 - 27 * len(dl)
+        for ln in dl:
+            bl.centered(d, ty, ln, df, (236, 236, 232))
+            ty += 27
     return img
 
 
 def cap_y():
-    return block_layout()[2] - 96   # caption line sits just above the proof block
+    y = block_layout()[2] - 96   # caption line sits just above the proof block
+    if DISC_BOTTOM:   # a shorter proof block sits lower: keep captions above the Reels profile corner
+        y = min(y, sz.NOTCH[1] - 76)
+    return y
 
 
 def caption(text):

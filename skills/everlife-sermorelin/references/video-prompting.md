@@ -87,10 +87,10 @@ Plan for it:
    UGC only: every line in quotes, who says it; the product-name line marked for the hands-only shot.
 6. **AUDIO:** foley list; "No music" for UGC.
 7. **Safe-zone composition (always for 9:16):** "Keep faces, the bottle, the tablet, hands and every key action inside the
-   central column (8% in from the left and right edges) and between 8% and 55% of the frame height; the top 8% and the
-   bottom 45% contain only background or continuation." (Since PR #5 the 9:16 proof footer and captions sit at ~55–72%
-   of the frame, inside the Reels safe area; Meta's UI covers the rest. The first test under the old "8–63%" line had the
-   bottle label under the footer in its bench shot, 2026-10-29.)
+   central column (8% in from the left and right edges) and between 8% and 58% of the frame height; the scene fills the
+   whole frame edge to edge; below 60% only the scene continues (floor, table top, torso out of focus)." (Same as Sermorelin
+   GHK since PR #7: captions sit at ~59–63%, the Trustpilot row at ~67–72%, and the 2-line disclaimer alone at the very
+   bottom (`"disclaimer_at": "bottom"` in product.json). The old "8–63%" line put the bottle label under the footer.)
 8. **Headroom:** "Keep every person's head and face below the top 25% of the frame for the whole clip." (The header sits
    there the whole time.)
 9. **Closing guards:** "No on-screen text, captions, logos or watermarks; no readable words except the product label.

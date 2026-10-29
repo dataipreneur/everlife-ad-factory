@@ -27,8 +27,10 @@ Feed (4:5, 1:1): 60 px margin.
 Team feedback 2026-10-29 ("needs to be on the screen from the start… this applies to every product"): in copy.json set
 `"head": ["SERMORELIN BY EVERLIFE"]` and `"head_always": true` (otherwise the finisher hides the logo + header whenever a
 face passes under it). The prompt's HEADROOM line keeps faces below the top 25%; check it in QA.
-⚠ `head_always` comes with PR #4 (`sermorelin-first-batch`): until it is merged into `main` and `main` into this branch,
-this branch's `full_layout.py` ignores it (and still uses the pre-v3 logo size and 3-line disclaimer).
+**9:16 footer (automatic from product.json, same as Sermorelin GHK):** the Trustpilot / Doctor Prescribed / Ships Free
+row ends at y 1385 inside the Reels safe area; the verbatim disclaimer sits alone at the very bottom, full width, on 2
+lines (`"disclaimer_at": "bottom"`); the tiktok end card shifts down to clear the bigger logo (`"end_card_safe_shift"`).
+`keep_case` keeps "Sermorelin by Everlife" with a lowercase "by" in the header.
 
 ## 1b. Product-line voice (REQUIRED for every video, before finishing)
 **No on-camera speaker (Seedance/Boreal, "no dialogue"):** voice the approved script with Creatify `composer_voice_line`

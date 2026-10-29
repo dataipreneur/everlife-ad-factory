@@ -150,31 +150,45 @@ class TikTok:
         bl.gradient_band(base, self.block_top - 380, H, 0, 255)
         d = ImageDraw.Draw(base)
         base.alpha_composite(_logo(bl, P, self.NAVY, 373), ((W - 373) // 2, SY0 + 8))
+        # safe-area footer (no END_DY shift): start the card below the taller logo and keep the tablet off the label
+        # (product opt-in "end_card_safe_shift"; other products keep the original layout)
+        dy, pw = (44, 250) if C.get("_end_safe_shift") and not sz.BOTTOM_MODE else (0, 300)
+        if C.get("head_always") and C.get("head"):
+            # the product line stays on screen the whole time, end card included (Sermorelin GHK feedback, 2026-10-29)
+            bf = _font(bl, HN, 34, "Bold")
+            brand = _cased(C["head"][0].title(), C)
+            while d.textlength(brand, font=bf) > SAFE_W and bf.size > 24:
+                bf = _font(bl, HN, bf.size - 1, "Bold")
+            bl.centered(d, 214 + dy, brand, bf, self.NAVY)
+            dy += 44
         tf = _font(bl, HN, 60, "Bold")
         heads = [_cased(ln.title(), C) for ln in C["end_head"]]
         while max(d.textlength(ln, font=tf) for ln in heads) > SAFE_W and tf.size > 30:
             tf = _font(bl, HN, tf.size - 2, "Bold")
         for i, ln in enumerate(heads):
-            bl.centered(d, 205 + 68 * i, ln, tf, self.NAVY)
+            bl.centered(d, 205 + dy + 68 * i, ln, tf, self.NAVY)
+        if C.get("head_always") and C.get("head"):
+            dy += 18 * (len(heads) - 1)   # product line + a two-line end headline: keep the bottle cap clear of it
         b = _render(P, C["bottle"], 300)
         if C.get("pill"):
-            base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345))
-            c = _render(P, C["pill"], round(300 * C.get("pill_scale", 1)), by="width")
+            base.alpha_composite(b, (W // 2 + 100 - b.width // 2, 345 + dy))
+            c = _render(P, C["pill"], round(pw * C.get("pill_scale", 1)), by="width")
             cy = min(560, 652 - c.height // 2)  # a tall pill render (e.g. a wide tablet) would cover the label at 668
-            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, cy - c.height // 2))
+            base.alpha_composite(c, (W // 2 - 130 - c.width // 2, cy + dy - c.height // 2))
         else:
-            base.alpha_composite(b, (W // 2 - b.width // 2, 345))
+            base.alpha_composite(b, (W // 2 - b.width // 2, 345 + dy))
         lab = _font(bl, HN, 32, "Bold")
-        bl.centered(d, 668, _cased(C["ingredients_label"].title().replace("3-In-1", "3-in-1"), C), lab, self.NAVY)
+        bl.centered(d, 668 + dy, _cased(C["ingredients_label"].title().replace("3-In-1", "3-in-1"), C), lab, self.NAVY)
         layers = [("end.png", self.end_t, 99)]
         base.save(f"{L}/end.png")
+        self._dy = dy
         nf, cf = _font(bl, HN, 36, "Bold"), _font(bl, HN, 30, "Medium")
         # "end_rows": "benefits" lists the approved benefits instead of name + claim rows (for long ingredient claims)
         rows = [("", b) for b in C["benefits"]] if C.get("end_rows") == "benefits" else C["ingredients"]
         for i, (name, claim) in enumerate(rows):
             img = bl.canvas()
             dd = ImageDraw.Draw(img)
-            y = 716 + i * 64
+            y = 716 + self._dy + i * 64
             dd.rounded_rectangle([SX0 + 4, y, SX1 - 4, y + 56], 28, fill=(255, 255, 255, 255))
             dd.ellipse([SX0 + 22, y + 16, SX0 + 46, y + 40], fill=(0, 182, 122))
             dd.text((SX0 + 28, y + 12), "✓", font=_font(bl, f"{SUP}/Arial Unicode.ttf", 22, "Regular"), fill="white")
@@ -194,10 +208,11 @@ class TikTok:
             layers.append((f"end_ing{i}.png", round(self.end_t + 0.25 + 0.3 * i, 2), 99))
         foot = bl.canvas()
         fd = ImageDraw.Draw(foot)
-        bl.centered(fd, 916, "Over 100,000 happy customers", self.small, self.NAVY)
-        fd.rounded_rectangle([(W - 560) / 2, 956, (W + 560) / 2, 1022], 33, fill=self.NAVY)
-        bl.centered(fd, 965, _cased(C["cta"].title(), C), _font(bl, HN, 40, "Bold"), (255, 255, 255))
-        if 1022 > self.block_top - 6:
+        dy = self._dy
+        bl.centered(fd, 916 + dy, "Over 100,000 happy customers", self.small, self.NAVY)
+        fd.rounded_rectangle([(W - 560) / 2, 956 + dy, (W + 560) / 2, 1022 + dy], 33, fill=self.NAVY)
+        bl.centered(fd, 965 + dy, _cased(C["cta"].title(), C), _font(bl, HN, 40, "Bold"), (255, 255, 255))
+        if 1022 + dy > self.block_top - 6:
             self.issues.append(f"tiktok end-card CTA collides with proof block ({self.block_top})")
         foot.save(f"{L}/end_foot.png")
         layers.append(("end_foot.png", self.end_t, 99))

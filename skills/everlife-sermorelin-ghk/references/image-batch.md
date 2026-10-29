@@ -75,8 +75,9 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    (`core/references/meta-refs/<framework folder>/`, if any); else a Pinterest ref: this skill's `references/pinterest/<framework folder>/`
    first (read its `SOURCES.md` row: what to take, what not to copy), then `core/references/static-refs/<framework folder>/`. Rule: `core/references/REFERENCE-PRIORITY.md`. Follow the card's "Don't copy" list. Write concept
    (1 line), headline (Tier A by default, see §0 ⚠ pending), ≤ 3 supporting lines (approved claims, exact), prompt. Show
-   ONE table: # · source (winner ID / Meta / Pinterest file) · framework · territory · headline · tier (A / B PROPOSED) ·
-   supporting lines · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest").
+   ONE table: # · source (winner ID / Meta / Pinterest file) · framework · **scene · light · composition** · territory ·
+   headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest")
+   and a variety line under it ("scenes 5/5 different · 2 bright · 0 repeats"). Fill it from §2c before writing prompts.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
    its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
@@ -91,7 +92,7 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    resting on a bench with the palm up, two fingers offering it forward…; never the same hold or angle twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK by Everlife" present; the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
+   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -99,9 +100,32 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    **the bottle is in shot, large, with "SERMORELIN GHK" legible** (product identifiable in under 2 seconds).
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
 5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin-ghk`
+   **9:16 statics:** no extra flag: the footer sits in Meta's safe area by default and ends at y 1385 (Mitansh, see
+   "Footer position" at the top); the finisher refuses a raw whose content runs under the footer, so plan one reposition
+   edit per 9:16 image (≈1 credit; the model places the product low) keeping everything in the top ~52%. `--fit force`
+   only for QA previews.
    (the verbatim disclaimer comes from product.json).
 6. Save to `~/Everlife-Creative/output/Sermorelin-GHK/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
    open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
+
+## 2c. Variety plan: no two ads may read as the same picture (Priestley, 2026-10-29)
+Fonts and colours alone don't make a batch varied (batch 9: five dark-gym ads with the same "name on top, hand left,
+bottle right" picture). Before writing prompts, give every ad its own row in each rotation; no value twice in one batch:
+- **Scene:** gym / outdoor (sunrise trail, track, beach, park) / home (kitchen counter, morning coffee, bathroom shelf) /
+  clean studio product shot (seamless backdrop, plinth) / pharmacy or doctor trust cue (bible: pharmacy framing for 45+) /
+  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch**; the "rugged, hardcore
+  training" direction is about the MAN (casting), not the setting: he can be on a trail or in a kitchen.
+  Women: studio / home / outdoor / article page / pharmacy; not two linen-and-stone still lifes.
+- **Light:** at least 2 of every 5 ads bright (daylight, white or pale studio, sunrise); the rest moody, golden hour,
+  overcast soft. Never 4 dark ads.
+- **Composition:** person-led photo / macro product close-up (tablet fills the frame, bottle behind) / text-led article or
+  letter / split screen / still life on a surface / product held toward the lens. At most 2 "hand + bottle side by side".
+- **Name placement:** "SERMORELIN GHK" at the top, directly under the headline, on a lower-third band, in the text panel
+  of a split layout, or as part of the headline: not the same spot twice in a row. Never "beside" an object (batch 9: it
+  landed on a coffee mug and read as a mug print); props stay plain, and the name is always big.
+- **Winners give layout and structure only.** Their scene, haze and colour are NOT copied (all men's winners are dark
+  gyms); pick the scene from the rotation above.
+- **After generating,** look at the contact sheet: two ads that read as the same picture → re-roll one before showing.
 
 ## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
 Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
@@ -164,12 +188,12 @@ split "Sermorelin" or "GHK" across two lines or hyphenate them.
 
 TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
 badges, prices, website, disclaimer):
-  Name: "SERMORELIN GHK by Everlife"   (big; "by Everlife" smaller; every ad, bible v3 + team feedback 2026-10-29)
+  Name: "SERMORELIN GHK"   (big, every ad; NO "by Everlife" on statics: the logo is at the top; Priestley, 2026-10-29)
   Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
-<MEN: palette warm stone, charcoal, sand, brass; any person a man 42–50, a fit silver fox with a hardcore fitness-model
+<MEN: scene and light from this ad's row in §2c (not always a dark gym); any person a man 42–50, a fit silver fox with a hardcore fitness-model
 physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training
 tee or long sleeve, no bare torso, no flexing poses.>
 <WOMEN: lead colour <this ad's own lead per §2b (Justin): preferred pinks / tans / neutrals / warm tones / white / teal (soft
@@ -177,10 +201,12 @@ or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white backgrou
 once per batch>; any person a woman 40–60, natural, candid, glowing
 skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
 
-LAYOUT (9:16): 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product):
-the Everlife logo is laid there. EVERYTHING ELSE (headline, benefits, bottle, tablet) sits in the TOP 52% of the canvas;
-the lowest element ends at 50% height. The BOTTOM 48% is calm continuation of the background (surface, wall, fabric: no
-text, no product, no hands, no key objects): the proof footer is laid at ~61–72% and Meta's Reels/Stories UI covers the rest.
+LAYOUT (9:16, Sermorelin GHK, 2026-10-29: "use as much of the artboard as possible around the safe zones"): the TOP 12%
+is calm continuation of the background (the Everlife logo is laid there). ALL TEXT (headline, name, lines, badges) stays
+inside the central column (15% in from the left and right edges). PICTURES are full-bleed: the product, hands, person and
+scene may use the whole width and come down to 56% of the canvas height (the model lands ~8% lower; the Trustpilot row
+sits at ~67–72%). Below that, the scene simply continues (floor, surface, fabric) with no text, product or hands: Meta's
+UI and the bottom disclaimer sit there.
 LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
 ```
 > GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at
