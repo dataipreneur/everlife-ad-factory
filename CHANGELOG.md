@@ -2,6 +2,17 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-29 — Video header + logo stay on screen the whole time (opt-in; Sermorelin GHK on) (branch `sermorelin-first-batch`)
+Logged before editing. Feedback on the men's "Gym" video, relayed by Priestley for men and women: "I would keep
+['Sermorelin GHK by Everlife'] up at the top with the logo the whole time." The finisher hid the whole top band (logo +
+header) whenever a face moved under it.
+- `core/tools/full_layout.py`: new copy.json key `"head_always": true` skips the face check, so the top band (logo + header)
+  stays on from 0 s to the end card. Default unchanged (Restora-Z output is not affected).
+- `skills/everlife-sermorelin-ghk/references/finishing.md` + `video-prompting.md`: every Sermorelin GHK video sets
+  `"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true`; prompts keep faces below the top 25% so the header
+  never covers a face.
+Originals in `_originals/2026-10-29/head-always/`.
+
 ## 2026-10-29 — Sermorelin GHK: Justin's women's colour & typography direction (branch `sermorelin-first-batch`)
 Logged before editing. Justin (owns Sermorelin GHK marketing), relayed by Priestley: pinks, tans, neutrals and warm tones
 "still strongly encouraged"; "incorporate more white and teal", "particularly white backgrounds for advertorial-style

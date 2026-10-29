@@ -15,7 +15,7 @@ starts at **11 s** so it stays up 4 s (Restora feedback: benefits must be readab
 is the cheaper option for a simple hook + product idea only; it needs the hold-last-frame trick (`finishing.md`).
 **Team feedback on "Track" + bible v3 (2026-10-29), these override anything below:** talking starts in the FIRST second
 (no silent openings; Emily: "start talking way sooner"); the hook lands within **2.5 s** (bible v3, Jeremy's one-pager);
-**"SERMORELIN GHK" is on screen from frame 1** (the copy.json header, every product); the first spoken line or the header
+**"SERMORELIN GHK BY EVERLIFE" is on screen with the logo from frame 1 to the end card** (copy.json header with `"head_always": true`, finishing.md §1a); the first spoken line or the header
 says **"Sermorelin GHK by Everlife"** (bible v3: "[Product] by Everlife" in every intro). Plan the product line over the
 hands-only shot so a mispronunciation can be re-voiced (lessons.md).
 1. **Hook, 0–2.5 s:** a visual pattern interrupt WITH the first words already spoken (a barbell dropped back on the rack, a

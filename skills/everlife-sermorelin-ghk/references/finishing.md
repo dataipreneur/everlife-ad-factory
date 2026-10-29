@@ -21,6 +21,12 @@ Feed (4:5, 1:1): 60 px margin.
   - last spoken line ends before ~10.5 s (15 s clip); if it runs later, start the end card after the last word or re-roll
 - Fails finishing can't fix → offer a re-roll with its cost (max 2 per concept).
 
+## 1a. Header + logo on screen the whole time (every Sermorelin GHK video, men and women)
+Feedback 2026-10-29: "keep 'Sermorelin GHK by Everlife' up at the top with the logo the whole time." In copy.json set
+`"head": ["SERMORELIN GHK BY EVERLIFE"]` and `"head_always": true` (otherwise the finisher hides the logo + header whenever a
+face passes under it). The prompt's HEADROOM line keeps faces below the top 25%, so the header never sits on a face; check
+it in QA.
+
 ## 1b. Video check + product-line voice (REQUIRED for every video, before finishing)
 Cost ≈ 0.9 Higgsfield credits (3 voice takes at 0.3); ask before spending, show the cost. Work in `<job>/revoice/`.
 `FF=$($T/venv/bin/python -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")`

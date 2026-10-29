@@ -309,6 +309,8 @@ else:
 # keep the headline off faces: hide it while a head would sit under it (heads tracked with OpenCV)
 top_segments = [(0.0, a.end)]
 try:
+    if C.get("head_always"):   # product asks for the logo + header on screen the whole time (Sermorelin GHK, 2026-10-29)
+        raise ImportError("head_always")
     import faces
     import numpy as np
     _al = np.asarray(Image.open(f"{L}/top.png").split()[-1])
@@ -327,8 +329,9 @@ try:
             top_segments = [(round(x, 2), round(y, 2)) for x, y in nxt if y - x > 0.3]
         if _blocked:
             print("headline hidden over faces:", _blocked)
-except ImportError:
-    print("NOTE: faces.py/opencv missing; headline not face-checked")
+except ImportError as _e:
+    print("headline kept on the whole time (head_always)" if str(_e) == "head_always"
+          else "NOTE: faces.py/opencv missing; headline not face-checked")
 layers = [("top.png", s_, e_) for s_, e_ in top_segments] + cap_layers
 burst = None
 if a.reviews:
