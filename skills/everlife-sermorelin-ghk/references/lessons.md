@@ -63,6 +63,11 @@ Compliance traps:
 - **Fonts and colours must change from ad to ad.** The batch kept coming back as the same serif with the same purple
   accent on white: "they don't need to be always the same". Use `image-batch.md` §2b: a different pairing and a
   different accent for every ad, the type specimen only when the house look is asked for.
+- **Footer inside the Meta safe area, never at the bottom (Mitansh, 2026-10-29).** A live Reels screenshot
+  (`core/references/safe-zones/reels_placement_2026-10-29.jpg`) showed our bottom-anchored proof footer under the
+  "Learn more" button and caption. The toolkit is back in safe mode: the 9:16 footer ends at y 1385, so the raw keeps
+  everything in its top ~52% (LAYOUT block) and `finish_batch.py` refuses when content runs under the footer. Old raws
+  composed to the bottom need one reposition edit; an automatic scale-down-and-extend was tried and rejected.
 
 ## Second Sermorelin GHK batch (2026-10-28, women, 5 statics, 6 credits incl. 1 reposition)
 - **Re-install the toolkit after a tool changes in git.** The installed `finish_batch.py` was still the old one and put the

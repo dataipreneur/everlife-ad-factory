@@ -43,7 +43,9 @@ Then open `<job>/layers_full/<Tag>_caps.json` and fix whisper's spellings (Trazo
 
 Looks: `house` (gold condensed headline on a navy fade, white caption pills, navy end card), `tiktok` (white sticker headline, word-by-word yellow highlight, cream end card), `editorial` (serif italic headline + kicker, lowercase serif subtitles on a soft band, dark end card with ingredient columns). Vary the look across a batch.
 
-## 3. Image finishing (default: `finish_modern.py`; see image-prompting.md)
+## 3. Image finishing
+9:16 statics: the proof footer ends at y 1385 (bottom of the Reels safe area; see image-batch.md "Footer position"), never at the bottom of the frame.
+ (default: `finish_modern.py`; see image-prompting.md)
 
 **Finish statics like a designer, by hand. The script is a starting point, not the judge.** After every render, open it at full size and check:
 1. **Nothing touches the product.** Type, chips and cards keep ≥ 30px clear of the bottle, cap and capsule. The script auto-detects the product (teal label/bottle, blue capsule) and refuses to place over it: exit code 2 or a "falling back" note means it couldn't fit. Don't ship that blindly: shorten or resize the headline (`m_size`), switch template, or regenerate the image with more empty space.

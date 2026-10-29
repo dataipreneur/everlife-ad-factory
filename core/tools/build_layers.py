@@ -89,7 +89,7 @@ def logo(img, y, width):
 
 def header_block(img):
     gradient_band(img, 0, 470, 235, 0)
-    logo(img, 150, 300)
+    logo(img, 150, 466)
     d = ImageDraw.Draw(img)
     centered(d, 205, "A DIFFERENT APPROACH TO", HEAD, GOLD)
     centered(d, 277, "SLEEP SUPPORT.", HEAD, GOLD)
@@ -168,7 +168,7 @@ def endcard():
     ImageDraw.Draw(glow).ellipse([140, 360, 940, 860], fill=TEAL + (120,))
     img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(110)))
     d = ImageDraw.Draw(img)
-    logo(img, 150, 300)
+    logo(img, 150, 466)
     for i, ln in enumerate(END_HEAD):
         centered(d, 205 + 75 * i, ln, END_H, GOLD)
     # real product renders: bottle large + capsule hero in front
@@ -176,12 +176,15 @@ def endcard():
     bottle = bottle.crop(bottle.getbbox())
     bh = 340
     bottle = bottle.resize((int(bottle.width * bh / bottle.height), bh), Image.LANCZOS)
-    img.alpha_composite(bottle, (W // 2 - bottle.width // 2 + 120, 362))
-    cap = Image.open(f"{SRC}/{PILL}").convert("RGBA")
-    cap = cap.crop(cap.getbbox())
-    cw = 400
-    cap = cap.resize((cw, int(cap.height * cw / cap.width)), Image.LANCZOS)
-    img.alpha_composite(cap, (W // 2 - cw // 2 - 150, 530))
+    if PILL:
+        img.alpha_composite(bottle, (W // 2 - bottle.width // 2 + 120, 362))
+        cap = Image.open(f"{SRC}/{PILL}").convert("RGBA")
+        cap = cap.crop(cap.getbbox())
+        cw = 400
+        cap = cap.resize((cw, int(cap.height * cw / cap.width)), Image.LANCZOS)
+        img.alpha_composite(cap, (W // 2 - cw // 2 - 150, 530))
+    else:                                # a form without a tablet/capsule: the bottle alone, centred
+        img.alpha_composite(bottle, (W // 2 - bottle.width // 2, 362))
     by = 716
     for b in BENEFITS:
         tw = d.textlength("✓  " + b, font=END_B)

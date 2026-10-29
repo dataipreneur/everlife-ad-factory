@@ -19,13 +19,16 @@ SAFE_W = SAFE[2] - SAFE[0]                 # 768
 FEED_MARGIN = 60
 
 # Where the proof block (Trustpilot row + disclaimer) and captions live on 9:16.
-#   "bottom" (default; creative lead 2026-10-27: "have it at the bottom!"): footer anchored at the bottom of the frame,
-#            captions just above it. Top + side margins still apply. NOTE: in Reels the bottom ~535 px sits under
-#            Meta's caption/CTA UI, so the disclaimer can be partly covered there (flagged for Jeremy).
-#   "safe":  everything above y 1206 (Standards 03 intersection), as before.
-PROOF_AT = os.environ.get("EVERLIFE_PROOF_AT", "bottom")
+#   "safe" (default again from 2026-10-29): the footer ends at y 1385, the bottom of the Reels safe area (above the
+#           caption/CTA band, bottom 535 px), matching the live Reels reference the creative lead sent
+#           (core/references/safe-zones/reels_placement_2026-10-29.jpg: its trust band sits at ~63–72% of the frame).
+#           The footer (proof row + disclaimer) is allowed to cross the lower-left profile notch (Mitansh, 2026-10-29:
+#           "that much is fine"); every other element still keeps out of it.
+#   "bottom": footer anchored at the bottom of the frame (creative lead 2026-10-27, "have it at the bottom!"); retired
+#           because the bottom ~535 px of a Reel is covered. Kept behind EVERLIFE_PROOF_AT=bottom for old jobs.
+PROOF_AT = os.environ.get("EVERLIFE_PROOF_AT", "safe")
 BOTTOM_MODE = PROOF_AT == "bottom"
-FOOTER_BOTTOM = H - 48 if BOTTOM_MODE else NOTCH[1] - 10
+FOOTER_BOTTOM = H - 48 if BOTTOM_MODE else SAFE[3]
 FOOT_W = W - 80 if BOTTOM_MODE else SAFE_W        # bottom mode = the approved full-width footer (matches the 10-26 videos)
 FOOT_X0 = (W - FOOT_W) // 2
 
@@ -48,7 +51,8 @@ def violations(box, w=W, h=H, label="element"):
     out = []
     if x0 < s[0] - 1 or y0 < s[1] - 1 or x1 > s[2] + 1 or y1 > s[3] + 1:
         out.append(f"{label} {tuple(int(v) for v in box)} is outside the safe area {s}")
-    if (w, h) == (W, H) and not BOTTOM_MODE and not (x1 <= NOTCH[0] or x0 >= NOTCH[2] or y1 <= NOTCH[1] or y0 >= NOTCH[3]):
+    footer = label.startswith(("proof", "disclaimer", "footer"))   # may cross the notch (creative lead, 2026-10-29)
+    if (w, h) == (W, H) and not BOTTOM_MODE and not footer and not (x1 <= NOTCH[0] or x0 >= NOTCH[2] or y1 <= NOTCH[1] or y0 >= NOTCH[3]):
         out.append(f"{label} {tuple(int(v) for v in box)} overlaps the Reels profile area {NOTCH}")
     return out
 

@@ -1,0 +1,165 @@
+# PT-141 IMAGE ads: Batch Mode (the default for every image request)
+
+Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
+mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real product
+render(s) for the chosen form; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 /
+Doctor Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
+
+**Footer position (2026-10-29):** on 9:16 the footer ends at y 1385, the bottom of the Reels safe area (the reference ad's band sits at ~63–72% of the frame; the footer may cross the lower-left profile notch, Mitansh 2026-10-29) (`core/tools/safezones.py`,
+team Safe zones page), because the bottom ~535 px of a Reel sits under Meta's "Learn more" button and caption
+(`core/references/safe-zones/reels_placement_2026-10-29.jpg`). So a 9:16 raw must keep everything in its top ~52%
+(LAYOUT block below); `finish_batch.py` refuses (exit 2) when a raw's content runs under the footer. Fix = ONE reposition
+edit on the raw (Creatify `composer_edit_image`, 1 credit): "Keep everything identical (headline, type, colours, product,
+scene, light). Scale the product and the text block down together (about 35%) and move them up so the lowest element ends
+at 50% of the canvas height. Fill the bottom half with calm, plain continuation of the same background: no text, no
+product, no hands." Then re-run `finish_batch.py`. Feed ratios (4:5, 1:1) are unchanged: footer over the calm bottom ~18%.
+
+
+Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (`assets/creatify.json`).
+
+## 0. Copy rules: hard stops vs references
+**Hard stops:**
+- Claims: only approved quick-hit benefits and more approved benefits from `product-bible.md`. Pre-screen ❌ lines never;
+  ⏳ Pending-approval and ⚠ lines only with the user's explicit OK + flagged for Jeremy. Weak headline / Weak benefit → avoid.
+- PT-141 is DESIRE support (brain-based, non-hormonal, on-demand). No "ED", "erectile", "performance", "Viagra", "instant",
+  "ignite", no timing promises ("tonight", "in minutes"), no guarantees. Mechanism first; "supports", never "builds"/"boosts".
+- **No beds or bedroom scenes**, no lingerie, no body shots, no couples in bed, no before/after. A person is clothed, candid,
+  30–55, shoulder-up or waist-up, in a daytime setting (kitchen, hallway, terrace, café, car, bathroom counter, garden).
+- Form: copy may say "nasal spray" / "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count.
+  Never show the tablet with the spray. No needles, syringes or vials; the spray is held, never sprayed on camera.
+- No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product.
+- Offer: only "Save up to 23%" (percent, never a $ price).
+- Proof wording exact; disclaimer verbatim (the footer handles both).
+
+> ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
+> `_originals/2026-10-28/`), to match the global gate (CLAUDE.md ranks above skills: headlines only from the bible/brief,
+> new hooks need explicit approval). Remove this note once the creative lead and Jeremy confirm, or revert if they don't.
+
+**Headline tiers:**
+- **Tier A (default):** a headline from the bible page or its headline bank, word for word or lightly trimmed;
+  never a "Weak headline", "Hard NO conflict" or pre-screen ⚠ line (e.g. "Forge a Stronger Physique", "Lean. Defined. Glowing.").
+- **Tier B (max 2 per batch):** fresh wording whose every claim maps to an approved claim, **or** a winner's headline
+  that isn't in the bible (e.g. "Support your strongest era", "Lean. Strong. Ready."). Mark it **PROPOSED**; it needs the
+  user's explicit OK for that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
+- Never repeat a headline in the copy log. The Tier A pool is small (8 unflagged headlines + 7 approved benefit lines usable as
+  headlines): when it runs low, say so and ask whether to allow more Tier B or request new approved headlines from Jeremy.
+
+## 1. Frameworks (reference ads in the SHARED library `core/references/static-refs/<folder>/`, overview `OVERVIEW.jpg`; which pin for which angle: `reference-guide.md`)
+| Code | Framework | Folder | PT-141 recipe |
+|---|---|---|---|
+| F1 | Old way vs New way | 01_Us_vs_Them | "The old assumption" (it's just blood flow / just wait for the mood) vs "Brain-based desire support". Ideas only, no brands, no bodies |
+| F2 | Bold Claim | 02_Bold_Claim | one huge Tier A headline ("It Was Never Just Physical") + the spray or bottle hero + 3 callouts to approved benefits |
+| F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a Notes page or calendar with one approved line per row ("Made for moments, not calendars" as the title); the bottle beside the phone |
+| F4 | Features & Benefits | 04_Features_and_Benefits | product hero + three rows of approved benefits with simple icons (brain · on-demand · non-hormonal) |
+| F5 | Before/After | 05_Before_and_After | ❌ **skip**: no bodies, no "before" states for this product |
+| F6 | Offer | 06_Offer | "Save up to 23%" + product + one approved benefit line |
+| F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened PT-141 reviews |
+| F8 | Question | 08_Question | pronoun-free question from an approved territory ("Some nights aren't planned?" / "Desire on a schedule?") + answer line + product. "Low Libido?…" only with approval (⏳) |
+| F9 | Reasons Why | 09_Reasons_Why_Education | "3 things to know about desire support": three approved lines, numbered, product hero |
+| F10 | Sticky Note | 10_Sticky_Notes_To_Do | a note on a fridge, planner or bathroom-counter tile ("Friday: no plans. Good.") next to the bottle; never a mirror with a body |
+| F11 | Visual Metaphor | 11_EXTRA_Visual_Metaphor | one object idea: a light switch flipped on, a match struck, a calendar page torn off, a compass needle swinging, the spray on a marble ledge with baby's breath (the bible image) |
+| F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life (marble, linen, pale blue light, baby's breath; women: blush, tan, beige), one colour mood, short serif line |
+| F13 | Portrait + line | (people) | the category convention: a candid, attractive woman or man 30–55, shoulder-up, laughing or calm, daytime; headline beside the face; product in the lower third. Never a bed |
+
+**Random (recommended):** N different frameworks (skip F5, F7), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8,
+F10, F11, F12, F13). Weight towards F2, F13, F11, F12, F8. With "people: mix", about half the slots use F13 or a person inside
+F2/F8/F12.
+
+## 2. Flow (the two setup rounds live in SKILL.md step 1; here: write, critique, approve, generate)
+1. Inputs from SKILL.md step 1: form, hook angle, boldness, mood, copy density, spin-a-winner, how many. Placement is 9:16
+   (the other ratio comes from the approved masters). People: a mix unless the user said otherwise. Frameworks: random mix unless the
+   user named some in chat.
+2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework and a **form** (spray / sublingual, alternating
+   when the session said "either"), **look at 1 reference ad** (a PT-141 winner card when they exist, else the framework folder; layout
+   only, never the words or the scene). Write concept
+   (1 line), headline (Tier A by default, see §0 ⚠ pending; Tier B only within the chosen boldness), supporting lines per the chosen copy density (0, 1 or 3; approved claims, exact), the chosen mood, prompt. Show
+   ONE table: # · framework · form · person? · territory · headline · tier (A / B PROPOSED) · supporting lines · type & colour · ≈1 credit.
+   **Persona pass before the table** (`personas.md`): read every slot as Skeptical Dave and Careful Maya; one form per ad; no two
+   supporting lines sharing a noun ("desire support" ×3 is the Dave trap); every "brain-based" / "non-hormonal" paired with a
+   plain line; nothing couch-unsafe. Add a one-line "Dave says" under the table for any slot you changed.
+   AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
+   its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
+3. Generate: `composer_edit_image(project_id, prompt, images=[<form's bottle>, <tablet only for sublingual>]  (add type_specimen only
+   for the house look, see §2b), out='gen/b<date>_<n>.png', aspect_ratio=<final ratio>)` from `assets/creatify.json`. Max 4 in flight.
+4. QA every result (Read it), strictly: text EXACTLY the approved strings; the right FORM is shown and its label matches the render
+   (not garbled, not mirrored); for sublingual the **tablet is identical to the tablet render** (no invented pill), for spray NO tablet;
+   every line big enough for 50+; people look 30–55, clothed, candid, shoulder-up/waist-up, **no bed or bedroom anywhere in frame**;
+   women-only ads in pink/tan/beige; nothing breaks a Hard NO.
+   Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
+5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product pt-141`
+   (the verbatim disclaimer comes from product.json).
+6. Save to `~/Everlife-Creative/output/PT-141/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
+   open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
+
+## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
+Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
+in one batch, never the same look two batches in a row, and never default to the old "serif + purple accent" specimen.
+Pick per ad and write it into the prompt's TYPOGRAPHY & COLOUR block (legibility rules still apply: 50+ readers, no
+shadows or outlines on type, product name big).
+
+| Headline face (pick one) | Partner for supporting text |
+|---|---|
+| Heavy condensed grotesque, all caps (the winners' look) | light humanist sans |
+| Elegant high-contrast serif, roman | clean geometric sans |
+| Serif with ONE italic word | small-caps sans |
+| Wide extended sans, bold | regular sans |
+| Slab serif, bold | light sans |
+| Chunky rounded sans | mono-spaced labels |
+| Brush / handwritten accent word inside a sans headline | regular sans |
+| Thin editorial sans, tracked out, all caps | serif body |
+
+Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
+charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
+Product rules win: women's creative only pinks, tans, beige, cream, mocha, rose, burgundy (no orange, no green);
+Restora-Z moods navy / lavender / blush / cream / pale sky. Vary the headline placement too (top-left, centred, bottom-
+third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
+
+The type specimen (`assets/type_specimen.png`) is no longer attached by default. Attach it only when the brief asks for
+the house editorial look, and then say "match image 3".
+
+## 3. Prompt template (fill everything; keep the quotes exact)
+```
+Design a finished, premium static social ad for "PT-141", a doctor-prescribed, non-hormonal desire-support prescription
+(<nasal spray | sublingual tablet>), in the style of a modern DTC wellness brand. Framework: <name>: <layout from the reference ad>.
+
+PRODUCT: image 1 is the real product. Use the attached product reference exactly: same shape, colours and label, label facing
+camera, sharp, never mirrored, never redesigned. <SPRAY: it is a clear glass nasal spray bottle with a white atomiser cap and a
+long white nozzle; bright cyan-blue label with the vertical white EVERLIFE wordmark, a white 'Rx' box top right, a white band
+reading 'PT-141', small text 'PRESCRIPTION PT-141 MEDICATION', '10ML'. No tablet anywhere.>
+<SUBLINGUAL: image 2 is the real tablet. Use the attached tablet reference exactly; do not invent, alter, or substitute a
+different pill; exactly one tablet, large, in focus, foreground. The bottle is a deep navy pill bottle with a black cap and a
+thin cyan ring; label reads EVERLIFE, 'PT 141' large in white and cyan, '2MG SUBLINGUAL TABLETS', 'ON-DEMAND INTIMACY SUPPORT
+FOR MEN & WOMEN', '8 SUBLINGUAL TABLETS', 'PRESCRIPTION USE ONLY'.> The product is large and legible.
+
+TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from §2b>, with ONE
+phrase picked out in <accent colour>; supporting text in <partner face>. For readers aged 50+: headline at least 9% of canvas
+height per line; every other line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines. Product name on one
+line, never hyphen-broken.
+
+TEXT: render ONLY these strings, exactly, nothing else (no extra words, logos, stars, badges, prices, website, disclaimer):
+  Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
+  Supporting: "<line 1>" / "<line 2>" / "<line 3>"
+
+SCENE & STYLE: <scene: a daytime, non-bedroom setting>, real texture and depth (never a flat colour), soft natural light, calm,
+tasteful and premium. <PERSON, if any: a <woman | man> 30–55, attractive in a natural way, fully clothed in <day wear>, candid
+(laughing, calm, mid-moment or eyes to camera), framed head-and-shoulders or waist-up; not posed as a model, not glamour.>
+<WOMEN-ONLY audience: palette blush pink, tan, beige, cream (no orange, no green).> <MEN or BOTH: palette white, pale blue,
+marble, cyan, navy, warm grey; or the §2b mood chosen for this ad.> No bed, no bedroom, no lingerie, no body shots, no couples
+in bed, no before/after, no needles, syringes or vials, no mirrors showing bodies.
+
+LAYOUT (9:16): 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product): the
+Everlife logo is laid there. EVERYTHING ELSE (headline, tiny line, product, shadow) sits in the TOP 52% of the canvas; the
+lowest element ends at 50% height. The BOTTOM 48% is calm, plain continuation of the background (surface, wall, fabric: no
+text, no product, no hands, no key objects): the proof footer is laid at ~61–72% and Meta's Reels/Stories UI covers the rest.
+LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
+```
+> GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at
+> 58–65%). Ask for the lowest element at **40%** (cap/nozzle tip at 13%) to get ~50%. `finish_batch.py` then shifts the image up by
+> whatever headroom is left under the logo band (max 320 px) before it refuses; a refusal means one reposition edit (1 credit).
+```
+```
+QA that the label matches the form the session chose. Never describe the tablet's shape, colour or markings in words beyond
+"use the attached tablet reference exactly".
+
+## 4. After the batch
+- Contact sheet first, then let the user pick winners. Winners → the other ratio only after approval.
