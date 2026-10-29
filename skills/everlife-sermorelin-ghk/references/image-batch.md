@@ -92,6 +92,10 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
    **9:16 statics:** add `--proof-at safe` (bible v3 safe zones: the Trustpilot row + disclaimer sit inside Meta's safe
    column above y 1206, out of the Stories reply bar and the Reels bottom 535 px), and in the prompt keep the product and
    all text between 14% and 55% of the height, the area below that calm background (the footer sits at ~52–63%).
+   **9:16 workflow that passed (29 Oct):** expect the model to place the product low. Plan one reposition edit per 9:16
+   image (≈1 credit): "top 15% empty; every text 15% in from the left/right edges (stack pills vertically); product and
+   hands ≈30% smaller, ending above 52%; below 55% calm background". Then finish with `--proof-at safe`; if the logo nudge
+   pushes the product into the footer, re-finish with `--shift 60` (free). Check with the Meta Stories overlay.
    (the verbatim disclaimer comes from product.json).
 6. Save to `~/Everlife-Creative/output/Sermorelin-GHK/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
    open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".

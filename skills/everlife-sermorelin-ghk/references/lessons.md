@@ -158,3 +158,8 @@ Compliance traps:
 - Pinks, tans, neutrals, warm tones still preferred (they performed); add **white** (especially advertorials) and **teal**.
   Preferences, not limits: keep exploring trends (up to 2 of 5 ads). Rules in image-batch.md §2b.
 - Statics: product name only ("SERMORELIN GHK"), no "by Everlife" (Priestley, 2026-10-29). Videos keep "by Everlife".
+
+## 9:16 statics with the safe-zone footer (test, 2026-10-29)
+- The model ignores "keep the product in the top 55%": first takes had the tablet/label under the footer and full-width
+  pills in Meta's side zones. One reposition edit per image fixed both; the finisher's automatic logo nudge (up to 140 px)
+  can push the product back down: re-finish with `--shift 60`. The footer reads clearly on the stronger band.
