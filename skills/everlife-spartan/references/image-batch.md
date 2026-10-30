@@ -37,20 +37,20 @@ Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (
 in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
-**⛔ GENERATION BLOCKED (updated 2026-10-30): the vial labels are CORRECT** (confirmed to Priestley with marked-up label crops: Spartan = BPC-157 / KPV / TB-500, Wolverine = BPC-157 + TB-500). **The creative bible has the two stack pages swapped** (headings, "two/three peptides", "3-in-1", "Healthy Inflammatory Balance"). Priestley: wait for the bible fix. When the live bible is corrected: sync it (`bible_sync.py`), re-copy this skill's `product-bible.md`, re-screen, and remove this gate. No ads, no credits until then.
+**⚠ PROVISIONAL (2026-10-30, Priestley; Jeremy to confirm):** the vial labels are correct and the creative bible has the Spartan/Wolverine pages swapped (cause: the NEW Product Benefits Doc has the two labels flipped). Until the bible owner fixes the source, this skill uses the **swapped** benefit lines (`references/product-bible.md` pre-screen), provisional headlines. Ads are drafts: every SESSION.md says "provisional copy: bible swap pending, Jeremy to confirm". When the live bible is fixed: sync, re-copy the extract, re-screen, drop this note.
 
 **Hard stops:**
 - Claims: only the ✅ quick-hit benefits in `product-bible.md` (pre-screen). ❌/⛔ lines never; ⏳ headlines and ⚠ lines only with the
   user's explicit OK + flagged for Jeremy.
-- Spartan Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation", "torn", "cure", "treat", "boost",
+- Spartan Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation" (only the exact "Supports Healthy Inflammatory Balance"), "torn", "cure", "treat", "boost",
   "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Connective Tissue Repair"
   only exactly as the bible writes it (where the pre-screen allows it).
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. The vial stands or lies on a surface; a hand may hold it.
-- One product image: the Rx vial. Copy never states a strength, dose, mL or count, and **no ingredient list** until the label gate clears.
+- One product image: the Rx vial. Copy never states a strength, dose, mL or count; ingredients only together as on the label (BPC-157 + KPV + TB-500 (three peptides)).
 - People: active men 25–55, rugged, strong, unmistakably masculine (`mens-direction.md`); fighting imagery fine **without blood or gore,
   no animal death**; no before/after, no body comparison, no body-composition words in copy.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
-- **Offer: none** (the bible's is [PLACEHOLDER]): no F6, no "% off".
+- **Offer:** none: the sources disagree (39% / 46% / XX%); Ronnel to confirm. No F6, no "% off".
 - "Spartan Stack" big in every ad (brand name, bible direction); never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 

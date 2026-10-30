@@ -1,4 +1,5 @@
 {
- "project_id": null,
- "note": "No Creatify project yet. Create it on the first image run (after the label gate clears): composer_project_create, upload_file + PUT spartan_bottle_ref.jpg, composer_import_asset, then write project_id and the imported asset path here (see skills/everlife-lovara/assets/creatify.json on the lovara-skill branch). Never import another product's asset."
+ "project_id": "e4822f83-5919-447e-ac87-9f26d55bd4cf",
+ "vial": "assets/fb053a1b_spartan_vial_ref.jpg",
+ "note": "Created 2026-10-30 on priestley@everlifemd.com's Creatify workspace with the Spartan Stack vial (flattened on white). Reuse it. Never import another product's asset."
 }

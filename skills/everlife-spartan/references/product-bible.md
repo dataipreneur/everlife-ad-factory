@@ -5,36 +5,40 @@
 ## Product facts for this skill
 - **What it is:** a compounded Rx peptide recovery stack in one vial (5 mL on the label; never in copy). Doctor-prescribed.
 - **Who:** active men 25–55 training hard and recovering between sessions (bible).
-- **⛔ Ingredients (labels confirmed correct 2026-10-30; the bible pages are swapped, waiting for the fix):** bible = BPC-157 / TB-500 (the bible heading; the page says "Dual-peptide" and "Two-Peptide Recovery Stack"); vial label = BPC-157 / KPV / TB-500 (three peptides, 3MG/3MG/3MG/ML). They disagree (the Wolverine Stack
-  is the mirror image). No ingredient list in copy and no ads until Justin/Jeremy settle it.
+- **Ingredients (vial label, confirmed correct 2026-10-30):** BPC-157 + KPV + TB-500 (three peptides). The bible pages are swapped; this extract uses the
+  PROVISIONAL swapped lines below (Priestley 2026-10-30; Jeremy to confirm; bible owner to fix the source).
 - **Focus (bible):** joints, ligaments, connective tissue, muscle recovery, mobility and gut lining.
 - **Creative direction (bible):** rugged, strong, unmistakably masculine; a serious gym-goer with a hardcore training feel; say
   "Spartan Stack" as the brand name in every asset; fighting imagery fine without blood or gore; no animal death.
-- **Offer:** [PLACEHOLDER] → none. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
-- **Headlines:** all four are ⏳ Pending approval ("Proposed headlines … Replace with approved copy when available").
+- **Offer:** none: the sources disagree (39% / 46% / XX%); Ronnel to confirm. No F6, no "% off". **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
+- **Headlines:** bible ones ⏳ Pending approval; ⚠ PROVISIONAL ones below may be used, flagged for Jeremy.
 - **Landing page:** [PLACEHOLDER].
 
-## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
+## Compliance pre-screen (PROVISIONAL swap applied 2026-10-30 — confirm with Jeremy)
 
-| Line (bible) | Where | Status | Why |
+| Line | Where | Status | Why |
 |---|---|---|---|
-| Recover Faster Between Workouts | headlines | ⏳ + ⚠ Jeremy | Pending approval; "faster" is a speed/outcome promise |
-| Train Like a Spartan. Recover Like One. | headlines | ⏳ | Pending approval; reinforces the brand name (creative direction) |
-| The Spartan Stack for Serious Recovery | headlines | ⏳ | Pending approval |
-| Two Peptides. One Recovery Stack. | headlines | ⏳ + ⛔ label | Pending; contradicts the vial label (three peptides) until the ingredient question is settled |
-| Supports Joints + Ligaments | benefits | ✅ |  |
-| Supports Connective Tissue Repair | benefits | ✅ (care) | "Repair" is bible wording; keep it exactly, never "repairs" or "heals" |
-| Supports Muscle Recovery | benefits | ✅ |  |
-| Supports Mobility + Range of Motion | benefits | ✅ |  |
-| Supports Gut Lining Health | benefits | ✅ |  |
-| Two-Peptide Recovery Stack | benefits | ⛔ label | Contradicts the vial label (three peptides): never use until settled |
-| Supports Training Harder, More Often | benefits | ✅ | Never with a number or a timeline |
-| Explore the Spartan Stack | ctas | ✅ |  |
-| Build Your Recovery Stack | ctas | ✅ | "Build Your Recovery Stack" is an action, not a claim (the "supports, never builds" rule is about claims): ✅ |
-| Get Started Now | ctas | ✅ |  |
-| Support Stronger Recovery | ctas | ✅ |  |
-| Start Your Protocol | ctas | ✅ |  |
-| [PLACEHOLDER] current % savings / price | offer | ⛔ | Placeholder: no offer copy until the bible has one |
+| Train Like a Spartan. Recover Like One. | headlines | ⏳ | Spartan page; pending approval |
+| The Spartan Stack for Serious Recovery | headlines | ⏳ | Spartan page; pending approval |
+| Recover Faster Between Workouts | headlines | ⏳ + ⚠ Jeremy | "faster" is a speed/outcome promise |
+| 3 Peptides. One Recovery Protocol. | headlines | ⚠ PROVISIONAL | moved from the Wolverine page (swap); matches the 3-peptide label |
+| One Dose. Three Peptides. No Weak Links. | headlines | ⚠ PROVISIONAL | team candidate (hand-off §4); Jeremy to confirm |
+| Recovery, Fortified | headlines | ⚠ PROVISIONAL | team candidate (hand-off §4); Jeremy to confirm |
+| 3-in-1 Recovery Support | benefits | ✅ PROVISIONAL | from the Wolverine page (swap) |
+| Supports Tendons + Ligaments | benefits | ✅ PROVISIONAL | from the Wolverine page (swap) |
+| Supports Gut Lining Health | benefits | ✅ PROVISIONAL | from the Wolverine page (swap) |
+| Supports Mobility | benefits | ✅ PROVISIONAL | from the Wolverine page (swap) |
+| Supports Healthy Inflammatory Balance | benefits | ✅ PROVISIONAL (care) | from the Wolverine page (swap); the KPV benefit; exact wording only, never "reduces inflammation" |
+| 3-Peptide Whole-Body Recovery | benefits | ✅ PROVISIONAL | from the Wolverine page (swap) |
+| Supports Joints, Gut + Mobility in One Stack | benefits | ✅ PROVISIONAL | from the Wolverine page (swap) |
+| Explore the Spartan Stack | ctas | ✅ | |
+| Build Your Recovery Stack | ctas | ✅ | |
+| Get Started Now | ctas | ✅ | |
+| Support Stronger Recovery | ctas | ✅ | |
+| Start Your Protocol | ctas | ✅ | |
+| (no offer) | offer | ⛔ | none: the sources disagree (39% / 46% / XX%); Ronnel to confirm. No F6, no "% off". |
+
+The VERBATIM block below is still the bible page as written (swapped); the table above is what the skill uses.
 
 ---
 

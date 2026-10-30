@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spartan Stack: PROVISIONAL swap + headlines, gate lifted (branch `spartan-skill`)
+Logged before editing. Bible-updates hand-off §6 proposed it; Priestley approved (reverses his earlier "wait for the bible fix").
+Cause of the swap (team): the NEW Product Benefits Doc has the two stacks' labels flipped. PROVISIONAL — Jeremy to confirm.
+- `references/product-bible.md`: pre-screen now uses the Wolverine page's benefit lines (the 3-peptide ones, incl. "Supports Healthy
+  Inflammatory Balance" for KPV); "3 Peptides. One Recovery Protocol." moved here; provisional headlines "One Dose. Three Peptides. No
+  Weak Links." and "Recovery, Fortified". Offer stays out (39/46/XX% disagree; Ronnel to confirm).
+- `SKILL.md`, `image-batch.md`, `video-prompting.md`: the ⛔ gate becomes a ⚠ PROVISIONAL note; ingredients may be named together as
+  on the label; "inflammation" allowed only in the exact KPV line. `product.json`: `_blocked` → `_provisional`.
+Originals in `_originals/2026-10-30/stack-provisional/spartan/`.
+
 ## 2026-10-30 — Spartan Stack: labels confirmed, waiting for the bible fix (branch `spartan-skill`)
 Priestley shared marked-up label crops: the vial labels are correct (Spartan = BPC-157 / KPV / TB-500; Wolverine = BPC-157 +
 TB-500). The bible has the two stack pages swapped. Decision: wait for the bible fix (no partial unblock). The block wording in
