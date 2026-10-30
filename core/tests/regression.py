@@ -240,6 +240,30 @@ def smoke(core, out):
             "--disclaimer", RZ_DISC], False, "differs")
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
+
+    # GLP-1 (two vials): statics take its disclaimer; end cards render the semaglutide and the tirzepatide vial
+    d = os.path.join(out, "glp_static"); os.makedirs(d)
+    expect("finish_batch takes the GLP-1 disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "glp-1"], True)
+    expect("GLP-1 refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "glp-1",
+            "--disclaimer", RZ_DISC], False, "differs")
+    gl = {"product": "glp-1", "head": ["GLP-1 BY EVERLIFE"], "head_always": True,
+          "end_head": ["TURN DOWN THE", "FOOD NOISE"],
+          "benefits": ["Supports Appetite Regulation", "Helps Reduce Food Noise", "One Price, No Surprise Increases"],
+          "ingredients_label": "PROVIDER-GUIDED FROM HOME",
+          "ingredients": [["APPETITE", "Supports Appetite Regulation"], ["FOOD NOISE", "Helps Reduce Food Noise"],
+                          ["ONE PRICE", "No Surprise Increases"]],
+          "cta": "EXPLORE GLP-1", "vocab": "GLP-1."}
+    for form, style in (("semaglutide", "default"), ("tirzepatide", "tiktok")):
+        d = os.path.join(out, f"glp_{form}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(gl, style=style, form=form), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "TURN DOWN THE FOOD NOISE", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"GLP-1 video renders ({form}, {style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

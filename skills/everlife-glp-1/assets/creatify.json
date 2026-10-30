@@ -1,0 +1,4 @@
+{
+ "project_id": null,
+ "note": "No Creatify project yet. Create it on the first image run: composer_project_create, upload_file + PUT both vial _ref.jpg files, composer_import_asset, then write project_id and the imported paths here. Never import another product's asset."
+}

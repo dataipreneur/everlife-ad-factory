@@ -2,6 +2,23 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — GLP-1 skill setup (branch `glp1-skill`, from `main` 4ee62c6)
+Logged before editing. Priestley: "we need to add two more products: GLP-1, NAD+". New skill `skills/everlife-glp-1/` (weight
+management, adults 30–60, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` (vial handling) and
+adapted like MOTS-c (all audiences, strictest body-composition rules). Bible checked first: no changes; GLP1 disclaimer ✅ (its own
+wording). Two forms: compounded semaglutide vial and compounded tirzepatide vial (asset library, looked at both).
+- Priestley's decision: the page's weight-loss outcome lines ("Up to 20% Weight Loss", "Drop the Weight and Keep It Off"…) clash with
+  the global no-body-composition / no-guaranteed-outcome rules → ⚠ held for Jeremy, used only with explicit OK. Ads lead with
+  appetite, food noise, one price and provider-guided care.
+- Bible rules built in: "compounded" before semaglutide/tirzepatide always; "GLP-1" as the umbrella in headers; every ad says "one
+  price" or "no surprise price increases".
+- `core/scripts/bible_sync.py`: the "bible_section" commit (from `spartan-skill`) cherry-picked, because the bible names it "GLP1".
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-glp-1/`): two forms in product.json (semaglutide /
+  tirzepatide), new `references/direction.md` (calm control, never a body), personas Maria (41, the bible's core demo) and Ron (56),
+  every pre-screen line screened (7 ⚠ weight-loss lines, 2 weak). `core/tests/regression.py`: 4 GLP-1 checks (disclaimer, wrong
+  disclaimer refused, end cards for both vials, looked at both). Smoke 22/22. `bible_sync --check`: GLP-1 ✅.
+Setup only: no credits, no push, no PR until every skill is tested.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
