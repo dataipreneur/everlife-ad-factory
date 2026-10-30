@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Wolverine Stack: labels confirmed, waiting for the bible fix (branch `wolverine-skill`)
+Same as the Spartan Stack: the vial labels are correct (Wolverine = BPC-157 + TB-500), the bible's stack pages are swapped.
+Priestley: wait for the bible fix. Block wording updated in SKILL.md, image-batch.md, video-prompting.md, product.json, RENDERS.md
+and product-bible.md.
+
 ## 2026-10-30 — Wolverine Stack: borrowed winners (branch `wolverine-skill`)
 Logged before editing. Same as the Spartan Stack: Emily's "use GHK and Sermorelin visuals, rugged manly men", approved by Priestley.
 New `references/winners/winners.md` (5 statics + 2 videos from the Sermorelin / GHK men's winners, linked, with take / swap / never

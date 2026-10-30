@@ -34,6 +34,6 @@
  },
  "disclaimer_at": "bottom",
  "end_card_safe_shift": true,
- "_blocked": "Label vs bible ingredient mismatch (2026-10-30): no generation until settled. Data note only; the gate lives in SKILL.md.",
+ "_blocked": "Labels confirmed correct (2026-10-30); the bible has the Spartan/Wolverine pages swapped. Waiting for the bible fix (Priestley). Data note only; the gate lives in SKILL.md.",
  "bible_section": "Wolverine Stack (BPC-157/KPV/TB500)"
 }

@@ -5,7 +5,7 @@
 ## Product facts for this skill
 - **What it is:** a compounded Rx peptide recovery stack in one vial (5 mL on the label; never in copy). Doctor-prescribed.
 - **Who:** active men 25–55 training hard and recovering between sessions (bible).
-- **⛔ Ingredients:** bible = BPC-157 / KPV / TB-500 (the bible heading; the page says "3-peptide", "3-in-1 Recovery Support"); vial label = BPC-157 + TB-500 (two peptides, 3MG/3MG/ML). They disagree (the Spartan Stack
+- **⛔ Ingredients (labels confirmed correct 2026-10-30; the bible pages are swapped, waiting for the fix):** bible = BPC-157 / KPV / TB-500 (the bible heading; the page says "3-peptide", "3-in-1 Recovery Support"); vial label = BPC-157 + TB-500 (two peptides, 3MG/3MG/ML). They disagree (the Spartan Stack
   is the mirror image). No ingredient list in copy and no ads until Justin/Jeremy settle it.
 - **Focus (bible):** connective tissue, tendons and ligaments, healthy inflammatory balance, gut lining, mobility and soft-tissue recovery.
 - **Creative direction (bible):** rugged, strong, unmistakably masculine; a serious gym-goer with a hardcore training feel; say
