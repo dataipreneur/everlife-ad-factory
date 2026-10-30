@@ -2,6 +2,24 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — NAD+ skill setup (branch `nad-skill`, from `main` 4ee62c6)
+Logged before editing. Priestley: GLP-1 and NAD+ (the plain NAD+ page, not Optima NAD+). New skill `skills/everlife-nad/` (cellular
+energy, focus, healthy aging; adults 30–65+, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` and
+adapted like GLP-1 (two forms). Bible checked first: no changes; NAD+ disclaimer ✅. Two forms (bible: "lead with the choice"):
+sublingual tablet (green bottle + green tablet) and injection (green vial), all from the asset library, looked at. The NAD+ nasal
+spray render is left out (no spray form in the bible).
+- Pre-screen: page lines that clash with the global rules held ⚠ for Jeremy (same decision as GLP-1): "Boost(s)…" (global:
+  "supports", never "boosts"), "Reduces Fatigue + Brain Fog" (treatment-like), "Supports DNA Repair" (medical-style), "What
+  Celebrities and CEOs Are Using…" / "Trusted by Entrepreneurs and Athletes" (unsourced authority).
+- Bible rules built in: "injection" may be named, never shown with a needle; never "needle free" (say "easy sublingual delivery");
+  voiceovers say "N-A-D plus"; strengths (200 mg / 1000 mg) never in copy.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-nad/`): two forms in product.json (sublingual / injection;
+  the vial cut out from the asset-library JPG), new `references/direction.md`, personas Priya (38) and Tom (58), `references/winners/`
+  (Base09 from the Meta export; file not on hand), all 42 lines screened (6 ⚠, 10 weak). `core/tests/regression.py` (original in
+  `_originals/2026-10-30/core/tests/`): 4 NAD+ checks (disclaimer, wrong disclaimer refused, end cards for both forms, looked at
+  both). Smoke 22/22. `bible_sync --check`: NAD+ ✅.
+Setup only: no credits, no push, no PR until every skill is tested.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).

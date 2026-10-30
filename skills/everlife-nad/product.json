@@ -1,0 +1,47 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's NAD+ ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
+ "id": "nad",
+ "name": "NAD+",
+ "renders": {
+  "bottle": "nad_bottle.png",
+  "pill": "nad_tablet.png"
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "keep_case": [
+  "NAD+ by Everlife",
+  "NAD+"
+ ],
+ "review_highlight": "NAD\\+",
+ "reviews": "references/reviews.json",
+ "kicker_default": "CELLULAR ENERGY",
+ "split_titles": [
+  "THE FOG",
+  "THE FOCUS"
+ ],
+ "notify_app": "NAD+",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the NAD+ tablet (sublingual ads) or the NAD+ vial (injection ads), large and in front; the bottle secondary",
+  "min_width": 0.35,
+  "label": "wraps the curved bottle / vial in perspective",
+  "never": "needles, syringes, pens or injecting; 'needle free'; the nasal spray; celebrity look-alikes; another product's bottle, tablet or vial",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "forms": {
+  "sublingual": {
+   "label": "sublingual tablet",
+   "bottle": "nad_bottle.png",
+   "pill": "nad_tablet.png",
+   "bottle_wording": "a glossy deep-green pill bottle with a green cap and a thin silver ring; the label reads 'EVERLIFE' in white, 'NAD+' very large in silver-white, 'NICOTINAMIDE ADENINE DINUCLEOTIDE', a small white running-figure icon, '200MG', 'SUBLINGUAL TABLET', 'RX ONLY | PRESCRIPTION USE ONLY'"
+  },
+  "injection": {
+   "label": "injection",
+   "bottle": "nad_vial.png",
+   "pill": null,
+   "bottle_wording": "a clear glass vial with a green flip-off cap over a brushed-silver crimp; a bright green label with the white EVERLIFE wordmark, 'NAD+' in white, 'RX ONLY', '5ML'"
+  }
+ }
+}
