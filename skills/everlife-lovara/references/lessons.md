@@ -69,3 +69,6 @@ tools: `reposition_916.py`, `unfade_cta.py`, `logo_in_box.py`, `compose916.py`.
 - The capsule reference came through exactly on all 4 (rose-gold, printed LOVARA); bottle label correct. Prompt template works as is.
 - The model can ignore "text above 72%": L4 put its benefit lines at 83-90%, under the footer. finish_batch does NOT refuse that at 4:5 (only 9:16 checks), so LOOK at every final; fix = a 1-credit edit moving the lines under the headline.
 - Hands holding the capsule push the product low; ask for the product to end above 66% and check the footer fade does not swallow the capsule.
+
+## Winners (2026-10-30, Emily)
+- The all-time top statics (INT24 120 sales, INT4 112, INT13 95) have no files yet; the files on hand (360555, Base161, Videos 32/26/18) show the format: huge LOVARA + "3-in-1 Female Sexual Wellness Blend" + "From Distant to Deeply Connected", three icon callouts, blush light; videos = a fixed info frame over golden-hour lifestyle footage. Most break today's rules (lingerie, bed, per-ingredient claims, old proof numbers): format only.

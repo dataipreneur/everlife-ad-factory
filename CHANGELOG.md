@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Lovara: Emily's winners (branch `lovara-skill`)
+Logged before editing. Emily's Drive folder "Lovara" (downloaded by Priestley): 3 statics (360555 A2/A3, Base161), 3 videos
+(Video 32, 26, 18) and her note listing the all-time winners whose files she could NOT find (INT24 120 sales, INT4 112, INT13 95,
+INT17 77…). Full files in `~/Everlife-Creative/reference-ads/Lovara-winners-2026-10-30/` (not in git).
+- New `references/winners/`: winners.md (Emily's full ranking + a card per file: take / never copy) + small previews.
+- SKILL.md points to it. No rule changes: several of these winners break today's rules (lingerie, bed/bedroom, per-ingredient
+  benefit claims, 4.8 / 50,000 / 70,000 proof): they are format references only.
+
 ## 2026-10-30 — Lovara skill (branch `lovara-skill`, from `main` 4ee62c6)
 Logged before editing. New product skill `skills/everlife-lovara/` (women's intimacy support, women 30–55), built per
 the plan doc "New Product Skills: Build Plan" (https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf), recipe "How to build

@@ -46,6 +46,7 @@ Read these when the step says so:
 | `references/reference-guide.md` | choosing the reference ad for a slot |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes + the creative team's feedback) |
+| `references/winners/winners.md` | **every concept**: Emily's Lovara ranking (the top INT statics have no files yet) + cards for the 3 statics and 3 videos on file: what to take, what never to copy |
 | `references/reviews.md` | any review / testimonial / social-proof quote (none on file → gated) |
 | `assets/RENDERS.md` | the renders gate: what's in, what's missing |
 
