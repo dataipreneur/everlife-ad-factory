@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — MOTS-c skill setup, BLOCKED (branch `mots-c-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-mots-c/` (metabolic peptide, vial, active adults 30–55), scaffolded with
+the new-product builder's new `--pending-disclaimer` option from the `everlife-bpc-157` template. Bible checked first: no changes.
+**⛔ The bible's MOTS-c disclaimer is "Disclaimer pending"**: product.json carries an empty disclaimer + `_disclaimer_status`, so
+every finisher refuses (core/tools/product.py) until Jeremy's verbatim text is in the bible. Vial render from Priestley's download
+(`asset-library/VIALS/MOTS-C/MOTS-C VIAL.jpg`, small: 269×559). Also PENDING: all 5 headlines (⏳), both offers ([PLACEHOLDER]).
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-mots-c/`): men and women 30–55, energy + endurance never
+  physique, the metabolic-category body-composition Hard NOs up front, "Supports Glucose Metabolism" ⚠ Jeremy, new
+  `references/direction.md` (replaces the BPC-157 men's direction), new personas (Distance Dan, Cycling Carla), no offer framework.
+  Still recovery-flavoured (fill later): styles 1–5 examples, lessons history (a MOTS-c note at the top says direction.md wins).
+- `core/tests/regression.py`: MOTS-c check = finish_batch REFUSES it while the disclaimer is pending (no file written). Smoke 19/19.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).

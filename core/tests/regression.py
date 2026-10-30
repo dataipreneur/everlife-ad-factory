@@ -240,6 +240,12 @@ def smoke(core, out):
             "--disclaimer", RZ_DISC], False, "differs")
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
+
+    # MOTS-c: the bible's disclaimer is pending, so product.json's is empty and every finisher must refuse
+    d = os.path.join(out, "mc_static"); os.makedirs(d)
+    expect("finish_batch refuses MOTS-c while its disclaimer is pending",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "mots-c"], False,
+           "no ad disclaimer on file")
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

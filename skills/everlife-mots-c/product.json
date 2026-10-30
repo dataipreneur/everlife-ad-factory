@@ -1,0 +1,34 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's MOTS-c ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
+ "id": "mots-c",
+ "name": "MOTS-c",
+ "renders": {
+  "bottle": "mots-c_bottle.png",
+  "pill": null
+ },
+ "disclaimer": "",
+ "keep_case": [
+  "MOTS-c by Everlife",
+  "MOTS-c"
+ ],
+ "review_highlight": "MOTS-c",
+ "reviews": "references/reviews.json",
+ "kicker_default": "CELLULAR ENERGY",
+ "split_titles": [
+  "THE ENGINE",
+  "THE SUPPORT"
+ ],
+ "notify_app": "MOTS-c",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the MOTS-c vial (a still object, label to camera)",
+  "min_width": 0.35,
+  "label": "wraps the curved glass, EVERLIFE / MOTS-C / 10MG/ML / RX ONLY / 5ML",
+  "never": "needles, syringes, pens or injecting; capsules or pills; scales, tape measures, waistlines, bellies or any body-composition cue; before/after or body comparison; another product's vial",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "_disclaimer_status": "PENDING in the bible (Disclaimer pending — add from the disclaimer doc.). Add the verbatim text from the bible when Jeremy adds it; until then every finisher refuses this product."
+}
