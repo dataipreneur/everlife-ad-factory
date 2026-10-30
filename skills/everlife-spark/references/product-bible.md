@@ -36,7 +36,7 @@
 | Desire Support for Men + Women | benefits | ✅ | |
 | Explore Spark | ctas | ⏳ | All CTAs Pending approval: explicit OK per session, flagged for Jeremy |
 | Ignite Your Spark | ctas | ⏳ | same |
-| Get Started Now | ctas | ⏳ | same |
+| Get Started Now | ctas | ⚠ PROVISIONAL default | Priestley 2026-10-30 (✅ on MOTS-c, GLP-1, NAD+ pages); Jeremy to confirm |
 | Find Your Plan | ctas | ⏳ | same |
 | Save up to 51% | offer | ✅ | Percent only, never a $ price |
 

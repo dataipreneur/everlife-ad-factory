@@ -38,7 +38,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   **Never tie a benefit to one ingredient**: name the three together as a combo, or not at all. "ED" only in the bible's ⏳ ED
   headlines with explicit approval; no "erectile", "Viagra", "Cialis", "instant", no timing promises ("tonight", "in minutes"),
   no guarantees. Mechanism first; "supports", never "builds"/"boosts".
-- **CTA:** all bible CTAs are ⏳ Pending approval: use only the one the user OK'd this session (SKILL.md round 1).
+- **CTA:** "Get Started Now" is the PROVISIONAL default (Jeremy to confirm); the other bible CTAs are ⏳ and need the user's OK.
 - **No beds or bedroom scenes**, no lingerie, no body shots, no couples in bed, no before/after. A person (only when asked) is
   clothed, candid, 30–65, shoulder-up or waist-up, in a daytime setting (kitchen, hallway, terrace, café, car, garden).
 - Form: copy may say "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count. Exactly one tablet.

@@ -22,8 +22,9 @@ Golden rules, all non-negotiable:
    Copy may say "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count. **Tasteful, product-led: no beds
    or bedroom scenes, no body shots, no before/after, video framing shoulder-up.** **The tablet is the hero** (bible Standards 03 and
    every winner): bigger than the bottle in frame, in front, close to the lens; the bottle is secondary but legible.
-3. **No approved CTA yet:** all four bible CTAs are ⏳ Pending approval. A batch or video needs the user's explicit OK for the one
-   CTA it uses (flagged for Jeremy) until the bible marks one approved.
+3. **CTA: "Get Started Now" is the PROVISIONAL default (2026-10-30, Priestley; Jeremy to confirm).** All four bible CTAs are still
+   ⏳ Pending approval; "Get Started Now" is ✅ on the MOTS-c, GLP-1 and NAD+ pages. Any other Spark CTA needs the user's explicit OK
+   for that session. Every SESSION.md says "provisional CTA: Jeremy to confirm".
 4. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
 5. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown (shared Everlife credits).
 6. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly; never call a weak take good.
@@ -59,7 +60,7 @@ settings). `core/` = the shared Everlife toolkit. Tools = `$EVERLIFE_TOOLS` or `
 
 1. **Renders gate:** `spark_bottle.png` (+ `spark_bottle_ref.jpg` on white) and `spark_tablet.png` are on file (`assets/RENDERS.md`).
    One tablet per ad, always the render.
-2. **CTA gate:** no bible CTA is approved yet (rule 3). Ask which ⏳ CTA to use for this session before the first generation.
+2. **CTA gate:** "Get Started Now" is the provisional default (rule 3); the round-1 question offers it first.
 3. Run `bash <skill-dir>/core/scripts/preflight.sh` and read its report. Use **AskUserQuestion** to walk the user through anything that
    is not ✅, one item at a time:
 
@@ -99,8 +100,8 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
    approval)" ("On-Demand ED Support", "ED Support on Your Schedule", "A Smarter Approach to ED": only with the user's explicit OK, Jeremy).
 3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
-4. **CTA (all ⏳ Pending approval in the bible):** "Explore Spark (Recommended)" / "Get Started Now" / "Find Your Plan" / "Ignite Your
-   Spark". The answer is the explicit OK for that CTA this session; log it in SESSION.md for Jeremy.
+4. **CTA:** "Get Started Now (Recommended: provisional default, Jeremy to confirm)" / "Explore Spark (⏳)" / "Find Your Plan (⏳)" /
+   "Ignite Your Spark (⏳)". A ⏳ pick is the explicit OK for this session; log the CTA in SESSION.md for Jeremy either way.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
 5. **Mood:** "Warm and light: golden hour, sand, cream, blush, marble (Recommended: the bible's 'warm, sun-lit' and most of our

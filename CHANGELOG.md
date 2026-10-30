@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spark: PROVISIONAL CTA "Get Started Now" (branch `spark-skill`)
+Logged before editing. Bible-updates hand-off §6 (other session) proposed it; Priestley approved. All four bible CTAs are still
+⏳ Pending approval; "Get Started Now" is already an approved (✅) CTA on the MOTS-c, GLP-1 and NAD+ pages, so it becomes Spark's
+provisional default. PROVISIONAL — Jeremy to confirm; every asset's SESSION.md says so.
+- `SKILL.md` (rule 3, CTA gate, round-1 CTA question), `references/product-bible.md` (pre-screen), `references/image-batch.md`.
+Originals in `_originals/2026-10-30/spark-provisional-cta/`.
+
 ## 2026-10-30 — Spark: Emily's winners + tablet-hero / warm-default update (branch `spark-skill`)
 Logged before editing. Emily shared the Spark winners (Drive "Spark - Oct-30-2026": 7 statics in 1:1 + 9:16, 3 videos in 4:5 +
 9:16); full files in `~/Everlife-Creative/reference-ads/Spark-winners-2026-10-30/` (not in git). Priestley approved the update after
