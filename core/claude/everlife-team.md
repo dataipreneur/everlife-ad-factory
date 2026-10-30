@@ -11,6 +11,15 @@
 - **Windows (WSL/Ubuntu):** the tools run unchanged; to show a file or folder use `explorer.exe <path>` (or `wslview`)
   instead of macOS `open`; sign-in links open in the Windows browser; keep the repo in the Linux home, never under /mnt/c.
   Videos use the bundled open fonts (Inter, Fraunces) because Apple's fonts are missing.
+- **The creative bible** lives as a shared claude.ai artifact, the source of truth:
+  https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (visible to the Everlife org). The skills read the repo copy,
+  `core/claude/creative-bible.md` (linked to `~/.claude/everlife/creative-bible.md`), which is synced from it.
+- **"Check the bible for updates"**: read the live bible with the Artifact tool (`read`, the link above; it saves the
+  page's HTML locally and says where), then run `python3 <repo>/core/scripts/bible_sync.py <that html> --check` and
+  report the changes per product in plain words, plus any skill whose disclaimer no longer matches. If anything changed:
+  on a new branch, run it again with `--write`, update the affected skills' `references/product-bible.md`, log it in
+  CHANGELOG.md, and open a PR (claims, disclaimers or approvals need Jeremy's sign-off before merge). Never edit
+  `creative-bible.md` by hand.
 - The people using these skills are often not technical: do the steps yourself, keep questions few and in plain words,
   and never ask them to edit files or code.
 - Never spend credits (Creatify, Higgsfield) without an explicit approval that shows the cost. Shared Everlife team credits.
