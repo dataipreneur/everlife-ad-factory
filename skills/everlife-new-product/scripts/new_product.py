@@ -10,7 +10,8 @@
 
 Reads only local files: core/claude/creative-bible.md (sync it first with core/scripts/bible_sync.py), the asset library
 (~/Everlife-Creative/asset-library), reference ads (~/Everlife-Creative/reference-ads) and the Meta export in ~/Downloads.
-Never spends credits, never pushes. `create` refuses a product with no ad disclaimer on file.
+Never spends credits, never pushes. `create` refuses a product with no ad disclaimer on file, unless --pending-disclaimer
+(then the skill is scaffolded blocked: empty disclaimer + _disclaimer_status, so every finisher refuses).
 """
 import argparse, glob, json, os, re, shutil, sys
 
@@ -276,8 +277,9 @@ def cut_out(src, dst):
 
 def cmd_create(a):
     c = card(a.product)
-    if not c["disclaimer_ok"]:
-        sys.exit(f"⛔ {c['product']}: no ad disclaimer on file in the bible. Nothing can be built until Jeremy adds it.")
+    if not c["disclaimer_ok"] and not a.pending_disclaimer:
+        sys.exit(f"⛔ {c['product']}: no ad disclaimer on file in the bible. Nothing can be built until Jeremy adds it "
+                 f"(or scaffold it blocked with --pending-disclaimer: the tools then refuse to finish any ad).")
     pid = a.id or c["id"]
     dest = os.path.join(SKILLS, f"everlife-{pid}")
     tpl = os.path.join(SKILLS, a.template)
@@ -322,10 +324,14 @@ def cmd_create(a):
         "_about": f"Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's {name} ad "
                   f"disclaimer, verbatim. Scaffolded {__import__('datetime').date.today()} by everlife-new-product from {a.template}.",
         "id": pid, "name": name, "renders": {"bottle": bfile, "pill": pfile},
-        "disclaimer": c["data"]["disclaimer"], "disclaimer_at": "bottom", "end_card_safe_shift": True,
+        "disclaimer": c["data"]["disclaimer"] if c["disclaimer_ok"] else "",
+        "disclaimer_at": "bottom", "end_card_safe_shift": True,
         "keep_case": [f"{name} by Everlife", name], "review_highlight": re.escape(name), "reviews": "references/reviews.json",
         "notify_app": name, "compare_allowed": False,
     })
+    if not c["disclaimer_ok"]:
+        tp["_disclaimer_status"] = (f"PENDING in the bible ({c['data']['disclaimer'] or 'none'}). Add the verbatim text from the "
+                                    f"bible when Jeremy adds it; until then every finisher refuses this product.")
     tp.setdefault("hero", {})
     tp["hero"].update({"element": f"the {name} {form} (the bottle/vial is secondary, large and legible when shown)",
                        "never": "TODO: fill from the bible's Hard NOs + creative direction"})
@@ -383,6 +389,8 @@ def main():
     c = sp.add_parser("create"); c.add_argument("product"); c.add_argument("--template", required=True)
     c.add_argument("--id"); c.add_argument("--form"); c.add_argument("--bottle"); c.add_argument("--pill")
     c.add_argument("--allow-restora", action="store_true")
+    c.add_argument("--pending-disclaimer", action="store_true",
+                   help="scaffold a product whose bible disclaimer is pending; product.json gets an empty disclaimer, so every finisher refuses")
     a = ap.parse_args()
     {"list": cmd_list, "inspect": cmd_inspect, "create": cmd_create}[a.cmd](a)
 

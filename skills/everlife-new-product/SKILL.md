@@ -13,6 +13,8 @@ Non-negotiable (same as every Everlife session):
 1. **The bible wins.** Claims, headlines, CTAs, offers and disclaimers only from the synced bible (`core/claude/creative-bible.md`).
    Pending lines need explicit approval, weak lines are avoided, Hard NO conflicts are never used. Never take claims from a landing page.
 2. **No ad disclaimer on file → STOP.** Nothing is built for that product until Jeremy adds one (MOTS-c, Tesamorelin, Klow… today).
+   Exception, only when Priestley asks to set it up anyway: `create … --pending-disclaimer` scaffolds it **blocked** (empty
+   disclaimer + `_disclaimer_status` in product.json), so every finisher refuses it; add a smoke check that proves the refusal.
 3. **Log before editing:** a CHANGELOG entry first, originals backed up to `_originals/<date>/`; one branch per product (`<id>-skill`,
    from the latest `main`); never work on another session's branch.
 4. **Never touch `skills/everlife-restora-z/`** unless Priestley asks; never copy it as a template without his OK.

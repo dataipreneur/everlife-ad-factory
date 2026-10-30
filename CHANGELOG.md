@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — New-product builder: `--pending-disclaimer` (branch `new-product-skill`)
+Logged before editing. Priestley: set every product up now and fill gaps later. `scripts/new_product.py create … --pending-disclaimer`
+scaffolds a product whose bible disclaimer is pending, blocked: product.json gets an empty disclaimer + `_disclaimer_status`, and
+`core/tools/product.py` already refuses to finish anything for it. Used for MOTS-c (`mots-c-skill`). SKILL.md rule 2 notes the
+exception. Original in `_originals/2026-10-30/skills/everlife-new-product/`.
+
 ## 2026-10-30 — New-product skill builder (branch `new-product-skill`, from `main` 4ee62c6)
 Logged before editing. New skill `skills/everlife-new-product/` (Priestley: "a skill to smoothly ask us questions on making a new
 skill for the next product"): it turns the plan doc's recipe ("How to build one product skill",
