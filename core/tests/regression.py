@@ -240,6 +240,22 @@ def smoke(core, out):
             "--disclaimer", RZ_DISC], False, "differs")
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
+
+    # Lovara (renders not on file yet: statics finish, video end cards are refused until the bottle/tablet arrive)
+    d = os.path.join(out, "lv_static"); os.makedirs(d)
+    expect("finish_batch takes the Lovara disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "lovara"], True)
+    expect("Lovara refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "lovara",
+            "--disclaimer", RZ_DISC], False, "differs")
+    d = os.path.join(out, "lv_video")
+    os.makedirs(os.path.join(d, "layers_full"))
+    json.dump({"product": "lovara", "style": "default", "head": ["LOVARA BY EVERLIFE"],
+               "end_head": ["FROM DISTANT TO", "DEEPLY CONNECTED"],
+               "benefits": ["Supports Desire + Sensitivity", "Supports Comfort + Responsiveness", "Supports Intimate Readiness"],
+               "cta": "EXPLORE LOVARA", "vocab": "Lovara."}, open(os.path.join(d, "copy.json"), "w"))
+    expect("Lovara video is refused while its renders are missing",
+           [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], False, "lovara_bottle.png")
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

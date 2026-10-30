@@ -14,6 +14,14 @@ one product skill". Bible checked first: `bible_sync.py` against the live bible 
   ingredient claim only on its own ingredient, today's image rules (no "by Everlife", name big, a different person per ad).
 - Open: renders + form; Justin (ingredient list, "Support Your Spark" CTA); Jeremy (⚠ lines); winners; landing page.
 - No credits spent. No push/PR until the tests pass and a real test batch looks right.
+- Done (free steps): skill files written (SKILL.md, product.json/env, bible extract + pre-screen, image-batch, video-prompting,
+  finishing, lessons, personas, reference-guide, reviews, styles ×7; PT-141 renders/winners/team refs/reviews removed, generic
+  style boards kept). Statics default to product-only (Mitansh's PT-141 verdict on GPT Image people statics).
+- `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 3 Lovara checks (static finish with its disclaimer,
+  wrong disclaimer refused, video refused while `lovara_bottle.png` is missing). Smoke 18/18 before, 21/21 after.
+- `bible_sync.py --check`: Lovara ✅. Pre-existing, not ours: BPC-157's disclaimer is not in the bible ("Disclaimer pending").
+- Preflight: 8 passed, 3 to fix (both renders missing; Marketing Studio registration needs them). Creatify project not created yet
+  (it imports the renders).
 
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
