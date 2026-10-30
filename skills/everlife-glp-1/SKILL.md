@@ -21,7 +21,8 @@ Golden rules, all non-negotiable:
 4. **Body rules (strictest category):** no before/after, no body comparison, no scales, tape measures, waistlines, bellies, "after"
    bodies or mirrors; no body areas; no melt / burn / shred / ripped; no timing promises ("in 4 weeks"); no guarantees; no disease
    words (diabetes, insulin resistance, obesity). "Supports / helps", never "makes you lose".
-5. **Two forms, one per ad:** compounded semaglutide (navy vial) or compounded tirzepatide (green vial). **Never show or mention
+5. **Two forms:** compounded semaglutide (navy vial) and compounded tirzepatide (green vial), one per ad **or both side by side**
+   (every GLP-1 winner shows both; `references/winners/winners.md`). **Never show or mention
    needles, syringes, pens, injecting or "needle-free"**: the vial is a still object.
 6. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every
    result**; **every script is new** (`~/Everlife-Creative/glp-1-copy-log.md`); everything is a draft until creative review and
@@ -43,6 +44,7 @@ Read these when the step says so:
 | `../everlife-bpc-157/references/vial-refs/README.md` | any vial-hero slot (staging only; shared with BPC-157) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing |
+| `references/winners/winners.md` | **every concept**: 3 GLP-1 winners from Emily (both vials, strike-through hooks, Notes checklist, active couples) + what never to copy |
 | `references/reviews.md` | any review quote (none on file → gated) |
 | `assets/RENDERS.md` | the two vial renders and their prompt wording |
 
@@ -60,7 +62,7 @@ Paths: skill dir = this folder. `core/` = the shared Everlife toolkit. Output ro
 (default: product only; a person only when asked: clothed, everyday, never a body shot).
 
 **Round 1 — one AskUserQuestion, 4 questions:**
-1. **Form:** "Either: alternate per ad (Recommended)" / "Compounded semaglutide" / "Compounded tirzepatide".
+1. **Form:** "Both vials side by side (Recommended: every winner)" / "Alternate per ad" / "Compounded semaglutide" / "Compounded tirzepatide".
 2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad".
 3. **Angle:** "Mix (Recommended)" / "Quiet the food noise" ("Turn Down the Food Noise", "Less Food Noise. More Control.") /
    "Appetite + cravings" ("Stop Fighting Hunger All Day", "Take Control of Your Appetite") / "One price, provider-guided"

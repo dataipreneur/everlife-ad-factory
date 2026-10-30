@@ -5,7 +5,7 @@ ordinary non-famous face, clothed, shoulder-up, never a body shot.
 
 **The picture is calm control and a clear plan, never a body:** a bright kitchen at breakfast, a fridge door with a simple plan on
 it, a calendar, a phone showing a provider message, a quiet evening without snacking, a walk in daylight. Product-led by default:
-the vial (one form per ad) on real material (stone, linen, light wood).
+one vial, or both vials side by side (as every winner does), on real material (stone, linen, light wood).
 
 **Never:** scales, tape measures, waistlines, bellies, loose jeans, "after" photos, mirrors, plates of "bad" food being refused,
 needles or injecting (the vial is a still object), drug-brand look-alikes (no Ozempic/Wegovy/Mounjaro/Zepbound colours or pens).

@@ -24,10 +24,10 @@
  "notify_icon": "dot",
  "compare_allowed": false,
  "hero": {
-  "element": "the GLP-1 vial of the ad's form (a still object, label to camera)",
+  "element": "the GLP-1 vial of the ad's form, or both vials side by side (a still object, labels to camera)",
   "min_width": 0.35,
   "label": "wraps the curved glass: 'Compounded' box, SEMAGLUTIDE or TIRZEPATIDE, RX ONLY",
-  "never": "needles, syringes, pens or injecting; scales, tape measures, waistlines, bellies, before/after or any body-composition cue; food 'cheat' imagery; another product's vial; both vials in one ad",
+  "never": "needles, syringes, pens or injecting; scales, tape measures, waistlines, bellies, before/after or any body-composition cue; food 'cheat' imagery; another product's vial",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
  },
  "disclaimer_at": "bottom",

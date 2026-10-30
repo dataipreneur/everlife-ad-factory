@@ -5,7 +5,7 @@ with compounded semaglutide or compounded tirzepatide; the Rx vial is the only p
 audiences**. Every ad is 15 s, 9:16 unless asked. **Calm control and a clear plan, never a body (`direction.md`); the price line in
 every ad; no needles or injecting, ever.**
 
-No GLP-1 winners are on file yet (ask Emily: the Meta export has none under "GLP-1").
+GLP-1 winners: 3 statics from Emily (`winners/winners.md`): both vials, strike-through hooks, active couples; no videos and no numbers yet.
 
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
 1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (a volume knob turned down; a fridge door closing on a calm kitchen;

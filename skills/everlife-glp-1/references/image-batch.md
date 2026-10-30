@@ -43,7 +43,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 - **"GLP-1" in headers; "compounded semaglutide" / "compounded tirzepatide" whenever a drug is named.**
 - No before/after, body comparison, body areas, scales, tape, waistlines; no melt / burn / shred; no timing promises; no
   guarantees; no disease words. "Supports / helps".
-- **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. One vial (one form) per ad, a still object.
+- **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. One vial or both side by side (the winners), a still object.
 - No "Are you/Do you…?" questions, no first person, no named competitors or drug brands, no "clinically" for the product.
 - Offer: "Up to 59% off" (percent, never $) and/or "One predictable price".
 - "GLP-1" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
@@ -147,7 +147,7 @@ Design a finished, premium static social ad for "GLP-1", doctor-prescribed, prov
 
 PRODUCT: image 1 is the real product. Use the attached product reference exactly: same shape, colours and label, label facing camera,
 sharp, never mirrored, never redesigned. It is <the form's wording from assets/RENDERS.md>. The vial stands or lies on the surface
-as a still object. NO syringe, needle, pen, dropper, droplets or injection of any kind anywhere; NO pills; NO other vial. The
+as a still object. NO syringe, needle, pen, dropper, droplets or injection of any kind anywhere; NO pills; NO other product's vial. The
 product is large and legible.
 
 TYPOGRAPHY & COLOUR (this ad's own look): headline in <pairing from §2b>, with ONE phrase in <accent>; supporting text in <partner face>.

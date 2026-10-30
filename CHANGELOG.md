@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — GLP-1: Emily's winners (branch `glp1-skill`)
+Logged before editing. Emily's Drive folder "GLP1 Winners" (downloaded by Priestley): 3 statics (Base186, Base193, Base204; 4:5 +
+9:16, made 30 Sep 2026; not in the Meta export, so no numbers yet). Full files in
+`~/Everlife-Creative/reference-ads/GLP1-winners-2026-10-30/` (not in git).
+- New `references/winners/` (cards + previews).
+- All three show both vials side by side. The skill's "one form per ad" was Claude's own rule, not the bible's → both vials together
+  now allowed (Priestley's "follow bible" principle). Scales stay out (they imply the weight-loss outcome Priestley held for
+  Jeremy); listed as an open question.
+
 ## 2026-10-30 — GLP-1 skill setup (branch `glp1-skill`, from `main` 4ee62c6)
 Logged before editing. Priestley: "we need to add two more products: GLP-1, NAD+". New skill `skills/everlife-glp-1/` (weight
 management, adults 30–60, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` (vial handling) and
