@@ -5,7 +5,7 @@
 ## Product facts for this skill
 - **What it is:** a compounded Rx peptide recovery stack in one vial (5 mL on the label; never in copy). Doctor-prescribed.
 - **Who:** active men 25–55 training hard and recovering between sessions (bible).
-- **⛔ Ingredients:** bible = BPC-157 / TB-500 (the bible heading; the page says "Dual-peptide" and "Two-Peptide Recovery Stack"); vial label = BPC-157 / KPV / TB-500 (three peptides, 3MG/3MG/3MG/ML). They disagree (the Wolverine Stack
+- **⛔ Ingredients (labels confirmed correct 2026-10-30; the bible pages are swapped, waiting for the fix):** bible = BPC-157 / TB-500 (the bible heading; the page says "Dual-peptide" and "Two-Peptide Recovery Stack"); vial label = BPC-157 / KPV / TB-500 (three peptides, 3MG/3MG/3MG/ML). They disagree (the Wolverine Stack
   is the mirror image). No ingredient list in copy and no ads until Justin/Jeremy settle it.
 - **Focus (bible):** joints, ligaments, connective tissue, muscle recovery, mobility and gut lining.
 - **Creative direction (bible):** rugged, strong, unmistakably masculine; a serious gym-goer with a hardcore training feel; say

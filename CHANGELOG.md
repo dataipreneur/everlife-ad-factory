@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spartan Stack: labels confirmed, waiting for the bible fix (branch `spartan-skill`)
+Priestley shared marked-up label crops: the vial labels are correct (Spartan = BPC-157 / KPV / TB-500; Wolverine = BPC-157 +
+TB-500). The bible has the two stack pages swapped. Decision: wait for the bible fix (no partial unblock). The block wording in
+SKILL.md, image-batch.md, video-prompting.md, product.json `_blocked`, RENDERS.md and product-bible.md now says so, with the steps to
+take once the live bible is corrected.
+
 ## 2026-10-30 — Spartan Stack: borrowed winners (branch `spartan-skill`)
 Logged before editing. Emily: "Wolverine, Spartan and MOTS-c use GHK and Sermorelin visuals instead. Rugged manly men." Priestley
 approved. New `references/winners/winners.md`: 5 statics + 2 videos from the Sermorelin / Sermorelin GHK men's winners (CPA-ranked),

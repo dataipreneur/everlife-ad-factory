@@ -37,7 +37,7 @@ Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (
 in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
-**⛔ GENERATION BLOCKED (2026-10-30):** the vial label reads BPC-157 / KPV / TB-500 (three peptides, 3MG/3MG/3MG/ML), but the bible page says BPC-157 / TB-500 (the bible heading; the page says "Dual-peptide" and "Two-Peptide Recovery Stack"). The Wolverine Stack is the mirror image. Until Justin/Jeremy confirm which is right (and the bible or the render is fixed), make no ad: no images, no video, no credits. Remove this gate only when it is settled.
+**⛔ GENERATION BLOCKED (updated 2026-10-30): the vial labels are CORRECT** (confirmed to Priestley with marked-up label crops: Spartan = BPC-157 / KPV / TB-500, Wolverine = BPC-157 + TB-500). **The creative bible has the two stack pages swapped** (headings, "two/three peptides", "3-in-1", "Healthy Inflammatory Balance"). Priestley: wait for the bible fix. When the live bible is corrected: sync it (`bible_sync.py`), re-copy this skill's `product-bible.md`, re-screen, and remove this gate. No ads, no credits until then.
 
 **Hard stops:**
 - Claims: only the ✅ quick-hit benefits in `product-bible.md` (pre-screen). ❌/⛔ lines never; ⏳ headlines and ⚠ lines only with the
