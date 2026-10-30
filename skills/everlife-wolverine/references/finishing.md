@@ -35,7 +35,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "cta": "<✅ bible CTA in caps>", "vocab": "Wolverine Stack by Everlife."}
 ```
 `"product"` is required. The end card shows the vial alone, centred. Don't type the disclaimer into copy.json. The "ingredients"
-rows are ✅ benefit pillars, **never ingredient claims** (no ingredient names until the label gate clears).
+rows are ✅ benefit pillars, **never ingredient claims** (ingredients only together, as on the label, in the label line).
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
 

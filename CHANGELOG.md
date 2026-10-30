@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Wolverine Stack: PROVISIONAL swap + headlines + offer, gate lifted (branch `wolverine-skill`)
+Logged before editing. Bible-updates hand-off §6; Priestley approved all three. PROVISIONAL — Jeremy to confirm.
+- `references/product-bible.md`: pre-screen now uses the Spartan page's benefit lines (the 2-peptide ones); "Two Peptides. One
+  Recovery Stack." moved here; provisional headlines "Two Peptides. One Mission." and "Bounce Back Stronger"; "Recover Like Wolverine"
+  ❌ until Jeremy (Marvel). Offer "Save up to 39%" PROVISIONAL: landing page only, an approved exception to "offers never from landing
+  pages"; must be added to the bible.
+- `SKILL.md`, `image-batch.md` (F6 offer framework back), `video-prompting.md`: ⛔ gate → ⚠ PROVISIONAL note; ingredients named together
+  as on the label; the KPV inflammation line moves to Spartan. `product.json`: `_blocked` → `_provisional`.
+Originals in `_originals/2026-10-30/stack-provisional/wolverine/`.
+
 ## 2026-10-30 — Wolverine Stack: labels confirmed, waiting for the bible fix (branch `wolverine-skill`)
 Same as the Spartan Stack: the vial labels are correct (Wolverine = BPC-157 + TB-500), the bible's stack pages are swapped.
 Priestley: wait for the bible fix. Block wording updated in SKILL.md, image-batch.md, video-prompting.md, product.json, RENDERS.md

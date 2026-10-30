@@ -91,5 +91,6 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - A plain, unlabelled prop (grey shaker) as "the old way" renders clean; keep props unbranded.
 
 ## Wolverine Stack (from 2026-10-30)
-- ⛔ The vial label and the bible disagree on the ingredients (and the Spartan Stack is the mirror image): no ads until settled.
+- The vial label and the bible disagree (pages swapped; cause: the NEW Product Benefits Doc). PROVISIONAL swap applied 2026-10-30 (Jeremy to confirm).
+- Test 1 (2026-10-30, 4 ads, shared lines only): 2 of 4 had the CTA under or at the footer at 4:5; the finisher does not catch it at 4:5: look at every final.
 - Lovara batch-1 (2026-10-30): at 4:5 `finish_batch.py` does not refuse text under the footer: look at every final.

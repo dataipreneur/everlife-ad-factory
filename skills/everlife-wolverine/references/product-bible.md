@@ -5,36 +5,39 @@
 ## Product facts for this skill
 - **What it is:** a compounded Rx peptide recovery stack in one vial (5 mL on the label; never in copy). Doctor-prescribed.
 - **Who:** active men 25–55 training hard and recovering between sessions (bible).
-- **⛔ Ingredients (labels confirmed correct 2026-10-30; the bible pages are swapped, waiting for the fix):** bible = BPC-157 / KPV / TB-500 (the bible heading; the page says "3-peptide", "3-in-1 Recovery Support"); vial label = BPC-157 + TB-500 (two peptides, 3MG/3MG/ML). They disagree (the Spartan Stack
-  is the mirror image). No ingredient list in copy and no ads until Justin/Jeremy settle it.
+- **Ingredients (vial label, confirmed correct 2026-10-30):** BPC-157 + TB-500 (two peptides). The bible pages are swapped; this extract uses the
+  PROVISIONAL swapped lines below (Priestley 2026-10-30; Jeremy to confirm; bible owner to fix the source).
 - **Focus (bible):** connective tissue, tendons and ligaments, healthy inflammatory balance, gut lining, mobility and soft-tissue recovery.
 - **Creative direction (bible):** rugged, strong, unmistakably masculine; a serious gym-goer with a hardcore training feel; say
   "Wolverine Stack" as the brand name in every asset; fighting imagery fine without blood or gore; no animal death.
-- **Offer:** [PLACEHOLDER] → none. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
-- **Headlines:** all four are ⏳ Pending approval ("Proposed headlines … Replace with approved copy when available").
+- **Offer:** "Save up to 39%" PROVISIONAL: seen on the landing page only (exception approved by Priestley 2026-10-30); must be added to the bible; Jeremy to confirm. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
+- **Headlines:** bible ones ⏳ Pending approval; ⚠ PROVISIONAL ones below may be used, flagged for Jeremy.
 - **Landing page:** [PLACEHOLDER].
 
-## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
+## Compliance pre-screen (PROVISIONAL swap applied 2026-10-30 — confirm with Jeremy)
 
-| Line (bible) | Where | Status | Why |
+| Line | Where | Status | Why |
 |---|---|---|---|
-| Bounce Back Stronger | headlines | ⏳ | Pending approval |
-| Recover Like Wolverine | headlines | ⏳ + ⚠ Jeremy | Pending; evokes the Marvel character (IP risk) and his healing factor (implied healing claim) |
-| The Wolverine Stack for Whole-Body Recovery | headlines | ⏳ | Pending approval |
-| 3 Peptides. One Recovery Protocol. | headlines | ⏳ + ⛔ label | Pending; contradicts the vial label (two peptides) until the ingredient question is settled |
-| 3-in-1 Recovery Support | benefits | ⛔ label | Contradicts the vial label (two peptides): never use until settled |
-| Supports Tendons + Ligaments | benefits | ✅ |  |
-| Supports Gut Lining Health | benefits | ✅ |  |
-| Supports Mobility | benefits | ✅ |  |
-| Supports Healthy Inflammatory Balance | benefits | ✅ (care) | Bible wording exactly; never "reduces inflammation" or "anti-inflammatory" |
-| 3-Peptide Whole-Body Recovery | benefits | ⛔ label | Contradicts the vial label (two peptides): never use until settled |
-| Supports Joints, Gut + Mobility in One Stack | benefits | ✅ |  |
-| Explore the Wolverine Stack | ctas | ✅ |  |
-| Build Your Recovery Protocol | ctas | ✅ | "Build Your Recovery Protocol" is an action, not a claim (the "supports, never builds" rule is about claims): ✅ |
-| Get Started Now | ctas | ✅ |  |
-| Support Whole-Body Recovery | ctas | ✅ |  |
-| Start Your Stack | ctas | ✅ |  |
-| [PLACEHOLDER] current % savings / price | offer | ⛔ | Placeholder: no offer copy until the bible has one |
+| Bounce Back Stronger | headlines | ⚠ PROVISIONAL | Wolverine page (pending) + team candidate; Jeremy to confirm |
+| The Wolverine Stack for Whole-Body Recovery | headlines | ⏳ | Wolverine page; pending approval |
+| Two Peptides. One Recovery Stack. | headlines | ⚠ PROVISIONAL | moved from the Spartan page (swap); matches the 2-peptide label |
+| Two Peptides. One Mission. | headlines | ⚠ PROVISIONAL | team candidate (hand-off §4); Jeremy to confirm |
+| Recover Like Wolverine | headlines | ❌ until Jeremy | evokes the Marvel character (trademark) and a healing factor |
+| Supports Joints + Ligaments | benefits | ✅ PROVISIONAL | from the Spartan page (swap) |
+| Supports Connective Tissue Repair | benefits | ✅ PROVISIONAL (care) | from the Spartan page (swap); exact wording, never "repairs" or "heals" |
+| Supports Muscle Recovery | benefits | ✅ PROVISIONAL | from the Spartan page (swap) |
+| Supports Mobility + Range of Motion | benefits | ✅ PROVISIONAL | from the Spartan page (swap) |
+| Supports Gut Lining Health | benefits | ✅ PROVISIONAL | from the Spartan page (swap) |
+| Two-Peptide Recovery Stack | benefits | ✅ PROVISIONAL | from the Spartan page (swap) |
+| Supports Training Harder, More Often | benefits | ✅ PROVISIONAL | from the Spartan page (swap); never with a number or timeline |
+| Explore the Wolverine Stack | ctas | ✅ | |
+| Build Your Recovery Protocol | ctas | ✅ | |
+| Get Started Now | ctas | ✅ | |
+| Support Whole-Body Recovery | ctas | ✅ | |
+| Start Your Stack | ctas | ✅ | |
+| Save up to 39% | offer | ⚠ PROVISIONAL | "Save up to 39%" PROVISIONAL: seen on the landing page only (exception approved by Priestley 2026-10-30); must be added to the bible; Jeremy to confirm. |
+
+The VERBATIM block below is still the bible page as written (swapped); the table above is what the skill uses.
 
 ---
 

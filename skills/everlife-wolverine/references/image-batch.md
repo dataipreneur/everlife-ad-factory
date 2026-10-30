@@ -37,20 +37,20 @@ Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (
 in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
-**⛔ GENERATION BLOCKED (updated 2026-10-30): the vial labels are CORRECT** (confirmed to Priestley with marked-up label crops: Spartan = BPC-157 / KPV / TB-500, Wolverine = BPC-157 + TB-500). **The creative bible has the two stack pages swapped** (headings, "two/three peptides", "3-in-1", "Healthy Inflammatory Balance"). Priestley: wait for the bible fix. When the live bible is corrected: sync it (`bible_sync.py`), re-copy this skill's `product-bible.md`, re-screen, and remove this gate. No ads, no credits until then.
+**⚠ PROVISIONAL (2026-10-30, Priestley; Jeremy to confirm):** the vial labels are correct and the creative bible has the Spartan/Wolverine pages swapped (cause: the NEW Product Benefits Doc has the two labels flipped). Until the bible owner fixes the source, this skill uses the **swapped** benefit lines (`references/product-bible.md` pre-screen), provisional headlines and the provisional offer Save up to 39%. Ads are drafts: every SESSION.md says "provisional copy: bible swap pending, Jeremy to confirm". When the live bible is fixed: sync, re-copy the extract, re-screen, drop this note.
 
 **Hard stops:**
 - Claims: only the ✅ quick-hit benefits in `product-bible.md` (pre-screen). ❌/⛔ lines never; ⏳ headlines and ⚠ lines only with the
   user's explicit OK + flagged for Jeremy.
-- Wolverine Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation" (only the bible's exact "Supports Healthy Inflammatory Balance"), "torn", "cure", "treat", "boost",
+- Wolverine Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation", "torn", "cure", "treat", "boost",
   "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Connective Tissue Repair"
   only exactly as the bible writes it (where the pre-screen allows it).
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. The vial stands or lies on a surface; a hand may hold it.
-- One product image: the Rx vial. Copy never states a strength, dose, mL or count, and **no ingredient list** until the label gate clears.
+- One product image: the Rx vial. Copy never states a strength, dose, mL or count; ingredients only together as on the label (BPC-157 + TB-500 (two peptides)).
 - People: active men 25–55, rugged, strong, unmistakably masculine (`mens-direction.md`); fighting imagery fine **without blood or gore,
   no animal death**; no before/after, no body comparison, no body-composition words in copy.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
-- **Offer: none** (the bible's is [PLACEHOLDER]): no F6, no "% off".
+- **Offer:** "Save up to 39%" PROVISIONAL: seen on the landing page only (exception approved by Priestley 2026-10-30); must be added to the bible; Jeremy to confirm.
 - "Wolverine Stack" big in every ad (brand name, bible direction); never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
@@ -68,7 +68,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a training log with the week's sessions and one ✅ line per row; the vial beside the phone |
 | F4 | Features & Benefits | 04_Features_and_Benefits | vial hero + three ✅ benefit rows with simple icons (no ingredient icons) |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: no bodies, no transformation |
-| F6 | Offer | 06_Offer | ❌ **skip**: no offer in the bible yet |
+| F6 | Offer | 06_Offer | "Save up to 39%" (PROVISIONAL) + the vial + one ✅ line |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened Wolverine Stack reviews |
 | F8 | Question | 08_Question | pronoun-free question ("Recovery an afterthought?") + answer line + product. Never "Is your…?" |
 | F9 | Reasons Why | 09_Reasons_Why_Education | three ✅ lines, numbered, vial hero (never one benefit per ingredient) |
@@ -80,7 +80,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 **Borrowed winners** (`winners/winners.md`, Emily 2026-10-30): build at least one slot per batch from B1–B5 (layout and cast only).
 
-**Random (recommended):** N different frameworks (skip F5, F6, F7). Weight towards F2, F13, F12, F11, F14.
+**Random (recommended):** N different frameworks (skip F5, F7). Weight towards F2, F13, F12, F11, F14.
 With "people: mix", about half the slots use F13 or a man inside F2/F8/F12.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
