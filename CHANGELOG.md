@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — MOTS-c: PROVISIONAL ad disclaimer = the standard text (branch `mots-c-skill`)
+Logged before editing. Priestley: "then use it for now". The bible's MOTS-c page still says "Disclaimer pending" and the
+Creative Messaging doc only has the website FDA statement, so MOTS-c uses the **standard ad disclaimer** (verbatim on the
+Spark, Spartan, Wolverine and most other bible pages) as a stopgap:
+"AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical
+providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription."
+- `product.json`: disclaimer set to that text; `_disclaimer_status` = PROVISIONAL, pending Jeremy.
+- `SKILL.md` + `references/product-bible.md`: the ⛔ block becomes a ⚠ PROVISIONAL note: drafts allowed; every MOTS-c asset is
+  flagged "provisional disclaimer: Jeremy to confirm" in the session hand-off; nothing goes live until he confirms.
+- `core/tests/regression.py`: the MOTS-c check now expects finish_batch to render with the provisional text (was: refuse).
+- Known: `bible_sync.py --check` will report MOTS-c as not matching its bible page until the bible gets a disclaimer.
+Originals in `_originals/2026-10-30/motsc-provisional-disclaimer/`.
+
 ## 2026-10-30 — MOTS-c: Creative Messaging doc added as the approved copy source (branch `mots-c-skill`)
 Logged before editing. Priestley: "I have a new doc for MOTS-c, we should use that"
 (`motsc-creative-messaging-ranked-all-headlines.docx`; copy + text in `_originals/2026-10-30/motsc-messaging-doc/`).

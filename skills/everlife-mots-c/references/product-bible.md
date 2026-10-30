@@ -16,8 +16,11 @@
   100,000+ happy customers.
 - **Direction:** balance men and women; include everyday, non-workout concepts (relatable lifestyle settings) alongside fitness
   talent; lead with a strong hook, MOTS-c can be the secondary bold product identifier; always spell it "MOTS-c".
-- **⛔ Disclaimer still missing:** the doc only gives the website's FDA statement ("confirm for ad use"), which has no AI
-  disclosure. Generation stays blocked until Jeremy gives the ad disclaimer.
+- **⚠ Disclaimer PROVISIONAL:** the doc only gives the website's FDA statement ("confirm for ad use"), which has no AI
+  disclosure, so it is not used. product.json carries the standard ad disclaimer (Priestley, 2026-10-30, "use it for now"):
+  "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical
+  providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription." Jeremy to confirm before
+  anything goes live.
 - **⚠ Label mismatch:** the doc says "2 mg/mL | 10 mg per 5 mL vial"; `assets/mots-c_bottle_ref.jpg` reads "10MG/ML · 5ML".
   Confirm the render against the website before any ad. No strength or volume in copy either way.
 - The doc's URL (`stagingapp.everlifemd.com/mots-c/h2`) is a staging page, not a live landing page.
@@ -92,7 +95,7 @@
 | Save up to 40% | offer | ✅ | percent-off; the lander CTA "Start MOTS-C — 40% Off" is not in the doc: never use (and "MOTS-C" is the wrong capitalisation) |
 | Trustpilot 4.9 Excellent | proof | ✅ as "Trustpilot rated 4.9 Excellent" | global rule: always the exact wording |
 | 100,000+ Happy Customers | proof | ✅ | or "Over 100,000 happy customers" |
-| Lander disclaimer (FDA statement) | disclaimer | ⛔ | website FDA/supplement statement, "confirm for ad use", no AI disclosure: NOT the ad disclaimer; product.json stays empty |
+| Lander disclaimer (FDA statement) | disclaimer | ⛔ | website FDA/supplement statement, "confirm for ad use", no AI disclosure: NOT the ad disclaimer (product.json uses the provisional standard text) |
 
 ## VERBATIM (do not edit; re-copy from the doc)
 
