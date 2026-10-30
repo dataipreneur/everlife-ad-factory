@@ -21,8 +21,10 @@ Golden rules, all non-negotiable:
    "performance", "Viagra", "instant", no timing numbers ("in 30 min"), no "Spark" (another product). "Supports", never
    "builds"/"boosts" (except inside the bible's own ingredient wording); never a strength, dose or count.
 3. **Tasteful, product-led** (bible + creative gates): **no beds or bedroom scenes, no lingerie, no body shots, no lips macro, no
-   couples in bed, no before/after; video framing shoulder-up.** People, when shown: clothed, candid, real-looking women 30–55,
-   daytime settings, an ordinary non-famous face, a different woman in every ad.
+   couples in bed, no generic stock-style couples (bible), no before/after; video framing shoulder-up.** People, when shown:
+   clothed, candid, real-looking women 30–55, daytime settings, an ordinary non-famous face, a different woman in every ad. A
+   couple is allowed only as the bible allows it: real-looking (not stock), clothed, outside any bedroom, and the product stays the
+   lead (bible: "product imagery led").
 4. **Images never say "by Everlife"**: the name reads "LOVARA", big (one of the two largest texts). Videos say "Lovara by Everlife"
    in the header and first spoken line. Colours: pinks, tans, warm neutrals, plus white and teal; advertorials on white.
 5. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.

@@ -9,6 +9,9 @@ INT17 77…). Full files in `~/Everlife-Creative/reference-ads/Lovara-winners-20
 - New `references/winners/`: winners.md (Emily's full ranking + a card per file: take / never copy) + small previews.
 - SKILL.md points to it. No rule changes: several of these winners break today's rules (lingerie, bed/bedroom, per-ingredient
   benefit claims, 4.8 / 50,000 / 70,000 proof): they are format references only.
+- Couples (Priestley: "Follow bible for now"): the skill's own "no couples" was stricter than the bible. Replaced with the bible's
+  wording: "no generic stock-style couples", "product imagery led", "no bedroom scenes" (SKILL.md, image-batch.md,
+  video-prompting.md, winners.md). "Couples in bed" stays banned (bedroom).
 
 ## 2026-10-30 — Lovara skill (branch `lovara-skill`, from `main` 4ee62c6)
 Logged before editing. New product skill `skills/everlife-lovara/` (women's intimacy support, women 30–55), built per

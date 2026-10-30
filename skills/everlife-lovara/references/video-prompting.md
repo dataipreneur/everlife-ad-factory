@@ -30,7 +30,7 @@ line (no on-camera speaker) or the cloned-voice line over a hands-only shot (on-
 - No "I"/"my", no testimonials, no "Are you…?" (pronoun-free questions OK). No disease words, no "clinically" for the product,
   no $ prices ("Save up to 45%" is the only offer).
 - **Settings:** kitchen at breakfast, terrace or garden, café, a walk at golden hour, a bright studio. **Never a bed or bedroom**,
-  no lingerie, no undressing, no couples, no lips close-ups.
+  no lingerie, no undressing, no generic stock-style couples (bible), no lips close-ups.
 - **Framing:** shoulder-up (head-and-shoulders), waist-up at most; clothed; women 30–55; natural, well-rested, candid; an ordinary,
   non-famous face; cast from a picked preview still (Sermorelin lesson: generic casting drifted to a celebrity look-alike).
 - **Colours:** pinks, tans, warm neutrals, white, teal (`image-batch.md` §2b).
@@ -51,7 +51,7 @@ line (no on-camera speaker) or the cloned-voice line over a hands-only shot (on-
    scene continues." (Captions ~59–63%, Trustpilot row ~67–72%, disclaimer alone at the very bottom.)
 8. **Headroom:** "Keep every person's head and face below the top 25% of the frame for the whole clip."
 9. **Closing guards:** "No on-screen text, captions, logos or watermarks; no readable words except the product label. Nobody says
-   'I' or 'my'. No bed, no bedroom, no lingerie, no body shots, no couples, no before-and-after imagery, no needles, syringes or vials."
+   'I' or 'my'. No bed, no bedroom, no lingerie, no body shots, no generic stock-style couples, no before-and-after imagery, no needles, syringes or vials."
 
 ## Model routing (production gate §6)
 - Realistic humans talking: Marketing Studio UGC (~75 cr; needs the product registered) + the cloned-voice product line (~0.9 cr).

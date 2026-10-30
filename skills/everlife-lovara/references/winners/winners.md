@@ -47,11 +47,12 @@ pixel purchases. Lovara target CPA is $260.
 
 | Code | Format | Take | Don't copy |
 |---|---|---|---|
-| V32 · Video 32 (15 s) | a couple on a beach at sunset, warm and close; fixed frame: "When the Moment Matters, Feel Ready Again", three ingredient icons, proof, "Shipped free from the pharmacy" | the fixed info frame; golden-hour beach; 15 s | couple embraces that read as foreplay (the skill: no couples in intimate poses; bible: "no generic stock-style couples"); per-ingredient icons; "70,000+" |
+| V32 · Video 32 (15 s) | a couple on a beach at sunset, warm and close; fixed frame: "When the Moment Matters, Feel Ready Again", three ingredient icons, proof, "Shipped free from the pharmacy" | the fixed info frame; golden-hour beach; 15 s | close embraces that read as foreplay (not tasteful); a stock-looking couple (bible: "no generic stock-style couples"); per-ingredient icons; "70,000+" |
 | V26 · Video 26 (19 s) | UGC-style woman in a sun hat on a beach, talking to camera, bottle in the frame | the sunny, candid creator feel; the bottle locked in the frame | first-person testimonial VO ("changed everything" style lines: no first person, no testimonials); "Vardenafil: Sensitivity **Boosting**"; "70,000+" |
 | V18 · Video 18 (29 s) | woman in a robe in a bedroom, then a couple on the bed, a pink capsule "energy" burst | the capsule burst as a product beat | **bed / bedroom / robe** (bible: no bedroom scenes); "Kickstart / Reignite"; 4.8, 50,000; 29 s (too long) |
 
 **For Priestley / Jeremy:**
 - The top-volume statics (INT24, INT4, INT13) are missing: ask Emily or the agency (the "INT" prefix may be an agency naming code).
-- Couples are winning in V32. If the team wants tasteful, clothed, outdoor couples allowed for Lovara, that's a rule change to
-  confirm first (the skill currently says no couples).
+- Couples (Priestley 2026-10-30: "Follow bible for now"): the bible bans only *generic stock-style* couples and bedroom scenes,
+  and wants Lovara "product imagery led". A V32-style couple is allowed if real-looking, clothed, outdoors, and the product leads.
+  Its close embraces that read as foreplay are not tasteful: never.

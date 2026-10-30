@@ -21,7 +21,7 @@ the very bottom (`"disclaimer_at": "bottom"`).
   "Viagra", "instant", no timing promises ("tonight", "in 30 min"), no guarantees, no explicit sexual wording, never "Spark".
 - Ingredient names appear only inside their own approved claim (F4/F9 rows), never as a product promise; the ingredient list is under
   review (Justin), so prefer product-level "Supports…" lines until it's confirmed.
-- **No beds or bedroom scenes**, no lingerie, no body shots, no lips macro, no couples, no before/after. A woman is clothed, candid,
+- **No beds or bedroom scenes**, no lingerie, no body shots, no lips macro, no generic stock-style couples (bible), no before/after. A woman is clothed, candid,
   30–55, shoulder-up or waist-up, daytime (kitchen, café, terrace, garden, studio, bathroom counter), an ordinary non-famous face,
   a different woman in every ad.
 - Never a strength, dose or count. No needles, syringes or vials.
@@ -124,7 +124,7 @@ SCENE & STYLE: <scene: a daytime, non-bedroom setting>, real texture and depth (
 tasteful and premium. <PERSON, if any: a <ethnicity> woman, age <30–55>, <hair>, <wardrobe>, natural fit build, candid (laughing, calm
 or eyes to camera), framed head-and-shoulders or waist-up, an ordinary, non-famous face (must not resemble any celebrity, actor or public
 figure), fully clothed; not posed as a model, not glamour.> Palette: <this ad's own lead colour per §2b>. No bed, no bedroom, no
-lingerie, no body shots, no lips close-up, no couples, no before/after, no needles, syringes or vials, no mirrors showing bodies.
+lingerie, no body shots, no lips close-up, no generic stock-style couples, no before/after, no needles, syringes or vials, no mirrors showing bodies.
 
 LAYOUT (4:5): 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no product): the Everlife
 logo is laid there later. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the proof footer is laid
