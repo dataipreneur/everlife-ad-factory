@@ -241,21 +241,29 @@ def smoke(core, out):
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
 
-    # Lovara (renders not on file yet: statics finish, video end cards are refused until the bottle/tablet arrive)
+    # Lovara (oral capsule): statics take its disclaimer; video end cards render the bottle + capsule
     d = os.path.join(out, "lv_static"); os.makedirs(d)
     expect("finish_batch takes the Lovara disclaimer from --product",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "lovara"], True)
     expect("Lovara refuses another product's disclaimer",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "lovara",
             "--disclaimer", RZ_DISC], False, "differs")
-    d = os.path.join(out, "lv_video")
-    os.makedirs(os.path.join(d, "layers_full"))
-    json.dump({"product": "lovara", "style": "default", "head": ["LOVARA BY EVERLIFE"],
-               "end_head": ["FROM DISTANT TO", "DEEPLY CONNECTED"],
-               "benefits": ["Supports Desire + Sensitivity", "Supports Comfort + Responsiveness", "Supports Intimate Readiness"],
-               "cta": "EXPLORE LOVARA", "vocab": "Lovara."}, open(os.path.join(d, "copy.json"), "w"))
-    expect("Lovara video is refused while its renders are missing",
-           [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], False, "lovara_bottle.png")
+    lv = {"product": "lovara", "head": ["LOVARA BY EVERLIFE"], "head_always": True,
+          "end_head": ["FROM DISTANT TO", "DEEPLY CONNECTED"],
+          "benefits": ["Supports Desire + Sensitivity", "Supports Comfort + Responsiveness", "Supports Intimate Readiness"],
+          "ingredients_label": "3-IN-1 INTIMACY SUPPORT",
+          "ingredients": [["DESIRE", "Supports Desire + Sensitivity"], ["COMFORT", "Supports Comfort + Responsiveness"],
+                          ["READINESS", "Supports Intimate Readiness"]],
+          "cta": "EXPLORE LOVARA", "vocab": "Lovara."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"lv_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(lv, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "FROM DISTANT TO DEEPLY CONNECTED", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Lovara video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

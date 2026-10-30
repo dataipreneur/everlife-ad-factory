@@ -18,7 +18,7 @@
 - **Ingredients (bible):** Tadalafil + Vardenafil + Apomorphine. ⚠ **Under review:** the plan doc and the live bible both flag that these
   are men's performance ingredients on a women's product; Justin to confirm. Until then: name ingredients only inside their own
   approved claim, never as a product-level promise, and never "3 peptides".
-- **Form:** not stated in the bible. PMG samples show a pink tablet: confirm, and add the renders (`assets/MISSING_RENDERS.md`).
+- **Form:** not stated in the bible. PMG samples show a pink capsule: confirm, and add the renders (`assets/RENDERS.md`).
   Copy never states a strength, dose or count.
 - **Audience:** women 30–55 noticing changes in desire, sensitivity or comfort. Women only.
 - **Creative direction (bible):** tasteful, product imagery led, **no bedroom scenes**; pinks, tans and warm neutrals, plus more white

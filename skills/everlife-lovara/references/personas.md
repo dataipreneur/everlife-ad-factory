@@ -17,7 +17,7 @@ What Maya punishes:
 - "For men" vibes: navy-and-chrome gym energy. Give her blush, tan, warm neutrals, white, soft teal and soft light.
 
 ## Persona 2 — "Plain-spoken Joan", 54 (post-menopause, skeptical of hype)
-Reads Facebook on her tablet in the evening. Has tried "women's libido" gummies that did nothing and is wary of anything that sounds
+Reads Facebook on her iPad in the evening. Has tried "women's libido" gummies that did nothing and is wary of anything that sounds
 like a supplement scam. Wants to know what it is, that a doctor prescribes it, and what it costs.
 
 What Joan punishes:

@@ -21,6 +21,6 @@ than hype. Advertorials sit on **white** (bible + Justin's direction).
   still life (or, when people are approved, a candid woman shoulder-up), proof. No fake byline, no fake site menu.
 
 ## 2E — 3-in-1 explained
-- **Looks like:** a clean, white advertorial card: "3-in-1 Female Sexual Wellness Blend" + three ✅ benefit rows, tablet hero.
+- **Looks like:** a clean, white advertorial card: "3-in-1 Female Sexual Wellness Blend" + three ✅ benefit rows, capsule hero.
 - **Guardrails:** ingredient names only with their own approved claim, and only once Justin confirms the list; no mechanism science
   beyond the page.

@@ -22,6 +22,13 @@ one product skill". Bible checked first: `bible_sync.py` against the live bible 
 - `bible_sync.py --check`: Lovara ✅. Pre-existing, not ours: BPC-157's disclaimer is not in the bible ("Disclaimer pending").
 - Preflight: 8 passed, 3 to fix (both renders missing; Marketing Studio registration needs them). Creatify project not created yet
   (it imports the renders).
+- Then (same day): Priestley downloaded the asset library's TABLETS/CAPSULES folder (→ `~/Everlife-Creative/asset-library/`) and the
+  PMG Ad folder (→ `~/Everlife-Creative/reference-ads/`). **Lovara is an oral capsule (30 per bottle), not a tablet.** Added
+  `assets/lovara_bottle.png` (+ `_ref.jpg` on white) and `assets/lovara_capsule.png` (cut out from the JPG on white); looked at both.
+  `MISSING_RENDERS.md` → `RENDERS.md` (with the bottle wording for prompts); "tablet" → "capsule" across the skill (originals in
+  `_originals/2026-10-30/skills/everlife-lovara/`). `product.json`: `pill_end_scale` 0.36 (the tall capsule covered the end-card
+  headline at full size). Regression: the "video refused without renders" check replaced by Lovara end-card renders (default + tiktok):
+  smoke 22/22. Preflight 9/10 (only Marketing Studio registration open, optional, for UGC).
 
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):

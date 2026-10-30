@@ -12,7 +12,7 @@ Feed (4:5, 1:1): 60 px margin.
 - Contact sheet: `$FF -v error -y -i raw.mp4 -vf "fps=2,scale=180:-1,tile=10x3" -frames:v 1 sheet.jpg`, then Read it.
 - Transcript: faster-whisper from `$T/venv` (`vad_filter=True`, no prompt hint, to check for stray speech); compare with the script.
 - Pass/fail (tell the user every fail):
-  - **product correctness:** the label matches the render; not mirrored (`--mirror-until <cut>`); the tablet matches the tablet render
+  - **product correctness:** the label matches the render; not mirrored (`--mirror-until <cut>`); the capsule matches the capsule render
     exactly and there is exactly one; no other product
   - people: real-looking women 30–55, clothed, shoulder-up/waist-up, candid, an ordinary face (**no celebrity likeness**); **no bed or
     bedroom in any frame**; no lingerie, lips close-ups or couples

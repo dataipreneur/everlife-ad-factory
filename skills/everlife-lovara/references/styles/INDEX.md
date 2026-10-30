@@ -19,7 +19,7 @@ Boards show library ads as they ran, including some that break today's rules. Sh
 
 | # | Category | File | Sub-styles | Fit | Formats |
 |---|---|---|---|---|---|
-| 4 | **Product as Hero** | `4-product-hero.md` | 4A Soft still life · 4B Tablet macro · 4C Minimal bold · 4D Ad in a frame · 4E Getting-ready ASMR (counter, never a bed) | ⭐⭐⭐ | Image + video |
+| 4 | **Product as Hero** | `4-product-hero.md` | 4A Soft still life · 4B Capsule macro · 4C Minimal bold · 4D Ad in a frame · 4E Getting-ready ASMR (counter, never a bed) | ⭐⭐⭐ | Image + video |
 | 6 | **Lifestyle & Identity** | `6-lifestyle-identity.md` | 6A Reconnected (daytime, together-but-clothed moments shown through objects) · 6B Still you (30–55 identity) · 6C Her glow | ⭐⭐⭐ | Video + image |
 | 1 | **Real People Talking** | `1-real-people.md` | 1A Creator to camera · 1B Friend-to-friend · 1C AI avatar (once built) · 1D Voice-over lifestyle | ⭐⭐⭐ | Video (+ stills) |
 | 2 | **Authority & Proof** | `2-authority-proof.md` | 2A Clinician moment · 2B Review spotlight (gated) · 2C Open letter · 2D Article (on white) · 2E 3-in-1 explained | ⭐⭐ | Image first |
@@ -38,7 +38,7 @@ Boards show library ads as they ran, including some that break today's rules. Sh
 | Realistic humans talking / acting | Higgsfield Marketing Studio UGC (720p; product must be registered) | ~75 / 15 s |
 | AI avatar (Jeremy: ≥ 2 per video batch once the format exists) | Mitansh's avatar build | per the spec |
 | One locked slow shot, simple product hero | Boreal-style (Creatify Ad Agent) or Seedance 480p | see `composer_billing_state` / ~45 |
-| Multi-scene, camera moves | Seedance 2.0 (+ bottle, tablet and cast still `--image`) | ~45 / 15 s (67.5 at 720p) |
+| Multi-scene, camera moves | Seedance 2.0 (+ bottle, capsule and cast still `--image`) | ~45 / 15 s (67.5 at 720p) |
 | Statics | GPT Image 2.5 via Creatify, renders attached | ~1 Creatify credit |
 | ALL words, numbers, logos, review text | finishing only (`finish_batch.py`, `full_layout.py`) | 0 |
 

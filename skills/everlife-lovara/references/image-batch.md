@@ -1,11 +1,11 @@
 # Lovara IMAGE ads: Batch Mode (the default for every image request)
 
 Same machine as the other product batches (creative lead, 2026-10-27: "speed, Creatify, batches of different types, mobile
-friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle and tablet
+friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle and capsule
 renders; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor Prescribed /
 Ships Free art) plus the verbatim disclaimer.
 
-**Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
+Renders: `assets/RENDERS.md` (bottle + capsule). The Creatify project is in `assets/creatify.json`.
 
 **Batch size: default 4** (Creatify runs 4 image tasks per project at once; 8 and 12 run in waves of 4).
 **Finishing (shared rules, Mitansh 2026-10-29):** 4:5 is the master; 9:16 is made from the approved 4:5 with `compose916.py`, or a
@@ -40,14 +40,14 @@ the very bottom (`"disclaimer_at": "bottom"`).
 | Code | Framework | Folder | Lovara recipe |
 |---|---|---|---|
 | F1 | Old way vs New way | 01_Us_vs_Them | "Waiting for the mood" vs "3-in-1 intimacy support". Ideas only, no brands, no bodies |
-| F2 | Bold Claim | 02_Bold_Claim | one huge Tier A headline ("From Distant to Deeply Connected") + the tablet hero + up to 3 ✅ callouts |
+| F2 | Bold Claim | 02_Bold_Claim | one huge Tier A headline ("From Distant to Deeply Connected") + the capsule hero + up to 3 ✅ callouts |
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a Notes page or text thread with one ✅ line per row; the bottle beside the phone |
-| F4 | Features & Benefits | 04_Features_and_Benefits | tablet hero + three rows of ✅ benefits with simple icons (or one row per ingredient with ITS claim, once the list is confirmed) |
+| F4 | Features & Benefits | 04_Features_and_Benefits | capsule hero + three rows of ✅ benefits with simple icons (or one row per ingredient with ITS claim, once the list is confirmed) |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip** |
 | F6 | Offer | 06_Offer | "Save up to 45%" + product + one ✅ benefit line |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened Lovara reviews |
 | F8 | Question | 08_Question | pronoun-free question from an approved territory ("Feeling distant lately?" only as Tier B, PROPOSED) + answer line + product |
-| F9 | Reasons Why | 09_Reasons_Why_Education | "3-in-1, explained": three ✅ lines, numbered, tablet hero; advertorial on white |
+| F9 | Reasons Why | 09_Reasons_Why_Education | "3-in-1, explained": three ✅ lines, numbered, capsule hero; advertorial on white |
 | F10 | Sticky Note | 10_Sticky_Notes_To_Do | a note on a fridge, planner or bathroom-counter tile next to the bottle; never a bedroom |
 | F11 | Visual Metaphor | 11_EXTRA_Visual_Metaphor | one object idea: two coffee cups touching, a door left ajar to a sunlit room, a ribbon untied, a rose opening |
 | F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life (blush silk, travertine, white linen, soft teal), short serif line |
@@ -71,10 +71,10 @@ typeface**, an **own palette**, rotating **product-name treatment** and **headli
    **Persona pass** (`personas.md`), then ONE table: # · framework · person? · headline · tier · supporting lines · type & colour ·
    ≈1 credit. AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch
    and its Tier A lines; each Tier B or ⚠ line needs its own explicit OK first.**
-3. Generate: `composer_edit_image(project_id, prompt, images=[bottle_ref, tablet], out='gen/b<date>_<n>.png', aspect_ratio="4:5")`
+3. Generate: `composer_edit_image(project_id, prompt, images=[bottle_ref, capsule], out='gen/b<date>_<n>.png', aspect_ratio="4:5")`
    for the default model; Nano Banana → `core/references/image-models.md`. Max 4 in flight.
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; "LOVARA" big and no "by Everlife"; the bottle label
-   matches the render (not garbled, not mirrored); the **tablet is identical to the tablet render**, held or hero, ≥ 15% of the width;
+   matches the render (not garbled, not mirrored); the **capsule is identical to the capsule render**, held or hero, ≥ 15% of the width;
    every line big enough for 50+; the woman looks 30–55, clothed, candid, shoulder-up/waist-up, an ordinary face (no celebrity
    likeness), different from every other ad; **no bed, bedroom, lingerie, lips macro anywhere**; colours from §2b; nothing breaks a
    Hard NO. Fail → one automatic fix (an edit of the raw naming the fix). Still bad → flag, don't ship.
@@ -100,15 +100,15 @@ one teal-led or teal-accent ad per batch; at most one pink-led ad; no two ads wi
 
 ## 3. Prompt template (fill everything; keep the quotes exact)
 ```
-Design a finished, premium static social ad for "Lovara", a doctor-prescribed women's intimacy-support prescription (a 3-in-1
-sublingual blend), in the style of a modern, tasteful DTC women's wellness brand. Framework: <name>: <layout from the reference ad>.
+Design a finished, premium static social ad for "Lovara", a doctor-prescribed women's intimacy-support prescription (a 3-in-1 oral capsule blend), in the style of a modern, tasteful DTC women's wellness brand. Framework: <name>: <layout from the reference ad>.
 
-PRODUCT: image 1 is the real bottle and image 2 the real tablet. Use the attached tablet reference exactly; do not invent, alter, or
-substitute a different pill; exactly one tablet, large, in focus, foreground, at least 15% of the canvas width, <held between thumb and
+PRODUCT: image 1 is the real bottle and image 2 the real capsule. Use the attached capsule reference exactly; do not invent, alter, or
+substitute a different pill; exactly one capsule, large, in focus, foreground, at least 15% of the canvas width, <held between thumb and
 index finger | resting in an open palm | on a surface>, beside the bottle and never covering its label. Use the attached bottle
 reference exactly: same shape, colours and label, label facing camera, sharp, never mirrored, never redesigned; the label wraps around
-the bottle and follows its angle. <BOTTLE WORDING: fill from the confirmed render once it's in assets/>. Show ONLY this bottle and ONE
-tablet: no other product. ARRANGEMENT for this ad: <its own arrangement>.
+the bottle and follows its angle. It is a frosted blush-pink glass bottle with a rose-gold ribbed cap; white marble-texture label with
+'EVERLIFE' in rose-gold, 'LOVARA' in black, a white 'Rx' box top right, small text 'PRESCRIPTION MEDICATION', '30 CAPSULES'. Show ONLY this bottle and ONE
+capsule: no other product. ARRANGEMENT for this ad: <its own arrangement>.
 
 TYPOGRAPHY & COLOUR (this ad's own look): headline in <pairing from §2b>, with ONE phrase picked out in <accent colour>; supporting text
 in <partner face>. For readers aged 50+: headline at least 9% of canvas height per line; every other line at least 3.5%; strong
@@ -128,10 +128,10 @@ lingerie, no body shots, no lips close-up, no couples, no before/after, no needl
 
 LAYOUT (4:5): 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no product): the Everlife
 logo is laid there later. The BOTTOM 22% is calm continuation of the background (no text, product or hands): the proof footer is laid
-there later. The whole product (bottle, tablet, hands) ends ABOVE 66% of the canvas height and all text above 72% (ask high: the image
+there later. The whole product (bottle, capsule, hands) ends ABOVE 66% of the canvas height and all text above 72% (ask high: the image
 model places things lower than asked).
 ```
-Never describe the tablet's shape, colour or markings in words beyond "use the attached tablet reference exactly".
+Never describe the capsule's shape, colour or markings in words beyond "use the attached capsule reference exactly".
 
 ## 4. After the batch
 - Contact sheet first, then let the user pick winners. Winners → 9:16 only after approval (compose916.py from the 4:5).

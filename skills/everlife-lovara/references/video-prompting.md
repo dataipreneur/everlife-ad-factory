@@ -15,7 +15,7 @@ says "Lovara by Everlife".
 1. **Hook, 0–2.5 s:** a visual pattern interrupt WITH the first words spoken (two coffee cups set down together on a sunlit counter;
    a woman laughing mid-sentence on a terrace; a door opening onto morning light). Never open on a logo, never on a bed.
 2. **Authority + emotion, 2.5–5 s:** ONE ✅ territory, shown more than said ("From distant to deeply connected").
-3. **Visual element / reveal, 5–8.5 s:** the real bottle, label to camera, and the tablet held beside it (never covering the label).
+3. **Visual element / reveal, 5–8.5 s:** the real bottle, label to camera, and the capsule held beside it (never covering the label).
 4. **Structure / connection, 8.5–11 s:** one ✅ line: "Supports desire and sensitivity", "Supports comfort and responsiveness",
    "Doctor prescribed", "Ships free from the pharmacy".
 5. **Payoff, 11–15 s:** the end card (added in finishing, `--end 11`): ✅ benefits + a ✅ CTA.
@@ -40,8 +40,8 @@ line (no on-camera speaker) or the cloned-voice line over a hands-only shot (on-
 ## Prompt blocks (in this order)
 1. Format: "Vertical 9:16, 15 seconds, <look>". UGC: "ultra-realistic creator UGC, real handheld phone shake, real skin texture, real
    room audio, no studio polish, no beauty filter. The filming phone itself is NEVER visible."
-2. **PRODUCT:** "Use the attached bottle reference and the attached tablet reference exactly; do not invent, alter, or substitute a
-   different pill or bottle; label readable, never mirrored; exactly one tablet." Never describe the tablet in words.
+2. **PRODUCT:** "Use the attached bottle reference and the attached capsule reference exactly; do not invent, alter, or substitute a
+   different pill or bottle; label readable, never mirrored; exactly one capsule." Never describe the capsule in words.
 3. **CAST:** "the woman in image 3, exactly as she looks there" (the picked preview still) + wardrobe (clothed, day wear), energy.
 4. **Timed beats** with camera moves.
 5. **Dialogue:** Seedance/Boreal: "No dialogue or narration; ambient sound only" (TTS added after). UGC: every line in quotes.
@@ -56,6 +56,6 @@ line (no on-camera speaker) or the cloned-voice line over a hands-only shot (on-
 ## Model routing (production gate §6)
 - Realistic humans talking: Marketing Studio UGC (~75 cr; needs the product registered) + the cloned-voice product line (~0.9 cr).
 - Single locked slow shot / product hero: Boreal-style (Creatify Ad Agent) or Seedance at 480p.
-- Multi-scene, camera moves: Seedance 2.0 `--image <bottle> --image <tablet> [--image <cast still>]` (~45 cr; 67.5 at 720p).
+- Multi-scene, camera moves: Seedance 2.0 `--image <bottle> --image <capsule> [--image <cast still>]` (~45 cr; 67.5 at 720p).
 - Always `higgsfield generate cost …` first and show the number in the approval question. If uploads fail with "no response",
   upload first (`higgsfield upload create <file> --json`) and pass the IDs.

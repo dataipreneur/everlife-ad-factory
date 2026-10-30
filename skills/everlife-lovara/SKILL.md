@@ -47,9 +47,9 @@ Read these when the step says so:
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes + the creative team's feedback) |
 | `references/reviews.md` | any review / testimonial / social-proof quote (none on file → gated) |
-| `assets/MISSING_RENDERS.md` | the renders gate: what's in, what's missing |
+| `assets/RENDERS.md` | the renders gate: what's in, what's missing |
 
-Paths: skill dir = this folder (`assets/` holds the bottle and tablet renders once added; `product.env`/`product.json` the product
+Paths: skill dir = this folder (`assets/` holds the bottle and capsule renders once added; `product.env`/`product.json` the product
 settings). `core/` = the shared Everlife toolkit. Tools = `$EVERLIFE_TOOLS` or `~/Everlife-Creative/tools`. Output root =
 `~/Everlife-Creative/output/Lovara/`.
 
@@ -57,9 +57,8 @@ settings). `core/` = the shared Everlife toolkit. Tools = `$EVERLIFE_TOOLS` or `
 
 ## Step 0 — Preflight + renders gate
 
-1. **Renders gate (hard stop):** `assets/MISSING_RENDERS.md`. Lovara's form is not stated in the bible (PMG samples show a pink
-   tablet). Until the real bottle and tablet renders from the Drive asset library are in `assets/` and checked against the website,
-   **STOP before any generation** and say which file is needed. Drafting copy for review is fine, labelled "draft — no renders yet".
+1. **Renders gate (hard stop):** `assets/RENDERS.md`. the bottle and capsule renders are in `assets/` (`assets/RENDERS.md`). If either is missing,
+   **STOP before any generation** and say which file is needed.
 2. Run `bash <skill-dir>/core/scripts/preflight.sh` and read its report. Use **AskUserQuestion** to walk the user through anything that
    is not ✅, one item at a time:
 
@@ -137,7 +136,7 @@ writing the next. One-line status updates.
 
 ## Step 5 — QA + finishing (zero manual editing)
 Follow `references/finishing.md`: safe zones on every 9:16 asset (finishers refuse to export on a violation; never override), QA of the
-raw (label not mirrored, the tablet exactly as the render, no garbled text, real-looking women 30–55, clothed, no bed, shoulder-up
+raw (label not mirrored, the capsule exactly as the render, no garbled text, real-looking women 30–55, clothed, no bed, shoulder-up
 framing, no celebrity likeness), then `full_layout.py` (video) or `finish_batch.py` (images). Save `FINAL_*.mp4|png`, open it, report
 what it is, cost, known issues, path.
 

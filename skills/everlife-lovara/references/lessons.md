@@ -33,8 +33,8 @@ Generation traps:
 - Selfie / front-camera prompts **mirror the label** → `--mirror-until`.
 - Marketing Studio may render a **second phone** → "the filming phone is never visible"; fix with `--zoom 1.2`.
 - Props with labels come out **garbled** → plain, unbranded props.
-- Two tablets in a palm read as a two-tablet dose → "exactly ONE tablet".
-- **The tablet comes out ~half the size asked** → ask for more, and fix with a 1-credit "make the tablet twice as large" edit.
+- Two capsules in a palm read as a two-capsule dose → "exactly ONE capsule".
+- **The capsule comes out ~half the size asked** → ask for more, and fix with a 1-credit "make the capsule twice as large" edit.
 - Model voices mangle product names → TTS line or cloned-voice line; keep spoken product names ≤ 2.
 - Whisper misspells product names → hand-fix captions ("Lovara").
 - GPT Image 2.5 places the product LOWER than asked → ask high ("ends above 66%"); 9:16 from the approved 4:5 (`compose916.py`).
