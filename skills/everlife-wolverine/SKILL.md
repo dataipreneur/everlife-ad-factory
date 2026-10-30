@@ -49,6 +49,7 @@ Read these when the step says so:
 | `../everlife-bpc-157/references/vial-refs/README.md` | any vial-hero slot: 48 vial ads Mitansh collected (staging only; shared with BPC-157) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing (paid-for mistakes + the creative team's feedback) |
+| `references/winners/winners.md` | **every concept**: borrowed men's winners (Sermorelin / GHK, CPA-ranked): what to take, what to swap, what never to copy |
 | `references/reviews.md` | any review / testimonial / social-proof quote (none on file → gated) |
 | `assets/RENDERS.md` | the vial render and the open label question |
 
@@ -89,7 +90,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 **Never asked:** audience (active men 25–55, the bible's audience).
 
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🎞️ Animated still: an
-approved static + 8 s of motion (Seedance)".
+approved static + 8 s of motion (Seedance)" / "🔁 Spin a borrowed winner (`references/winners/winners.md`)".
 
 **Round 2 — ONE AskUserQuestion, 3 questions:**
 1. **Angle:** "Mix: a different angle per ad (Recommended)" / "Bounce back" ("Bounce Back Stronger" (⏳), "Supports Mobility") / "Tendons + ligaments" ("Supports Tendons + Ligaments") / "All in one stack" ("Supports Joints, Gut + Mobility in One Stack", "Supports Gut Lining Health").

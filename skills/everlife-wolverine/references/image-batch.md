@@ -78,6 +78,8 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F13 | Portrait + line | (people) | a rugged man 25–55 between sets or after a round on the bag, chalk, hard light, vial in his hand or on the bench; no blood |
 | F14 | Premium DTC | 13_Premium_DTC | the Hims/Ro codes: ONE sentence-case headline, one tiny line, vial as an object on real material, 60% empty |
 
+**Borrowed winners** (`winners/winners.md`, Emily 2026-10-30): build at least one slot per batch from B1–B5 (layout and cast only).
+
 **Random (recommended):** N different frameworks (skip F5, F6, F7). Weight towards F2, F13, F12, F11, F14.
 With "people: mix", about half the slots use F13 or a man inside F2/F8/F12.
 

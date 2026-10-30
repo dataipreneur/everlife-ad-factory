@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Wolverine Stack: borrowed winners (branch `wolverine-skill`)
+Logged before editing. Same as the Spartan Stack: Emily's "use GHK and Sermorelin visuals, rugged manly men", approved by Priestley.
+New `references/winners/winners.md` (5 statics + 2 videos from the Sermorelin / GHK men's winners, linked, with take / swap / never
+copy), referenced from SKILL.md and image-batch.md.
+
 ## 2026-10-30 — Wolverine Stack skill setup (branch `wolverine-skill`, from `main` 4ee62c6)
 Logged before editing. New product skill `skills/everlife-wolverine/` (recovery stack, vial, active men 25–55), scaffolded with the
 new-product builder from the `everlife-bpc-157` template and adapted with the same script as the Spartan Stack. Bible checked first:
