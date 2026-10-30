@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — MOTS-c: borrowed winners (branch `mots-c-skill`)
+Logged before editing. Priestley: "for MOTS-c, I was told to take inspiration from NAD+, GLP-1 and GHK for winners". New
+`references/winners/winners.md`: borrowed cards from the NAD+ (cellular energy), GLP-1 (metabolic) and Sermorelin GHK (all
+audiences) winners, each with take / swap (the MOTS-c vial, "MOTS-C" big) / never copy. NAD+ and GLP-1 winners are linked by their
+full files in `~/Everlife-Creative/reference-ads/` (their skills live on other branches until merged); GHK by its skill path.
+The skill stays blocked (disclaimer pending); this is setup only.
+
 ## 2026-10-30 — MOTS-c skill setup, BLOCKED (branch `mots-c-skill`, from `main` 4ee62c6)
 Logged before editing. New product skill `skills/everlife-mots-c/` (metabolic peptide, vial, active adults 30–55), scaffolded with
 the new-product builder's new `--pending-disclaimer` option from the `everlife-bpc-157` template. Bible checked first: no changes.

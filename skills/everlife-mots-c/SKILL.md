@@ -44,6 +44,7 @@ Read these when the step says so:
 | `../everlife-bpc-157/references/vial-refs/README.md` | any vial-hero slot (staging only; shared with BPC-157) |
 | `references/finishing.md` | QA + finishing |
 | `references/lessons.md` | every time before writing |
+| `references/winners/winners.md` | **every concept**: borrowed winners from NAD+, GLP-1 and GHK (Priestley 2026-10-30): take / swap / never copy |
 | `references/reviews.md` | any review quote (none on file → gated) |
 | `assets/RENDERS.md` | the vial render (small: ask for a bigger one) |
 
