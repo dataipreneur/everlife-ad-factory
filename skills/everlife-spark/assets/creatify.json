@@ -1,0 +1,4 @@
+{
+ "project_id": null,
+ "note": "No Creatify project yet. Create it on the first image run: composer_project_create, upload_file + PUT spark_bottle_ref.jpg and spark_tablet.png, composer_import_asset, then write project_id and the imported asset paths here (see skills/everlife-lovara/assets/creatify.json). Never import another product's asset into this project."
+}

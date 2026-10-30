@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spark skill setup (branch `spark-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-spark/` (PT-141 + Apomorphine + Tadalafil, sublingual tablet,
+men and women 30–65+), scaffolded with the new-product builder (`new-product-skill` branch, run from a scratch copy) from the
+`everlife-pt-141` template. Bible checked first: no changes since the 30 Oct sync; Spark disclaimer ✅. Renders from the asset
+library (`TABLETS-CAPSULES/SPARK/`), looked at both. Gaps left PENDING: CTAs (all 4 pending approval), ED headlines (pending,
+Jeremy). Product Hard NO: never tie a benefit to one ingredient. Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from the PT-141 template (originals in `_originals/2026-10-30/skills/everlife-spark/`): one form (sublingual tablet), men +
+  women, combo-only ingredient rule, CTA gate (all 4 ⏳; the user OKs one per session), "SPARK" big / never "by Everlife" on images,
+  4:5 default + Lovara's layout block, product-only by default, no palette limit (≥1 dark ad per batch), offer Save up to 51%.
+- `references/product-bible.md`: product facts + a filled compliance pre-screen (ED headlines ⏳ + ⚠ Jeremy). `references/winners/
+  winners.md` from the Meta export (Base04/08/14 lead, one video; creative files not on hand). `assets/RENDERS.md` bottle wording;
+  `assets/creatify.json` stub (project made on the first run).
+- `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 4 Spark checks (static disclaimer, wrong disclaimer
+  refused, end cards default + tiktok, looked at both). Smoke 22/22. `bible_sync --check`: Spark ✅. Preflight 8/10 (Marketing Studio
+  registration optional for UGC; venv flag only because the run pointed at the repo tools).
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
