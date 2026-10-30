@@ -29,6 +29,9 @@ one product skill". Bible checked first: `bible_sync.py` against the live bible 
   `_originals/2026-10-30/skills/everlife-lovara/`). `product.json`: `pill_end_scale` 0.36 (the tall capsule covered the end-card
   headline at full size). Regression: the "video refused without renders" check replaced by Lovara end-card renders (default + tiktok):
   smoke 22/22. Preflight 9/10 (only Marketing Studio registration open, optional, for UGC).
+- Test batch-1 (4 statics, 4:5, product-only, 5 Creatify credits approved by Priestley): `assets/creatify.json` (the Lovara
+  Creatify project + imported bottle/capsule) and `references/lessons.md` (batch-1 lessons appended). All 4 pass QA after one
+  reposition fix on L4 (benefit lines under the footer). Gap flagged: `finish_batch` checks text under the footer only at 9:16.
 
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):

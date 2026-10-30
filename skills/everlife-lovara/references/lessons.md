@@ -64,3 +64,8 @@ Compliance traps:
 `core/references/creative-system.md`: structural variety, article slot, product-angle rotation, named typefaces, own palette, hero ≥ 35%
 and real, CTA string + QA, real logo/label composited, footer unfade, 9:16 built from the approved 4:5. Read it before every batch table;
 tools: `reposition_916.py`, `unfade_cta.py`, `logo_in_box.py`, `compose916.py`.
+
+## Batch-1 test (2026-10-30, 4:5, 5 Creatify credits)
+- The capsule reference came through exactly on all 4 (rose-gold, printed LOVARA); bottle label correct. Prompt template works as is.
+- The model can ignore "text above 72%": L4 put its benefit lines at 83-90%, under the footer. finish_batch does NOT refuse that at 4:5 (only 9:16 checks), so LOOK at every final; fix = a 1-credit edit moving the lines under the headline.
+- Hands holding the capsule push the product low; ask for the product to end above 66% and check the footer fade does not swallow the capsule.
