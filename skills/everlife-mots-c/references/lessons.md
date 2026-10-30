@@ -38,21 +38,21 @@ Generation traps:
 - Whisper misspells product names → hand-fix captions ("BPC-157").
 - Long scripts run under the end card → ≤ 35 spoken words, finishing by ~12 s.
 
-BPC-157-specific risks to watch (expected, not yet seen):
+MOTS-c-specific risks to watch (rewritten 2026-10-30 from the BPC-157 template):
 - **Any "peptide vial" prompt invites a syringe, needle, pen or droplets.** Every prompt says "the vial is a still object; no syringe,
   needle, pen, dropper, droplets or injecting anywhere" and QA checks every frame. One syringe = reject, no exceptions (global Hard NO).
-- **"Recovery" copy drifts to cure talk** ("heals", "repairs", "reduces inflammation", "pain"): the docx's section 6 is full of it and is
-  BLOCKED. Only the seven quick-hit "Supports…" lines.
-- **Men must look HARDCORE (Mitansh, 2026-10-29: "extremely masculine, gym, barbells, bodybuilders with tattoos")**: the Sermorelin
-  "not bodybuilders" rule does not apply here. Use `mens-direction.md`; the only body rules left are no before/after, no body comparison,
-  no body-composition words in copy.
-- **Only ONE product image exists (the vial)**: the capsule form is out of scope; the model must never invent capsules or pills.
-- **The vial is 3 mg/mL · 5 mL (confirmed 2026-10-29)**; the docx offer line's 2.5 mg/mL · 6 mL is stale. Copy never states either.
-- **Women's "glow" hooks** read as skin claims → mood only; prefer the Pilates/strength lines.
-- **No live product page yet** (404 on 2026-10-29): renders verified against the asset library only; re-check when the H2 page ships.
+  Test-1: 0 syringes in 12 images with that wording.
+- **"Metabolism" copy drifts to weight talk** (lean, fat, slim, appetite, energy balance) or disease talk (blood sugar, insulin): only
+  the ✅ lines of the pre-screen; "Supports Lean Body Goals" is ❌.
+- **People: energy and endurance, never physique** (`direction.md`): fit, mature, ordinary faces; NOT the BPC-157 hardcore-gym look.
+  Men and women in balance, plus everyday non-workout moments (test-1 M1, a woman at a kitchen table, worked well).
+- **Only ONE product image exists (the vial)**: the model must never invent capsules or pills.
+- **The vial is 10 mg/mL · 5 mL** (render = website H2 page, checked 2026-10-30); the Creative Messaging doc's 2 mg/mL is wrong.
+  Copy never states a strength or volume.
+- **No live product page yet**: the H2 page is on staging only (2026-10-30); re-check the render when it goes live.
 
 Compliance traps:
-- Disclaimer = the PT-141 wording, confirmed by Mitansh for BPC-157 (2026-10-29); Jeremy still signs off.
+- Disclaimer = the standard ad disclaimer, PROVISIONAL (2026-10-30); Jeremy to confirm.
 - Reference ads in the library use $ prices, "Breaking", first person, old proof numbers, needles. Never copy those.
 - Build every copy.json fresh (retired lines sneak back via reused files).
 - "GHK-Cu" never appears in BPC-157 creative (Hard NO carried in the docx); the Wolverine/Spartan stacks are separate products.
@@ -91,5 +91,12 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - A plain, unlabelled prop (grey shaker) as "the old way" renders clean; keep props unbranded.
 
 ## MOTS-c (from 2026-10-30)
-- ⛔ Disclaimer pending in the bible: product.json is empty on purpose; the finishers refuse (checked 2026-10-30).
+- Disclaimer pending in the bible: product.json carries the PROVISIONAL standard text (938e44f); Jeremy to confirm.
+- **Test-1 (2026-10-30, GPT Image 2.5, 4 ads, 4:5 + native 9:16), 12 credits:** 4/4 strings exact, 4/4 labels clean, 0 needles.
+  - 4:5: 3/4 raws put the CTA in the bottom 18% even when told not to: the finisher fades it under the footer and does NOT
+    refuse at 4:5. Look at every final; a 1-credit "more room: top 11% and bottom 20% empty" edit worked 2/2.
+  - 9:16: asked for the lowest element at 58%, got 72–80% (4/4). Ask for 52% and a compact layout (rows beside the vial).
+    Article-style text ran into the Reels side bands: say "central 70% of the width" and check with the safezone-sides finisher.
+  - Free local fixes: shrink + edge fill only on plain backgrounds (paper, pale stone); it streaks glow and photo scenes.
+    A small shift (≤ 120 px) clears the logo or a side band. `unfade_cta.py` restores a CTA the footer gradient fades.
 - The bible files MOTS-c under metabolic / weight / body composition: keep every line on energy and endurance.

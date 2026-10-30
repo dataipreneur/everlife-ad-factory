@@ -37,11 +37,11 @@ Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (
 in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
-**⛔ BLOCKED (2026-10-30): the bible's MOTS-c ad disclaimer is "Disclaimer pending".** product.json carries an empty disclaimer, so every finisher refuses this product (`core/tools/product.py`). No ads, no credits until Jeremy's verbatim disclaimer is in the bible and copied into product.json (then `bible_sync.py --check` must show ✅).
+**⚠ PROVISIONAL DISCLAIMER (2026-10-30):** product.json carries the standard ad disclaimer (the bible's MOTS-c page still says "Disclaimer pending"; Priestley: "use it for now"). The finishers render it. Drafts may be made; every SESSION.md flags each asset "provisional disclaimer: Jeremy to confirm"; nothing goes live until he confirms (then replace product.json's text with his and `bible_sync.py --check` must show ✅).
 
 **Hard stops:**
-- Claims: only the ✅ quick-hit benefits (pre-screen); ⏳ headlines and ⚠ lines ("Supports Glucose Metabolism") only with the user's
-  explicit OK + flagged for Jeremy.
+- Claims: only the ✅ lines of the pre-screen (`product-bible.md`, APPROVED UPDATE); ⚠ lines (the glucose lines, "Supports Energy
+  Balance", the "upgrade / activated / optimized" headlines) only with the user's explicit OK + flagged for Jeremy; ❌ never.
 - MOTS-c is METABOLIC support for energy and endurance. **No weight, fat, body-composition, appetite or "fat and skinny" words or
   images; no body areas; no melt / burn / ripped / shred; no before/after.** No disease words (diabetes, blood sugar control,
   insulin). "Supports", never "boosts / burns / builds". No timing promises, no guarantees.
@@ -49,10 +49,10 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 - One product image: the Rx vial. Never a strength, dose, mL or count in copy.
 - People: active adults 30–55, men and women, in motion or just after; never a physique shot (`direction.md`).
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
-- **Offer: none** (placeholders): no F6, no "% off".
-- "MOTS-C" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both, once it exists).
+- **Offer: "Save up to 40%"** (Creative Messaging doc), exact string; never the lander's "Start MOTS-C — 40% Off", never a $ price.
+- "MOTS-C" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
 
-**Headline tiers:** Tier A = an ✅ benefit as the headline · ⏳ bible headlines: explicit OK per line · Tier B (max 2): PROPOSED, Jeremy.
+**Headline tiers:** Tier A = the Creative Messaging doc's ✅ headlines, verbatim (prefer the top of its ranking) or an ✅ benefit · ⚠ lines: explicit OK per line, Jeremy · Tier B (max 2): PROPOSED, Jeremy.
 
 ## 1. Frameworks (reference ads in the SHARED library `core/references/static-refs/<folder>/`; overview `OVERVIEW.jpg`; which pin for which angle: `reference-guide.md`)
 | Code | Framework | Folder | MOTS-c recipe |
@@ -62,7 +62,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a training plan / run log with one ✅ line per row; the vial beside the phone |
 | F4 | Features & Benefits | 04_Features_and_Benefits | vial hero + three ✅ rows with simple icons (cell · energy · distance) |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: body-composition category, never |
-| F6 | Offer | 06_Offer | ❌ **skip**: no offer in the bible yet |
+| F6 | Offer | 06_Offer | "Save up to 40%" + the vial + one or two ✅ lines (test-1 M4: a lemon-yellow tab beside the vial on a pedestal) |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened MOTS-c reviews |
 | F8 | Question | 08_Question | pronoun-free question ("Energy for the long run?") + answer line + product |
 | F9 | Reasons Why | 09_Reasons_Why_Education | three ✅ lines, numbered, vial hero |
@@ -72,7 +72,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F13 | Portrait + line | (people) | a runner / cyclist / swimmer 30–55 just after a session, shoulder-up, calm; vial on the bench; never a physique |
 | F14 | Premium DTC | 13_Premium_DTC | the Hims/Ro codes: ONE sentence-case headline, one tiny line, vial as an object, 60% empty |
 
-**Random (recommended):** N different frameworks (skip F5, F6, F7). Weight towards F2, F12, F14, F13, F9.
+**Random (recommended):** N different frameworks (skip F5, F7). Weight towards F2, F12, F14, F13, F9.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,

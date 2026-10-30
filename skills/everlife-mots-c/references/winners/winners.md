@@ -28,7 +28,7 @@ These are a **starting point, not proof**: other products, other offers. Replace
   - "Boosts…", "Reduces fatigue…", "DNA repair" (held for NAD+ too);
   - made-up ingredient pills;
   - "GHK-Cu", "needle-free", old ratings (4.7 / 4.8), $ prices;
-  - offer badges (MOTS-c has no offer yet).
+  - their offer badges or numbers (MOTS-c's only offer is "Save up to 40%").
 
 ## The cards
 

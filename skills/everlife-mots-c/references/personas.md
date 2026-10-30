@@ -19,6 +19,6 @@ What Carla punishes: "metabolism" next to weight or food; disease words; a shirt
 2. **Plain English:** every claim word is explained by the scene or a bible line; no jargon stack.
 3. **Not scammy:** real product, real pharmacy proof, no cure words, no timing numbers, no needles.
 4. **Looks like me:** an active adult in motion, not a physique.
-5. **Worth a click:** the end card answers "what do I do now" (a bible CTA) (no offer exists yet: the CTA alone carries it).
+5. **Worth a click:** the end card answers "what do I do now" (a ✅ CTA; "Save up to 40%" where the slot carries the offer).
 
 Write the critique honestly. If Dan or Carla wouldn't click, say so and fix the concept before showing it.

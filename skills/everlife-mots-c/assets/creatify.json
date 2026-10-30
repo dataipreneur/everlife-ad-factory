@@ -1,4 +1,5 @@
 {
- "project_id": null,
- "note": "No Creatify project yet. Create it on the first image run after the disclaimer gate clears (see the other skills' creatify.json). Never import another product's asset."
+ "project_id": "744fcca3-1910-4289-8adb-2454e71b8c0b",
+ "vial": "assets/61bc3b27_mots_c_vial_ref.jpg",
+ "note": "Created 2026-10-30 (test-1) on priestley@everlifemd.com's Creatify workspace with the MOTS-c vial (flattened on white). Reuse it. Never import another product's asset."
 }

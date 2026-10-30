@@ -2,6 +2,21 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — MOTS-c: clean-up after test-1 (branch `mots-c-cleanup`, from `mots-c-skill`)
+Logged before editing. Priestley: "yes, do the MOTS-c clean-up now". The skill still carried "⛔ BLOCKED / finisher refuses"
+text from before 938e44f, and "no offer" from before c81cde5, which contradicted SKILL.md. Made on its own branch (this
+session cannot write to the mots-c worktree); fast-forward `mots-c-skill` to it.
+- `references/image-batch.md`, `video-prompting.md`, `finishing.md`, `lessons.md`, `product-bible.md` (facts bullet + label
+  note), `product.json` (`_disclaimer_status`): the ⛔ disclaimer blocks become the ⚠ PROVISIONAL note (drafts allowed; flag
+  every asset "provisional disclaimer: Jeremy to confirm").
+- Offer "Save up to 40%" (Creative Messaging doc) wired in: image-batch hard stops + F6 enabled; `personas.md`,
+  `reference-guide.md`, `winners/winners.md` no longer say "no offer yet".
+- Headline tiers in image-batch: Tier A = the doc's ✅ headlines (was: ⏳ bible headlines).
+- Label note resolved: the website (staging H2 page) says "10 mg/mL · 5 mL Vial" = the render; the doc's "2 mg/mL" is wrong.
+- `assets/creatify.json`: project 744fcca3-1910-4289-8adb-2454e71b8c0b + vial asset (created by test-1).
+- `lessons.md`: test-1 lessons (9:16 overshoot, footer fade on CTAs, side band, edge fill only on plain backgrounds).
+Originals in `_originals/2026-10-30/motsc-cleanup/`.
+
 ## 2026-10-30 — MOTS-c: PROVISIONAL ad disclaimer = the standard text (branch `mots-c-skill`)
 Logged before editing. Priestley: "then use it for now". The bible's MOTS-c page still says "Disclaimer pending" and the
 Creative Messaging doc only has the website FDA statement, so MOTS-c uses the **standard ad disclaimer** (verbatim on the

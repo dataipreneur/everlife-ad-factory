@@ -2,7 +2,7 @@
 
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
-Disclaimer: **PENDING** (bible: "Disclaimer pending"). product.json's is empty, so every finisher refuses MOTS-c until Jeremy's verbatim text is in.
+Disclaimer: **PROVISIONAL** standard text in product.json (bible: "Disclaimer pending"); the finishers render it. Flag every asset "provisional disclaimer: Jeremy to confirm".
 
 ## 0. Safe zones (every 9:16 image and video)
 Logo, headline, offer, CTA, captions, proof and disclaimer live only inside **x 156–924, y 144–1385** (`tools/safezones.py`); the
@@ -34,8 +34,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "ingredients": [["ENERGY", "Supports Mitochondrial Energy"], ["ENDURANCE", "Supports Endurance"], ["METABOLISM", "Supports Healthy Metabolism"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "MOTS-c by Everlife."}
 ```
-`"product"` is required. The end card shows the vial alone, centred. The rows are ✅ benefit pillars. Until the disclaimer
-exists, full_layout.py refuses the job (that is the gate working).
+`"product"` is required. The end card shows the vial alone, centred. The rows are ✅ benefit pillars.
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
 

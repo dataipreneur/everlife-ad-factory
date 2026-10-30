@@ -21,8 +21,8 @@
   "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical
   providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription." Jeremy to confirm before
   anything goes live.
-- **⚠ Label mismatch:** the doc says "2 mg/mL | 10 mg per 5 mL vial"; `assets/mots-c_bottle_ref.jpg` reads "10MG/ML · 5ML".
-  Confirm the render against the website before any ad. No strength or volume in copy either way.
+- **Label checked 2026-10-30:** the website (staging H2 page) says "10 mg/mL · 5 mL Vial" = `assets/mots-c_bottle_ref.jpg`
+  ("10MG/ML · 5ML"). The doc's "2 mg/mL | 10 mg per 5 mL" is wrong (flagged to the doc owner). No strength or volume in copy.
 - The doc's URL (`stagingapp.everlifemd.com/mots-c/h2`) is a staging page, not a live landing page.
 
 ## Compliance pre-screen of the doc (Claude's reading against the GLOBAL Hard NOs — NOT approval; confirm with Jeremy)
@@ -184,7 +184,7 @@ https://stagingapp.everlifemd.com/mots-c/h2
 # OLDER BIBLE COPY (superseded where the update differs)
 
 ## Product facts for this skill
-- **⛔ Disclaimer:** "Disclaimer pending" in the bible → empty in product.json → every finisher refuses. Nothing ships until Jeremy adds it.
+- **⚠ Disclaimer:** "Disclaimer pending" in the bible → product.json carries the PROVISIONAL standard text (see the APPROVED UPDATE above).
 - **What it is:** metabolic peptide support (compounded Rx vial; 10 mg/mL, 5 mL on the label, never in copy). Doctor-prescribed.
 - **Who:** active adults 30–55 focused on mitochondrial support, energy and endurance; "All audiences" (men and women).
 - **Focus (bible):** cellular energy, mitochondrial function, glucose metabolism, endurance.
