@@ -2,6 +2,20 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spartan Stack skill setup (branch `spartan-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-spartan/` (recovery stack, vial, active men 25–55), scaffolded with the
+new-product builder from the `everlife-bpc-157` template. Bible checked first: no changes; Spartan disclaimer ✅. Vial render from
+Priestley's download (filed as `asset-library/VIALS/SPARTAN/SPARTAN VIAL.jpg`). **⛔ Generation blocked:** the vial label
+(BPC-157 / KPV / TB-500, three peptides) contradicts the bible page (BPC-157/TB500, "Two-Peptide Recovery Stack"); Wolverine is the
+mirror image. Needs confirmation (Justin/Jeremy) before any ad. Also PENDING: all 4 headlines (⏳), offer ([PLACEHOLDER]).
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-spartan/`): men 25–55 only (women's persona and
+  direction removed), bible creative direction (rugged, fight imagery without blood/gore, no animal death, "Spartan Stack" in every
+  asset), no offer framework, approved benefits as Tier A headlines (all bible headlines ⏳), no ingredient list in copy, "SPARTAN"
+  big / never "by Everlife" on images, the ⛔ label gate in SKILL.md, image-batch, video-prompting and product.json `_blocked`.
+- `core/tests/regression.py`: 4 Spartan checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
+  both; short row labels after a tiktok collision). Smoke 22/22. `bible_sync --check`: Spartan ✅.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).

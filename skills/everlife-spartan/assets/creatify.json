@@ -1,0 +1,4 @@
+{
+ "project_id": null,
+ "note": "No Creatify project yet. Create it on the first image run (after the label gate clears): composer_project_create, upload_file + PUT spartan_bottle_ref.jpg, composer_import_asset, then write project_id and the imported asset path here (see skills/everlife-lovara/assets/creatify.json on the lovara-skill branch). Never import another product's asset."
+}
