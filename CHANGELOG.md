@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Wolverine Stack skill setup (branch `wolverine-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-wolverine/` (recovery stack, vial, active men 25–55), scaffolded with the
+new-product builder from the `everlife-bpc-157` template and adapted with the same script as the Spartan Stack. Bible checked first:
+no changes; Wolverine disclaimer ✅. Vial render from Priestley's download (`asset-library/VIALS/WOLVERINE/WOLVERINE VIAL.jpg`).
+**⛔ Generation blocked:** the vial label (BPC-157 + TB-500, two peptides) contradicts the bible page (BPC-157/KPV/TB500,
+"3-peptide"); Spartan is the mirror image. Also PENDING: all 4 headlines (⏳; "Recover Like Wolverine" ⚠ Marvel IP + implied
+healing), offer ([PLACEHOLDER]). Includes the `bible_sync --check` "bible_section" commit cherry-picked from `spartan-skill`.
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted like Spartan (originals in `_originals/2026-10-30/skills/everlife-wolverine/`), plus: "inflammation" stays banned except the
+  bible's exact "Supports Healthy Inflammatory Balance"; product.json `bible_section` set.
+- `core/tests/regression.py`: 4 Wolverine checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
+  both; the black vial is low-contrast on the dark default card, watch it). Smoke 22/22. `bible_sync --check`: Wolverine ✅.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).

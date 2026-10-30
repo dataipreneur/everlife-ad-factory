@@ -1,0 +1,39 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Wolverine Stack ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
+ "id": "wolverine",
+ "name": "Wolverine Stack",
+ "renders": {
+  "bottle": "wolverine_bottle.png",
+  "pill": null
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "keep_case": [
+  "Wolverine Stack by Everlife",
+  "Wolverine Stack",
+  "Wolverine",
+  "BPC-157",
+  "TB-500",
+  "KPV"
+ ],
+ "review_highlight": "Wolverine Stack",
+ "reviews": "references/reviews.json",
+ "kicker_default": "RECOVERY",
+ "split_titles": [
+  "THE STRAIN",
+  "THE SUPPORT"
+ ],
+ "notify_app": "Wolverine Stack",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the Wolverine Stack vial (a still object, label to camera)",
+  "min_width": 0.35,
+  "label": "wraps the curved glass, EVERLIFE / WOLVERINE / BPC-157 + TB-500 / 3MG/3MG/ML / RX ONLY / 5ML",
+  "never": "needles, syringes, pens or injecting; capsules or pills; blood, gore or animal death; before/after or body comparison; another product's vial",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "_blocked": "Label vs bible ingredient mismatch (2026-10-30): no generation until settled. Data note only; the gate lives in SKILL.md.",
+ "bible_section": "Wolverine Stack (BPC-157/KPV/TB500)"
+}

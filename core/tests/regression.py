@@ -240,6 +240,30 @@ def smoke(core, out):
             "--disclaimer", RZ_DISC], False, "differs")
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
+
+    # Wolverine Stack (vial): statics take its disclaimer; video end cards render the vial
+    d = os.path.join(out, "wv_static"); os.makedirs(d)
+    expect("finish_batch takes the Wolverine Stack disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "wolverine"], True)
+    expect("Wolverine Stack refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "wolverine",
+            "--disclaimer", RZ_DISC], False, "differs")
+    wv = {"product": "wolverine", "head": ["WOLVERINE STACK BY EVERLIFE"], "head_always": True,
+          "end_head": ["SUPPORTS TENDONS", "+ LIGAMENTS"],
+          "benefits": ["Supports Tendons + Ligaments", "Supports Mobility", "Supports Gut Lining Health"],
+          "ingredients_label": "RECOVERY STACK",
+          "ingredients": [["TENDONS", "Supports Tendons + Ligaments"], ["MOBILITY", "Supports Mobility"],
+                          ["GUT LINING", "Supports Gut Lining Health"]],
+          "cta": "EXPLORE THE WOLVERINE STACK", "vocab": "Wolverine Stack."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"wv_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(wv, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SUPPORTS TENDONS AND LIGAMENTS", [[0.4, 1.1], [1.1, 1.6], [1.6, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Wolverine Stack video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")
