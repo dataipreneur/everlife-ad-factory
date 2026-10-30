@@ -17,6 +17,10 @@ Jeremy). Product Hard NO: never tie a benefit to one ingredient. Setup only: no 
 - `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 4 Spark checks (static disclaimer, wrong disclaimer
   refused, end cards default + tiktok, looked at both). Smoke 22/22. `bible_sync --check`: Spark ✅. Preflight 8/10 (Marketing Studio
   registration optional for UGC; venv flag only because the run pointed at the repo tools).
+- Test batch (14 Creatify credits, approved by Priestley; CTA "Explore Spark" OK'd for the test, ⏳ for Jeremy): `assets/creatify.json`
+  (project), `references/lessons.md` (native 9:16 failed 4/4 on safe zones; 4:5 → compose916 → `--fit trusted` passed 4/4; 2/4
+  4:5 raws needed a fix for product under the footer). Results in `~/Everlife-Creative/output/Spark/2026-10-30_batch-2-4x5/SESSION.md`.
+  The finisher gap it exposed is fixed on its own branch (`safezone-sides`).
 
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):

@@ -94,3 +94,4 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - Lovara batch-1 (2026-10-30): the 4:5 LAYOUT block worked 3 of 4; one raw put its benefit lines at 83-90%, under the footer, and finish_batch did NOT refuse it (only 9:16 checks). Look at every final.
 - Four light-coloured ads in a row read samey (Priestley, 2026-10-30): at least one dark ad per batch; the black + rose-gold bottle suits dark stone and warm brass.
 - Never tie a benefit to one ingredient (bible Hard NO): the three ingredients only ever appear together.
+- Spark batch 1-2 (2026-10-30, 14 credits): native 9:16 failed 4/4 on safe zones (bottom, side bands, logo); the old finisher passed 3 of them (fix: branch safezone-sides). The 4:5 → compose916 → finish_batch --fit trusted route passed 4/4: make 9:16 that way. At 4:5, 2 of 4 raws put the bottle under the proof row (paid 1-credit fix each): ask for the bottle base at 62% and check every final.
