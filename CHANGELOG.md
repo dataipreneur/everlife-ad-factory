@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
+Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
+https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
+Priestley: reference it from the repo so Mitansh and every teammate's Claude use the same bible.
+- `core/scripts/bible_sync.py`: converts the artifact's HTML (as saved by Claude's Artifact read) into
+  `core/claude/creative-bible.md` (one `##` section per product, badges kept: Weak / Pending approval / Hard NO conflict /
+  Approved by JL) and reports what changed per section; `--check` verifies every product skill's disclaimer against it.
+- `core/claude/creative-bible.md`: replaced by the sync of the live artifact (version 1793291361-2416, read 30 Oct 2026).
+  Real changes vs the 29 Oct PDF import: new global "08 · Women's color & typography" (pinks, tans, neutrals, warm tones
+  + more white and teal, white for advertorials, preferences not limits); Lovara direction gains the same colour line;
+  "Approved by JL" on TB-500, Tesamorelin/Ipamorelin, GHK-Cu/Epithalon; a "Landing page & email disclaimer" block.
+  Products unchanged otherwise (Spark, Lovara, MOTS-c, Spartan, Wolverine identical).
+- `core/claude/everlife-team.md` + `README.md`: where the live bible is and the "check the bible for updates" steps.
+- Not changed here (flagged): the gates file's women's palette line now conflicts with the bible's new global section.
+Originals in `_originals/2026-10-30/bible-live-sync/`.
+
 ## 2026-10-29 — Day-1 onboarding for non-technical teammates (branch onboarding-day-one)
 Logged before editing. Priestley: help a non-technical person start using the repo and the skills as smoothly as possible.
 - `ONBOARDING.md`: rewritten as a Day-1 guide for a brand-new person (before you start: GitHub invite, Claude Code,

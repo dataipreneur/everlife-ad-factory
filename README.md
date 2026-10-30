@@ -42,8 +42,10 @@ tools on your Mac before installing, and has a rollback.
 ## Day to day
 - Get the latest: `bash core/scripts/update.sh` (pull main → `install.sh` → toolkit `--install` → every preflight; stops
   if the copy has local edits). In that order: the tools find products through the linked skills in `~/.claude/skills`.
-- The creative gates and bible live in `core/claude/` (copied from Priestley's setup, 2026-10-29). Change them only
-  through a PR with Jeremy's sign-off; everyone's Claude Code reads them.
+- The creative gates and bible live in `core/claude/`. Change them only through a PR with Jeremy's sign-off;
+  everyone's Claude Code reads them. The **live bible** is the shared artifact
+  https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG; `core/claude/creative-bible.md` is synced from it with
+  `core/scripts/bible_sync.py` (ask Claude: "check the bible for updates"). Never edit the copy by hand.
 - Change something: `git checkout -b <short-name>` → edit → `git commit` → `git push` → open a pull request → the other person reviews and merges.
 - Changes to `core/` affect every product: run the before/after check before merging (below).
 - Changes to a bible, disclaimer or claim file need Jeremy's sign-off before merge.
