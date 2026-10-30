@@ -14,7 +14,10 @@ Setup only: no credits, no push, no PR until every skill is tested.
   asset), no offer framework, approved benefits as Tier A headlines (all bible headlines ⏳), no ingredient list in copy, "SPARTAN"
   big / never "by Everlife" on images, the ⛔ label gate in SKILL.md, image-batch, video-prompting and product.json `_blocked`.
 - `core/tests/regression.py`: 4 Spartan checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
-  both; short row labels after a tiktok collision). Smoke 22/22. `bible_sync --check`: Spartan ✅.
+  both; short row labels after a tiktok collision). Smoke 22/22.
+- `core/scripts/bible_sync.py` (original in `_originals/2026-10-30/core/scripts/`): `--check` now also reads an optional
+  `"bible_section"` in product.json (the stacks' bible headings carry their ingredients, e.g. "Spartan Stack (BPC-157/TB500)").
+  Spartan's product.json sets it. One commit, cherry-picked unchanged onto the other stack branches so merges stay clean.
 
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
