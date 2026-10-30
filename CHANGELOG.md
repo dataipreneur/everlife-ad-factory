@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spartan Stack: borrowed winners (branch `spartan-skill`)
+Logged before editing. Emily: "Wolverine, Spartan and MOTS-c use GHK and Sermorelin visuals instead. Rugged manly men." Priestley
+approved. New `references/winners/winners.md`: 5 statics + 2 videos from the Sermorelin / Sermorelin GHK men's winners (CPA-ranked),
+linked, not copied; per card what to take, what to swap (the vial as hero, "SPARTAN STACK" big) and what never to copy
+(body-composition, injury, comparison and price lines, old ratings). SKILL.md points to it; "spin a winner" uses it.
+
 ## 2026-10-30 — Spartan Stack skill setup (branch `spartan-skill`, from `main` 4ee62c6)
 Logged before editing. New product skill `skills/everlife-spartan/` (recovery stack, vial, active men 25–55), scaffolded with the
 new-product builder from the `everlife-bpc-157` template. Bible checked first: no changes; Spartan disclaimer ✅. Vial render from
