@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — NAD+: Emily's winners (branch `nad-skill`)
+Logged before editing. Emily's Drive folder "NAD Winners" (downloaded by Priestley): 4 statics (Base09, Base41, Base81, Base83;
+4:5 + 9:16), dated 25 Sep – 22 Oct 2026. Full files in `~/Everlife-Creative/reference-ads/NAD-winners-2026-10-30/` (not in git).
+`references/winners/winners.md` rewritten with a card per winner + previews. Open questions logged there (packaging boxes in the
+winners vs our bottle render; held ⚠ lines used in live winners; a strength on Base09).
+
 ## 2026-10-30 — NAD+ skill setup (branch `nad-skill`, from `main` 4ee62c6)
 Logged before editing. Priestley: GLP-1 and NAD+ (the plain NAD+ page, not Optima NAD+). New skill `skills/everlife-nad/` (cellular
 energy, focus, healthy aging; adults 30–65+, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` and

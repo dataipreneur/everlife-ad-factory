@@ -31,7 +31,7 @@ Read these when the step says so:
 | `core/references/global-rules.md` | writing any copy |
 | `core/references/creative-system.md` | every batch table and every script |
 | `references/direction.md` | **every ad**: who, scenes, palette, what never appears |
-| `references/winners/winners.md` | any concept (one NAD+ static in the Meta export; files not on hand) |
+| `references/winners/winners.md` | **every concept**: 4 NAD+ winners from Emily (injection kit, glowing vial, tablet box, burnout toggles) + open questions |
 | `references/styles/INDEX.md` | the style question |
 | `references/video-prompting.md` | writing a video script/prompt |
 | `references/image-batch.md` | any image request (Batch Mode) |
