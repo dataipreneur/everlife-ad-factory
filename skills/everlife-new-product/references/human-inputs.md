@@ -23,7 +23,7 @@ Ask for these only when the summary card lists them as gaps. Never ask for anyth
 ## One time, for all products
 | Input | Who | Effect |
 |---|---|---|
-| The asset library downloaded: TABLETS/CAPSULES (`1CYPd3P2vpjUkkQvD2WPOJ0P_kcmy7HvP`) ✅ 2026-10-30 and the per-product renders folder (`1EJkg6ts2jwNWvVPgflHgxvsR3PquYfJF`: vials, sprays, stacks) | Priestley | Renders found automatically; re-download when design changes them |
+| The asset library downloaded: TABLETS/CAPSULES (`1CYPd3P2vpjUkkQvD2WPOJ0P_kcmy7HvP`, ~20 products incl. Lovara, Spark) ✅ 2026-10-30. **Vials** (stacks, MOTS-c): Mitansh's "ALL TRANSPARENT BOTTLES" folder (`1APQozZ1eN-Nobvs9u7ufKK1ulIkUiUWu`) is not visible to Priestley's account; BPC-157's vial came from Mitansh directly. Note: `1EJkg6ts2jwNWvVPgflHgxvsR3PquYfJF` is only the "SERMORELIN GHK" folder, not a general library | Priestley / Mitansh | Renders found automatically; re-download when design changes them |
 | Later: Google Drive for desktop with both folders added to My Drive (or a Shared Drive + service account) | Priestley / Google admin | No more downloads; always current |
 | A "Form: …" line on each bible product page | Bible owner | Removes the form question for every product |
 | The AI-avatar video format (Jeremy: ≥ 2 avatar videos per video batch) | Mitansh | Video flows can include it |
