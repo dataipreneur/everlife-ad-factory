@@ -77,9 +77,11 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F11 | Visual Metaphor | 11_EXTRA_Visual_Metaphor | one object idea: a match struck, a spark off flint, a light switch flipped on, the bottle on black stone with a single warm light |
 | F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life matched to the black + rose-gold bottle (dark stone, brass, warm low light) or a contrast mood, short serif line |
 | F13 | Portrait + line | (people) | only when the user asks for people: a candid woman or man 30–65, shoulder-up, calm, daytime; headline beside the face; product in the lower third. Never a bed |
+| **F15** | **Winner recipe** (`winners/` S04/S13/S03) | (our winners) | huge "SPARK" logotype top, one ✅ headline, **three icon pills** (✅ lines, each a different idea), **the tablet huge and in front**, the bottle smaller behind or beside it, warm premium palette |
+| **F16** | **Slider** (`winners/` S08, 23 purchases) | (our winners) | a "WAITING → SPARK MOMENT"-style slider bar with the real tablet as the knob; huge SPARK; one icon row. Bar labels must be neutral words, never timing promises |
 
-**Random (recommended):** N different frameworks (skip F5, F7; F13 only with people), mixing text-heavy (F1, F3, F4, F9) and
-visual (F2, F8, F10, F11, F12). Weight towards F2, F11, F12, F9, F6.
+**Random (recommended):** N different frameworks (skip F5, F7; F13 only with people), always including **F15 or F16** (our
+winners), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8, F10, F11, F12). Weight towards F15, F16, F2, F11, F12.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
@@ -107,7 +109,8 @@ that file.
 3. Generate: `composer_edit_image(project_id, prompt, images=[<spark_bottle_ref>, <spark_tablet>]  (add type_specimen only
    for the house look, see §2b), out='gen/b<date>_<n>.png', aspect_ratio=<final ratio>)` for the default model; Nano Banana → §2c (Model Playground tools) from `assets/creatify.json`. Max 4 in flight.
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; "SPARK" big; the Spark bottle's label matches the render
-   (not garbled, not mirrored); the **tablet is identical to the tablet render** and there is exactly one (no invented pill);
+   (not garbled, not mirrored); the **tablet is identical to the tablet render** and there is exactly one (no invented pill); **the
+   tablet is the hero: larger in frame than the bottle** (test batch 2026-10-30 failed this 4/4: fix with a 1-credit edit);
    every line big enough for 50+; people (if any) look 30–65, clothed, candid, shoulder-up/waist-up, **no bed or bedroom anywhere in
    frame**; no model-drawn Everlife logo; nothing breaks a Hard NO. **Text or product in the bottom 22% → fix** (the 4:5 finisher does
    not refuse it).
@@ -136,8 +139,9 @@ shadows or outlines on type, product name big).
 
 Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
 charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
-Product rules win: Spark has no palette limit (the bible's women's palette applies only to GHK-Cu Cream and Glow Stack);
-use at least one dark ad per batch (the bottle is black + rose-gold) and never four light ads in a row. Vary the headline placement too (top-left, centred, bottom-
+Product rules win: Spark has no palette limit (the bible's women's palette applies only to GHK-Cu Cream and Glow Stack). Default
+**warm and light** (bible imagery: "warm, sun-lit"; most winners: gold, amber, cream, blush, teal + gold); one dark or bold ad per
+batch of 4 keeps variety (S14 black + gold, V02 red velvet). Vary the headline placement too (top-left, centred, bottom-
 third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
 
 The type specimen (`assets/type_specimen.png`) is no longer attached by default. Attach it only when the brief asks for
@@ -160,8 +164,9 @@ and women (one sublingual tablet), in the style of a modern DTC wellness brand (
 from the reference ad>.
 
 PRODUCT: image 1 is the real bottle and image 2 the real tablet. Use the attached tablet reference exactly; do not invent, alter,
-or substitute a different pill; exactly one tablet, large, in focus, foreground, at least 15% of the canvas width, never covering
-the bottle's label. Use the attached bottle reference exactly: same shape, colours and label, label facing camera, sharp, never
+or substitute a different pill; exactly one tablet. **The tablet is the hero:** large, in focus, in the foreground close to the
+lens, at least 25% of the canvas width and visibly LARGER in frame than the bottle; the bottle sits smaller behind or beside it,
+label legible, never covered by the tablet. Use the attached bottle reference exactly: same shape, colours and label, label facing camera, sharp, never
 mirrored, never redesigned; the label wraps around the bottle. It is <bottle wording from assets/RENDERS.md>. Show ONLY this bottle
 and ONE tablet: no other product. The product is large and legible.
 
@@ -172,7 +177,9 @@ line, never hyphen-broken.
 
 TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, no 'by Everlife',
 no stars, badges, prices, website or disclaimer):
-  Name: "SPARK"   (big and bold: one of the two largest texts in the ad)
+  Name: "SPARK"   (big and bold: one of the two largest texts in the ad; as the product logotype: a wide, elegant serif in
+                   rose-gold with a small eight-point star inside the A, like the bottle)
+  <F15/F16 only> Pills: "<✅ line 1>" / "<✅ line 2>" / "<✅ line 3>"   (three rounded outline pills, each with a simple line icon)
   Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
   <CTA, when the framework has one: "<the session's approved CTA>">

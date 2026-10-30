@@ -2,6 +2,17 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Spark: Emily's winners + tablet-hero / warm-default update (branch `spark-skill`)
+Logged before editing. Emily shared the Spark winners (Drive "Spark - Oct-30-2026": 7 statics in 1:1 + 9:16, 3 videos in 4:5 +
+9:16); full files in `~/Everlife-Creative/reference-ads/Spark-winners-2026-10-30/` (not in git). Priestley approved the update after
+the test batch showed the bottle dominating (bible Standards 03: "the pill or tablet is the hero, not the bottle") and asked what the
+bible says on colour (no Spark direction; global "warm, sun-lit"). Originals in `_originals/2026-10-30/skills/everlife-spark/`.
+- `references/winners/`: winners.md rewritten with a card per winner (what to take, what never to copy) + small previews.
+- `references/image-batch.md`, `SKILL.md`: tablet hero (larger than the bottle, in front), the winners' "big SPARK + huge tablet +
+  three icon pills" framework, warm-and-light default mood (dark is an option), "spin a winner" points at the cards.
+- `references/video-prompting.md`, `references/lessons.md`, `references/personas.md`: 3D-animated couple videos are an option for
+  Spark (2 of its 3 winning videos), replacing the inherited PT-141 "no cartoons" lesson for this product only.
+
 ## 2026-10-30 — Spark skill setup (branch `spark-skill`, from `main` 4ee62c6)
 Logged before editing. New product skill `skills/everlife-spark/` (PT-141 + Apomorphine + Tadalafil, sublingual tablet,
 men and women 30–65+), scaffolded with the new-product builder (`new-product-skill` branch, run from a scratch copy) from the

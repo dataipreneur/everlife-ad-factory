@@ -20,7 +20,8 @@ Golden rules, all non-negotiable:
    only in the bible's ⏳ ED headlines, with explicit approval (Jeremy). No "erectile", "Viagra", "Cialis" or any brand comparison, no
    "instant", no timing promises ("tonight", "in minutes"), no guarantees. "Supports", never "builds"/"boosts"; mechanism first.
    Copy may say "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count. **Tasteful, product-led: no beds
-   or bedroom scenes, no body shots, no before/after, video framing shoulder-up.**
+   or bedroom scenes, no body shots, no before/after, video framing shoulder-up.** **The tablet is the hero** (bible Standards 03 and
+   every winner): bigger than the bottle in frame, in front, close to the lens; the bottle is secondary but legible.
 3. **No approved CTA yet:** all four bible CTAs are ⏳ Pending approval. A batch or video needs the user's explicit OK for the one
    CTA it uses (flagged for Jeremy) until the bible marks one approved.
 4. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
@@ -39,7 +40,7 @@ Read these when the step says so:
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
-| `references/winners/winners.md` | any concept: our own Spark winners (Meta export: Base04, Base08, Base14 statics lead, all below the $300 CPA target; one video; the creative files themselves are not on file yet) |
+| `references/winners/winners.md` | **every concept**: our Spark winners (7 statics + 3 videos from Emily, with previews): tablet hero, big SPARK, three icon pills, warm palettes, 3D-animated couple videos; what to take and what never to copy |
 | `references/image-batch.md` | **any image request** (Batch Mode); layout refs in `core/references/static-refs/` |
 | `references/personas.md` | **every concept, before the approval question**: critique it as Skeptical Dave / Careful Maya, fix, show the critique |
 | `references/reference-guide.md` | choosing the reference ad for a slot |
@@ -102,17 +103,20 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
    Spark". The answer is the explicit OK for that CTA this session; log it in SESSION.md for Jeremy.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
-5. **Mood:** "Surprise me: different each ad (Recommended)" / "Dark and premium: black, rose-gold, warm brass (the bottle's own look)" /
-   "Warm: golden hour, linen, sand" / "Clean clinical: white, marble, pale stone" / "Bold colour: deep red, burgundy, plum". Sets palette
-   and light; §2b still varies the type pairing per ad.
-6. **Copy density:** "Headline + 3 lines (Recommended)" / "Headline + 1 line" / "Headline only, the picture talks".
-7. **Start from a winner?** "Fresh concepts (Recommended)" / "Spin one of ours". If "Spin": ask in chat for the ad, look at it, and
-   build the batch as variations of its hook mechanics across different frameworks (never its old words, rating or faults).
+5. **Mood:** "Warm and light: golden hour, sand, cream, blush, marble (Recommended: the bible's 'warm, sun-lit' and most of our
+   winners)" / "Surprise me: different each ad" / "Dark and premium: black, rose-gold, warm brass (the bottle's own look)" / "Bold
+   colour: deep red, burgundy, teal + gold". Sets palette and light; §2b still varies the type pairing per ad.
+6. **Copy density:** "Winner format: SPARK + headline + three icon pills (Recommended)" / "Headline + 1 line" / "Headline only, the
+   picture talks". The pills are ✅ bible lines, each a different idea.
+7. **Start from a winner?** "Spin our winners (Recommended)" / "Fresh concepts". Spin = `references/winners/winners.md`: Read the
+   cards and previews, build the batch from their layouts and hook mechanics (S08 slider, S04 gown, S13 giant tablet, S11 tablet at
+   the lens…), never their "don't copy" words.
 8. **How many:** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
 Then `references/image-batch.md` §2 step 2 onward (the table, the persona pass, the approval question).
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·
-**Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md` · **Mood** (same options as 5).
+**Style** "✨ Recommend for me (Recommended)" / "3D-animated couple story (our V04/V06 winners)" / "Product-only luxury (our V02
+winner)" + the best-fitting category from `styles/INDEX.md` · **Mood** (same options as 5).
 
 ## Step 2 — Style details (only when the user wants to choose or see examples)
 Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine and **credit cost** in every option description. Style gates:

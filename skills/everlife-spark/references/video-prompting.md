@@ -9,6 +9,15 @@ Spark winners (`winners/winners.md`): mostly statics, all below the $300 CPA tar
 4 purchases, $281 CPA), file not on hand yet.
 Proven formats from the other products: creator-to-camera UGC (Marketing Studio) and a single pattern-interrupt object shot (Seedance).
 
+## Formats our winners prove (`winners/winners.md`, Emily 2026-10-30)
+- **3D-animated couple story (V04, V06):** a stylised, Pixar-like couple 30–50, always dressed; an evening that starts flat (sofa
+  scrolling, a quiet dinner) turns warm when the tablet appears (served on a cushion, a glow, light trails); ends on the real bottle
+  + tablet. Persistent header (one ✅ line), three benefit chips (✅ lines) and the "Save up to 51%" badge on screen throughout.
+  **Never** a bedroom, a bed or undressing; no "tonight"/"blood flow" lines. Animation lands on the REAL product render. (This
+  replaces the inherited PT-141 "no cartoons" lesson for Spark only: two of Spark's three winning videos are animated.)
+- **Product-only luxury (V02):** the bottle and tablet on red roses, velvet and black marble with gold light; slow push-ins; the
+  tablet drops in; offer end card.
+
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
 1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (a match struck in slow motion; a spark off flint; a calendar
    page torn off and tossed; a light switch flipped in a warm hallway). Never open on a logo, never on a bed.

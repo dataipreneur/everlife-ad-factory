@@ -19,8 +19,10 @@ What Dave punishes (from his critique of the first PT-141 video, 2026-10-28; Spa
   PT-141 + Apomorphine + Tadalafil". Never name the competitors he's thinking of (Viagra, Cialis, BlueChew); never split the combo
   to explain it.
 - **A cartoon selling a prescription.** "Zero idea why a cartoon is selling me a real prescription drug, or what it costs." → the real
-  product render, the real pharmacy framing (Doctor Prescribed, Ships Free From Pharmacy), "Save up to 51%". Animation only as a
-  10-second pattern interrupt that lands on the real bottle.
+  product render, the real pharmacy framing (Doctor Prescribed, Ships Free From Pharmacy), "Save up to 51%". For Spark the data
+  disagrees with Dave: two of its three winning videos are 3D-animated couples (`winners/` V04, V06). Animation is fine when the
+  offer and proof stay on screen and it lands on the real bottle + tablet; Dave's point that survives is "show the real product
+  and the price".
 - **Vague timing words.** "I have zero idea how fast 'on your timing' means." → "on demand" is the bible's word; show the moment
   (an unplanned Tuesday) rather than promise a speed. Never a number of minutes.
 - **The sleazy test.** "Without some sleazy bikini clip I have to hide from my wife." → clothed, candid, daytime, shoulder-up. If Dave
