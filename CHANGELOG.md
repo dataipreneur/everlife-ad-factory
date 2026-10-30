@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — MOTS-c: Creative Messaging doc added as the approved copy source (branch `mots-c-skill`)
+Logged before editing. Priestley: "I have a new doc for MOTS-c, we should use that"
+(`motsc-creative-messaging-ranked-all-headlines.docx`; copy + text in `_originals/2026-10-30/motsc-messaging-doc/`).
+- `references/product-bible.md`: new top section "APPROVED UPDATE — MOTS-c Creative Messaging" (verbatim) that wins over the
+  older bible copy where they differ (same pattern as Justin's Sermorelin GHK doc); the bible extract stays below it. New
+  pre-screen of all 47 headlines, 9 benefits, 6 CTAs, offer and proof against the global Hard NOs: 36 ✅, 10 ⚠ Jeremy
+  ("upgrade / activated / optimized" outcome lines, "Help Your Metabolism Work", "Your Cells Need This", "Support
+  Exercise-Like Signaling"), 1 ❌ ("Support Lean Body Goals": body composition, also banned by the doc itself).
+- `SKILL.md`: headlines now come from the doc (✅ lines are Tier A); offer "Save up to 40%"; CTA list + "See How It Works";
+  the doc's direction (balance men and women, include everyday non-workout concepts, lead with a hook, "MOTS-c" spelling).
+- Still BLOCKED: the doc's disclaimer is the website's FDA/supplement statement, marked "confirm for ad use", with no AI
+  disclosure. product.json stays empty → finishers refuse. Needs Jeremy's ad disclaimer.
+- Flagged, not changed: the doc lists "2 mg/mL | 10 mg per 5 mL vial"; the vial render on file reads "10MG/ML · 5ML". One of
+  them is wrong: confirm the render against the website before any ad (strength never appears in copy either way).
+  The doc's URL is a staging page (not a live landing page).
+
 ## 2026-10-30 — MOTS-c: borrowed winners (branch `mots-c-skill`)
 Logged before editing. Priestley: "for MOTS-c, I was told to take inspiration from NAD+, GLP-1 and GHK for winners". New
 `references/winners/winners.md`: borrowed cards from the NAD+ (cellular energy), GLP-1 (metabolic) and Sermorelin GHK (all
