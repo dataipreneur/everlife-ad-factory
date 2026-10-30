@@ -2,6 +2,17 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Gates: 9:16 safe band matches the bible's Meta safe zones (y 144–1385) (branch safe-band-1385)
+Logged before editing. Priestley approved ("Sure do it"). The gates said "y 143–1275", a number carried over from the first
+Restora-Z layer builder (27 Oct) with no source. The bible's "Safe zones" page (Meta's 9:16 layout: top 144 px, Reels left/right
+156 px, bottom 535 px, lower-left 219×169 profile corner) gives y 144–1385, which `core/tools/safezones.py` has enforced for
+images and videos since 29 Oct (creative lead's Reels reference; Mitansh confirmed for every product).
+- `core/claude/everlife-gates.md` (section 6): the safe band now reads x 156–924, y 144–1385, minus the Reels profile corner
+  x 156–375 × y 1216–1385, with the footer exceptions already in the tools (proof row may run x 39–1041 and cross the corner).
+- Also changed outside the repo: Priestley's `~/.claude/CLAUDE.md` (same line; original in `~/.claude/everlife/_originals/2026-10-30/`).
+- Not changed: the comment in `core/tools/build_layers.py` (legacy Restora-Z builder, no effect on output).
+Original in `_originals/2026-10-30/safe-band/`.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
