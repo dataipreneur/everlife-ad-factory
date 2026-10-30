@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-10-30 — Lovara skill (branch `lovara-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-lovara/` (women's intimacy support, women 30–55), built per
+the plan doc "New Product Skills: Build Plan" (https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf), recipe "How to build
+one product skill". Bible checked first: `bible_sync.py` against the live bible = no changes since the 30 Oct sync.
+- Template: a copy of `skills/everlife-pt-141/` (intimate wellness), adapted to Lovara; `core -> ../../core` link kept.
+- `product.json` / `product.env`: id `lovara`, verbatim bible ad disclaimer, renders listed but **not on file** (form
+  not stated in the bible; PMG samples show a pink tablet) → `assets/MISSING_RENDERS.md`; generation blocked until added.
+- `references/product-bible.md`: the bible's Lovara section verbatim + a compliance pre-screen (for Jeremy).
+- Skill files adapted: women-only audience, tasteful product-led creative (no beds/bedroom), women's colours, each
+  ingredient claim only on its own ingredient, today's image rules (no "by Everlife", name big, a different person per ad).
+- Open: renders + form; Justin (ingredient list, "Support Your Spark" CTA); Jeremy (⚠ lines); winners; landing page.
+- No credits spent. No push/PR until the tests pass and a real test batch looks right.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
