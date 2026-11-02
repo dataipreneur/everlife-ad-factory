@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Winners Board v3: bigger previews, click to enlarge (branch `winners-board`)
+Logged before editing. Priestley approved: reviewers judge the ad on the board itself, so previews must be big enough to read
+the headline, proof row and disclaimer. Originals: `_originals/2026-11-02/winners-board-previews/` (incl. the v2 page source).
+- **Page:** larger thumbnails (160 px; 120 px on phones); tap one to open the ad full size in a viewer with its rating, reviews
+  and a "Review" button. The page source now lives in the repo: `core/winners-board/board-page.html` (republish it to the same
+  board URL; never as a new artifact).
+- **`make_preview.py`:** default width 480 → 720 px, target 40 → 80 KB. Board room drops from ~1,800 to ~900 previews; the
+  housekeeping rule in WINNERS-BOARD.md §6 is unchanged (export, then drop previews of retired ads older than 60 days).
+
 ## 2026-11-02 — Winners Board v2: reviewer features (branch `winners-board`)
 Logged before editing. Priestley approved reviewer features: 7 operators write entries through their Claude; 4 reviewers use
 the page in a browser as Contributors. Same board URL, republished in place (stored data kept). Originals:

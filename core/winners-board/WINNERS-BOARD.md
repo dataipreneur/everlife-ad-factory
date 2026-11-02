@@ -53,7 +53,7 @@ to claude.ai** (operators: the same account the Claude Code Artifact tools use).
   "score": 8,
   "job": "<job folder, e.g. ~/Everlife-Creative/output/NAD/2026-11-02_batch-1/>",
   "file": "<the FINAL file name the preview was made from>",
-  "preview": { "w": 480, "h": 600, "bytes": 38000, "updatedAt": "<ISO>" },
+  "preview": { "w": 720, "h": 900, "bytes": 76000, "updatedAt": "<ISO>" },
   "date": "YYYY-MM-DD",
   "createdAt": "<ISO timestamp>",
   "rater": "<your uid>",
@@ -70,7 +70,7 @@ to claude.ai** (operators: the same account the Claude Code Artifact tools use).
 
 ### Preview (`data/users/me/<entry doc_id>/preview/img`)
 `{"type": "preview", "data": "data:image/jpeg;base64,…", "w", "h", "bytes", "updatedAt"}`, made by `make_preview.py` (§5).
-JPEG, 480 px wide, ≤ 40 KB (about 55 KB stored).
+JPEG, 720 px wide, ≤ 80 KB (about 110 KB stored): big enough for reviewers to read the headline, proof row and disclaimer.
 
 ### Review (`type: "review"`; reviewers, from the page)
 `{"type": "review", "target": "<rater uid>/<entry doc_id>", "product", "kind", "rating": "winner|good|weak|kill",
@@ -168,11 +168,12 @@ name / Seedance / Boreal), `frame0`, `sound`. Hook mutation variables: object, a
 ## 6. The page
 Opening the board URL shows the same data: **Board** view (Winners / Active / Retired, each card saying what decided it: "Meta",
 "Reviewers 3–1" or "Operator") and **To review** view (ads with no review yet, or "not reviewed by me"); filters by product and
-kind; per-product feedback notes; a preview thumbnail and every review under each card. Contributors get "Review", "Add Meta
+kind; per-product feedback notes; a preview thumbnail (tap it to open the ad full size, with a Review button) and every review under each card;
+the review form shows the ad too. Page source: `core/winners-board/board-page.html` (an Editor republishes it to the same URL). Contributors get "Review", "Add Meta
 results", "Rate an ad", product notes, and edit/delete on their own items; Viewers get a read-only view; "Export JSON"
 downloads a backup of everything except the preview images.
 
-**Limits:** the board database holds 100 MB and 25,000 documents in all. A preview costs ~55 KB, so roughly 1,800 previews fit.
+**Limits:** the board database holds 100 MB and 25,000 documents in all. A preview costs ~110 KB, so roughly 900 previews fit.
 Housekeeping when the page or a write reports the board is full: Export JSON first, then delete the `preview/img` of retired
 entries older than 60 days (the entry and its reviews stay). Previews are visible to everyone who can open the board.
 
