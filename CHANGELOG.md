@@ -17,6 +17,14 @@ Originals: `_originals/2026-11-02/all-creatify-avatar/`.
 - Lessons: Wolverine (Seedance-on-Creatify presenter, `bgvideo --dx`, caps-auto check, strong men's music picked: hip-hop / hard-rock
   walk-out) and Spartan Stack batch 1 ("no theyre great": styles, `mirror_fit_916 --strip 6` / `--align right`, benefit pool spent).
 
+## 2026-11-02 — Bible sync to 1793655261-6ce8: product always in focus, hook said AND shown (branch `bible-sync-6ce8`)
+Logged before editing. Justin's change to Standards 02 (creative direction), no product page or disclaimer changed:
+"The product is always in focus, in every static and video asset"; video: "The hook or key benefit is both said (voiceover or
+talent) and shown on screen within the first 2–3 seconds" (was "the hook lands in the first 2.5 seconds or less") and "The
+product is always in focus whenever it's on screen — never soft, blurred or racked out of focus."
+- `everlife-gates.md` §5 hook line and §3 standards; `creative-system.md` §3 multiples line (blur only on background repeats,
+  never the hero; flagged for Justin); change-requests log. Originals: `_originals/2026-11-02/bible-sync-6ce8/`.
+
 ## 2026-11-02 — Shared style library, Surprise-me Mood, no-smear finishing (PR #24, Mitansh; logged after merge)
 Entry added after the merge (the PR had none). Priestley approved the PR and its Restora-Z lines (2026-11-02).
 - `core/references/style-library/`: the 15 Drive styles (Justin's folder), boards, refs, `STYLES.md` with a never-copy list per
