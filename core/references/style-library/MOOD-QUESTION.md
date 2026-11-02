@@ -13,8 +13,8 @@ which does random every time."
 
 ## 🎲 Surprise me
 Run `python3 -I <skill-dir>/core/scripts/pick_styles.py --product <product id> --n <how many>` (add `--allow S12` only when the
-product's `reviews.md` has screened reviews). It draws N different styles at random, skips styles used in this product's last
-batch (`~/Everlife-Creative/style-ledger.jsonl`), and prints one line per slot: code, name, board path. Use those as the slot
+product's `reviews.md` has screened reviews). It draws N different styles at random, skips styles used in this product's last two batches
+(`~/Everlife-Creative/style-ledger.jsonl`), and prints one line per slot: code, name, board path. Use those as the slot
 frameworks, Read each board before writing that slot's prompt, and show the style code in the batch table. After generating,
 `pick_styles.py --log --product <id> --codes S02,S09,…` records the batch.
 

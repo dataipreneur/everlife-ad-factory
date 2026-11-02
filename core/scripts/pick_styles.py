@@ -22,7 +22,7 @@ def load_styles():
 def last_batch(product):
     if not os.path.exists(LEDGER):
         return []
-    last = []
+    rows = []
     with open(LEDGER) as f:
         for line in f:
             try:
@@ -30,8 +30,8 @@ def last_batch(product):
             except ValueError:
                 continue
             if row.get('product') == product:
-                last = row.get('codes', [])
-    return last
+                rows.append(row.get('codes', []))
+    return [c for r in rows[-2:] for c in r]      # avoid the last TWO batches
 
 
 def main():
