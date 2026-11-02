@@ -39,6 +39,7 @@
 | Get Started Now | ctas | ⚠ PROVISIONAL default | Priestley 2026-10-30 (✅ on MOTS-c, GLP-1, NAD+ pages); Jeremy to confirm |
 | Find Your Plan | ctas | ⏳ | same |
 | Save up to 51% | offer | ✅ | Percent only, never a $ price |
+| Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
 
 Note: the line "Topical skin" at the end of the verbatim block is the next bible section's category label, not Spark text.
 
@@ -90,6 +91,7 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 
 ### Hard NOs
 - Don’t tie a benefit to any single ingredient — list PT-141, Apomorphine and Tadalafil together as a combo.
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.

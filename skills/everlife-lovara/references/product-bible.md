@@ -43,17 +43,18 @@
 | Feel Pleasure. Crave Desire. | headline | ⚠ Jeremy | outcome promise; explicit register for a tasteful brand |
 | Intimacy That Hits Deeper | headline | ⚠ Jeremy | innuendo; check against "tasteful" |
 | Intimacy to Intensity. Unlocked. | headline | ⚠ Jeremy | outcome promise |
-| Exclusive 3-in-1 Women's Arousal Blend | headline | ⚠ Jeremy | "Exclusive" is an unsourced superiority claim |
+| Exclusive 3-in-1 Women's Desire Blend | headline | ⚠ Jeremy | "Exclusive" is an unsourced superiority claim (renamed from "…Arousal Blend", bible 2026-11-02) |
 | Modern Intimacy Support for Comfort, Sensitivity & Desire | headline | Weak headline (bible) | avoid unless asked |
 | Supports Desire + Sensitivity · Supports Comfort + Responsiveness · Supports Intimate Readiness · 3-in-1 Intimacy Support · Modern Intimacy Support · Supports Desire in Mind + Body · Supports Pleasure + Sensitivity | quick-hit | ✅ | "Supports…" structure-function lines: the default benefit pool |
 | Supports Healthy Circulation | quick-hit | ⚠ Jeremy | global: no "high circulation"; "healthy" is likely fine, confirm |
 | Feel More Connected | more benefits | ✅ | |
 | Enhances Sensitivity | more benefits | ⚠ Jeremy | attributes an outcome to the product; global rule = "supports" |
 | Supports Warmth + Comfort · Supports Emotional Readiness · Supports Intimate Wellness · Activates Desire Pathways | more benefits | Weak benefit (bible) | avoid unless asked |
-| Tadalafil: "Supports comfort through blood flow, lubrication and ease" · "Supports blood flow for comfort and arousal" | ingredient claims | ✅ on Tadalafil only | but the ingredient list is under review (Justin) |
+| Tadalafil: "Supports comfort through blood flow, lubrication and ease" · "Supports blood flow for comfort and responsiveness" (reworded from "…and arousal", bible 2026-11-02) | ingredient claims | ✅ on Tadalafil only | but the ingredient list is under review (Justin) |
 | Vardenafil: "Enhances sensitivity and physical pleasure" | ingredient claim | ⚠ Jeremy | "Enhances" outcome; list under review |
 | Apomorphine: "Supports dopamine-linked desire, motivation and readiness" | ingredient claim | ✅ on Apomorphine only | list under review |
 | Apomorphine: "Boosts desire and emotional readiness" | ingredient claim | ⚠ Jeremy | "Boosts" = outcome; global "supports, never builds" |
+| Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
 | CTA: Support Your Spark | CTA | ❌ until Justin confirms | names another product (Spark); likely a copy error |
 | CTA: Explore Lovara · Get Started Now · Discover Lovara · Start Your Plan | CTA | ✅ | |
 | Save up to 45% | offer | ✅ | |
@@ -90,7 +91,7 @@ Modern women’s intimacy support focused on desire, sensitivity, comfort, and r
 4. Desire Up. Sensitivity Ignited.
 5. Feel Pleasure. Crave Desire.
 6. Intimacy That Hits Deeper
-7. Exclusive 3-in-1 Women’s Arousal Blend
+7. Exclusive 3-in-1 Women’s Desire Blend
 8. 3-in-1 Female Sexual Wellness Blend
 9. Intimacy to Intensity. Unlocked.
 10. Modern Intimacy Support for Comfort, Sensitivity & Desire [Weak headline]
@@ -122,6 +123,7 @@ More benefits & claims on page 18
 - Save up to 45%
 
 ### Hard NOs
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
@@ -147,7 +149,7 @@ Tadalafil + Vardenafil + Apomorphine. Attribute each claim only to its own ingre
 
 #### Tadalafil
 - Supports comfort through blood flow, lubrication and ease
-- Supports blood flow for comfort and arousal
+- Supports blood flow for comfort and responsiveness
 
 #### Vardenafil
 - Enhances sensitivity and physical pleasure

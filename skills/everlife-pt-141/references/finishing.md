@@ -35,7 +35,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<bible>", "<bible>", "<bible>"],
  "ingredients_label": "NON-HORMONAL DESIRE SUPPORT",
- "ingredients": [["BRAIN-BASED","Supports central arousal pathways"],["ON-DEMAND","Desire support on your schedule"],["NON-HORMONAL","Supports brain-based desire"]],
+ "ingredients": [["BRAIN-BASED","Supports central desire pathways"],["ON-DEMAND","Desire support on your schedule"],["NON-HORMONAL","Supports brain-based desire"]],
  "cta": "<bible CTA in caps>", "vocab": "PT-141."}
 ```
 `"product"` and `"form"` are required: the tools take everything product-specific from `product.json` (verbatim disclaimer,

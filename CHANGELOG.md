@@ -2,6 +2,23 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Bible sync to Justin's version 1793638690-e4ca (branch `bible-sync-2026-11-02`)
+Logged before editing. Priestley: "Lets merge the arousal sync. Check if anything else has been updated since then." Repo copy
+was `1793291361-2416`. Justin's changes since: a new Hard NO "Never use 'arousal' or any form of it" (Lovara, PT-141, Spark,
+Titan-rx), with the arousal lines reworded; "Supports Sleep Quality + Recovery" removed from Sermorelin (men, women); the Wolverine
+page rewritten. Originals: `_originals/2026-11-02/bible-sync/`.
+- `core/claude/creative-bible.md`: written by `bible_sync.py --write` (version 1793638690-e4ca).
+- **PT-141:** default end-card row, video copy example, facts line and both authority style cards no longer say "arousal" (now
+  "Supports Central Desire Pathways", the bible's new line); VERBATIM lines re-copied; pre-screen: the new lines screened ✅ /
+  weak, any "arousal" form ❌.
+- **Lovara:** VERBATIM block re-copied; "Women's Desire Blend" (still ⚠ "Exclusive") and the Tadalafil claim "…comfort and
+  responsiveness" (✅ on Tadalafil only) replace the arousal wording; any "arousal" form ❌.
+- **Spark:** VERBATIM block re-copied; the mechanism-map card no longer says "arousal signaling"; any "arousal" form ❌.
+- **Sermorelin:** "Supports Sleep Quality + Recovery" ❌ (removed from the bible), dropped from the clean benefit pool and VERBATIM.
+- **Wolverine:** VERBATIM block re-copied; "Save up to 39%" is now on the bible page (no longer landing-page only). NOT applied:
+  the new "include 'BPC-157 / KPV / TB-500' on every design", hooks and benefits. The page still describes three peptides with
+  KPV, while the Wolverine vial label reads BPC-157 + TB-500; waiting for Justin to settle which is right (review page item 2).
+
 ## 2026-11-02 — "Ultra premium, product only" in every product skill (branch `ultra-premium-all-products`)
 Mitansh: every product, vials or not, offers the ultra-premium look. Docs only, no tool code changed.
 - New `core/references/ultra-premium.md`: the one definition (Hims/Ro codes, staging refs per form: vial-refs for vials, Hims tiles
