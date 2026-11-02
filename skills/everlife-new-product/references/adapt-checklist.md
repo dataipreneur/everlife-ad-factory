@@ -34,6 +34,12 @@ disclaimer verbatim · landing page (facts only).
   between 8% and 58% of the height; 9:16 statics from the approved 4:5.
 - Intimate wellness: no beds, bedrooms, lingerie, couples, lips; shoulder-up. Peptides: never needles, syringes or "needle-free".
 - Higgsfield "no response received" = the upload failing: upload first (`higgsfield upload create`) and pass the IDs.
+- **"✨ Ultra premium, product only" in the image setup (REQUIRED, Mitansh 2026-11-02).** Every product offers it: as a Mood option
+  where the skill asks mood (SKILL.md or image-batch.md, asked ONCE, never in both), else as a "Look" question in the image round.
+  It points to `core/references/ultra-premium.md`; add the product's row to that file's "Per product" table (its own field colour,
+  from the real render). **Vial products:** staging from `skills/everlife-bpc-157/references/vial-refs/` (V31 / V20 / V40 / V37) and
+  its "Compliance traps" list; replace BPC-157's "one vial, slate blue" with the new vial's own colours and the skill's vials-per-ad
+  rule. **Tablet / capsule / bottle / spray products:** the Hims tiles in `13_Premium_DTC/`; the tablet stays the hero.
 
 ## 3b. Lessons from the 7-product build (2026-11-02): check these before the first test
 - **Template leftovers are words, not just the name.** The 7 skills kept ~150 lines of their template's world (BPC-157:
@@ -60,6 +66,8 @@ disclaimer verbatim · landing page (facts only).
    disclaimer, wrong disclaimer refused, end-card renders in `default` + `tiktok` with a pre-seeded `T_caps.json`). Other products'
    results must not change.
 4. Look at an end-card frame: product and headline both clear.
+5. `grep -n "Ultra premium" skills/everlife-<id>/SKILL.md skills/everlife-<id>/references/image-batch.md` → the option is offered
+   exactly once in the setup, and `core/references/ultra-premium.md` has the product's row.
 
 ## 5. Hand-off line for the user
 "Built on `<id>-skill`, committed locally, nothing pushed, no credits. Tests N/N. Blocked on: … Human inputs open: … Next: approve the
