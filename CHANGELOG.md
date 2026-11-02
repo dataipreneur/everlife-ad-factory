@@ -2,6 +2,20 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Epithalon skill: pre-build draft only (branch `epithalon-skill`)
+Logged before editing. Priestley asked to prepare the Epithalon skill as far as possible without the product render or the form
+(vial / tablet / capsule…), which he will provide. Nothing was scaffolded: `new_product.py inspect` reports the form UNKNOWN and no
+render exists (asset library, `~/Downloads` incl. zips, `~/Desktop`), and the bible does not name a form, so `create` was NOT run
+and no template was chosen. Original backed up: `_originals/2026-11-02/epithalon/CHANGELOG.md`.
+- **Added `EPITHALON-DRAFT.md`** (worktree root): the bible facts, the compliance pre-screen of every headline, benefit, CTA,
+  offer and proof line, the proposed `product.json` values, a draft art direction, a draft `hook-bank.md` (8 hooks, bridges = exact
+  ✅ lines) and the list of what is missing. To be folded into the skill and deleted once the form and render arrive.
+- **Disclaimer PROVISIONAL** (Priestley, 2026-11-02): the standard ad disclaimer, verbatim from `skills/everlife-mots-c/product.json`;
+  the bible page still says "Disclaimer pending". Jeremy to confirm.
+- **Contradiction flagged for Justin:** the page's audience line and two quick-hit benefits are about sleep, but its creative
+  direction and Hard NO forbid sleep/overnight messaging (DSIP's territory). The Hard NO wins: the sleep lines are ❌ until fixed.
+  Offer and landing page are [PLACEHOLDER]; all four headlines are ⏳ pending.
+
 ## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
 Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
 `version [0-9-]*` stops at letters (earlier versions such as `…-2416` happened to be all digits). The every-session check would
