@@ -293,6 +293,30 @@ def smoke(core, out):
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"GLP-1 video renders ({form}, {style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # Spartan Stack (vial): statics take its disclaimer; video end cards render the vial
+    d = os.path.join(out, "st_static"); os.makedirs(d)
+    expect("finish_batch takes the Spartan Stack disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "spartan"], True)
+    expect("Spartan Stack refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "spartan",
+            "--disclaimer", RZ_DISC], False, "differs")
+    st = {"product": "spartan", "head": ["SPARTAN STACK BY EVERLIFE"], "head_always": True,
+          "end_head": ["SUPPORTS JOINTS", "+ LIGAMENTS"],
+          "benefits": ["Supports Joints + Ligaments", "Supports Mobility + Range of Motion", "Supports Muscle Recovery"],
+          "ingredients_label": "RECOVERY STACK",
+          "ingredients": [["JOINTS", "Supports Joints + Ligaments"], ["MOBILITY", "Supports Mobility + Range of Motion"],
+                          ["RECOVERY", "Supports Muscle Recovery"]],
+          "cta": "EXPLORE THE SPARTAN STACK", "vocab": "Spartan Stack."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"st_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(st, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SUPPORTS JOINTS AND LIGAMENTS", [[0.4, 1.1], [1.1, 1.6], [1.6, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Spartan Stack video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

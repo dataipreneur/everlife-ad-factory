@@ -183,6 +183,60 @@ wording). Two forms: compounded semaglutide vial and compounded tirzepatide vial
   disclaimer refused, end cards for both vials, looked at both). Smoke 22/22. `bible_sync --check`: GLP-1 ✅.
 Setup only: no credits, no push, no PR until every skill is tested.
 
+## 2026-11-02 — Spartan Stack: BPC-157 template leftovers removed (branch `spartan-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". Recovery and hardcore-gym wording is correct for this product and stays.
+Fixed only what belongs to BPC-157: its copy lines, its vial facts and its colour. Originals: `_originals/2026-11-02/spartan-leftovers/`.
+- BPC-157's own headlines used as examples (not on any Spartan page: "Don't Let Recovery Be the Bottleneck", "Built to Bounce Back",
+  "Train Hard. Recover Smarter." as Tier A, the BPC-157 Men hook list, "Recovery an afterthought?", "Ice Baths Have Limits." …) replaced
+  with Spartan lines from `product-bible.md` (⏳ headlines marked as needing an OK; ✅ PROVISIONAL benefits) in `video-prompting.md`,
+  `reference-guide.md`, `image-batch.md`, `mens-direction.md`, `styles/1, 3, 6`.
+- The "slate" vial / slate-blue accent → the Spartan vial's mustard gold (`assets/RENDERS.md`).
+- `video-prompting.md`: offers "none in the bible yet" → none settled (Ronnel); borrowed winners exist; "repair (except the approved
+  benefit line)" → no repair line exists for Spartan.
+- `lessons.md`: BPC-157 risk section re-checked for Spartan (vial label, men only, no landing page on file, disclaimer source);
+  pronunciation and caption spellings; blurred-plate 9:16 lesson marked superseded.
+- NOT changed (open decision): the angle questions, style 2E and image-batch benefit examples quote the unswapped Spartan page,
+  while the pre-screen table uses the PROVISIONAL swapped page. Waiting on the bible owner / Jeremy for the swap.
+
+## 2026-10-30 — Spartan Stack: PROVISIONAL swap + headlines, gate lifted (branch `spartan-skill`)
+Logged before editing. Bible-updates hand-off §6 proposed it; Priestley approved (reverses his earlier "wait for the bible fix").
+Cause of the swap (team): the NEW Product Benefits Doc has the two stacks' labels flipped. PROVISIONAL — Jeremy to confirm.
+- `references/product-bible.md`: pre-screen now uses the Wolverine page's benefit lines (the 3-peptide ones, incl. "Supports Healthy
+  Inflammatory Balance" for KPV); "3 Peptides. One Recovery Protocol." moved here; provisional headlines "One Dose. Three Peptides. No
+  Weak Links." and "Recovery, Fortified". Offer stays out (39/46/XX% disagree; Ronnel to confirm).
+- `SKILL.md`, `image-batch.md`, `video-prompting.md`: the ⛔ gate becomes a ⚠ PROVISIONAL note; ingredients may be named together as
+  on the label; "inflammation" allowed only in the exact KPV line. `product.json`: `_blocked` → `_provisional`.
+Originals in `_originals/2026-10-30/stack-provisional/spartan/`.
+
+## 2026-10-30 — Spartan Stack: labels confirmed, waiting for the bible fix (branch `spartan-skill`)
+Priestley shared marked-up label crops: the vial labels are correct (Spartan = BPC-157 / KPV / TB-500; Wolverine = BPC-157 +
+TB-500). The bible has the two stack pages swapped. Decision: wait for the bible fix (no partial unblock). The block wording in
+SKILL.md, image-batch.md, video-prompting.md, product.json `_blocked`, RENDERS.md and product-bible.md now says so, with the steps to
+take once the live bible is corrected.
+
+## 2026-10-30 — Spartan Stack: borrowed winners (branch `spartan-skill`)
+Logged before editing. Emily: "Wolverine, Spartan and MOTS-c use GHK and Sermorelin visuals instead. Rugged manly men." Priestley
+approved. New `references/winners/winners.md`: 5 statics + 2 videos from the Sermorelin / Sermorelin GHK men's winners (CPA-ranked),
+linked, not copied; per card what to take, what to swap (the vial as hero, "SPARTAN STACK" big) and what never to copy
+(body-composition, injury, comparison and price lines, old ratings). SKILL.md points to it; "spin a winner" uses it.
+
+## 2026-10-30 — Spartan Stack skill setup (branch `spartan-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-spartan/` (recovery stack, vial, active men 25–55), scaffolded with the
+new-product builder from the `everlife-bpc-157` template. Bible checked first: no changes; Spartan disclaimer ✅. Vial render from
+Priestley's download (filed as `asset-library/VIALS/SPARTAN/SPARTAN VIAL.jpg`). **⛔ Generation blocked:** the vial label
+(BPC-157 / KPV / TB-500, three peptides) contradicts the bible page (BPC-157/TB500, "Two-Peptide Recovery Stack"); Wolverine is the
+mirror image. Needs confirmation (Justin/Jeremy) before any ad. Also PENDING: all 4 headlines (⏳), offer ([PLACEHOLDER]).
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-spartan/`): men 25–55 only (women's persona and
+  direction removed), bible creative direction (rugged, fight imagery without blood/gore, no animal death, "Spartan Stack" in every
+  asset), no offer framework, approved benefits as Tier A headlines (all bible headlines ⏳), no ingredient list in copy, "SPARTAN"
+  big / never "by Everlife" on images, the ⛔ label gate in SKILL.md, image-batch, video-prompting and product.json `_blocked`.
+- `core/tests/regression.py`: 4 Spartan checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
+  both; short row labels after a tiktok collision). Smoke 22/22.
+- `core/scripts/bible_sync.py` (original in `_originals/2026-10-30/core/scripts/`): `--check` now also reads an optional
+  `"bible_section"` in product.json (the stacks' bible headings carry their ingredients, e.g. "Spartan Stack (BPC-157/TB500)").
+  Spartan's product.json sets it. One commit, cherry-picked unchanged onto the other stack branches so merges stay clean.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
