@@ -132,6 +132,12 @@ else
 fi
 pass "Output folder: $OUT"
 
+# 6b. One bible for everyone: the gates read ~/.claude/everlife/creative-bible.md; it must be this repo's synced copy
+BIB="$HOME/.claude/everlife/creative-bible.md"
+BVER="$(grep -o -m1 'version [0-9-]*' "$CORE/claude/creative-bible.md" 2>/dev/null)"
+if cmp -s "$BIB" "$CORE/claude/creative-bible.md"; then pass "Creative bible = this repo's copy (${BVER:-version unknown})"
+else fail "Creative bible at $BIB is missing or a separate (old) copy, not this repo's (${BVER:-version unknown})" "bash \"$(cd "$CORE" && pwd -P)/../install.sh\" (moves your copy to ~/.claude/everlife/_originals/ and links the repo's)"; fi
+
 # 7. Optional connectors (informational)
 if claude mcp list 2>/dev/null | grep -qE "^creatify: .*Connected"; then pass "Creatify MCP (Model Playground) connected: Nano Banana 2.1 / Pro available for image batches"
 else echo "ℹ️  Optional: Nano Banana batches need the Creatify MCP: claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp, then a new session and /mcp → sign in. GPT Image 2.5 works without it."; fi

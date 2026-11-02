@@ -46,6 +46,16 @@ Paths: skill dir = this folder. `core/` = the shared Everlife toolkit. Output ro
 
 ---
 
+## Hook Engine (mandatory for every video)
+Before writing any video concept, script or prompt, read `core/hook-engine/HOOK-ENGINE.md` (the hook contract, families, HOOK-10
+score and hook QA) and `references/hook-bank.md` (this product's limits and starting hooks). Pitch three options scoring ≥ 8
+(frame 0 already mid-action, a real sound at 0.0 s, the hook landing by 1.5 s), write the chosen one into the prompt as beat 1, run
+the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. The gates and this
+skill's rules win on any conflict; copy still comes only from `references/product-bible.md`. Not used for statics.
+**"<Product> by Everlife" in every video** (`core/references/creative-system.md` §0): the VO says "N-A-D plus by Ever-life" (written "NAD+" on screen) by about 3 s and names
+the product (not just "this"); "NAD+ by Everlife" is on screen in the intro. The transcript QA fails any raw without the name
+or "by Everlife". Statics never say "by Everlife".
+
 ## Step 0 — Preflight
 1. **Renders gate:** `nad_bottle.png` + `nad_tablet.png` (sublingual) and `nad_vial.png` (injection), each with a `_ref.jpg` where
    needed. Never a syringe; never another product's bottle, tablet or vial; never the NAD+ nasal spray (not a bible form).

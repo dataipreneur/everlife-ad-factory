@@ -2,6 +2,20 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Follow-up to #13 / #14: Hook Engine for the 7 new products, GLP-1 settings, one bible for everyone (branch `followup-7-hooks`)
+Logged before editing. Priestley: "prepare the follow-up locally". Built on main + PR #14 (Hook Engine); merge after #14.
+Originals: `_originals/2026-11-02/followup-7/`.
+- **Hook Engine in the 7 new skills** (Lovara, Spark, GLP-1, NAD+, Spartan, Wolverine, MOTS-c): a "Hook Engine (mandatory for
+  every video)" section before Step 0, pointing to `core/hook-engine/HOOK-ENGINE.md` (the path every install has; PR #14's
+  `~/.claude/everlife/hook-engine/` is not created by `install.sh`) and to a new per-skill `references/hook-bank.md` (8 starting
+  hooks each, the product's limits first, every bridge a ✅ line from its `product-bible.md`). The shared `HOOK-BANK.md` is not
+  edited. Each section also carries the creative-system §0 rule: the VO says "<Product> by Everlife" by ~3 s, with pronunciation.
+- **GLP-1 `product.env`**: scaffold placeholders replaced (`glp-1_bottle.png` → `glp1_semaglutide_vial.png`, renders list =
+  the four real files, name "GLP-1", output folder `output/GLP-1`, which already exists). Preflight failed on it.
+- **One bible for everyone**: `install.sh` no longer keeps a separate `~/.claude/everlife/creative-bible.md` (it said "✅ kept
+  your own copy", so that teammate read an old bible forever); it moves it to `~/.claude/everlife/_originals/` and links the
+  repo copy. `preflight.sh` checks that file equals this repo's copy and prints the bible version (❌ with the fix if not).
+
 ## 2026-10-29 — Day-1 onboarding for non-technical teammates (branch onboarding-day-one)
 Logged before editing. Priestley: help a non-technical person start using the repo and the skills as smoothly as possible.
 - `ONBOARDING.md`: rewritten as a Day-1 guide for a brand-new person (before you start: GitHub invite, Claude Code,

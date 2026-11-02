@@ -65,7 +65,11 @@ if [ -L "$BIB" ] || [ ! -e "$BIB" ]; then
   ln -sfn "$REPO/core/claude/creative-bible.md" "$BIB"
   echo "✅ creative bible linked → $BIB"
 else
-  echo "✅ creative bible: kept your own copy at $BIB (the repo copy is $REPO/core/claude/creative-bible.md)"
+  # a separate copy goes stale and the gates would read it forever: keep it as a backup, read the repo's (synced) copy
+  mkdir -p "$(dirname "$BIB")/_originals"
+  mv "$BIB" "$(dirname "$BIB")/_originals/creative-bible-$STAMP.md"
+  ln -sfn "$REPO/core/claude/creative-bible.md" "$BIB"
+  echo "✅ creative bible linked → $BIB (your separate copy was moved to $(dirname "$BIB")/_originals/)"
 fi
 
 # Read-only commands Claude may run without asking (fewer permission prompts). Never generation or spending.
