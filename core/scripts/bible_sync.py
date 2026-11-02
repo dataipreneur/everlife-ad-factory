@@ -10,6 +10,10 @@ core/claude/creative-bible.md (one "##" section per product, badges kept) and re
     --write    also overwrite core/claude/creative-bible.md
     --check    verify every product skill's product.json disclaimer appears, verbatim, in its bible section
     --out F    also write the converted bible to F (a preview; the repo copy is untouched unless --write)
+    --repo-version   print the repo copy's version (for the every-session check against the live page's version)
+
+  --write refuses on `main`: make a branch, sync, open a PR (core/references/bible-sync.md). Each changed section is
+  listed with the product skills it affects; those skills' references/product-bible.md and product.json must follow.
 
 Compliance-relevant changes (claims, disclaimers, approvals) go through a PR with Jeremy's sign-off.
 """
@@ -122,21 +126,57 @@ def sections(md):
     return out
 
 
+def skill_sections():
+    """skill folder -> the bible section its product.json points at (same rule as check())."""
+    out = {}
+    for skill in sorted(os.listdir(os.path.join(REPO, "skills"))):
+        pj = os.path.join(REPO, "skills", skill, "product.json")
+        if os.path.exists(pj):
+            prod = json.load(open(pj))
+            out[skill] = SKILL_SECTION.get(prod.get("id"), prod.get("bible_section", prod.get("name")))
+    return out
+
+
+def affected(names):
+    """Print which product skills each changed section touches. A section that belongs to no product (the global
+    standards, the top of the page) touches every skill."""
+    if not names:
+        return
+    secs = skill_sections()
+    print("\nSkills to update with this sync (their references/product-bible.md and product.json):")
+    for name in names:
+        hit = [sk for sk, sec in secs.items()
+               if name == sec or name.startswith(sec.split(" — ")[0] + " —")]   # e.g. "… — Women" pages
+        if hit:
+            print(f"  {name}  →  {', '.join(hit)}")
+        elif any(name.startswith(p) for p in ("Standards", "(top)", "Creative Bible", "Global")):
+            print(f"  {name}  →  GLOBAL rules: every skill; check the gates too")
+        else:
+            print(f"  {name}  →  no skill yet (a product without a skill)")
+
+
+def repo_version():
+    head = open(OUT, encoding="utf-8").readline() if os.path.exists(OUT) else ""
+    m = re.search(r"\(version ([^)]+)\)", head)
+    return m.group(1) if m else "unknown"
+
+
 def report(old, new):
     o, n = sections(old), sections(new)
     changed = False
+    names = []
     for name in sorted(set(o) | set(n)):
         a, b = {norm(x) for x in o.get(name, [])}, {norm(x) for x in n.get(name, [])}
         add = [x for x in n.get(name, []) if norm(x) not in a]
         rem = [x for x in o.get(name, []) if norm(x) not in b]
         if name not in o:
             print(f"+ NEW SECTION: {name} ({len(n[name])} lines)")
-            changed = True
+            changed = True; names.append(name)
         elif name not in n:
             print(f"- REMOVED SECTION: {name}")
-            changed = True
+            changed = True; names.append(name)
         elif add or rem:
-            changed = True
+            changed = True; names.append(name)
             print(f"~ {name}")
             for x in add:
                 print(f"    + {x}")
@@ -144,6 +184,7 @@ def report(old, new):
                 print(f"    - {x}")
     if not changed:
         print("No changes: the repo copy matches the live bible.")
+    affected(names)
     return changed
 
 
@@ -171,6 +212,15 @@ def check(md):
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
+    if "--repo-version" in argv:
+        print(repo_version())
+        sys.exit(0)
+    if "--write" in argv:   # the repo copy changes only on a branch, through a PR (a local edit on main blocks update.sh)
+        import subprocess
+        br = subprocess.run(["git", "-C", REPO, "rev-parse", "--abbrev-ref", "HEAD"], capture_output=True, text=True).stdout.strip()
+        if br in ("main", "master"):
+            sys.exit("❌ --write refuses on main: make a branch first (git checkout -b bible-sync-<date>), sync there, then open a PR.\n"
+                     "   See core/references/bible-sync.md. Nothing was written.")
     out = argv[argv.index("--out") + 1] if "--out" in argv else None
     args = [a for a in argv if not a.startswith("--") and a != out]
     if not args:

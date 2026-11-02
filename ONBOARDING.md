@@ -152,6 +152,9 @@ ambiguous: say "Sermorelin GHK" or "plain Sermorelin".
   about 1 credit each; a 15-second video is about 75.
 - **Claims come only from the creative bible.** The skills will not invent claims, and they stop and tell you when a
   brief asks for something the rules don't allow. That's working as intended: ask Jeremy if you think the rule is wrong.
+- **The bible is kept fresh for you.** Justin edits it; at the start of every session Claude checks you have his latest. If
+  it says "⚠ Justin updated the bible since the last sync", keep working (Claude uses the approved lines) and tell
+  Priestley so it gets synced. Details: `core/references/bible-sync.md`.
 - **Update every Monday** (or when Mitansh says so): type `update my ad tools`.
 - **Windows:** always start Claude Code from the Ubuntu window, not from Windows itself.
 - **Don't edit the files in ~/everlife-ad-factory.** If something should change, tell Mitansh or Priestley. The update

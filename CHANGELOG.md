@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Bible sync: every session checks, edit-access people sync, a weekly job watches (branch `followup-7-hooks`)
+Logged before editing. Priestley: Justin is the only one who edits the live bible; the team just has to use his latest. Decisions:
+an unsynced change → **warn and continue** with the current approved lines; plus a **weekly automatic check**. Found while
+building: the Artifact tool returns the full page only to people with edit access ("writer"); viewers get a summary, so
+teammates check the **version**, and only edit-access people (or the weekly job on Priestley's account) run the full sync.
+Originals: `_originals/2026-11-02/bible-sync/`.
+- `core/scripts/bible_sync.py`: names the skills each changed section affects (global sections = every skill); `--repo-version`
+  prints the repo copy's version for the session check; `--write` refuses on `main` (a branch + PR only).
+- `core/scripts/preflight.sh`: after the bible line, tells Claude to run the live-version check (read-only).
+- `core/claude/everlife-team.md`: the "Check the bible" note becomes the session check + sync steps.
+- New `core/references/bible-sync.md`: the whole process in plain words (who does what, the check, the sync, the weekly job).
+  Linked from `README.md` and `ONBOARDING.md`.
+
 ## 2026-11-02 — Follow-up to #13 / #14: Hook Engine for the 7 new products, GLP-1 settings, one bible for everyone (branch `followup-7-hooks`)
 Logged before editing. Priestley: "prepare the follow-up locally". Built on main + PR #14 (Hook Engine); merge after #14.
 Originals: `_originals/2026-11-02/followup-7/`.
