@@ -7,6 +7,14 @@ set -e
 REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 
+# A skill's core link (skills/<skill>/core -> ../../core) that install.sh made but git doesn't track yet is not a local
+# change: drop it (install.sh re-creates it after the pull), so it can't block the update or clash with the pulled link.
+if [ -e "$REPO/.git" ]; then   # -e: .git is a folder in a clone, a file in a git worktree
+  for l in skills/*/core; do
+    [ -L "$l" ] && [ "$(readlink "$l")" = "../../core" ] && ! git ls-files --error-unmatch "$l" >/dev/null 2>&1 && rm "$l"
+  done
+fi
+
 if [ ! -d "$REPO/.git" ]; then
   echo "ℹ️  This copy was installed from a zip: to get a newer version, unzip the new zip over $REPO, then run this again."
   echo "✅ version: $(cat "$REPO/VERSION" 2>/dev/null || echo unknown)"

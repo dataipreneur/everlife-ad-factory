@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Fix: the new-product skill's `core` link (would stop everyone's update) (branch `fix-core-link`)
+Logged before editing. Found right after #17: every skill reaches the toolkit through a committed `skills/<skill>/core` →
+`../../core` link, but `everlife-new-product` arrived without it. `install.sh` creates it, git sees an untracked file, and
+the next `update.sh` refuses ("This copy has local changes"). Originals: `_originals/2026-11-02/fix-core-link/`.
+- `skills/everlife-new-product/core` committed (the same link as every other skill).
+- `core/scripts/update.sh`: before the local-changes check, removes an UNtracked `skills/*/core` link that points to
+  `../../core` (install.sh re-creates it after the pull), so a teammate who updated between #17 and this fix isn't stuck.
+
 ## 2026-11-02 — Three older branches brought to main: new-product builder, stricter 9:16 check, Sermorelin render notes (branch `older-three`)
 Logged before editing. Priestley: "go ahead with all three, skip avatar" (`avatar-format` is not merged: Mitansh's #14 is
 the avatar format in use). Merged onto today's main: `sermorelin` (500 mcg render doc fix), `new-product-skill` (the
