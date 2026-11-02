@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Spark: stale "no ads yet" note fixed (branch `spark-skill`)
+Logged before editing. Priestley: "Yes, do all one by one" (template-leftover pass). Spark's PT-141 / spray mentions are already
+labelled as template history and stay. `lessons.md`: "No Spark ads have been made" → batches 1–3 (2026-10-30) exist.
+Originals: `_originals/2026-11-02/spark-stale/`. Not changed (open decision for Priestley): the "3D-animated couple story" style
+in SKILL.md vs the team's rejection of cartoon characters.
+
 ## 2026-10-30 — Spark: PROVISIONAL CTA "Get Started Now" (branch `spark-skill`)
 Logged before editing. Bible-updates hand-off §6 (other session) proposed it; Priestley approved. All four bible CTAs are still
 ⏳ Pending approval; "Get Started Now" is already an approved (✅) CTA on the MOTS-c, GLP-1 and NAD+ pages, so it becomes Spark's

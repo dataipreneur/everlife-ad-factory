@@ -1,6 +1,6 @@
 # Lessons already paid for (read every session)
 
-No Spark ads have been made with this skill yet. The lessons below were carried over from the PT-141 skill (Spark's template):
+Spark batches 1–3 were made on 2026-10-30 (their lessons are at the bottom). The general lessons were carried over from the PT-141 skill (Spark's template):
 they come from Restora-Z, Sermorelin GHK and PT-141 (Oct 2026) and from the creative team's written feedback (Stephen, Berna,
 Michael, Mitansh). Where they say "PT-141" or "the spray", they describe that product's batches; Spark has one form (sublingual
 tablet). Add Spark lessons at the bottom.
