@@ -1,5 +1,7 @@
 # Creative system (shared by every Everlife product skill) — adopted 2026-10-29
 
+> **⛔ NEVER `reposition_916.py` / shrink / edge-stretch / blur a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. If its text or product runs into the footer, the raw is a FAIL: re-roll it with the LAYOUT block (ask for the lowest element at 40%, top 12% empty), with the cost approved. Never ship a smeared edge.
+
 Source: the creative team member's Restora-Z work (audit `my-ad-changes.md`, 2026-10-29) distilled to what holds for ANY form:
 a capsule bottle, a tablet, a vial, a spray, a cream. Mitansh: "add these across all skills". Product-specific facts stay in each
 skill's `product-bible.md` / `product.json`; the form's hero element is `product.json → hero`.

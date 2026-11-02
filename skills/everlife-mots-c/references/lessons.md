@@ -101,3 +101,7 @@ apply; the hardcore-gym scenes do NOT: MOTS-c scenes come from direction.md)
   - Free local fixes: shrink + edge fill only on plain backgrounds (paper, pale stone); it streaks glow and photo scenes.
     A small shift (≤ 120 px) clears the logo or a side band. `unfade_cta.py` restores a CTA the footer gradient fades.
 - The bible files MOTS-c under metabolic / weight / body composition: keep every line on energy and endurance.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.

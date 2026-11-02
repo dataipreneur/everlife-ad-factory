@@ -249,3 +249,7 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
   fake/different from him AND the lips visibly didn't match, even with the small corner presenter. The re-voice trick only
   holds for a short line (the name, ≤ 2.5 s). For a longer slip: re-take the presenter with the fix spelled into the script, or accept.
 - A transcript pass is not an audio QA: say plainly that the voice timbre and lip sync were not checked by ear before showing.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.

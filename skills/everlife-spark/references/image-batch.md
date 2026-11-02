@@ -1,5 +1,7 @@
 # Spark IMAGE ads: Batch Mode (the default for every image request)
 
+> **⛔ NEVER `reposition_916.py` / shrink / edge-stretch / blur a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. If its text or product runs into the footer, the raw is a FAIL: re-roll it with the LAYOUT block (ask for the lowest element at 40%, top 12% empty), with the cost approved. Never ship a smeared edge.
+
 > Adapted 2026-10-30 from the PT-141 skill. Spark has ONE form (sublingual tablet) and is for men and women. Where this file's
 > history notes mention PT-141 batches, they are lessons carried over, not Spark facts. Default ratio: **4:5** (9:16 from the
 > approved masters); default people: product only.
