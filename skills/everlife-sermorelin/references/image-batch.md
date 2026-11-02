@@ -9,6 +9,8 @@ with the real bottle and tablet; `finish_batch.py` adds only the Everlife logo a
 Doctor Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip over the calm bottom band
 (prompt asks for 22%).
 
+**Proof split (bible 2026-11-02, Standards 02 · 06):** each ad carries ONE proof element, the trust row (~60%) or "Over 100,000 happy customers" (~40%), not both. Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin --proof count`. Rule: `core/references/creative-system.md` §2.
+
 **Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
 
 ## 0. Copy rules: hard stops vs references

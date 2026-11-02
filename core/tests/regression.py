@@ -187,6 +187,14 @@ def smoke(core, out):
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"Sermorelin video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "12.8"], True)
+    d = os.path.join(out, "sg_count")   # bible 2026-11-02: a ~40% video carries the customer count instead of the trust row
+    os.makedirs(os.path.join(d, "layers_full"))
+    json.dump(dict(sg, proof="count"), open(os.path.join(d, "copy.json"), "w"))
+    cache = os.path.join(d, "layers_full", "T_caps.json")
+    json.dump([[0.4, 2.4, "AGE HITS GROWTH HORMONE.", [[0.4, 0.8], [0.8, 1.3], [1.3, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+    os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+    expect("Sermorelin video renders with the customer count instead of the trust row (proof: count)",
+           [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "12.8"], True)
     d = os.path.join(out, "sg_static"); os.makedirs(d)
     cp = os.path.join(d, "copy.json"); json.dump(dict(sg, m_head="Power your prime.|*3-in-1.*"), open(cp, "w"))
     expect("finish_batch takes the Sermorelin disclaimer from --product",
@@ -194,6 +202,11 @@ def smoke(core, out):
     expect("finish_batch refuses a disclaimer that isn't the product's",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "sermorelin-ghk",
             "--disclaimer", RZ_DISC], False, "differs")
+    expect("finish_batch lays the customer-count line instead of the trust row (--proof count)",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "count.png"), "--product", "sermorelin-ghk",
+            "--proof", "count"], True, "proof=count")
+    expect("finish_batch --proof-plan splits a batch ~60/40 trust/count",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), "--proof-plan", "5"], True, "ad 5: --proof count")
     expect("finish_modern refuses an uncalibrated product",
            [PY, "-I", os.path.join(T, "finish_modern.py"), raw, cp, os.path.join(d, "x.png")], False, "product_zones")
     expect("finish_image refuses compare for a product without an approved comparison",

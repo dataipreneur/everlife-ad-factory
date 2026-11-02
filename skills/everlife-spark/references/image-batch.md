@@ -7,6 +7,8 @@
 > history notes mention PT-141 batches, they are lessons carried over, not Spark facts. Default ratio: **4:5** (9:16 from the
 > approved masters); default people: product only.
 
+**Proof split (bible 2026-11-02, Standards 02 · 06):** each ad carries ONE proof element, the trust row (~60%) or "Over 100,000 happy customers" (~40%), not both. Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product spark --proof count`. Rule: `core/references/creative-system.md` §2.
+
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
 mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real product
 render(s) for the chosen form; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 /

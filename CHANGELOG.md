@@ -2,6 +2,37 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Shared style library, Surprise-me Mood, no-smear finishing (PR #24, Mitansh; logged after merge)
+Entry added after the merge (the PR had none). Priestley approved the PR and its Restora-Z lines (2026-11-02).
+- `core/references/style-library/`: the 15 Drive styles (Justin's folder), boards, refs, `STYLES.md` with a never-copy list per
+  style, `styles.json`; `core/scripts/pick_styles.py` ("Surprise me", skips the product's last two batches).
+- Every skill's image Mood question: "🎲 Surprise me" / "📚 Pick from the 15 styles" + the product's top two moods.
+- `reposition_916.py` banned (smeared edges); `core/tools/mirror_fit_916.py` is the free fix. Show every result before any re-roll.
+- New Hard NO, every product: no incoming-call screens, no Accept / Decline buttons.
+
+## 2026-11-02 — Trust callouts on 60% of graphics, customer count on 40% (branch `trust-callouts`)
+Logged before editing. Bible sync to version 1793650290-a4dd (Justin, Standards 01 + 02 · 06): "Trust callouts (Trustpilot,
+doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. 'Over 100,000 happy customers' goes on 40%."
+It replaces "Every ad carries visible social proof". Reason given: graphics looked cluttered. Priestley asked for the fix on its
+own branch. Originals: `_originals/2026-11-02/trust-callouts/`.
+- **Images and videos** (Priestley: "it's for videos too"): `full_layout.py`, `premium_finish.py`, `styles.py` and
+  `animate_still.py` take the proof from copy.json `"proof"` (or `--proof`); the end cards lost their own count line, the
+  footer carries the one proof. `core/scripts/proof_next.py` keeps each product's video split near 60/40
+  (ledger `~/Everlife-Creative/proof-ledger.jsonl`). 11 skills' `finishing.md` say so (not Restora-Z).
+- **Split per batch, complementary:** every ad carries exactly one proof element, the trust row (~60%) or the customer-count
+  line (~40%), so no ad is left with none (keeps the gates' social-proof check true; flagged for Justin to confirm).
+- **`finish_batch.py --proof trust|count|none`** (default `trust`, the old footer, with a reminder), and
+  `finish_batch.py --proof-plan N` prints which ads of an N-ad batch get which. Same value on an ad's 4:5 and 9:16.
+- Rules + gates (`global-rules.md`, `everlife-gates.md`), `creative-system.md`, and one line in 11 skills' `image-batch.md`
+  (not Restora-Z: it keeps the trust row on every ad until Priestley OKs the change).
+- **Same footer size on every creative** (Justin, forwarded by Mitansh, same day): new `core/tools/standard_footer.py`. Trust row
+  990 px wide; disclaimer Inter Medium 18 px, exactly 2 lines (the largest size at which every product's disclaimer fits 2 lines;
+  Restora-Z's is the longest), refused rather than shrunk if one ever needs 3. Used by `finish_batch.py` (images, was 21 px /
+  3 lines), `finish_modern.py` (was 24 px), `full_layout.py` and `premium_finish.py` (video endings, were 21–25 px, 2–3 lines,
+  row 768–1000 px). Replaces the 2026-10-29 note "keep 21 px over the bible's 2-line rule": the bible's 2-line rule now holds.
+- **`core/references/change-requests.md`** (new, Priestley: "keep a record of changes he tells us to do"): who asked for each
+  change, their words, what changed.
+
 ## 2026-11-02 — Winners Board v3: bigger previews, click to enlarge (branch `winners-board`)
 Logged before editing. Priestley approved: reviewers judge the ad on the board itself, so previews must be big enough to read
 the headline, proof row and disclaimer. Originals: `_originals/2026-11-02/winners-board-previews/` (incl. the v2 page source).

@@ -8,6 +8,8 @@ friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the
 renders; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor Prescribed /
 Ships Free art) plus the verbatim disclaimer.
 
+**Proof split (bible 2026-11-02, Standards 02 · 06):** each ad carries ONE proof element, the trust row (~60%) or "Over 100,000 happy customers" (~40%), not both. Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product lovara --proof count`. Rule: `core/references/creative-system.md` §2.
+
 Renders: `assets/RENDERS.md` (bottle + capsule). The Creatify project is in `assets/creatify.json`.
 
 **Batch size: default 4** (Creatify runs 4 image tasks per project at once; 8 and 12 run in waves of 4).
