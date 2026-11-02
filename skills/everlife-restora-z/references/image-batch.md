@@ -82,10 +82,12 @@ Finishing: `reposition_916.py` (free, local) when anything dips into the footer;
 that file.
 
 ## 2. Flow (fast: 1 question, then generate)
-1. **One AskUserQuestion, 3 questions, each with a ✨ Recommended first option** (one Enter-press per question gets a great batch):
+1. **One AskUserQuestion, 4 questions, each with a ✨ Recommended first option** (one Enter-press per question gets a great batch):
    - **How many?** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
    - **Placement:** "4:5 Feed (Recommended)" / "9:16 Stories/Reels" / "4:5 + 9:16" / "1:1".
    - **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" (then a multiSelect follow-up with the table).
+   - **Look:** "Standard (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot: `core/references/ultra-premium.md`;
+     overrides people, the tablet stays the hero). (4 questions now.)
    **Never ask the user for pain points or style here.** Claude picks them automatically from the bible: a different approved
    pain point per ad where it fits, each paired with its matching approved claim. Show the picks in the batch table instead.
 2. Read the bible + copy log (one cat). For each slot: pick a framework, **look at 1 reference ad from its folder** (Read the jpg),

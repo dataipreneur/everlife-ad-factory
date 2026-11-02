@@ -103,7 +103,11 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
 "use F2 and F8" in chat).
 
 **Round 1 — one AskUserQuestion, 4 questions:**
-1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad".
+1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
+     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+     claims, colours and banned settings still apply; intimate wellness: shoulder-up, no bed, bedroom, couples or lingerie; the tablet is the hero in the B-roll; PT-141, Apomorphine and Tadalafil only ever together.
 2. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Spontaneity" ("Spontaneity, Back On", "From Ready to Right Now",
    "Supports Spontaneous Intimacy") / "Connection + confidence" ("Ignite Connection. Fuel Confidence.", "Desire Support for Men +
    Women") / "Three in one" ("3-in-1: PT-141 + Apomorphine + Tadalafil", "Supports Desire + Physical Response") / "ED support (⏳ needs
@@ -115,7 +119,7 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
 5. **Mood:** "Warm and light: golden hour, sand, cream, blush, marble (Recommended: the bible's 'warm, sun-lit' and most of our
-   winners)" / "Surprise me: different each ad" / "Dark and premium: black, rose-gold, warm brass (the bottle's own look)" / "Bold
+   winners)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Surprise me: different each ad" / "Dark and premium: black, rose-gold, warm brass (the bottle's own look)" / "Bold
    colour: deep red, burgundy, teal + gold". Sets palette and light; §2b still varies the type pairing per ad.
 6. **Copy density:** "Winner format: SPARK + headline + three icon pills (Recommended)" / "Headline + 1 line" / "Headline only, the
    picture talks". The pills are ✅ bible lines, each a different idea.

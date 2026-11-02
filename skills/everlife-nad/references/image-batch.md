@@ -80,10 +80,12 @@ Finishing: `reposition_916.py` (free, local) when anything dips into the footer;
 that file.
 
 ## 2. Flow
-1. Inputs from SKILL.md step 1: audience, angle, boldness. **Round 3 (ONE AskUserQuestion, 4 questions):**
+1. Inputs from SKILL.md step 1: angle, boldness, and Round 2. **Round 3 (BPC-157 template, kept for reference):**
+   **NAD+: do NOT ask this round.** Mood (incl. ✨ Ultra premium), copy density, CTA and how many are already answered in SKILL.md
+   Round 2; people = product only unless the user asked (SKILL.md). The option definitions below still apply.
    **Mood** "Surprise me: different each ad (Recommended)" / "Ultra premium, vial only: Hims/Ro codes + vial-refs (Mitansh's favourite,
    batch 3 2026-10-29)" / "Bright morning: desk, kitchen, daylight, the product's green as accent" / "Focused dark: charcoal + a green glow (direction.md option)"
-   **Ultra premium** = `core/references/static-refs/13_Premium_DTC/README.md`
+   **Ultra premium** = `core/references/ultra-premium.md` (the shared spec for every product; its gate rules win) + `core/references/static-refs/13_Premium_DTC/README.md`
    codes on every slot (ONE sentence-case two-line headline, second line tonal, at most one tiny line or three quiet lines, product as an
    object on real material with one hard light and one long shadow, monochrome field, 60% empty, no bullets/icons/badges/caps/logo), each slot
    borrowing the staging of one named pin from `vial-refs/` (V31 monochrome hero, V20 black luxury, V40/V37 pale editorial) or a Hims tile

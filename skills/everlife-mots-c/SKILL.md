@@ -72,7 +72,11 @@ or "by Everlife". Statics never say "by Everlife".
 3. Run `bash <skill-dir>/core/scripts/preflight.sh` and walk the user through anything not ✅ (as in the other skills).
 
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
-**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🎞️ Animated still".
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🎞️ Animated still" / "🧑‍💼 AI Avatar Video".
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
+  over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
+  single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+  claims, colours and banned settings still apply; the presenter is an active adult 30–55 (energy, never physique); the vial is a still object in the B-roll, never a syringe; provisional disclaimer flagged.
 
 **Round 2 — ONE AskUserQuestion, 4 questions:**
 1. **Audience:** "Both (half each) (Recommended)" / "Men 30–55" / "Women 30–55".

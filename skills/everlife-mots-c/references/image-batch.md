@@ -88,7 +88,7 @@ that file.
 1. Inputs from SKILL.md step 1: audience, angle, boldness. **Round 3 (ONE AskUserQuestion, 4 questions):**
    **Mood** "Surprise me: different each ad (Recommended)" / "Ultra premium, vial only: Hims/Ro codes + vial-refs (Mitansh's favourite,
    batch 3 2026-10-29)" / "Outdoor endurance at dawn: trail, quiet road, pool lane, rower (men and women)" / "Everyday energy: kitchen, desk, school run (non-workout; doc 2026-10-30)"
-   **Ultra premium** = `core/references/static-refs/13_Premium_DTC/README.md`
+   **Ultra premium** = `core/references/ultra-premium.md` (the shared spec for every product; its gate rules win) + `core/references/static-refs/13_Premium_DTC/README.md`
    codes on every slot (ONE sentence-case two-line headline, second line tonal, at most one tiny line or three quiet lines, product as an
    object on real material with one hard light and one long shadow, monochrome field, 60% empty, no bullets/icons/badges/caps/logo), each slot
    borrowing the staging of one named pin from `vial-refs/` (V31 monochrome hero, V20 black luxury, V40/V37 pale editorial) or a Hims tile

@@ -52,7 +52,8 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
 
 ## 2. Flow (1 question, then generate)
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
-   **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks".
+   **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" · **Look:** "Standard: winners + frameworks (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot:
+   `core/references/ultra-premium.md`; overrides winners-first and people, tablet stays the hero).
 2. Read the bible + copy log + `winners/winners.md` (one cat). **Winners first, then frameworks** (hand-off from the GHK
    skill, 2026-10-29; rule `core/references/REFERENCE-PRIORITY.md`):
    - **At least 3 of every 5 slots (6 of 10, 9 of 15) start from a winner for this audience**: pick the winner first,

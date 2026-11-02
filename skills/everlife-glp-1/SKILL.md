@@ -73,15 +73,19 @@ or "by Everlife". Statics never say "by Everlife".
 
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **Form:** "Both vials side by side (Recommended: every winner)" / "Alternate per ad" / "Compounded semaglutide" / "Compounded tirzepatide".
-2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad".
+2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
+     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+     claims, colours and banned settings still apply; the presenter is an everyday adult 30–60, clothed, shoulder-up, never a body shot; no scales, tape, mirrors or food refused; the vial(s) a still object in the B-roll; VO "G-L-P one by Ever-life", "compounded" before any drug name.
 3. **Angle:** "Mix (Recommended)" / "Quiet the food noise" ("Turn Down the Food Noise", "Less Food Noise. More Control.") /
    "Appetite + cravings" ("Stop Fighting Hunger All Day", "Take Control of Your Appetite") / "One price, provider-guided"
    ("One Simple Plan. One Clear Price.", "Your Goal. Your Plan. Provider Guided.").
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ weight-loss line (I OK it, Jeremy reviews)" / "Bold:
    one PROPOSED line".
 
-**Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "Clean
-clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
+**Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "✨ Ultra premium,
+product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Clean clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
 "Headline + 1 line" · **CTA** "Start Weight Support" / "Explore GLP-1" / "Get Started Now" / "Check Your Options" / "Build Your Plan" · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6

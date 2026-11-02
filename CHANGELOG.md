@@ -2,6 +2,26 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — "Ultra premium, product only" in every product skill (branch `ultra-premium-all-products`)
+Mitansh: every product, vials or not, offers the ultra-premium look. Docs only, no tool code changed.
+- New `core/references/ultra-premium.md`: the one definition (Hims/Ro codes, staging refs per form: vial-refs for vials, Hims tiles
+  for tablets / bottles / sprays), the gates it never relaxes (tablet hero, product name big, 50+ legibility, women's palette,
+  footer adds logo + proof + disclaimer), a field-colour row per product, QA additions.
+- Vial skills (BPC-157, MOTS-c, Spartan, Wolverine, NAD+, GLP-1): the existing option now points at the shared spec.
+- GLP-1, NAD+: the option added to SKILL.md Round 2 (where their mood question lives); image-batch.md no longer re-asks a
+  "Round 3" mood question (a BPC-157 leftover that also asked audience / people).
+- PT-141, Spark, Lovara: the option added to the Round 2 mood question.
+- Restora-Z, Sermorelin, Sermorelin GHK: a new "Look" question in the image round (Standard / Ultra premium).
+- `everlife-new-product`: new skills must offer it.
+- **Same branch: "🧑‍💼 AI Avatar Video" in every product skill.** `core/references/ai-avatar-video.md` says "every product skill,
+  from 2026-10-30", but only BPC-157, PT-141, Restora-Z, Sermorelin and Sermorelin GHK offered it. Added to "What are we making?"
+  in GLP-1, NAD+, Spark, Lovara, MOTS-c, Spartan, Wolverine, each with a bullet naming that product's casting, hero form and
+  banned settings (Spartan / Wolverine: "Video ad or animated still" merged to stay within 4 options, as BPC-157 does).
+  Lovara's "once the shared avatar format exists" note replaced (it exists; ≥ 2 avatar videos per video batch, Jeremy 30 Oct).
+  `everlife-new-product`: required rule (checklist §3) + test 6. All 12 products are registered in Marketing Studio (2026-11-02).
+- Review fix: `ultra-premium.md` women's palette: pinks / tans / beige only for GHK-Cu Cream and Glow Stack; other women's runs follow
+  the bible (pinks, tans, warm neutrals, white, teal) and may let the product's own colour lead (Mitansh). GLP-1's note unchanged.
+
 ## 2026-11-02 — Fix: the new-product skill's `core` link (would stop everyone's update) (branch `fix-core-link`)
 Logged before editing. Found right after #17: every skill reaches the toolkit through a committed `skills/<skill>/core` →
 `../../core` link, but `everlife-new-product` arrived without it. `install.sh` creates it, git sees an untracked file, and

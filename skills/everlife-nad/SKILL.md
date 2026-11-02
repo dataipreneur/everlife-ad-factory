@@ -68,14 +68,18 @@ everyday, an ordinary non-famous face).
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **Form:** "The choice: tablet and injection together (Recommended: the bible says lead with the choice)" / "Sublingual tablet" /
    "Injection".
-2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad".
+2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
+     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+     claims, colours and banned settings still apply; the presenter is an adult 30–65+, clothed, everyday; the chosen form (vial or sublingual tablet) is the hero in the B-roll; VO names "NAD+ by Everlife".
 3. **Angle:** "Mix (Recommended)" / "Clear head" ("Less Fog. More Focus.", "Clear Head. Full Day.", "Brain Fog, Who?") / "Energy that
    lasts" ("Supports All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy
    aging" ("More Life in Your Years.", "Your 30s Called & Want You Back").
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one PROPOSED line".
 
-**Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "Warm
-and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" / "Surprise me" · **Copy density** "Headline +
+**Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "✨ Ultra
+premium, product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Warm and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" (the question shows 4; "Surprise me" via Other) · **Copy density** "Headline +
 3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Explore NAD+" / "Choose Your Form" / "Get Started Now" / "Start Your Plan" / "Recharge Your Cells" · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6
