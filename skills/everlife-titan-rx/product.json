@@ -1,0 +1,43 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Titan-rx ad disclaimer, verbatim. Scaffolded 2026-11-02 by everlife-new-product from everlife-spark. Renders in assets/ (assets/RENDERS.md): one oral capsule (chrome, printed TITAN-RX), 30 per bottle. Name on creative 'Titan-Rx' (the bible's CTA spelling; the label reads TITAN-RX); bible_section = the bible heading 'Titan-rx'.",
+ "id": "titan-rx",
+ "name": "Titan-Rx",
+ "bible_section": "Titan-rx",
+ "renders": {
+  "bottle": "titan-rx_bottle.png",
+  "pill": "titan-rx_capsule.png"
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "keep_case": [
+  "Titan-Rx by Everlife",
+  "Titan-Rx",
+  "Tadalafil",
+  "Vardenafil",
+  "L-Arginine",
+  "3-in-1",
+  "It’s",
+  "It's",
+  "She’ll",
+  "She'll"
+ ],
+ "review_highlight": "Titan\\-?Rx",
+ "reviews": "references/reviews.json",
+ "kicker_default": "MEN'S PERFORMANCE",
+ "split_titles": [
+  "THE PLANNING",
+  "THE READINESS"
+ ],
+ "notify_app": "Titan-Rx",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "pill_end_scale": 0.85,
+ "hero": {
+  "element": "the Titan-Rx capsule (exactly one, as the render: chrome, printed TITAN-RX; the matte black bottle is secondary, large and legible when shown)",
+  "min_width": 0.35,
+  "label": "wraps the curved bottle in perspective",
+  "never": "beds or bedroom scenes, lingerie, body shots, shirtless or flexing torsos, couples in bed, lips macro, needles, syringes or vials, a benefit tied to the wrong ingredient, another product's bottle or pill, more than one capsule",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ }
+}

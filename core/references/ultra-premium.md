@@ -18,7 +18,7 @@ The Hims / Ro codes in `core/references/static-refs/13_Premium_DTC/README.md`, o
 | Product form | Reference |
 |---|---|
 | Rx vial (BPC-157, GLP-1, NAD+ injection, MOTS-c, Spartan, Wolverine) | `skills/everlife-bpc-157/references/vial-refs/` (V31 monochrome hero, V20 black luxury, V40 / V37 pale editorial; `OVERVIEW.jpg`) or a Hims tile. Read that README's "Compliance traps" list. Its "one vial, always" and slate palette are BPC-157's; GLP-1 may show both vials side by side, each product uses its own colours. |
-| Tablet / capsule + bottle (Restora-Z, Sermorelin, Sermorelin GHK, Spark, Lovara, PT-141 sublingual, NAD+ sublingual) | the Hims tiles: `hims_enjoy-sex_charcoal-pills.png` (pills on a dark field, top-down), `hims_new-hairline_tan-on-walnut.png`, `hims_grid_1/2.jpg` |
+| Tablet / capsule + bottle (Restora-Z, Sermorelin, Sermorelin GHK, Spark, Lovara, Titan-rx, PT-141 sublingual, NAD+ sublingual) | the Hims tiles: `hims_enjoy-sex_charcoal-pills.png` (pills on a dark field, top-down), `hims_new-hairline_tan-on-walnut.png`, `hims_grid_1/2.jpg` |
 | Spray / tube (PT-141 nasal spray) | `hims_testosterone_amber-tube.png` (product colour on product colour) + the grids |
 
 Log the reference used per slot in `prompts.md` and SESSION.md.
@@ -33,7 +33,7 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
 - **Women's creative:** GHK-Cu Cream and Glow Stack use pinks, tans and beige (no oranges or greens); other women's runs follow
   the bible's guidance (pinks, tans, warm neutrals, white and teal), and a product's own colour may lead the field when it serves
   the overall look (e.g. NAD+ green, tirzepatide green; Mitansh 2026-11-02).
-- Intimate wellness (PT-141, Spark, Lovara): no bed, bedroom, lingerie; product-led is already the rule.
+- Intimate wellness (PT-141, Spark, Lovara, Titan-rx): no bed, bedroom, lingerie; product-led is already the rule.
 - No needles, syringes, pens or droppers next to any vial. One form per ad unless the skill allows side by side.
 - The footer still adds the Everlife logo, the social proof (Trustpilot rated 4.9 Excellent / 100,000+), the verbatim disclaimer and
   the AI disclosure: the canvas itself stays clean (no logo, stars or badges in the generated image).
@@ -50,6 +50,7 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
 | PT-141 | cyan on cyan, glass-and-white on white, or charcoal with the cyan label as the only colour |
 | Spark | black + rose-gold, warm brass on dark stone |
 | Lovara | blush, travertine, cream |
+| Titan-rx | black on black (matte black stone, gunmetal, brushed steel) with the label's red chevron as the one colour; or chrome capsule on charcoal |
 
 ## QA additions (on top of the skill's QA)
 60% empty field; one headline, no bullets or badges; the product name big; the hero form correct (tablet hero for tablet

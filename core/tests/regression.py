@@ -389,6 +389,29 @@ def smoke(core, out):
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"Spark video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+    # Titan-Rx (oral capsule, men): statics take its disclaimer; video end cards render the bottle + capsule
+    d = os.path.join(out, "tx_static"); os.makedirs(d)
+    expect("finish_batch takes the Titan-Rx disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "titan-rx"], True)
+    expect("Titan-Rx refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "titan-rx",
+            "--disclaimer", RZ_DISC], False, "differs")
+    tx = {"product": "titan-rx", "head": ["TITAN-RX BY EVERLIFE"], "head_always": True,
+          "end_head": ["WHEN IT'S GO TIME,", "BE READY"],
+          "benefits": ["Once-Daily, No Timing Required", "Supports Circulation + Firmness", "Supports Everyday Readiness"],
+          "ingredients_label": "3-IN-1 PERFORMANCE FORMULA",
+          "ingredients": [["DAILY", "Once-Daily, No Timing Required"], ["CIRCULATION", "Supports Circulation + Firmness"],
+                          ["READINESS", "Supports Everyday Readiness"]],
+          "cta": "GET STARTED NOW", "vocab": "Titan-Rx."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"tx_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(tx, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "WHEN IT'S GO TIME, BE READY", [[0.4, 0.9], [0.9, 1.3], [1.3, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Titan-Rx video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")
