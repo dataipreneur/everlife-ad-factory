@@ -1,0 +1,37 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. Scaffolded 2026-11-02 by everlife-new-product from everlife-lovara. Bible page '## GHK-Cu Cream'. 'name' is the creative name on Meta / Google / TikTok ('GHK Peptide Cream', global naming rule); 'GHK-Cu Cream' is the H2 product name only. Render in assets/ (assets/RENDERS.md): a topical cream in an airless pump bottle, 30G; there is no tablet.",
+ "id": "ghk-cream",
+ "name": "GHK Peptide Cream",
+ "bible_section": "GHK-Cu Cream",
+ "renders": {
+  "bottle": "ghk-cream_bottle.png",
+  "pill": null
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "keep_case": [
+  "GHK Peptide Cream by Everlife",
+  "GHK Peptide Cream",
+  "GHK-Cu Cream",
+  "GHK"
+ ],
+ "review_highlight": "GHK",
+ "reviews": "references/reviews.json",
+ "kicker_default": "PEPTIDE SKIN SUPPORT",
+ "split_titles": [
+  "THE ROUTINE",
+  "THE PEPTIDE STEP"
+ ],
+ "notify_app": "GHK Peptide Cream",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the GHK Peptide Cream airless pump bottle (navy label, champagne-gold cap and base; label to camera). There is no tablet or capsule.",
+  "min_width": 0.2,
+  "label": "wraps the slim cylinder in perspective: EVERLIFE / GHK / Peptide Cream / RX ONLY / 30G",
+  "never": "a strength or percentage on the bottle; another product's bottle, tube or jar; tablets, capsules or pills; needles, syringes, droppers or vials; before/after or side-by-side skin comparison; close-ups of wrinkles, blemishes, scars or any skin condition; bodybuilding or 'huge' physique imagery; body-shape, waist or weight cues; beds or bedroom scenes; orange or green colours",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it. The pump is slim (about 1:4): upright it fills >= 20% of the width and >= 45% of the canvas height (it must fit between the 14% logo band and the 66% product line); laid on its side >= 35% of the width."
+ },
+ "_disclaimer_status": "PROVISIONAL (2026-11-02): the standard ad disclaimer, on Priestley's instruction; the bible page still says 'Disclaimer pending'. Jeremy to confirm; replace with his verbatim text if it differs."
+}

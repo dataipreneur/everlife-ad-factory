@@ -105,9 +105,9 @@ masters), frameworks (random mix; the user can name some in chat).
 
 **Round 1 — one AskUserQuestion, 3–4 questions:**
 1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
-     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
-     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
+     single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply; intimate wellness: a woman 30–55, shoulder-up, clothed, no bed, bedroom, lingerie or lips macro; the capsule is the hero in the B-roll; never "arousal" (bible 2026-11-02).
 2. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Connection" ("From Distant to Deeply Connected", "Unlock
    Confidence, Desire & Connection") / "The 3-in-1 blend" ("3-in-1 Female Sexual Wellness Blend") / "Say yes to more" ("Say Yes to
@@ -116,6 +116,7 @@ masters), frameworks (random mix; the user can name some in chat).
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
+> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 4. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Soft blush: pink, tan, cream" / "Clean editorial: white, pale teal" /
    "Warm: golden hour, linen, sand". Sets palette and light; §2b still varies the type pairing per ad.
 5. **Copy density:** "Headline + 3 lines (Recommended)" / "Headline + 1 line" / "Headline only, the picture talks".

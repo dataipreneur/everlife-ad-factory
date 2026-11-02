@@ -74,9 +74,9 @@ or "by Everlife". Statics never say "by Everlife".
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **Form:** "Both vials side by side (Recommended: every winner)" / "Alternate per ad" / "Compounded semaglutide" / "Compounded tirzepatide".
 2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
-     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
-     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
+     single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply; the presenter is an everyday adult 30–60, clothed, shoulder-up, never a body shot; no scales, tape, mirrors or food refused; the vial(s) a still object in the B-roll; VO "G-L-P one by Ever-life", "compounded" before any drug name.
 3. **Angle:** "Mix (Recommended)" / "Quiet the food noise" ("Turn Down the Food Noise", "Less Food Noise. More Control.") /
    "Appetite + cravings" ("Stop Fighting Hunger All Day", "Take Control of Your Appetite") / "One price, provider-guided"
@@ -84,6 +84,7 @@ or "by Everlife". Statics never say "by Everlife".
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ weight-loss line (I OK it, Jeremy reviews)" / "Bold:
    one PROPOSED line".
 
+> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 **Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "✨ Ultra premium,
 product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Clean clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
 "Headline + 1 line" · **CTA** "Start Weight Support" / "Explore GLP-1" / "Get Started Now" / "Check Your Options" / "Build Your Plan" · **How many** "4 (Recommended)" / "8".

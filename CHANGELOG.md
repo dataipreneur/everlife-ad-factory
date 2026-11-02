@@ -2,6 +2,125 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — GHK-Cu Cream skill brought up to date with main before merging (branch `ghk-cream-skill`)
+Merged main (#23–#28) and gave the skill what those PRs gave the other skills (from its Lovara template): the AI Avatar
+"ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
+the Winners Board read-first and rate steps. Smoke 53/53.
+
+## 2026-11-02 — Bible sync to 1793655503-c3e7: captions on every video, kept out of the safe zones (branch `bible-sync-c3e7`)
+Logged before editing. Justin's change (Standards 02 + 04), no product page or disclaimer changed: "Every video carries on-screen
+captions for all spoken audio. Captions stay clear of Meta's safe zones"; the Safe zones list now names captions too.
+- `everlife-gates.md` §5 + §6. No tool change: `full_layout.py` / `premium_finish.py` already caption every spoken line inside
+  the safe band (above the Reels profile corner); animated stills have no audio. Originals: `_originals/2026-11-02/bible-sync-c3e7/`.
+- Note: the bible still says 60% trust / 40% count "set separately"; PR #27's 42/28/30 split awaits Justin.
+
+## 2026-11-02 — AI Avatar videos run 100% on Creatify, 0 Higgsfield (branch `all-creatify-avatar`, Mitansh)
+Mitansh: "please add this a new rule for all the skills! That AI Avatar videos, always goes to creatify for everything!!! No
+higgsfield needed at all!" Proven the same day on Wolverine "Two Peptides. One Mission." (10 s: 17.45 Creatify, 0 Higgsfield).
+Originals: `_originals/2026-11-02/all-creatify-avatar/`.
+- `core/references/ai-avatar-video.md`: ⛔ ALL-CREATIFY banner on top; presenter = Creatify Model Playground
+  `bytedance/seedance-2.5/image-to-video` (480p, generate_audio, exact quoted lines + pronunciation; Step 4 rewritten, no
+  `higgsfield` commands); music step added (`composer_generate_music`, Lyria 3 Pro, 0.8/take, hit at 0.0 s, ducked under the VO
+  with ffmpeg `sidechaincompress`); costs restated in Creatify (10 s ≈ 17, 15 s ≈ 22).
+- All 12 product skills' SKILL.md AI Avatar line + `everlife-new-product`: "ALL on Creatify, 0 Higgsfield"; the 52.5 Higgsfield
+  cost and the Marketing Studio registration step removed from that option.
+- `core/tools/premium_finish.py` (Quiet Luxe): the sub-label is no longer title-cased when it contains digits
+  ("BPC-157 / TB-500" had rendered as "Bpc-157 / Tb-500").
+- Lessons: Wolverine (Seedance-on-Creatify presenter, `bgvideo --dx`, caps-auto check, strong men's music picked: hip-hop / hard-rock
+  walk-out) and Spartan Stack batch 1 ("no theyre great": styles, `mirror_fit_916 --strip 6` / `--align right`, benefit pool spent).
+
+## 2026-11-02 — Bible sync to 1793655261-6ce8: product always in focus, hook said AND shown (branch `bible-sync-6ce8`)
+Logged before editing. Justin's change to Standards 02 (creative direction), no product page or disclaimer changed:
+"The product is always in focus, in every static and video asset"; video: "The hook or key benefit is both said (voiceover or
+talent) and shown on screen within the first 2–3 seconds" (was "the hook lands in the first 2.5 seconds or less") and "The
+product is always in focus whenever it's on screen — never soft, blurred or racked out of focus."
+- `everlife-gates.md` §5 hook line and §3 standards; `creative-system.md` §3 multiples line (blur only on background repeats,
+  never the hero; flagged for Justin); change-requests log. Originals: `_originals/2026-11-02/bible-sync-6ce8/`.
+
+## 2026-11-02 — Shared style library, Surprise-me Mood, no-smear finishing (PR #24, Mitansh; logged after merge)
+Entry added after the merge (the PR had none). Priestley approved the PR and its Restora-Z lines (2026-11-02).
+- `core/references/style-library/`: the 15 Drive styles (Justin's folder), boards, refs, `STYLES.md` with a never-copy list per
+  style, `styles.json`; `core/scripts/pick_styles.py` ("Surprise me", skips the product's last two batches).
+- Every skill's image Mood question: "🎲 Surprise me" / "📚 Pick from the 15 styles" + the product's top two moods.
+- `reposition_916.py` banned (smeared edges); `core/tools/mirror_fit_916.py` is the free fix. Show every result before any re-roll.
+- New Hard NO, every product: no incoming-call screens, no Accept / Decline buttons.
+
+## 2026-11-02 — Trust callouts on 60% of graphics, customer count on 40% (branch `trust-callouts`)
+Logged before editing. Bible sync to version 1793650290-a4dd (Justin, Standards 01 + 02 · 06): "Trust callouts (Trustpilot,
+doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. 'Over 100,000 happy customers' goes on 40%."
+It replaces "Every ad carries visible social proof". Reason given: graphics looked cluttered. Priestley asked for the fix on its
+own branch. Originals: `_originals/2026-11-02/trust-callouts/`.
+- **Images and videos** (Priestley: "it's for videos too"): `full_layout.py`, `premium_finish.py`, `styles.py` and
+  `animate_still.py` take the proof from copy.json `"proof"` (or `--proof`); the end cards lost their own count line, the
+  footer carries the one proof. `core/scripts/proof_next.py` keeps each product's video split near 60/40
+  (ledger `~/Everlife-Creative/proof-ledger.jsonl`). 11 skills' `finishing.md` say so (not Restora-Z).
+- **Split per batch, complementary:** every ad carries exactly one proof element, the trust row (~60%) or the customer-count
+  line (~40%), so no ad is left with none (keeps the gates' social-proof check true; flagged for Justin to confirm).
+- **`finish_batch.py --proof trust|count|none`** (default `trust`, the old footer, with a reminder), and
+  `finish_batch.py --proof-plan N` prints which ads of an N-ad batch get which. Same value on an ad's 4:5 and 9:16.
+- Rules + gates (`global-rules.md`, `everlife-gates.md`), `creative-system.md`, and one line in 11 skills' `image-batch.md`
+  (not Restora-Z: it keeps the trust row on every ad until Priestley OKs the change).
+- **Same footer size on every creative** (Justin, forwarded by Mitansh, same day): new `core/tools/standard_footer.py`. Trust row
+  990 px wide; disclaimer Inter Medium 18 px, exactly 2 lines (the largest size at which every product's disclaimer fits 2 lines;
+  Restora-Z's is the longest), refused rather than shrunk if one ever needs 3. Used by `finish_batch.py` (images, was 21 px /
+  3 lines), `finish_modern.py` (was 24 px), `full_layout.py` and `premium_finish.py` (video endings, were 21–25 px, 2–3 lines,
+  row 768–1000 px). Replaces the 2026-10-29 note "keep 21 px over the bible's 2-line rule": the bible's 2-line rule now holds.
+- **`core/references/change-requests.md`** (new, Priestley: "keep a record of changes he tells us to do"): who asked for each
+  change, their words, what changed.
+
+## 2026-11-02 — Winners Board v3: bigger previews, click to enlarge (branch `winners-board`)
+Logged before editing. Priestley approved: reviewers judge the ad on the board itself, so previews must be big enough to read
+the headline, proof row and disclaimer. Originals: `_originals/2026-11-02/winners-board-previews/` (incl. the v2 page source).
+- **Page:** larger thumbnails (160 px; 120 px on phones); tap one to open the ad full size in a viewer with its rating, reviews
+  and a "Review" button. The page source now lives in the repo: `core/winners-board/board-page.html` (republish it to the same
+  board URL; never as a new artifact).
+- **`make_preview.py`:** default width 480 → 720 px, target 40 → 80 KB. Board room drops from ~1,800 to ~900 previews; the
+  housekeeping rule in WINNERS-BOARD.md §6 is unchanged (export, then drop previews of retired ads older than 60 days).
+
+## 2026-11-02 — Winners Board v2: reviewer features (branch `winners-board`)
+Logged before editing. Priestley approved reviewer features: 7 operators write entries through their Claude; 4 reviewers use
+the page in a browser as Contributors. Same board URL, republished in place (stored data kept). Originals:
+`_originals/2026-11-02/winners-board-reviews/` (incl. the v1 page source).
+- **Page:** "Review" on every card (Winner/Good/Weak/Kill + feedback, one per reviewer, editable), reviews listed under the ad;
+  a "To review" view (no review yet / not reviewed by me); per-product feedback notes; ad preview thumbnails; each card says what
+  decided its rating ("Meta" / "Reviewers 3–1" / "Operator"). Products added: Epithalon, GHK cream, Titan-Rx.
+- **Combining rule:** newest Meta verdict → else reviewers' majority (newest review per reviewer; a tie goes to the lower rating)
+  → else the operator's rating.
+- **Previews:** a ~480 px JPEG as a data URL in a small sub-document under the entry (`…/<entry id>/preview/img`), written by
+  the operator's Claude from a JSON file (`file_path`), so base64 never passes through the conversation.
+- **`core/winners-board/WINNERS-BOARD.md`:** schema (review, product_note, preview), §4 also reads reviews + notes and summarises
+  recurring points as guidance only, §5 attaches the preview. Per-skill lines unchanged (they point at the doc).
+
+## 2026-11-02 — Winners Board: one shared rating store for hooks + image ads (branch `winners-board`)
+Logged before editing. Priestley's decisions: one shared board for hooks and images; scale **Winner / Good / Weak / Kill**
+(AskUserQuestion shows max 4 options; one question per ad); Winner → one later slot mutates its recipe (exactly one variable);
+Good → quality bar; Weak/Kill → retired for that product; Meta results override opinion; teammates get Contributor access.
+Originals: `_originals/2026-11-02/winners-board/`.
+- **Board** (claude.ai artifact, private, owner Priestley): https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M. `db` rules: everyone
+  with access reads; each rater writes only `data/users/<own id>` and `raters/<own id>`; Editors/Owner edit or delete anyone's.
+  Empty at launch (no seeded entries).
+- **New** `core/winners-board/WINNERS-BOARD.md`: URL, access, schema, read protocol (last 15, winner mutation, retired skip,
+  median bar), write protocol, rating question, image + hook recipe fields, fallback when the board is unreachable.
+- **New** `core/winners-board/HOOK-ENGINE-SWITCH.md`: proposal for Mitansh to move the Hook Ladder ledger to the board.
+  `core/hook-engine/` is NOT edited.
+- **Image loop:** every product's `references/image-batch.md` (except Restora-Z) reads the board before the batch table and rates
+  the batch after it (Sermorelin + Sermorelin GHK had no "After the batch" section: a short §4 is added at the end).
+  `skills/everlife-new-product/references/adapt-checklist.md` §3: new skills inherit both steps.
+- **Follow-up (needs Priestley's OK):** the same two lines for `skills/everlife-restora-z/references/image-batch.md`.
+
+## 2026-11-02 — New skill: GHK-Cu Cream (`skills/everlife-ghk-cream/`, branch `ghk-cream-skill`)
+Logged before editing. Built with `everlife-new-product` from the **Lovara** template (women 30–55, product-led; the builder's
+default suggestion was BPC-157, a men's vial skill, which doesn't fit a women's topical cream). Bible page "## GHK-Cu Cream".
+Originals: `_originals/2026-11-02/ghk-cream/`.
+- **Disclaimer: PROVISIONAL.** The bible page says "Disclaimer pending"; on Priestley's instruction (2026-11-02) the skill uses the
+  standard ad disclaimer, verbatim the same string as MOTS-c, with a `_disclaimer_status` note. Jeremy to confirm.
+- **Naming:** "GHK-Cu Cream" only as the H2 product name; on FB / GL / TK the name is "GHK Peptide Cream"; never "-Cu" or
+  "copper peptide" anywhere else in creative.
+- **Render:** the strength-free pump bottle (`GHK-PEPTIDE CREAM.webp`); the 0.5% and 2% versions are not used (the bible names no
+  strength). Form = topical cream in an airless pump; there is no tablet.
+- Shared files touched: `core/tests/regression.py` (the product's smoke block), `core/references/ultra-premium.md` (its row).
+- Not done (needs an outside service or a person): Higgsfield Marketing Studio registration; the first 4-image test batch.
+
 ## 2026-11-02 — Epithalon skill: built from everlife-mots-c, vial (branch `epithalon-skill`)
 Logged before editing. The form and render arrived (Priestley via the coordinator): compounded Rx **vial**, render
 `asset-library/VIALS/EPITHALON/EPITALON 10MG-ML 5ML VIAL (screenshot 2026-11-02).jpg` (592×1280 screenshot on white; looked at:

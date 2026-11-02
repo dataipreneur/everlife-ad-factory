@@ -101,9 +101,9 @@ If everything is ✅, say so in one line and go straight to step 1.
 
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🧑‍💼 AI Avatar Video" / "🎬 Video ad or 🎞️ animated still (an
 approved static + 8 s of motion, Seedance; a follow-up question picks which)" / "🔁 Spin a borrowed winner (`references/winners/winners.md`)". (AskUserQuestion takes at most 4 options.)
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
-  over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
-  single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
+  over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
+  single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
   claims, colours and banned settings still apply; the presenter follows the men's direction (active man 25–55, clothed); the vial is a still object in the B-roll, never a syringe.
 
 **Round 2 — ONE AskUserQuestion, 3 questions:**

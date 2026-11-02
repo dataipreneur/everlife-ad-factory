@@ -20,6 +20,7 @@ The Hims / Ro codes in `core/references/static-refs/13_Premium_DTC/README.md`, o
 | Rx vial (BPC-157, GLP-1, NAD+ injection, MOTS-c, Spartan, Wolverine, Epithalon) | `skills/everlife-bpc-157/references/vial-refs/` (V31 monochrome hero, V20 black luxury, V40 / V37 pale editorial; `OVERVIEW.jpg`) or a Hims tile. Read that README's "Compliance traps" list. Its "one vial, always" and slate palette are BPC-157's; GLP-1 may show both vials side by side, each product uses its own colours. |
 | Tablet / capsule + bottle (Restora-Z, Sermorelin, Sermorelin GHK, Spark, Lovara, PT-141 sublingual, NAD+ sublingual) | the Hims tiles: `hims_enjoy-sex_charcoal-pills.png` (pills on a dark field, top-down), `hims_new-hairline_tan-on-walnut.png`, `hims_grid_1/2.jpg` |
 | Spray / tube (PT-141 nasal spray) | `hims_testosterone_amber-tube.png` (product colour on product colour) + the grids |
+| Pump bottle, topical cream (GHK-Cu Cream: "GHK Peptide Cream" on FB / GL / TK) | `hims_testosterone_amber-tube.png` (a tall single object, product colour on its field) + `hims_new-hairline_tan-on-walnut.png`; no tablet exists, so the pump bottle is the hero, large and label-legible |
 
 Log the reference used per slot in `prompts.md` and SESSION.md.
 
@@ -51,6 +52,7 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
 | PT-141 | cyan on cyan, glass-and-white on white, or charcoal with the cyan label as the only colour |
 | Spark | black + rose-gold, warm brass on dark stone |
 | Lovara | blush, travertine, cream |
+| GHK-Cu Cream | blush, nude/tan, beige, travertine; the bottle's navy and champagne gold are the one contrast; never orange or green (bible) |
 
 ## QA additions (on top of the skill's QA)
 60% empty field; one headline, no bullets or badges; the product name big; the hero form correct (tablet hero for tablet

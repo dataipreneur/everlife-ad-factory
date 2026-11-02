@@ -1,0 +1,20 @@
+{
+  "_about": "The Everlife Drive style library (folder 1lViskBTTmI756jcXE72IOcrGAxCMdQFT, imported 2026-11-02). 14 style folders + S15 built from 00_Products. Used by every product skill's Mood question (MOOD-QUESTION.md) and by scripts/pick_styles.py for 'Surprise me'. gate: open = usable on every product; gated = only when the condition in STYLES.md holds (pick_styles.py skips gated styles unless --allow names them).",
+  "styles": [
+    {"code": "S01", "slug": "bold-headlines",       "name": "Bold Headlines",          "group": "Text-led",      "gate": "open"},
+    {"code": "S02", "slug": "crossed-out-words",    "name": "Crossed Out Words",       "group": "Text-led",      "gate": "open"},
+    {"code": "S03", "slug": "reasons-why",          "name": "Reasons Why",             "group": "Text-led",      "gate": "open"},
+    {"code": "S04", "slug": "benefit-stacks",       "name": "Benefit Stacks",          "group": "Text-led",      "gate": "open"},
+    {"code": "S05", "slug": "myth-vs-fact",         "name": "Myth vs. Fact",           "group": "Compare",       "gate": "open"},
+    {"code": "S06", "slug": "us-vs-them",           "name": "Us vs. Them",             "group": "Compare",       "gate": "open"},
+    {"code": "S07", "slug": "whats-inside",         "name": "What's Inside",           "group": "Compare",       "gate": "open"},
+    {"code": "S08", "slug": "search",               "name": "Search",                  "group": "Compare",       "gate": "open"},
+    {"code": "S09", "slug": "notes-reminders",      "name": "Notes / Reminders",       "group": "Phone & social", "gate": "open"},
+    {"code": "S10", "slug": "ama",                  "name": "AMA (Ask Me Anything)",   "group": "Phone & social", "gate": "open"},
+    {"code": "S11", "slug": "news",                 "name": "News",                    "group": "Phone & social", "gate": "open"},
+    {"code": "S15", "slug": "phone-screen",         "name": "Phone Screen (post)", "group": "Phone & social", "gate": "open"},
+    {"code": "S12", "slug": "testimonial",          "name": "Testimonial",             "group": "Out loud",      "gate": "gated"},
+    {"code": "S13", "slug": "whiteboard-billboard", "name": "Whiteboard / Billboard",  "group": "Out loud",      "gate": "open"},
+    {"code": "S14", "slug": "were-sorry",           "name": "We're Sorry",             "group": "Out loud",      "gate": "open"}
+  ]
+}

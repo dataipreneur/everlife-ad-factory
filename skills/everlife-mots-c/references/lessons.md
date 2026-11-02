@@ -101,3 +101,19 @@ apply; the hardcore-gym scenes do NOT: MOTS-c scenes come from direction.md)
   - Free local fixes: shrink + edge fill only on plain backgrounds (paper, pale stone); it streaks glow and photo scenes.
     A small shift (≤ 120 px) clears the logo or a side band. `unfade_cta.py` restores a CTA the footer gradient fades.
 - The bible files MOTS-c under metabolic / weight / body composition: keep every line on energy and endurance.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
+
+## Batch 2 (2026-11-02, GPT Image 2.5, Men, 9 credits): "why were some of these stupid things have blurry borders!"
+- reposition_916 edge fill STREAKS on photo and glow scenes (3/3: trail, cell glow, paper bottom). Mirror fill flips edge text;
+  a full-size scene underlay ghosts the text. All rejected. Only plain backgrounds (wall, paper) survive a shrink.
+- What worked: (a) describe the layout as SCENE GEOMETRY ("a boulder's top edge runs across the frame at 40%; below it only rock"),
+  not as "bottom 48% empty": #1 landed at 54% and finished native; (b) plain paper: tile a clean patch of the same raw behind the
+  shrunk art (invisible seam). (c) headline top-left near the logo → `--logo-pos right`.
+- Glow/product-hero with a huge name (#2) failed 3/3 (vial under the footer). Next time: build it as 4:5 or drop the giant name.
+- Stop after ONE failed free fix: show the user and re-roll; don't try a third local trick.
+- Batch 3 (same day): scene-geometry prompts (shelf/ledge/wall top at 40%) → 4/4 landed at 54–71%, all fixable with ≤ 21% shrink.
+  Edge fill that works: TRANSLATED copy of the art's own edge strip (cap the strip width below where text starts), never mirror/stretch.
+  GPT edit "fix one misspelled word" did NOT change the word (1 credit wasted): fix typos locally by copying a real glyph from another line.

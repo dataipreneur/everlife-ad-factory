@@ -94,7 +94,7 @@ say "use F2 and F8" in chat).
 1. **Form:** "Either: pick per ad (Recommended)" / "Nasal spray" / "Sublingual tablet". Decides the bottle in the picture; "either"
    alternates across a batch. Copy may name the form; never the strength, dose or count. One form per ad (Dave's rule).
 2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; PT-141: the presenter is framed shoulder-up, and the B-roll has NO beds or bedrooms, product-led and tasteful.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply; PT-141: the presenter is framed shoulder-up, and the B-roll has NO beds or bedrooms, product-led and tasteful.
 3. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "The wanting, not the ability" ("It Was Never Just Physical", "More
    Than Blood Flow", "Desire Starts in the Brain") / "Unplanned nights" ("Some Nights Aren't Planned.", "Made for Moments, Not
    Calendars", "Desire Support on Your Schedule") / "Your body changed" ("Your Body Changed. Your Desire Doesn't Have to Disappear.",
@@ -104,6 +104,7 @@ say "use F2 and F8" in chat).
    OK and goes to Jeremy.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
+> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 5. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Clean clinical: white, marble, pale blue, cyan" / "Warm: golden hour,
    linen, sand" / "Dark and moody: navy, charcoal, brass" / "Soft blush: pink, tan, cream". Sets palette and light; §2b still varies
    the type pairing per ad.

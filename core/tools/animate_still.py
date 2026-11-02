@@ -24,7 +24,13 @@ def main():
     ap.add_argument("video"); ap.add_argument("out")
     ap.add_argument("--product", required=True); ap.add_argument("--ratio", default="9:16", choices=fb.SIZES)
     ap.add_argument("--fps", type=int, default=24); ap.add_argument("--shift", default="auto"); ap.add_argument("--tone", default="auto")
+    ap.add_argument("--proof", default="", choices=["", "trust", "count", "none"],
+                    help="this creative's one proof (bible 2026-11-02: trust ~42%%, badge + count ~28%%, none ~30%%; core/scripts/proof_next.py)")
     a = ap.parse_args()
+    if a.proof:
+        fb.PROOF = a.proof
+    else:
+        print("ℹ️  no --proof given: trust row. Split 2026-11-02: trust ~42% / badge + count ~28% / none ~30% (core/scripts/proof_next.py).")
     import product
     PR = product.load(a.product); disclaimer = PR["disclaimer"]
     FF = ffmpeg()

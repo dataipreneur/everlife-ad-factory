@@ -86,3 +86,7 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - GPT Image 2.5 overshoots most on "scene fills the frame" structures (article page caption at 70%, overhead vial at 75%);
   reposition_916.py --fill reflect fixed both at 0 credits and Mitansh approved the result. Split and stacked layouts landed as-is.
 - A plain, unlabelled prop (grey shaker) as "the old way" renders clean; keep props unbranded.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
