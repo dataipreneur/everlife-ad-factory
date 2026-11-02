@@ -245,6 +245,30 @@ def smoke(core, out):
     d = os.path.join(out, "mc_static"); os.makedirs(d)
     expect("finish_batch renders MOTS-c with its provisional disclaimer",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "mots-c"], True)
+
+    # NAD+ (sublingual tablet or injection): statics take its disclaimer; end cards render both forms
+    d = os.path.join(out, "nad_static"); os.makedirs(d)
+    expect("finish_batch takes the NAD+ disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "nad"], True)
+    expect("NAD+ refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "nad",
+            "--disclaimer", RZ_DISC], False, "differs")
+    nd = {"product": "nad", "head": ["NAD+ BY EVERLIFE"], "head_always": True,
+          "end_head": ["LESS FOG.", "MORE FOCUS."],
+          "benefits": ["Supports All-Day Energy + Focus", "Supports Bounce-Back From Burnout", "Promotes Healthy Aging"],
+          "ingredients_label": "SUBLINGUAL TABLET OR INJECTION",
+          "ingredients": [["FOCUS", "Supports All-Day Energy + Focus"], ["BURNOUT", "Supports Bounce-Back From Burnout"],
+                          ["AGING", "Promotes Healthy Aging"]],
+          "cta": "CHOOSE YOUR FORM", "vocab": "NAD+."}
+    for form, style in (("sublingual", "default"), ("injection", "tiktok")):
+        d = os.path.join(out, f"nad_{form}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(nd, style=style, form=form), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "LESS FOG. MORE FOCUS.", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"NAD+ video renders ({form}, {style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")
