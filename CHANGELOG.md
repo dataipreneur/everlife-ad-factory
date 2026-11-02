@@ -2,6 +2,23 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Winners Board: one shared rating store for hooks + image ads (branch `winners-board`)
+Logged before editing. Priestley's decisions: one shared board for hooks and images; scale **Winner / Good / Weak / Kill**
+(AskUserQuestion shows max 4 options; one question per ad); Winner → one later slot mutates its recipe (exactly one variable);
+Good → quality bar; Weak/Kill → retired for that product; Meta results override opinion; teammates get Contributor access.
+Originals: `_originals/2026-11-02/winners-board/`.
+- **Board** (claude.ai artifact, private, owner Priestley): https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M. `db` rules: everyone
+  with access reads; each rater writes only `data/users/<own id>` and `raters/<own id>`; Editors/Owner edit or delete anyone's.
+  Empty at launch (no seeded entries).
+- **New** `core/winners-board/WINNERS-BOARD.md`: URL, access, schema, read protocol (last 15, winner mutation, retired skip,
+  median bar), write protocol, rating question, image + hook recipe fields, fallback when the board is unreachable.
+- **New** `core/winners-board/HOOK-ENGINE-SWITCH.md`: proposal for Mitansh to move the Hook Ladder ledger to the board.
+  `core/hook-engine/` is NOT edited.
+- **Image loop:** every product's `references/image-batch.md` (except Restora-Z) reads the board before the batch table and rates
+  the batch after it (Sermorelin + Sermorelin GHK had no "After the batch" section: a short §4 is added at the end).
+  `skills/everlife-new-product/references/adapt-checklist.md` §3: new skills inherit both steps.
+- **Follow-up (needs Priestley's OK):** the same two lines for `skills/everlife-restora-z/references/image-batch.md`.
+
 ## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
 Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
 `version [0-9-]*` stops at letters (earlier versions such as `…-2416` happened to be all digits). The every-session check would
