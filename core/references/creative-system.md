@@ -4,6 +4,16 @@ Source: the creative team member's Restora-Z work (audit `my-ad-changes.md`, 202
 a capsule bottle, a tablet, a vial, a spray, a cream. Mitansh: "add these across all skills". Product-specific facts stay in each
 skill's `product-bible.md` / `product.json`; the form's hero element is `product.json → hero`.
 
+## 0. MANDATORY in every video, no exceptions (Mitansh, 2026-10-30; bible v3 "[Product] by Everlife" in every intro)
+- **The VO says "<Product> by Everlife"** (e.g. "Restora-Z by Everlife…", "BPC-157 by Everlife…", "PT-141 by Everlife…") in the
+  first spoken lines (by ~3 s, right after or inside the hook), and the script refers to the product by name, not only "this".
+  This overrides any brief that says "never say the product name".
+- The same "<PRODUCT> by Everlife" line is on screen in the intro (header/subline from frame 0).
+- Write the pronunciation into the prompt: "Restora-Z" = "res-TOR-uh zee" (Creatify TTS: "Restora Zee"); BPC-157 = "B-P-C
+  one-fifty-seven"; PT-141 = "P-T one-forty-one". Transcript QA must hear the product name AND "by Everlife"; if either is
+  missing or mispronounced, the raw fails (re-roll with cost, never ship).
+- Statics are unchanged: no "by Everlife" on images (Priestley, 2026-10-29); the logo carries the brand.
+
 ## 1. Variety is structural (the batch table enforces it)
 Every slot in a batch differs on ALL of these; "same layout, new background" is not a variation:
 - **Structure** (rotate; never two alike in a batch): split · stacked panels · timeline · poster · billboard · calendar page ·

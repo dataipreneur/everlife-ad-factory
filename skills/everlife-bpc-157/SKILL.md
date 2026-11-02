@@ -10,6 +10,7 @@ compliant ads in a local folder. **You drive the session with questions** (the `
 the internals.
 
 Golden rules, all non-negotiable:
+0. **MANDATORY in every video (Mitansh, 2026-10-30): the VO says "BPC-157 by Everlife"** in the first spoken lines (by ~3 s) and names the product (not just "this"); "BPC-157 by Everlife" on screen in the intro. Pronunciation in the prompt: "B-P-C one-fifty-seven". QA fails any raw where the transcript lacks the name or "by Everlife". Statics: no "by Everlife". Details: `core/references/creative-system.md` §0.
 1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the seven quick-hit
    benefits, every Hard NO, and the bible page's **compliance pre-screen** (❌ never; ⏳ Pending approval and ⚠ only after explicit
    approval, flagged for Jeremy). The docx's section 6 "approved benefits" is BLOCKED (direct claims). **Headlines are Tier A by
@@ -58,6 +59,9 @@ Paths: skill dir = this folder (`assets/` holds the vial render; `product.env`/`
 
 ---
 
+## Hook Engine (mandatory for every video, all products)
+Before writing any video concept, script or prompt, read `core/hook-engine/HOOK-ENGINE.md` and this product's section of `core/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
+
 ## Step 0 — Preflight + product gates
 
 1. **Renders gate:** the vial `bpc157_vial.png` is the only product image (see `assets/RENDERS.md` for the open label question).
@@ -93,8 +97,9 @@ a batch table of ≥4 different frameworks to approve, parallel Creatify GPT Ima
 footer, contact sheet.
 
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
-**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🎞️ Animated still: an
-approved static + 8 s of motion (Seedance)" / "🔁 Remake one of ours".
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🧑‍💼 AI Avatar Video" / "🎬 Video ad or 🎞️ animated still (an
+approved static + 8 s of motion, Seedance; a follow-up question picks which)" / "🔁 Remake one of ours". (AskUserQuestion takes at most 4 options.)
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; the vial is the hero in the product B-roll.
 - **Animated still** → `references/animated-still.md`: pick the approved static, write the one-line motion prompt, ask the
   Unlimited-mode A/B question (0 credits in Chrome, else quote Seedance), generate 8 s from the RAW, `animate_still.py`, QA, save.
 

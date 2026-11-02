@@ -93,3 +93,6 @@ Higgsfield uses shared Everlife team credits: run a cost estimate and get the us
 - No ad disclaimers on file for Parts B/C products.
 - AI disclosure wording mismatch (global vs product disclaimer).
 - Bible source: Claude Design project 8cc4e3fe-5189-436d-aaba-6eb2320f14c6 (standalone Claude Design closes 14 Dec 2026). Re-import when it changes.
+
+## Hook Engine (every video, all products)
+Every Everlife video starts from the Hook Engine: `core/hook-engine/HOOK-ENGINE.md` (rules) and `core/hook-engine/HOOK-BANK.md` (per-product hooks), imported into CLAUDE.md by install.sh. Pick three scored hooks before each script, run the hook QA on every raw, and log the result. Not used for statics.

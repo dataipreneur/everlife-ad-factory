@@ -38,6 +38,8 @@ END="# <<< everlife-ad-factory <<<"
 BLOCK="$BEGIN
 @$REPO/core/claude/everlife-gates.md
 @$REPO/core/claude/everlife-team.md
+@$REPO/core/hook-engine/HOOK-ENGINE.md
+@$REPO/core/hook-engine/HOOK-BANK.md
 $END"
 if [ -f "$CMD" ] && grep -qF "$BEGIN" "$CMD"; then
   python3 - "$CMD" "$BEGIN" "$END" "$BLOCK" <<'EOF'

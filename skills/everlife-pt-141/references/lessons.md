@@ -87,3 +87,11 @@ The creative team member's Restora-Z improvements were distilled into `core/refe
 structural variety, article slot, product-angle rotation, named typefaces, own palette, hero ≥35% and real, CTA string + QA, real
 logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it before every batch table; tools: `reposition_916.py`,
 `unfade_cta.py`, `logo_in_box.py`, `compose916.py`, `finish_batch.py --logo-w 40%`. Nothing lives only in an output folder.
+
+## Video 2 "Caught it" (2026-10-30, Seedance 2.0 480p, 45 cr): hook rated 3/5
+- Text-only Seedance ignored "frame 0 mid-action": it opened on a glass standing still and a hand tilting it. For any physical hook, make a 0.25 cr still of the hook moment and pass it as the START FRAME.
+- No sound at 0.0 s despite the AUDIO line (opening at −26 dB). Put the sound in the HOOK block AND as the first AUDIO item.
+- The VO drifted: 21 words ran to 15.0 s. Write dialogue to finish by ~11 s and add "all dialogue ends by 11 seconds".
+- The spray label came out "EVEVERLIFE" on the close-up. Fixed for free by compositing the render's label (cyan bbox per frame) over 5–7.9 s. Ask for the product higher in frame (label above 60% height), so the proof row doesn't cover it.
+- Wine on screen, drunk next to an Rx spray: flagged for Jeremy. Prefer non-alcoholic props until he rules on it.
+- Captions landed ON the spray (Mitansh, 2026-10-30: "subtitles are on top of product! wtf"). Before finishing, check every caption window against the product's position; move a caption with an optional 5th field (y in px) in `layers_full/<Tag>_caps.json` (full_layout.py supports it since 2026-10-30), or drop it when the header subline already shows the same words. Never ship a caption over the product.
