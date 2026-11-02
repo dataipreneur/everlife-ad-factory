@@ -1,0 +1,158 @@
+# GLP1 — creative bible (verbatim extract)
+
+> Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## GLP1"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
+
+## Product facts for this skill
+- **What it is:** weight-management support with compounded GLP-1 medication, provider-guided from home: **compounded semaglutide**
+  or **compounded tirzepatide** (Rx vials; never a strength, dose or volume in copy).
+- **Who:** adults 30–60 managing weight who want predictable pricing and clinician guidance ("All audiences").
+- **Bible creative direction:** "compounded" before semaglutide/tirzepatide always; "GLP-1" as the umbrella in headers and titles;
+  **every ad says "one price" or "no surprise price increases"**.
+- **Offer:** Up to 59% off · One predictable price. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers ·
+  Provider-guided weight-loss treatment from home.
+- **Disclaimer:** GLP-1's own verbatim text (product.json), ending "Compounded medications are not FDA-approved."
+- **Weight-loss outcome lines:** ⚠ held for Jeremy (Priestley, 2026-10-30): the global rules ban body-composition, guaranteed-outcome
+  and transformation claims.
+- **Landing page:** [PLACEHOLDER].
+
+## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
+
+| Line (bible) | Where | Status | Why |
+|---|---|---|---|
+| Stop Fighting Hunger All Day | headlines | ✅ |  |
+| Quiet the Cravings. Take Back Control. | headlines | ✅ |  |
+| Break Through Weight-Loss Plateaus. | headlines | ⚠ Jeremy | weight-loss outcome |
+| When Dieting Isn’t Enough | headlines | ✅ | problem framing; pair with a ✅ benefit |
+| Less Food Noise. More Control. | headlines | ✅ |  |
+| Up to 20% Weight Loss | headlines | ⚠ Jeremy | numeric outcome / transformation (Priestley: hold) |
+| Drop the Weight and Keep It Off | headlines | ⚠ Jeremy | outcome + implied guarantee (Priestley: hold) |
+| Turn Down the Food Noise | headlines | ✅ |  |
+| Make Hunger Feel Manageable Again | headlines | ✅ |  |
+| Take Control of Your Appetite | headlines | ✅ |  |
+| Ready to Make Progress Again? | headlines | ✅ | pronoun-free question |
+| Break the Plateau. Build Momentum. | headlines | ⚠ Jeremy | plateau = weight-loss outcome |
+| How Many Weeks to Reach Your Goal? | headlines | ⚠ Jeremy | timing promise |
+| Your Weight-Loss Reset Starts Here | headlines | ⚠ Jeremy | weight-loss outcome framing |
+| Weight-Loss Support That Fits Your Life | headlines | ✅ (care) | "support", not an outcome |
+| A Smarter Path to Your Goal | headlines | ✅ | never name the comparison |
+| Your Goal. Your Plan. Provider Guided. | headlines | ✅ |  |
+| Progress Without the Guesswork | headlines | ✅ | no numbers next to it |
+| One Simple Plan. One Clear Price. | headlines | ✅ | covers the one-price rule |
+| Real Support for Your Weight-Loss Journey | headlines | ✅ (care) | "support", not an outcome |
+| Your Next Chapter Starts Lighter | headlines | ⚠ Jeremy | implied body transformation (Priestley: hold) |
+| Get Back in Control of Your Routine | headlines | Weak (bible) | avoid unless asked |
+| Built for Sustainable Progress | headlines | Weak (bible) | avoid unless asked |
+| Supports Appetite Regulation | benefits | ✅ |  |
+| Helps Reduce Food Noise | benefits | ✅ |  |
+| Supports Healthy Weight Management | benefits | ✅ (care) | never with body imagery |
+| Supports Healthy Metabolism | benefits | ✅ |  |
+| One Price, No Surprise Increases | benefits | ✅ | the required price line |
+| Provider-Guided From Home | benefits | ✅ |  |
+| Up to 20% Weight Loss | more_benefits | ⚠ Jeremy | numeric outcome (Priestley: hold) |
+| Helps Control Cravings | more_benefits | ✅ |  |
+| Supports Longer-Lasting Fullness | more_benefits | ✅ |  |
+| Helps Reduce Snacking Urges | more_benefits | ✅ |  |
+| Supports Insulin Sensitivity | more_benefits | Weak + ⚠ | weak in the bible and disease-adjacent: never |
+| Supports Steady Weight-Loss Progress | more_benefits | Weak (bible) | avoid |
+| Start Weight Support | ctas | ✅ |  |
+| Explore GLP-1 | ctas | ✅ |  |
+| Get Started Now | ctas | ✅ |  |
+| Check Your Options | ctas | ✅ |  |
+| Build Your Plan | ctas | ✅ |  |
+| Up to 59% off | offer | ✅ | percent only |
+| One predictable price | offer | ✅ | the required price line |
+
+---
+
+# VERBATIM (do not edit; re-copy from the bible)
+
+```text
+## GLP1
+
+### Who it's for
+Adults 30–60 managing weight who want predictable pricing and clinician guidance.
+
+### Creative direction
+- Label and pages must read “compounded semaglutide” / “compounded tirzepatide.”
+- Use “GLP-1” as the umbrella term in headers and titles.
+- Every ad says “one price” or “no surprise price increases.”
+
+All audiences
+Weight-management support focused on appetite regulation, reduced food noise, metabolic health, and predictable pricing.
+
+### Headlines & hooks
+1. Stop Fighting Hunger All Day
+2. Quiet the Cravings. Take Back Control.
+3. Break Through Weight-Loss Plateaus.
+4. When Dieting Isn’t Enough
+5. Less Food Noise. More Control.
+6. Up to 20% Weight Loss
+7. Drop the Weight and Keep It Off
+8. Turn Down the Food Noise
+9. Make Hunger Feel Manageable Again
+10. Take Control of Your Appetite
+11. Ready to Make Progress Again?
+
+More headlines on page 38
+
+### Quick-hit benefits
+- Supports Appetite Regulation
+- Helps Reduce Food Noise
+- Supports Healthy Weight Management
+- Supports Healthy Metabolism
+- One Price, No Surprise Increases
+- Provider-Guided From Home
+
+### CTAs
+- CTA: Start Weight Support
+- CTA: Explore GLP-1
+- CTA: Get Started Now
+- CTA: Check Your Options
+- CTA: Build Your Plan
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+- Provider-guided weight-loss treatment from home
+
+### Offers & conversion
+- Up to 59% off
+- One predictable price
+
+### Hard NOs
+- Never say semaglutide or tirzepatide without “compounded.”
+- Plus all global Hard NOs on page 3.
+
+Ad disclaimerAI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.
+Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+
+### Headline bank
+GLP-1
+12 more headlines beyond the ones on the product page.
+
+### Headlines, Benefits & Claims
+
+### Headlines
+- Break the Plateau. Build Momentum.
+- How Many Weeks to Reach Your Goal?
+- Your Weight-Loss Reset Starts Here
+- Weight-Loss Support That Fits Your Life
+- A Smarter Path to Your Goal
+- Your Goal. Your Plan. Provider Guided.
+- Progress Without the Guesswork
+- One Simple Plan. One Clear Price.
+- Real Support for Your Weight-Loss Journey
+- Your Next Chapter Starts Lighter
+- Get Back in Control of Your Routine [Weak headline]
+- Built for Sustainable Progress [Weak headline]
+
+### More approved benefits
+- Up to 20% Weight Loss
+- Helps Control Cravings
+- Supports Longer-Lasting Fullness
+- Helps Reduce Snacking Urges
+- Supports Insulin SensitivityWeak benefit
+- Supports Steady Weight-Loss ProgressWeak benefit
+
+Recovery
+```

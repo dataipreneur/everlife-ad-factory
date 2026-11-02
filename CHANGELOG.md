@@ -139,6 +139,50 @@ spray render is left out (no spray form in the bible).
   both). Smoke 22/22. `bible_sync --check`: NAD+ ✅.
 Setup only: no credits, no push, no PR until every skill is tested.
 
+## 2026-11-02 — GLP-1: BPC-157 template leftovers removed (branch `glp1-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". The skill was scaffolded from BPC-157 and still carried its recovery
+and gym wording. Rewritten from `direction.md`, `assets/RENDERS.md` and the ✅ lines of `product-bible.md` only; no new claims.
+Originals: `_originals/2026-11-02/glp1-leftovers/`.
+- `styles/6-lifestyle-identity.md`: the "Hardcore gym, tattooed bodybuilder, shirtless" and Pilates sub-styles (BPC-157 brief)
+  become GLP-1 ones from direction.md (calm breakfast, fridge plan, quiet evening, daylight walk), each with a ✅ headline.
+- `video-prompting.md`: authority examples, copy example (now with the price line), banned words (weight numbers, melt/burn,
+  body areas, drug brands, "compounded"), cast wardrobe; PRODUCT block names the chosen vial (navy semaglutide / green tirzepatide).
+- `styles/` INDEX, 1–5: recovery, tissue, joint, ice-bath and gym sub-styles become calm-control ones; 2E mechanism map =
+  appetite → food noise → one plan (✅ lines).
+- `image-batch.md`: gym moods become "Bright kitchen" and "Calm evening"; type-table notes; the women's "never green" accent rule
+  removed (only for GHK-Cu Cream and Glow Stack; tirzepatide's accent is green).
+- `finishing.md`: article kicker default is "WEIGHT MANAGEMENT" (product.json), not "RECOVERY".
+- `animated-still.md`: gym environment moves become morning-light ones.
+- `lessons.md`: the "BPC-157-specific risks" section (incl. "men must look hardcore", "3 mg/mL vial", "404 page", "PT-141
+  disclaimer") rewritten as GLP-1 risks; stale BPC-157 notes fixed; the blurred-plate 9:16 lesson marked superseded.
+- Kept on purpose: provenance notes, the shared `vial-refs/` staging folder, "no capsules or pills" (GLP-1 is vials only).
+
+## 2026-10-30 — GLP-1: Emily's winners (branch `glp1-skill`)
+Logged before editing. Emily's Drive folder "GLP1 Winners" (downloaded by Priestley): 3 statics (Base186, Base193, Base204; 4:5 +
+9:16, made 30 Sep 2026; not in the Meta export, so no numbers yet). Full files in
+`~/Everlife-Creative/reference-ads/GLP1-winners-2026-10-30/` (not in git).
+- New `references/winners/` (cards + previews).
+- All three show both vials side by side. The skill's "one form per ad" was Claude's own rule, not the bible's → both vials together
+  now allowed (Priestley's "follow bible" principle). Scales stay out (they imply the weight-loss outcome Priestley held for
+  Jeremy); listed as an open question.
+
+## 2026-10-30 — GLP-1 skill setup (branch `glp1-skill`, from `main` 4ee62c6)
+Logged before editing. Priestley: "we need to add two more products: GLP-1, NAD+". New skill `skills/everlife-glp-1/` (weight
+management, adults 30–60, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` (vial handling) and
+adapted like MOTS-c (all audiences, strictest body-composition rules). Bible checked first: no changes; GLP1 disclaimer ✅ (its own
+wording). Two forms: compounded semaglutide vial and compounded tirzepatide vial (asset library, looked at both).
+- Priestley's decision: the page's weight-loss outcome lines ("Up to 20% Weight Loss", "Drop the Weight and Keep It Off"…) clash with
+  the global no-body-composition / no-guaranteed-outcome rules → ⚠ held for Jeremy, used only with explicit OK. Ads lead with
+  appetite, food noise, one price and provider-guided care.
+- Bible rules built in: "compounded" before semaglutide/tirzepatide always; "GLP-1" as the umbrella in headers; every ad says "one
+  price" or "no surprise price increases".
+- `core/scripts/bible_sync.py`: the "bible_section" commit (from `spartan-skill`) cherry-picked, because the bible names it "GLP1".
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-glp-1/`): two forms in product.json (semaglutide /
+  tirzepatide), new `references/direction.md` (calm control, never a body), personas Maria (41, the bible's core demo) and Ron (56),
+  every pre-screen line screened (7 ⚠ weight-loss lines, 2 weak). `core/tests/regression.py`: 4 GLP-1 checks (disclaimer, wrong
+  disclaimer refused, end cards for both vials, looked at both). Smoke 22/22. `bible_sync --check`: GLP-1 ✅.
+Setup only: no credits, no push, no PR until every skill is tested.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
