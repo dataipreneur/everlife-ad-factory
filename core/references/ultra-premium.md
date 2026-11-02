@@ -30,14 +30,15 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
 - **The product name runs big** and is identifiable in under 2 s: in the headline, or as the second large text. The quiet look
   never makes the name small.
 - **Legible for 50+ at story size:** the small line is still ≥ the skill's minimum body size; tonal second lines keep contrast.
-- **Women's creative:** pinks, tans, beige; no oranges or greens, even when the product's own colour is one of them (use a
-  pink / tan / beige field with the product as the only colour).
+- **Women's creative:** GHK-Cu Cream and Glow Stack use pinks, tans and beige (no oranges or greens); other women's runs follow
+  the bible's guidance (pinks, tans, warm neutrals, white and teal), and a product's own colour may lead the field when it serves
+  the overall look (e.g. NAD+ green, tirzepatide green; Mitansh 2026-11-02).
 - Intimate wellness (PT-141, Spark, Lovara): no bed, bedroom, lingerie; product-led is already the rule.
 - No needles, syringes, pens or droppers next to any vial. One form per ad unless the skill allows side by side.
 - The footer still adds the Everlife logo, the social proof (Trustpilot rated 4.9 Excellent / 100,000+), the verbatim disclaimer and
   the AI disclosure: the canvas itself stays clean (no logo, stars or badges in the generated image).
 
-## Per product (field colours; women's runs use the women's palette above)
+## Per product (field colours; women's runs per the women's rule above)
 | Product | Monochrome field |
 |---|---|
 | BPC-157 | slate / charcoal / chalk, or black + slate blue |
@@ -52,4 +53,4 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
 
 ## QA additions (on top of the skill's QA)
 60% empty field; one headline, no bullets or badges; the product name big; the hero form correct (tablet hero for tablet
-products); real material and one shadow, never floating; women's palette held. Fail → one automatic re-roll naming the fix.
+products); real material and one shadow, never floating; women's rule above held. Fail → one automatic re-roll naming the fix.
