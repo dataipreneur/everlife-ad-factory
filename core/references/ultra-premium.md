@@ -17,7 +17,7 @@ The Hims / Ro codes in `core/references/static-refs/13_Premium_DTC/README.md`, o
 ## Staging references (look at ONE per slot; staging only, never the words)
 | Product form | Reference |
 |---|---|
-| Rx vial (BPC-157, GLP-1, NAD+ injection, MOTS-c, Spartan, Wolverine) | `skills/everlife-bpc-157/references/vial-refs/` (V31 monochrome hero, V20 black luxury, V40 / V37 pale editorial; `OVERVIEW.jpg`) or a Hims tile. Read that README's "Compliance traps" list. Its "one vial, always" and slate palette are BPC-157's; GLP-1 may show both vials side by side, each product uses its own colours. |
+| Rx vial (BPC-157, GLP-1, NAD+ injection, MOTS-c, Spartan, Wolverine, Epithalon) | `skills/everlife-bpc-157/references/vial-refs/` (V31 monochrome hero, V20 black luxury, V40 / V37 pale editorial; `OVERVIEW.jpg`) or a Hims tile. Read that README's "Compliance traps" list. Its "one vial, always" and slate palette are BPC-157's; GLP-1 may show both vials side by side, each product uses its own colours. |
 | Tablet / capsule + bottle (Restora-Z, Sermorelin, Sermorelin GHK, Spark, Lovara, PT-141 sublingual, NAD+ sublingual) | the Hims tiles: `hims_enjoy-sex_charcoal-pills.png` (pills on a dark field, top-down), `hims_new-hairline_tan-on-walnut.png`, `hims_grid_1/2.jpg` |
 | Spray / tube (PT-141 nasal spray) | `hims_testosterone_amber-tube.png` (product colour on product colour) + the grids |
 | Pump bottle, topical cream (GHK-Cu Cream: "GHK Peptide Cream" on FB / GL / TK) | `hims_testosterone_amber-tube.png` (a tall single object, product colour on its field) + `hims_new-hairline_tan-on-walnut.png`; no tablet exists, so the pump bottle is the hero, large and label-legible |
@@ -46,6 +46,7 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
 | GLP-1 | navy on navy (compounded semaglutide), deep green on green (compounded tirzepatide), or both on pale stone |
 | NAD+ | the product's green, or charcoal with the green as the one colour |
 | MOTS-c, Spartan, Wolverine | the vial label's colour family, or charcoal / concrete with the label as the one colour |
+| Epithalon | teal on teal (the vial label), or warm stone / linen with the teal label as the one colour; daytime light, never a bedside or night setting |
 | Restora-Z | navy, lavender, pale sky, cream |
 | Sermorelin / Sermorelin GHK | warm stone, chalk, linen; the label's colour as the one accent |
 | PT-141 | cyan on cyan, glass-and-white on white, or charcoal with the cyan label as the only colour |

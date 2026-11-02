@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Epithalon skill brought up to date with main before merging (branch `epithalon-skill`)
+Merged main (#23–#29) and gave the skill what those PRs gave the other skills (from its MOTS-c template): the AI Avatar
+"ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
+the Winners Board read-first and rate steps. Smoke 57/57.
+
 ## 2026-11-02 — GHK-Cu Cream skill brought up to date with main before merging (branch `ghk-cream-skill`)
 Merged main (#23–#28) and gave the skill what those PRs gave the other skills (from its Lovara template): the AI Avatar
 "ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
@@ -120,6 +125,42 @@ Originals: `_originals/2026-11-02/ghk-cream/`.
   strength). Form = topical cream in an airless pump; there is no tablet.
 - Shared files touched: `core/tests/regression.py` (the product's smoke block), `core/references/ultra-premium.md` (its row).
 - Not done (needs an outside service or a person): Higgsfield Marketing Studio registration; the first 4-image test batch.
+
+## 2026-11-02 — Epithalon skill: built from everlife-mots-c, vial (branch `epithalon-skill`)
+Logged before editing. The form and render arrived (Priestley via the coordinator): compounded Rx **vial**, render
+`asset-library/VIALS/EPITHALON/EPITALON 10MG-ML 5ML VIAL (screenshot 2026-11-02).jpg` (592×1280 screenshot on white; looked at:
+clear glass, silver cap, teal label EVERLIFE / EPITALON / 10MG/ML / RX ONLY / 5ML). Template `everlife-mots-c` (vial pattern).
+Originals: `_originals/2026-11-02/epithalon/`.
+- **New `skills/everlife-epithalon/`** (`new_product.py create … --template everlife-mots-c --form vial --pending-disclaimer`), then
+  adapted per `adapt-checklist.md` §2–§3b from `EPITHALON-DRAFT.md` (which is folded in and removed): product facts + pre-screen,
+  product.json/product.env, cut-out PNG + `_ref.jpg` on white, RENDERS.md, SKILL.md, image-batch, video-prompting, finishing,
+  personas, lessons, reference guide, direction, animated still, styles, hook bank. MOTS-c's borrowed winners and its Creatify
+  project are not carried over; the style boards (shared library thumbnails, all products) are kept.
+- **Render:** cut-out checked on green (clean edges, clear glass kept); source is a screenshot, a full render is on the wish list.
+- **Tests:** `regression.py smoke` 47/47 (Epithalon: static with the provisional disclaimer, wrong-disclaimer refusal, end cards in
+  default + tiktok looked at: the vial clears the headline, no `pill_end_scale` needed); preflight 10 ✅, 1 open (Marketing Studio
+  registration: not done, needs Priestley's OK).
+- **Disclaimer PROVISIONAL** (Priestley, 2026-11-02): the standard ad disclaimer, verbatim from MOTS-c; bible still "Disclaimer
+  pending"; Jeremy to confirm.
+- **Spelling open question (Justin):** bible "Epithalon", vial label "EPITALON". Copy uses "Epithalon"; `keep_case` holds both;
+  the label is never edited.
+- **Sleep lines ❌** (the page's Hard NO wins over its own sleep benefits/audience line); offer and LP still [PLACEHOLDER].
+- **Shared files touched (one row/block each):** `core/references/ultra-premium.md` (Epithalon row in "Per product"),
+  `core/tests/regression.py` (Epithalon smoke block, Lovara pattern).
+
+## 2026-11-02 — Epithalon skill: pre-build draft only (branch `epithalon-skill`)
+Logged before editing. Priestley asked to prepare the Epithalon skill as far as possible without the product render or the form
+(vial / tablet / capsule…), which he will provide. Nothing was scaffolded: `new_product.py inspect` reports the form UNKNOWN and no
+render exists (asset library, `~/Downloads` incl. zips, `~/Desktop`), and the bible does not name a form, so `create` was NOT run
+and no template was chosen. Original backed up: `_originals/2026-11-02/epithalon/CHANGELOG.md`.
+- **Added `EPITHALON-DRAFT.md`** (worktree root): the bible facts, the compliance pre-screen of every headline, benefit, CTA,
+  offer and proof line, the proposed `product.json` values, a draft art direction, a draft `hook-bank.md` (8 hooks, bridges = exact
+  ✅ lines) and the list of what is missing. To be folded into the skill and deleted once the form and render arrive.
+- **Disclaimer PROVISIONAL** (Priestley, 2026-11-02): the standard ad disclaimer, verbatim from `skills/everlife-mots-c/product.json`;
+  the bible page still says "Disclaimer pending". Jeremy to confirm.
+- **Contradiction flagged for Justin:** the page's audience line and two quick-hit benefits are about sleep, but its creative
+  direction and Hard NO forbid sleep/overnight messaging (DSIP's territory). The Hard NO wins: the sleep lines are ❌ until fixed.
+  Offer and landing page are [PLACEHOLDER]; all four headlines are ⏳ pending.
 
 ## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
 Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
