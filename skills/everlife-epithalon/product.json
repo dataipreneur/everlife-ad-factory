@@ -1,0 +1,35 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = PROVISIONAL standard ad disclaimer (verbatim from MOTS-c; see _disclaimer_status). Scaffolded 2026-11-02 by everlife-new-product from everlife-mots-c. Spelling: copy says \"Epithalon\" (bible); the vial label reads \"EPITALON\" (never edited; open question for Justin).",
+ "id": "epithalon",
+ "name": "Epithalon",
+ "renders": {
+  "bottle": "epithalon_bottle.png",
+  "pill": null
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "keep_case": [
+  "Epithalon by Everlife",
+  "Epithalon",
+  "EPITALON"
+ ],
+ "review_highlight": "Epit(h)?alon",
+ "reviews": "references/reviews.json",
+ "kicker_default": "HEALTHY AGING",
+ "split_titles": [
+  "THE YEARS",
+  "THE SUPPORT"
+ ],
+ "notify_app": "Epithalon",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the Epithalon vial (a still object, label to camera)",
+  "min_width": 0.35,
+  "label": "wraps the curved glass: a teal label with the black EVERLIFE wordmark, EPITALON large in white, 10MG/ML, a thin light-blue rule, RX ONLY (left) and 5ML (right)",
+  "never": "needles, syringes, pens or injecting (and the words 'needle-free'); capsules, tablets or pills; beds, bedrooms, pillows, night or overnight scenes, waking up, alarm clocks, moons or any sleep cue (DSIP's territory, product Hard NO); before/after, younger-vs-older-self or any body or age comparison; age-reversal or 'turn back the clock' imagery; DNA-helix or lab-result graphics presented as a medical result; scales, tape measures or any body-composition cue; another product's vial (incl. the GHK-Cu/Epithalon stack)",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "_disclaimer_status": "PROVISIONAL (2026-11-02): the standard ad disclaimer, on Priestley's instruction; the bible page still says 'Disclaimer pending'. Jeremy to confirm."
+}

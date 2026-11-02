@@ -2,6 +2,28 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Epithalon skill: built from everlife-mots-c, vial (branch `epithalon-skill`)
+Logged before editing. The form and render arrived (Priestley via the coordinator): compounded Rx **vial**, render
+`asset-library/VIALS/EPITHALON/EPITALON 10MG-ML 5ML VIAL (screenshot 2026-11-02).jpg` (592×1280 screenshot on white; looked at:
+clear glass, silver cap, teal label EVERLIFE / EPITALON / 10MG/ML / RX ONLY / 5ML). Template `everlife-mots-c` (vial pattern).
+Originals: `_originals/2026-11-02/epithalon/`.
+- **New `skills/everlife-epithalon/`** (`new_product.py create … --template everlife-mots-c --form vial --pending-disclaimer`), then
+  adapted per `adapt-checklist.md` §2–§3b from `EPITHALON-DRAFT.md` (which is folded in and removed): product facts + pre-screen,
+  product.json/product.env, cut-out PNG + `_ref.jpg` on white, RENDERS.md, SKILL.md, image-batch, video-prompting, finishing,
+  personas, lessons, reference guide, direction, animated still, styles, hook bank. MOTS-c's borrowed winners and its Creatify
+  project are not carried over; the style boards (shared library thumbnails, all products) are kept.
+- **Render:** cut-out checked on green (clean edges, clear glass kept); source is a screenshot, a full render is on the wish list.
+- **Tests:** `regression.py smoke` 47/47 (Epithalon: static with the provisional disclaimer, wrong-disclaimer refusal, end cards in
+  default + tiktok looked at: the vial clears the headline, no `pill_end_scale` needed); preflight 10 ✅, 1 open (Marketing Studio
+  registration: not done, needs Priestley's OK).
+- **Disclaimer PROVISIONAL** (Priestley, 2026-11-02): the standard ad disclaimer, verbatim from MOTS-c; bible still "Disclaimer
+  pending"; Jeremy to confirm.
+- **Spelling open question (Justin):** bible "Epithalon", vial label "EPITALON". Copy uses "Epithalon"; `keep_case` holds both;
+  the label is never edited.
+- **Sleep lines ❌** (the page's Hard NO wins over its own sleep benefits/audience line); offer and LP still [PLACEHOLDER].
+- **Shared files touched (one row/block each):** `core/references/ultra-premium.md` (Epithalon row in "Per product"),
+  `core/tests/regression.py` (Epithalon smoke block, Lovara pattern).
+
 ## 2026-11-02 — Epithalon skill: pre-build draft only (branch `epithalon-skill`)
 Logged before editing. Priestley asked to prepare the Epithalon skill as far as possible without the product render or the form
 (vial / tablet / capsule…), which he will provide. Nothing was scaffolded: `new_product.py inspect` reports the form UNKNOWN and no

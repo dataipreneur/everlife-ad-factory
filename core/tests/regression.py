@@ -366,6 +366,31 @@ def smoke(core, out):
         expect(f"Lovara video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
 
+    # Epithalon (Rx vial): the bible's disclaimer is pending; product.json carries the provisional standard text
+    # (Priestley 2026-11-02). Statics take it; it refuses another product's; video end cards render the vial in two looks
+    d = os.path.join(out, "ep_static"); os.makedirs(d)
+    expect("finish_batch renders Epithalon with its provisional disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "epithalon"], True)
+    expect("Epithalon refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "epithalon",
+            "--disclaimer", RZ_DISC], False, "differs")
+    ep = {"product": "epithalon", "head": ["EPITHALON BY EVERLIFE"], "head_always": True,
+          "end_head": ["SUPPORTS", "HEALTHY AGING"],
+          "benefits": ["Supports Healthy Aging", "Supports Oxidative Stress Defense", "Doctor Prescribed"],
+          "ingredients_label": "HEALTHY AGING",
+          "ingredients": [["AGING", "Supports Healthy Aging"], ["DEFENSE", "Supports Oxidative Stress Defense"],
+                          ["PHARMACY", "Doctor Prescribed"]],
+          "cta": "START LONGEVITY SUPPORT", "vocab": "Epithalon."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"ep_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(ep, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SUPPORTS HEALTHY AGING", [[0.4, 1.1], [1.1, 1.6], [1.6, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Epithalon video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
     # Spark (sublingual tablet): statics take its disclaimer; video end cards render the bottle + tablet
     d = os.path.join(out, "sk_static"); os.makedirs(d)
     expect("finish_batch takes the Spark disclaimer from --product",
