@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793655261-6ce8) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793655503-c3e7) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -69,6 +69,7 @@ Applies to every product unless a brief says otherwise
 #### Video
 - The hook or key benefit is both said (voiceover or talent) and shown on screen within the first 2–3 seconds.
 - The product is always in focus whenever it’s on screen — never soft, blurred or racked out of focus.
+- Every video carries on-screen captions for all spoken audio. Captions stay clear of Meta’s safe zones — see Standards 04.
 
 03 · Logo sizing & placement
 Logo
@@ -157,7 +158,7 @@ Reference top-performing, lowest-CPA creative before generating new iterations.
 Standards 04
 
 ## Safe zones
-Where Meta’s interface sits on 9:16 placements. Keep the logo, headline, offer, CTA and disclaimer out of the shaded areas.
+Where Meta’s interface sits on 9:16 placements. Keep the logo, headline, offer, CTA, disclaimer and captions out of the shaded areas.
 Stories + Reels · 1080 × 1920
 
 #### Stories
