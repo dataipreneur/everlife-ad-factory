@@ -87,7 +87,7 @@ that file.
 ## 2. Flow
 1. Inputs from SKILL.md step 1: audience, angle, boldness. **Round 3 (ONE AskUserQuestion, 4 questions):**
    **Mood** "Surprise me: different each ad (Recommended)" / "Ultra premium, vial only: Hims/Ro codes + vial-refs (Mitansh's favourite,
-   batch 3 2026-10-29)" / "Hardcore gym: rack, loaded bar, chalk, rubber floor (men)" / "Boxing gym or garage at dawn (men)"
+   batch 3 2026-10-29)" / "Outdoor endurance at dawn: trail, quiet road, pool lane, rower (men and women)" / "Everyday energy: kitchen, desk, school run (non-workout; doc 2026-10-30)"
    **Ultra premium** = `core/references/static-refs/13_Premium_DTC/README.md`
    codes on every slot (ONE sentence-case two-line headline, second line tonal, at most one tiny line or three quiet lines, product as an
    object on real material with one hard light and one long shadow, monochrome field, 60% empty, no bullets/icons/badges/caps/logo), each slot
@@ -116,13 +116,13 @@ Every ad gets its own pairing and accent; never two alike in one batch, never th
 
 | Headline face | Partner for supporting text |
 |---|---|
-| Heavy condensed grotesque (the recovery category's look), sentence case or caps | light humanist sans |
+| Heavy condensed grotesque (the performance category's look), sentence case or caps | light humanist sans |
 | Wide extended sans, bold | regular sans |
 | Slab serif, bold | light sans |
 | Elegant high-contrast serif, roman | clean geometric sans |
 | Chunky rounded sans | mono-spaced labels |
 | Thin editorial sans, tracked out | serif body |
-| Stencil / industrial sans (gym signage) | regular sans |
+| Stencil / industrial sans (race-bib and trail signage) | regular sans |
 | Serif with ONE italic word | small-caps sans |
 
 Accent from the scene or product: lemon yellow (the vial label), sky blue, stone; or, chalk white, steel grey, concrete, rubber black, safety-tape yellow (sparingly),

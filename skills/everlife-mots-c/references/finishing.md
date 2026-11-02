@@ -51,7 +51,7 @@ Looks: `default` (house navy/gold) · `tiktok` · `editorial`; vary across a bat
 
 Batch Mode: `finish_batch.py --product mots-c` (see `image-batch.md`). `finish_modern.py` refuses this product until its
 `product_zones` are calibrated in product.json. Legacy `core/scripts/finish_image.py` layouts work (`standard`,
-`checklist`, `article`, `letter`, `split`, `frame`) with `"product"` in copy.json (article kicker defaults to "RECOVERY");
+`checklist`, `article`, `letter`, `split`, `frame`) with `"product"` in copy.json (article kicker defaults to "CELLULAR ENERGY", product.json `kicker_default`);
 `compare` is refused (no approved comparison).
 
 ## 4. Report to the user

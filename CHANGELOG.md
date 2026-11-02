@@ -2,6 +2,23 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — MOTS-c: BPC-157 template leftovers removed (branch `mots-c-skill`)
+Logged before editing. Priestley: "yes start with MOTS-c". The skill was scaffolded from BPC-157 and still carried its recovery
+and gym wording, which would leak into scripts and prompts. Rewritten from `direction.md` (energy and endurance, never physique)
+and the ✅ lines of `product-bible.md` only; no new claims. Originals: `_originals/2026-11-02/motsc-leftovers/`.
+- `video-prompting.md`: hook and authority examples, copy example, banned-word list, offer line ("Save up to 40%"), cast
+  wardrobe, winners note (borrowed winners exist in `winners/winners.md`).
+- `styles/` (INDEX, 1–5): recovery, tissue, joint, ice-bath and gym-bag sub-styles become energy and endurance ones; 2E mechanism
+  map = mitochondria → energy → endurance (✅ lines); the "slate vial" becomes the MOTS-c vial (lemon-yellow label).
+- `image-batch.md`: the "Hardcore gym" and "Boxing gym" moods become "Outdoor endurance at dawn" and "Everyday energy"
+  (direction.md); type-table notes no longer say "recovery category" or "gym signage".
+- `finishing.md`: article kicker default is "CELLULAR ENERGY" (product.json `kicker_default`), not "RECOVERY".
+- `animated-still.md`: gym environment moves (chalk, rubber floor, barbell) become dawn, water and road ones.
+- `lessons.md`: stale BPC-157 notes fixed (pronunciation, caption spelling, "add BPC-157 lessons", GHK-Cu line); the BPC-157
+  batch lessons are kept as tool lessons and labelled; the "blurred plate is the default 9:16 look" lesson is marked superseded
+  by the 2026-10-29 "0 blurring" finishing rule.
+- Kept on purpose: provenance notes ("adapted from BPC-157"), the shared `../everlife-bpc-157/references/vial-refs/` staging folder.
+
 ## 2026-10-30 — MOTS-c: clean-up after test-1 (branch `mots-c-cleanup`, from `mots-c-skill`)
 Logged before editing. Priestley: "yes, do the MOTS-c clean-up now". The skill still carried "⛔ BLOCKED / finisher refuses"
 text from before 938e44f, and "no offer" from before c81cde5, which contradicted SKILL.md. Made on its own branch (this

@@ -12,7 +12,7 @@ approved static, 8 seconds, one slow move, the brand layers crisp on top.
    ```
    Animate this exact image for 8 seconds. Vertical 9:16. The camera pushes in very slowly (about 5%) toward the vial. The vial,
    the label and every word of text stay perfectly still, sharp and unchanged. Only the environment moves: <one of: a slow sweep of
-   hard light across the stone · chalk dust drifting in the beam · heat haze over the rubber floor · a shadow of a barbell passing ·
+   dawn light across the stone · steam rising from a mug · ripples of pool light on the wall · a cyclist's shadow passing ·
    the plaster wall's light cooling as a cloud passes>. No new objects, no hands, no syringe, no needle, no droplets, no text changes,
    no captions, no logo. Natural, premium, calm. No audio.
    ```

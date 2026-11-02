@@ -1,6 +1,6 @@
 # Which reference to use when (MOTS-c)
 
-> **MOTS-c (adapted 2026-10-30 from BPC-157):** active adults 30–55, men and women; energy and endurance, never physique; no weight, fat or body-composition words or images; no disease words. Where this file says BPC-157, gym, bodybuilders or a recovery angle, it describes the template product, not MOTS-c: `direction.md` and `product-bible.md` win.
+> **MOTS-c (adapted 2026-10-30 from BPC-157):** active adults 30–55, men and women; energy and endurance, never physique; no weight, fat or body-composition words or images; no disease words. Template wording cleaned 2026-11-02; if any BPC-157, gym or recovery wording remains, it describes the template product, not MOTS-c: `direction.md` and `product-bible.md` win.
 
 
 The reference library is the SHARED one, `core/references/static-refs/` (13 folders; overview in `OVERVIEW.jpg`; `13_Premium_DTC/`

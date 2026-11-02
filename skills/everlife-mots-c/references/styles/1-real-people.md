@@ -1,15 +1,15 @@
 # Category 1 — Real People Talking (Marketing Studio UGC, ~75 cr / 15 s)
 
 Library folders: UGC · Talking Head Avatar · Conversational · Podcast · Voice Over (boards 2, 4, 6).
-Why it works: recovery is a conversation people already have at the rack and on the trail.
+Why it works: energy and stamina are a conversation people already have on the trail, at work and at the school gate.
 
 ## 1A — Creator to camera (post-session)
 - **Looks like:** a man 30–45 or woman 30–55, still breathing from a session, phone propped on a bench, talking plainly. The product
-  sits in frame; never used. "Recovery has entered the chat."
-- **Lines:** ≤ 35 words, one angle, one quick-hit line, pronoun-free, no "I" (the creator talks about recovery, not about themselves).
+  sits in frame; never used. One ✅ line, e.g. "Supports Endurance."
+- **Lines:** ≤ 35 words, one angle, one quick-hit line, pronoun-free, no "I" (the creator talks about energy and going the distance, not about themselves).
 
 ## 1B — Training-partner POV
-- **Looks like:** two friends racking weights or stretching after a run; one hands the other nothing (no product exchange); the product
+- **Looks like:** two friends cooling down after a run or a ride; one hands the other nothing (no product exchange); the product
   on the bench. Dialogue short, pronoun-free.
 
 ## 1C — Podcast set
