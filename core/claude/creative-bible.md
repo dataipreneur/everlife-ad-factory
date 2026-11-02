@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793650290-a4dd) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793655261-6ce8) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -58,13 +58,17 @@ Applies to every product unless a brief says otherwise
 #### 01 · Product presentation
 - Pills and tablets stay in the foreground — sharp, in focus and held: thumb + index in a “pull,” or resting in an open palm. Never blurred or secondary to the background.
 - Product imagery feels intentional and premium, with the medication clearly visible.
+- The product is always in focus, in every static and video asset.
 - The product name stands out — never hidden or tiny. Exception: advertorial ads driving click-throughs may lead with the angle (e.g. “3-in-1 sleep prescription”).
 
 #### 02 · Proven creative approaches
 - Sexual health: macro shots of women’s lips with a pill, or an attractive woman looking into the camera, pushed to the foreground (neck-up is fine). Keep both as recurring directions.
 - Explore variations of proven approaches — don’t recreate identical compositions.
 - Product first, then brand: “[Product] by Everlife” in every intro — copy, scripts and voiceovers. Never minimize Everlife.
-- Video: the hook lands in the first 2.5 seconds or less.
+
+#### Video
+- The hook or key benefit is both said (voiceover or talent) and shown on screen within the first 2–3 seconds.
+- The product is always in focus whenever it’s on screen — never soft, blurred or racked out of focus.
 
 03 · Logo sizing & placement
 Logo

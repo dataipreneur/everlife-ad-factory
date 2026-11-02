@@ -67,7 +67,8 @@ Disclaimers & AI disclosure:
 
 ## 5. Script gate (video)
 - 7-beat spine: Hook → Authority → Emotion → Visual element → Structure → Connection → Payoff, with a throughline.
-- Visual hook in the first 1–3 seconds. Copy minimal; motion carries emotion, text carries information.
+- The hook or key benefit is both **said** (voiceover or talent) **and shown on screen** within the first 2–3 seconds (bible 2026-11-02). Copy minimal; motion carries emotion, text carries information.
+- The product is always in focus whenever it's on screen: never soft, blurred or racked out of focus (bible 2026-11-02).
 
 ## 6. Production gate
 - Model routing: single locked slow shot / talking head / simple product hero → Boreal-style; multi-scene, camera moves, fast motion, transitions → Seedance.

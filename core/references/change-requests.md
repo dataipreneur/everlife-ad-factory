@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-02 | Justin (bible 1793655261-6ce8, Standards 02) | "The product is always in focus, in every static and video asset." · "The hook or key benefit is both said (voiceover or talent) and shown on screen within the first 2–3 seconds." · "The product is always in focus whenever it's on screen — never soft, blurred or racked out of focus." | Bible synced; gates §5 hook + focus lines; `creative-system.md` multiples line (no blur on the hero). | `bible-sync-6ce8` |
 | 2026-11-02 | Priestley | "It seems trust callout is for videos too." | The 60/40 split now covers video ads: one proof per video in the footer (`core/scripts/proof_next.py`, copy.json `"proof"`); end cards have no separate count line. | `trust-callouts` |
 | 2026-11-02 | Mitansh (NAD+ session) | No incoming-call screens, no Accept / Decline buttons, ever. | New Hard NO in `style-library/STYLES.md`; S15 forum post only, S09 no AirDrop card. | PR #24 |
 | 2026-11-02 | Mitansh (PT-141 batch 11) | "Why the hell are these things blurry on the edges! Who told you to do that!" · "make sure to do it always" · "show me first!" | `reposition_916.py` banned; `mirror_fit_916.py` first for any raw that runs into the footer; show every result before any re-roll. | PR #24 |

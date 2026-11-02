@@ -52,7 +52,9 @@ Never trust the model with a logo, a label, a rating badge, a disclaimer or a pr
 ## 3. The hero is deliberate and sized
 The form's hero (`product.json → hero.element`: the capsule, the tablet, the vial, the spray) fills **≥ 35% of the canvas width**,
 is never abstracted (no glass orbs, icons or silhouettes), and its label follows the curved surface in perspective. Random, tiny or
-duplicated heroes fail QA. Multiples (floating pills, stacked vials) need MANY elements at different depths and blur, not three.
+duplicated heroes fail QA. Multiples (floating pills, stacked vials) need MANY elements at different depths, not three; the hero
+and every label stay sharp (bible 2026-11-02: "the product is always in focus, in every static and video asset"), only background
+repeats may soften.
 `hero.never` lists what must never appear with it (e.g. syringes for a vial).
 
 ## 4. Required strings are prompt strings with a post-check
