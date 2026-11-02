@@ -4,10 +4,10 @@ Library folders: Movie-Peg · Wild-Creative/Surreal · Cause & Effect · Retro �
 
 ## 3A — Object metaphor
 - **Looks like:** a foam roller rolled aside, chalk clapped off hands, laces pulled tight, a strap released: one object, slow, hard light.
-  The product lands last on real material. Line: a ✅ PROVISIONAL benefit ("Supports Joints + Ligaments").
+  The product lands last on real material. Line: a ✅ benefit ("Supports Tendons + Ligaments").
 
 ## 3B — Comedic contrast
-- **Looks like:** an ice bath gasp, then calm: a mug, a bench, the product. Line: a ✅ PROVISIONAL benefit ("Supports Muscle Recovery"). Never a brand, never a body gag.
+- **Looks like:** an ice bath gasp, then calm: a mug, a bench, the product. Line: a ✅ benefit ("Supports Muscle Recovery"). Never a brand, never a body gag.
 
 ## 3C — Animated tissue-signal
 - **Looks like:** a clean line animation of a joint and its connective tissue "supported" (no anatomy gore, no medical labels), landing on the real vial.

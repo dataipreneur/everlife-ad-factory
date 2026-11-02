@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793638690-e4ca) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793642193-f927) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -785,15 +785,8 @@ Trazodone + Hydroxyzine + Doxepin. Attribute each claim only to its own ingredie
 - Decreases nighttime wakefulness
 - Boosts sleep quality
 
-Intimate wellness
-
-## PT-141
-Continued
-Restora-Z
+### Ambien comparison & approved phrasing
 How to compare against Ambien, the claims we can make, and approved alternate phrasing. Global Hard NOs on page 3 still apply.
-Sleep
-Ambien Comparison & Approved Phrasing
-Ambien comparison
 How we’re allowed to compare
 
 #### Rules
@@ -814,7 +807,9 @@ How we’re allowed to compare
 - “Ambien is a common choice for sleep, but its label warns of next-day impairment. Restora-Z members are discovering a non-narcotic, non-addictive path to a restful night.”
 - “Skip the heavy grogginess tied to traditional options like Ambien. Restora-Z delivers a non-narcotic alternative that helps you relax before bed so you can wake up refreshed.”
 
-Restora-Z — continued
+Intimate wellness
+
+## PT-141
 
 ### Who it's for
 Adults 30–55 who want non-hormonal, on-demand desire support.
@@ -846,9 +841,6 @@ More headlines on page 24
 - Non-Hormonal Desire Support
 - Supports Intimate Readiness
 - Supports Central Desire Pathways
-- Gentle on the Vascular System
-- Helps Wake Up the Want
-- Sublingual or Nasal Spray Desire Support
 
 ### CTAs
 - CTA: Support Your Spark
@@ -1779,7 +1771,7 @@ Ad disclaimerDisclaimer pending — add from the disclaimer doc.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Recovery stack
 
-## Spartan Stack (BPC-157/TB500)
+## Spartan Stack (BPC-157/KPV/TB500)
 
 ### Who it's for
 Active men 25–55 training hard and recovering between sessions.
@@ -1789,13 +1781,13 @@ Active men 25–55 training hard and recovering between sessions.
 - Reinforce “Spartan Stack” as the brand name in every asset.
 - No animal death. Fighting imagery is fine without blood or gore.
 
-Dual-peptide recovery stack focused on joints, ligaments, connective tissue, muscle repair, mobility, and gut support.
+3-peptide recovery stack focused on joints, ligaments, connective tissue, muscle repair, mobility, and gut support.
 
 ### Headlines & hooks [Pending approval]
 1. Recover Faster Between Workouts
 2. Train Like a Spartan. Recover Like One.
 3. The Spartan Stack for Serious Recovery
-4. Two Peptides. One Recovery Stack.
+4. Three Peptides. One Recovery Stack.
 
 Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
 
@@ -1805,7 +1797,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Supports Muscle Recovery
 - Supports Mobility + Range of Motion
 - Supports Gut Lining Health
-- Two-Peptide Recovery Stack
+- Three-Peptide Recovery Stack
 - Supports Training Harder, More Often
 
 ### CTAs
@@ -1830,28 +1822,29 @@ Ad disclaimerAI-generated depictions and simulated portrayals used for illustrat
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Recovery stack
 
-## Wolverine Stack (BPC-157/KPV/TB500)
+## Wolverine Stack (BPC-157/TB500)
 
 ### Who it's for
 Active men 25–55 with tissue, mobility and gut recovery goals.
+Product listing: BPC-157 3mg / TB-500 3mg, 5mL vial.
 
 ### Creative direction
 - Talent: fit, rugged men 30–45 with a masculine, performance-driven look. Strong gym talent, intense training, refined execution.
-- Include “Wolverine Stack” and “BPC-157 / KPV / TB-500” on every design.
+- Include “Wolverine Stack” and “BPC-157 / TB-500” on every design.
 - No animal death. Fighting imagery is fine without blood or gore.
 
-3-peptide recovery stack focused on connective tissue, inflammation support, gut lining, mobility, and soft-tissue recovery.
+Dual-peptide recovery stack focused on connective tissue, inflammation support, gut lining, mobility, and soft-tissue recovery.
 
 ### Headlines & hooks [Pending approval]
 1. Bounce Back Stronger
 2. Recover Like Wolverine
 3. The Wolverine Stack for Whole-Body Recovery
-4. 3 Peptides. One Recovery Protocol.
+4. 2 Peptides. One Recovery Protocol.
 
 Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
 
 ### Asana hook options
-1. Three Peptides. One Mission.
+1. Two Peptides. One Mission.
 2. Double Down on Recovery
 3. Recovery, Reinforced
 4. The Heavy-Duty Recovery Stack
@@ -1870,7 +1863,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 5. Built for Heavy Days. Backed by the Wolverine Stack.
 
 ### Quick-hit benefits
-- 3-in-1 Recovery Support
+- 2-in-1 Recovery Support
 - Supports Tendons + Ligaments
 - Supports Gut Lining Health
 - Supports Mobility
@@ -1879,7 +1872,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Promotes Joint Comfort
 - Supports Muscle Recovery
 - Promotes Mobility + Flexibility
-- 3-Peptide Whole-Body Recovery
+- 2-Peptide Whole-Body Recovery
 - Supports Joints, Gut + Mobility in One Stack
 - Supports Connective Tissue Health [Pending approval]
 - Supports Digestive Resilience [Pending approval]

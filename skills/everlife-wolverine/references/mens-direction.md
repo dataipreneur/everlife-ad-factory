@@ -37,7 +37,7 @@ man, the support is in the product.
    sans. Three-word power stacks work (e.g. "TRAIN. RECOVER. REPEAT.": Tier B, needs an OK; the Wolverine page has no ✅ headline yet). Red, chalk
    white or gold accent. Three benefit pills with simple icons when the brief wants bullets; one line when it wants less text.
 6. **Copy register:** plain, blunt, earned. No "bro" slang, no shouting about results. Hooks: only the Wolverine page's lines in
-   `product-bible.md` (⏳ / ⚠ headlines with an OK; ✅ PROVISIONAL benefits). The BPC-157 Men list belongs to another product.
+   `product-bible.md` (⏳ / ⚠ headlines with an OK; ✅ benefits). The BPC-157 Men list belongs to another product.
 
 ## Scene bank (pick one per ad; never repeat in a batch)
 - Loaded barbell on the floor, plates toward camera, the vial standing on the inner plate; chalk dust in the light.
@@ -50,7 +50,7 @@ man, the support is in the product.
 - Cable row from behind: back, traps and tattoos; the product on the machine's frame.
 
 ## Hard lines (compliance, unchanged)
-- Copy: only the seven "Supports…" quick-hit lines; no heal / repair (except the approved "Supports Connective Tissue Repair") / inflammation /
+- Copy: only the ✅ lines in `product-bible.md`; no heal / repair (no repair line is approved: "Supports Tissue Repair" is ⚠ Jeremy) / inflammation /
   pain / injury / torn / boost / fast-as-outcome; no lean / ripped / shred / burn / fat; no "Wolverine"; no "clinically"; no $.
 - Image: no before/after, no body comparison, no competitor or celebrity look-alikes, no needles or injecting, no "No More Needles".
 - Proof: Trustpilot 4.9 Excellent · Doctor Prescribed · Ships Free From Pharmacy.

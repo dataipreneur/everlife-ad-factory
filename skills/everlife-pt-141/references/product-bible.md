@@ -46,9 +46,9 @@ Tier B examples in the agreed register (PROPOSED, need approval): "The spark was
 | Brain-Based Sexual Health Support | headlines | ⏳ Pending approval (bible flag) | "sexual health" edges toward a health/medical frame |
 | Sexual Wellness Starts in the Brain | headlines | ⏳ Pending approval (bible flag) | same |
 | Spark, on Your Schedule · Spark, on Your Terms · A Different Pathway Entirely | headlines | Weak headline (bible flag) | avoid unless the brief asks |
-| Gentle on the Vascular System | quick-hit | ⚠ Jeremy | reads as a safety/medical claim ("no unsupported medical-style claims"); use sparingly, never as the headline |
+| Gentle on the Vascular System | quick-hit | ❌ removed | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate |
 | Activates Desire Signaling … Designed to Support Desire (9 lines) | headline bank | Weak benefit (bible flag) | avoid unless the brief asks |
-| Helps Wake Up the Want · Sublingual or Nasal Spray Desire Support | quick-hit (LIVE page only) | ✅ with note | present on the live bible page 2026-10-28, absent from the 26 Oct export; re-import to confirm |
+| Helps Wake Up the Want · Sublingual or Nasal Spray Desire Support | quick-hit | ❌ removed | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms |
 | Any "ED", "erectile", "performance", "Viagra", "instant", "ignite" | not on this page | ❌ | outside PT-141's approved scope (Spark's "ED" headlines are Pending there, not here) |
 | Any "hormone-free fix", "cure", "treat low libido" | — | ❌ | disease/treatment claim |
 
@@ -92,9 +92,6 @@ Quick-hit benefits
 - —Non-Hormonal Desire Support
 - —Supports Intimate Readiness
 - —Supports Central Desire Pathways
-- —Gentle on the Vascular System
-- —Helps Wake Up the Want   [LIVE page 2026-10-28 screenshot; not in the 26 Oct export]
-- —Sublingual or Nasal Spray Desire Support   [LIVE page 2026-10-28 screenshot; not in the 26 Oct export]
 CTAs
 - Support Your Spark
 - Explore PT-141
