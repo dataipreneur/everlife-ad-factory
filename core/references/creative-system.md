@@ -1,5 +1,7 @@
 # Creative system (shared by every Everlife product skill) — adopted 2026-10-29
 
+> **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
+
 Source: the creative team member's Restora-Z work (audit `my-ad-changes.md`, 2026-10-29) distilled to what holds for ANY form:
 a capsule bottle, a tablet, a vial, a spray, a cream. Mitansh: "add these across all skills". Product-specific facts stay in each
 skill's `product-bible.md` / `product.json`; the form's hero element is `product.json → hero`.
@@ -37,11 +39,23 @@ Never trust the model with a logo, a label, a rating badge, a disclaimer or a pr
   proof row sits in the safe area (ends y 1385), ~32% bigger than the 2026-10-28 size and ~1000 px wide (it crosses the Reels side
   bands by ~116 px: Mitansh 2026-10-29 "it's alright"), and the disclaimer sits at the very bottom of the frame. All of this is the
   shared finisher's default (EVERLIFE_PROOF_SCALE 1.3225, EVERLIFE_PROOF_W 1000, EVERLIFE_DISC_AT bottom): no per-skill setup.
+- **One footer size everywhere (Justin 2026-11-02):** the trust row is 990 px wide and the disclaimer is 18 px Inter Medium,
+  exactly 2 lines, on every creative, image or video ending (`core/tools/standard_footer.py`; every finisher uses it).
+- **Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06; graphics looked cluttered):** **30%** of creatives carry NO proof
+  element; **70%** carry ONE footer proof: of those, **60%** the trust row (Trustpilot / Doctor Prescribed / Ships Free) and **40%** the
+  approved Trustpilot 4.9 Excellent badge + "Over 100,000 happy customers" (Mitansh: "over 100k customers should at least have the
+  trustpilot logo besides it"). Overall ~42% trust / ~28% count / ~30% none (`standard_footer.SHARE`). Images: run
+  `finish_batch.py --proof-plan N` for an N-ad batch (it opens on the trust row), put its answer in the batch table's **Proof**
+  column, and pass it on every finish: `--proof trust` / `--proof count` / `--proof none`. An ad's 4:5 and 9:16 use the same value.
+  Videos too (Priestley 2026-11-02): `core/scripts/proof_next.py --product <id> --log <tag>` → copy.json `"proof"`; the footer
+  carries the one proof (or none) through the end card, which has no count line of its own. Logo and verbatim disclaimer stay on every creative.
 
 ## 3. The hero is deliberate and sized
 The form's hero (`product.json → hero.element`: the capsule, the tablet, the vial, the spray) fills **≥ 35% of the canvas width**,
 is never abstracted (no glass orbs, icons or silhouettes), and its label follows the curved surface in perspective. Random, tiny or
-duplicated heroes fail QA. Multiples (floating pills, stacked vials) need MANY elements at different depths and blur, not three.
+duplicated heroes fail QA. Multiples (floating pills, stacked vials) need MANY elements at different depths, not three; the hero
+and every label stay sharp (bible 2026-11-02: "the product is always in focus, in every static and video asset"), only background
+repeats may soften.
 `hero.never` lists what must never appear with it (e.g. syringes for a vial).
 
 ## 4. Required strings are prompt strings with a post-check

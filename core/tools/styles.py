@@ -2,7 +2,7 @@
 
 Every style keeps the fixed pieces from full_layout: the transparent Trustpilot row + verbatim
 disclaimer at the bottom (drawn by full_layout), the Everlife logo, the ingredient end card with
-each ingredient's own bible claim, the 100,000+ line and the CTA. Only the look changes.
+each ingredient's own bible claim and the CTA (the footer carries the one proof). Only the look changes.
 
   tiktok     native in-app look: headline in white sticker boxes, word-by-word highlighted
              captions, light cream end card
@@ -209,7 +209,7 @@ class TikTok:
         foot = bl.canvas()
         fd = ImageDraw.Draw(foot)
         dy = self._dy
-        bl.centered(fd, 916 + dy, "Over 100,000 happy customers", self.small, self.NAVY)
+        # no customer-count line on the end card: the footer carries this video's one proof (bible 2026-11-02)
         fd.rounded_rectangle([(W - 560) / 2, 956 + dy, (W + 560) / 2, 1022 + dy], 33, fill=self.NAVY)
         bl.centered(fd, 965 + dy, _cased(C["cta"].title(), C), _font(bl, HN, 40, "Bold"), (255, 255, 255))
         if 1022 + dy > self.block_top - 6:
@@ -329,7 +329,7 @@ class Editorial:
             layers.append((f"end_ing{i}.png", round(self.end_t + 0.3 + 0.35 * i, 2), 99))
         foot = bl.canvas()
         fd = ImageDraw.Draw(foot)
-        bl.centered(fd, 880, "Over 100,000 happy customers", _font(bl, HN, 26, "Regular"), self.IVORY)
+        # no customer-count line on the end card: the footer carries this video's one proof (bible 2026-11-02)
         fd.rounded_rectangle([(W - 540) / 2, 926, (W + 540) / 2, 998], 36, outline=self.GOLD, width=3)
         cta = _cased(C["cta"].title(), C)
         bl.centered(fd, 942, cta, _font(bl, f"{SUP}/Baskerville.ttc", 38, "SemiBold"), self.IVORY)

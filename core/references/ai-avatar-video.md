@@ -1,16 +1,22 @@
 # 🧑‍💼 AI Avatar Video (every product skill, from 2026-10-30)
 
+> **⛔ ALL-CREATIFY RULE (Mitansh, 2026-11-02, every skill, every avatar video): "AI Avatar videos always go to Creatify for
+> everything!!! No Higgsfield needed at all!"** Presenter still, presenter video, background, music: ALL on Creatify. **0 Higgsfield
+> credits, never `higgsfield …`, no Marketing Studio product registration needed.** This wins over every older line below or in a
+> skill that mentions Higgsfield / Marketing Studio / 52.5 / 35 credits for this format. Proven: Wolverine
+> `output/Wolverine-Stack/2026-11-02_two-peptides-one-mission` (10 s: 17.45 Creatify, 0 Higgsfield).
+
 A talking presenter holding a TINY wireless mic (see MIC below) stays in the lower-left of the frame as an anchor, while full-bleed B-roll behind
 them changes every 1–2.5 s as a literal metaphor for each line. The house overlays sit on top. The format comes from Spark Base14
 (`~/Everlife-Creative/output/Restora-Z/2026-10-30_nightshift-presenter/source/reference_spark_base14.mp4`). Mitansh, 2026-10-30:
 "the hook was awesome"; this became an option in every skill. Proven jobs: `Restora-Z/2026-10-30_3am-meeting` and
 `Restora-Z/2026-10-30_sheep-quit`.
 
-## ⚡ DEFAULT ROUTE since 2026-10-30 (Mitansh): Higgsfield human + Creatify Boreal-H3 animated background
+## ⚡ DEFAULT ROUTE (2026-11-02): Creatify Seedance human + Creatify Boreal-H3 animated background + Creatify music
 "Boreal h3 1088p should be making a 10-12 second video, of the graphics animation we want… then higgs would add that human
 model on top… cheaper from creatify to make animations for it in the background. Which should involve crazy stuff + our
 product images." This REPLACES the still push-in B-roll (Step 3.2) and wins over anything below that says otherwise:
-1. **Human (Higgsfield Marketing Studio):** a super-realistic presenter on green speaking the script (Step 4, unchanged; tiny mic).
+1. **Human (Creatify Model Playground, Seedance 2.5 image-to-video):** a super-realistic presenter on green speaking the script (Step 4; tiny mic).
 2. **Background (Creatify Boreal-H3, 1088P):** ONE 10–12 s animated clip (or two 5–6 s clips) of bold, wild graphics animation:
    sci-fi / molecular / energy / product-in-motion, built WITH the real product renders. `composer_generate_clip`
    `mode: "r2v"` with `images: [bottle render, tablet render]` (≤ 9 refs), `resolution: "1088P"`, `aspect_ratio: "9:16"`,
@@ -18,14 +24,14 @@ product images." This REPLACES the still push-in B-roll (Step 3.2) and wins over
    timeline that follows the script beats ("0–3 s: … ; 3–6 s: …"), keep the key action in the upper-centre/right with the
    lower-left 45% darker (the presenter goes there), exactly one tablet when a loose tablet appears, label never mirrored or
    altered, no text/numbers/logos except the real label. 768P (≈ ⅓ the price) only for a cheap test.
-3. QA the clip (contact sheet: product exact? label legible? junk text? one tablet?) BEFORE the 52.5 Higgsfield presenter.
+3. QA the clip (contact sheet: product exact? label legible? junk text? one tablet?) BEFORE the Seedance presenter (the biggest Creatify spend).
 4. `$AV bgvideo <job> gen/bg1.mp4 [gen/bg2.mp4]` → `broll_track.mp4` (scaled/cropped to 1080×1920, last frame held to the
    presenter's length so it runs under the end card), then Step 5 (key, composite, full_layout) as usual.
-**Cost per 15 s ad: 52.5 Higgsfield + ~1 Creatify (presenter still) + ~3.6 Creatify (background).**
+**Cost (all Creatify, 0 Higgsfield):** presenter still ~1 · background ~3 (10 s) / ~3.6 (12 s) · Seedance presenter ~1.03 per second (10 s = 10.25, 15 s ≈ 15.4) · music 0.8 per take (men: 2 takes) → **10 s ≈ 16–18, 15 s ≈ 21–23 Creatify.**
+5. **Music (Creatify `composer_generate_music`, Lyria 3 Pro, 0.8 each):** heavy track with a hit at 0.0 s (it is the hook's real sound), ducked under the VO with ffmpeg `sidechaincompress`; check the VO with an unprimed transcript. Men: strong, manly (picked 11-02: hip-hop / hard-rock walk-out; trap-metal also liked). Offer 2 contrasting takes.
 No comedic metaphor hook for Sermorelin GHK (and avoid by default: Mitansh, 2026-10-30).
 
-**Old cost (stills route): 52.5 Higgsfield + ~9 Creatify for a 15 s ad.** A 10 s presenter costs 35. The rest costs 0.
-Never 720p and never Seedance B-roll for this format (that was the 146-credit plan the user rejected: "too too expensive").
+Never 720p and never Seedance B-roll for this format (the 146-credit plan the user rejected: "too too expensive"). Seedance is only for the presenter, at 480p.
 
 The product skill's own rules win on any conflict (casting, colours, banned settings, claims). Global gates and
 `creative-system.md` §0 always apply: the VO says **"<Product> by Everlife"** by about 3 s.
@@ -39,7 +45,7 @@ Images come from the Creatify connector (`composer_edit_image`, GPT Image 2.5, 1
 - **Presenter:** "✨ New presenter for this product (Recommended)" / "Reuse <last presenter still>" / "Two presenters (2 ads)". Casting
   follows the skill (age 45+ by default, warm, casual-premium clothes, holding a TINY wireless mic (MIC below); never a doctor and
   never a white coat; Sermorelin men = fit silver fox, fully clothed; PT-141 = shoulder-up). No green or teal clothing (keying).
-- **Length:** "15 s (Recommended): 52.5 cr" / "10 s: 35 cr".
+- **Length:** "15 s (Recommended): ≈ 22 Creatify, 0 Higgsfield" / "10 s: ≈ 17 Creatify, 0 Higgsfield".
 - **Angle / hook:** "✨ Auto (Recommended)" + 2 approved pain points or benefits. Run the Hook Engine "Pick the opening hook" step.
 
 ## Step 2 · Script (one per ad; approve with the cost in the option)
@@ -61,17 +67,17 @@ Images come from the Creatify connector (`composer_edit_image`, GPT Image 2.5, 1
    the first ("Keep EVERYTHING identical… change only X") so the crossfade lines up.
 3. Contact sheet (`$AV sheet`) → QA every still (product, label, faces, no text) before spending on the presenter.
 
-## Step 4 · Presenter video (Higgsfield Marketing Studio, the approved cost)
-```
-higgsfield generate create marketing_studio_video --prompt "$(cat prompt_presenter.txt)" --mode ugc --duration 15 \
-  --resolution 480p --aspect_ratio 9:16 --generate-audio true --start-image gen/p01_presenter_green.png --json
-higgsfield generate wait <id> --timeout 30m --json > presenter_job.json   # run_in_background; ~7–10 min
-```
-No `--product_ids` (the presenter never holds the product). The prompt: "one continuous locked-off shot… stands waist-up in the
-centre against the same flat chroma-key green backdrop for the whole video; the camera never moves; no props, no product in hands" +
-"She/He says exactly these words and nothing else: "<script>"" + a performance note per line + "finishes speaking by about 13 s,
-then holds a relaxed smile" + "No music, no on-screen text… Nobody says I or my. The filming phone is never visible. No white
-coat." Check the cost first with `higgsfield generate cost …`. 480p is fine because the presenter only fills a corner.
+## Step 4 · Presenter video (Creatify Seedance 2.5, the approved cost; NEVER Higgsfield)
+`model_playground_generate(model_name="bytedance/seedance-2.5/image-to-video", input_params={"image_url": <the presenter
+still's Creatify cdn url from footage_urls>, "duration": "10"|"15", "resolution": "480p", "generate_audio": true, "prompt": …})`.
+The result card self-updates: do NOT loop `model_playground_get`; wait with a background `sleep 240`, then check once and curl
+`outputs[0].url` → `out/presenter_raw.mp4`. The prompt: "One continuous locked-off shot; the camera never moves, no zoom, no cuts.
+The same <man|woman> from the start image… stands waist-up in the centre against the same perfectly flat chroma-key green backdrop
+for the whole video… holds the same tiny furry wireless mic… No props, no product, no text." + "He/She starts speaking at the
+very first frame… says exactly these words and nothing else, in English: "<script>"" + the phonetic pronunciation + a performance
+note per line + "finishes speaking by about <8.5 | 13> seconds, then holds a relaxed, confident look" + "Audio: only the voice, no
+music, no sound effects. Nobody says I or my. No white coat." 480p is fine because the presenter only fills a corner.
+(Wolverine 2026-11-02: every word exact, locked shot, mic kept, 10.25 Creatify.)
 
 While it renders: write `plan.json`, build the B-roll (`$AV broll <job> plan.json`) and the free animatic
 (`$AV animatic <job> gen/p01_presenter_green.png`). For a new format or cast, show the animatic before step 4.

@@ -34,6 +34,7 @@ disclaimer verbatim · landing page (facts only).
   between 8% and 58% of the height; 9:16 statics from the approved 4:5.
 - Intimate wellness: no beds, bedrooms, lingerie, couples, lips; shoulder-up. Peptides: never needles, syringes or "needle-free".
 - Higgsfield "no response received" = the upload failing: upload first (`higgsfield upload create`) and pass the IDs.
+- **The 15 Drive styles in the image Mood question (REQUIRED, Mitansh 2026-11-02).** Add the 🎨 MOOD override line from `core/references/style-library/MOOD-QUESTION.md` right above the skill's image Mood (or Frameworks) question: option 1 "🎲 Surprise me (Recommended)" = `core/scripts/pick_styles.py`, option 2 "📚 Pick from the 15 styles", options 3–4 = the product's own top moods. Add product notes to `core/references/style-library/STYLES.md` if a style needs a product-specific gate.
 - **"✨ Ultra premium, product only" in the image setup (REQUIRED, Mitansh 2026-11-02).** Every product offers it: as a Mood option
   where the skill asks mood (SKILL.md or image-batch.md, asked ONCE, never in both), else as a "Look" question in the image round.
   It points to `core/references/ultra-premium.md`; add the product's row to that file's "Per product" table (its own field colour,
@@ -43,6 +44,9 @@ disclaimer verbatim · landing page (facts only).
 - **"🧑‍💼 AI Avatar Video" in "What are we making?" (REQUIRED, Mitansh 2026-11-02).** Offer it in the format question (max 4 options:
   merge "Video ad or animated still" if needed) with a bullet pointing to `core/references/ai-avatar-video.md` and naming this product's casting,
   hero form and banned settings. Register the product in Higgsfield Marketing Studio (preflight prints the command).
+- **Winners Board (REQUIRED, Priestley 2026-11-02).** `references/image-batch.md` reads the shared board before the batch
+  table and ends "After the batch" with the "Rate the batch (Winners Board)" step, both pointing at
+  `core/winners-board/WINNERS-BOARD.md` (§4 read, §5 write). Use the new product's `product.json` id as `product` on the board.
 
 ## 3b. Lessons from the 7-product build (2026-11-02): check these before the first test
 - **Template leftovers are words, not just the name.** The 7 skills kept ~150 lines of their template's world (BPC-157:

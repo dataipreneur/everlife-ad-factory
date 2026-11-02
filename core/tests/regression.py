@@ -187,6 +187,22 @@ def smoke(core, out):
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"Sermorelin video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "12.8"], True)
+    d = os.path.join(out, "sg_count")   # bible 2026-11-02: a ~40% video carries the customer count instead of the trust row
+    os.makedirs(os.path.join(d, "layers_full"))
+    json.dump(dict(sg, proof="count"), open(os.path.join(d, "copy.json"), "w"))
+    cache = os.path.join(d, "layers_full", "T_caps.json")
+    json.dump([[0.4, 2.4, "AGE HITS GROWTH HORMONE.", [[0.4, 0.8], [0.8, 1.3], [1.3, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+    os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+    expect("Sermorelin video renders with the customer count instead of the trust row (proof: count)",
+           [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "12.8"], True)
+    d = os.path.join(out, "sg_none")   # split 2026-11-02: ~30% of videos carry no proof element (disclaimer + logo only)
+    os.makedirs(os.path.join(d, "layers_full"))
+    json.dump(dict(sg, proof="none"), open(os.path.join(d, "copy.json"), "w"))
+    cache = os.path.join(d, "layers_full", "T_caps.json")
+    json.dump([[0.4, 2.4, "AGE HITS GROWTH HORMONE.", [[0.4, 0.8], [0.8, 1.3], [1.3, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+    os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+    expect("Sermorelin video renders with no proof element (proof: none)",
+           [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "12.8"], True)
     d = os.path.join(out, "sg_static"); os.makedirs(d)
     cp = os.path.join(d, "copy.json"); json.dump(dict(sg, m_head="Power your prime.|*3-in-1.*"), open(cp, "w"))
     expect("finish_batch takes the Sermorelin disclaimer from --product",
@@ -194,6 +210,16 @@ def smoke(core, out):
     expect("finish_batch refuses a disclaimer that isn't the product's",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "sermorelin-ghk",
             "--disclaimer", RZ_DISC], False, "differs")
+    expect("finish_batch lays the customer-count line instead of the trust row (--proof count)",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "count.png"), "--product", "sermorelin-ghk",
+            "--proof", "count"], True, "proof=count")
+    expect("finish_batch --proof-plan splits a batch ~42/28/30 trust/count/none, opening on trust",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), "--proof-plan", "10"], True, "ad 1: --proof trust")
+    expect("finish_batch --proof-plan gives 4 trust / 3 count / 3 none for 10 ads",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), "--proof-plan", "10"], True, "ad 10: --proof count")
+    expect("finish_batch lays no proof element (--proof none)",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "none.png"), "--product", "sermorelin-ghk",
+            "--proof", "none"], True, "proof=none")
     expect("finish_modern refuses an uncalibrated product",
            [PY, "-I", os.path.join(T, "finish_modern.py"), raw, cp, os.path.join(d, "x.png")], False, "product_zones")
     expect("finish_image refuses compare for a product without an approved comparison",
@@ -366,6 +392,31 @@ def smoke(core, out):
         expect(f"Lovara video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
 
+    # Epithalon (Rx vial): the bible's disclaimer is pending; product.json carries the provisional standard text
+    # (Priestley 2026-11-02). Statics take it; it refuses another product's; video end cards render the vial in two looks
+    d = os.path.join(out, "ep_static"); os.makedirs(d)
+    expect("finish_batch renders Epithalon with its provisional disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "epithalon"], True)
+    expect("Epithalon refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "epithalon",
+            "--disclaimer", RZ_DISC], False, "differs")
+    ep = {"product": "epithalon", "head": ["EPITHALON BY EVERLIFE"], "head_always": True,
+          "end_head": ["SUPPORTS", "HEALTHY AGING"],
+          "benefits": ["Supports Healthy Aging", "Supports Oxidative Stress Defense", "Doctor Prescribed"],
+          "ingredients_label": "HEALTHY AGING",
+          "ingredients": [["AGING", "Supports Healthy Aging"], ["DEFENSE", "Supports Oxidative Stress Defense"],
+                          ["PHARMACY", "Doctor Prescribed"]],
+          "cta": "START LONGEVITY SUPPORT", "vocab": "Epithalon."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"ep_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(ep, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SUPPORTS HEALTHY AGING", [[0.4, 1.1], [1.1, 1.6], [1.6, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Epithalon video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
     # Spark (sublingual tablet): statics take its disclaimer; video end cards render the bottle + tablet
     d = os.path.join(out, "sk_static"); os.makedirs(d)
     expect("finish_batch takes the Spark disclaimer from --product",
@@ -411,6 +462,32 @@ def smoke(core, out):
         json.dump([[0.4, 2.4, "WHEN IT'S GO TIME, BE READY", [[0.4, 0.9], [0.9, 1.3], [1.3, 1.8], [1.8, 2.3]]]], open(cache, "w"))
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"Titan-Rx video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # GHK Peptide Cream (topical cream, pump bottle, no tablet; PROVISIONAL standard disclaimer): statics take its
+    # disclaimer; video end cards render the bottle alone
+    d = os.path.join(out, "gc_static"); os.makedirs(d)
+    expect("finish_batch takes the GHK Peptide Cream disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "ghk-cream"], True)
+    expect("GHK Peptide Cream refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "ghk-cream",
+            "--disclaimer", RZ_DISC], False, "differs")
+    gc = {"product": "ghk-cream", "head": ["GHK PEPTIDE CREAM BY EVERLIFE"], "head_always": True,
+          "end_head": ["FIRMER-LOOKING SKIN", "STARTS WITH SUPPORT"],
+          "benefits": ["Supports Collagen + Elastin", "Supports Smoother-Looking Texture",
+                       "Supports a Brighter, More Even-Looking Tone"],
+          "ingredients_label": "PEPTIDE SKIN SUPPORT",
+          "ingredients": [["COLLAGEN", "Supports Collagen + Elastin"], ["TEXTURE", "Supports Smoother-Looking Texture"],
+                          ["TONE", "Supports a Brighter, More Even-Looking Tone"]],
+          "cta": "SUPPORT FIRMER SKIN", "vocab": "GHK Peptide Cream."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"gc_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(gc, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "PEPTIDE-POWERED SKIN SUPPORT", [[0.4, 1.2], [1.2, 1.7], [1.7, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"GHK Peptide Cream video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")

@@ -1,0 +1,886 @@
+<title>Everlife Winners Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a pharmacy-ledger tool. Sticky control bar, a review queue or a three-lane board (Winners / Active / Retired), forms in dialogs. */
+:root {
+  --bg: #f5f7f6;
+  --surface: #ffffff;
+  --sunken: #e9eeec;
+  --ink: #15201d;
+  --muted: #56645f;
+  --line: #d3dcd8;
+  --accent: #0d5c55;
+  --accent-ink: #ffffff;
+  --winner: #8a5a00;
+  --winner-bg: #fbefd2;
+  --good: #1d6b3a;
+  --good-bg: #dcf0e2;
+  --weak: #5b5f66;
+  --weak-bg: #e6e8eb;
+  --kill: #a3261d;
+  --kill-bg: #f8dedb;
+  --focus: #1a73b8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+    --accent: #4fb8ac; --accent-ink: #06201d;
+    --winner: #f0c060; --winner-bg: #3a2c0c; --good: #74d197; --good-bg: #133222;
+    --weak: #b4b9c0; --weak-bg: #2a2e33; --kill: #f08a80; --kill-bg: #3e1816; --focus: #6cb6f0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+  --accent: #4fb8ac; --accent-ink: #06201d;
+  --winner: #f0c060; --winner-bg: #3a2c0c; --good: #74d197; --good-bg: #133222;
+  --weak: #b4b9c0; --weak-bg: #2a2e33; --kill: #f08a80; --kill-bg: #3e1816; --focus: #6cb6f0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 22px 10px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; justify-content: space-between; }
+h1 { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 62ch; }
+.who { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--sunken); color: var(--muted); letter-spacing: .02em; }
+.chip.role { background: var(--accent); color: var(--accent-ink); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-block: 10px; }
+label.inline { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+select, input, textarea { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; min-width: 0; }
+textarea { width: 100%; min-height: 64px; resize: vertical; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; background: var(--surface); color: var(--muted); padding: 7px 12px; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+button { font: inherit; font-weight: 600; cursor: pointer; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 7px 12px; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button.danger { color: var(--kill); border-color: var(--kill); background: transparent; }
+button.link { border: 0; background: transparent; padding: 2px 4px; color: var(--accent); font-weight: 600; font-size: 13px; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.spacer { flex: 1; }
+.status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
+.status.warn { color: var(--kill); }
+.summary { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-block: 14px 6px; font-size: 14px; }
+.summary b { font-family: var(--f-display); font-stretch: 85%; font-size: 22px; font-variant-numeric: tabular-nums; margin-right: 4px; }
+.lanes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-block: 12px 40px; }
+@media (max-width: 900px) { .lanes { grid-template-columns: 1fr; } }
+.queue { padding-block: 12px 40px; display: grid; gap: 10px; }
+.queue .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 12px; }
+.lane h2, .panel h2 { font-family: var(--f-display); font-stretch: 80%; font-size: 18px; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; display: flex; gap: 8px; align-items: baseline; }
+.lane h2 small, .panel h2 small { font-family: var(--f-mono); font-size: 12px; color: var(--muted); letter-spacing: 0; text-transform: none; }
+.hint { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+.cards { display: flex; flex-direction: column; gap: 10px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px 12px; min-width: 0; align-content: start; }
+.card > .body { display: flex; flex-direction: column; gap: 8px; min-width: 0; grid-column: 2; }
+.card.nothumb > .body { grid-column: 1 / -1; }
+.card.winner { border-left: 4px solid var(--winner); }
+.card.retired { opacity: .85; }
+.thumb { grid-column: 1; width: 160px; border-radius: 6px; background: var(--sunken); overflow: hidden; align-self: start; }
+@media (max-width: 520px) { .thumb { width: 120px; } }
+.thumb img { display: block; width: 100%; height: auto; }
+button.thumb { padding: 0; border: 1px solid var(--line); cursor: zoom-in; font-weight: 400; }
+button.thumb:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#viewDlg { width: min(760px, calc(100vw - 32px)); }
+.viewer { padding: 14px 16px; display: grid; gap: 10px; }
+.viewer img { display: block; max-width: 100%; max-height: calc(100vh - 190px); width: auto; height: auto; margin: 0 auto; border-radius: 6px; background: var(--sunken); }
+.viewer .head { display: flex; gap: 8px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+#reviewImg { display: block; max-width: 100%; max-height: 45vh; width: auto; margin: 0 auto; border-radius: 6px; }
+.thumb .ph { aspect-ratio: 4 / 5; display: grid; place-items: center; font-size: 11px; color: var(--muted); text-align: center; padding: 4px; }
+.card .head { display: flex; gap: 8px; align-items: start; justify-content: space-between; }
+.card .title { font-weight: 600; overflow-wrap: anywhere; }
+.meta-line { font-size: 12.5px; color: var(--muted); font-family: var(--f-mono); overflow-wrap: anywhere; }
+.decided { font-size: 12px; color: var(--muted); }
+.badge { font-family: var(--f-mono); font-size: 11.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+.r-winner { background: var(--winner-bg); color: var(--winner); }
+.r-good { background: var(--good-bg); color: var(--good); }
+.r-weak { background: var(--weak-bg); color: var(--weak); }
+.r-kill { background: var(--kill-bg); color: var(--kill); }
+.recipe { display: flex; flex-wrap: wrap; gap: 4px; }
+.recipe span { font-size: 12px; background: var(--sunken); border-radius: 4px; padding: 2px 6px; overflow-wrap: anywhere; }
+.recipe span i { font-style: normal; color: var(--muted); }
+.nums { display: flex; flex-wrap: wrap; gap: 4px 14px; font-family: var(--f-mono); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.nums .src { color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 4px; }
+.confirm { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; }
+.reviews { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 8px; }
+.review { display: grid; gap: 2px; font-size: 13.5px; }
+.review .rh { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12.5px; color: var(--muted); }
+.review p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; }
+.empty-hero { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; margin-block: 14px; display: grid; gap: 10px; }
+.empty-hero h2 { font-family: var(--f-display); font-stretch: 80%; margin: 0; font-size: 22px; }
+.empty-hero ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; max-width: 70ch; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-block: 12px 4px; display: grid; gap: 10px; }
+.notes { display: grid; gap: 8px; }
+.note { display: grid; gap: 2px; font-size: 14px; border-left: 3px solid var(--line); padding-left: 10px; }
+.note p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 80ch; }
+.noteform { display: grid; gap: 6px; }
+.noteform .row { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; align-items: center; }
+dialog { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); padding: 0; width: min(640px, calc(100vw - 32px)); max-height: calc(100vh - 48px); }
+dialog::backdrop { background: rgba(0,0,0,.45); }
+dialog form { padding: 18px; display: grid; gap: 12px; }
+dialog h3 { font-family: var(--f-display); font-stretch: 80%; font-size: 22px; margin: 0; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 520px) { .grid2 { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 4px; font-size: 13px; color: var(--muted); min-width: 0; }
+.field > input, .field > select, .field > textarea { width: 100%; }
+fieldset { border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin: 0; min-width: 0; }
+legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
+.ratings { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+@media (max-width: 520px) { .ratings { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ratings label { display: flex; gap: 6px; align-items: center; border: 1px solid var(--line); border-radius: 6px; padding: 7px 8px; color: var(--ink); font-size: 14px; cursor: pointer; }
+.formfoot { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; align-items: center; }
+.formerr { color: var(--kill); font-size: 13px; flex: 1; min-width: 0; }
+.legend-line { font-size: 13px; color: var(--muted); padding-block: 4px 0; margin: 0; }
+.count { font-size: 12px; color: var(--muted); text-align: right; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="wrap top">
+  <div>
+    <h1>Everlife Winners Board</h1>
+    <p class="sub">Ratings and reviews for every hook and image ad, shared by the team. Claude reads this board before each batch and writes the ratings after it. Meta results come first, then the reviewers, then the operator.</p>
+  </div>
+  <div class="who"><span class="chip role" id="roleChip">Connecting…</span><span class="chip" id="countChip">0 entries</span></div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" data-view="board" aria-pressed="true">Board</button>
+      <button type="button" data-view="queue" aria-pressed="false" id="queueBtn">To review</button>
+    </div>
+    <label class="inline" for="fProduct">Product
+      <select id="fProduct"><option value="">All products</option></select>
+    </label>
+    <div class="seg" role="group" aria-label="Kind">
+      <button type="button" data-kind="" aria-pressed="true">All</button>
+      <button type="button" data-kind="hook" aria-pressed="false">Video hooks</button>
+      <button type="button" data-kind="image" aria-pressed="false">Image ads</button>
+    </div>
+    <span class="spacer"></span>
+    <button type="button" id="exportBtn" hidden>Export JSON</button>
+    <button type="button" class="primary" id="rateBtn" hidden>Rate an ad</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="status" id="status" role="status">Loading the board…</div>
+  <div id="emptyHero" class="empty-hero" hidden>
+    <h2>No ratings yet</h2>
+    <p style="margin:0">The board fills as the team rates finished work. Each rating becomes a card here with a preview of the ad, sorted into Winners, Active and Retired.</p>
+    <ol>
+      <li>After a video or an image batch, the operator's Claude asks one question per ad (Winner / Good / Weak / Kill) and writes it here with its recipe and a preview.</li>
+      <li>Reviewers open "To review", rate each ad and leave feedback. Their majority decides over the operator's rating.</li>
+      <li>When an ad has run, add its Meta results (CTR, CPA, hook rate). They decide over everything else.</li>
+    </ol>
+    <p style="margin:0" id="emptyAction"></p>
+  </div>
+  <section class="panel" id="notesPanel" hidden>
+    <h2>Product feedback <small id="notesCount"></small></h2>
+    <p class="hint" style="margin:0" id="notesHint"></p>
+    <div class="notes" id="notesList"></div>
+    <form class="noteform" id="noteForm" hidden novalidate>
+      <label class="field" for="noteText">Overall feedback for this product (Claude reads it before the next batch)
+        <textarea id="noteText" maxlength="800" placeholder="e.g. Headlines run too small on 9:16. More bright daylight scenes."></textarea>
+      </label>
+      <div class="row"><span class="formerr" id="noteErr"></span><button type="button" id="noteCancel" hidden>Cancel edit</button><button type="submit" class="primary" id="noteSave">Add note</button></div>
+    </form>
+  </section>
+  <div class="summary" id="summary" hidden></div>
+  <p class="legend-line" id="barLine" hidden></p>
+  <section class="queue" id="queue" hidden>
+    <div class="panel" style="margin:0">
+      <h2>To review <small id="queueCount"></small></h2>
+      <div class="seg" role="group" aria-label="Which ads">
+        <button type="button" data-q="none" aria-pressed="true">No review yet</button>
+        <button type="button" data-q="mine" aria-pressed="false">Not reviewed by me</button>
+      </div>
+    </div>
+    <div class="cards"></div>
+  </section>
+  <section class="lanes" id="lanes" hidden>
+    <div class="lane" id="lane-winner"><h2>Winners <small></small></h2><p class="hint">Future batches include one ad that reuses the recipe with exactly one variable changed.</p><div class="cards"></div></div>
+    <div class="lane" id="lane-active"><h2>Active <small></small></h2><p class="hint">Rated Good. Counts toward the quality bar.</p><div class="cards"></div></div>
+    <div class="lane" id="lane-retired"><h2>Retired <small></small></h2><p class="hint">Rated Weak or Kill. Never pitched again for this product unless asked.</p><div class="cards"></div></div>
+  </section>
+</main>
+
+<dialog id="rateDlg">
+  <form id="rateForm" method="dialog" novalidate>
+    <h3 id="rateTitle">Rate an ad</h3>
+    <div class="grid2">
+      <label class="field" for="rKind">Kind
+        <select id="rKind"><option value="hook">Video hook</option><option value="image">Image ad</option></select>
+      </label>
+      <label class="field" for="rProduct">Product
+        <select id="rProduct"></select>
+      </label>
+    </div>
+    <label class="field" for="rLabel">Short name (what the team calls it)
+      <input id="rLabel" maxlength="120" placeholder="e.g. IMPACT · bottle slides down counter">
+    </label>
+    <fieldset id="recipeHook">
+      <legend>Hook recipe</legend>
+      <div class="grid2">
+        <label class="field" for="hFamily">Family<select id="hFamily"></select></label>
+        <label class="field" for="hMechanic">Mechanic (5 words)<input id="hMechanic" maxlength="80"></label>
+        <label class="field" for="hRoute">Route<input id="hRoute" maxlength="80" placeholder="Seedance / MS Product Dodge / Boreal"></label>
+        <label class="field" for="hFrame0">Frame 0<input id="hFrame0" maxlength="160"></label>
+        <label class="field" for="hSound">Sound at 0.0 s<input id="hSound" maxlength="80"></label>
+        <label class="field" for="hScore">HOOK-10 score<input id="hScore" type="number" min="0" max="10" step="1"></label>
+      </div>
+    </fieldset>
+    <fieldset id="recipeImage" hidden>
+      <legend>Image recipe</legend>
+      <div class="grid2">
+        <label class="field" for="iFramework">Framework<input id="iFramework" maxlength="60" placeholder="F2 Bold Claim"></label>
+        <label class="field" for="iStructure">Structure<input id="iStructure" maxlength="60" placeholder="split / poster / article…"></label>
+        <label class="field" for="iScene">Scene<input id="iScene" maxlength="80"></label>
+        <label class="field" for="iLight">Light<input id="iLight" maxlength="60"></label>
+        <label class="field" for="iComposition">Composition<input id="iComposition" maxlength="80"></label>
+        <label class="field" for="iAngle">Product angle<input id="iAngle" maxlength="60"></label>
+        <label class="field" for="iTypeface">Typeface<input id="iTypeface" maxlength="80"></label>
+        <label class="field" for="iPalette">Palette<input id="iPalette" maxlength="80"></label>
+        <label class="field" for="iNameT">Product-name treatment<input id="iNameT" maxlength="60"></label>
+        <label class="field" for="iHeadPl">Headline placement<input id="iHeadPl" maxlength="60"></label>
+        <label class="field" for="iHeadline">Headline (exact)<input id="iHeadline" maxlength="140"></label>
+        <label class="field" for="iSource">Source (winner ID / Meta / Pinterest)<input id="iSource" maxlength="80"></label>
+        <label class="field" for="iAudience">Audience<input id="iAudience" maxlength="30" placeholder="men / women / both"></label>
+        <label class="field" for="iRatio">Ratio · model<input id="iRatio" maxlength="60" placeholder="4:5 · GPT Image 2.5"></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Operator rating</legend>
+      <div class="ratings" id="rRatings"></div>
+    </fieldset>
+    <div class="grid2">
+      <label class="field" for="rJob">Job folder<input id="rJob" maxlength="200" placeholder="~/Everlife-Creative/output/…"></label>
+      <label class="field" for="rDate">Date<input id="rDate" type="date"></label>
+      <label class="field" for="rParent">Mutation of (winner)<select id="rParent"><option value="">Not a mutation</option></select></label>
+      <label class="field" for="rMutated">The one variable changed<input id="rMutated" maxlength="40" placeholder="scene / palette / object…"></label>
+    </div>
+    <label class="field" for="rNotes">Notes<textarea id="rNotes" maxlength="600"></textarea></label>
+    <div class="formfoot"><span class="formerr" id="rateErr"></span><button type="button" id="rateCancel">Cancel</button><button type="submit" class="primary" id="rateSave">Save rating</button></div>
+  </form>
+</dialog>
+
+<dialog id="reviewDlg">
+  <form id="reviewForm" method="dialog" novalidate>
+    <h3 id="reviewTitle">Review this ad</h3>
+    <p class="meta-line" id="reviewFor" style="margin:0"></p>
+    <img id="reviewImg" alt="" hidden>
+    <fieldset>
+      <legend>Your rating</legend>
+      <div class="ratings" id="vRatings"></div>
+    </fieldset>
+    <label class="field" for="vFeedback">Feedback (what works, what to change next time)
+      <textarea id="vFeedback" maxlength="800" style="min-height:110px"></textarea>
+    </label>
+    <div class="count" id="vCount">0 / 800</div>
+    <div class="formfoot"><span class="formerr" id="reviewErr"></span><button type="button" id="reviewCancel">Cancel</button><button type="submit" class="primary" id="reviewSave">Save review</button></div>
+  </form>
+</dialog>
+
+<dialog id="metaDlg">
+  <form id="metaForm" method="dialog" novalidate>
+    <h3>Add Meta results</h3>
+    <p class="meta-line" id="metaFor" style="margin:0"></p>
+    <div class="grid2">
+      <label class="field" for="mCtr">CTR (%)<input id="mCtr" type="number" step="0.01" min="0"></label>
+      <label class="field" for="mCpa">CPA ($)<input id="mCpa" type="number" step="0.01" min="0"></label>
+      <label class="field" for="mHook">Hook rate / thumb-stop (%)<input id="mHook" type="number" step="0.1" min="0"></label>
+      <label class="field" for="mSpend">Spend ($)<input id="mSpend" type="number" step="1" min="0"></label>
+      <label class="field" for="mFrom">Results from<input id="mFrom" type="date"></label>
+      <label class="field" for="mTo">Results to<input id="mTo" type="date"></label>
+    </div>
+    <fieldset>
+      <legend>Verdict from the numbers (decides over reviewers and operator)</legend>
+      <div class="ratings" id="mRatings"></div>
+    </fieldset>
+    <label class="field" for="mNotes">Notes<textarea id="mNotes" maxlength="400"></textarea></label>
+    <div class="formfoot"><span class="formerr" id="metaErr"></span><button type="button" id="metaCancel">Cancel</button><button type="submit" class="primary" id="metaSave">Save results</button></div>
+  </form>
+</dialog>
+
+<dialog id="viewDlg" aria-labelledby="viewTitle">
+  <div class="viewer">
+    <div class="head"><strong id="viewTitle"></strong><span id="viewBadge"></span></div>
+    <p class="meta-line" id="viewMeta" style="margin:0"></p>
+    <img id="viewImg" alt="">
+    <div class="formfoot"><button type="button" id="viewClose">Close</button><button type="button" class="primary" id="viewReview" hidden>Review</button></div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const PRODUCTS = [
+    ["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],
+    ["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],
+    ["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]
+  ];
+  const FAMILIES = ["IMPACT","INTERRUPTION","ABSURD ESCALATION","SAME-FRAME FLIP","POV / ODD ANGLE","SOUND-FIRST","STREET / INTERVIEW","MISDIRECTION","SPEED","CONTRAST SPLIT"];
+  const RATINGS = [["winner","Winner"],["good","Good"],["weak","Weak"],["kill","Kill"]];
+  const RANK = { kill: 0, weak: 1, good: 2, winner: 3 };
+  const STATUS_OF = { winner: "winner", good: "active", weak: "retired", kill: "retired" };
+  const PREVIEW_RE = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/;
+  const $ = (id) => document.getElementById(id);
+  const productName = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id])[1];
+  const ratingLabel = (r) => (RATINGS.find(x => x[0] === r) || [r, r])[1];
+
+  const state = {
+    db: null, user: null, downloads: null, me: null, role: "view", canWrite: false, isAdmin: false,
+    raters: new Map(), subs: new Map(), docs: new Map(), loaded: false,
+    filter: { product: "", kind: "" }, view: "board", queueMode: "none",
+    editing: null, metaTarget: null, reviewTarget: null, editingNote: null, confirmDel: null,
+    previews: new Map(), previewLoading: new Set()
+  };
+
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) {
+      if (v == null || v === false) continue;
+      if (k === "class") el.className = v; else if (k.startsWith("on")) el.addEventListener(k.slice(2), v); else el.setAttribute(k, v === true ? "" : v);
+    }
+    for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+    return el;
+  }
+  function setStatus(msg, warn) { const s = $("status"); s.textContent = msg || ""; s.classList.toggle("warn", !!warn); }
+  function today() { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function median(nums) { if (!nums.length) return null; const s = [...nums].sort((a, b) => a - b); const m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; }
+  function numOrNull(v) { if (v === "" || v == null) return null; const n = Number(v); return Number.isFinite(n) ? n : null; }
+  function shortDate(iso) { return iso ? String(iso).slice(0, 10) : ""; }
+  const newest = (a, b) => String(b.createdAt || "").localeCompare(String(a.createdAt || ""));
+  function splitKey(key) { const i = key.indexOf("/"); return [key.slice(0, i), key.slice(i + 1)]; }
+  function docRef(key) { const [uid, id] = splitKey(key); return state.db.collection("data/users/" + uid).doc(id); }
+
+  // ---------- derived data ----------
+  function ofType(type) { const out = []; for (const [key, d] of state.docs) if (d.type === type) out.push({ key, ...d }); return out; }
+  function allEntries() { return ofType("entry"); }
+  function metaFor(key) { return ofType("meta").filter(d => d.target === key).sort(newest); }
+  function reviewsFor(key) { return ofType("review").filter(d => d.target === key).sort(newest); }
+  function latestReviewPerReviewer(key) {
+    const seen = new Map();
+    for (const r of reviewsFor(key)) if (r.by && RANK[r.rating] != null && !seen.has(r.by)) seen.set(r.by, r);
+    return [...seen.values()];
+  }
+  function myReview(key) { return state.me ? reviewsFor(key).find(r => r.by === state.me) || null : null; }
+  function effective(e) {
+    const metas = metaFor(e.key);
+    const m = metas[0] || null;
+    if (m && RANK[m.verdict] != null) return { rating: m.verdict, status: STATUS_OF[m.verdict], source: "Meta", meta: m, metaCount: metas.length };
+    const revs = latestReviewPerReviewer(e.key);
+    if (revs.length) {
+      const counts = { winner: 0, good: 0, weak: 0, kill: 0 };
+      for (const r of revs) counts[r.rating]++;
+      const best = Object.keys(counts).sort((a, b) => (counts[b] - counts[a]) || (RANK[a] - RANK[b]))[0];
+      return { rating: best, status: STATUS_OF[best], source: "Reviewers " + counts[best] + "–" + (revs.length - counts[best]), meta: m, metaCount: metas.length };
+    }
+    const r = RANK[e.rating] != null ? e.rating : "good";
+    return { rating: r, status: STATUS_OF[r], source: "Operator", meta: m, metaCount: metas.length };
+  }
+  function filtered() {
+    const f = state.filter;
+    return allEntries().filter(e => (!f.product || e.product === f.product) && (!f.kind || e.kind === f.kind)).sort(newest);
+  }
+  function needsReview(e) {
+    return state.queueMode === "mine" ? !myReview(e.key) : reviewsFor(e.key).length === 0;
+  }
+
+  // ---------- previews ----------
+  function previewKey(e) { return e.key + "@" + ((e.preview && e.preview.updatedAt) || ""); }
+  function loadPreview(e) {
+    const pk = previewKey(e);
+    if (state.previews.has(pk) || state.previewLoading.has(pk) || !state.db) return;
+    state.previewLoading.add(pk);
+    docRef(e.key).collection("preview").doc("img").get().then((snap) => {
+      const d = snap.exists ? snap.data() : null;
+      state.previews.set(pk, d && typeof d.data === "string" && PREVIEW_RE.test(d.data) ? d.data : "");
+    }).catch(() => state.previews.set(pk, "")).finally(() => { state.previewLoading.delete(pk); queueRender(); });
+  }
+  function thumb(e) {
+    if (!e.preview) return null;
+    const pk = previewKey(e);
+    if (!state.previews.has(pk)) { loadPreview(e); return h("div", { class: "thumb" }, h("div", { class: "ph" }, "Loading preview")); }
+    const src = state.previews.get(pk);
+    if (!src) return h("div", { class: "thumb" }, h("div", { class: "ph" }, "No preview"));
+    return h("button", { type: "button", class: "thumb", title: "Open full size", "aria-label": "Open " + (e.label || "the ad") + " full size", onclick: () => openView(e) },
+      h("img", { src, alt: "", loading: "lazy" }));
+  }
+  function previewSrc(e) { return (e && e.preview && state.previews.get(previewKey(e))) || ""; }
+  function openView(e) {
+    const src = previewSrc(e);
+    if (!src) return;
+    const eff = effective(e);
+    state.viewTarget = e;
+    $("viewTitle").textContent = productName(e.product) + " · " + (e.label || "entry");
+    $("viewBadge").replaceChildren(h("span", { class: "badge r-" + eff.rating }, ratingLabel(eff.rating)));
+    $("viewMeta").textContent = [e.kind, e.date, e.preview && e.preview.w ? e.preview.w + " × " + e.preview.h + " px preview" : ""].filter(Boolean).join(" · ");
+    $("viewImg").src = src;
+    $("viewImg").alt = "The ad: " + (e.label || productName(e.product));
+    $("viewReview").hidden = !state.canWrite;
+    $("viewReview").textContent = myReview(e.key) ? "Edit my review" : "Review";
+    $("viewDlg").showModal();
+  }
+
+  // ---------- render ----------
+  function renderProductOptions() {
+    const sel = $("fProduct"), cur = sel.value;
+    const ids = new Set(PRODUCTS.map(p => p[0]));
+    for (const d of state.docs.values()) if (d.product) ids.add(d.product);
+    sel.replaceChildren(h("option", { value: "" }, "All products"), ...[...ids].map(id => h("option", { value: id }, productName(id))));
+    sel.value = cur;
+    const rp = $("rProduct"), rcur = rp.value;
+    rp.replaceChildren(...[...ids].map(id => h("option", { value: id }, productName(id))));
+    if (rcur) rp.value = rcur;
+  }
+
+  async function render() {
+    const entries = allEntries();
+    $("countChip").textContent = entries.length + (entries.length === 1 ? " entry" : " entries");
+    renderProductOptions();
+    const f = state.filter;
+    const shown = filtered();
+    const queueList = shown.filter(needsReview);
+    $("queueBtn").textContent = "To review (" + queueList.length + ")";
+
+    const ids = new Set();
+    for (const d of state.docs.values()) for (const k of ["rater", "by"]) if (d[k]) ids.add(d[k]);
+    let names = {};
+    if (state.user && ids.size) { try { names = await state.user.profiles([...ids]); } catch (_) { names = {}; } }
+    const who = (id) => (id && names[id] && names[id].name) || (id && id === state.me ? "you" : "a teammate");
+
+    renderNotes(who);
+
+    const empty = state.loaded && entries.length === 0;
+    $("emptyHero").hidden = !empty;
+    const showBoard = state.loaded && !empty && state.view === "board";
+    const showQueue = state.loaded && !empty && state.view === "queue";
+    $("lanes").hidden = !showBoard;
+    $("summary").hidden = !showBoard;
+    $("barLine").hidden = !showBoard;
+    $("queue").hidden = !showQueue;
+    if (empty) {
+      $("emptyAction").textContent = state.canWrite ? "Use Rate an ad to add the first rating by hand." : "Viewers can read the board. Ask Priestley for Contributor access to rate and review.";
+      return;
+    }
+    if (!state.loaded) return;
+
+    if (showQueue) {
+      $("queueCount").textContent = String(queueList.length);
+      $("queue").querySelector(".cards").replaceChildren(...(queueList.length ? queueList.map(e => card(e, who)) :
+        [h("div", { class: "empty" }, state.queueMode === "mine" ? "You have reviewed every ad in this filter." : "Every ad in this filter has at least one review.")]));
+      return;
+    }
+
+    const lanes = { winner: [], active: [], retired: [] };
+    for (const e of shown) lanes[effective(e).status].push(e);
+    $("summary").replaceChildren(
+      h("span", null, h("b", null, lanes.winner.length), "winners"),
+      h("span", null, h("b", null, lanes.active.length), "active"),
+      h("span", null, h("b", null, lanes.retired.length), "retired"),
+      h("span", null, h("b", null, queueList.length), state.queueMode === "mine" ? "not reviewed by you" : "awaiting review")
+    );
+    const scored = shown.filter(e => typeof e.score === "number").slice(0, 15).map(e => e.score);
+    const bar = $("barLine");
+    if (f.product && f.kind) {
+      const m = median(scored);
+      const what = productName(f.product) + " · " + (f.kind === "hook" ? "hooks" : "images");
+      bar.textContent = m == null ? what + ": no scored entries yet, so no bar." : what + ": median score of the last " + scored.length + " = " + m + ". The top pitched option must beat it.";
+    } else {
+      bar.textContent = "Pick one product and one kind to see its quality bar (median score of its last 15).";
+    }
+    for (const lane of ["winner", "active", "retired"]) {
+      const box = $("lane-" + lane);
+      box.querySelector("h2 small").textContent = String(lanes[lane].length);
+      box.querySelector(".cards").replaceChildren(...(lanes[lane].length ? lanes[lane].map(e => card(e, who)) :
+        [h("div", { class: "empty" }, lane === "winner" ? "No winners for this filter yet." : lane === "active" ? "Nothing rated Good for this filter yet." : "Nothing retired for this filter yet.")]));
+    }
+  }
+
+  function renderNotes(who) {
+    const p = state.filter.product;
+    const panel = $("notesPanel");
+    panel.hidden = !state.loaded;
+    if (!state.loaded) return;
+    const all = ofType("product_note").sort(newest);
+    if (!p) {
+      $("notesCount").textContent = String(all.length);
+      $("notesHint").textContent = "Pick a product to read and add its overall feedback notes.";
+      $("notesList").replaceChildren();
+      $("noteForm").hidden = true;
+      return;
+    }
+    const notes = all.filter(n => n.product === p);
+    $("notesCount").textContent = productName(p) + " · " + notes.length;
+    $("notesHint").textContent = notes.length ? "Claude reads these before the next " + productName(p) + " batch, as guidance only." : "No feedback notes for " + productName(p) + " yet.";
+    $("notesList").replaceChildren(...notes.map(n => {
+      const mine = n.by && n.by === state.me;
+      const canChange = state.isAdmin || (state.canWrite && mine);
+      const kids = [h("div", { class: "meta-line" }, who(n.by) + " · " + shortDate(n.createdAt) + (n.updatedAt ? " · edited" : "")), h("p", null, n.text || "")];
+      if (state.confirmDel === n.key) kids.push(confirmRow("Delete this note?", () => removeDoc(n.key, "Note deleted.")));
+      else if (canChange) kids.push(h("div", { class: "actions" },
+        mine ? h("button", { type: "button", class: "link", onclick: () => editNote(n) }, "Edit") : null,
+        h("button", { type: "button", class: "link", onclick: () => { state.confirmDel = n.key; render(); } }, "Delete")));
+      return h("div", { class: "note" }, kids);
+    }));
+    $("noteForm").hidden = !state.canWrite;
+  }
+
+  function confirmRow(text, onYes) {
+    return h("div", { class: "confirm" }, text,
+      h("button", { type: "button", class: "danger", onclick: onYes }, "Delete"),
+      h("button", { type: "button", onclick: () => { state.confirmDel = null; render(); } }, "Keep"));
+  }
+
+  function recipeChips(e) {
+    const r = e.recipe || {};
+    const order = e.kind === "hook" ? ["family", "mechanic", "route", "frame0", "sound"]
+      : ["framework", "structure", "scene", "light", "composition", "product_angle", "typeface", "palette", "name_treatment", "headline_placement", "headline", "source", "audience", "ratio", "model"];
+    const keys = [...order.filter(k => r[k]), ...Object.keys(r).filter(k => !order.includes(k) && r[k] != null && r[k] !== "")];
+    return h("div", { class: "recipe" }, keys.map(k => h("span", null, h("i", null, k.replace(/_/g, " ") + " "), String(r[k]))));
+  }
+
+  function card(e, who) {
+    const eff = effective(e);
+    const canChange = state.isAdmin || (state.canWrite && e.rater && e.rater === state.me);
+    const kids = [];
+    kids.push(h("div", { class: "head" },
+      h("div", { class: "title" }, e.label || (e.recipe && (e.recipe.mechanic || e.recipe.headline)) || "Untitled"),
+      h("span", { class: "badge r-" + eff.rating }, ratingLabel(eff.rating))));
+    kids.push(h("div", { class: "decided" }, "Decided by: " + eff.source + (eff.source !== "Operator" ? " · operator said " + ratingLabel(e.rating) : "")));
+    kids.push(h("div", { class: "meta-line" }, [productName(e.product), e.kind === "hook" ? "hook" : "image", e.date, typeof e.score === "number" ? "score " + e.score + "/10" : null, "by " + who(e.rater)].filter(Boolean).join(" · ")));
+    kids.push(recipeChips(e));
+    if (e.parent) kids.push(h("div", { class: "meta-line" }, "Mutation of a winner" + (e.mutated ? " · changed: " + e.mutated : "")));
+    if (eff.meta) {
+      const m = eff.meta;
+      kids.push(h("div", { class: "nums" },
+        m.ctr != null ? h("span", null, "CTR " + m.ctr + "%") : null,
+        m.cpa != null ? h("span", null, "CPA $" + m.cpa) : null,
+        m.hook_rate != null ? h("span", null, "Hook rate " + m.hook_rate + "%") : null,
+        m.spend != null ? h("span", null, "Spend $" + m.spend) : null,
+        h("span", { class: "src" }, "Meta" + (m.to ? " to " + m.to : "") + " · by " + who(m.by) + (eff.metaCount > 1 ? " · " + eff.metaCount + " reports" : ""))));
+    }
+    if (e.job) kids.push(h("div", { class: "meta-line" }, e.job));
+    if (e.notes) kids.push(h("div", { style: "font-size:13.5px;overflow-wrap:anywhere" }, e.notes));
+
+    const revs = reviewsFor(e.key);
+    if (revs.length) {
+      kids.push(h("div", { class: "reviews" }, revs.map(r => {
+        const mine = r.by && r.by === state.me;
+        const can = state.isAdmin || (state.canWrite && mine);
+        const parts = [h("div", { class: "rh" }, h("span", { class: "badge r-" + r.rating }, ratingLabel(r.rating)), who(r.by) + " · " + shortDate(r.createdAt) + (r.updatedAt ? " · edited" : "")), r.feedback ? h("p", null, r.feedback) : null];
+        if (state.confirmDel === r.key) parts.push(confirmRow("Delete this review?", () => removeDoc(r.key, "Review deleted.")));
+        else if (can) parts.push(h("div", { class: "actions" },
+          mine ? h("button", { type: "button", class: "link", onclick: () => openReview(e) }, "Edit review") : null,
+          h("button", { type: "button", class: "link", onclick: () => { state.confirmDel = r.key; render(); } }, "Delete review")));
+        return h("div", { class: "review" }, parts);
+      })));
+    }
+
+    if (state.confirmDel === e.key) {
+      kids.push(confirmRow("Delete this entry for everyone?", () => removeEntry(e)));
+    } else if (state.canWrite) {
+      kids.push(h("div", { class: "actions" },
+        h("button", { type: "button", class: "link", onclick: () => openReview(e) }, myReview(e.key) ? "Edit my review" : "Review"),
+        h("button", { type: "button", class: "link", onclick: () => openMeta(e) }, "Add Meta results"),
+        canChange ? h("button", { type: "button", class: "link", onclick: () => openRate(e) }, "Edit") : null,
+        canChange ? h("button", { type: "button", class: "link", onclick: () => { state.confirmDel = e.key; render(); } }, "Delete") : null));
+    }
+    const t = thumb(e);
+    return h("article", { class: "card " + eff.status + (t ? "" : " nothumb") }, t, h("div", { class: "body" }, kids));
+  }
+
+  // ---------- forms ----------
+  function ratingRadios(boxId, name) {
+    $(boxId).replaceChildren(...RATINGS.map(([v, l]) => h("label", { for: name + "-" + v }, h("input", { type: "radio", name, id: name + "-" + v, value: v }), h("span", { class: "badge r-" + v }, l))));
+  }
+  function checkRadio(name, value) { for (const el of document.querySelectorAll('input[name="' + name + '"]')) el.checked = el.value === value; }
+  function radioVal(name) { return (document.querySelector('input[name="' + name + '"]:checked') || {}).value; }
+  function setVal(id, v) { $(id).value = v == null ? "" : v; }
+  function syncKind() { const k = $("rKind").value; $("recipeHook").hidden = k !== "hook"; $("recipeImage").hidden = k !== "image"; }
+  function fillParents(product, kind, selected, selfKey) {
+    const opts = allEntries().filter(e => e.product === product && e.kind === kind && e.key !== selfKey && effective(e).status === "winner");
+    $("rParent").replaceChildren(h("option", { value: "" }, "Not a mutation"), ...opts.map(e => h("option", { value: e.key }, e.label || "winner")));
+    $("rParent").value = selected || "";
+  }
+
+  function openRate(e) {
+    state.editing = e || null;
+    $("rateTitle").textContent = e ? "Edit rating" : "Rate an ad";
+    $("rateErr").textContent = "";
+    const r = (e && e.recipe) || {};
+    setVal("rKind", e ? e.kind : (state.filter.kind || "hook"));
+    setVal("rProduct", e ? e.product : (state.filter.product || PRODUCTS[0][0]));
+    $("rKind").disabled = !!e; $("rProduct").disabled = !!e;
+    setVal("rLabel", e && e.label);
+    setVal("hFamily", r.family || FAMILIES[0]); setVal("hMechanic", r.mechanic); setVal("hRoute", r.route); setVal("hFrame0", r.frame0); setVal("hSound", r.sound);
+    setVal("hScore", e && typeof e.score === "number" ? e.score : "");
+    setVal("iFramework", r.framework); setVal("iStructure", r.structure); setVal("iScene", r.scene); setVal("iLight", r.light);
+    setVal("iComposition", r.composition); setVal("iAngle", r.product_angle); setVal("iTypeface", r.typeface); setVal("iPalette", r.palette);
+    setVal("iNameT", r.name_treatment); setVal("iHeadPl", r.headline_placement); setVal("iHeadline", r.headline); setVal("iSource", r.source);
+    setVal("iAudience", r.audience); setVal("iRatio", [r.ratio, r.model].filter(Boolean).join(" · "));
+    checkRadio("rr", e ? e.rating : "");
+    setVal("rJob", e && e.job); setVal("rDate", (e && e.date) || today()); setVal("rMutated", e && e.mutated); setVal("rNotes", e && e.notes);
+    syncKind();
+    fillParents($("rProduct").value, $("rKind").value, e && e.parent, e && e.key);
+    $("rateDlg").showModal();
+  }
+
+  function openReview(e) {
+    state.reviewTarget = e;
+    const mine = myReview(e.key);
+    $("reviewTitle").textContent = mine ? "Edit your review" : "Review this ad";
+    $("reviewFor").textContent = productName(e.product) + " · " + (e.label || "entry");
+    $("reviewErr").textContent = "";
+    const src = previewSrc(e);
+    $("reviewImg").hidden = !src;
+    if (src) $("reviewImg").src = src; else $("reviewImg").removeAttribute("src");
+    checkRadio("vr", mine ? mine.rating : "");
+    setVal("vFeedback", mine ? mine.feedback : "");
+    $("vCount").textContent = $("vFeedback").value.length + " / 800";
+    $("reviewDlg").showModal();
+  }
+
+  function openMeta(e) {
+    state.metaTarget = e;
+    $("metaErr").textContent = "";
+    $("metaFor").textContent = productName(e.product) + " · " + (e.label || "entry");
+    for (const id of ["mCtr", "mCpa", "mHook", "mSpend", "mNotes", "mFrom"]) setVal(id, "");
+    setVal("mTo", today());
+    checkRadio("mr", "");
+    $("metaDlg").showModal();
+  }
+
+  function editNote(n) {
+    state.editingNote = n;
+    setVal("noteText", n.text);
+    $("noteSave").textContent = "Save note";
+    $("noteCancel").hidden = false;
+    $("noteText").focus();
+  }
+  function resetNoteForm() { state.editingNote = null; setVal("noteText", ""); $("noteSave").textContent = "Add note"; $("noteCancel").hidden = true; $("noteErr").textContent = ""; }
+
+  function slug(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) || "x"; }
+  function newId(prefix, label) { return prefix + "-" + today().replace(/-/g, "") + "-" + slug(label) + "-" + Math.random().toString(36).slice(2, 7); }
+
+  async function ensureRater() {
+    if (!state.me || state.raters.has(state.me)) return;
+    const ref = state.db.doc("raters/" + state.me);
+    const snap = await ref.get();
+    if (!snap.exists) await ref.set({ since: today() });
+  }
+
+  function writeRefused(err) {
+    if (err && err.code === "invalid_argument" && !state.isAdmin) {
+      state.canWrite = false; state.role = "Viewer"; applyRole(); render();
+      return "This board is read-only for you. Ask Priestley for Contributor access.";
+    }
+    if (err && err.code === "quota_exceeded") return "The board is full: " + (err.message || "storage cap reached") + ". Export a backup and delete old retired entries.";
+    return "Could not save: " + ((err && err.message) || "unknown error") + ". Try again.";
+  }
+
+  async function saveRating(ev) {
+    ev.preventDefault();
+    const rating = radioVal("rr");
+    if (!rating) { $("rateErr").textContent = "Pick a rating."; return; }
+    const kind = $("rKind").value, product = $("rProduct").value;
+    let recipe;
+    if (kind === "hook") {
+      recipe = { family: $("hFamily").value, mechanic: $("hMechanic").value.trim(), route: $("hRoute").value.trim(), frame0: $("hFrame0").value.trim(), sound: $("hSound").value.trim() };
+    } else {
+      const [ratio, ...model] = $("iRatio").value.split("·").map(s => s.trim());
+      recipe = { framework: $("iFramework").value.trim(), structure: $("iStructure").value.trim(), scene: $("iScene").value.trim(), light: $("iLight").value.trim(),
+        composition: $("iComposition").value.trim(), product_angle: $("iAngle").value.trim(), typeface: $("iTypeface").value.trim(), palette: $("iPalette").value.trim(),
+        name_treatment: $("iNameT").value.trim(), headline_placement: $("iHeadPl").value.trim(), headline: $("iHeadline").value.trim(), source: $("iSource").value.trim(),
+        audience: $("iAudience").value.trim(), ratio: ratio || "", model: model.join(" · ") };
+    }
+    const old = state.editing;
+    if (old && old.recipe) for (const k of Object.keys(old.recipe)) if (!(k in recipe)) recipe[k] = old.recipe[k];
+    for (const k of Object.keys(recipe)) if (recipe[k] === "" || recipe[k] == null) delete recipe[k];
+    const label = $("rLabel").value.trim() || (kind === "hook" ? [recipe.family, recipe.mechanic].filter(Boolean).join(" · ") : [recipe.framework, recipe.headline].filter(Boolean).join(" · "));
+    const score = kind === "hook" ? numOrNull($("hScore").value) : (old ? old.score ?? null : null);
+    const body = Object.assign({}, old || {}, {
+      type: "entry", kind, product, label, recipe, rating, status: STATUS_OF[rating], score,
+      job: $("rJob").value.trim(), date: $("rDate").value || today(),
+      parent: $("rParent").value || null, mutated: $("rMutated").value.trim() || null, notes: $("rNotes").value.trim(),
+      rater: old ? old.rater : state.me, createdAt: old ? old.createdAt : new Date().toISOString(), source: old ? (old.source || "page") : "page"
+    });
+    delete body.key;
+    if (old) body.updatedAt = new Date().toISOString();
+    $("rateSave").disabled = true;
+    try {
+      if (old) await docRef(old.key).set(body);
+      else { await ensureRater(); await state.db.collection("data/users/" + state.me).doc(newId("e", label)).set(body); }
+      $("rateDlg").close();
+      setStatus(old ? "Rating updated." : "Rating saved.");
+    } catch (err) { $("rateErr").textContent = writeRefused(err); }
+    finally { $("rateSave").disabled = false; }
+  }
+
+  async function saveReview(ev) {
+    ev.preventDefault();
+    const e = state.reviewTarget; if (!e) return;
+    const rating = radioVal("vr");
+    if (!rating) { $("reviewErr").textContent = "Pick your rating."; return; }
+    const mine = myReview(e.key);
+    const body = { type: "review", target: e.key, product: e.product, kind: e.kind, rating, feedback: $("vFeedback").value.trim().slice(0, 800),
+      by: state.me, createdAt: mine ? mine.createdAt : new Date().toISOString() };
+    if (mine) body.updatedAt = new Date().toISOString();
+    $("reviewSave").disabled = true;
+    try {
+      await ensureRater();
+      if (mine) await docRef(mine.key).set(body);
+      else await state.db.collection("data/users/" + state.me).doc(newId("r", e.label)).set(body);
+      $("reviewDlg").close(); setStatus(mine ? "Review updated." : "Review saved.");
+    } catch (err) { $("reviewErr").textContent = writeRefused(err); }
+    finally { $("reviewSave").disabled = false; }
+  }
+
+  async function saveMeta(ev) {
+    ev.preventDefault();
+    const e = state.metaTarget; if (!e) return;
+    const verdict = radioVal("mr");
+    if (!verdict) { $("metaErr").textContent = "Pick the verdict the numbers support."; return; }
+    const body = { type: "meta", target: e.key, product: e.product, kind: e.kind,
+      ctr: numOrNull($("mCtr").value), cpa: numOrNull($("mCpa").value), hook_rate: numOrNull($("mHook").value), spend: numOrNull($("mSpend").value),
+      from: $("mFrom").value || null, to: $("mTo").value || today(), verdict, notes: $("mNotes").value.trim(), by: state.me, createdAt: new Date().toISOString() };
+    $("metaSave").disabled = true;
+    try {
+      await ensureRater();
+      await state.db.collection("data/users/" + state.me).doc(newId("m", e.label)).set(body);
+      $("metaDlg").close(); setStatus("Meta results saved.");
+    } catch (err) { $("metaErr").textContent = writeRefused(err); }
+    finally { $("metaSave").disabled = false; }
+  }
+
+  async function saveNote(ev) {
+    ev.preventDefault();
+    const text = $("noteText").value.trim().slice(0, 800);
+    const product = state.filter.product;
+    if (!product) return;
+    if (!text) { $("noteErr").textContent = "Write the note first."; return; }
+    const old = state.editingNote;
+    const body = { type: "product_note", product, text, by: state.me, createdAt: old ? old.createdAt : new Date().toISOString() };
+    if (old) body.updatedAt = new Date().toISOString();
+    $("noteSave").disabled = true;
+    try {
+      await ensureRater();
+      if (old) await docRef(old.key).set(body);
+      else await state.db.collection("data/users/" + state.me).doc(newId("n", product)).set(body);
+      resetNoteForm(); setStatus(old ? "Note updated." : "Note added.");
+    } catch (err) { $("noteErr").textContent = writeRefused(err); }
+    finally { $("noteSave").disabled = false; }
+  }
+
+  async function removeDoc(key, done) {
+    try { await docRef(key).delete(); state.confirmDel = null; setStatus(done); }
+    catch (err) { state.confirmDel = null; setStatus(writeRefused(err), true); render(); }
+  }
+  async function removeEntry(e) {
+    try {
+      if (e.preview) { try { await docRef(e.key).collection("preview").doc("img").delete(); } catch (_) { /* the entry delete below still runs */ } }
+      await docRef(e.key).delete(); state.confirmDel = null; setStatus("Entry deleted.");
+    } catch (err) { state.confirmDel = null; setStatus(writeRefused(err), true); render(); }
+  }
+
+  async function exportJson() {
+    if (!state.downloads) return;
+    const docs = [...state.docs].map(([key, d]) => ({ key, ...d }));
+    const pick = (t) => docs.filter(d => d.type === t);
+    const data = JSON.stringify({ board: "Everlife Winners Board", exportedAt: new Date().toISOString(), note: "Preview images are not included.",
+      raters: [...state.raters.keys()], entries: pick("entry"), reviews: pick("review"), meta: pick("meta"), product_notes: pick("product_note") }, null, 2);
+    try { await state.downloads.save({ filename: "everlife-winners-board-" + today() + ".json", data }); setStatus("Backup saved."); }
+    catch (err) { if (err && err.code !== "declined") setStatus("Export failed: " + (err.message || err.code) + ".", true); }
+  }
+
+  // ---------- data ----------
+  let renderQueued = false;
+  function queueRender() { if (renderQueued) return; renderQueued = true; requestAnimationFrame(() => { renderQueued = false; render(); }); }
+
+  function subscribeRater(uid) {
+    if (state.subs.has(uid)) return;
+    const unsub = state.db.collection("data/users/" + uid).onSnapshot((snap) => {
+      for (const k of [...state.docs.keys()]) if (k.startsWith(uid + "/")) state.docs.delete(k);
+      for (const d of snap.docs) if (d.exists) state.docs.set(uid + "/" + d.id, d.data());
+      queueRender();
+    }, () => { state.subs.delete(uid); });
+    state.subs.set(uid, unsub);
+  }
+
+  function applyRole() {
+    $("roleChip").textContent = state.role;
+    $("rateBtn").hidden = !state.canWrite;
+    $("exportBtn").hidden = !state.downloads;
+  }
+
+  function wireSeg(selector, attr, apply) {
+    const btns = document.querySelectorAll(selector);
+    for (const b of btns) b.addEventListener("click", () => {
+      apply(b.dataset[attr]);
+      for (const o of btns) o.setAttribute("aria-pressed", String(o === b));
+      render();
+    });
+  }
+
+  async function start() {
+    ratingRadios("rRatings", "rr"); ratingRadios("mRatings", "mr"); ratingRadios("vRatings", "vr");
+    $("hFamily").replaceChildren(...FAMILIES.map(f => h("option", { value: f }, f)));
+    renderProductOptions();
+    wireSeg(".seg button[data-kind]", "kind", (v) => { state.filter.kind = v; });
+    wireSeg(".seg button[data-view]", "view", (v) => { state.view = v; });
+    wireSeg(".seg button[data-q]", "q", (v) => { state.queueMode = v; });
+    $("fProduct").addEventListener("change", () => { state.filter.product = $("fProduct").value; resetNoteForm(); render(); });
+    $("rateBtn").addEventListener("click", () => openRate(null));
+    $("exportBtn").addEventListener("click", exportJson);
+    $("rKind").addEventListener("change", () => { syncKind(); fillParents($("rProduct").value, $("rKind").value, "", null); });
+    $("rProduct").addEventListener("change", () => fillParents($("rProduct").value, $("rKind").value, "", null));
+    $("rateForm").addEventListener("submit", saveRating);
+    $("reviewForm").addEventListener("submit", saveReview);
+    $("metaForm").addEventListener("submit", saveMeta);
+    $("noteForm").addEventListener("submit", saveNote);
+    $("noteCancel").addEventListener("click", resetNoteForm);
+    $("vFeedback").addEventListener("input", () => { $("vCount").textContent = $("vFeedback").value.length + " / 800"; });
+    $("rateCancel").addEventListener("click", () => $("rateDlg").close());
+    $("reviewCancel").addEventListener("click", () => $("reviewDlg").close());
+    $("metaCancel").addEventListener("click", () => $("metaDlg").close());
+    $("viewClose").addEventListener("click", () => $("viewDlg").close());
+    $("viewDlg").addEventListener("click", (ev) => { if (ev.target === $("viewDlg")) $("viewDlg").close(); });
+    $("viewReview").addEventListener("click", () => { const e = state.viewTarget; $("viewDlg").close(); if (e) openReview(e); });
+
+    if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this board in claude.ai to see the team's ratings.", true); $("roleChip").textContent = "Offline"; return; }
+    const [db, user, downloads] = await Promise.all([claude.use("db"), claude.use("user"), claude.use("downloads")]);
+    state.db = db; state.user = user; state.downloads = downloads;
+    if (!db) { setStatus("The board's data is not available in this view. Sign in to claude.ai and open the board again.", true); $("roleChip").textContent = "Signed out"; applyRole(); return; }
+
+    state.me = user ? await user.id() : null;
+    const isOwner = user ? await user.isOwner() : false;
+    state.isAdmin = user ? await user.canEdit() : false;
+    const can = user ? await user.can("data.write") : null;
+    state.canWrite = !!state.me && (state.isAdmin || can !== false);
+    state.role = isOwner ? "Owner" : state.isAdmin ? "Editor" : state.canWrite ? "Contributor" : "Viewer";
+    applyRole();
+
+    let settled = false;
+    const timer = setTimeout(() => { if (!settled) setStatus("The board can't be reached yet. It will fill in when the connection answers.", true); }, 10000);
+    if (state.me) subscribeRater(state.me);
+    db.collection("raters").onSnapshot((snap) => {
+      state.raters = new Map(snap.docs.filter(d => d.exists).map(d => [d.id, d.data()]));
+      for (const uid of state.raters.keys()) subscribeRater(uid);
+      if (!snap.metadata.fromCache && !settled) { settled = true; clearTimeout(timer); setStatus(""); }
+      state.loaded = true;
+      queueRender();
+    }, (err) => { settled = true; clearTimeout(timer); setStatus("The board stopped updating (" + err.code + "). Reload the page to reconnect.", true); });
+  }
+  start();
+})();
+</script>

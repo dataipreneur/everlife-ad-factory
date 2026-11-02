@@ -99,7 +99,7 @@ footer, contact sheet.
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🧑‍💼 AI Avatar Video" / "🎬 Video ad or 🎞️ animated still (an
 approved static + 8 s of motion, Seedance; a follow-up question picks which)" / "🔁 Remake one of ours". (AskUserQuestion takes at most 4 options.)
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; the vial is the hero in the product B-roll.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply; the vial is the hero in the product B-roll.
 - **Animated still** → `references/animated-still.md`: pick the approved static, write the one-line motion prompt, ask the
   Unlimited-mode A/B question (0 credits in Chrome, else quote Seedance), generate 8 s from the RAW, `animate_still.py`, QA, save.
 

@@ -37,7 +37,7 @@ Naming:
 Proof:
 - Trustpilot always reads exactly **"Trustpilot rated 4.9 Excellent"**. Never "Trustpilot rating" alone.
 - Customer count locked at **100,000+** ("Over 100,000 happy customers").
-- Every ad carries visible social proof: customer count, rating, or both.
+- Proof split (bible 2026-11-02, Standards 02 · 06): applied as (Mitansh 2026-11-02): 30% of creatives carry no proof; 70% carry one footer proof, of which 60% the trust row (Trustpilot, Doctor Prescribed, Ships Free From Pharmacy) and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (images: `finish_batch.py --proof-plan N`; videos: `core/scripts/proof_next.py`). Logo + verbatim disclaimer on every creative.
 - Authority = sourced trust signals only (100,000+, Trustpilot, Doctor Prescribed / "Dr. Prescribed, Direct From Pharmacy", Ships Free From Pharmacy). No adjectives as authority.
 Disclaimers & AI disclosure:
 - Use the product's **Ad disclaimer verbatim** — from the bible, or from the product skill's `product.json` when the bible has none (e.g. BPC-157). Never written, paraphrased or invented. Don't stop over a missing bible disclaimer when the skill has one.
@@ -67,18 +67,20 @@ Disclaimers & AI disclosure:
 
 ## 5. Script gate (video)
 - 7-beat spine: Hook → Authority → Emotion → Visual element → Structure → Connection → Payoff, with a throughline.
-- Visual hook in the first 1–3 seconds. Copy minimal; motion carries emotion, text carries information.
+- The hook or key benefit is both **said** (voiceover or talent) **and shown on screen** within the first 2–3 seconds (bible 2026-11-02). Copy minimal; motion carries emotion, text carries information.
+- Every video carries on-screen captions for all spoken audio (bible 2026-11-02, Standards 02).
+- The product is always in focus whenever it's on screen: never soft, blurred or racked out of focus (bible 2026-11-02).
 
 ## 6. Production gate
 - Model routing: single locked slow shot / talking head / simple product hero → Boreal-style; multi-scene, camera moves, fast motion, transitions → Seedance.
-- 9:16 safe zone (bible "Safe zones", Meta): **x 156–924, y 144–1385 on 1080×1920, minus the Reels profile corner x 156–375 × y 1216–1385**. Footer exception: the proof row may run x 39–1041 and cross the corner. Feed (4:5, 1:1): 60 px margin.
+- 9:16 safe zone (bible "Safe zones", Meta): **x 156–924, y 144–1385 on 1080×1920, minus the Reels profile corner x 156–375 × y 1216–1385**. Footer exception: the proof row may run x 39–1041 and cross the corner. Feed (4:5, 1:1): 60 px margin. Logo, headline, offer, CTA, disclaimer **and captions** stay inside it (bible 2026-11-02).
 - AI expand 1:1→9:16 OK for photo ads; flat infographics are rebuilt.
 
 ## 7. Approval gate (hard)
 - Explicit approval of the master (Frame.io / Asana Review Status = Approved) before ANY other sizes. Compliance sign-off by Jeremy before anything goes live.
 
 ## 8. Pre-review checklist
-Concept direction · approved benefits/subheaders · full section 2 pass · section 3 standards · legibility 50+ and spelling · product correctness · ratio/safe zone · disclaimer verbatim + AI disclosure · logo · social proof.
+Concept direction · approved benefits/subheaders · full section 2 pass · section 3 standards · legibility 50+ and spelling · product correctness · ratio/safe zone · disclaimer verbatim + AI disclosure · logo · proof per the 60/40 plan.
 
 ## 9. Delivery gate
 - Base 1:1 and 9:16 to Drive; tell Emily.

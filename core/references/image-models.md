@@ -1,5 +1,7 @@
 # Image model choice per batch (every product skill, from 2026-10-29)
 
+> **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
+
 All images are made on Creatify, through two connectors that both sign in with the Creatify account (no API key anywhere):
 - **Ad Agent connector** (`plugin:creatify-ad-agent`, tools `composer_*`): `composer_edit_image` is hard-wired to **GPT Image 2.5**.
   Tested 2026-10-29: a request naming another model still renders on `gpt-image-2.5-sunburst`. This is the batch default.
