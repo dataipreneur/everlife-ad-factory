@@ -95,3 +95,18 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - The spray label came out "EVEVERLIFE" on the close-up. Fixed for free by compositing the render's label (cyan bbox per frame) over 5–7.9 s. Ask for the product higher in frame (label above 60% height), so the proof row doesn't cover it.
 - Wine on screen, drunk next to an Rx spray: flagged for Jeremy. Prefer non-alcoholic props until he rules on it.
 - Captions landed ON the spray (Mitansh, 2026-10-30: "subtitles are on top of product! wtf"). Before finishing, check every caption window against the product's position; move a caption with an optional 5th field (y in px) in `layers_full/<Tag>_caps.json` (full_layout.py supports it since 2026-10-30), or drop it when the header subline already shows the same words. Never ship a caption over the product.
+
+## Mitansh, 2026-11-02, after batch-7 people tests (Nano Banana Pro, problem/solution) — both rejected
+- "The texts fonts were smaller than I wanted!" → headline ≥ 10% of canvas height per line, every other line ≥ 4.5%; never shrink a finished ad with reposition_916 (it took type to ~58% and made the checkmark lines unreadable).
+- "There was no Product name anywhere! It always has to say PT141" → EVERY static carries "PT-141" as big set type (≥ 7% of canvas height, its own line, near the product), not only on the label. Put it in the TEXT block as a required string and QA it.
+- Nano Banana Pro at 9:16 drops/duplicates strings (lost "mood", doubled a benefit) and lands content at 65–80% height → one text-fix edit works (1.5 cr); layout still needs 4:5 masters or a much stricter band.
+- People: realistic cast-against-type humans in dark warm rooms DID land (no complaint about the people).
+
+## Batch-8 (2026-11-02): text-free Nano Banana Pro photos + code typesetting (`output/.../batch-8-problem-solution/typeset.py`)
+- Pro scene-only shots: 1 of 4 usable on the first try. It ignores product size/position (bottle 10–15% wide, base at 80–86%), adds blurred letterbox bands, and puts people where the text column was asked to be empty. Two re-rolls with "PRODUCT HERO, at least 30% of width" also failed (pasted-looking spray, still-small sublingual).
+- GPT Image 2.5 product-only problem/solution ads with big type + big cyan "PT-141": 4/4 clean first time. Default for PT-141 statics.
+- Code type works (exact strings, big lines) and lets the photo move freely; use condensed faces (Avenir Next Condensed Demi) for benefit lines ≥ 3%.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.

@@ -29,6 +29,8 @@ the user asks for it or a job needs one of its extras (review burst, mirror fix,
 disclaimer, caption spellings) apply to premium.json too.
 
 ## 2b. Classic finishing (full_layout.py, on request only)
+**Proof split, videos too (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of videos carry NO proof; 70% carry ONE footer proof: the trust row (60% of those) or the Trustpilot 4.9 badge + "Over 100,000 happy customers" (40%); the end card has no count line of its own. Before finishing run `python -I core/scripts/proof_next.py --product pt-141 --log <tag>` and put its answer in copy.json as `"proof": "trust"`, `"count"` or `"none"` (animated stills: `animate_still.py --proof …`).
+
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
 {"product": "pt-141", "form": "spray|sublingual", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",

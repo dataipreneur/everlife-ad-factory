@@ -28,6 +28,7 @@ T = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, T)
 import product as product_mod  # noqa: E402
 import safezones as sz  # noqa: E402
+import standard_footer as sf  # noqa: E402  (one trust-row + disclaimer size for every creative)
 import imageio_ffmpeg  # noqa: E402
 
 FF = imageio_ffmpeg.get_ffmpeg_exe()
@@ -41,6 +42,7 @@ a = ap.parse_args()
 J = os.path.abspath(a.job); CFG = os.path.join(J, "premium.json")
 C = json.load(open(CFG))
 P = product_mod.load(C["product"])
+PROOF = sf.proof_of(C)
 DISCLAIMER = P["disclaimer"]
 WOMEN = C.get("audience", "men") == "women"
 
@@ -167,15 +169,17 @@ def product_group(img, cx, y, bh, pill_w, glow):
 def bottom_layers(scrim_rgb=(6, 10, 14)):
     scr = canvas(); vgrad(scr, 960, 1300, 0, 175, scrim_rgb); vgrad(scr, 1300, 1920, 175, 230, scrim_rgb)
     scr.save(f"{L}/scrim.png")
-    bot = canvas(); pr = Image.open(f"{A}/proof_row_clear.png").convert("RGBA")
-    pr = pr.resize((1000, int(pr.height * 1000 / pr.width)), Image.LANCZOS); bot.alpha_composite(pr, (40, PROOF_Y))
-    d = ImageDraw.Draw(bot); fd = F(HN, HN_REG, 25 if DISC_BOTTOM else 22)
-    lines = wrap(d, DISCLAIMER, fd, 960 if DISC_BOTTOM else 1000)
+    bot = canvas()   # one proof per video: trust row, badge + count, or none (split 2026-11-02, 42/28/30)
+    pr = sf.proof_row(PROOF, f"{A}/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    if pr:
+        bot.alpha_composite(pr, ((W - pr.width) // 2, PROOF_Y + (sf.row_art(f"{A}/proof_row_clear.png").height - pr.height) // 2))   # count row centred in the row's slot
+    d = ImageDraw.Draw(bot); fd = sf.disc_font()                     # standard disclaimer: 18 px, exactly 2 lines
+    lines = sf.disclaimer_lines(DISCLAIMER)
     base = 1884 if DISC_BOTTOM else sz.SAFE[3] - 2
-    step = 34 if DISC_BOTTOM else 27
+    step = sf.DISC_LH
     for i, ln in enumerate(lines):
         d.text(((W - d.textlength(ln, font=fd)) / 2, base - step * (len(lines) - i)), ln, font=fd, fill=(255, 255, 255, 190))
-    if not DISC_BOTTOM and base - step * len(lines) < PROOF_Y + pr.height:
+    if not DISC_BOTTOM and base - step * len(lines) < PROOF_Y + (pr.height if pr else 0):
         sys.exit("❌ disclaimer does not fit between the proof row and y 1385")
     bot.save(f"{L}/bottom.png")
 
@@ -239,8 +243,7 @@ if a.style == "champagne":
     by = py + 45
     def chk(d, x, yy): d.line([(x, yy + 24), (x + 10, yy + 34), (x + 28, yy + 12)], fill=ACC, width=4, joint="curve")
     benefits_centred(d, by, F(AV, AV_MED, 36), CREAM, chk, 54)
-    t = "Over 100,000 happy customers"; fp = F(AV, AV_MED, 28)
-    d.text(((W - d.textlength(t, font=fp)) / 2, by + 178), t, font=fp, fill=(246, 241, 230, 190))
+    # no customer-count line on the end card: the footer carries this video's one proof (bible 2026-11-02)
     fc = fit(d, C["cta"], AV, AV_DEMI, 38, SW, 0.08); cw = tw(d, C["cta"], fc, 0.08) + 110; cy = by + 225; ch = 82
     d.rounded_rectangle([(W - cw) / 2, cy, (W + cw) / 2, cy + ch], radius=41, fill=CREAM)
     text(d, W / 2, cy + 16, C["cta"], fc, (14, 30, 40, 255), 0.08, "c")
@@ -266,8 +269,7 @@ elif a.style == "blacklabel":
     by = py + 40
     def sq(d, x, yy): d.rectangle([x + 10, yy + 15, x + 22, yy + 27], fill=ACC)
     benefits_centred(d, by, F(HN, HN_MED, 35), WHITE, sq, 52)
-    t = "Over 100,000 happy customers"; fp = F(HN, HN_REG, 27)
-    d.text(((W - d.textlength(t, font=fp)) / 2, by + 168), t, font=fp, fill=(255, 255, 255, 190))
+    # no customer-count line on the end card: the footer carries this video's one proof (bible 2026-11-02)
     fc = fit(d, C["cta"], HN, HN_CBOLD, 40, SW, 0.06); cw = tw(d, C["cta"], fc, 0.06) + 120; cy = by + 214; ch = 84
     d.rounded_rectangle([(W - cw) / 2, cy, (W + cw) / 2, cy + ch], radius=10, fill=ACC)
     text(d, W / 2, cy + 18, C["cta"], fc, WHITE, 0.06, "c")
@@ -310,7 +312,7 @@ elif a.style == "subtle":
         yy2 = by + k * 50
         d.line([(X, yy2 + 20), (X + 8, yy2 + 28), (X + 24, yy2 + 10)], fill=ICE_D, width=3, joint="curve")
         d.text((X + 40, yy2), t, font=fit(d, t, FU, FU_MED, 32, SW - 40), fill=(12, 28, 40, 235))
-    d.text((X, by + 160), "Over 100,000 happy customers", font=F(FU, FU_MED, 26), fill=(12, 28, 40, 170))
+    # no customer-count line on the end card: the footer carries this video's one proof (bible 2026-11-02)
     fc = fit(d, C["cta"], FU, FU_MED, 30, SW - 90, 0.10); cw = tw(d, C["cta"], fc, 0.10) + 90; cy = by + 206; ch = 68
     d.rounded_rectangle([X, cy, X + cw, cy + ch], radius=34, outline=NAVY, width=2)
     text(d, X + 45, cy + 17, C["cta"], fc, NAVY, 0.10)
@@ -323,7 +325,7 @@ elif a.style == "quietluxe":
     y = logo(top, W / 2, 150, 190)
     f = fit(d, C["head"], HN, HN_LIGHT, 60, SW, 0.16, floor=52); text(d, W / 2, y + 22, C["head"], f, SOFT, 0.16, "c")
     ly = y + 22 + f.size + 22; d.rectangle([W / 2 - 34, ly, W / 2 + 34, ly + 1], fill=SAND)
-    if C.get("sub"): text(d, W / 2, ly + 14, C["sub"].title(), F(HN, HN_MED, 28), SAND_HI, 0.10, "c")
+    if C.get("sub"): text(d, W / 2, ly + 14, (C["sub"] if any(ch.isdigit() for ch in C["sub"]) else C["sub"].title()), F(HN, HN_MED, 28), SAND_HI, 0.10, "c")
     save_checked(TG, top, "top")
     captions(lambda d, t: centred_caption(d, t, HN, HN_REG, 44, SOFT, 0.01))
     e = canvas(); EW = canvas(); vgrad(EW, 0, H, 175, 215, (14, 14, 16)); d = ImageDraw.Draw(e)
@@ -335,8 +337,7 @@ elif a.style == "quietluxe":
     by = py + 46
     def dot(d, x, yy): d.ellipse([x + 14, yy + 16, x + 22, yy + 24], fill=SAND)
     benefits_centred(d, by, F(HN, HN_REG, 32), SOFT, dot, 50)
-    t = "Over 100,000 happy customers"; fp = F(HN, HN_REG, 26)
-    d.text(((W - d.textlength(t, font=fp)) / 2, by + 160), t, font=fp, fill=(255, 255, 255, 175))
+    # no customer-count line on the end card: the footer carries this video's one proof (bible 2026-11-02)
     fc = fit(d, C["cta"], HN, HN_MED, 30, SW, 0.14); cw = tw(d, C["cta"], fc, 0.14) + 96; cy = by + 206; ch = 68
     d.rounded_rectangle([(W - cw) / 2, cy, (W + cw) / 2, cy + ch], radius=34, outline=SAND, width=2)
     text(d, W / 2, cy + 17, C["cta"], fc, SOFT, 0.14, "c")

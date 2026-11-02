@@ -73,3 +73,7 @@ tools: `reposition_916.py`, `unfade_cta.py`, `logo_in_box.py`, `compose916.py`.
 ## Winners (2026-10-30, Emily)
 - The all-time top statics (INT24 120 sales, INT4 112, INT13 95) have no files yet; the files on hand (360555, Base161, Videos 32/26/18) show the format: huge LOVARA + "3-in-1 Female Sexual Wellness Blend" + "From Distant to Deeply Connected", three icon callouts, blush light; videos = a fixed info frame over golden-hour lifestyle footage. Most break today's rules (lingerie, bed, per-ingredient claims, old proof numbers): format only.
 - Batch 2 (2026-10-30, from the winners): all 4 passed after one fix (W3 product under the footer). Finish with --shift 0 when the raw already has the top 14% calm; the auto logo shift pushed CTAs into the footer in 3 of 4 products today. unfade_cta.py rescues a CTA just above the footer.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.

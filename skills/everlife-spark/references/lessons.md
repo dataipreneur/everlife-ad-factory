@@ -97,3 +97,7 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - Spark batch 1-2 (2026-10-30, 14 credits): native 9:16 failed 4/4 on safe zones (bottom, side bands, logo); the old finisher passed 3 of them (fix: branch safezone-sides). The 4:5 → compose916 → finish_batch --fit trusted route passed 4/4: make 9:16 that way. At 4:5, 2 of 4 raws put the bottle under the proof row (paid 1-credit fix each): ask for the bottle base at 62% and check every final.
 - Emily's Spark winners (2026-10-30, `winners/`): the tablet is the hero (huge, at the lens), SPARK is huge in its logotype, three icon pills, warm palettes, elegant women; 2 of 3 winning videos are 3D-animated couples. For Spark this overrides the inherited "a cartoon selling a prescription feels fake" lesson (Dave, PT-141): animated is allowed when it lands on the real product.
 - Two bible "Weak" headlines appear in Spark winners (S04 "More Than a Physical Response", S11 "Supports Desire Where It Starts"): still ask before using; flagged for Jeremy.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.

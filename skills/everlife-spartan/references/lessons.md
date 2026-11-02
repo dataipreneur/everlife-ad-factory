@@ -97,3 +97,12 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - Resolved 2026-11-02: Justin un-swapped the bible's Spartan / Wolverine pages; the vial labels were right all along.
 - Test 1 (2026-10-30, 4 ads, shared lines only): 2 of 4 had the CTA under or at the footer at 4:5; the finisher does not catch it at 4:5: look at every final.
 - Lovara batch-1 (2026-10-30): at 4:5 `finish_batch.py` does not refuse text under the footer: look at every final.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
+
+## Spartan Stack batch 1 (2026-11-02, GPT Image 2.5) — Mitansh: "no theyre great"
+- Recipe: 🎲 styles S15 forum post · S02 crossed out (plain habits struck, ✅ benefit answer) · S11 news with a non-smiling 40s lifter · S01 bold with a chalked tattooed hand pushing the vial (winner B3); each ✅ benefit once; one CTA per ad.
+- mirror_fit_916: `--strip 6` on dark UI ads (default strip mirrored the card border into stripes); `--align right` when a person/arm touches the right edge. A faint mirrored pattern under the disclaimer was accepted.
+- Pool: all 7 ✅ benefits used in batch 1; the next batch needs approved headlines.

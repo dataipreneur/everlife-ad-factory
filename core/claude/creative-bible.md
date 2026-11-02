@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793642193-f927) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793655503-c3e7) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -45,10 +45,10 @@ Applies to every product
 
 #### Proof & approval
 - Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
-- Every ad carries visible social proof: customer count, rating, or both.
+- Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. “Over 100,000 happy customers” goes on 40%. See Standards 02 · 06.
 - Compliance questions route to Jeremy. Nothing goes live without his approval.
 
-Rules current as of 11 September 2026. Flag any rule that is later reversed or superseded.
+Rules current as of 2 November 2026. Flag any rule that is later reversed or superseded.
 Standards 02
 
 ## Creative direction guidelines
@@ -58,13 +58,18 @@ Applies to every product unless a brief says otherwise
 #### 01 · Product presentation
 - Pills and tablets stay in the foreground — sharp, in focus and held: thumb + index in a “pull,” or resting in an open palm. Never blurred or secondary to the background.
 - Product imagery feels intentional and premium, with the medication clearly visible.
+- The product is always in focus, in every static and video asset.
 - The product name stands out — never hidden or tiny. Exception: advertorial ads driving click-throughs may lead with the angle (e.g. “3-in-1 sleep prescription”).
 
 #### 02 · Proven creative approaches
 - Sexual health: macro shots of women’s lips with a pill, or an attractive woman looking into the camera, pushed to the foreground (neck-up is fine). Keep both as recurring directions.
 - Explore variations of proven approaches — don’t recreate identical compositions.
 - Product first, then brand: “[Product] by Everlife” in every intro — copy, scripts and voiceovers. Never minimize Everlife.
-- Video: the hook lands in the first 2.5 seconds or less.
+
+#### Video
+- The hook or key benefit is both said (voiceover or talent) and shown on screen within the first 2–3 seconds.
+- The product is always in focus whenever it’s on screen — never soft, blurred or racked out of focus.
+- Every video carries on-screen captions for all spoken audio. Captions stay clear of Meta’s safe zones — see Standards 04.
 
 03 · Logo sizing & placement
 Logo
@@ -98,12 +103,15 @@ Area (bounding box)
 - Doctor-prescribed medication
 - Free shipping from pharmacy
 
-50%
+60%
 Trust-focused
 Trustpilot, doctor-prescribed and/or free shipping — together or selectively.
-50%
+40%
 Minimalist
-Product- or headline-led, no trust callouts required.
+Product- or headline-led, no trust callouts.
+
+#### Customer count
+- “Over 100,000 happy customers” runs on 40% of graphics only — set separately from the trust callouts above.
 
 #### 08 · Women’s color & typography
 - Pinks, tans, neutrals and warm tones have performed well — keep using them.
@@ -150,7 +158,7 @@ Reference top-performing, lowest-CPA creative before generating new iterations.
 Standards 04
 
 ## Safe zones
-Where Meta’s interface sits on 9:16 placements. Keep the logo, headline, offer, CTA and disclaimer out of the shaded areas.
+Where Meta’s interface sits on 9:16 placements. Keep the logo, headline, offer, CTA, disclaimer and captions out of the shaded areas.
 Stories + Reels · 1080 × 1920
 
 #### Stories

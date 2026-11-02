@@ -4,8 +4,9 @@
   top         Everlife logo + headline + subline over a soft fade
   lower third one word-timed caption line (from the clip's own voice, via whisper)
   bottom      Trustpilot 4.9 Excellent / Doctor Prescribed / Ships Free row on a transparent
-              background + the product's verbatim disclaimer; stays on through the end card
-  end card    from end_t: headline, real bottle + pill renders, 3 benefits, 100,000+ line, CTA
+              background (or "Over 100,000 happy customers" in its place) + the verbatim disclaimer; stays on through the end card
+  end card    from end_t: headline, real bottle + pill renders, 3 benefits, CTA (proof: the footer's trust row OR
+              customer-count line, copy.json "proof"; bible 2026-11-02 ~60/40)
 
 usage:
   venv/bin/python -I full_layout.py <project_dir> <clip.mp4> <tag> [--end 12.8] [--mirror-until 6.46]
@@ -49,6 +50,7 @@ for f in ("logo_cream.png", "proof_row_clear.png"):
 sys.argv = [sys.argv[0], P]
 sys.path.insert(0, T)
 import build_layers as bl  # noqa: E402
+import standard_footer as sf  # noqa: E402  (one trust-row + disclaimer size for every creative)
 import product  # noqa: E402
 
 C = json.load(open(f"{P}/copy.json"))
@@ -59,6 +61,7 @@ C.setdefault("bottle", _b)
 if "pill" not in C:
     C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
+PROOF = sf.proof_of(C)   # trust row or customer-count line, one per video (bible 2026-11-02, ~60/40)
 C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
 C["_end_safe_shift"] = bool(PR.get("end_card_safe_shift"))   # product opt-in: tiktok end card clears the taller logo
 for f in (C["bottle"], C["pill"]):
@@ -75,7 +78,7 @@ W, H = 1080, 1920
 HEAD = bl.font(bl.AV_COND, 66, "Heavy Italic")
 SUB = bl.font(bl.AV_COND, 36, "Demi Bold Italic")
 CAP = bl.font(bl.AV_COND, 48, "Heavy")
-DISC = bl.font(bl.AV, 21, "Medium")
+DISC = sf.disc_font()   # standard: Inter Medium 18 px, exactly 2 lines (Justin 2026-11-02)
 
 
 # --- 1. captions from the clip's own audio (max 4 words, break on punctuation)
@@ -142,10 +145,10 @@ DISC_BOTTOM = PR.get("disclaimer_at") == "bottom" and not sz.BOTTOM_MODE   # pro
 def block_layout():
     """Positions of the bottom proof block inside the safe area: (row_y, disc_y, block_top)."""
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = [] if DISC_BOTTOM else bl.wrap(d0, bl.DISCLAIMER, DISC, sz.FOOT_W)
-    row = Image.open(f"{P}/source/proof_row_clear.png")
-    rh = int(row.height * sz.FOOT_W / row.width)
-    top = BLOCK_BOTTOM - (rh + 12 + 27 * len(lines))
+    lines = [] if DISC_BOTTOM else sf.disclaimer_lines(bl.DISCLAIMER)
+    _r = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")
+    rh = _r.height if _r else 0
+    top = BLOCK_BOTTOM - (rh + 12 + sf.DISC_LH * len(lines))
     return top, top + rh + 12, top, lines, rh
 
 
@@ -172,28 +175,25 @@ def bottom_layer():
     img = bl.canvas()
     row_y, disc_y, top, lines, rh = block_layout()
     bl.gradient_band(img, top - 380, H, 0, 225)
-    row = Image.open(f"{P}/source/proof_row_clear.png").convert("RGBA")
-    row = row.resize((sz.FOOT_W, rh), Image.LANCZOS)
-    img.alpha_composite(row, (sz.FOOT_X0, row_y))
-    note((sz.FOOT_X0, row_y, sz.FOOT_X0 + sz.FOOT_W, row_y + rh), "proof row")
+    row = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    if row:
+        rx = (W - row.width) // 2
+        img.alpha_composite(row, (rx, row_y))
+        note((rx, row_y, rx + row.width, row_y + rh), "proof row")
     d = ImageDraw.Draw(img)
     ty = disc_y
     for ln in lines:
         bl.centered(d, ty, ln, DISC, (236, 236, 232))
-        ty += 27
+        ty += sf.DISC_LH
     if lines:
-        note((sz.FOOT_X0, disc_y, W - sz.FOOT_X0, ty), "disclaimer")
+        note(((W - sf.DISC_W) // 2, disc_y, (W + sf.DISC_W) // 2, ty), "disclaimer")
     if DISC_BOTTOM:   # the disclaimer alone at the very bottom, full width, 2 lines (intentional exception to the safe area)
-        df, _s = DISC, 21
-        while len(bl.wrap(d, bl.DISCLAIMER, df, W - 80)) > 2 and _s > 13:
-            _s -= 1
-            df = bl.font(bl.AV, _s, "Medium")
-        dl = bl.wrap(d, bl.DISCLAIMER, df, W - 80)
-        bl.gradient_band(img, H - 27 * len(dl) - 200, H, 0, 225)
-        ty = H - 48 - 27 * len(dl)
+        dl = sf.disclaimer_lines(bl.DISCLAIMER)
+        bl.gradient_band(img, H - sf.DISC_LH * len(dl) - 200, H, 0, 225)
+        ty = H - 48 - sf.DISC_LH * len(dl)
         for ln in dl:
-            bl.centered(d, ty, ln, df, (236, 236, 232))
-            ty += 27
+            bl.centered(d, ty, ln, DISC, (236, 236, 232))
+            ty += sf.DISC_LH
     return img
 
 
@@ -272,7 +272,7 @@ def ingredient_end_layers():
     cy0 = ly + 56
     ch = 150
     cust_y = cy0 + ch + 18
-    bl.centered(d, cust_y, "Over 100,000 happy customers", bl.PROOF_S, bl.CREAM)
+    # no customer-count line here: the footer carries this video's one proof (trust row or count line; bible 2026-11-02)
     cw2 = 560
     cta_y = cust_y + 42
     d.rounded_rectangle([(W - cw2) / 2, cta_y, (W + cw2) / 2, cta_y + 72], 36, fill=bl.GOLD)

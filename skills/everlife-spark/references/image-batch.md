@@ -1,8 +1,13 @@
 # Spark IMAGE ads: Batch Mode (the default for every image request)
 
+> **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
+> **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
+
 > Adapted 2026-10-30 from the PT-141 skill. Spark has ONE form (sublingual tablet) and is for men and women. Where this file's
 > history notes mention PT-141 batches, they are lessons carried over, not Spark facts. Default ratio: **4:5** (9:16 from the
 > approved masters); default people: product only.
+
+**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product spark --proof count`. Rule: `core/references/creative-system.md` §2.
 
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
 mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real product
@@ -84,6 +89,10 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 winners), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8, F10, F11, F12). Weight towards F15, F16, F2, F11, F12.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
+**Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
+entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
+table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.
+
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
 timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
 a **named typeface**, an **own palette**, a rotating **product-name treatment** and **headline placement**; the form's hero
@@ -210,3 +219,6 @@ QA that the label is the Spark label. Never describe the tablet's shape, colour 
 
 ## 4. After the batch
 - Contact sheet first, then let the user pick winners. Winners → the other ratio only after approval.
+- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+  question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
+  board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.

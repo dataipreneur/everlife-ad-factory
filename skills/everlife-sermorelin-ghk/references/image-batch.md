@@ -1,9 +1,14 @@
 # Sermorelin GHK IMAGE ads: Batch Mode (the default for every image request)
 
+> **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
+> **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
+
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
 mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle
 and tablet; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor
 Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
+
+**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin-ghk --proof count`. Rule: `core/references/creative-system.md` §2.
 
 **Superseded 2026-10-29 (creative-system §5): never buy a reposition edit. A raw whose text or product dips into the footer is fixed for free with `reposition_916.py` (full-bleed, edge-stretch slivers, no blur), then `finish_batch.py … --fit trusted`. The paragraph below is kept for history only.**
 
@@ -71,6 +76,10 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 F10, F11, F12). Weight towards F2, F4, F11, F6.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
+**Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
+entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
+table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.
+
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
 timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
 a **named typeface**, an **own palette**, a rotating **product-name treatment** and **headline placement**; the form's hero
@@ -81,6 +90,7 @@ Finishing: `reposition_916.py` (free, local) when anything dips into the footer;
 that file.
 
 ## 2. Flow (1 question, then generate)
+> **🎨 STYLES = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; replaces the Frameworks options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker). The F-framework table stays as a fallback. Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" · **Look:** "Standard: winners + frameworks (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot:
    `core/references/ultra-premium.md`; overrides winners-first and people, tablet stays the hero).
@@ -252,3 +262,8 @@ the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PR
 - **500 mcg** (checked against `assets/sghk500_bottle.png`, 2026-10-28): white band 'SERMORELIN GHK', '500 MCG'.
 - **Either:** use the bottle on file and its wording.
 QA that the label shows the session's strength (1000 vs 500), not the other one. Never describe the tablet in words.
+
+## 4. After the batch
+- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+  question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
+  board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.
