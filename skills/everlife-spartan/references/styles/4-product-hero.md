@@ -1,7 +1,7 @@
 # Category 4 — Product as Hero
 
 Library folders: Product-as-Hero · Product Highlight · Pill-Product Focused · Minimalist · Polaroid (boards 3, 4, 5).
-Why it works: the slate vial is a distinctive object; the Premium DTC codes (`13_Premium_DTC`) suit them.
+Why it works: the squat mustard-gold vial is a distinctive object; the Premium DTC codes (`13_Premium_DTC`) suit them.
 
 ## 4A — Bench still life
 - **Looks like:** the vial on a chalk-dusted steel bench or a concrete block, hard side light, one long shadow; or on walnut for
@@ -9,7 +9,7 @@ Why it works: the slate vial is a distinctive object; the Premium DTC codes (`13
 - **Guardrails:** the vial is a still object; no syringe, pen, dropper or droplets; no capsules.
 
 ## 4B — Vial / bottle macro
-- **Looks like:** a macro of the slate label and brushed cap with condensation.
+- **Looks like:** a macro of the mustard-gold label and brushed-silver crimp with condensation.
 - Static: batch F2 / F11. Video: Seedance macro orbit.
 
 ## 4C — Minimal bold

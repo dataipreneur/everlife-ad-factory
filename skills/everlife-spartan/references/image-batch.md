@@ -70,9 +70,9 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: no bodies, no transformation |
 | F6 | Offer | 06_Offer | ❌ **skip**: no offer in the bible yet |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened Spartan Stack reviews |
-| F8 | Question | 08_Question | pronoun-free question ("Recovery an afterthought?") + answer line + product. Never "Is your…?" |
+| F8 | Question | 08_Question | pronoun-free question (no ✅ question line exists: ⏳ / ⚠ only with an OK, or a Tier B PROPOSED line) + answer line + product. Never "Is your…?" |
 | F9 | Reasons Why | 09_Reasons_Why_Education | three ✅ lines, numbered, vial hero (never one benefit per ingredient) |
-| F10 | Sticky Note | 10_Sticky_Notes_To_Do | a note on a gym locker or fridge ("Leg day. Recovery day.") next to the vial |
+| F10 | Sticky Note | 10_Sticky_Notes_To_Do | a note on a gym locker or fridge (plain words, e.g. "Leg day.", with a ✅ benefit beside it; no new claims) next to the vial |
 | F11 | Visual Metaphor | 11_EXTRA_Visual_Metaphor | one object: a shield on a gym wall, chalk on a bar, a taped fist on a heavy bag; the vial on real material |
 | F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life: concrete, steel, iron plates, chalk, leather; one colour mood; short line |
 | F13 | Portrait + line | (people) | a rugged man 25–55 between sets or after a round on the bag, chalk, hard light, vial in his hand or on the bench; no blood |
@@ -176,7 +176,7 @@ SCENE & STYLE: <scene>, real texture and depth (never a flat colour), <light>, p
 stubble, <shirtless | stringer | cut-off tee | hoodie sleeves pushed up>, lifting belt or wrist wraps, chalked hands; between sets,
 breathing, jaw set, eyes <to camera | down at the bar>; real skin, sweat and chalk catching the light; not a competition pose, not a
 mirror selfie, not a stock smile.> <MEN: a hardcore gym: black rubber floor, steel power rack, loaded barbell with iron plates, chalk bucket, cracked-vinyl bench; hard
-directional light, deep shadows; palette charcoal + steel + chalk white, or black + slate blue, or black + red. The product sits like a
+directional light, deep shadows; palette charcoal + steel + chalk white, or black + mustard gold, or black + red. The product sits like a
 gym object: on a plate, on the J-hook, on the bench by the wraps, or in a chalked hand pushed toward the lens.> No blood, gore or animal death. No needles, syringes,
 pens or injecting, no before/after, no body comparison, no medical settings.
 

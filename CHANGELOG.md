@@ -2,6 +2,21 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Spartan Stack: BPC-157 template leftovers removed (branch `spartan-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". Recovery and hardcore-gym wording is correct for this product and stays.
+Fixed only what belongs to BPC-157: its copy lines, its vial facts and its colour. Originals: `_originals/2026-11-02/spartan-leftovers/`.
+- BPC-157's own headlines used as examples (not on any Spartan page: "Don't Let Recovery Be the Bottleneck", "Built to Bounce Back",
+  "Train Hard. Recover Smarter." as Tier A, the BPC-157 Men hook list, "Recovery an afterthought?", "Ice Baths Have Limits." …) replaced
+  with Spartan lines from `product-bible.md` (⏳ headlines marked as needing an OK; ✅ PROVISIONAL benefits) in `video-prompting.md`,
+  `reference-guide.md`, `image-batch.md`, `mens-direction.md`, `styles/1, 3, 6`.
+- The "slate" vial / slate-blue accent → the Spartan vial's mustard gold (`assets/RENDERS.md`).
+- `video-prompting.md`: offers "none in the bible yet" → none settled (Ronnel); borrowed winners exist; "repair (except the approved
+  benefit line)" → no repair line exists for Spartan.
+- `lessons.md`: BPC-157 risk section re-checked for Spartan (vial label, men only, no landing page on file, disclaimer source);
+  pronunciation and caption spellings; blurred-plate 9:16 lesson marked superseded.
+- NOT changed (open decision): the angle questions, style 2E and image-batch benefit examples quote the unswapped Spartan page,
+  while the pre-screen table uses the PROVISIONAL swapped page. Waiting on the bible owner / Jeremy for the swap.
+
 ## 2026-10-30 — Spartan Stack: PROVISIONAL swap + headlines, gate lifted (branch `spartan-skill`)
 Logged before editing. Bible-updates hand-off §6 proposed it; Priestley approved (reverses his earlier "wait for the bible fix").
 Cause of the swap (team): the NEW Product Benefits Doc has the two stacks' labels flipped. PROVISIONAL — Jeremy to confirm.

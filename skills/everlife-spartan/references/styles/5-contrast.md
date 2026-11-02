@@ -4,7 +4,7 @@ Library folders: Comparison · Side-by-Side · Versus fighting (boards 2, 5, 6).
 
 ## 5A — Recovery methods checklist
 - **Looks like:** "Foam roller ✓ · Ice bath ✓ · Protein ✓ · Rest days ✓ · Recovery support ☐" on a notebook or gym whiteboard; the
-  product beside it. "Your Recovery Stack Is Missing Something." Methods only, no brands, no supplements named.
+  product beside it. Line: "3-in-1 Recovery Support" (✅ PROVISIONAL). Methods only, no brands, no supplements named.
 
 ## 5B — Versus a feeling
 - **Looks like:** "Sidelined" vs "Back at it" as two calm moments, both clothed, both the same person; never a body comparison, never a before/after.
