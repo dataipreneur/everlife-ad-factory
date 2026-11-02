@@ -40,6 +40,9 @@ disclaimer verbatim · landing page (facts only).
   from the real render). **Vial products:** staging from `skills/everlife-bpc-157/references/vial-refs/` (V31 / V20 / V40 / V37) and
   its "Compliance traps" list; replace BPC-157's "one vial, slate blue" with the new vial's own colours and the skill's vials-per-ad
   rule. **Tablet / capsule / bottle / spray products:** the Hims tiles in `13_Premium_DTC/`; the tablet stays the hero.
+- **"🧑‍💼 AI Avatar Video" in "What are we making?" (REQUIRED, Mitansh 2026-11-02).** Offer it in the format question (max 4 options:
+  merge "Video ad or animated still" if needed) with a bullet pointing to `core/references/ai-avatar-video.md` and naming this product's casting,
+  hero form and banned settings. Register the product in Higgsfield Marketing Studio (preflight prints the command).
 
 ## 3b. Lessons from the 7-product build (2026-11-02): check these before the first test
 - **Template leftovers are words, not just the name.** The 7 skills kept ~150 lines of their template's world (BPC-157:
@@ -68,6 +71,7 @@ disclaimer verbatim · landing page (facts only).
 4. Look at an end-card frame: product and headline both clear.
 5. `grep -n "Ultra premium" skills/everlife-<id>/SKILL.md skills/everlife-<id>/references/image-batch.md` → the option is offered
    exactly once in the setup, and `core/references/ultra-premium.md` has the product's row.
+6. `grep -n "AI Avatar Video" skills/everlife-<id>/SKILL.md` → offered in "What are we making?" with its `core/references/ai-avatar-video.md` bullet.
 
 ## 5. Hand-off line for the user
 "Built on `<id>-skill`, committed locally, nothing pushed, no credits. Tests N/N. Blocked on: … Human inputs open: … Next: approve the

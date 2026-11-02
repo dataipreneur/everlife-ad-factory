@@ -104,7 +104,11 @@ shoulder-up/waist-up, daytime, never a bed), placement (images at 4:5; 9:16 made
 masters), frameworks (random mix; the user can name some in chat).
 
 **Round 1 — one AskUserQuestion, 3–4 questions:**
-1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad".
+1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
+     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+     claims, colours and banned settings still apply; intimate wellness: a woman 30–55, shoulder-up, clothed, no bed, bedroom, lingerie or lips macro; the capsule is the hero in the B-roll; never "arousal" (bible 2026-11-02).
 2. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Connection" ("From Distant to Deeply Connected", "Unlock
    Confidence, Desire & Connection") / "The 3-in-1 blend" ("3-in-1 Female Sexual Wellness Blend") / "Say yes to more" ("Say Yes to
    More Pleasure, Desire & Intimacy"). ⚠ tone-check lines (pre-screen) only with the user's OK.
@@ -121,8 +125,8 @@ Then `references/image-batch.md` §2 step 2 onward (the table, the persona pass,
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·
 **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md` · **Mood** (same options as 4).
-**AI avatar videos:** once the shared avatar format exists (Mitansh's build spec), every video batch includes at least 2 (Jeremy,
-30 Oct 2026). Until then, say so and offer the other styles.
+**AI avatar videos:** every video batch includes at least 2 (Jeremy, 30 Oct 2026), made with the "🧑‍💼 AI Avatar Video" option
+(`core/references/ai-avatar-video.md`; the shared format exists since 2026-10-30).
 
 ## Step 2 — Style details (only when the user wants to choose or see examples)
 Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine and **credit cost** in every option description. Style gates:

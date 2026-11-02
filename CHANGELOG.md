@@ -13,6 +13,12 @@ Mitansh: every product, vials or not, offers the ultra-premium look. Docs only, 
 - PT-141, Spark, Lovara: the option added to the Round 2 mood question.
 - Restora-Z, Sermorelin, Sermorelin GHK: a new "Look" question in the image round (Standard / Ultra premium).
 - `everlife-new-product`: new skills must offer it.
+- **Same branch: "🧑‍💼 AI Avatar Video" in every product skill.** `core/references/ai-avatar-video.md` says "every product skill,
+  from 2026-10-30", but only BPC-157, PT-141, Restora-Z, Sermorelin and Sermorelin GHK offered it. Added to "What are we making?"
+  in GLP-1, NAD+, Spark, Lovara, MOTS-c, Spartan, Wolverine, each with a bullet naming that product's casting, hero form and
+  banned settings (Spartan / Wolverine: "Video ad or animated still" merged to stay within 4 options, as BPC-157 does).
+  Lovara's "once the shared avatar format exists" note replaced (it exists; ≥ 2 avatar videos per video batch, Jeremy 30 Oct).
+  `everlife-new-product`: required rule (checklist §3) + test 6. Open: the 7 products are not registered in Marketing Studio.
 
 ## 2026-11-02 — Fix: the new-product skill's `core` link (would stop everyone's update) (branch `fix-core-link`)
 Logged before editing. Found right after #17: every skill reaches the toolkit through a committed `skills/<skill>/core` →

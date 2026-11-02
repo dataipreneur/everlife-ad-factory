@@ -76,7 +76,8 @@ Rewrite every listed file for the new product: SKILL.md, product facts + pre-scr
 recipes, colours), video-prompting, finishing (copy.json example), personas, reference guide, lessons, styles ×7. Apply the inherited
 rules (§3 of the checklist). Grep until the template product's name only appears where it's deliberate.
 **Required:** the image setup offers **"✨ Ultra premium, product only"** once (`core/references/ultra-premium.md`; add the
-product's row to its "Per product" table; vial products stage from `vial-refs/`). Checklist §3 and test 5; a skill without it is not done.
+product's row to its "Per product" table; vial products stage from `vial-refs/`). Checklist §3 and test 5; a skill without it is not done. Same for **"🧑‍💼 AI Avatar Video"** in "What are we making?" (`core/references/ai-avatar-video.md`;
+checklist §3, test 6).
 
 ## Step 6 — Test for free
 - `bible_sync.py --check` (the new product's disclaimer must match), the skill's `preflight.sh`, `core/tests/regression.py smoke` before
