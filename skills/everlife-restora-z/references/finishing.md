@@ -20,7 +20,14 @@ Meta's UI covers: Stories top 144 px + centre-bottom 664×248 reply bar; Reels l
   - the last spoken line ends before ~12.5 s (or accept that it plays under the end card)
 - Fails that finishing can't fix → offer a re-roll with its cost (max 2 per concept).
 
-## 2. Video finishing
+## 2. Video finishing — premium post-edit (DEFAULT since 2026-11-02; ask the style question first)
+After the raw passes §1 QA, ASK the post-edit style question and finish with `premium_finish.py`, exactly as
+`core/references/premium-finish.md` says (4 styles: V1 Champagne, V2 Black Label, V3 Subtle, V4 Quiet Luxe; recommended = least
+recently used for this product, alternating bold/calm; log the choice). The classic `full_layout.py` route below is used only when
+the user asks for it or a job needs one of its extras (review burst, mirror fix, zoom); its copy rules (bible-only lines, verbatim
+disclaimer, caption spellings) apply to premium.json too.
+
+## 2b. Classic finishing (full_layout.py, on request only)
 Write `<job>/copy.json` (all copy from the bible, all new against the copy log):
 ```json
 {"product": "restora-z", "style": "house|tiktok|editorial", "kicker": "optional label for editorial",
