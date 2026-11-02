@@ -198,18 +198,20 @@ def bottom_layer():
 
 
 def cap_y():
+    if os.environ.get("EVERLIFE_CAP_Y"):   # e.g. 1405 = just under the proof row (outside the Reels safe line; flag it)
+        return int(os.environ["EVERLIFE_CAP_Y"])
     y = block_layout()[2] - 96   # caption line sits just above the proof block
     if DISC_BOTTOM:   # a shorter proof block sits lower: keep captions above the Reels profile corner
         y = min(y, sz.NOTCH[1] - 76)
     return y
 
 
-def caption(text):
+def caption(text, y=None):
     img = bl.canvas()
     d = ImageDraw.Draw(img)
     f = fit(text, bl.AV_COND, 48, "Heavy", SAFE_W - 44)
     w = d.textlength(text, font=f)
-    y = cap_y()
+    y = cap_y() if y is None else y   # optional 5th field in <tag>_caps.json moves a caption off the product
     d.rounded_rectangle([(W - w) / 2 - 22, y, (W + w) / 2 + 22, y + 66], 18, fill=(255, 255, 255, 240))
     bl.centered(d, y + 3, text, f, bl.NAVY)
     note(((W - w) / 2 - 22, y, (W + w) / 2 + 22, y + 66), f"caption '{text[:20]}'")
@@ -315,7 +317,7 @@ if STYLE == "default":
         end_layer().save(f"{L}/end.png")
     cap_layers = []
     for i, c in enumerate(caps):
-        caption(c[2]).save(f"{L}/cap_{a.tag}_{i}.png")
+        caption(c[2], c[4] if len(c) > 4 else None).save(f"{L}/cap_{a.tag}_{i}.png")
         cap_layers.append((f"cap_{a.tag}_{i}.png", c[0], c[1]))
 else:
     import styles  # alternative looks: "tiktok", "editorial"

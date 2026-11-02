@@ -192,3 +192,60 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - A person-led 9:16 still drifts: an open palm held forward lands in the bottom half (#3), and a tablet held beside the face goes
   small (#4, ~6% width). For people shots, keep the hold at face height and name a minimum tablet width in pixels/percent twice.
 - An edit of a good raw ("keep everything, move down so the top 15% is empty") fixed #2 cleanly for 1 credit.
+
+## AI Avatar Video "Early Retirement" (2026-10-30, men 1000, 7 Creatify + 52.5 Higgsfield) — rejected
+- "Genuinely trash." The comedic-metaphor avatar format (farewell cake, office box, everyday props) does NOT fit Sermorelin GHK.
+  Rule now: **no comedic metaphor hook** for this product's avatar videos; open straight on the product name + mechanism.
+- B-roll must be **rocking / masculine** (dark dramatic gym, iron, chalk, sparks, hard rim light, clothed silver fox) or
+  **sci-fi science** (glowing molecules, peptide chains, cellular energy macro, holographic lab). Never office/home gag props.
+- "Sermorelin" was mispronounced again ("Semeriglain") with the face on screen the whole take: no cheap fix exists.
+- Finishing: use `"style": "tiktok"` + `"end_rows": "benefits"` from the first pass (default end card cut the claims again);
+  a B-roll face in the header band hides the header — shift that still down before finishing.
+
+## "Ignition" (2026-10-30): pronunciation
+- MS said "Semarolil" despite a pronunciation note. Fixed for 0.9 Higgsfield (3 Seed Audio takes, take "Sermorelin G. H. K. by
+  Everlife." won) + a muted-slot splice; the small corner presenter hides the lip mismatch. Rules + exact recipe:
+  `references/pronunciation.md` (phonetic spelling INSIDE the spoken quote from now on; name said once).
+
+## ❌ AI Avatar Video run 2026-10-30 ("Early Retirement", "Inside the Muscle", "Ignition", "Hit Back", "Refuel") — Mitansh: "worse than trash"
+~37 Creatify + ~211 Higgsfield spent on five videos; none was usable. What went wrong (Claude's mistakes, not the tools'):
+1. **Never opened the winners.** `references/winners/winners.md` (M1 VIDEO7, M5 VIDEO49 8 s video, F4 BASE125 real creator UGC, M8 the
+   most proven static) is REQUIRED for "any image or video concept". Every concept was invented from scratch instead of rebuilt
+   from what already converts. → Next time: read winners.md + LOOK at M1/M5/F4 cards BEFORE pitching; name the winner each
+   concept rebuilds and what is copied (structure, opening, product moment, pacing).
+2. **Hook Engine skipped / half-done.** No HOOK-BANK pick, no 3 HOOK-10 options per video, no sharp sound at 0.0 s in the
+   picture, "Running on empty" / "Age hits growth hormone" were spoken lines over generic CGI, not a visual hook in frame 0.
+   The user's "no hooks" (after the comedy one) was read as "no hook at all" instead of "not that kind of hook".
+   → Every video: run HOOK-ENGINE.md §5 (bank + live winners, 3 options with score + frame-0 description), frame 0 mid-action
+   with a REAL product/hand moment, hook lands by 1.5 s.
+3. **Bible v3 rules dropped:** the tablet HELD (thumb + index or open palm) — removed to satisfy "objects only"; must be
+   flagged as a conflict and kept (a hand is not a person in the B-roll sense) unless the creative lead overrides in writing.
+   "Sermorelin GHK by Everlife" must be heard CLEARLY by 3 s: three of five takes mispronounced it and one shipped that way.
+4. **Pronunciation:** plain spelling → "Semeriglain"; hyphenated "Sir-more-ELL-in" → choppy "Sir Moore L-N". The only clean
+   result was a Seed Audio re-voice of plain "Sermorelin G. H. K. by Everlife.". → Next time: try "Sermorellin" (one word,
+   double l) in the MS script; QA unprimed; fix BEFORE showing; never present a take with the name wrong as "finished".
+5. **Format drift.** The avatar format (presenter in a corner over CGI) is not what our winners look like; abstract CGI
+   (molecules, glowing fibres, gauges, hourglasses) reads generic. Restora's winning format was copied onto a performance product
+   without checking Sermorelin GHK's own winners.
+6. **Shipped known defects as "final":** proof row over the label line, tablet under the logo, see-through presenter (fade
+   0.40–0.66 default), black side bar from the pad shift, captions out of sync, ghost tablets from blurred fills. Each was
+   found only after the user did. → Frame-QA EVERY second (not 6 samples) against: label fully readable and clear of every
+   overlay, tablet visible and clear of logo/header, presenter solid, no bars, captions in sync. Fix first, then show.
+7. **Process:** rushed under time pressure, changed the shared toolkit mid-session, skipped the skill's read-list
+   (winners, styles/INDEX, video-prompting.md, creative-system.md). → Read the list in ONE Bash call at session start, every time.
+
+### Checklist before ANY Sermorelin GHK video script is shown
+- [ ] winners.md read; the concept names the winner it rebuilds (M1/M5/F4 for video) and why
+- [ ] HOOK-ENGINE §5 run: 3 scored options, frame-0 visual + 0.0 s sound, hook by 1.5 s
+- [ ] Tier A copy only (bible), each claim mapped; "SERMORELIN GHK" on screen at frame 0
+- [ ] "Sermorelin GHK by Everlife" spoken by 3 s, pronunciation plan + unprimed QA + fix before showing
+- [ ] tablet held (thumb + index / open palm) on screen; real label never covered by any overlay
+- [ ] casting per CAST (fit silver fox 40s–50s or as briefed), fully clothed, tiny mic, solid key
+- [ ] last frame = benefits + specific CTA; proof + disclaimer verbatim; captions under the proof row
+- [ ] every-second frame QA passed before the user sees anything; cost + running total in each approval
+
+## Power Core re-voice (2026-10-30) — rejected: "it was bullshit"
+- A Seed Audio clone of a long mid-script line ("Two next-gen peptides plus one lean muscle powerhouse", 3.8 s, 9 words) sounded
+  fake/different from him AND the lips visibly didn't match, even with the small corner presenter. The re-voice trick only
+  holds for a short line (the name, ≤ 2.5 s). For a longer slip: re-take the presenter with the fix spelled into the script, or accept.
+- A transcript pass is not an audio QA: say plainly that the voice timbre and lip sync were not checked by ear before showing.

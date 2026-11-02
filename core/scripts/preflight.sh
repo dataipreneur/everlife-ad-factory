@@ -75,7 +75,7 @@ if [ "$1" = "--install" ]; then
   [ -x "$T/venv/bin/python" ] || python3 -m venv "$T/venv"
   "$T/venv/bin/pip" -q install --disable-pip-version-check imageio-ffmpeg faster-whisper pillow numpy "opencv-python-headless==4.10.0.84" >/dev/null 2>&1
 fi
-if [ -f "$T/full_layout.py" ] && [ -f "$T/finish_modern.py" ] && [ -f "$T/finish_batch.py" ] && [ -f "$T/assets/fonts/InstrumentSerif-Regular.ttf" ] && [ -f "$T/assets/proof_row_clear.png" ] && [ -f "$T/assets/footer/badge_dark.png" ]; then
+if [ -f "$T/full_layout.py" ] && [ -f "$T/avatar_video.py" ] && [ -f "$T/finish_modern.py" ] && [ -f "$T/finish_batch.py" ] && [ -f "$T/assets/fonts/InstrumentSerif-Regular.ttf" ] && [ -f "$T/assets/proof_row_clear.png" ] && [ -f "$T/assets/footer/badge_dark.png" ]; then
   pass "Finishing scripts present ($T)"
 else
   fail "Finishing scripts missing in $T" "bash \"$0\" --install"

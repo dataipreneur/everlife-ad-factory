@@ -26,6 +26,7 @@ Read these when the step says so:
 | `references/styles/INDEX.md` | the style question; then the chosen category file `references/styles/<n>-*.md` |
 | `references/style-boards/board_1..6.jpg` | when the user wants to *see* examples of a style (Read the board, show it) |
 | `references/video-prompting.md` | writing a video script/prompt |
+| `references/pronunciation.md` | **any presenter / voice prompt**: phonetic name inside the spoken quote + the pronunciation block + the 0.3-credit re-voice fix |
 | `core/references/REFERENCE-PRIORITY.md` | picking any reference ad: **1 our winners → 2 Meta Ad Library → 3 Pinterest** (rules for all three) |
 | `references/winners/winners.md` | **any image or video concept** (priority 1): our own top Sermorelin GHK ads (CPA-ranked) with "works / don't copy" cards; look at the card's preview image |
 | `references/image-batch.md` | **any image request** (Batch Mode); Meta refs in `core/references/meta-refs/` (priority 2, if any); Pinterest refs (priority 3): first this skill's own `references/pinterest/` (32 themed ads: men 45+ vitality/strength/testosterone/longevity, women 40+ collagen/glow/strength, tablet-led heroes; log in `SOURCES.md`), then the shared `core/references/static-refs/` (mostly sleep brands: layout only) |
@@ -36,6 +37,9 @@ Read these when the step says so:
 Paths: skill dir = this folder (`assets/` holds the real bottle + tablet renders; `product.env` the product settings). `core/` = the shared Everlife toolkit. Tools = `$EVERLIFE_TOOLS` or `~/Everlife-Creative/tools`. Output root = `~/Everlife-Creative/output/Sermorelin-GHK/`.
 
 ---
+
+## Hook Engine (mandatory for every video, all products)
+Before writing any video concept, script or prompt, read `~/.claude/everlife/hook-engine/HOOK-ENGINE.md` and this product's section of `~/.claude/everlife/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
 
 ## Step 0 — Preflight + product gate
 
@@ -71,8 +75,9 @@ If everything is ✅, say so in one line and go straight to step 1.
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
 **One AskUserQuestion, 3 questions:**
 1. **Audience:** "Men 35–60 (Recommended)" / "Women 35–60" / "Both (5 each)". This picks the bible page (headlines), the casting (men: 40s–50s fitness-model build, clothed) and the colours (women: Justin's preferred pinks, tans, neutrals, warm tones, white, teal; no colour banned; image-batch.md §2b); women: drop "& Thicker Hair" (pre-screen ⚠).
-2. **Strength:** "Either: strength not mentioned (Recommended)" / "1000 mcg" / "500 mcg". It decides which bottle the ad shows (QA checks the label says that strength). Copy never states a strength, dose or "double strength" until the creative lead (and, for "double strength", Jeremy) approves it; the live winners never do.
-3. **What are we making?** "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad".
+2. **Strength:** "Either: strength not mentioned (Recommended)" / "1000 mcg" / "500 mcg". It decides which bottle the ad shows (QA checks the label says that strength). **1000 mcg ads always carry "Double Strength"** (Mitansh, 2026-10-30): on screen (header sticker / end card) and only with the 1000 bottle in frame; never on 500 or "either" ads (it would be false). It is not on the Sermorelin GHK bible page, so it is a Tier B line: mark it "⚠ PENDING JEREMY (Double Strength)" on every session row until Jeremy approves it, and do not say it in the VO until then (a spoken claim is harder to pull). Other strength/dose wording ("1000 mcg") still waits for the creative lead.
+3. **What are we making?** "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a handheld mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~9 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; "SERMORELIN GHK" on screen from frame 0, and one B-roll shot shows the tablet held between thumb and index.
 - **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).
 - **Video** → ONE AskUserQuestion with: **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1"; **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md`; **Angle** "✨ Auto (Recommended)" / 3 approved benefit territories (lean muscle + performance · skin glow · energy + healthy blood flow · growth hormone support).
 
