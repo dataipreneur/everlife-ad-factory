@@ -70,7 +70,7 @@ global Hard NO or the no-needles rule, so treat them as listed until Jeremy rule
 | The Power of Growth Hormone in a Tablet | Men headline | ⚠ Jeremy | implies the tablet contains growth hormone; Sermorelin supports the body's own production |
 | Ultimate Stack…With Your TRT | Men headline | ⚠ Jeremy | implies combined-therapy use; another Rx named |
 | Sublingual tablets with 2x the strength · Double Strength Sermorelin · 2x-Strength Growth Hormone Support (new in v3) | Men | ✅ with care | only with a confirmed double-strength bottle in frame (see facts) |
-| Supports Sleep Quality + Recovery | quick-hit (both, new in v3) | ✅ | structure-function line; never show a bedroom (sleep ≠ bedroom: gym recovery, morning light) |
+| Supports Sleep Quality + Recovery | quick-hit (both) | ❌ removed | removed from the bible 2026-11-02 (Justin); never use |
 | Built for Men Who Still Want More | Men headline | ✅ | "built for" is not a "builds muscle" claim; never pair it with a body shot |
 | Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Supports Strength + Vitality | quick-hit (both) | ✅ | clean structure-function lines: the default benefit pool |
 
@@ -78,7 +78,7 @@ Clean pools after the screen (small; say so when they run low and ask for Tier B
 - **Men headlines (Tier A):** Double Strength Sermorelin (with care) · Built for Men Who Still Want More · Strength for Today, Vitality for Life.
 - **Women headlines (Tier A):** Thrive After 35 · Rediscover Energy and Vitality · Stay Fit, Age Beautifully · Strength for Today, Vitality for Life.
 - **Benefits:** Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Supports Strength + Vitality ·
-  Supports Sleep Quality + Recovery · (men, 1000 mcg only) 2x-Strength Growth Hormone Support.
+  (men, 1000 mcg only) 2x-Strength Growth Hormone Support.
 - **CTAs:** Explore Sermorelin · Get Started Now · Support Natural Growth Hormone · Build Your Plan.
 
 Everything else in the verbatim section is usable under its own label (Weak headline → avoid unless the brief asks).
@@ -135,7 +135,6 @@ Hormone Activity
 — Supports Strength + Vitality
 — 2x-Strength Growth
 Hormone Support
-— Supports Sleep Quality + Recovery
 CTA S
 Get Lean Today
 Explore Sermorelin
@@ -210,7 +209,6 @@ QUICK-HIT  BENEFITS
 Hormone Activity
 — Supports Strength + Vitality
 — Supports Toned Strength After 35
-— Supports Sleep Quality + Recovery
 CTA S
 Get Lean Today
 Explore Sermorelin

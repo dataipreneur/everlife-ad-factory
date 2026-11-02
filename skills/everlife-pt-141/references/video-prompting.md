@@ -23,7 +23,8 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "P-
 
 ## Copy rules
 - Headlines, benefits, CTAs: only `product-bible.md` (✅ lines; ⏳/⚠ only with the user's OK). Mechanism first, then benefit:
-  "Supports central arousal pathways, and healthy arousal signaling supports desire." Never "this makes you want it".
+  "Supports Central Desire Pathways" leads, then one more approved line ("Supports Brain-Based Desire"). Never "this makes you
+  want it", never "arousal" or any form of it (bible Hard NO, 2026-11-02).
 - No "ED", "erectile", "performance", "Viagra", "instant", "ignite", no timing promises, no guarantees.
 - No "I"/"my", no testimonials, no "Are you…?" (pronoun-free questions OK). No disease words, no "clinically" for the product,
   no "all natural", no $ prices ("Save up to 23%" is the only offer).

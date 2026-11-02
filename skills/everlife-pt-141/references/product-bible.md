@@ -24,8 +24,8 @@
   before/after, no couples in bed; **video framing stays shoulder-up**. The woman is a presence, not the pitch.
 - **Language scope:** this page has NO "ED", "erectile", "performance" or "Viagra" language — do not import it from the Spark page or the
   live landing page (which says "Generic Viagra", "ignite", "hard-hitting", "instant": never copy). PT-141 is **desire** support: brain-based,
-  non-hormonal, on-demand. "Supports", never "builds"/"boosts"; mechanism first ("supports central arousal pathways, and healthy arousal
-  signaling supports desire").
+  non-hormonal, on-demand. "Supports", never "builds"/"boosts"; mechanism first ("Supports Central Desire Pathways" leads, then the benefit
+  it serves). Never "arousal" or any form of it (bible Hard NO, 2026-11-02).
 - **Offer:** "Save up to 23%" (percent-off, usable). No $ prices.
 - **Disclaimer (verbatim):** `AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.`
 - **Landing page:** https://everlifemd.com/pt141/fb (last verified Aug. 28, 2026).
@@ -52,6 +52,10 @@ Tier B examples in the agreed register (PROPOSED, need approval): "The spark was
 | Any "ED", "erectile", "performance", "Viagra", "instant", "ignite" | not on this page | ❌ | outside PT-141's approved scope (Spark's "ED" headlines are Pending there, not here) |
 | Any "hormone-free fix", "cure", "treat low libido" | — | ❌ | disease/treatment claim |
 
+| Supports Central Desire Pathways · Supports Mind-Body Responsiveness | quick-hit / headline bank | ✅ (screened 2026-11-02) | NEW on the bible 2026-11-02, replacing the "arousal" lines; plain structure-function |
+| Supports Desire From Within | headline bank | Weak benefit (bible flag) | NEW 2026-11-02 (was "…Arousal From Within"); avoid unless asked |
+| Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
+
 Everything else in the verbatim section is usable under its own label.
 
 ---
@@ -68,7 +72,7 @@ Women's health
 Intimate wellness
 Creative messaging reference
 PT-141
-Brain-based, non-hormonal desire support designed around arousal signaling and on-demand intimate readiness.
+Brain-based, non-hormonal desire support designed around desire signaling and on-demand intimate readiness.
 Headlines & hooks
 Low Desire Isn’t in Your Head. It’s in Your Chemistry.
 Your Body Changed. Your Desire Doesn’t Have to Disappear.
@@ -87,7 +91,7 @@ Quick-hit benefits
 - —Supports On-Demand Desire
 - —Non-Hormonal Desire Support
 - —Supports Intimate Readiness
-- —Supports Central Arousal Pathways
+- —Supports Central Desire Pathways
 - —Gentle on the Vascular System
 - —Helps Wake Up the Want   [LIVE page 2026-10-28 screenshot; not in the 26 Oct export]
 - —Sublingual or Nasal Spray Desire Support   [LIVE page 2026-10-28 screenshot; not in the 26 Oct export]
@@ -107,6 +111,7 @@ Offers & conversion
 - —Save up to 23%
 Hard NOs
 - —No beds or bedroom scenes.
+- —Never use “arousal” or any form of it (“aroused,” “arousing”).
 - —Plus all global Hard NOs on page 3.
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 https://everlifemd.com/pt141/fb  ·  Last verified: Aug. 28, 2026
@@ -123,7 +128,7 @@ Headlines
 —A Different Pathway EntirelyWeak headline
 More approved benefits
 —Desire Support on Your Schedule
-—Supports Arousal Response
+—Supports Mind-Body Responsiveness
 —Desire Starts in the Brain
 —Helps Awaken Desire
 —Supports Sexual Motivation
@@ -134,6 +139,6 @@ More approved benefits
 —Supports Romantic ReadinessWeak benefit
 —Supports the Desire ResponseWeak benefit
 —Peptide-Powered Desire SupportWeak benefit
-—Supports Arousal From WithinWeak benefit
+—Supports Desire From WithinWeak benefit
 —Designed to Support DesireWeak benefit
 PT-141 — headline bank

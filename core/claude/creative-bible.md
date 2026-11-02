@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793291361-2416) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793638690-e4ca) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -200,7 +200,6 @@ More benefits & claims on page 8
 - Supports Natural Growth Hormone Activity
 - Supports Strength + Vitality
 - 2x-Strength Growth Hormone Support
-- Supports Sleep Quality + Recovery
 
 ### CTAs
 - CTA: Get Lean Today
@@ -271,7 +270,6 @@ More benefits & claims on page 10
 - Supports Natural Growth Hormone Activity
 - Supports Strength + Vitality
 - Supports Toned Strength After 35
-- Supports Sleep Quality + Recovery
 
 ### CTAs
 - CTA: Get Lean Today
@@ -581,7 +579,7 @@ Modern women’s intimacy support focused on desire, sensitivity, comfort, and r
 4. Desire Up. Sensitivity Ignited.
 5. Feel Pleasure. Crave Desire.
 6. Intimacy That Hits Deeper
-7. Exclusive 3-in-1 Women’s Arousal Blend
+7. Exclusive 3-in-1 Women’s Desire Blend
 8. 3-in-1 Female Sexual Wellness Blend
 9. Intimacy to Intensity. Unlocked.
 10. Modern Intimacy Support for Comfort, Sensitivity & Desire [Weak headline]
@@ -613,6 +611,7 @@ More benefits & claims on page 18
 - Save up to 45%
 
 ### Hard NOs
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
@@ -638,7 +637,7 @@ Tadalafil + Vardenafil + Apomorphine. Attribute each claim only to its own ingre
 
 #### Tadalafil
 - Supports comfort through blood flow, lubrication and ease
-- Supports blood flow for comfort and arousal
+- Supports blood flow for comfort and responsiveness
 
 #### Vardenafil
 - Enhances sensitivity and physical pleasure
@@ -824,7 +823,7 @@ Adults 30–55 who want non-hormonal, on-demand desire support.
 - Keep it tasteful — product imagery led, no bedroom scenes.
 - Video framing stays shoulder-up.
 
-Brain-based, non-hormonal desire support designed around arousal signaling and on-demand intimate readiness.
+Brain-based, non-hormonal desire support designed around desire signaling and on-demand intimate readiness.
 
 ### Headlines & hooks
 1. Low Desire Isn’t in Your Head. It’s in Your Chemistry.
@@ -846,7 +845,7 @@ More headlines on page 24
 - Supports On-Demand Desire
 - Non-Hormonal Desire Support
 - Supports Intimate Readiness
-- Supports Central Arousal Pathways
+- Supports Central Desire Pathways
 - Gentle on the Vascular System
 - Helps Wake Up the Want
 - Sublingual or Nasal Spray Desire Support
@@ -870,6 +869,7 @@ More headlines on page 24
 
 ### Hard NOs
 - No beds or bedroom scenes.
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
@@ -886,7 +886,7 @@ Landing pagehttps://everlifemd.com/pt141/fbLast verified Aug. 28, 2026
 
 ### More approved benefits
 - Desire Support on Your Schedule
-- Supports Arousal Response
+- Supports Mind-Body Responsiveness
 - Desire Starts in the Brain
 - Helps Awaken Desire
 - Supports Sexual Motivation
@@ -897,7 +897,7 @@ Landing pagehttps://everlifemd.com/pt141/fbLast verified Aug. 28, 2026
 - Supports Romantic ReadinessWeak benefit
 - Supports the Desire ResponseWeak benefit
 - Peptide-Powered Desire SupportWeak benefit
-- Supports Arousal From WithinWeak benefit
+- Supports Desire From WithinWeak benefit
 - Designed to Support DesireWeak benefit
 
 Intimate wellness
@@ -945,6 +945,7 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 
 ### Hard NOs
 - Don’t tie a benefit to any single ingredient — list PT-141, Apomorphine and Tadalafil together as a combo.
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
@@ -1365,6 +1366,7 @@ More headlines on page 35
 - CTA: Find Your Plan
 
 ### Hard NOs
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
@@ -1381,12 +1383,12 @@ Titan-Rx
 
 ### More approved benefits
 - Helps Sustain Intimate Performance
-- Supports Blood Flow When Aroused
+- Supports Blood Flow When It Counts
 - Helps Improve Consistency During Intimacy
 - Helps Reduce Interruptions During Intimacy
-- Supports Your Natural Arousal ResponseWeak benefit
+- Supports Your Natural Physical ResponseWeak benefit
 - Helps Improve Physical ResponsivenessWeak benefit
-- Supports Responsiveness When ArousedWeak benefit
+- Supports Responsiveness in the MomentWeak benefit
 - Supports a Stronger Physical ResponseWeak benefit
 
 ### 3-in-1 formula
@@ -1834,8 +1836,8 @@ Recovery stack
 Active men 25–55 with tissue, mobility and gut recovery goals.
 
 ### Creative direction
-- Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Reinforce “Wolverine Stack” as the brand name in every asset.
+- Talent: fit, rugged men 30–45 with a masculine, performance-driven look. Strong gym talent, intense training, refined execution.
+- Include “Wolverine Stack” and “BPC-157 / KPV / TB-500” on every design.
 - No animal death. Fighting imagery is fine without blood or gore.
 
 3-peptide recovery stack focused on connective tissue, inflammation support, gut lining, mobility, and soft-tissue recovery.
@@ -1848,14 +1850,40 @@ Active men 25–55 with tissue, mobility and gut recovery goals.
 
 Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
 
+### Asana hook options
+1. Three Peptides. One Mission.
+2. Double Down on Recovery
+3. Recovery, Reinforced
+4. The Heavy-Duty Recovery Stack
+5. Built for Heavy Wear
+6. For Bodies Under Load
+7. Heavy Output Needs Backup
+8. The Next-Level Recovery Stack
+9. Stacked for the Comeback
+10. Built for Impact
+
+### New headline options [Pending approval]
+1. Wolverine Stack. Built for the Grind.
+2. Hardcore Training. Wolverine Stack Recovery.
+3. Recover Like You Train: Wolverine Stack.
+4. The Wolverine Stack Is Your Recovery Edge.
+5. Built for Heavy Days. Backed by the Wolverine Stack.
+
 ### Quick-hit benefits
 - 3-in-1 Recovery Support
 - Supports Tendons + Ligaments
 - Supports Gut Lining Health
 - Supports Mobility
 - Supports Healthy Inflammatory Balance
+- Supports Tissue Repair
+- Promotes Joint Comfort
+- Supports Muscle Recovery
+- Promotes Mobility + Flexibility
 - 3-Peptide Whole-Body Recovery
 - Supports Joints, Gut + Mobility in One Stack
+- Supports Connective Tissue Health [Pending approval]
+- Supports Digestive Resilience [Pending approval]
+- Supports Whole-Body Recovery [Pending approval]
 
 ### CTAs
 - CTA: Explore the Wolverine Stack
@@ -1869,10 +1897,11 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] current % savings / price
+- Save up to 39%
 
 ### Hard NOs
 - No animal death, blood or gore.
+- No direct claims.
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.

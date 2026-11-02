@@ -20,5 +20,5 @@ Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; 
 - Static: `finish_image.py --layout article`.
 
 ## 2E — Mechanism map
-- **Looks like:** a clean diagram: brain → arousal signaling → desire, with the three approved pillars (brain-based · non-hormonal · on-demand), product hero.
+- **Looks like:** a clean diagram of the three approved pillars (brain-based · non-hormonal · on-demand), product hero.
 - **Guardrails:** no receptor names, no "melanocortin", no claims beyond the page.

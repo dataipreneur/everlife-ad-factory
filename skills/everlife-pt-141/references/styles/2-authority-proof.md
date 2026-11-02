@@ -4,7 +4,7 @@ Library folders: Clinical-Research · Trustpilot Reviews · Open Letter · Artic
 Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; desire support is a category where trust matters more than hype.
 
 ## 2A — Clinician moment
-- **Looks like:** a calm clinician 40–60 in a bright consult room, shoulder-up, the product on the desk. Explains ONE mechanism line ("PT-141 supports central arousal pathways; healthy arousal signaling supports desire") and "Doctor prescribed, shipped free from the pharmacy".
+- **Looks like:** a calm clinician 40–60 in a bright consult room, shoulder-up, the product on the desk. Explains ONE mechanism line ("PT-141 supports central desire pathways", the bible line; never "arousal" or any form of it) and "Doctor prescribed, shipped free from the pharmacy".
 - **Guardrails:** an AI clinician → the verbatim disclaimer covers it (AI depiction); no "clinically proven", no "treatment for low libido".
 - **Finishing:** `editorial` (video) or `finish_image.py --layout letter/article` (static).
 
@@ -20,5 +20,5 @@ Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; 
 - Static: `finish_image.py --layout article`.
 
 ## 2E — Mechanism map
-- **Looks like:** a clean diagram: brain → arousal signaling → desire, with the three approved pillars (brain-based · non-hormonal · on-demand), product hero.
+- **Looks like:** a clean diagram of the three approved pillars (brain-based · non-hormonal · on-demand), product hero.
 - **Guardrails:** no receptor names, no "melanocortin", no claims beyond the page.

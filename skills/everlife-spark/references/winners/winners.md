@@ -53,7 +53,7 @@
 | Code | Format | Results | Take | Don't copy |
 |---|---|---|---|---|
 | V02 · Base02 (12 s) | product-only luxury: bottle on roses / black marble, slow push-ins, tablet in, "Save up to 51%" end card | 4, $281 (LH) | the set, the slow push, the end card | "Things are looking up **tonight**" (timing); "Three pathways. One tablet." (not in the bible) |
-| V04 · Base04 (20 s) | 3D-animated couple on a sofa: bored → the tablet's glow → connection → dinner; benefit chips + offer badge | not in the export (Emily: winner) | the animated story arc; persistent chips | "Desire + **Blood flow** + Arousal" (ED-adjacent, not in the bible); "The Overachiever" (Tier B) |
+| V04 · Base04 (20 s) | 3D-animated couple on a sofa: bored → the tablet's glow → connection → dinner; benefit chips + offer badge | not in the export (Emily: winner) | the animated story arc; persistent chips | "Desire + **Blood flow** + Arousal" (ED-adjacent, not in the bible; "arousal" is a bible Hard NO since 2026-11-02); "The Overachiever" (Tier B) |
 | V06 · Base06 (19 s) | 3D-animated couple at a restaurant; a waiter serves the tablet on a cushion; light trails | not in the export (Emily: winner) | the serving reveal; warm restaurant | "The night is young. Act accordingly." (timing); "Blood flow"; "Three pathways. One tablet." |
 
 All the proof bars here say "Free and Discreet Delivery". The approved wording is **Ships Free From Pharmacy**; the footer art

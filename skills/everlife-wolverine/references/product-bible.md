@@ -10,9 +10,13 @@
 - **Focus (bible):** connective tissue, tendons and ligaments, healthy inflammatory balance, gut lining, mobility and soft-tissue recovery.
 - **Creative direction (bible):** rugged, strong, unmistakably masculine; a serious gym-goer with a hardcore training feel; say
   "Wolverine Stack" as the brand name in every asset; fighting imagery fine without blood or gore; no animal death.
-- **Offer:** "Save up to 39%" PROVISIONAL: seen on the landing page only (exception approved by Priestley 2026-10-30); must be added to the bible; Jeremy to confirm. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
+- **Offer:** "Save up to 39%": on the bible's Wolverine page since 2026-11-02 (was landing page only). **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
 - **Headlines:** bible ones ⏳ Pending approval; ⚠ PROVISIONAL ones below may be used, flagged for Jeremy.
 - **Landing page:** [PLACEHOLDER].
+- **⚠ Bible update 2026-11-02 NOT applied (waiting for Justin):** the Wolverine page now says "Include 'Wolverine Stack' and
+  'BPC-157 / KPV / TB-500' on every design", adds talent 30–45, 10 "Asana hook options", 5 pending headlines and new benefits
+  ("Supports Tissue Repair", "Promotes Joint Comfort", …). It still describes THREE peptides with KPV, but the Wolverine vial
+  reads BPC-157 + TB-500. Never put KPV on a Wolverine ad until Justin settles which is right (bible review, item 2).
 
 ## Compliance pre-screen (PROVISIONAL swap applied 2026-10-30 — confirm with Jeremy)
 
@@ -35,7 +39,7 @@
 | Get Started Now | ctas | ✅ | |
 | Support Whole-Body Recovery | ctas | ✅ | |
 | Start Your Stack | ctas | ✅ | |
-| Save up to 39% | offer | ⚠ PROVISIONAL | "Save up to 39%" PROVISIONAL: seen on the landing page only (exception approved by Priestley 2026-10-30); must be added to the bible; Jeremy to confirm. |
+| Save up to 39% | offer | ✅ | on the bible's Wolverine page since 2026-11-02 (percent only, never a $ price) |
 
 The VERBATIM block below is still the bible page as written (swapped); the table above is what the skill uses.
 
@@ -50,8 +54,8 @@ The VERBATIM block below is still the bible page as written (swapped); the table
 Active men 25–55 with tissue, mobility and gut recovery goals.
 
 ### Creative direction
-- Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Reinforce “Wolverine Stack” as the brand name in every asset.
+- Talent: fit, rugged men 30–45 with a masculine, performance-driven look. Strong gym talent, intense training, refined execution.
+- Include “Wolverine Stack” and “BPC-157 / KPV / TB-500” on every design.
 - No animal death. Fighting imagery is fine without blood or gore.
 
 3-peptide recovery stack focused on connective tissue, inflammation support, gut lining, mobility, and soft-tissue recovery.
@@ -64,14 +68,40 @@ Active men 25–55 with tissue, mobility and gut recovery goals.
 
 Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
 
+### Asana hook options
+1. Three Peptides. One Mission.
+2. Double Down on Recovery
+3. Recovery, Reinforced
+4. The Heavy-Duty Recovery Stack
+5. Built for Heavy Wear
+6. For Bodies Under Load
+7. Heavy Output Needs Backup
+8. The Next-Level Recovery Stack
+9. Stacked for the Comeback
+10. Built for Impact
+
+### New headline options [Pending approval]
+1. Wolverine Stack. Built for the Grind.
+2. Hardcore Training. Wolverine Stack Recovery.
+3. Recover Like You Train: Wolverine Stack.
+4. The Wolverine Stack Is Your Recovery Edge.
+5. Built for Heavy Days. Backed by the Wolverine Stack.
+
 ### Quick-hit benefits
 - 3-in-1 Recovery Support
 - Supports Tendons + Ligaments
 - Supports Gut Lining Health
 - Supports Mobility
 - Supports Healthy Inflammatory Balance
+- Supports Tissue Repair
+- Promotes Joint Comfort
+- Supports Muscle Recovery
+- Promotes Mobility + Flexibility
 - 3-Peptide Whole-Body Recovery
 - Supports Joints, Gut + Mobility in One Stack
+- Supports Connective Tissue Health [Pending approval]
+- Supports Digestive Resilience [Pending approval]
+- Supports Whole-Body Recovery [Pending approval]
 
 ### CTAs
 - CTA: Explore the Wolverine Stack
@@ -85,10 +115,11 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] current % savings / price
+- Save up to 39%
 
 ### Hard NOs
 - No animal death, blood or gore.
+- No direct claims.
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
