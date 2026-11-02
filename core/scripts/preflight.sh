@@ -132,6 +132,17 @@ else
 fi
 pass "Output folder: $OUT"
 
+# 6b. One bible for everyone: the gates read ~/.claude/everlife/creative-bible.md; it must be this repo's synced copy
+BIB="$HOME/.claude/everlife/creative-bible.md"
+BVER="$(grep -o -m1 'version [0-9-]*' "$CORE/claude/creative-bible.md" 2>/dev/null)"
+if cmp -s "$BIB" "$CORE/claude/creative-bible.md"; then pass "Creative bible = this repo's copy (${BVER:-version unknown})"
+else fail "Creative bible at $BIB is missing or a separate (old) copy, not this repo's (${BVER:-version unknown})" "bash \"$(cd "$CORE" && pwd -P)/../install.sh\" (moves your copy to ~/.claude/everlife/_originals/ and links the repo's)"; fi
+# 6c. Is Justin's live bible newer than the repo copy? Claude checks (read-only); an unsynced change warns, never blocks
+echo "🔎 Live bible check (Claude, do it now; read-only): read https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG with the"
+echo "   Artifact tool and compare the version it reports with ${BVER#version }. Same → say \"Bible: up to date\"."
+echo "   Different → say \"⚠ Justin updated the bible since the last sync; using this skill's current approved lines\", carry on,"
+echo "   and suggest a sync (core/references/bible-sync.md). Can't read it → say so and carry on."
+
 # 7. Optional connectors (informational)
 if claude mcp list 2>/dev/null | grep -qE "^creatify: .*Connected"; then pass "Creatify MCP (Model Playground) connected: Nano Banana 2.1 / Pro available for image batches"
 else echo "ℹ️  Optional: Nano Banana batches need the Creatify MCP: claude mcp add --transport http --scope user creatify https://api.creatify.ai/mcp, then a new session and /mcp → sign in. GPT Image 2.5 works without it."; fi
