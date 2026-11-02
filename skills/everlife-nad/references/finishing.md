@@ -16,7 +16,8 @@ a violation (exit 3 video, 2 image): never override; fix the layout or re-roll. 
 - Transcript: faster-whisper from `$T/venv`; compare with the approved script.
 - Pass/fail (tell the user every fail):
   - **product correctness:** the label matches the form's render (green bottle 'NAD+ … SUBLINGUAL TABLET' + the green tablet, or the green vial 'NAD+ · RX ONLY · 5ML'); not mirrored (`--mirror-until <cut>`);
-    **no syringe, needle, pen, dropper, droplets or injecting in any frame**; no capsules or pills anywhere
+    **no syringe, needle, pen, dropper, droplets or injecting in any frame**; no capsules; no pill except the one NAD+ tablet
+    (sublingual ads), none in injection ads
   - people: everyday adults 30–65, ordinary faces, clothed; no celebrity look-alikes; no IV drips or clinic chairs
   - no garbled text on props, no second phone (`--zoom 1.2`), no clinic/physio settings
   - product name pronounced clearly ("N-A-D plus", bible); nothing said that isn't on the bible page
@@ -51,7 +52,7 @@ Looks: `default` (house navy/gold) · `tiktok` · `editorial`; vary across a bat
 
 Batch Mode: `finish_batch.py --product nad` (see `image-batch.md`). `finish_modern.py` refuses this product until its
 `product_zones` are calibrated in product.json. Legacy `core/scripts/finish_image.py` layouts work (`standard`,
-`checklist`, `article`, `letter`, `split`, `frame`) with `"product"` in copy.json (article kicker defaults to "RECOVERY");
+`checklist`, `article`, `letter`, `split`, `frame`) with `"product"` in copy.json (article kicker defaults to "CELLULAR ENERGY", product.json `kicker_default`);
 `compare` is refused (no approved comparison).
 
 ## 4. Report to the user

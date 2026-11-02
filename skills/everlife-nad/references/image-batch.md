@@ -82,7 +82,7 @@ that file.
 ## 2. Flow
 1. Inputs from SKILL.md step 1: audience, angle, boldness. **Round 3 (ONE AskUserQuestion, 4 questions):**
    **Mood** "Surprise me: different each ad (Recommended)" / "Ultra premium, vial only: Hims/Ro codes + vial-refs (Mitansh's favourite,
-   batch 3 2026-10-29)" / "Hardcore gym: rack, loaded bar, chalk, rubber floor (men)" / "Boxing gym or garage at dawn (men)"
+   batch 3 2026-10-29)" / "Bright morning: desk, kitchen, daylight, the product's green as accent" / "Focused dark: charcoal + a green glow (direction.md option)"
    **Ultra premium** = `core/references/static-refs/13_Premium_DTC/README.md`
    codes on every slot (ONE sentence-case two-line headline, second line tonal, at most one tiny line or three quiet lines, product as an
    object on real material with one hard light and one long shadow, monochrome field, 60% empty, no bullets/icons/badges/caps/logo), each slot
@@ -98,8 +98,9 @@ that file.
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". Each Tier B / ⏳ / ⚠ line needs its own OK first.
 3. Generate: `composer_edit_image(project_id, prompt, images=[<the form's references: bottle_ref + tablet, or vial_ref, or all three>], out='gen/b<date>_<n>.png', aspect_ratio='9:16')` for the default model; Nano Banana → §2c (Model Playground tools)
    from `assets/creatify.json`. Max 4 in flight.
-4. QA every result (Read it), strictly: text EXACTLY the approved strings; the vial's label matches the render (not garbled, not mirrored);
-   **no syringe, needle, pen, dropper or droplet trail anywhere**; no capsules or pills anywhere; people everyday 30–65, ordinary faces;
+4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle's or vial's label matches its render (not garbled, not mirrored);
+   **no syringe, needle, pen, dropper or droplet trail anywhere**; no capsules; no pill except exactly one NAD+ tablet (sublingual ads),
+   none in injection ads; people everyday 30–65, ordinary faces;
    the tablet larger than the bottle in sublingual ads; "NAD+" big; nothing breaks a Hard NO. Fail → one automatic re-roll naming the fix.
 5. Finish: `reposition_916.py` on every 9:16 raw (0 credits), then `finish_batch.py repo/rN.png FINAL.png --ratio 9:16 --product nad`
    (verbatim disclaimer from product.json). Name finals `YYYY-MM_Static_NAD-<Sub|Inj|Choice>_BaseNN_VV_<framework>_1080x1920-MP.png`.
@@ -111,17 +112,17 @@ Every ad gets its own pairing and accent; never two alike in one batch, never th
 
 | Headline face | Partner for supporting text |
 |---|---|
-| Heavy condensed grotesque (the recovery category's look), sentence case or caps | light humanist sans |
+| Heavy condensed grotesque (the performance category's look), sentence case or caps | light humanist sans |
 | Wide extended sans, bold | regular sans |
 | Slab serif, bold | light sans |
 | Elegant high-contrast serif, roman | clean geometric sans |
 | Chunky rounded sans | mono-spaced labels |
 | Thin editorial sans, tracked out | serif body |
-| Stencil / industrial sans (gym signage) | regular sans |
+| Stencil / industrial sans (signage) | regular sans |
 | Serif with ONE italic word | small-caps sans |
 
 Accent from the scene or product: the product's green, white, soft grey; or, chalk white, steel grey, concrete, rubber black, safety-tape yellow (sparingly),
-forest, tan, walnut; women: blush, rose, tan, beige, cream, mocha, burgundy (never orange, never green). Vary headline placement
+forest, tan, walnut; women: any palette (the pinks / tans / beige rule is only for GHK-Cu Cream and Glow Stack; NAD+'s accent is green). Vary headline placement
 (top-left, centred, split either side of the product) and light (hard side light, overcast, golden hour, studio).
 
 ## 2c. Image model (one more question in the setup round; shared rules in `core/references/image-models.md`)

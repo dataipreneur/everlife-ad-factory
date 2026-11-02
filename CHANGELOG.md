@@ -2,6 +2,27 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — NAD+: BPC-157 template leftovers removed (branch `nad-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". The skill was scaffolded from BPC-157 and still carried its recovery,
+gym and vial-only rules. Rewritten from `direction.md`, `assets/RENDERS.md` and the ✅ lines of `product-bible.md` only; no new
+claims. Originals: `_originals/2026-11-02/nad-leftovers/`.
+- **Form fix (blocking):** the video PRODUCT block said "attached vial reference … no capsules or pills anywhere" and the QA lines in
+  `finishing.md` / `image-batch.md` said "no capsules or pills anywhere", which would reject every NAD+ tablet ad. Now form-aware:
+  sublingual = bottle + exactly one NAD+ tablet (the hero); injection = the vial alone, a still object.
+- `styles/6-lifestyle-identity.md`: the "Hardcore gym, tattooed bodybuilder, shirtless" and Pilates sub-styles (BPC-157 brief)
+  become NAD+ ones from direction.md (bright morning desk, first coffee, the walk, burnout to back on), each with a ✅ headline.
+- `video-prompting.md`: authority examples, copy example, banned-word list, cast wardrobe.
+- `styles/` INDEX, 1–5: recovery, tissue, joint, ice-bath and gym sub-styles become clear-head / steady-energy ones; 2E mechanism
+  map = cellular energy → focus → healthy aging (✅ lines).
+- `image-batch.md`: gym moods become "Bright morning" and "Focused dark" (direction.md palette options); type-table notes; the
+  women's "never green" accent rule removed (the pinks/tans rule is only for GHK-Cu Cream and Glow Stack; NAD+'s accent is green).
+- `finishing.md`: article kicker default is "CELLULAR ENERGY" (product.json), not "RECOVERY".
+- `animated-still.md`: gym environment moves become morning-light ones.
+- `lessons.md`: the "BPC-157-specific risks" section (incl. "men must look hardcore", "only one product image, the vial",
+  "3 mg/mL vial", "404 page", "PT-141 disclaimer") is rewritten as NAD+ risks; stale BPC-157 notes fixed; the blurred-plate
+  9:16 lesson marked superseded.
+- Kept on purpose: provenance notes, the shared `vial-refs/` staging folder, "Bounce Back From Burnout" (a ✅ NAD+ headline).
+
 ## 2026-10-30 — NAD+: Emily's winners (branch `nad-skill`)
 Logged before editing. Emily's Drive folder "NAD Winners" (downloaded by Priestley): 4 statics (Base09, Base41, Base81, Base83;
 4:5 + 9:16), dated 25 Sep – 22 Oct 2026. Full files in `~/Everlife-Creative/reference-ads/NAD-winners-2026-10-30/` (not in git).

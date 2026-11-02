@@ -3,15 +3,15 @@
 Library folders: Movie-Peg · Wild-Creative/Surreal · Cause & Effect · Retro · New Year (boards 1, 2, 3, 5, 6).
 
 ## 3A — Object metaphor
-- **Looks like:** a foam roller rolled aside, chalk clapped off hands, laces pulled tight, a strap released: one object, slow, hard light.
-  The product lands last on real material. "Your Foam Roller Isn't Enough."
+- **Looks like:** a loading bar stuck at 12%, a fogged window wiped clear, a phone battery jumping to full: one object, slow, real light.
+  The product lands last on real material. Headline from the ✅ list ("Mentally Stuck on Loading?").
 
 ## 3B — Comedic contrast
-- **Looks like:** an ice bath gasp, then calm: a mug, a bench, the product. "Ice Baths Have Limits." Never a brand, never a body gag.
+- **Looks like:** a third coffee at 3 p.m., then calm: a clear desk, daylight, the product. Headline from the ✅ list ("Less Fog. More Focus."). Never a brand, never a body gag, never a before/after.
 
-## 3C — Animated tissue-signal
-- **Looks like:** a clean line animation of a joint and its connective tissue "supported" (no anatomy gore, no medical labels), landing on the real vial.
-- **Guardrails:** no "heals/repairs" captions; the animation ends on the real product within 10 s (Marcus: a cartoon never sells a prescription).
+## 3C — Animated cell-signal
+- **Looks like:** a clean line animation of cells lighting up, warm and steady (no anatomy, no medical labels), landing on the real product.
+- **Guardrails:** no "boosts / reverses / repairs" captions; the animation ends on the real product within 10 s (Marcus: a cartoon never sells a prescription).
 
 ## 3D — Retro film · 3E — Seasonal
-- **Looks like:** 16 mm grain on a morning run; a January "comeback" or a summer trail. Same copy rules.
+- **Looks like:** 16 mm grain on a morning commute; a January fresh start or a bright summer morning. Same copy rules.

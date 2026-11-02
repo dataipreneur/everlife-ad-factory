@@ -1,27 +1,28 @@
-# Category 6 — Lifestyle & Identity  (highest fit: the brief asks for fit, rugged men and a mix of models and product)
+# Category 6 — Lifestyle & Identity (highest fit: a clear head and steady energy in everyday life)
 
-> **NAD+ (adapted 2026-10-30 from BPC-157):** all audiences 30–65+; lead with the choice (tablet or injection), never a needle; the tablet is the hero in tablet ads. Where this file says BPC-157, gym or recovery, it describes the template product: `direction.md` and `product-bible.md` win.
+> **NAD+ (adapted 2026-10-30 from BPC-157):** all audiences 30–65+; lead with the choice (tablet or injection), never a needle; the tablet is the hero in tablet ads. Template wording cleaned 2026-11-02; if any BPC-157, gym or recovery wording remains, it describes the template product: `direction.md` and `product-bible.md` win.
 
 
-Library folders: Sports · Hero Fitness Guy (take the energy, not the bodies) · Female Glow Up (take the light, not the "glow" claim) · Life Cell · Winners.
-Why it works: the buyer sees himself between sets. Men: hardcore (`../mens-direction.md`); never a needle, never a before/after.
+Library folders: Life Cell · Winners · Sports (take the energy, not the bodies) · Female Glow Up (take the light, not the "glow" claim).
+Why it works: the buyer sees their own full day going well. Everyday adults 30–65+, clothed, calm (`../direction.md`); never a
+needle, never a body, never a before/after.
 
-## 6A — Hardcore gym (men)
-- **Looks like:** a tattooed bodybuilder 30–45, shirtless or in a stringer, chalked hands on a loaded bar under hard light; a slow
-  set, then the breath between sets; the vial on the plate or in his hand toward the lens. "Built to Bounce Back."
-- **Guardrails:** the product is never used; no competition posing, no mirror selfie, no body comparison.
-- **Finishing:** `default` (house) or `tiktok`.
+## 6A — Bright morning desk
+- **Looks like:** a man or woman 35–60 at a tidy desk in morning daylight, first coffee, focused; the form's hero on the desk
+  (one tablet beside the green bottle, or the green vial). "Clear Head. Full Day."
+- **Finishing:** `default` or `editorial`.
 
-## 6B — Trail / track at dawn
-- **Looks like:** a runner 35–55 lacing shoes on a tailgate, golden hour; the product in the car's cupholder or on the tailgate.
-  "Built for Lifters, Runners, and High-Output Humans."
-- **Finishing:** `editorial`.
+## 6B — First coffee, full day ahead
+- **Looks like:** a kitchen at 7 a.m., a parent 30–50 packing a bag while the kettle boils; the product on the counter.
+  "Wake Up Feeling Recharged Again."
+- **Finishing:** `tiktok`.
 
-## 6C — Pilates & strength (women)
-- **Looks like:** a woman 30–55 on a reformer or with light dumbbells in a soft studio, blush/tan/beige, laughing mid-set; the product
-  on the studio shelf. "Lift. Lengthen. Recover."
-- **Guardrails:** pinks, tans, beige only; nothing "glow-up"; no body commentary.
+## 6C — The walk
+- **Looks like:** a man or woman 50–65+ on a brisk morning walk, then back at a sunny table; the product beside a glass of water.
+  "More Life in Your Years."
+- **Guardrails:** healthy aging, never age reversal; no body commentary.
 
-## 6D — The comeback session
-- **Looks like:** the first session back: taping a bag, a slow warm-up, a quiet nod; the product on the kitchen counter afterwards.
-  "The Comeback Starts Here." Identity, not transformation; no before/after.
+## 6D — Burnout to back on
+- **Looks like:** late-night laptop glow, then the next bright morning: the same person, clothed and calm, at the same desk; the
+  product on it. "Bounce Back From Burnout." Identity, not transformation; never a before/after split.
+- **Guardrails (all):** shoulder-up or mid-shot; no gym bodies; no celebrity, CEO or athlete look-alikes; no IV drips or clinic chairs.

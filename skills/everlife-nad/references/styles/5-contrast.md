@@ -2,11 +2,11 @@
 
 Library folders: Comparison · Side-by-Side · Versus fighting (boards 2, 5, 6).
 
-## 5A — Recovery methods checklist
-- **Looks like:** "Foam roller ✓ · Ice bath ✓ · Protein ✓ · Rest days ✓ · Recovery support ☐" on a notebook or gym whiteboard; the
-  product beside it. "Your Recovery Stack Is Missing Something." Methods only, no brands, no supplements named.
+## 5A — Clear-head habits checklist
+- **Looks like:** "Sleep ✓ · Water ✓ · Daylight walk ✓ · Phone away at night ✓ · Cellular support ☐" on a notebook or fridge whiteboard; the
+  product beside it. Headline from the ✅ list ("NAD+ Without the Nonsense."). Habits only, no brands, no supplements named.
 
 ## 5B — Versus a feeling
-- **Looks like:** "Sidelined" vs "Back at it" as two calm moments, both clothed, both the same person; never a body comparison, never a before/after.
+- **Looks like:** "Stuck on loading" vs "Clear head, full day" as two calm moments, both clothed, both the same person; never a body comparison, never a before/after.
 
 Blocked: anything with a competitor name, a body split, "clinically", or a cure word.
