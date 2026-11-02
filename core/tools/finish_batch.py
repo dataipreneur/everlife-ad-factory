@@ -13,6 +13,8 @@ lead, 2026-10-28) and the approved footer (Trustpilot 4.9 / Doctor Prescribed / 
         (the calm top is cropped, the calm bottom extended; --shift auto, max 320 px); if that is not enough the
         finisher refuses (exit 2): re-roll it, or fix the raw with one reposition edit (image-batch.md §4). Raws made before 2026-10-29 were composed to fill the frame: they need that
         edit (an automatic scale-down-and-extend was tried and rejected: blurred bars, logo on the headline).
+        Also refused at 9:16 (2026-10-30): the ad's own type/product under the Everlife logo (unless --fit force), and type or
+        product in the Reels side bands outside x 156–924 (only with --fit none; a ⚠ between SIDE_WARN and SIDE_REFUSE).
   4:5 / 1:1  feed placements have no overlay: the footer sits over the calm bottom ~18%, as before.
 
 usage: finish_batch.py <generated.png> <out.png> --ratio 4:5|9:16|1:1 --product <id> [--tone auto|dark|light]
@@ -46,6 +48,12 @@ PROOF_W = int(os.environ.get("EVERLIFE_PROOF_W", "1000"))   # 9:16 proof-row col
 MAX_SHIFT = 140                # max nudge DOWN (logo headroom)
 MAX_UP = 320                   # max nudge UP (9:16: pull the content above the safe-area footer)
 CONTENT_GAP = 20               # px of calm background wanted between the raw's last content row and the footer
+# 9:16 side bands + logo (2026-10-30, Spark 9:16 test: three raws with type in the Reels side bands and one with the ad's own
+# name under the logo passed the old bottom-only check). Edge density of the side bands, calibrated on 4 Spark + 23 Sermorelin raws:
+# type in a band scores 0.11–0.17, calm or textured bands under 0.05.
+SIDE_REFUSE = float(os.environ.get("EVERLIFE_SIDE_REFUSE", "0.09"))   # above → refuse (exit 2)
+SIDE_WARN = float(os.environ.get("EVERLIFE_SIDE_WARN", "0.05"))       # above → warn: look at the safezones overlay
+LOGO_BUSY_MAX = 0.12                                                   # the ad's own type/product under the logo → refuse
 
 
 def sans(size, weight="Regular"):
@@ -123,6 +131,18 @@ def _busy(img, box):
     g = np.asarray(img.crop((x0, y0, x1, y1)).convert("L").resize((max(8, (x1 - x0) // 6), max(8, (y1 - y0) // 6))), dtype=np.float64)
     e = np.abs(np.diff(g, axis=0))[:, 1:] + np.abs(np.diff(g, axis=1))[1:, :]
     return float((e > 24).mean())
+
+
+def side_band_density(img, y0, y1):
+    """9:16: the busiest 40 px block of strong edges in the left and right Reels side bands (outside the safe column), rows y0..y1."""
+    g = np.asarray(img.convert("L").filter(ImageFilter.GaussianBlur(0.8)), dtype=np.float64)
+    e = np.zeros_like(g)
+    e[1:, :] += np.abs(np.diff(g, axis=0)); e[:, 1:] += np.abs(np.diff(g, axis=1))
+    out = {}
+    for name, (c0, c1) in (("left", (20, sz.SAFE[0] - 6)), ("right", (sz.SAFE[2] + 6, img.width - 20))):
+        b = e[max(0, y0):max(y0 + 41, y1), c0:c1]
+        out[name] = max((float((b[i:i + 40] > 60).mean()) for i in range(0, max(1, b.shape[0] - 40), 20)), default=0.0)
+    return out
 
 
 def smart_logo_spot(img, lw, lh, ly_default, sx0, sx1, pad=28):
@@ -316,6 +336,24 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     lx = {"center": (W - lg.width) // 2, "left": max(60, sx0), "right": min(W - lg.width - 60, sx1 - lg.width)}[LOGO_POS]
     if LOGO_POS == "center" and LOGO_SMART:
         lx, ly = smart_logo_spot(out, lg.width, lg.height, ly, sx0, sx1)   # never on top of the ad's own type (Mitansh, 2026-10-29)
+    if story and fit != "force":
+        name = os.path.basename(gen_path) if isinstance(gen_path, str) else "frame"
+        lb = _busy(out, (lx - 10, ly - 10, lx + lg.width + 10, ly + lg.height + 10))
+        if lb > LOGO_BUSY_MAX:
+            print(f"❌ {name}: the ad's own type or product sits under the Everlife logo (busy {lb:.2f} > {LOGO_BUSY_MAX}). "
+                  f"Re-roll with the top 12% calm, or build the 9:16 from the approved 4:5 (compose916.py).")
+            raise SystemExit(2)
+        if fit == "none":
+            sides = side_band_density(out, ly + lg.height + 10, fy - 6)
+            worst = max(sides, key=sides.get)
+            if sides[worst] > SIDE_REFUSE:
+                print(f"❌ {name}: content in the Reels {worst} side band (x outside {sz.SAFE[0]}–{sz.SAFE[2]}; edge density "
+                      f"{sides[worst]:.2f} > {SIDE_REFUSE}). Text, CTA and product must sit in the safe column: re-roll with wider side "
+                      f"margins, or build the 9:16 from the approved 4:5 (compose916.py).")
+                raise SystemExit(2)
+            if sides[worst] > SIDE_WARN:
+                print(f"⚠️  {name}: something in the Reels {worst} side band (edge density {sides[worst]:.2f}): look at the "
+                      f"safezones overlay before approving.")
     o.alpha_composite(top_fade(W, ly + logo_h + 30, top_tone), (0, 0))
     o.alpha_composite(lg, (lx, ly))
     # safe-zone check (9:16): the footer column and the logo must sit inside the Meta safe area

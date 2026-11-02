@@ -488,6 +488,18 @@ batch, the PR). Worked example: the Lovara build on branch `lovara-skill` (same 
   product files, product.json/env with the verbatim disclaimer, the bible extract, renders from the asset library, copy-log seed).
 - Not a product skill: no product.json (bible_sync and the shared tools skip it). No shared code changed. No credits.
 
+## 2026-10-30 — 9:16 safe-zone check: side bands + logo overlap (branch `safezone-sides`, from `main` 4ee62c6)
+Priestley's Spark 9:16 safe-zone test showed `finish_batch.py` only checked the bottom (content under the proof row): three raws
+with headline/CTA/product in the Reels side bands and one with the ad's own name under the Everlife logo all passed. Approved by
+Priestley ("Yes, on its own branch"). Original in `_originals/2026-10-30/core/tools/finish_batch.py`.
+- 9:16, unless `--fit force`: refuse when the ad's own type/product sits under the logo (edge "busy" > 0.12).
+- 9:16 with `--fit none`: refuse when the left/right Reels band (outside x 156–924) has type or product (edge density > 0.09);
+  warn above 0.05. Calibrated on the 4 Spark raws + 20 Sermorelin r3 raws: all 4 Spark raws refused with the right reason (S1
+  bottom, S2/S4 left band, S3 logo); the Sermorelin logo refusals were checked by eye and are real (their name runs into the logo
+  area). `--fit trusted` (compose916 / reposition outputs) keeps the logo check and skips the side check (geometry is known).
+- Smoke 18/18. Videos (full_layout) do not use this path; animate_still checks only its first frame.
+- Not changed: earlier finals already made from older raws (e.g. Sermorelin W1/GHK W2 have type or faces in the bands).
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
