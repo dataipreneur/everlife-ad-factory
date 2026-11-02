@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Lovara: stale "nothing yet" notes fixed (branch `lovara-skill`)
+Logged before editing. Priestley: "Yes, do all one by one" (template-leftover pass). Lovara's PT-141 / Sermorelin mentions are
+attributed lessons and stay. Fixed three statements that were true at scaffolding and are not now. Originals:
+`_originals/2026-11-02/lovara-stale/`.
+- `lessons.md`: "No Lovara ads have been made" → batches 1 and 2 (2026-10-30) exist, lessons at the bottom.
+- `video-prompting.md`: "No Lovara video winners" → V18, V26, V32 in `winners/winners.md`.
+- `reference-guide.md`: "our own Lovara winners (none on file yet)" → points to `winners/winners.md`.
+- Not changed: no pronunciation for "Lovara" is on file; add it once the team confirms how it is said.
+
 ## 2026-10-30 — Lovara: Emily's winners (branch `lovara-skill`)
 Logged before editing. Emily's Drive folder "Lovara" (downloaded by Priestley): 3 statics (360555 A2/A3, Base161), 3 videos
 (Video 32, 26, 18) and her note listing the all-time winners whose files she could NOT find (INT24 120 sales, INT4 112, INT13 95,

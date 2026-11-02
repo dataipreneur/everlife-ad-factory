@@ -1,6 +1,6 @@
 # Lessons already paid for (read every session)
 
-No Lovara ads have been made with this skill yet. These lessons come from Restora-Z, Sermorelin GHK, plain Sermorelin and PT-141
+Lovara batches 1 and 2 were made on 2026-10-30 (their lessons are at the bottom). The general lessons come from Restora-Z, Sermorelin GHK, plain Sermorelin and PT-141
 (Oct 2026) and from the creative team's written feedback. Add Lovara lessons at the bottom.
 
 What the creative lead / team rejected, and why:

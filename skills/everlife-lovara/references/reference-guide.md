@@ -1,7 +1,7 @@
 # Which reference to use when (Lovara)
 
-Order (`core/references/REFERENCE-PRIORITY.md`): **1** our own Lovara winners (none on file yet: ask the user for the Winning Ads
-Reference rows or a Drive download) → **2** Meta Ad Library refs in `core/references/meta-refs/` → **3** the shared Pinterest library
+Order (`core/references/REFERENCE-PRIORITY.md`): **1** our own Lovara winners (`winners/winners.md`: S1–S3 statics and V18 / V26 / V32
+videos, Emily 2026-10-30; ask for the all-time top ones, which have no files yet) → **2** Meta Ad Library refs in `core/references/meta-refs/` → **3** the shared Pinterest library
 `core/references/static-refs/` (12 folders; overview `OVERVIEW.jpg`). It teaches **layout, type scale, product staging and mood**, never
 words or scenes. Pick ONE pin per slot, look at it, and borrow only its structure.
 
