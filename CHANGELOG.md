@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Epithalon skill brought up to date with main before merging (branch `epithalon-skill`)
+Merged main (#23–#29) and gave the skill what those PRs gave the other skills (from its MOTS-c template): the AI Avatar
+"ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
+the Winners Board read-first and rate steps. Smoke 57/57.
+
 ## 2026-11-02 — GHK-Cu Cream skill brought up to date with main before merging (branch `ghk-cream-skill`)
 Merged main (#23–#28) and gave the skill what those PRs gave the other skills (from its Lovara template): the AI Avatar
 "ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
