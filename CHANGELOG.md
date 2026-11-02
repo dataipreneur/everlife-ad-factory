@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Bible sync to 1793655503-c3e7: captions on every video, kept out of the safe zones (branch `bible-sync-c3e7`)
+Logged before editing. Justin's change (Standards 02 + 04), no product page or disclaimer changed: "Every video carries on-screen
+captions for all spoken audio. Captions stay clear of Meta's safe zones"; the Safe zones list now names captions too.
+- `everlife-gates.md` §5 + §6. No tool change: `full_layout.py` / `premium_finish.py` already caption every spoken line inside
+  the safe band (above the Reels profile corner); animated stills have no audio. Originals: `_originals/2026-11-02/bible-sync-c3e7/`.
+- Note: the bible still says 60% trust / 40% count "set separately"; PR #27's 42/28/30 split awaits Justin.
+
 ## 2026-11-02 — AI Avatar videos run 100% on Creatify, 0 Higgsfield (branch `all-creatify-avatar`, Mitansh)
 Mitansh: "please add this a new rule for all the skills! That AI Avatar videos, always goes to creatify for everything!!! No
 higgsfield needed at all!" Proven the same day on Wolverine "Two Peptides. One Mission." (10 s: 17.45 Creatify, 0 Higgsfield).
