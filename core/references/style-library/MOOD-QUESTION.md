@@ -21,7 +21,7 @@ frameworks, Read each board before writing that slot's prompt, and show the styl
 ## 📚 Pick from the 15 styles: ONE AskUserQuestion, 4 questions, multiSelect, every option with its one-line look
 - **Text-led:** Bold Headlines · Crossed Out Words · Reasons Why · Benefit Stacks
 - **Compare:** Myth vs. Fact · Us vs. Them · What's Inside · Search
-- **Phone & social:** Notes / Reminders · AMA (Ask Me Anything) · News · Phone Screen (call / post)
+- **Phone & social:** Notes / Reminders · AMA (Ask Me Anything) · News · Phone Screen (forum post; never a call screen)
 - **Out loud:** Testimonial (say "needs screened reviews" in its description when the product has none) · Whiteboard / Billboard · We're Sorry
 The user may tick any number across the four. Fewer styles than ads → repeat with a different palette and product angle; more
 styles than ads → take a random subset. Show "👀 boards" on request by Reading `boards/<code>_<slug>.jpg`.

@@ -12,7 +12,7 @@
     {"code": "S09", "slug": "notes-reminders",      "name": "Notes / Reminders",       "group": "Phone & social", "gate": "open"},
     {"code": "S10", "slug": "ama",                  "name": "AMA (Ask Me Anything)",   "group": "Phone & social", "gate": "open"},
     {"code": "S11", "slug": "news",                 "name": "News",                    "group": "Phone & social", "gate": "open"},
-    {"code": "S15", "slug": "phone-screen",         "name": "Phone Screen (call / post)", "group": "Phone & social", "gate": "open"},
+    {"code": "S15", "slug": "phone-screen",         "name": "Phone Screen (post)", "group": "Phone & social", "gate": "open"},
     {"code": "S12", "slug": "testimonial",          "name": "Testimonial",             "group": "Out loud",      "gate": "gated"},
     {"code": "S13", "slug": "whiteboard-billboard", "name": "Whiteboard / Billboard",  "group": "Out loud",      "gate": "open"},
     {"code": "S14", "slug": "were-sorry",           "name": "We're Sorry",             "group": "Out loud",      "gate": "open"}

@@ -1,9 +1,13 @@
 # Everlife style library: 15 ad styles (shared by every product skill)
 
 Source: the team's Drive folder "Ad styles" (`1lViskBTTmI756jcXE72IOcrGAxCMdQFT`, owner Justin), imported 2026-11-02 at Mitansh's
-request: "These should be used as a reference for all the product skills." 14 style folders + **S15 Phone Screen**, built from the
+request: "These should be used as a reference for all the product skills." 14 style folders + **S15 Phone Screen (post only)**, built from the
 `00_Products` folder (incoming-call and social-post examples). `00_Products` itself (GLP-1, NAD+ Injections, Restora-Z example
 ads; Spark was empty) is in `product-examples/<product>/`: category inspiration, same "layout only" rule.
+
+> **⛔ HARD NO (Mitansh, 2026-11-02, every product, every style): NO incoming-call screens and NO Accept / Decline (or Answer /
+> Decline) buttons, ever: not on S15, not on an S09 AirDrop card, not in any phone UI, not in video.** "The calling accept decline
+> buttons are never allowed!" Prompts say "no call screen, no Accept/Decline buttons"; QA fails any raw that shows one.
 
 **How to use (all products):**
 - The Mood question offers these styles (`MOOD-QUESTION.md`). "🎲 Surprise me" = `core/scripts/pick_styles.py` draws a random,
@@ -27,13 +31,13 @@ ads; Spark was empty) is in `product-examples/<product>/`: category inspiration,
 | S06 | **Us vs. Them** | two columns or a check table: our product vs "Others" (em, Seed, wellmedr) | "<Product>" vs "The usual way" / "Other options", ✓ rows from approved claims only | **no named competitors** (Restora-Z vs Ambien is the only exception, on its own page); **no $ price columns**: percent-off only |
 | S07 | **What's Inside** | product or capsule at centre, ingredients radiating out on thin lines with labels | product centre, each ingredient on its own spoke with ONLY its own bible claim; single-ingredient products → mechanism map (product → signal → benefit) | Spark: never tie a benefit to one ingredient; no invented ingredients |
 | S08 | **Search** | "the search:" + a search bar with a pain-point query, "the solution:" + product on texture | search bar with a pronoun-free query from an approved pain point ("energy for long runs"), then product + one approved line | no symptom/disease queries; no "you" questions |
-| S09 | **Notes / Reminders** | iOS Notes list, Reminder alert (Options / Close), AirDrop card with product photo, over a textured photo | Notes checklist of approved benefits, or a Reminder alert carrying a bible headline, or an AirDrop card showing the product; product large beside it | GLP-1 pen ref = needles: never; lips close-up: never (intimate products especially) |
+| S09 | **Notes / Reminders** | iOS Notes list, Reminder alert (Options / Close), over a textured photo | Notes checklist of approved benefits, or a Reminder alert carrying a bible headline; product large beside it | **⛔ no AirDrop card / no Accept / Decline buttons** (hard NO above); GLP-1 pen ref = needles: never; lips close-up: never (intimate products especially) |
 | S10 | **AMA (Ask Me Anything)** | Instagram story: question sticker ("AMA: Looking great, what have you been doing?") + creator answer text | question sticker with a pronoun-free question; the answer in **brand voice** (approved claims) beside the product | **refs are first-person creator testimonials + weight-loss / belly-fat claims: never**; no "I", no results claims, no selfies of bodies |
 | S11 | **News** | editorial headline on a photo, a red tag, a highlighted phrase (Fridays, Novos) | article-style: a highlighted bible headline on a real photo, small "Everlife" section tag | **no "News Flash" / "Breaking News"**, no "clinical study" claims for the product, no $ prices, no competitor names |
 | S12 | **Testimonial** | stars + a quoted review over product shots (Joi + Blokes) | a verbatim, screened review from the product's `reviews.md` + stars + product | **gated:** only when `reviews.md` has screened reviews for this product; never invent or edit a quote |
 | S13 | **Whiteboard / Billboard** | a note on a whiteboard, a comparison chart on a board, a roadside or Times-Square billboard carrying the ad | a billboard in a real place (skyline, highway, wall) or a whiteboard with a handwritten approved line; product on the board | no $ prices; **no bathroom-scale / body imagery**; no weight numbers; no named competitors on the chart |
 | S14 | **We're Sorry** | a bold "We're Sorry" apology letter on black; a tongue-in-cheek half-price post | brand voice apology: "We're sorry… <an approved claim / the offer>"; product small, type does the work | no profanity (Hume ref); no competitor digs; offer = the bible offer only |
-| S15 | **Phone Screen (call / post)** | incoming-call screen ("Your vitamins are calling", Decline / Accept); a Reddit-style post + a promoted reply | incoming call: "<Product> is calling…" + the product as the caller photo; or a forum post title (a pronoun-free pain point) + a promoted brand reply with approved claims | posts in the refs are **first person ("I wake up exhausted")**: write the post as a pronoun-free question; no $ prices, no dose ("up to 1600mg") |
+| S15 | **Phone Screen (post)** | a Reddit-style post + a promoted reply (the incoming-call ref is BANNED, see the hard NO above) | a forum post title (a pronoun-free pain point) + a promoted brand reply with approved claims, product beside it | **⛔ never an incoming-call screen, "<Product> is calling…", or Accept / Decline buttons**; posts in the refs are **first person ("I wake up exhausted")**: write the post as a pronoun-free question; no $ prices, no dose ("up to 1600mg") |
 
 ## Grouping (for the picker question; ≤ 4 per group)
 - **Text-led:** S01 Bold Headlines · S02 Crossed Out Words · S03 Reasons Why · S04 Benefit Stacks
