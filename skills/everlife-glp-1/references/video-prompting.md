@@ -10,7 +10,7 @@ GLP-1 winners: 3 statics from Emily (`winners/winners.md`): both vials, strike-t
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
 1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (a volume knob turned down; a fridge door closing on a calm kitchen;
    a phone lighting up with a provider message). Never open on a logo; never a syringe.
-2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free ("Recovery is the bottleneck." / "Built to bounce back.").
+2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free ("Turn Down the Food Noise" / "Less Food Noise. More Control.": ✅ headlines).
 3. **Visual element / reveal, 5–9 s:** the real product, label to camera, as a still object on a surface or held by the vial body.
 4. **Structure / connection, 9–12.5 s:** one ✅ line ("Helps Reduce Food Noise", "Supports Appetite Regulation",
    "Provider-Guided From Home") + the price line ("One Price, No Surprise Increases").
@@ -20,8 +20,9 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "G-
 
 ## Copy rules
 - Headlines, benefits, CTAs: only `product-bible.md` (✅ lines; ⏳/⚠ only with the user's OK). Mechanism first, then benefit:
-  "Supports connective tissue, and healthy connective tissue supports mobility." Never "this fixes your knee".
-- No "heal", "repair" (except the approved benefit line), "injury", "pain", "inflammation", "torn", "boost", no timing promises.
+  "Supports Appetite Regulation" leads, then "Helps Reduce Food Noise" (both ✅), plus the price line. Never "this melts the weight off".
+- No weight-loss numbers or timelines, no "melt", "burn", "shred", no body areas (FTC); no drug-brand names (Ozempic, Wegovy,
+  Mounjaro, Zepbound); "compounded" always before semaglutide / tirzepatide; no timing promises.
 - No "I"/"my", no testimonials, no "Are you…?". No disease words, no "clinically" for the product, percent only ("Up to 59% off") and the price line.
 - **Settings:** bright kitchen at breakfast, fridge door with a simple plan, a calm evening on the sofa, a walk in daylight, a phone with a provider message.
 - **Framing:** clothed, shoulder-up; never a body shot, scale, tape, waistline or mirror; no before/after.
@@ -32,10 +33,11 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "G-
 ## Prompt blocks (in this order)
 1. Format: "Vertical 9:16, 15 seconds, <look>". UGC: "ultra-realistic creator UGC, real handheld phone shake, real skin texture,
    real room audio, no studio polish, no beauty filter. The filming phone itself is NEVER visible."
-2. **PRODUCT:** "Use the attached vial reference exactly; do not invent, alter or redesign it; label readable, never mirrored; the
+2. **PRODUCT** (the chosen vial: navy semaglutide or green tirzepatide; both side by side only when the slot asks): "Use the
+   attached vial reference(s) exactly; do not invent, alter or redesign it; label readable, never mirrored; the
    vial is a still object; no syringe, needle, pen or injecting anywhere; no capsules or pills anywhere."
 3. **CAST:** age, look ("an everyday man or woman 30–60, an ordinary non-famous face, clothed, calm"),
-   wardrobe (stringer, cut-off, hoodie, belt, wraps), energy (between sets, breathing). Same people throughout.
+   wardrobe (everyday clothes: a knit, a shirt, a light jacket), energy (calm, in control, mid-routine). Same people throughout.
 4. **Timed beats** with camera moves.
 5. **Dialogue, exactly and only:** every line in quotes, who says it, plus the pronunciation line.
 6. **AUDIO:** foley list; "No music" for UGC.

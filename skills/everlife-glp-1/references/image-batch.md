@@ -82,7 +82,7 @@ that file.
 ## 2. Flow
 1. Inputs from SKILL.md step 1: audience, angle, boldness. **Round 3 (ONE AskUserQuestion, 4 questions):**
    **Mood** "Surprise me: different each ad (Recommended)" / "Ultra premium, vial only: Hims/Ro codes + vial-refs (Mitansh's favourite,
-   batch 3 2026-10-29)" / "Hardcore gym: rack, loaded bar, chalk, rubber floor (men)" / "Boxing gym or garage at dawn (men)"
+   batch 3 2026-10-29)" / "Bright kitchen: breakfast, fridge plan, daylight" / "Calm evening: sofa, tea, soft lamp light"
    **Ultra premium** = `core/references/static-refs/13_Premium_DTC/README.md`
    codes on every slot (ONE sentence-case two-line headline, second line tonal, at most one tiny line or three quiet lines, product as an
    object on real material with one hard light and one long shadow, monochrome field, 60% empty, no bullets/icons/badges/caps/logo), each slot
@@ -111,17 +111,17 @@ Every ad gets its own pairing and accent; never two alike in one batch, never th
 
 | Headline face | Partner for supporting text |
 |---|---|
-| Heavy condensed grotesque (the recovery category's look), sentence case or caps | light humanist sans |
+| Heavy condensed grotesque (the confident-health look), sentence case or caps | light humanist sans |
 | Wide extended sans, bold | regular sans |
 | Slab serif, bold | light sans |
 | Elegant high-contrast serif, roman | clean geometric sans |
 | Chunky rounded sans | mono-spaced labels |
 | Thin editorial sans, tracked out | serif body |
-| Stencil / industrial sans (gym signage) | regular sans |
+| Stencil / industrial sans (signage) | regular sans |
 | Serif with ONE italic word | small-caps sans |
 
 Accent from the scene or product: the vial's navy or green, cream, stone; or, chalk white, steel grey, concrete, rubber black, safety-tape yellow (sparingly),
-forest, tan, walnut; women: blush, rose, tan, beige, cream, mocha, burgundy (never orange, never green). Vary headline placement
+forest, tan, walnut; women: any palette (the pinks / tans / beige rule is only for GHK-Cu Cream and Glow Stack; tirzepatide's accent is green). Vary headline placement
 (top-left, centred, split either side of the product) and light (hard side light, overcast, golden hour, studio).
 
 ## 2c. Image model (one more question in the setup round; shared rules in `core/references/image-models.md`)

@@ -2,6 +2,24 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — GLP-1: BPC-157 template leftovers removed (branch `glp1-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". The skill was scaffolded from BPC-157 and still carried its recovery
+and gym wording. Rewritten from `direction.md`, `assets/RENDERS.md` and the ✅ lines of `product-bible.md` only; no new claims.
+Originals: `_originals/2026-11-02/glp1-leftovers/`.
+- `styles/6-lifestyle-identity.md`: the "Hardcore gym, tattooed bodybuilder, shirtless" and Pilates sub-styles (BPC-157 brief)
+  become GLP-1 ones from direction.md (calm breakfast, fridge plan, quiet evening, daylight walk), each with a ✅ headline.
+- `video-prompting.md`: authority examples, copy example (now with the price line), banned words (weight numbers, melt/burn,
+  body areas, drug brands, "compounded"), cast wardrobe; PRODUCT block names the chosen vial (navy semaglutide / green tirzepatide).
+- `styles/` INDEX, 1–5: recovery, tissue, joint, ice-bath and gym sub-styles become calm-control ones; 2E mechanism map =
+  appetite → food noise → one plan (✅ lines).
+- `image-batch.md`: gym moods become "Bright kitchen" and "Calm evening"; type-table notes; the women's "never green" accent rule
+  removed (only for GHK-Cu Cream and Glow Stack; tirzepatide's accent is green).
+- `finishing.md`: article kicker default is "WEIGHT MANAGEMENT" (product.json), not "RECOVERY".
+- `animated-still.md`: gym environment moves become morning-light ones.
+- `lessons.md`: the "BPC-157-specific risks" section (incl. "men must look hardcore", "3 mg/mL vial", "404 page", "PT-141
+  disclaimer") rewritten as GLP-1 risks; stale BPC-157 notes fixed; the blurred-plate 9:16 lesson marked superseded.
+- Kept on purpose: provenance notes, the shared `vial-refs/` staging folder, "no capsules or pills" (GLP-1 is vials only).
+
 ## 2026-10-30 — GLP-1: Emily's winners (branch `glp1-skill`)
 Logged before editing. Emily's Drive folder "GLP1 Winners" (downloaded by Priestley): 3 statics (Base186, Base193, Base204; 4:5 +
 9:16, made 30 Sep 2026; not in the Meta export, so no numbers yet). Full files in
