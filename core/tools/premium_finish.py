@@ -28,6 +28,7 @@ T = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, T)
 import product as product_mod  # noqa: E402
 import safezones as sz  # noqa: E402
+import standard_footer as sf  # noqa: E402  (one trust-row + disclaimer size for every creative)
 import imageio_ffmpeg  # noqa: E402
 
 FF = imageio_ffmpeg.get_ffmpeg_exe()
@@ -167,12 +168,12 @@ def product_group(img, cx, y, bh, pill_w, glow):
 def bottom_layers(scrim_rgb=(6, 10, 14)):
     scr = canvas(); vgrad(scr, 960, 1300, 0, 175, scrim_rgb); vgrad(scr, 1300, 1920, 175, 230, scrim_rgb)
     scr.save(f"{L}/scrim.png")
-    bot = canvas(); pr = Image.open(f"{A}/proof_row_clear.png").convert("RGBA")
-    pr = pr.resize((1000, int(pr.height * 1000 / pr.width)), Image.LANCZOS); bot.alpha_composite(pr, (40, PROOF_Y))
-    d = ImageDraw.Draw(bot); fd = F(HN, HN_REG, 25 if DISC_BOTTOM else 22)
-    lines = wrap(d, DISCLAIMER, fd, 960 if DISC_BOTTOM else 1000)
+    bot = canvas(); pr = sf.row_art(f"{A}/proof_row_clear.png")   # standard trust-row width (Justin 2026-11-02)
+    bot.alpha_composite(pr, ((W - pr.width) // 2, PROOF_Y))
+    d = ImageDraw.Draw(bot); fd = sf.disc_font()                     # standard disclaimer: 18 px, exactly 2 lines
+    lines = sf.disclaimer_lines(DISCLAIMER)
     base = 1884 if DISC_BOTTOM else sz.SAFE[3] - 2
-    step = 34 if DISC_BOTTOM else 27
+    step = sf.DISC_LH
     for i, ln in enumerate(lines):
         d.text(((W - d.textlength(ln, font=fd)) / 2, base - step * (len(lines) - i)), ln, font=fd, fill=(255, 255, 255, 190))
     if not DISC_BOTTOM and base - step * len(lines) < PROOF_Y + pr.height:

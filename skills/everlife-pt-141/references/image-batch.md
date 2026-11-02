@@ -5,6 +5,8 @@ mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify desi
 render(s) for the chosen form; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 /
 Doctor Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
 
+**Proof split (bible 2026-11-02, Standards 02 · 06):** each ad carries ONE proof element, the trust row (~60%) or "Over 100,000 happy customers" (~40%), not both. Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product pt-141 --proof count`. Rule: `core/references/creative-system.md` §2.
+
 **Superseded 2026-10-29 (creative-system §5): never buy a reposition edit. A raw whose text or product dips into the footer is fixed for free with `reposition_916.py` (full-bleed, edge-stretch slivers, no blur), then `finish_batch.py … --fit trusted`. The paragraph below is kept for history only.**
 
 **FINISHING RULE (Mitansh, 2026-10-29, all products): the raw is finished AS IS with `finish_batch.py --ratio 9:16 --product <id> --fit trusted --shift 0`. No repositioning, no scaling, no padding, no blur, no auto-shift: "0 blurring, the raw ones look better". Bake the layout into the prompt and QA it; a colliding raw is re-rolled or accepted.**

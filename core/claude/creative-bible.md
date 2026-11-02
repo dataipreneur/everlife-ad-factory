@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793642193-f927) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793650290-a4dd) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -45,10 +45,10 @@ Applies to every product
 
 #### Proof & approval
 - Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
-- Every ad carries visible social proof: customer count, rating, or both.
+- Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. “Over 100,000 happy customers” goes on 40%. See Standards 02 · 06.
 - Compliance questions route to Jeremy. Nothing goes live without his approval.
 
-Rules current as of 11 September 2026. Flag any rule that is later reversed or superseded.
+Rules current as of 2 November 2026. Flag any rule that is later reversed or superseded.
 Standards 02
 
 ## Creative direction guidelines
@@ -98,12 +98,15 @@ Area (bounding box)
 - Doctor-prescribed medication
 - Free shipping from pharmacy
 
-50%
+60%
 Trust-focused
 Trustpilot, doctor-prescribed and/or free shipping — together or selectively.
-50%
+40%
 Minimalist
-Product- or headline-led, no trust callouts required.
+Product- or headline-led, no trust callouts.
+
+#### Customer count
+- “Over 100,000 happy customers” runs on 40% of graphics only — set separately from the trust callouts above.
 
 #### 08 · Women’s color & typography
 - Pinks, tans, neutrals and warm tones have performed well — keep using them.

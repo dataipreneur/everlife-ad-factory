@@ -194,6 +194,11 @@ def smoke(core, out):
     expect("finish_batch refuses a disclaimer that isn't the product's",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "sermorelin-ghk",
             "--disclaimer", RZ_DISC], False, "differs")
+    expect("finish_batch lays the customer-count line instead of the trust row (--proof count)",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "count.png"), "--product", "sermorelin-ghk",
+            "--proof", "count"], True, "proof=count")
+    expect("finish_batch --proof-plan splits a batch ~60/40 trust/count",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), "--proof-plan", "5"], True, "ad 5: --proof count")
     expect("finish_modern refuses an uncalibrated product",
            [PY, "-I", os.path.join(T, "finish_modern.py"), raw, cp, os.path.join(d, "x.png")], False, "product_zones")
     expect("finish_image refuses compare for a product without an approved comparison",

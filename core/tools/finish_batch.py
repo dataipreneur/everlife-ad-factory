@@ -29,13 +29,14 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 T = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, T)
 import safezones as sz  # noqa: E402
+import standard_footer as sf  # noqa: E402  (one trust-row + disclaimer size for every creative)
 
 FD, FOOT = f"{T}/assets/fonts", f"{T}/assets/footer"
 SIZES = {"4:5": (1080, 1350), "9:16": (1080, 1920), "1:1": (1080, 1080)}
 # what to ask the image model for: the final shape itself
 MODEL_RATIO = {"4:5": "4:5", "9:16": "9:16", "1:1": "1:1"}
 LIGHT = (251, 251, 246)
-DISC_SIZE, DISC_LH = 21, 26   # compact footer (creative lead: 35% smaller, transparent)
+DISC_LH = sf.DISC_LH          # disclaimer: the shared standard (18 px, exactly 2 lines; Justin 2026-11-02)
 LOGO_W = 311                   # Everlife logo at the top; 311 ≈ 200 × 1.35 × 1.15 (Mitansh, 2026-10-28: "35% bigger", then "15% more")
 LOGO_TOP = {"9:16": 150, "4:5": 60, "1:1": 56}   # inside the safe band (9:16: Stories UI covers the top 144 px)
 LOGO_POS = "center"            # center | left | right (creative-system §2: large logo 40% centre, 36% in a corner)
@@ -45,6 +46,11 @@ DISC_AT = os.environ.get("EVERLIFE_DISC_AT", "bottom")   # 9:16: "bottom" = proo
 DISC_BOTTOM_MARGIN = 36
 PROOF_SCALE = float(os.environ.get("EVERLIFE_PROOF_SCALE", "1.3225"))   # proof row +15% then +15% again (Mitansh, 2026-10-29, all products)
 PROOF_W = int(os.environ.get("EVERLIFE_PROOF_W", "1000"))   # 9:16 proof-row column: wider than the 768 px safe column so the bigger row fits (crosses the Reels side bands by ~116 px; Mitansh 2026-10-29)
+PROOF = "trust"                # footer proof: trust = the Trustpilot / Doctor Prescribed / Ships Free row; count = "Over 100,000 happy
+                               # customers" in its place; none = disclaimer only. Bible 2026-11-02 (Standards 02 · 06): trust callouts on
+                               # ~60% of graphics, customer count on ~40%, one per ad (proof_plan). Set per ad with --proof.
+COUNT_LINE = "Over 100,000 happy customers"   # locked proof string (bible)
+COUNT_SIZE = 34                # count line px: reads at story size for 50+ (the trust row's art is ~40 px tall)
 MAX_SHIFT = 140                # max nudge DOWN (logo headroom)
 MAX_UP = 320                   # max nudge UP (9:16: pull the content above the safe-area footer)
 CONTENT_GAP = 20               # px of calm background wanted between the raw's last content row and the footer
@@ -81,18 +87,55 @@ def art(name, tone, scale):
     return im.resize((int(im.width * scale), int(im.height * scale)), Image.LANCZOS)
 
 
-def build_footer(W, tone, disclaimer, fw, with_disclaimer=True):
-    """Compact transparent footer, `fw` px wide, centred: approved proof art row (+ disclaimer unless it goes to the bottom). RGBA, no background."""
+def proof_plan(n):
+    """Which ads of an n-ad batch get the trust row and which the customer count (bible: ~60% / ~40%, one per ad).
+    Count slots are spread evenly, the first ad always gets the trust row. Returns a list like ['trust', 'count', 'trust', 'count']."""
+    k = round(0.4 * n + 1e-9) if n > 1 else 0
+    return ["count" if (i * k) // n != ((i - 1) * k) // n else "trust" for i in range(1, n + 1)]
+
+
+def count_row(tone, fw):
+    """The customer-count line, centred in an RGBA strip `fw` wide (takes the trust row's place in the footer)."""
+    f = sans(COUNT_SIZE, "SemiBold")
+    d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+    tw = int(d0.textlength(COUNT_LINE, font=f))
+    row = Image.new("RGBA", (fw, COUNT_SIZE + 12), (0, 0, 0, 0))
+    col = (246, 240, 226, 255) if tone == "dark" else (24, 30, 48, 255)
+    ImageDraw.Draw(row).text(((fw - tw) // 2, 2), COUNT_LINE, font=f, fill=col)
+    return row
+
+
+def build_footer(W, tone, disclaimer, fw, with_disclaimer=True, proof=None):
+    """Compact transparent footer, `fw` px wide, centred: the proof (trust art row, customer-count line or nothing; see PROOF)
+    + the disclaimer unless it goes to the bottom. RGBA, no background."""
+    proof = proof or PROOF
+    if proof != "trust":
+        d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+        lines = sf.disclaimer_lines(disclaimer) if with_disclaimer else []
+        row = count_row(tone, fw) if proof == "count" else None
+        rh = row.height if row else 0
+        h = 14 + rh + (6 + DISC_LH * len(lines) if lines else 0) + 22
+        foot = Image.new("RGBA", (W, h), (0, 0, 0, 0))
+        if row:
+            foot.alpha_composite(row, ((W - fw) // 2, 14))
+        d = ImageDraw.Draw(foot)
+        y = 14 + rh + (6 if rh else 0)
+        col = (236, 238, 236, 255) if tone == "dark" else (40, 44, 56, 255)
+        f = sf.disc_font()
+        for ln in lines:
+            d.text(((W - d.textlength(ln, font=f)) / 2, y), ln, font=f, fill=col); y += DISC_LH
+        return foot
+    rw = min(fw, sf.ROW_W + 10)   # the trust row comes out sf.ROW_W wide on every creative
     s = 0.56 * PROOF_SCALE
     parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
     MIN_GAP = 18
-    if sum(p.width for p in parts) + 4 * MIN_GAP + 2 > fw:            # auto-fit: as big as the column allows with real gaps
-        s *= (fw - 2 - 4 * MIN_GAP) / sum(p.width for p in parts)
+    if sum(p.width for p in parts) + 4 * MIN_GAP + 2 > rw:            # auto-fit: as big as the column allows with real gaps
+        s *= (rw - 2 - 4 * MIN_GAP) / sum(p.width for p in parts)
         parts = [art("badge", tone, s), art("doctor", tone, s), art("ships", tone, s)]
-    gap = max(MIN_GAP, min(26, (fw - 2 - sum(p.width for p in parts)) // 4))
+    gap = max(MIN_GAP, min(26, (rw - 2 - sum(p.width for p in parts)) // 4))
     rh = max(p.height for p in parts)
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw) if with_disclaimer else []   # 21 px, wraps inside the safe column (Mitansh, 2026-10-29: keep this over bible v3's 2-line/13 px rule)
+    lines = sf.disclaimer_lines(disclaimer) if with_disclaimer else []   # standard: 18 px, exactly 2 lines (Justin 2026-11-02; bible 2-line rule)
     h = 14 + rh + (6 + DISC_LH * len(lines) if lines else 0) + 22
     foot = Image.new("RGBA", (W, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(foot)
@@ -106,7 +149,7 @@ def build_footer(W, tone, disclaimer, fw, with_disclaimer=True):
             d.line([(x, y + 8), (x, y + rh - 8)], fill=rule, width=1); x += 1 + gap
     y += rh + 6
     col = (236, 238, 236, 255) if tone == "dark" else (40, 44, 56, 255)
-    f = sans(DISC_SIZE, "Medium")
+    f = sf.disc_font()
     for ln in lines:
         d.text(((W - d.textlength(ln, font=f)) / 2, y), ln, font=f, fill=col); y += DISC_LH
     return foot
@@ -114,12 +157,11 @@ def build_footer(W, tone, disclaimer, fw, with_disclaimer=True):
 
 def build_disclaimer(W, tone, disclaimer, fw):
     """The verbatim disclaimer alone, centred, `fw` px wide: laid at the very bottom of a 9:16 frame (DISC_AT = bottom)."""
-    d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    lines = wrap(d0, disclaimer, sans(DISC_SIZE), fw)
+    lines = sf.disclaimer_lines(disclaimer)
     blk = Image.new("RGBA", (W, DISC_LH * len(lines) + 8), (0, 0, 0, 0))
     d = ImageDraw.Draw(blk)
     col = (236, 238, 236, 255) if tone == "dark" else (40, 44, 56, 255)
-    f = sans(DISC_SIZE, "Medium"); y = 4
+    f = sf.disc_font(); y = 4
     for ln in lines:
         d.text(((W - d.textlength(ln, font=f)) / 2, y), ln, font=f, fill=col); y += DISC_LH
     return blk
@@ -380,8 +422,21 @@ def main():
     ap.add_argument("--content-ratio", help="print the model aspect ratio for this final ratio and exit")
     ap.add_argument("--logo-w", default="", help="logo width: px or percent of the ad width (creative-system: 40%% centre, 36%% corner, small 30%%/28%%); default 311 px")
     ap.add_argument("--logo-pos", default="center", choices=["center", "left", "right"])
+    ap.add_argument("--proof", default="", choices=["", "trust", "count", "none"],
+                    help="this ad's proof (bible 2026-11-02: trust row on ~60%%, customer count on ~40%%; see --proof-plan). "
+                         "Default: trust, with a reminder")
+    ap.add_argument("--proof-plan", type=int, metavar="N", help="print the trust / count split for an N-ad batch and exit")
     a = ap.parse_args()
-    global LOGO_W, LOGO_POS
+    global LOGO_W, LOGO_POS, PROOF
+    if a.proof_plan:
+        for i, p in enumerate(proof_plan(a.proof_plan), 1):
+            print(f"ad {i}: --proof {p}")
+        return
+    if a.proof:
+        PROOF = a.proof
+    elif a.gen:
+        print("ℹ️  no --proof given: trust row. Bible 2026-11-02: trust row on ~60% of graphics, customer count on ~40% "
+              "(finish_batch.py --proof-plan N).")
     LOGO_POS = a.logo_pos
     if a.logo_w:
         LOGO_W = int(SIZES[a.ratio][0] * float(a.logo_w.rstrip("%")) / 100) if a.logo_w.endswith("%") else int(a.logo_w)
@@ -405,7 +460,7 @@ def main():
     where = f"y {fy}–{fy + foot_h} (safe area)" if story else "bottom"
     disc_where = "bottom of frame" if (story and DISC_AT == "bottom") else "in footer"
     print(f"done {a.out}  tone={tone}  logo=top@{ly}px({top_tone}) shift={shift}px  "
-          f"footer={foot_h}px @ {where}  disclaimer={disc_where}")
+          f"footer={foot_h}px @ {where}  disclaimer={disc_where}  proof={PROOF}")
 
 
 if __name__ == "__main__":

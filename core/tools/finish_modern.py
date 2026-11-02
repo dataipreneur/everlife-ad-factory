@@ -36,7 +36,6 @@ RULE = {"dark": (52, 62, 55), "light": (222, 222, 214)}
 DISC = {"dark": (196, 202, 196), "light": (92, 96, 100)}
 FOOT = f"{T}/assets/footer"
 MIN_TYPE = 24          # px at 1080 wide; nothing smaller anywhere (buyers are 50+)
-DISC_LH = 31
 
 
 def serif(size, italic=False):
@@ -84,6 +83,8 @@ import sys
 import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import safezones as sz  # noqa: E402
+import standard_footer as sf  # noqa: E402  (one trust-row + disclaimer size for every creative)
+DISC_LH = sf.DISC_LH   # disclaimer: the shared standard (18 px, exactly 2 lines; Justin 2026-11-02)
 import product  # noqa: E402
 
 
@@ -207,19 +208,10 @@ class Modern:
     def art_scale(self):
         if self.foot_mode == "stack":   # badge on its own row, then Doctor | Ships
             return min(0.86, (self.fw - 60) / 892)
-        return min(0.86, (self.fw - 100) / 1250)  # one row: badge | doctor | ships
+        return min(0.86, (min(self.fw, sf.ROW_W) - 100) / 1250)  # one row: badge | doctor | ships, at the standard row width
 
     def disc_lines(self):
-        d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-        f = sans(MIN_TYPE)
-        lines, cur = [], ""
-        for w_ in self.C["disclaimer"].split():
-            t_ = (cur + " " + w_).strip()
-            if d0.textlength(t_, font=f) <= self.fw:
-                cur = t_
-            else:
-                lines.append(cur); cur = w_
-        return lines + [cur]
+        return sf.disclaimer_lines(self.C["disclaimer"])   # standard: exactly 2 lines (Justin 2026-11-02)
 
     def footer_height(self):
         s = self.art_scale()
@@ -364,8 +356,8 @@ class Modern:
         return y
 
     def disclaimer(self, y):
-        """Verbatim disclaimer, centred, MIN_TYPE px. Returns the y below it."""
-        d, f = self.d, sans(MIN_TYPE)
+        """Verbatim disclaimer, centred, at the shared standard size. Returns the y below it."""
+        d, f = self.d, sf.disc_font()
         for ln in self.disc_lines():
             d.text(((self.W - d.textlength(ln, font=f)) / 2, y), ln, font=f, fill=DISC[self.tone])
             y += DISC_LH
