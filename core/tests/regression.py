@@ -240,6 +240,11 @@ def smoke(core, out):
             "--disclaimer", RZ_DISC], False, "differs")
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
+
+    # MOTS-c: the bible's disclaimer is pending; product.json carries the provisional standard text (Priestley 2026-10-30)
+    d = os.path.join(out, "mc_static"); os.makedirs(d)
+    expect("finish_batch renders MOTS-c with its provisional disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "mots-c"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")
