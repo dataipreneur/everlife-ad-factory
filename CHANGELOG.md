@@ -469,6 +469,25 @@ Jeremy). Product Hard NO: never tie a benefit to one ingredient. Setup only: no 
   4:5 raws needed a fix for product under the footer). Results in `~/Everlife-Creative/output/Spark/2026-10-30_batch-2-4x5/SESSION.md`.
   The finisher gap it exposed is fixed on its own branch (`safezone-sides`).
 
+## 2026-10-30 — New-product builder: `--pending-disclaimer` (branch `new-product-skill`)
+Logged before editing. Priestley: set every product up now and fill gaps later. `scripts/new_product.py create … --pending-disclaimer`
+scaffolds a product whose bible disclaimer is pending, blocked: product.json gets an empty disclaimer + `_disclaimer_status`, and
+`core/tools/product.py` already refuses to finish anything for it. Used for MOTS-c (`mots-c-skill`). SKILL.md rule 2 notes the
+exception. Original in `_originals/2026-10-30/skills/everlife-new-product/`.
+
+## 2026-10-30 — New-product skill builder (branch `new-product-skill`, from `main` 4ee62c6)
+Logged before editing. New skill `skills/everlife-new-product/` (Priestley: "a skill to smoothly ask us questions on making a new
+skill for the next product"): it turns the plan doc's recipe ("How to build one product skill",
+https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf) into a guided, bible-first flow: pick the product → one summary card read from the
+synced bible, the local asset library, the reference ads and the Meta winners export → ask only about gaps (template, form, missing
+renders, flagged copy errors) → scaffold the skill on its own branch → adapt → test → stop at the two human gates (the first paid test
+batch, the PR). Worked example: the Lovara build on branch `lovara-skill` (same day).
+- `skills/everlife-new-product/SKILL.md` (the flow), `references/human-inputs.md` (what only people can provide),
+  `references/templates.md` (which skill to copy), `references/adapt-checklist.md` (every file to adapt and the rules every new
+  product inherits), `scripts/new_product.py` (`inspect` = the summary card; `create` = the scaffold: copy, strip the template's
+  product files, product.json/env with the verbatim disclaimer, the bible extract, renders from the asset library, copy-log seed).
+- Not a product skill: no product.json (bible_sync and the shared tools skip it). No shared code changed. No credits.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
