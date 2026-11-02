@@ -85,6 +85,7 @@ that file.
 1. **One AskUserQuestion, 4 questions, each with a ✨ Recommended first option** (one Enter-press per question gets a great batch):
    - **How many?** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
    - **Placement:** "4:5 Feed (Recommended)" / "9:16 Stories/Reels" / "4:5 + 9:16" / "1:1".
+   > **🎨 STYLES = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; replaces the Frameworks options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker). The F-framework table stays as a fallback. Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
    - **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" (then a multiSelect follow-up with the table).
    - **Look:** "Standard (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot: `core/references/ultra-premium.md`;
      overrides people, the tablet stays the hero). (4 questions now.)

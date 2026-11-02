@@ -51,6 +51,7 @@ condensed Tier A headline): the all-time winners' format (~1,500 sales, `winners
 the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/tablet hero).
 
 ## 2. Flow (1 question, then generate)
+> **🎨 STYLES = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; replaces the Frameworks options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker). The F-framework table stays as a fallback. Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" · **Look:** "Standard: winners + frameworks (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot:
    `core/references/ultra-premium.md`; overrides winners-first and people, tablet stays the hero).
