@@ -237,6 +237,52 @@ Setup only: no credits, no push, no PR until every skill is tested.
   `"bible_section"` in product.json (the stacks' bible headings carry their ingredients, e.g. "Spartan Stack (BPC-157/TB500)").
   Spartan's product.json sets it. One commit, cherry-picked unchanged onto the other stack branches so merges stay clean.
 
+## 2026-11-02 — Wolverine Stack: BPC-157 template leftovers removed (branch `wolverine-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". Recovery and hardcore-gym wording is correct for this product and stays.
+Fixed only what belongs to BPC-157: its copy lines, its vial facts and its colour. Originals: `_originals/2026-11-02/wolverine-leftovers/`.
+- BPC-157's own headlines used as examples (not on any Wolverine page: "Don't Let Recovery Be the Bottleneck", "Built to Bounce Back",
+  "Train Hard. Recover Smarter." as Tier A, the BPC-157 Men hook list, "Recovery an afterthought?", "Ice Baths Have Limits." …) replaced
+  with Wolverine lines from `product-bible.md` (⏳ / ⚠ headlines marked as needing an OK; ✅ PROVISIONAL benefits) in
+  `video-prompting.md`, `reference-guide.md`, `image-batch.md`, `mens-direction.md`, `styles/1, 3, 5, 6`.
+- The "slate" vial / slate-blue accent → the Wolverine vial's matte black and gold (`assets/RENDERS.md`).
+- `video-prompting.md`: offers "none in the bible yet" → "Save up to 39%" (⚠ PROVISIONAL); borrowed winners exist.
+- `lessons.md`: BPC-157 risk section re-checked for Wolverine (vial label, offer, men only, no landing page on file, disclaimer
+  source); pronunciation and caption spellings; blurred-plate 9:16 lesson marked superseded.
+- NOT changed (open decision): lines that depend on the swapped Spartan / Wolverine bible pages. Waiting on the bible owner / Jeremy.
+
+## 2026-10-30 — Wolverine Stack: PROVISIONAL swap + headlines + offer, gate lifted (branch `wolverine-skill`)
+Logged before editing. Bible-updates hand-off §6; Priestley approved all three. PROVISIONAL — Jeremy to confirm.
+- `references/product-bible.md`: pre-screen now uses the Spartan page's benefit lines (the 2-peptide ones); "Two Peptides. One
+  Recovery Stack." moved here; provisional headlines "Two Peptides. One Mission." and "Bounce Back Stronger"; "Recover Like Wolverine"
+  ❌ until Jeremy (Marvel). Offer "Save up to 39%" PROVISIONAL: landing page only, an approved exception to "offers never from landing
+  pages"; must be added to the bible.
+- `SKILL.md`, `image-batch.md` (F6 offer framework back), `video-prompting.md`: ⛔ gate → ⚠ PROVISIONAL note; ingredients named together
+  as on the label; the KPV inflammation line moves to Spartan. `product.json`: `_blocked` → `_provisional`.
+Originals in `_originals/2026-10-30/stack-provisional/wolverine/`.
+
+## 2026-10-30 — Wolverine Stack: labels confirmed, waiting for the bible fix (branch `wolverine-skill`)
+Same as the Spartan Stack: the vial labels are correct (Wolverine = BPC-157 + TB-500), the bible's stack pages are swapped.
+Priestley: wait for the bible fix. Block wording updated in SKILL.md, image-batch.md, video-prompting.md, product.json, RENDERS.md
+and product-bible.md.
+
+## 2026-10-30 — Wolverine Stack: borrowed winners (branch `wolverine-skill`)
+Logged before editing. Same as the Spartan Stack: Emily's "use GHK and Sermorelin visuals, rugged manly men", approved by Priestley.
+New `references/winners/winners.md` (5 statics + 2 videos from the Sermorelin / GHK men's winners, linked, with take / swap / never
+copy), referenced from SKILL.md and image-batch.md.
+
+## 2026-10-30 — Wolverine Stack skill setup (branch `wolverine-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-wolverine/` (recovery stack, vial, active men 25–55), scaffolded with the
+new-product builder from the `everlife-bpc-157` template and adapted with the same script as the Spartan Stack. Bible checked first:
+no changes; Wolverine disclaimer ✅. Vial render from Priestley's download (`asset-library/VIALS/WOLVERINE/WOLVERINE VIAL.jpg`).
+**⛔ Generation blocked:** the vial label (BPC-157 + TB-500, two peptides) contradicts the bible page (BPC-157/KPV/TB500,
+"3-peptide"); Spartan is the mirror image. Also PENDING: all 4 headlines (⏳; "Recover Like Wolverine" ⚠ Marvel IP + implied
+healing), offer ([PLACEHOLDER]). Includes the `bible_sync --check` "bible_section" commit cherry-picked from `spartan-skill`.
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted like Spartan (originals in `_originals/2026-10-30/skills/everlife-wolverine/`), plus: "inflammation" stays banned except the
+  bible's exact "Supports Healthy Inflammatory Balance"; product.json `bible_section` set.
+- `core/tests/regression.py`: 4 Wolverine checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
+  both; the black vial is low-contrast on the dark default card, watch it). Smoke 22/22. `bible_sync --check`: Wolverine ✅.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
