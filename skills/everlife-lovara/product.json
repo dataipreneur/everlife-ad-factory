@@ -1,0 +1,38 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's Lovara ad disclaimer, verbatim. Renders in assets/ (assets/RENDERS.md): an oral capsule, 30 per bottle (asset library, 2026-10-30).",
+ "id": "lovara",
+ "name": "Lovara",
+ "renders": {
+  "bottle": "lovara_bottle.png",
+  "pill": "lovara_capsule.png"
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "keep_case": [
+  "Lovara by Everlife",
+  "Lovara",
+  "Tadalafil",
+  "Vardenafil",
+  "Apomorphine",
+  "3-in-1"
+ ],
+ "review_highlight": "Lovara",
+ "reviews": "references/reviews.json",
+ "kicker_default": "WOMEN'S INTIMATE WELLNESS",
+ "split_titles": [
+  "THE DISTANCE",
+  "THE CONNECTION"
+ ],
+ "notify_app": "Lovara",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "pill_end_scale": 0.36,
+ "hero": {
+  "element": "the Lovara capsule (metallic rose-gold, printed LOVARA; the bottle is secondary, large and legible when shown)",
+  "min_width": 0.35,
+  "label": "wraps the curved bottle in perspective",
+  "never": "beds or bedroom scenes, lingerie, body shots, lips macro, needles, another product's bottle or pill",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ }
+}

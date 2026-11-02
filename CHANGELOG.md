@@ -283,6 +283,57 @@ Setup only: no credits, no push, no PR until every skill is tested.
 - `core/tests/regression.py`: 4 Wolverine checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
   both; the black vial is low-contrast on the dark default card, watch it). Smoke 22/22. `bible_sync --check`: Wolverine ✅.
 
+## 2026-11-02 — Lovara: stale "nothing yet" notes fixed (branch `lovara-skill`)
+Logged before editing. Priestley: "Yes, do all one by one" (template-leftover pass). Lovara's PT-141 / Sermorelin mentions are
+attributed lessons and stay. Fixed three statements that were true at scaffolding and are not now. Originals:
+`_originals/2026-11-02/lovara-stale/`.
+- `lessons.md`: "No Lovara ads have been made" → batches 1 and 2 (2026-10-30) exist, lessons at the bottom.
+- `video-prompting.md`: "No Lovara video winners" → V18, V26, V32 in `winners/winners.md`.
+- `reference-guide.md`: "our own Lovara winners (none on file yet)" → points to `winners/winners.md`.
+- Not changed: no pronunciation for "Lovara" is on file; add it once the team confirms how it is said.
+
+## 2026-10-30 — Lovara: Emily's winners (branch `lovara-skill`)
+Logged before editing. Emily's Drive folder "Lovara" (downloaded by Priestley): 3 statics (360555 A2/A3, Base161), 3 videos
+(Video 32, 26, 18) and her note listing the all-time winners whose files she could NOT find (INT24 120 sales, INT4 112, INT13 95,
+INT17 77…). Full files in `~/Everlife-Creative/reference-ads/Lovara-winners-2026-10-30/` (not in git).
+- New `references/winners/`: winners.md (Emily's full ranking + a card per file: take / never copy) + small previews.
+- SKILL.md points to it. No rule changes: several of these winners break today's rules (lingerie, bed/bedroom, per-ingredient
+  benefit claims, 4.8 / 50,000 / 70,000 proof): they are format references only.
+- Couples (Priestley: "Follow bible for now"): the skill's own "no couples" was stricter than the bible. Replaced with the bible's
+  wording: "no generic stock-style couples", "product imagery led", "no bedroom scenes" (SKILL.md, image-batch.md,
+  video-prompting.md, winners.md). "Couples in bed" stays banned (bedroom).
+
+## 2026-10-30 — Lovara skill (branch `lovara-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-lovara/` (women's intimacy support, women 30–55), built per
+the plan doc "New Product Skills: Build Plan" (https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf), recipe "How to build
+one product skill". Bible checked first: `bible_sync.py` against the live bible = no changes since the 30 Oct sync.
+- Template: a copy of `skills/everlife-pt-141/` (intimate wellness), adapted to Lovara; `core -> ../../core` link kept.
+- `product.json` / `product.env`: id `lovara`, verbatim bible ad disclaimer, renders listed but **not on file** (form
+  not stated in the bible; PMG samples show a pink tablet) → `assets/MISSING_RENDERS.md`; generation blocked until added.
+- `references/product-bible.md`: the bible's Lovara section verbatim + a compliance pre-screen (for Jeremy).
+- Skill files adapted: women-only audience, tasteful product-led creative (no beds/bedroom), women's colours, each
+  ingredient claim only on its own ingredient, today's image rules (no "by Everlife", name big, a different person per ad).
+- Open: renders + form; Justin (ingredient list, "Support Your Spark" CTA); Jeremy (⚠ lines); winners; landing page.
+- No credits spent. No push/PR until the tests pass and a real test batch looks right.
+- Done (free steps): skill files written (SKILL.md, product.json/env, bible extract + pre-screen, image-batch, video-prompting,
+  finishing, lessons, personas, reference-guide, reviews, styles ×7; PT-141 renders/winners/team refs/reviews removed, generic
+  style boards kept). Statics default to product-only (Mitansh's PT-141 verdict on GPT Image people statics).
+- `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 3 Lovara checks (static finish with its disclaimer,
+  wrong disclaimer refused, video refused while `lovara_bottle.png` is missing). Smoke 18/18 before, 21/21 after.
+- `bible_sync.py --check`: Lovara ✅. Pre-existing, not ours: BPC-157's disclaimer is not in the bible ("Disclaimer pending").
+- Preflight: 8 passed, 3 to fix (both renders missing; Marketing Studio registration needs them). Creatify project not created yet
+  (it imports the renders).
+- Then (same day): Priestley downloaded the asset library's TABLETS/CAPSULES folder (→ `~/Everlife-Creative/asset-library/`) and the
+  PMG Ad folder (→ `~/Everlife-Creative/reference-ads/`). **Lovara is an oral capsule (30 per bottle), not a tablet.** Added
+  `assets/lovara_bottle.png` (+ `_ref.jpg` on white) and `assets/lovara_capsule.png` (cut out from the JPG on white); looked at both.
+  `MISSING_RENDERS.md` → `RENDERS.md` (with the bottle wording for prompts); "tablet" → "capsule" across the skill (originals in
+  `_originals/2026-10-30/skills/everlife-lovara/`). `product.json`: `pill_end_scale` 0.36 (the tall capsule covered the end-card
+  headline at full size). Regression: the "video refused without renders" check replaced by Lovara end-card renders (default + tiktok):
+  smoke 22/22. Preflight 9/10 (only Marketing Studio registration open, optional, for UGC).
+- Test batch-1 (4 statics, 4:5, product-only, 5 Creatify credits approved by Priestley): `assets/creatify.json` (the Lovara
+  Creatify project + imported bottle/capsule) and `references/lessons.md` (batch-1 lessons appended). All 4 pass QA after one
+  reposition fix on L4 (benefit lines under the footer). Gap flagged: `finish_batch` checks text under the footer only at 9:16.
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).
