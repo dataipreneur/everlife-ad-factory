@@ -240,6 +240,155 @@ def smoke(core, out):
             "--disclaimer", RZ_DISC], False, "differs")
     expect("composite takes plain Sermorelin renders from --product",
            [PY, "-I", os.path.join(T, "composite.py"), raw, os.path.join(d, "comp_sp.png"), "--product", "sermorelin"], True)
+
+    # MOTS-c: the bible's disclaimer is pending; product.json carries the provisional standard text (Priestley 2026-10-30)
+    d = os.path.join(out, "mc_static"); os.makedirs(d)
+    expect("finish_batch renders MOTS-c with its provisional disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "mots-c"], True)
+
+    # NAD+ (sublingual tablet or injection): statics take its disclaimer; end cards render both forms
+    d = os.path.join(out, "nad_static"); os.makedirs(d)
+    expect("finish_batch takes the NAD+ disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "nad"], True)
+    expect("NAD+ refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "nad",
+            "--disclaimer", RZ_DISC], False, "differs")
+    nd = {"product": "nad", "head": ["NAD+ BY EVERLIFE"], "head_always": True,
+          "end_head": ["LESS FOG.", "MORE FOCUS."],
+          "benefits": ["Supports All-Day Energy + Focus", "Supports Bounce-Back From Burnout", "Promotes Healthy Aging"],
+          "ingredients_label": "SUBLINGUAL TABLET OR INJECTION",
+          "ingredients": [["FOCUS", "Supports All-Day Energy + Focus"], ["BURNOUT", "Supports Bounce-Back From Burnout"],
+                          ["AGING", "Promotes Healthy Aging"]],
+          "cta": "CHOOSE YOUR FORM", "vocab": "NAD+."}
+    for form, style in (("sublingual", "default"), ("injection", "tiktok")):
+        d = os.path.join(out, f"nad_{form}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(nd, style=style, form=form), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "LESS FOG. MORE FOCUS.", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"NAD+ video renders ({form}, {style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # GLP-1 (two vials): statics take its disclaimer; end cards render the semaglutide and the tirzepatide vial
+    d = os.path.join(out, "glp_static"); os.makedirs(d)
+    expect("finish_batch takes the GLP-1 disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "glp-1"], True)
+    expect("GLP-1 refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "glp-1",
+            "--disclaimer", RZ_DISC], False, "differs")
+    gl = {"product": "glp-1", "head": ["GLP-1 BY EVERLIFE"], "head_always": True,
+          "end_head": ["TURN DOWN THE", "FOOD NOISE"],
+          "benefits": ["Supports Appetite Regulation", "Helps Reduce Food Noise", "One Price, No Surprise Increases"],
+          "ingredients_label": "PROVIDER-GUIDED FROM HOME",
+          "ingredients": [["APPETITE", "Supports Appetite Regulation"], ["FOOD NOISE", "Helps Reduce Food Noise"],
+                          ["ONE PRICE", "No Surprise Increases"]],
+          "cta": "EXPLORE GLP-1", "vocab": "GLP-1."}
+    for form, style in (("semaglutide", "default"), ("tirzepatide", "tiktok")):
+        d = os.path.join(out, f"glp_{form}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(gl, style=style, form=form), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "TURN DOWN THE FOOD NOISE", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"GLP-1 video renders ({form}, {style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # Spartan Stack (vial): statics take its disclaimer; video end cards render the vial
+    d = os.path.join(out, "st_static"); os.makedirs(d)
+    expect("finish_batch takes the Spartan Stack disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "spartan"], True)
+    expect("Spartan Stack refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "spartan",
+            "--disclaimer", RZ_DISC], False, "differs")
+    st = {"product": "spartan", "head": ["SPARTAN STACK BY EVERLIFE"], "head_always": True,
+          "end_head": ["SUPPORTS JOINTS", "+ LIGAMENTS"],
+          "benefits": ["Supports Joints + Ligaments", "Supports Mobility + Range of Motion", "Supports Muscle Recovery"],
+          "ingredients_label": "RECOVERY STACK",
+          "ingredients": [["JOINTS", "Supports Joints + Ligaments"], ["MOBILITY", "Supports Mobility + Range of Motion"],
+                          ["RECOVERY", "Supports Muscle Recovery"]],
+          "cta": "EXPLORE THE SPARTAN STACK", "vocab": "Spartan Stack."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"st_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(st, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SUPPORTS JOINTS AND LIGAMENTS", [[0.4, 1.1], [1.1, 1.6], [1.6, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Spartan Stack video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # Wolverine Stack (vial): statics take its disclaimer; video end cards render the vial
+    d = os.path.join(out, "wv_static"); os.makedirs(d)
+    expect("finish_batch takes the Wolverine Stack disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "wolverine"], True)
+    expect("Wolverine Stack refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "wolverine",
+            "--disclaimer", RZ_DISC], False, "differs")
+    wv = {"product": "wolverine", "head": ["WOLVERINE STACK BY EVERLIFE"], "head_always": True,
+          "end_head": ["SUPPORTS TENDONS", "+ LIGAMENTS"],
+          "benefits": ["Supports Tendons + Ligaments", "Supports Mobility", "Supports Gut Lining Health"],
+          "ingredients_label": "RECOVERY STACK",
+          "ingredients": [["TENDONS", "Supports Tendons + Ligaments"], ["MOBILITY", "Supports Mobility"],
+                          ["GUT LINING", "Supports Gut Lining Health"]],
+          "cta": "EXPLORE THE WOLVERINE STACK", "vocab": "Wolverine Stack."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"wv_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(wv, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SUPPORTS TENDONS AND LIGAMENTS", [[0.4, 1.1], [1.1, 1.6], [1.6, 1.9], [1.9, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Wolverine Stack video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # Lovara (oral capsule): statics take its disclaimer; video end cards render the bottle + capsule
+    d = os.path.join(out, "lv_static"); os.makedirs(d)
+    expect("finish_batch takes the Lovara disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "lovara"], True)
+    expect("Lovara refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "lovara",
+            "--disclaimer", RZ_DISC], False, "differs")
+    lv = {"product": "lovara", "head": ["LOVARA BY EVERLIFE"], "head_always": True,
+          "end_head": ["FROM DISTANT TO", "DEEPLY CONNECTED"],
+          "benefits": ["Supports Desire + Sensitivity", "Supports Comfort + Responsiveness", "Supports Intimate Readiness"],
+          "ingredients_label": "3-IN-1 INTIMACY SUPPORT",
+          "ingredients": [["DESIRE", "Supports Desire + Sensitivity"], ["COMFORT", "Supports Comfort + Responsiveness"],
+                          ["READINESS", "Supports Intimate Readiness"]],
+          "cta": "EXPLORE LOVARA", "vocab": "Lovara."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"lv_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(lv, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "FROM DISTANT TO DEEPLY CONNECTED", [[0.4, 0.9], [0.9, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Lovara video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # Spark (sublingual tablet): statics take its disclaimer; video end cards render the bottle + tablet
+    d = os.path.join(out, "sk_static"); os.makedirs(d)
+    expect("finish_batch takes the Spark disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "spark"], True)
+    expect("Spark refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "spark",
+            "--disclaimer", RZ_DISC], False, "differs")
+    sk = {"product": "spark", "head": ["SPARK BY EVERLIFE"], "head_always": True,
+          "end_head": ["SPONTANEITY,", "BACK ON"],
+          "benefits": ["On-Demand Desire Support", "Non-Hormonal Desire Support", "Supports Spontaneous Intimacy"],
+          "ingredients_label": "3-IN-1: PT-141 + APOMORPHINE + TADALAFIL",
+          "ingredients": [["ON-DEMAND", "On-Demand Desire Support"], ["NON-HORMONAL", "Non-Hormonal Desire Support"],
+                          ["SPONTANEOUS", "Supports Spontaneous Intimacy"]],
+          "cta": "EXPLORE SPARK", "vocab": "Spark."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"sk_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(sk, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SPONTANEITY, BACK ON", [[0.4, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Spark video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

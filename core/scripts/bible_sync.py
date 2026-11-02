@@ -154,7 +154,7 @@ def check(md):
         if not os.path.exists(pj):
             continue
         prod = json.load(open(pj))
-        sec = SKILL_SECTION.get(prod.get("id"), prod.get("name"))
+        sec = SKILL_SECTION.get(prod.get("id"), prod.get("bible_section", prod.get("name")))
         body = norm(" ".join(secs.get(sec, [])))
         disc = norm(prod.get("disclaimer", ""))
         if not body:

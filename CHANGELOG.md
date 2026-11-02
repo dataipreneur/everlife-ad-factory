@@ -13,6 +13,371 @@ images and videos since 29 Oct (creative lead's Reels reference; Mitansh confirm
 - Not changed: the comment in `core/tools/build_layers.py` (legacy Restora-Z builder, no effect on output).
 Original in `_originals/2026-10-30/safe-band/`.
 
+## 2026-11-02 — MOTS-c: BPC-157 template leftovers removed (branch `mots-c-skill`)
+Logged before editing. Priestley: "yes start with MOTS-c". The skill was scaffolded from BPC-157 and still carried its recovery
+and gym wording, which would leak into scripts and prompts. Rewritten from `direction.md` (energy and endurance, never physique)
+and the ✅ lines of `product-bible.md` only; no new claims. Originals: `_originals/2026-11-02/motsc-leftovers/`.
+- `video-prompting.md`: hook and authority examples, copy example, banned-word list, offer line ("Save up to 40%"), cast
+  wardrobe, winners note (borrowed winners exist in `winners/winners.md`).
+- `styles/` (INDEX, 1–5): recovery, tissue, joint, ice-bath and gym-bag sub-styles become energy and endurance ones; 2E mechanism
+  map = mitochondria → energy → endurance (✅ lines); the "slate vial" becomes the MOTS-c vial (lemon-yellow label).
+- `image-batch.md`: the "Hardcore gym" and "Boxing gym" moods become "Outdoor endurance at dawn" and "Everyday energy"
+  (direction.md); type-table notes no longer say "recovery category" or "gym signage".
+- `finishing.md`: article kicker default is "CELLULAR ENERGY" (product.json `kicker_default`), not "RECOVERY".
+- `animated-still.md`: gym environment moves (chalk, rubber floor, barbell) become dawn, water and road ones.
+- `lessons.md`: stale BPC-157 notes fixed (pronunciation, caption spelling, "add BPC-157 lessons", GHK-Cu line); the BPC-157
+  batch lessons are kept as tool lessons and labelled; the "blurred plate is the default 9:16 look" lesson is marked superseded
+  by the 2026-10-29 "0 blurring" finishing rule.
+- Kept on purpose: provenance notes ("adapted from BPC-157"), the shared `../everlife-bpc-157/references/vial-refs/` staging folder.
+
+## 2026-10-30 — MOTS-c: clean-up after test-1 (branch `mots-c-cleanup`, from `mots-c-skill`)
+Logged before editing. Priestley: "yes, do the MOTS-c clean-up now". The skill still carried "⛔ BLOCKED / finisher refuses"
+text from before 938e44f, and "no offer" from before c81cde5, which contradicted SKILL.md. Made on its own branch (this
+session cannot write to the mots-c worktree); fast-forward `mots-c-skill` to it.
+- `references/image-batch.md`, `video-prompting.md`, `finishing.md`, `lessons.md`, `product-bible.md` (facts bullet + label
+  note), `product.json` (`_disclaimer_status`): the ⛔ disclaimer blocks become the ⚠ PROVISIONAL note (drafts allowed; flag
+  every asset "provisional disclaimer: Jeremy to confirm").
+- Offer "Save up to 40%" (Creative Messaging doc) wired in: image-batch hard stops + F6 enabled; `personas.md`,
+  `reference-guide.md`, `winners/winners.md` no longer say "no offer yet".
+- Headline tiers in image-batch: Tier A = the doc's ✅ headlines (was: ⏳ bible headlines).
+- Label note resolved: the website (staging H2 page) says "10 mg/mL · 5 mL Vial" = the render; the doc's "2 mg/mL" is wrong.
+- `assets/creatify.json`: project 744fcca3-1910-4289-8adb-2454e71b8c0b + vial asset (created by test-1).
+- `lessons.md`: test-1 lessons (9:16 overshoot, footer fade on CTAs, side band, edge fill only on plain backgrounds).
+Originals in `_originals/2026-10-30/motsc-cleanup/`.
+
+## 2026-10-30 — MOTS-c: PROVISIONAL ad disclaimer = the standard text (branch `mots-c-skill`)
+Logged before editing. Priestley: "then use it for now". The bible's MOTS-c page still says "Disclaimer pending" and the
+Creative Messaging doc only has the website FDA statement, so MOTS-c uses the **standard ad disclaimer** (verbatim on the
+Spark, Spartan, Wolverine and most other bible pages) as a stopgap:
+"AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical
+providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription."
+- `product.json`: disclaimer set to that text; `_disclaimer_status` = PROVISIONAL, pending Jeremy.
+- `SKILL.md` + `references/product-bible.md`: the ⛔ block becomes a ⚠ PROVISIONAL note: drafts allowed; every MOTS-c asset is
+  flagged "provisional disclaimer: Jeremy to confirm" in the session hand-off; nothing goes live until he confirms.
+- `core/tests/regression.py`: the MOTS-c check now expects finish_batch to render with the provisional text (was: refuse).
+- Known: `bible_sync.py --check` will report MOTS-c as not matching its bible page until the bible gets a disclaimer.
+Originals in `_originals/2026-10-30/motsc-provisional-disclaimer/`.
+
+## 2026-10-30 — MOTS-c: Creative Messaging doc added as the approved copy source (branch `mots-c-skill`)
+Logged before editing. Priestley: "I have a new doc for MOTS-c, we should use that"
+(`motsc-creative-messaging-ranked-all-headlines.docx`; copy + text in `_originals/2026-10-30/motsc-messaging-doc/`).
+- `references/product-bible.md`: new top section "APPROVED UPDATE — MOTS-c Creative Messaging" (verbatim) that wins over the
+  older bible copy where they differ (same pattern as Justin's Sermorelin GHK doc); the bible extract stays below it. New
+  pre-screen of all 47 headlines, 9 benefits, 6 CTAs, offer and proof against the global Hard NOs: 36 ✅, 10 ⚠ Jeremy
+  ("upgrade / activated / optimized" outcome lines, "Help Your Metabolism Work", "Your Cells Need This", "Support
+  Exercise-Like Signaling"), 1 ❌ ("Support Lean Body Goals": body composition, also banned by the doc itself).
+- `SKILL.md`: headlines now come from the doc (✅ lines are Tier A); offer "Save up to 40%"; CTA list + "See How It Works";
+  the doc's direction (balance men and women, include everyday non-workout concepts, lead with a hook, "MOTS-c" spelling).
+- Still BLOCKED: the doc's disclaimer is the website's FDA/supplement statement, marked "confirm for ad use", with no AI
+  disclosure. product.json stays empty → finishers refuse. Needs Jeremy's ad disclaimer.
+- Flagged, not changed: the doc lists "2 mg/mL | 10 mg per 5 mL vial"; the vial render on file reads "10MG/ML · 5ML". One of
+  them is wrong: confirm the render against the website before any ad (strength never appears in copy either way).
+  The doc's URL is a staging page (not a live landing page).
+
+## 2026-10-30 — MOTS-c: borrowed winners (branch `mots-c-skill`)
+Logged before editing. Priestley: "for MOTS-c, I was told to take inspiration from NAD+, GLP-1 and GHK for winners". New
+`references/winners/winners.md`: borrowed cards from the NAD+ (cellular energy), GLP-1 (metabolic) and Sermorelin GHK (all
+audiences) winners, each with take / swap (the MOTS-c vial, "MOTS-C" big) / never copy. NAD+ and GLP-1 winners are linked by their
+full files in `~/Everlife-Creative/reference-ads/` (their skills live on other branches until merged); GHK by its skill path.
+The skill stays blocked (disclaimer pending); this is setup only.
+
+## 2026-10-30 — MOTS-c skill setup, BLOCKED (branch `mots-c-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-mots-c/` (metabolic peptide, vial, active adults 30–55), scaffolded with
+the new-product builder's new `--pending-disclaimer` option from the `everlife-bpc-157` template. Bible checked first: no changes.
+**⛔ The bible's MOTS-c disclaimer is "Disclaimer pending"**: product.json carries an empty disclaimer + `_disclaimer_status`, so
+every finisher refuses (core/tools/product.py) until Jeremy's verbatim text is in the bible. Vial render from Priestley's download
+(`asset-library/VIALS/MOTS-C/MOTS-C VIAL.jpg`, small: 269×559). Also PENDING: all 5 headlines (⏳), both offers ([PLACEHOLDER]).
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-mots-c/`): men and women 30–55, energy + endurance never
+  physique, the metabolic-category body-composition Hard NOs up front, "Supports Glucose Metabolism" ⚠ Jeremy, new
+  `references/direction.md` (replaces the BPC-157 men's direction), new personas (Distance Dan, Cycling Carla), no offer framework.
+  Still recovery-flavoured (fill later): styles 1–5 examples, lessons history (a MOTS-c note at the top says direction.md wins).
+- `core/tests/regression.py`: MOTS-c check = finish_batch REFUSES it while the disclaimer is pending (no file written). Smoke 19/19.
+
+## 2026-11-02 — NAD+: BPC-157 template leftovers removed (branch `nad-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". The skill was scaffolded from BPC-157 and still carried its recovery,
+gym and vial-only rules. Rewritten from `direction.md`, `assets/RENDERS.md` and the ✅ lines of `product-bible.md` only; no new
+claims. Originals: `_originals/2026-11-02/nad-leftovers/`.
+- **Form fix (blocking):** the video PRODUCT block said "attached vial reference … no capsules or pills anywhere" and the QA lines in
+  `finishing.md` / `image-batch.md` said "no capsules or pills anywhere", which would reject every NAD+ tablet ad. Now form-aware:
+  sublingual = bottle + exactly one NAD+ tablet (the hero); injection = the vial alone, a still object.
+- `styles/6-lifestyle-identity.md`: the "Hardcore gym, tattooed bodybuilder, shirtless" and Pilates sub-styles (BPC-157 brief)
+  become NAD+ ones from direction.md (bright morning desk, first coffee, the walk, burnout to back on), each with a ✅ headline.
+- `video-prompting.md`: authority examples, copy example, banned-word list, cast wardrobe.
+- `styles/` INDEX, 1–5: recovery, tissue, joint, ice-bath and gym sub-styles become clear-head / steady-energy ones; 2E mechanism
+  map = cellular energy → focus → healthy aging (✅ lines).
+- `image-batch.md`: gym moods become "Bright morning" and "Focused dark" (direction.md palette options); type-table notes; the
+  women's "never green" accent rule removed (the pinks/tans rule is only for GHK-Cu Cream and Glow Stack; NAD+'s accent is green).
+- `finishing.md`: article kicker default is "CELLULAR ENERGY" (product.json), not "RECOVERY".
+- `animated-still.md`: gym environment moves become morning-light ones.
+- `lessons.md`: the "BPC-157-specific risks" section (incl. "men must look hardcore", "only one product image, the vial",
+  "3 mg/mL vial", "404 page", "PT-141 disclaimer") is rewritten as NAD+ risks; stale BPC-157 notes fixed; the blurred-plate
+  9:16 lesson marked superseded.
+- Kept on purpose: provenance notes, the shared `vial-refs/` staging folder, "Bounce Back From Burnout" (a ✅ NAD+ headline).
+
+## 2026-10-30 — NAD+: Emily's winners (branch `nad-skill`)
+Logged before editing. Emily's Drive folder "NAD Winners" (downloaded by Priestley): 4 statics (Base09, Base41, Base81, Base83;
+4:5 + 9:16), dated 25 Sep – 22 Oct 2026. Full files in `~/Everlife-Creative/reference-ads/NAD-winners-2026-10-30/` (not in git).
+`references/winners/winners.md` rewritten with a card per winner + previews. Open questions logged there (packaging boxes in the
+winners vs our bottle render; held ⚠ lines used in live winners; a strength on Base09).
+
+## 2026-10-30 — NAD+ skill setup (branch `nad-skill`, from `main` 4ee62c6)
+Logged before editing. Priestley: GLP-1 and NAD+ (the plain NAD+ page, not Optima NAD+). New skill `skills/everlife-nad/` (cellular
+energy, focus, healthy aging; adults 30–65+, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` and
+adapted like GLP-1 (two forms). Bible checked first: no changes; NAD+ disclaimer ✅. Two forms (bible: "lead with the choice"):
+sublingual tablet (green bottle + green tablet) and injection (green vial), all from the asset library, looked at. The NAD+ nasal
+spray render is left out (no spray form in the bible).
+- Pre-screen: page lines that clash with the global rules held ⚠ for Jeremy (same decision as GLP-1): "Boost(s)…" (global:
+  "supports", never "boosts"), "Reduces Fatigue + Brain Fog" (treatment-like), "Supports DNA Repair" (medical-style), "What
+  Celebrities and CEOs Are Using…" / "Trusted by Entrepreneurs and Athletes" (unsourced authority).
+- Bible rules built in: "injection" may be named, never shown with a needle; never "needle free" (say "easy sublingual delivery");
+  voiceovers say "N-A-D plus"; strengths (200 mg / 1000 mg) never in copy.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-nad/`): two forms in product.json (sublingual / injection;
+  the vial cut out from the asset-library JPG), new `references/direction.md`, personas Priya (38) and Tom (58), `references/winners/`
+  (Base09 from the Meta export; file not on hand), all 42 lines screened (6 ⚠, 10 weak). `core/tests/regression.py` (original in
+  `_originals/2026-10-30/core/tests/`): 4 NAD+ checks (disclaimer, wrong disclaimer refused, end cards for both forms, looked at
+  both). Smoke 22/22. `bible_sync --check`: NAD+ ✅.
+Setup only: no credits, no push, no PR until every skill is tested.
+
+## 2026-11-02 — GLP-1: BPC-157 template leftovers removed (branch `glp1-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". The skill was scaffolded from BPC-157 and still carried its recovery
+and gym wording. Rewritten from `direction.md`, `assets/RENDERS.md` and the ✅ lines of `product-bible.md` only; no new claims.
+Originals: `_originals/2026-11-02/glp1-leftovers/`.
+- `styles/6-lifestyle-identity.md`: the "Hardcore gym, tattooed bodybuilder, shirtless" and Pilates sub-styles (BPC-157 brief)
+  become GLP-1 ones from direction.md (calm breakfast, fridge plan, quiet evening, daylight walk), each with a ✅ headline.
+- `video-prompting.md`: authority examples, copy example (now with the price line), banned words (weight numbers, melt/burn,
+  body areas, drug brands, "compounded"), cast wardrobe; PRODUCT block names the chosen vial (navy semaglutide / green tirzepatide).
+- `styles/` INDEX, 1–5: recovery, tissue, joint, ice-bath and gym sub-styles become calm-control ones; 2E mechanism map =
+  appetite → food noise → one plan (✅ lines).
+- `image-batch.md`: gym moods become "Bright kitchen" and "Calm evening"; type-table notes; the women's "never green" accent rule
+  removed (only for GHK-Cu Cream and Glow Stack; tirzepatide's accent is green).
+- `finishing.md`: article kicker default is "WEIGHT MANAGEMENT" (product.json), not "RECOVERY".
+- `animated-still.md`: gym environment moves become morning-light ones.
+- `lessons.md`: the "BPC-157-specific risks" section (incl. "men must look hardcore", "3 mg/mL vial", "404 page", "PT-141
+  disclaimer") rewritten as GLP-1 risks; stale BPC-157 notes fixed; the blurred-plate 9:16 lesson marked superseded.
+- Kept on purpose: provenance notes, the shared `vial-refs/` staging folder, "no capsules or pills" (GLP-1 is vials only).
+
+## 2026-10-30 — GLP-1: Emily's winners (branch `glp1-skill`)
+Logged before editing. Emily's Drive folder "GLP1 Winners" (downloaded by Priestley): 3 statics (Base186, Base193, Base204; 4:5 +
+9:16, made 30 Sep 2026; not in the Meta export, so no numbers yet). Full files in
+`~/Everlife-Creative/reference-ads/GLP1-winners-2026-10-30/` (not in git).
+- New `references/winners/` (cards + previews).
+- All three show both vials side by side. The skill's "one form per ad" was Claude's own rule, not the bible's → both vials together
+  now allowed (Priestley's "follow bible" principle). Scales stay out (they imply the weight-loss outcome Priestley held for
+  Jeremy); listed as an open question.
+
+## 2026-10-30 — GLP-1 skill setup (branch `glp1-skill`, from `main` 4ee62c6)
+Logged before editing. Priestley: "we need to add two more products: GLP-1, NAD+". New skill `skills/everlife-glp-1/` (weight
+management, adults 30–60, all audiences), scaffolded with the new-product builder from `everlife-bpc-157` (vial handling) and
+adapted like MOTS-c (all audiences, strictest body-composition rules). Bible checked first: no changes; GLP1 disclaimer ✅ (its own
+wording). Two forms: compounded semaglutide vial and compounded tirzepatide vial (asset library, looked at both).
+- Priestley's decision: the page's weight-loss outcome lines ("Up to 20% Weight Loss", "Drop the Weight and Keep It Off"…) clash with
+  the global no-body-composition / no-guaranteed-outcome rules → ⚠ held for Jeremy, used only with explicit OK. Ads lead with
+  appetite, food noise, one price and provider-guided care.
+- Bible rules built in: "compounded" before semaglutide/tirzepatide always; "GLP-1" as the umbrella in headers; every ad says "one
+  price" or "no surprise price increases".
+- `core/scripts/bible_sync.py`: the "bible_section" commit (from `spartan-skill`) cherry-picked, because the bible names it "GLP1".
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-glp-1/`): two forms in product.json (semaglutide /
+  tirzepatide), new `references/direction.md` (calm control, never a body), personas Maria (41, the bible's core demo) and Ron (56),
+  every pre-screen line screened (7 ⚠ weight-loss lines, 2 weak). `core/tests/regression.py`: 4 GLP-1 checks (disclaimer, wrong
+  disclaimer refused, end cards for both vials, looked at both). Smoke 22/22. `bible_sync --check`: GLP-1 ✅.
+Setup only: no credits, no push, no PR until every skill is tested.
+
+## 2026-11-02 — Spartan Stack: BPC-157 template leftovers removed (branch `spartan-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". Recovery and hardcore-gym wording is correct for this product and stays.
+Fixed only what belongs to BPC-157: its copy lines, its vial facts and its colour. Originals: `_originals/2026-11-02/spartan-leftovers/`.
+- BPC-157's own headlines used as examples (not on any Spartan page: "Don't Let Recovery Be the Bottleneck", "Built to Bounce Back",
+  "Train Hard. Recover Smarter." as Tier A, the BPC-157 Men hook list, "Recovery an afterthought?", "Ice Baths Have Limits." …) replaced
+  with Spartan lines from `product-bible.md` (⏳ headlines marked as needing an OK; ✅ PROVISIONAL benefits) in `video-prompting.md`,
+  `reference-guide.md`, `image-batch.md`, `mens-direction.md`, `styles/1, 3, 6`.
+- The "slate" vial / slate-blue accent → the Spartan vial's mustard gold (`assets/RENDERS.md`).
+- `video-prompting.md`: offers "none in the bible yet" → none settled (Ronnel); borrowed winners exist; "repair (except the approved
+  benefit line)" → no repair line exists for Spartan.
+- `lessons.md`: BPC-157 risk section re-checked for Spartan (vial label, men only, no landing page on file, disclaimer source);
+  pronunciation and caption spellings; blurred-plate 9:16 lesson marked superseded.
+- NOT changed (open decision): the angle questions, style 2E and image-batch benefit examples quote the unswapped Spartan page,
+  while the pre-screen table uses the PROVISIONAL swapped page. Waiting on the bible owner / Jeremy for the swap.
+
+## 2026-10-30 — Spartan Stack: PROVISIONAL swap + headlines, gate lifted (branch `spartan-skill`)
+Logged before editing. Bible-updates hand-off §6 proposed it; Priestley approved (reverses his earlier "wait for the bible fix").
+Cause of the swap (team): the NEW Product Benefits Doc has the two stacks' labels flipped. PROVISIONAL — Jeremy to confirm.
+- `references/product-bible.md`: pre-screen now uses the Wolverine page's benefit lines (the 3-peptide ones, incl. "Supports Healthy
+  Inflammatory Balance" for KPV); "3 Peptides. One Recovery Protocol." moved here; provisional headlines "One Dose. Three Peptides. No
+  Weak Links." and "Recovery, Fortified". Offer stays out (39/46/XX% disagree; Ronnel to confirm).
+- `SKILL.md`, `image-batch.md`, `video-prompting.md`: the ⛔ gate becomes a ⚠ PROVISIONAL note; ingredients may be named together as
+  on the label; "inflammation" allowed only in the exact KPV line. `product.json`: `_blocked` → `_provisional`.
+Originals in `_originals/2026-10-30/stack-provisional/spartan/`.
+
+## 2026-10-30 — Spartan Stack: labels confirmed, waiting for the bible fix (branch `spartan-skill`)
+Priestley shared marked-up label crops: the vial labels are correct (Spartan = BPC-157 / KPV / TB-500; Wolverine = BPC-157 +
+TB-500). The bible has the two stack pages swapped. Decision: wait for the bible fix (no partial unblock). The block wording in
+SKILL.md, image-batch.md, video-prompting.md, product.json `_blocked`, RENDERS.md and product-bible.md now says so, with the steps to
+take once the live bible is corrected.
+
+## 2026-10-30 — Spartan Stack: borrowed winners (branch `spartan-skill`)
+Logged before editing. Emily: "Wolverine, Spartan and MOTS-c use GHK and Sermorelin visuals instead. Rugged manly men." Priestley
+approved. New `references/winners/winners.md`: 5 statics + 2 videos from the Sermorelin / Sermorelin GHK men's winners (CPA-ranked),
+linked, not copied; per card what to take, what to swap (the vial as hero, "SPARTAN STACK" big) and what never to copy
+(body-composition, injury, comparison and price lines, old ratings). SKILL.md points to it; "spin a winner" uses it.
+
+## 2026-10-30 — Spartan Stack skill setup (branch `spartan-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-spartan/` (recovery stack, vial, active men 25–55), scaffolded with the
+new-product builder from the `everlife-bpc-157` template. Bible checked first: no changes; Spartan disclaimer ✅. Vial render from
+Priestley's download (filed as `asset-library/VIALS/SPARTAN/SPARTAN VIAL.jpg`). **⛔ Generation blocked:** the vial label
+(BPC-157 / KPV / TB-500, three peptides) contradicts the bible page (BPC-157/TB500, "Two-Peptide Recovery Stack"); Wolverine is the
+mirror image. Needs confirmation (Justin/Jeremy) before any ad. Also PENDING: all 4 headlines (⏳), offer ([PLACEHOLDER]).
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from BPC-157 (originals in `_originals/2026-10-30/skills/everlife-spartan/`): men 25–55 only (women's persona and
+  direction removed), bible creative direction (rugged, fight imagery without blood/gore, no animal death, "Spartan Stack" in every
+  asset), no offer framework, approved benefits as Tier A headlines (all bible headlines ⏳), no ingredient list in copy, "SPARTAN"
+  big / never "by Everlife" on images, the ⛔ label gate in SKILL.md, image-batch, video-prompting and product.json `_blocked`.
+- `core/tests/regression.py`: 4 Spartan checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
+  both; short row labels after a tiktok collision). Smoke 22/22.
+- `core/scripts/bible_sync.py` (original in `_originals/2026-10-30/core/scripts/`): `--check` now also reads an optional
+  `"bible_section"` in product.json (the stacks' bible headings carry their ingredients, e.g. "Spartan Stack (BPC-157/TB500)").
+  Spartan's product.json sets it. One commit, cherry-picked unchanged onto the other stack branches so merges stay clean.
+
+## 2026-11-02 — Wolverine Stack: BPC-157 template leftovers removed (branch `wolverine-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". Recovery and hardcore-gym wording is correct for this product and stays.
+Fixed only what belongs to BPC-157: its copy lines, its vial facts and its colour. Originals: `_originals/2026-11-02/wolverine-leftovers/`.
+- BPC-157's own headlines used as examples (not on any Wolverine page: "Don't Let Recovery Be the Bottleneck", "Built to Bounce Back",
+  "Train Hard. Recover Smarter." as Tier A, the BPC-157 Men hook list, "Recovery an afterthought?", "Ice Baths Have Limits." …) replaced
+  with Wolverine lines from `product-bible.md` (⏳ / ⚠ headlines marked as needing an OK; ✅ PROVISIONAL benefits) in
+  `video-prompting.md`, `reference-guide.md`, `image-batch.md`, `mens-direction.md`, `styles/1, 3, 5, 6`.
+- The "slate" vial / slate-blue accent → the Wolverine vial's matte black and gold (`assets/RENDERS.md`).
+- `video-prompting.md`: offers "none in the bible yet" → "Save up to 39%" (⚠ PROVISIONAL); borrowed winners exist.
+- `lessons.md`: BPC-157 risk section re-checked for Wolverine (vial label, offer, men only, no landing page on file, disclaimer
+  source); pronunciation and caption spellings; blurred-plate 9:16 lesson marked superseded.
+- NOT changed (open decision): lines that depend on the swapped Spartan / Wolverine bible pages. Waiting on the bible owner / Jeremy.
+
+## 2026-10-30 — Wolverine Stack: PROVISIONAL swap + headlines + offer, gate lifted (branch `wolverine-skill`)
+Logged before editing. Bible-updates hand-off §6; Priestley approved all three. PROVISIONAL — Jeremy to confirm.
+- `references/product-bible.md`: pre-screen now uses the Spartan page's benefit lines (the 2-peptide ones); "Two Peptides. One
+  Recovery Stack." moved here; provisional headlines "Two Peptides. One Mission." and "Bounce Back Stronger"; "Recover Like Wolverine"
+  ❌ until Jeremy (Marvel). Offer "Save up to 39%" PROVISIONAL: landing page only, an approved exception to "offers never from landing
+  pages"; must be added to the bible.
+- `SKILL.md`, `image-batch.md` (F6 offer framework back), `video-prompting.md`: ⛔ gate → ⚠ PROVISIONAL note; ingredients named together
+  as on the label; the KPV inflammation line moves to Spartan. `product.json`: `_blocked` → `_provisional`.
+Originals in `_originals/2026-10-30/stack-provisional/wolverine/`.
+
+## 2026-10-30 — Wolverine Stack: labels confirmed, waiting for the bible fix (branch `wolverine-skill`)
+Same as the Spartan Stack: the vial labels are correct (Wolverine = BPC-157 + TB-500), the bible's stack pages are swapped.
+Priestley: wait for the bible fix. Block wording updated in SKILL.md, image-batch.md, video-prompting.md, product.json, RENDERS.md
+and product-bible.md.
+
+## 2026-10-30 — Wolverine Stack: borrowed winners (branch `wolverine-skill`)
+Logged before editing. Same as the Spartan Stack: Emily's "use GHK and Sermorelin visuals, rugged manly men", approved by Priestley.
+New `references/winners/winners.md` (5 statics + 2 videos from the Sermorelin / GHK men's winners, linked, with take / swap / never
+copy), referenced from SKILL.md and image-batch.md.
+
+## 2026-10-30 — Wolverine Stack skill setup (branch `wolverine-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-wolverine/` (recovery stack, vial, active men 25–55), scaffolded with the
+new-product builder from the `everlife-bpc-157` template and adapted with the same script as the Spartan Stack. Bible checked first:
+no changes; Wolverine disclaimer ✅. Vial render from Priestley's download (`asset-library/VIALS/WOLVERINE/WOLVERINE VIAL.jpg`).
+**⛔ Generation blocked:** the vial label (BPC-157 + TB-500, two peptides) contradicts the bible page (BPC-157/KPV/TB500,
+"3-peptide"); Spartan is the mirror image. Also PENDING: all 4 headlines (⏳; "Recover Like Wolverine" ⚠ Marvel IP + implied
+healing), offer ([PLACEHOLDER]). Includes the `bible_sync --check` "bible_section" commit cherry-picked from `spartan-skill`.
+Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted like Spartan (originals in `_originals/2026-10-30/skills/everlife-wolverine/`), plus: "inflammation" stays banned except the
+  bible's exact "Supports Healthy Inflammatory Balance"; product.json `bible_section` set.
+- `core/tests/regression.py`: 4 Wolverine checks (static disclaimer, wrong disclaimer refused, end cards default + tiktok, looked at
+  both; the black vial is low-contrast on the dark default card, watch it). Smoke 22/22. `bible_sync --check`: Wolverine ✅.
+
+## 2026-11-02 — Lovara: stale "nothing yet" notes fixed (branch `lovara-skill`)
+Logged before editing. Priestley: "Yes, do all one by one" (template-leftover pass). Lovara's PT-141 / Sermorelin mentions are
+attributed lessons and stay. Fixed three statements that were true at scaffolding and are not now. Originals:
+`_originals/2026-11-02/lovara-stale/`.
+- `lessons.md`: "No Lovara ads have been made" → batches 1 and 2 (2026-10-30) exist, lessons at the bottom.
+- `video-prompting.md`: "No Lovara video winners" → V18, V26, V32 in `winners/winners.md`.
+- `reference-guide.md`: "our own Lovara winners (none on file yet)" → points to `winners/winners.md`.
+- Not changed: no pronunciation for "Lovara" is on file; add it once the team confirms how it is said.
+
+## 2026-10-30 — Lovara: Emily's winners (branch `lovara-skill`)
+Logged before editing. Emily's Drive folder "Lovara" (downloaded by Priestley): 3 statics (360555 A2/A3, Base161), 3 videos
+(Video 32, 26, 18) and her note listing the all-time winners whose files she could NOT find (INT24 120 sales, INT4 112, INT13 95,
+INT17 77…). Full files in `~/Everlife-Creative/reference-ads/Lovara-winners-2026-10-30/` (not in git).
+- New `references/winners/`: winners.md (Emily's full ranking + a card per file: take / never copy) + small previews.
+- SKILL.md points to it. No rule changes: several of these winners break today's rules (lingerie, bed/bedroom, per-ingredient
+  benefit claims, 4.8 / 50,000 / 70,000 proof): they are format references only.
+- Couples (Priestley: "Follow bible for now"): the skill's own "no couples" was stricter than the bible. Replaced with the bible's
+  wording: "no generic stock-style couples", "product imagery led", "no bedroom scenes" (SKILL.md, image-batch.md,
+  video-prompting.md, winners.md). "Couples in bed" stays banned (bedroom).
+
+## 2026-10-30 — Lovara skill (branch `lovara-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-lovara/` (women's intimacy support, women 30–55), built per
+the plan doc "New Product Skills: Build Plan" (https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf), recipe "How to build
+one product skill". Bible checked first: `bible_sync.py` against the live bible = no changes since the 30 Oct sync.
+- Template: a copy of `skills/everlife-pt-141/` (intimate wellness), adapted to Lovara; `core -> ../../core` link kept.
+- `product.json` / `product.env`: id `lovara`, verbatim bible ad disclaimer, renders listed but **not on file** (form
+  not stated in the bible; PMG samples show a pink tablet) → `assets/MISSING_RENDERS.md`; generation blocked until added.
+- `references/product-bible.md`: the bible's Lovara section verbatim + a compliance pre-screen (for Jeremy).
+- Skill files adapted: women-only audience, tasteful product-led creative (no beds/bedroom), women's colours, each
+  ingredient claim only on its own ingredient, today's image rules (no "by Everlife", name big, a different person per ad).
+- Open: renders + form; Justin (ingredient list, "Support Your Spark" CTA); Jeremy (⚠ lines); winners; landing page.
+- No credits spent. No push/PR until the tests pass and a real test batch looks right.
+- Done (free steps): skill files written (SKILL.md, product.json/env, bible extract + pre-screen, image-batch, video-prompting,
+  finishing, lessons, personas, reference-guide, reviews, styles ×7; PT-141 renders/winners/team refs/reviews removed, generic
+  style boards kept). Statics default to product-only (Mitansh's PT-141 verdict on GPT Image people statics).
+- `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 3 Lovara checks (static finish with its disclaimer,
+  wrong disclaimer refused, video refused while `lovara_bottle.png` is missing). Smoke 18/18 before, 21/21 after.
+- `bible_sync.py --check`: Lovara ✅. Pre-existing, not ours: BPC-157's disclaimer is not in the bible ("Disclaimer pending").
+- Preflight: 8 passed, 3 to fix (both renders missing; Marketing Studio registration needs them). Creatify project not created yet
+  (it imports the renders).
+- Then (same day): Priestley downloaded the asset library's TABLETS/CAPSULES folder (→ `~/Everlife-Creative/asset-library/`) and the
+  PMG Ad folder (→ `~/Everlife-Creative/reference-ads/`). **Lovara is an oral capsule (30 per bottle), not a tablet.** Added
+  `assets/lovara_bottle.png` (+ `_ref.jpg` on white) and `assets/lovara_capsule.png` (cut out from the JPG on white); looked at both.
+  `MISSING_RENDERS.md` → `RENDERS.md` (with the bottle wording for prompts); "tablet" → "capsule" across the skill (originals in
+  `_originals/2026-10-30/skills/everlife-lovara/`). `product.json`: `pill_end_scale` 0.36 (the tall capsule covered the end-card
+  headline at full size). Regression: the "video refused without renders" check replaced by Lovara end-card renders (default + tiktok):
+  smoke 22/22. Preflight 9/10 (only Marketing Studio registration open, optional, for UGC).
+- Test batch-1 (4 statics, 4:5, product-only, 5 Creatify credits approved by Priestley): `assets/creatify.json` (the Lovara
+  Creatify project + imported bottle/capsule) and `references/lessons.md` (batch-1 lessons appended). All 4 pass QA after one
+  reposition fix on L4 (benefit lines under the footer). Gap flagged: `finish_batch` checks text under the footer only at 9:16.
+
+## 2026-11-02 — Spark: stale "no ads yet" note fixed (branch `spark-skill`)
+Logged before editing. Priestley: "Yes, do all one by one" (template-leftover pass). Spark's PT-141 / spray mentions are already
+labelled as template history and stay. `lessons.md`: "No Spark ads have been made" → batches 1–3 (2026-10-30) exist.
+Originals: `_originals/2026-11-02/spark-stale/`. Not changed (open decision for Priestley): the "3D-animated couple story" style
+in SKILL.md vs the team's rejection of cartoon characters.
+
+## 2026-10-30 — Spark: PROVISIONAL CTA "Get Started Now" (branch `spark-skill`)
+Logged before editing. Bible-updates hand-off §6 (other session) proposed it; Priestley approved. All four bible CTAs are still
+⏳ Pending approval; "Get Started Now" is already an approved (✅) CTA on the MOTS-c, GLP-1 and NAD+ pages, so it becomes Spark's
+provisional default. PROVISIONAL — Jeremy to confirm; every asset's SESSION.md says so.
+- `SKILL.md` (rule 3, CTA gate, round-1 CTA question), `references/product-bible.md` (pre-screen), `references/image-batch.md`.
+Originals in `_originals/2026-10-30/spark-provisional-cta/`.
+
+## 2026-10-30 — Spark: Emily's winners + tablet-hero / warm-default update (branch `spark-skill`)
+Logged before editing. Emily shared the Spark winners (Drive "Spark - Oct-30-2026": 7 statics in 1:1 + 9:16, 3 videos in 4:5 +
+9:16); full files in `~/Everlife-Creative/reference-ads/Spark-winners-2026-10-30/` (not in git). Priestley approved the update after
+the test batch showed the bottle dominating (bible Standards 03: "the pill or tablet is the hero, not the bottle") and asked what the
+bible says on colour (no Spark direction; global "warm, sun-lit"). Originals in `_originals/2026-10-30/skills/everlife-spark/`.
+- `references/winners/`: winners.md rewritten with a card per winner (what to take, what never to copy) + small previews.
+- `references/image-batch.md`, `SKILL.md`: tablet hero (larger than the bottle, in front), the winners' "big SPARK + huge tablet +
+  three icon pills" framework, warm-and-light default mood (dark is an option), "spin a winner" points at the cards.
+- `references/video-prompting.md`, `references/lessons.md`, `references/personas.md`: 3D-animated couple videos are an option for
+  Spark (2 of its 3 winning videos), replacing the inherited PT-141 "no cartoons" lesson for this product only.
+
+## 2026-10-30 — Spark skill setup (branch `spark-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-spark/` (PT-141 + Apomorphine + Tadalafil, sublingual tablet,
+men and women 30–65+), scaffolded with the new-product builder (`new-product-skill` branch, run from a scratch copy) from the
+`everlife-pt-141` template. Bible checked first: no changes since the 30 Oct sync; Spark disclaimer ✅. Renders from the asset
+library (`TABLETS-CAPSULES/SPARK/`), looked at both. Gaps left PENDING: CTAs (all 4 pending approval), ED headlines (pending,
+Jeremy). Product Hard NO: never tie a benefit to one ingredient. Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from the PT-141 template (originals in `_originals/2026-10-30/skills/everlife-spark/`): one form (sublingual tablet), men +
+  women, combo-only ingredient rule, CTA gate (all 4 ⏳; the user OKs one per session), "SPARK" big / never "by Everlife" on images,
+  4:5 default + Lovara's layout block, product-only by default, no palette limit (≥1 dark ad per batch), offer Save up to 51%.
+- `references/product-bible.md`: product facts + a filled compliance pre-screen (ED headlines ⏳ + ⚠ Jeremy). `references/winners/
+  winners.md` from the Meta export (Base04/08/14 lead, one video; creative files not on hand). `assets/RENDERS.md` bottle wording;
+  `assets/creatify.json` stub (project made on the first run).
+- `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 4 Spark checks (static disclaimer, wrong disclaimer
+  refused, end cards default + tiktok, looked at both). Smoke 22/22. `bible_sync --check`: Spark ✅. Preflight 8/10 (Marketing Studio
+  registration optional for UGC; venv flag only because the run pointed at the repo tools).
+- Test batch (14 Creatify credits, approved by Priestley; CTA "Explore Spark" OK'd for the test, ⏳ for Jeremy): `assets/creatify.json`
+  (project), `references/lessons.md` (native 9:16 failed 4/4 on safe zones; 4:5 → compose916 → `--fit trusted` passed 4/4; 2/4
+  4:5 raws needed a fix for product under the footer). Results in `~/Everlife-Creative/output/Spark/2026-10-30_batch-2-4x5/SESSION.md`.
+  The finisher gap it exposed is fixed on its own branch (`safezone-sides`).
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).

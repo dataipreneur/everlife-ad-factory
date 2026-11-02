@@ -1,0 +1,39 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Spartan Stack ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
+ "id": "spartan",
+ "name": "Spartan Stack",
+ "renders": {
+  "bottle": "spartan_bottle.png",
+  "pill": null
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "keep_case": [
+  "Spartan Stack by Everlife",
+  "Spartan Stack",
+  "Spartan",
+  "BPC-157",
+  "TB-500",
+  "KPV"
+ ],
+ "review_highlight": "Spartan Stack",
+ "reviews": "references/reviews.json",
+ "kicker_default": "RECOVERY",
+ "split_titles": [
+  "THE STRAIN",
+  "THE SUPPORT"
+ ],
+ "notify_app": "Spartan Stack",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the Spartan Stack vial (a still object, label to camera)",
+  "min_width": 0.35,
+  "label": "wraps the curved glass, EVERLIFE / SPARTAN / BPC-157 / KPV / TB-500 / 3MG/3MG/3MG/ML / RX ONLY / 5ML",
+  "never": "needles, syringes, pens or injecting; capsules or pills; blood, gore or animal death; before/after or body comparison; another product's vial",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "bible_section": "Spartan Stack (BPC-157/TB500)",
+ "_provisional": "Swapped Spartan/Wolverine benefit lines, provisional headlines (Priestley 2026-10-30; Jeremy to confirm; bible fix pending)."
+}

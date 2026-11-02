@@ -1,0 +1,6 @@
+{
+ "project_id": "0055ddd6-419b-439c-8c51-726287c0fffa",
+ "bottle": "assets/ad6c6602_lovara_bottle_ref.jpg",
+ "capsule": "assets/6395febe_lovara_capsule.png",
+ "note": "Created 2026-10-30 on priestley@everlifemd.com's Creatify workspace (9:16, 1080p) with the Lovara bottle (flattened on white) and the capsule. Reuse it for every image. It belongs to the account that created it; if composer_project_get fails from another account, create a new one the same way (composer_project_create, upload_file + PUT, composer_import_asset) and rewrite this file. Never import another product's asset into this project."
+}

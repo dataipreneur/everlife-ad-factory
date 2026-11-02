@@ -1,0 +1,50 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's GLP1 ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
+ "id": "glp-1",
+ "name": "GLP-1",
+ "renders": {
+  "bottle": "glp1_semaglutide_vial.png",
+  "pill": null
+ },
+ "disclaimer": "AI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.",
+ "keep_case": [
+  "GLP-1 by Everlife",
+  "GLP-1",
+  "compounded semaglutide",
+  "compounded tirzepatide"
+ ],
+ "review_highlight": "GLP-1",
+ "reviews": "references/reviews.json",
+ "kicker_default": "WEIGHT MANAGEMENT",
+ "split_titles": [
+  "THE NOISE",
+  "THE PLAN"
+ ],
+ "notify_app": "GLP-1",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the GLP-1 vial of the ad's form, or both vials side by side (a still object, labels to camera)",
+  "min_width": 0.35,
+  "label": "wraps the curved glass: 'Compounded' box, SEMAGLUTIDE or TIRZEPATIDE, RX ONLY",
+  "never": "needles, syringes, pens or injecting; scales, tape measures, waistlines, bellies, before/after or any body-composition cue; food 'cheat' imagery; another product's vial",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true,
+ "bible_section": "GLP1",
+ "forms": {
+  "semaglutide": {
+   "label": "compounded semaglutide",
+   "bottle": "glp1_semaglutide_vial.png",
+   "pill": null,
+   "bottle_wording": "a clear glass vial with a navy flip-off cap over a navy crimp; a deep navy label with a small white outlined box reading 'Compounded', 'SEMAGLUTIDE' large in white, a thin white rule, 'RX ONLY'"
+  },
+  "tirzepatide": {
+   "label": "compounded tirzepatide",
+   "bottle": "glp1_tirzepatide_vial.png",
+   "pill": null,
+   "bottle_wording": "a green-tinted glass vial with a green flip-off cap over a green crimp; a green label with a small white outlined box reading 'Compounded', 'TIRZEPATIDE' large in white, a thin white rule, 'RX ONLY'"
+  }
+ }
+}

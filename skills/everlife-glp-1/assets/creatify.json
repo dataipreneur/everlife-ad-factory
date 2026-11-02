@@ -1,0 +1,6 @@
+{
+ "project_id": "83a7f68f-7420-4e74-9789-4157d02ab2ad",
+ "semaglutide": "assets/f9f86f47_glp1_semaglutide_vial_ref.jpg",
+ "tirzepatide": "assets/63a2f894_glp1_tirzepatide_vial_ref.jpg",
+ "note": "Created 2026-10-30 on priestley@everlifemd.com's Creatify workspace (9:16, 1080p) with both vials (flattened on white). Reuse it for every image. If composer_project_get fails from another account, create a new one the same way (composer_project_create, upload_file + PUT, composer_import_asset) and rewrite this file. Never import another product's asset into this project."
+}
