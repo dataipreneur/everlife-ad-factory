@@ -11,7 +11,7 @@ Why it works: the buyer sees himself between sets. Men: hardcore (`../mens-direc
 
 ## 6B — Trail / track at dawn
 - **Looks like:** a runner 35–55 lacing shoes on a tailgate, golden hour; the product in the car's cupholder or on the tailgate.
-  "Built for Lifters, Runners, and High-Output Humans."
+  "The Wolverine Stack for Whole-Body Recovery." (⏳, with an OK)
 - **Finishing:** `editorial`.
 
 ## 6C — Fight gym, no blood (men)
@@ -20,4 +20,4 @@ Why it works: the buyer sees himself between sets. Men: hardcore (`../mens-direc
 
 ## 6D — The comeback session
 - **Looks like:** the first session back: taping a bag, a slow warm-up, a quiet nod; the product on the kitchen counter afterwards.
-  "The Comeback Starts Here." Identity, not transformation; no before/after.
+  Line: a ✅ PROVISIONAL benefit ("Supports Mobility + Range of Motion"). Identity, not transformation; no before/after.

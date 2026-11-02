@@ -1,8 +1,8 @@
 # Style system — index (Wolverine Stack)
 
 Source: the team's style library "Everlife Ad Style Examples" (Drive folder `1aQv40GQ3vwsF2EkJ_L41vnvZDYInTckF`), condensed into 6
-categories. Same structure as the Restora-Z / Sermorelin GHK / PT-141 skills; the fit and recipes are rewritten for BPC-157 (recovery:
-fit and mature people, product as a still object, never needles). Example boards (library thumbnails, all products) are in
+categories. Same structure as the Restora-Z / Sermorelin GHK / PT-141 skills; the fit and recipes are rewritten for the Wolverine Stack (recovery:
+rugged men 25–55, the vial a still object, never needles). Example boards (library thumbnails, all products) are in
 `../style-boards/board_1..6.jpg`:
 
 | Board | Rows (library folders) |

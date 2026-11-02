@@ -28,17 +28,16 @@ man, the support is in the product.
    machine), dumbbell rack, chalk bucket, a bench with cracked vinyl, a torn poster, a fan, a window of hard daylight or sodium lamps.
    Alternatives: a cold car park after a session; a kitchen at 5 a.m. with a black coffee and the product; a boxing gym (bag, wraps).
 3. **Light:** hard, directional, high contrast. One key light raking across the body; deep shadows; sweat and chalk catching highlights.
-   Colour moods: charcoal + steel + chalk white; black + the vial's slate blue; black + red (the winners' red-black); walnut + brass
+   Colour moods: charcoal + steel + chalk white; black + the vial's gold; black + red (the winners' red-black); walnut + brass
    for the "earned" quiet variant. No pastel, no clinical white, no neon unless it is the gym's own signage.
 4. **Product staging:** the vial is a gym object: on the plate of a loaded bar, on the rack's J-hook, on the
    bench beside wraps and a shaker, in a chalked hand pushed toward the lens (the winners' "hand thrusts the bottle at camera" move).
    The vial is ALWAYS a still object: no syringe, pen, needle, droplets or injecting, ever. No capsules or pills anywhere.
-5. **Type:** heavy condensed grotesque, all caps allowed for men ("BUILT TO BOUNCE BACK"), product name huge; or a stencil / industrial
-   sans. Three-word power stacks work ("TRAIN. RECOVER. REPEAT." is Tier B; "Train Hard. Recover Smarter." is Tier A). Red, chalk
-   white or slate accent. Three benefit pills with simple icons when the brief wants bullets; one line when it wants less text.
-6. **Copy register:** plain, blunt, earned. No "bro" slang, no shouting about results. Hooks from the Men list: "For Bodies That Take a
-   Beating", "The Body Takes Hits. Recover Accordingly.", "Heavy Lifts. Smart Recovery.", "For Lifters Who Feel Every Rep", "No Days
-   Off Needs Smarter Recovery", "Your Foam Roller Isn't Enough", "Built to Bounce Back", "Recover Between the Sets".
+5. **Type:** heavy condensed grotesque, all caps allowed for men ("WOLVERINE STACK"), product name huge; or a stencil / industrial
+   sans. Three-word power stacks work (e.g. "TRAIN. RECOVER. REPEAT.": Tier B, needs an OK; the Wolverine page has no ✅ headline yet). Red, chalk
+   white or gold accent. Three benefit pills with simple icons when the brief wants bullets; one line when it wants less text.
+6. **Copy register:** plain, blunt, earned. No "bro" slang, no shouting about results. Hooks: only the Wolverine page's lines in
+   `product-bible.md` (⏳ / ⚠ headlines with an OK; ✅ PROVISIONAL benefits). The BPC-157 Men list belongs to another product.
 
 ## Scene bank (pick one per ad; never repeat in a batch)
 - Loaded barbell on the floor, plates toward camera, the vial standing on the inner plate; chalk dust in the light.

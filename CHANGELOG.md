@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Wolverine Stack: BPC-157 template leftovers removed (branch `wolverine-skill`)
+Logged before editing. Priestley: "Yes, do all one by one". Recovery and hardcore-gym wording is correct for this product and stays.
+Fixed only what belongs to BPC-157: its copy lines, its vial facts and its colour. Originals: `_originals/2026-11-02/wolverine-leftovers/`.
+- BPC-157's own headlines used as examples (not on any Wolverine page: "Don't Let Recovery Be the Bottleneck", "Built to Bounce Back",
+  "Train Hard. Recover Smarter." as Tier A, the BPC-157 Men hook list, "Recovery an afterthought?", "Ice Baths Have Limits." …) replaced
+  with Wolverine lines from `product-bible.md` (⏳ / ⚠ headlines marked as needing an OK; ✅ PROVISIONAL benefits) in
+  `video-prompting.md`, `reference-guide.md`, `image-batch.md`, `mens-direction.md`, `styles/1, 3, 5, 6`.
+- The "slate" vial / slate-blue accent → the Wolverine vial's matte black and gold (`assets/RENDERS.md`).
+- `video-prompting.md`: offers "none in the bible yet" → "Save up to 39%" (⚠ PROVISIONAL); borrowed winners exist.
+- `lessons.md`: BPC-157 risk section re-checked for Wolverine (vial label, offer, men only, no landing page on file, disclaimer
+  source); pronunciation and caption spellings; blurred-plate 9:16 lesson marked superseded.
+- NOT changed (open decision): lines that depend on the swapped Spartan / Wolverine bible pages. Waiting on the bible owner / Jeremy.
+
 ## 2026-10-30 — Wolverine Stack: PROVISIONAL swap + headlines + offer, gate lifted (branch `wolverine-skill`)
 Logged before editing. Bible-updates hand-off §6; Priestley approved all three. PROVISIONAL — Jeremy to confirm.
 - `references/product-bible.md`: pre-screen now uses the Spartan page's benefit lines (the 2-peptide ones); "Two Peptides. One
