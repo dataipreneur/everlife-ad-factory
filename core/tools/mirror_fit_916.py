@@ -13,6 +13,8 @@ single pixel row, no blur, no padding colour, no AI. Real texture (linen, plaste
 bottom of the lowest product / button). The defaults for the band keep content under the Everlife logo (ends ~0.11) and
 above the footer (starts y 1236 = 0.644).
 
+--align left|right: pin the art to one edge so all side fill goes to the clean edge.
+
 LIMIT: the strip must be background. If a person, text or the product touches a side edge of the raw, the mirror copies
 it (a mirrored arm / letter): the raw FAILS, re-roll it instead (cost approved). Always look at the result.
 """
@@ -47,6 +49,8 @@ def main():
     ap.add_argument('--band-top', type=float, default=0.115)
     ap.add_argument('--band-bottom', type=float, default=0.635)
     ap.add_argument('--strip', type=int, default=28, help='px of text-free edge to mirror (side fill)')
+    ap.add_argument('--align', choices=['center', 'left', 'right'], default='center',
+                    help='pin the art to one side so ALL side fill goes to the other (use when one edge has a person/object)')
     a = ap.parse_args()
 
     src = Image.open(a.raw).convert('RGB').resize((W, H), Image.LANCZOS)
@@ -55,7 +59,7 @@ def main():
         raise SystemExit(f'scale {k:.2f} < 0.65: type would get too small for 50+ readers. Re-roll the raw instead.')
     w, h = round(W * k), round(H * k)
     art = np.asarray(src.resize((w, h), Image.LANCZOS))
-    x0 = (W - w) // 2
+    x0 = {'center': (W - w) // 2, 'left': 0, 'right': W - w}[a.align]
     y0 = round(a.band_top * H - a.top * h)
     if y0 < 0:                       # the raw's empty top overflows the canvas: drop it
         art = art[-y0:]
