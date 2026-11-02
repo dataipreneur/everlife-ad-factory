@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Titan-Rx skill brought up to date with main before merging (branch `titan-rx-skill`)
+Merged main (#23–#30; `regression.py` and `ultra-premium.md` conflicts with GHK/Epithalon resolved by hand: each product's
+test block keeps its own closing line, the vial row takes Epithalon and the tablet row Titan-rx, both palette rows kept) and
+gave the skill what those PRs gave the other skills (from its Spark template): the AI Avatar "ALL on Creatify" line, the
+15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and the Winners Board steps.
+Smoke 61/61.
+
 ## 2026-11-02 — Epithalon skill brought up to date with main before merging (branch `epithalon-skill`)
 Merged main (#23–#29) and gave the skill what those PRs gave the other skills (from its MOTS-c template): the AI Avatar
 "ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and

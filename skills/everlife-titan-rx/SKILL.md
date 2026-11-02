@@ -105,9 +105,9 @@ approved masters), frameworks (random mix; the user can say "use F2 and F8" in c
 
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
-     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
-     single setup question; needs the product registered in Marketing Studio: NOT done yet, preflight prints the command). This
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
+     single setup question; no Higgsfield and no Marketing Studio registration needed). This
      skill's casting (a rugged, strong man 40–65 with a hardcore-training feel, clothed, an ordinary non-famous face), claims and
      banned settings still apply: shoulder-up, no bed, bedroom, couples in bed or bare torsos; the capsule is the hero in the B-roll;
      no ingredient claims; no offer.
@@ -122,6 +122,7 @@ approved masters), frameworks (random mix; the user can say "use F2 and F8" in c
    Plan" via Other). All five are bible CTAs.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
+> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 5. **Mood:** "Dark and forged: matte black, gunmetal, brushed steel, the red chevron as the one accent (Recommended: the bottle's
    own look)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Warm and sun-lit: golden
    hour, warm wood, leather, concrete in daylight (the bible's 'warm, sun-lit')" / "Surprise me: different each ad". Sets palette
