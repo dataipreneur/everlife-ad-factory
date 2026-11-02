@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Three older branches brought to main: new-product builder, stricter 9:16 check, Sermorelin render notes (branch `older-three`)
+Logged before editing. Priestley: "go ahead with all three, skip avatar" (`avatar-format` is not merged: Mitansh's #14 is
+the avatar format in use). Merged onto today's main: `sermorelin` (500 mcg render doc fix), `new-product-skill` (the
+builder that scaffolded the 7 new products), `safezone-sides` (finish_batch 9:16 refuses the ad's own type under the logo,
+and type/product in the Reels side bands with `--fit none`). Plus: `skills/everlife-sermorelin/product.env` comments no
+longer say the 1000 bottle and tablet are "NOT YET ADDED" (both are in `assets/`, see `MISSING_RENDERS.md`); and the
+builder's `references/adapt-checklist.md` gets §3b, the lessons from building the 7 products (template leftovers are words,
+form rules, real renders in product.env, kicker, Hook Engine + hook bank, Marketing Studio, stale "nothing yet" notes).
+Originals: `_originals/2026-11-02/older-three/`.
+
 ## 2026-11-02 — Bible sync: every session checks, edit-access people sync, weekly job planned (branch `followup-7-hooks`)
 Logged before editing. Priestley: Justin is the only one who edits the live bible; the team just has to use his latest. Decisions:
 an unsynced change → **warn and continue** with the current approved lines; the **weekly automatic check** is documented
@@ -468,6 +478,37 @@ Jeremy). Product Hard NO: never tie a benefit to one ingredient. Setup only: no 
   (project), `references/lessons.md` (native 9:16 failed 4/4 on safe zones; 4:5 → compose916 → `--fit trusted` passed 4/4; 2/4
   4:5 raws needed a fix for product under the footer). Results in `~/Everlife-Creative/output/Spark/2026-10-30_batch-2-4x5/SESSION.md`.
   The finisher gap it exposed is fixed on its own branch (`safezone-sides`).
+
+## 2026-10-30 — New-product builder: `--pending-disclaimer` (branch `new-product-skill`)
+Logged before editing. Priestley: set every product up now and fill gaps later. `scripts/new_product.py create … --pending-disclaimer`
+scaffolds a product whose bible disclaimer is pending, blocked: product.json gets an empty disclaimer + `_disclaimer_status`, and
+`core/tools/product.py` already refuses to finish anything for it. Used for MOTS-c (`mots-c-skill`). SKILL.md rule 2 notes the
+exception. Original in `_originals/2026-10-30/skills/everlife-new-product/`.
+
+## 2026-10-30 — New-product skill builder (branch `new-product-skill`, from `main` 4ee62c6)
+Logged before editing. New skill `skills/everlife-new-product/` (Priestley: "a skill to smoothly ask us questions on making a new
+skill for the next product"): it turns the plan doc's recipe ("How to build one product skill",
+https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf) into a guided, bible-first flow: pick the product → one summary card read from the
+synced bible, the local asset library, the reference ads and the Meta winners export → ask only about gaps (template, form, missing
+renders, flagged copy errors) → scaffold the skill on its own branch → adapt → test → stop at the two human gates (the first paid test
+batch, the PR). Worked example: the Lovara build on branch `lovara-skill` (same day).
+- `skills/everlife-new-product/SKILL.md` (the flow), `references/human-inputs.md` (what only people can provide),
+  `references/templates.md` (which skill to copy), `references/adapt-checklist.md` (every file to adapt and the rules every new
+  product inherits), `scripts/new_product.py` (`inspect` = the summary card; `create` = the scaffold: copy, strip the template's
+  product files, product.json/env with the verbatim disclaimer, the bible extract, renders from the asset library, copy-log seed).
+- Not a product skill: no product.json (bible_sync and the shared tools skip it). No shared code changed. No credits.
+
+## 2026-10-30 — 9:16 safe-zone check: side bands + logo overlap (branch `safezone-sides`, from `main` 4ee62c6)
+Priestley's Spark 9:16 safe-zone test showed `finish_batch.py` only checked the bottom (content under the proof row): three raws
+with headline/CTA/product in the Reels side bands and one with the ad's own name under the Everlife logo all passed. Approved by
+Priestley ("Yes, on its own branch"). Original in `_originals/2026-10-30/core/tools/finish_batch.py`.
+- 9:16, unless `--fit force`: refuse when the ad's own type/product sits under the logo (edge "busy" > 0.12).
+- 9:16 with `--fit none`: refuse when the left/right Reels band (outside x 156–924) has type or product (edge density > 0.09);
+  warn above 0.05. Calibrated on the 4 Spark raws + 20 Sermorelin r3 raws: all 4 Spark raws refused with the right reason (S1
+  bottom, S2/S4 left band, S3 logo); the Sermorelin logo refusals were checked by eye and are real (their name runs into the logo
+  area). `--fit trusted` (compose916 / reposition outputs) keeps the logo check and skips the side check (geometry is known).
+- Smoke 18/18. Videos (full_layout) do not use this path; animate_still checks only its first frame.
+- Not changed: earlier finals already made from older raws (e.g. Sermorelin W1/GHK W2 have type or faces in the bands).
 
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
