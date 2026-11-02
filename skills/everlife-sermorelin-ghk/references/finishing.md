@@ -50,7 +50,14 @@ Cost ≈ 0.9 Higgsfield credits (3 voice takes at 0.3); ask before spending, sho
    the last word>`, then re-transcribe the FINAL once: one voice per line, every name right, nothing under the end card.
 7. Record in SESSION.md: which line was re-voiced, the take, the cut times, the cost. Tell the user to LISTEN to the names.
 
-## 2. Video finishing
+## 2. Video finishing — premium post-edit (DEFAULT since 2026-11-02; ask the style question first)
+After the raw passes §1 QA, ASK the post-edit style question and finish with `premium_finish.py`, exactly as
+`core/references/premium-finish.md` says (4 styles: V1 Champagne, V2 Black Label, V3 Subtle, V4 Quiet Luxe; recommended = least
+recently used for this product, alternating bold/calm; log the choice). The classic `full_layout.py` route below is used only when
+the user asks for it or a job needs one of its extras (review burst, mirror fix, zoom); its copy rules (bible-only lines, verbatim
+disclaimer, caption spellings) apply to premium.json too.
+
+## 2b. Classic finishing (full_layout.py, on request only)
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
 {"product": "sermorelin-ghk", "style": "default|tiktok|editorial" (house look = "default"; "house" crashes), "kicker": "optional label for editorial",
