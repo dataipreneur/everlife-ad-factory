@@ -2,11 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
-## 2026-11-02 — Bible sync: every session checks, edit-access people sync, a weekly job watches (branch `followup-7-hooks`)
+## 2026-11-02 — Bible sync: every session checks, edit-access people sync, weekly job planned (branch `followup-7-hooks`)
 Logged before editing. Priestley: Justin is the only one who edits the live bible; the team just has to use his latest. Decisions:
-an unsynced change → **warn and continue** with the current approved lines; plus a **weekly automatic check**. Found while
+an unsynced change → **warn and continue** with the current approved lines; the **weekly automatic check** is documented
+but NOT active (Priestley: "skip weekly job for now"; needs GitHub connected to the Claude account and a test that a cloud
+job can read the artifact). Found while
 building: the Artifact tool returns the full page only to people with edit access ("writer"); viewers get a summary, so
-teammates check the **version**, and only edit-access people (or the weekly job on Priestley's account) run the full sync.
+teammates check the **version**, and only edit-access people (later also the weekly job, if switched on) run the full sync.
 Originals: `_originals/2026-11-02/bible-sync/`.
 - `core/scripts/bible_sync.py`: names the skills each changed section affects (global sections = every skill); `--repo-version`
   prints the repo copy's version for the session check; `--write` refuses on `main` (a branch + PR only).

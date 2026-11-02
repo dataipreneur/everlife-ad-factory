@@ -26,7 +26,7 @@ Live page: https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (visible to the Eve
 | **Justin** | Edits the live bible. The only person who does. |
 | **Every teammate's Claude** | Checks at the start of every product session whether Justin's page is newer (automatic). |
 | **Someone with edit access** (Priestley, Justin, anyone they give edit rights to) | Runs **"Sync the bible"** when a change is found. |
-| **The weekly job** (on Priestley's account) | Checks every week, even if nobody opens a session. |
+| **The weekly job** (on Priestley's account) | *Planned, not active yet* (section 3). Would check every week, even if nobody opens a session. |
 | **Jeremy** | Approves sync PRs that change claims, disclaimers or approvals. |
 | **Everyone** | Gets the synced version on their next update (`update.sh`). All on the same version. |
 
@@ -63,11 +63,21 @@ Just ask Claude: **"sync the bible"**. Claude then:
 
 Until a line is screened, the skills treat it like ⚠: never used without an explicit OK.
 
-## 3. The weekly check (automatic)
+## 3. The weekly check (planned, NOT active yet)
 
-A scheduled job on Priestley's account reads the live page once a week and compares versions with the repo's `main`. If
-Justin changed it, it prepares the sync (step 2) on a branch and opens the PR for review. If nothing changed, it does
-nothing. It never merges by itself.
+**Status (2026-11-02): skipped for now (Priestley); kept here so it can be switched on later.** Until then, the
+every-session check (1) is what catches Justin's changes, and someone with edit access runs the sync (2).
+
+The plan: a scheduled cloud job on Priestley's account (Claude Code routine, Mondays 9:00 New York = `0 13 * * 1` UTC)
+reads the live page, compares versions with the repo's `main`, and if Justin changed it, prepares the sync (step 2) on a
+branch and opens the PR for review. If nothing changed, it does nothing. It never merges by itself.
+
+Before switching it on:
+1. Connect GitHub to the Claude account (https://claude.ai/connect-github): the cloud job needs it to clone the repo and
+   open the PR.
+2. Create the routine paused, run it once, and read its log: it must be able to read the live bible in full (the Artifact
+   tool with edit access). None of the account's cloud connectors reads artifacts, so this is unproven.
+3. If it can't read the page: use a weekly Monday reminder instead, and run the sync in a normal session.
 
 ## Commands (for whoever maintains this)
 
