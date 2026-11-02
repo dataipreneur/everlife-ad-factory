@@ -112,7 +112,7 @@ masters), frameworks (random mix; the user can name some in chat).
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
-4. **Mood:** "Surprise me: different each ad (Recommended)" / "Soft blush: pink, tan, cream" / "Clean editorial: white, pale teal" /
+4. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Soft blush: pink, tan, cream" / "Clean editorial: white, pale teal" /
    "Warm: golden hour, linen, sand". Sets palette and light; §2b still varies the type pairing per ad.
 5. **Copy density:** "Headline + 3 lines (Recommended)" / "Headline + 1 line" / "Headline only, the picture talks".
 6. **Image model:** see `core/references/image-models.md` (GPT Image 2.5 recommended).

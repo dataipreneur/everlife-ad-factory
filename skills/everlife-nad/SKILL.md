@@ -74,8 +74,8 @@ everyday, an ordinary non-famous face).
    aging" ("More Life in Your Years.", "Your 30s Called & Want You Back").
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one PROPOSED line".
 
-**Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "Warm
-and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" / "Surprise me" · **Copy density** "Headline +
+**Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "✨ Ultra
+premium, product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Warm and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" (the question shows 4; "Surprise me" via Other) · **Copy density** "Headline +
 3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Explore NAD+" / "Choose Your Form" / "Get Started Now" / "Start Your Plan" / "Recharge Your Cells" · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6

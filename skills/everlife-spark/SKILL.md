@@ -115,7 +115,7 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
 5. **Mood:** "Warm and light: golden hour, sand, cream, blush, marble (Recommended: the bible's 'warm, sun-lit' and most of our
-   winners)" / "Surprise me: different each ad" / "Dark and premium: black, rose-gold, warm brass (the bottle's own look)" / "Bold
+   winners)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Surprise me: different each ad" / "Dark and premium: black, rose-gold, warm brass (the bottle's own look)" / "Bold
    colour: deep red, burgundy, teal + gold". Sets palette and light; §2b still varies the type pairing per ad.
 6. **Copy density:** "Winner format: SPARK + headline + three icon pills (Recommended)" / "Headline + 1 line" / "Headline only, the
    picture talks". The pills are ✅ bible lines, each a different idea.

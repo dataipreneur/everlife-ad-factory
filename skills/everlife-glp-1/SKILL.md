@@ -80,8 +80,8 @@ or "by Everlife". Statics never say "by Everlife".
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ weight-loss line (I OK it, Jeremy reviews)" / "Bold:
    one PROPOSED line".
 
-**Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "Clean
-clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
+**Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "✨ Ultra premium,
+product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Clean clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
 "Headline + 1 line" · **CTA** "Start Weight Support" / "Explore GLP-1" / "Get Started Now" / "Check Your Options" / "Build Your Plan" · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6

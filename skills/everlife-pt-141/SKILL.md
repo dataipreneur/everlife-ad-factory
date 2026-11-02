@@ -104,7 +104,7 @@ say "use F2 and F8" in chat).
    OK and goes to Jeremy.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
-5. **Mood:** "Surprise me: different each ad (Recommended)" / "Clean clinical: white, marble, pale blue, cyan" / "Warm: golden hour,
+5. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Clean clinical: white, marble, pale blue, cyan" / "Warm: golden hour,
    linen, sand" / "Dark and moody: navy, charcoal, brass" / "Soft blush: pink, tan, cream". Sets palette and light; §2b still varies
    the type pairing per ad.
 6. **Copy density:** "Headline + 3 lines (Recommended)" / "Headline + 1 line" / "Headline only, the picture talks".
