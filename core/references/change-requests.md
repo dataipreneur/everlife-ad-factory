@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-02 | Priestley | "It seems trust callout is for videos too." | The 60/40 split now covers video ads: one proof per video in the footer (`core/scripts/proof_next.py`, copy.json `"proof"`); end cards have no separate count line. | `trust-callouts` |
 | 2026-11-02 | Mitansh (NAD+ session) | No incoming-call screens, no Accept / Decline buttons, ever. | New Hard NO in `style-library/STYLES.md`; S15 forum post only, S09 no AirDrop card. | PR #24 |
 | 2026-11-02 | Mitansh (PT-141 batch 11) | "Why the hell are these things blurry on the edges! Who told you to do that!" · "make sure to do it always" · "show me first!" | `reposition_916.py` banned; `mirror_fit_916.py` first for any raw that runs into the footer; show every result before any re-roll. | PR #24 |
 | 2026-11-02 | Mitansh (after PT-141 batches 8–10) | "It still feels like we're lacking a lot of variety… This batch is still feeling pretty flat and similar." Make the Drive style folder "a reference for all the product skills… in the core". | 15-style library in the core; "Surprise me" first in every skill's Mood question. | PR #24 |

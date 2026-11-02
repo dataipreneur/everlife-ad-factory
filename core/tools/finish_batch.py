@@ -49,8 +49,6 @@ PROOF_W = int(os.environ.get("EVERLIFE_PROOF_W", "1000"))   # 9:16 proof-row col
 PROOF = "trust"                # footer proof: trust = the Trustpilot / Doctor Prescribed / Ships Free row; count = "Over 100,000 happy
                                # customers" in its place; none = disclaimer only. Bible 2026-11-02 (Standards 02 · 06): trust callouts on
                                # ~60% of graphics, customer count on ~40%, one per ad (proof_plan). Set per ad with --proof.
-COUNT_LINE = "Over 100,000 happy customers"   # locked proof string (bible)
-COUNT_SIZE = 34                # count line px: reads at story size for 50+ (the trust row's art is ~40 px tall)
 MAX_SHIFT = 140                # max nudge DOWN (logo headroom)
 MAX_UP = 320                   # max nudge UP (9:16: pull the content above the safe-area footer)
 CONTENT_GAP = 20               # px of calm background wanted between the raw's last content row and the footer
@@ -87,22 +85,8 @@ def art(name, tone, scale):
     return im.resize((int(im.width * scale), int(im.height * scale)), Image.LANCZOS)
 
 
-def proof_plan(n):
-    """Which ads of an n-ad batch get the trust row and which the customer count (bible: ~60% / ~40%, one per ad).
-    Count slots are spread evenly, the first ad always gets the trust row. Returns a list like ['trust', 'count', 'trust', 'count']."""
-    k = round(0.4 * n + 1e-9) if n > 1 else 0
-    return ["count" if (i * k) // n != ((i - 1) * k) // n else "trust" for i in range(1, n + 1)]
-
-
-def count_row(tone, fw):
-    """The customer-count line, centred in an RGBA strip `fw` wide (takes the trust row's place in the footer)."""
-    f = sans(COUNT_SIZE, "SemiBold")
-    d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    tw = int(d0.textlength(COUNT_LINE, font=f))
-    row = Image.new("RGBA", (fw, COUNT_SIZE + 12), (0, 0, 0, 0))
-    col = (246, 240, 226, 255) if tone == "dark" else (24, 30, 48, 255)
-    ImageDraw.Draw(row).text(((fw - tw) // 2, 2), COUNT_LINE, font=f, fill=col)
-    return row
+proof_plan = sf.proof_plan   # shared with the video tools (standard_footer.py)
+count_row = sf.count_row
 
 
 def build_footer(W, tone, disclaimer, fw, with_disclaimer=True, proof=None):

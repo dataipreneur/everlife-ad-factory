@@ -34,7 +34,7 @@ AI disclosure
 - —Disclosure is not optional. Nothing AI-generated goes live without it.
 Proof & approval
 - —Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
-- —Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. "Over 100,000 happy customers" goes on 40%. (Bible Standards 01 + 02 · 06, 2026-11-02; replaces "every ad carries visible social proof". Image ads: one per ad, see `creative-system.md` §2.)
+- —Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. "Over 100,000 happy customers" goes on 40%. (Bible Standards 01 + 02 · 06, 2026-11-02; replaces "every ad carries visible social proof". Images and videos: one per creative, see `creative-system.md` §2.)
 - —Compliance questions route to Jeremy. Nothing goes live without his approval.
 Rules current as of 11 September 2026. Flag any rule that is later reversed or superseded.
 

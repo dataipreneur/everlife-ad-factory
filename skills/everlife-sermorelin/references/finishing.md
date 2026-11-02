@@ -66,6 +66,8 @@ the user asks for it or a job needs one of its extras (review burst, mirror fix,
 disclaimer, caption spellings) apply to premium.json too.
 
 ## 2b. Classic finishing (full_layout.py, on request only)
+**Proof split, videos too (bible 2026-11-02, Standards 02 · 06):** each video carries ONE proof in its footer, the trust row (~60%) or "Over 100,000 happy customers" (~40%); the end card has no count line of its own. Before finishing run `python -I core/scripts/proof_next.py --product sermorelin --log <tag>` and put its answer in copy.json as `"proof": "trust"` or `"proof": "count"` (animated stills: `animate_still.py --proof …`).
+
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
 {"product": "sermorelin", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",

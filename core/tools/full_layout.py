@@ -4,8 +4,9 @@
   top         Everlife logo + headline + subline over a soft fade
   lower third one word-timed caption line (from the clip's own voice, via whisper)
   bottom      Trustpilot 4.9 Excellent / Doctor Prescribed / Ships Free row on a transparent
-              background + the product's verbatim disclaimer; stays on through the end card
-  end card    from end_t: headline, real bottle + pill renders, 3 benefits, 100,000+ line, CTA
+              background (or "Over 100,000 happy customers" in its place) + the verbatim disclaimer; stays on through the end card
+  end card    from end_t: headline, real bottle + pill renders, 3 benefits, CTA (proof: the footer's trust row OR
+              customer-count line, copy.json "proof"; bible 2026-11-02 ~60/40)
 
 usage:
   venv/bin/python -I full_layout.py <project_dir> <clip.mp4> <tag> [--end 12.8] [--mirror-until 6.46]
@@ -60,6 +61,7 @@ C.setdefault("bottle", _b)
 if "pill" not in C:
     C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
+PROOF = sf.proof_of(C)   # trust row or customer-count line, one per video (bible 2026-11-02, ~60/40)
 C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
 C["_end_safe_shift"] = bool(PR.get("end_card_safe_shift"))   # product opt-in: tiktok end card clears the taller logo
 for f in (C["bottle"], C["pill"]):
@@ -144,7 +146,7 @@ def block_layout():
     """Positions of the bottom proof block inside the safe area: (row_y, disc_y, block_top)."""
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
     lines = [] if DISC_BOTTOM else sf.disclaimer_lines(bl.DISCLAIMER)
-    rh = sf.row_art(f"{P}/source/proof_row_clear.png").height
+    rh = (sf.row_art(f"{P}/source/proof_row_clear.png") if PROOF == "trust" else sf.count_row("dark")).height
     top = BLOCK_BOTTOM - (rh + 12 + sf.DISC_LH * len(lines))
     return top, top + rh + 12, top, lines, rh
 
@@ -172,7 +174,7 @@ def bottom_layer():
     img = bl.canvas()
     row_y, disc_y, top, lines, rh = block_layout()
     bl.gradient_band(img, top - 380, H, 0, 225)
-    row = sf.row_art(f"{P}/source/proof_row_clear.png")   # the standard trust-row width on every creative
+    row = sf.row_art(f"{P}/source/proof_row_clear.png") if PROOF == "trust" else sf.count_row("dark")   # one proof per video
     rx = (W - row.width) // 2
     img.alpha_composite(row, (rx, row_y))
     note((rx, row_y, rx + row.width, row_y + rh), "proof row")
@@ -268,7 +270,7 @@ def ingredient_end_layers():
     cy0 = ly + 56
     ch = 150
     cust_y = cy0 + ch + 18
-    bl.centered(d, cust_y, "Over 100,000 happy customers", bl.PROOF_S, bl.CREAM)
+    # no customer-count line here: the footer carries this video's one proof (trust row or count line; bible 2026-11-02)
     cw2 = 560
     cta_y = cust_y + 42
     d.rounded_rectangle([(W - cw2) / 2, cta_y, (W + cw2) / 2, cta_y + 72], 36, fill=bl.GOLD)

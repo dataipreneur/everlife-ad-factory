@@ -43,9 +43,11 @@ Never trust the model with a logo, a label, a rating badge, a disclaimer or a pr
   exactly 2 lines, on every creative, image or video ending (`core/tools/standard_footer.py`; every finisher uses it).
 - **Proof split (bible 2026-11-02, Standards 02 · 06; graphics looked cluttered):** trust callouts (the Trustpilot / Doctor
   Prescribed / Ships Free row) go on ~60% of graphics, "Over 100,000 happy customers" on ~40%. Each image ad gets exactly ONE of
-  the two, so none is left without proof. Run `finish_batch.py --proof-plan N` for an N-ad batch, put its answer in the batch
+  the two, so none is left without proof. Images: run `finish_batch.py --proof-plan N` for an N-ad batch, put its answer in the batch
   table's **Proof** column, and pass it on every finish: `--proof trust` (the row) or `--proof count` (the customer-count line in
-  the row's place). An ad's 4:5 and 9:16 use the same value. Logo and verbatim disclaimer stay on every ad. Videos: unchanged.
+  the row's place). An ad's 4:5 and 9:16 use the same value. Videos too (Priestley 2026-11-02): `core/scripts/proof_next.py
+  --product <id> --log <tag>` → copy.json `"proof"`; the footer carries the one proof through the end card, which has no count
+  line of its own. Logo and verbatim disclaimer stay on every creative.
 
 ## 3. The hero is deliberate and sized
 The form's hero (`product.json → hero.element`: the capsule, the tablet, the vial, the spray) fills **≥ 35% of the canvas width**,

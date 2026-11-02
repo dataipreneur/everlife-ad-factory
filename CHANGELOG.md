@@ -15,7 +15,10 @@ Logged before editing. Bible sync to version 1793650290-a4dd (Justin, Standards 
 doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. 'Over 100,000 happy customers' goes on 40%."
 It replaces "Every ad carries visible social proof". Reason given: graphics looked cluttered. Priestley asked for the fix on its
 own branch. Originals: `_originals/2026-11-02/trust-callouts/`.
-- **Image ads only** ("graphics"); video end cards and the video proof bar are unchanged (question for Justin).
+- **Images and videos** (Priestley: "it's for videos too"): `full_layout.py`, `premium_finish.py`, `styles.py` and
+  `animate_still.py` take the proof from copy.json `"proof"` (or `--proof`); the end cards lost their own count line, the
+  footer carries the one proof. `core/scripts/proof_next.py` keeps each product's video split near 60/40
+  (ledger `~/Everlife-Creative/proof-ledger.jsonl`). 11 skills' `finishing.md` say so (not Restora-Z).
 - **Split per batch, complementary:** every ad carries exactly one proof element, the trust row (~60%) or the customer-count
   line (~40%), so no ad is left with none (keeps the gates' social-proof check true; flagged for Justin to confirm).
 - **`finish_batch.py --proof trust|count|none`** (default `trust`, the old footer, with a reminder), and
