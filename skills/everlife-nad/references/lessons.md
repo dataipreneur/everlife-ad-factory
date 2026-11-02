@@ -98,3 +98,12 @@ apply; the hardcore-gym scenes do NOT: NAD+ scenes come from direction.md)
 - Page lines that clash with the global rules are ⚠ for Jeremy ("boost", "reduces fatigue", "DNA repair", celebrity/CEO authority).
 - Spark's test batch (2026-10-30): the bottle dominated when the bible says the tablet is the hero → the prompt asks for the tablet
   larger than the bottle; check it in QA. At 4:5 `finish_batch.py` does not refuse product under the footer: look at every final.
+
+
+## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
+- `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
+
+## Mitansh, 2026-11-02: call screens banned (NAD+ batch 1, ad #1)
+- "The calling accept decline buttons are never allowed!" → NO incoming-call screen, no "<Product> is calling…", no Accept / Decline
+  (or Answer / Decline) buttons in any ad, any style, any product (shared rule: `core/references/style-library/STYLES.md` hard NO).
+  S15 = forum post only; S09 = Notes / Reminder only (no AirDrop card). QA fails any raw showing one.

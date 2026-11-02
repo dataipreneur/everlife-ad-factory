@@ -1,5 +1,8 @@
 # Restora-Z IMAGE ads: Batch Mode (the default for every image request)
 
+> **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
+> **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
+
 Creative lead, 2026-10-27: "I want speed! Use Creatify and batches, at least 5 images of different types at once,
 random by default, mobile friendly, the new creative font, easy to read for older people."
 
@@ -85,6 +88,7 @@ that file.
 1. **One AskUserQuestion, 4 questions, each with a ✨ Recommended first option** (one Enter-press per question gets a great batch):
    - **How many?** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
    - **Placement:** "4:5 Feed (Recommended)" / "9:16 Stories/Reels" / "4:5 + 9:16" / "1:1".
+   > **🎨 STYLES = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; replaces the Frameworks options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker). The F-framework table stays as a fallback. Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
    - **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" (then a multiSelect follow-up with the table).
    - **Look:** "Standard (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot: `core/references/ultra-premium.md`;
      overrides people, the tablet stays the hero). (4 questions now.)
