@@ -69,9 +69,9 @@ everyday, an ordinary non-famous face).
 1. **Form:** "The choice: tablet and injection together (Recommended: the bible says lead with the choice)" / "Sublingual tablet" /
    "Injection".
 2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left
-     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own
-     single setup question; needs the product registered in Marketing Studio: preflight prints the command). This skill's casting,
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
+     over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
+     single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply; the presenter is an adult 30–65+, clothed, everyday; the chosen form (vial or sublingual tablet) is the hero in the B-roll; VO names "NAD+ by Everlife".
 3. **Angle:** "Mix (Recommended)" / "Clear head" ("Less Fog. More Focus.", "Clear Head. Full Day.", "Brain Fog, Who?") / "Energy that
    lasts" ("Supports All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy

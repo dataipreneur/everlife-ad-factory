@@ -2,6 +2,21 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — AI Avatar videos run 100% on Creatify, 0 Higgsfield (branch `all-creatify-avatar`, Mitansh)
+Mitansh: "please add this a new rule for all the skills! That AI Avatar videos, always goes to creatify for everything!!! No
+higgsfield needed at all!" Proven the same day on Wolverine "Two Peptides. One Mission." (10 s: 17.45 Creatify, 0 Higgsfield).
+Originals: `_originals/2026-11-02/all-creatify-avatar/`.
+- `core/references/ai-avatar-video.md`: ⛔ ALL-CREATIFY banner on top; presenter = Creatify Model Playground
+  `bytedance/seedance-2.5/image-to-video` (480p, generate_audio, exact quoted lines + pronunciation; Step 4 rewritten, no
+  `higgsfield` commands); music step added (`composer_generate_music`, Lyria 3 Pro, 0.8/take, hit at 0.0 s, ducked under the VO
+  with ffmpeg `sidechaincompress`); costs restated in Creatify (10 s ≈ 17, 15 s ≈ 22).
+- All 12 product skills' SKILL.md AI Avatar line + `everlife-new-product`: "ALL on Creatify, 0 Higgsfield"; the 52.5 Higgsfield
+  cost and the Marketing Studio registration step removed from that option.
+- `core/tools/premium_finish.py` (Quiet Luxe): the sub-label is no longer title-cased when it contains digits
+  ("BPC-157 / TB-500" had rendered as "Bpc-157 / Tb-500").
+- Lessons: Wolverine (Seedance-on-Creatify presenter, `bgvideo --dx`, caps-auto check, strong men's music picked: hip-hop / hard-rock
+  walk-out) and Spartan Stack batch 1 ("no theyre great": styles, `mirror_fit_916 --strip 6` / `--align right`, benefit pool spent).
+
 ## 2026-11-02 — Bible sync to 1793655261-6ce8: product always in focus, hook said AND shown (branch `bible-sync-6ce8`)
 Logged before editing. Justin's change to Standards 02 (creative direction), no product page or disclaimer changed:
 "The product is always in focus, in every static and video asset"; video: "The hook or key benefit is both said (voiceover or

@@ -169,16 +169,17 @@ def product_group(img, cx, y, bh, pill_w, glow):
 def bottom_layers(scrim_rgb=(6, 10, 14)):
     scr = canvas(); vgrad(scr, 960, 1300, 0, 175, scrim_rgb); vgrad(scr, 1300, 1920, 175, 230, scrim_rgb)
     scr.save(f"{L}/scrim.png")
-    bot = canvas()   # one proof per video: the standard trust row or the customer-count line (bible 2026-11-02, ~60/40)
-    pr = sf.row_art(f"{A}/proof_row_clear.png") if PROOF == "trust" else sf.count_row("dark")
-    bot.alpha_composite(pr, ((W - pr.width) // 2, PROOF_Y + (sf.row_art(f"{A}/proof_row_clear.png").height - pr.height) // 2))   # count line centred in the row's slot
+    bot = canvas()   # one proof per video: trust row, badge + count, or none (split 2026-11-02, 42/28/30)
+    pr = sf.proof_row(PROOF, f"{A}/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    if pr:
+        bot.alpha_composite(pr, ((W - pr.width) // 2, PROOF_Y + (sf.row_art(f"{A}/proof_row_clear.png").height - pr.height) // 2))   # count row centred in the row's slot
     d = ImageDraw.Draw(bot); fd = sf.disc_font()                     # standard disclaimer: 18 px, exactly 2 lines
     lines = sf.disclaimer_lines(DISCLAIMER)
     base = 1884 if DISC_BOTTOM else sz.SAFE[3] - 2
     step = sf.DISC_LH
     for i, ln in enumerate(lines):
         d.text(((W - d.textlength(ln, font=fd)) / 2, base - step * (len(lines) - i)), ln, font=fd, fill=(255, 255, 255, 190))
-    if not DISC_BOTTOM and base - step * len(lines) < PROOF_Y + pr.height:
+    if not DISC_BOTTOM and base - step * len(lines) < PROOF_Y + (pr.height if pr else 0):
         sys.exit("❌ disclaimer does not fit between the proof row and y 1385")
     bot.save(f"{L}/bottom.png")
 
@@ -324,7 +325,7 @@ elif a.style == "quietluxe":
     y = logo(top, W / 2, 150, 190)
     f = fit(d, C["head"], HN, HN_LIGHT, 60, SW, 0.16, floor=52); text(d, W / 2, y + 22, C["head"], f, SOFT, 0.16, "c")
     ly = y + 22 + f.size + 22; d.rectangle([W / 2 - 34, ly, W / 2 + 34, ly + 1], fill=SAND)
-    if C.get("sub"): text(d, W / 2, ly + 14, C["sub"].title(), F(HN, HN_MED, 28), SAND_HI, 0.10, "c")
+    if C.get("sub"): text(d, W / 2, ly + 14, (C["sub"] if any(ch.isdigit() for ch in C["sub"]) else C["sub"].title()), F(HN, HN_MED, 28), SAND_HI, 0.10, "c")
     save_checked(TG, top, "top")
     captions(lambda d, t: centred_caption(d, t, HN, HN_REG, 44, SOFT, 0.01))
     e = canvas(); EW = canvas(); vgrad(EW, 0, H, 175, 215, (14, 14, 16)); d = ImageDraw.Draw(e)

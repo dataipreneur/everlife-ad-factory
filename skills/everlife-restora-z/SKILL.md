@@ -71,7 +71,7 @@ If the user wants images (or picks "Image ads" in step 1), follow **`references/
 
 ## Step 1 — Setup (keep it simple; every question has a ✨ Recommended first option)
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply.
 - **Images** → go straight to `references/image-batch.md` (its own setup question; NEVER show video styles to an image run).
 - **Video** → ONE AskUserQuestion with 3 questions:
   1. **Placement:** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1".
