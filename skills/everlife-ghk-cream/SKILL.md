@@ -111,9 +111,9 @@ daytime, sun-lit), placement (images at 4:5; 9:16 made from the approved masters
 
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed
-     lower-left over the animated Boreal-H3 background built from the real render; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits;
-     its own single setup question; needs the product registered in Marketing Studio, which is still to do). This skill's casting,
+   - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed
+     lower-left over the animated Boreal-H3 background built from the real render; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield;
+     its own single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply: a woman 30–55, shoulder-up, fresh and natural (never glam or "huge"), the
      **pump bottle is the hero** in the B-roll (no tablet exists), pinks/tans/beige set with no orange or green, no before/after,
      no skin-condition close-ups, the name "GHK Peptide Cream" (never "copper", never "-Cu" outside the H2 name).
@@ -127,6 +127,7 @@ daytime, sun-lit), placement (images at 4:5; 9:16 made from the approved masters
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
+> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 5. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" /
    "Soft blush: pink, rose, cream" / "Warm sand: tan, beige, travertine, golden morning light". Sets palette and light; §2b still
    varies the type pairing per ad. Every mood stays pinks / tans / beige: no oranges or greens.

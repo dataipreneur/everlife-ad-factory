@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — GHK-Cu Cream skill brought up to date with main before merging (branch `ghk-cream-skill`)
+Merged main (#23–#28) and gave the skill what those PRs gave the other skills (from its Lovara template): the AI Avatar
+"ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
+the Winners Board read-first and rate steps. Smoke 53/53.
+
 ## 2026-11-02 — Bible sync to 1793655503-c3e7: captions on every video, kept out of the safe zones (branch `bible-sync-c3e7`)
 Logged before editing. Justin's change (Standards 02 + 04), no product page or disclaimer changed: "Every video carries on-screen
 captions for all spoken audio. Captions stay clear of Meta's safe zones"; the Safe zones list now names captions too.
