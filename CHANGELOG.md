@@ -2,6 +2,46 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Winners Board v3: bigger previews, click to enlarge (branch `winners-board`)
+Logged before editing. Priestley approved: reviewers judge the ad on the board itself, so previews must be big enough to read
+the headline, proof row and disclaimer. Originals: `_originals/2026-11-02/winners-board-previews/` (incl. the v2 page source).
+- **Page:** larger thumbnails (160 px; 120 px on phones); tap one to open the ad full size in a viewer with its rating, reviews
+  and a "Review" button. The page source now lives in the repo: `core/winners-board/board-page.html` (republish it to the same
+  board URL; never as a new artifact).
+- **`make_preview.py`:** default width 480 → 720 px, target 40 → 80 KB. Board room drops from ~1,800 to ~900 previews; the
+  housekeeping rule in WINNERS-BOARD.md §6 is unchanged (export, then drop previews of retired ads older than 60 days).
+
+## 2026-11-02 — Winners Board v2: reviewer features (branch `winners-board`)
+Logged before editing. Priestley approved reviewer features: 7 operators write entries through their Claude; 4 reviewers use
+the page in a browser as Contributors. Same board URL, republished in place (stored data kept). Originals:
+`_originals/2026-11-02/winners-board-reviews/` (incl. the v1 page source).
+- **Page:** "Review" on every card (Winner/Good/Weak/Kill + feedback, one per reviewer, editable), reviews listed under the ad;
+  a "To review" view (no review yet / not reviewed by me); per-product feedback notes; ad preview thumbnails; each card says what
+  decided its rating ("Meta" / "Reviewers 3–1" / "Operator"). Products added: Epithalon, GHK cream, Titan-Rx.
+- **Combining rule:** newest Meta verdict → else reviewers' majority (newest review per reviewer; a tie goes to the lower rating)
+  → else the operator's rating.
+- **Previews:** a ~480 px JPEG as a data URL in a small sub-document under the entry (`…/<entry id>/preview/img`), written by
+  the operator's Claude from a JSON file (`file_path`), so base64 never passes through the conversation.
+- **`core/winners-board/WINNERS-BOARD.md`:** schema (review, product_note, preview), §4 also reads reviews + notes and summarises
+  recurring points as guidance only, §5 attaches the preview. Per-skill lines unchanged (they point at the doc).
+
+## 2026-11-02 — Winners Board: one shared rating store for hooks + image ads (branch `winners-board`)
+Logged before editing. Priestley's decisions: one shared board for hooks and images; scale **Winner / Good / Weak / Kill**
+(AskUserQuestion shows max 4 options; one question per ad); Winner → one later slot mutates its recipe (exactly one variable);
+Good → quality bar; Weak/Kill → retired for that product; Meta results override opinion; teammates get Contributor access.
+Originals: `_originals/2026-11-02/winners-board/`.
+- **Board** (claude.ai artifact, private, owner Priestley): https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M. `db` rules: everyone
+  with access reads; each rater writes only `data/users/<own id>` and `raters/<own id>`; Editors/Owner edit or delete anyone's.
+  Empty at launch (no seeded entries).
+- **New** `core/winners-board/WINNERS-BOARD.md`: URL, access, schema, read protocol (last 15, winner mutation, retired skip,
+  median bar), write protocol, rating question, image + hook recipe fields, fallback when the board is unreachable.
+- **New** `core/winners-board/HOOK-ENGINE-SWITCH.md`: proposal for Mitansh to move the Hook Ladder ledger to the board.
+  `core/hook-engine/` is NOT edited.
+- **Image loop:** every product's `references/image-batch.md` (except Restora-Z) reads the board before the batch table and rates
+  the batch after it (Sermorelin + Sermorelin GHK had no "After the batch" section: a short §4 is added at the end).
+  `skills/everlife-new-product/references/adapt-checklist.md` §3: new skills inherit both steps.
+- **Follow-up (needs Priestley's OK):** the same two lines for `skills/everlife-restora-z/references/image-batch.md`.
+
 ## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
 Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
 `version [0-9-]*` stops at letters (earlier versions such as `…-2416` happened to be all digits). The every-session check would

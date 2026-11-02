@@ -63,6 +63,10 @@ typeface**, an **own palette**, rotating **product-name treatment** and **headli
 **≥ 35% of the canvas width**, real and label-wrapped, with `hero.never` written into the prompt; the CTA and every line as exact strings
 (then QA'd); "NO logo or wordmark anywhere" (the finisher adds the real one).
 
+**Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
+entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
+table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.
+
 ## 2. Flow (setup lives in SKILL.md step 1; here: write, critique, approve, generate)
 1. Inputs from SKILL.md step 1: hook angle, boldness, mood, copy density, image model, how many.
 2. Read the bible + copy log (+ winners when they exist). Per slot: pick a framework, **look at 1 reference ad** in priority order
@@ -135,3 +139,6 @@ Never describe the capsule's shape, colour or markings in words beyond "use the 
 
 ## 4. After the batch
 - Contact sheet first, then let the user pick winners. Winners → 9:16 only after approval (compose916.py from the 4:5).
+- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+  question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
+  board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.

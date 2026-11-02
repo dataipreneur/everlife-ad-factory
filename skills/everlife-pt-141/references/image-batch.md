@@ -75,6 +75,10 @@ F10, F11, F12, F13). Weight towards F2, F13, F11, F12, F8. With "people: mix", a
 F2/F8/F12.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
+**Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
+entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
+table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.
+
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
 timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
 a **named typeface**, an **own palette**, a rotating **product-name treatment** and **headline placement**; the form's hero
@@ -192,3 +196,6 @@ QA that the label matches the form the session chose. Never describe the tablet'
 
 ## 4. After the batch
 - Contact sheet first, then let the user pick winners. Winners → the other ratio only after approval.
+- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+  question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
+  board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.

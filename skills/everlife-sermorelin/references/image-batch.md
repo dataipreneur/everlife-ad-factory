@@ -56,6 +56,9 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    `core/references/ultra-premium.md`; overrides winners-first and people, tablet stays the hero).
 2. Read the bible + copy log + `winners/winners.md` (one cat). **Winners first, then frameworks** (hand-off from the GHK
    skill, 2026-10-29; rule `core/references/REFERENCE-PRIORITY.md`):
+   - **Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** this product's image entries on the shared
+     board; one slot mutates a board winner (exactly one variable), retired recipes are skipped, the table opens with the
+     board line. Board unreachable → "no history yet", say so, carry on.
    - **At least 3 of every 5 slots (6 of 10, 9 of 15) start from a winner for this audience**: pick the winner first,
      take its framework, look at its card + preview (⭐ all-time: tablet in hand M2/M5/M6/F2, name/tablet hero F1/F4;
      weekly: M5 name lockup, M3 features & benefits + offer, M2 visual metaphor). A different winner per slot; if the
@@ -201,3 +204,8 @@ vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERM
 - **1000 mcg** (checked against `assets/sermorelin1000_bottle.png`, 2026-10-28): '1000 MCG'.
 - **500 mcg** (checked against `assets/sermorelin500_bottle.png`, 2026-10-29): '500 MCG'.
 QA that the label shows the session's strength. Never describe the tablet in words.
+
+## 4. After the batch
+- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+  question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
+  board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.
