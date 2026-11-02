@@ -1,0 +1,6 @@
+{
+ "project_id": "d8193808-a5d2-47e7-9c23-4458465f6faa",
+ "bottle": "assets/18ea1fb8_spark_bottle_ref.jpg",
+ "tablet": "assets/3183cce0_spark_tablet.png",
+ "note": "Created 2026-10-30 on priestley@everlifemd.com's Creatify workspace (9:16, 1080p) with the Spark bottle (flattened on white) and the tablet. Reuse it for every image. It belongs to the account that created it; if composer_project_get fails from another account, create a new one the same way (composer_project_create, upload_file + PUT, composer_import_asset) and rewrite this file. Never import another product's asset into this project."
+}

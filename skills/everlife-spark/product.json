@@ -1,0 +1,37 @@
+{
+ "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Spark ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-pt-141.",
+ "id": "spark",
+ "name": "Spark",
+ "renders": {
+  "bottle": "spark_bottle.png",
+  "pill": "spark_tablet.png"
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "keep_case": [
+  "Spark by Everlife",
+  "Spark",
+  "PT-141",
+  "Apomorphine",
+  "Tadalafil",
+  "3-in-1"
+ ],
+ "review_highlight": "Spark",
+ "reviews": "references/reviews.json",
+ "kicker_default": "INTIMATE WELLNESS",
+ "split_titles": [
+  "THE PLAN",
+  "THE MOMENT"
+ ],
+ "notify_app": "Spark",
+ "notify_icon": "dot",
+ "compare_allowed": false,
+ "hero": {
+  "element": "the Spark tablet (exactly one, as the render; the black + rose-gold bottle is secondary, large and legible when shown)",
+  "min_width": 0.35,
+  "label": "wraps the curved bottle in perspective",
+  "never": "beds or bedroom scenes, lingerie, body shots, lips macro, couples in bed, needles, syringes or vials, a benefit tied to one ingredient, another product's bottle or pill",
+  "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
+ },
+ "disclaimer_at": "bottom",
+ "end_card_safe_shift": true
+}

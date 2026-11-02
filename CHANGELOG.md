@@ -334,6 +334,50 @@ one product skill". Bible checked first: `bible_sync.py` against the live bible 
   Creatify project + imported bottle/capsule) and `references/lessons.md` (batch-1 lessons appended). All 4 pass QA after one
   reposition fix on L4 (benefit lines under the footer). Gap flagged: `finish_batch` checks text under the footer only at 9:16.
 
+## 2026-11-02 — Spark: stale "no ads yet" note fixed (branch `spark-skill`)
+Logged before editing. Priestley: "Yes, do all one by one" (template-leftover pass). Spark's PT-141 / spray mentions are already
+labelled as template history and stay. `lessons.md`: "No Spark ads have been made" → batches 1–3 (2026-10-30) exist.
+Originals: `_originals/2026-11-02/spark-stale/`. Not changed (open decision for Priestley): the "3D-animated couple story" style
+in SKILL.md vs the team's rejection of cartoon characters.
+
+## 2026-10-30 — Spark: PROVISIONAL CTA "Get Started Now" (branch `spark-skill`)
+Logged before editing. Bible-updates hand-off §6 (other session) proposed it; Priestley approved. All four bible CTAs are still
+⏳ Pending approval; "Get Started Now" is already an approved (✅) CTA on the MOTS-c, GLP-1 and NAD+ pages, so it becomes Spark's
+provisional default. PROVISIONAL — Jeremy to confirm; every asset's SESSION.md says so.
+- `SKILL.md` (rule 3, CTA gate, round-1 CTA question), `references/product-bible.md` (pre-screen), `references/image-batch.md`.
+Originals in `_originals/2026-10-30/spark-provisional-cta/`.
+
+## 2026-10-30 — Spark: Emily's winners + tablet-hero / warm-default update (branch `spark-skill`)
+Logged before editing. Emily shared the Spark winners (Drive "Spark - Oct-30-2026": 7 statics in 1:1 + 9:16, 3 videos in 4:5 +
+9:16); full files in `~/Everlife-Creative/reference-ads/Spark-winners-2026-10-30/` (not in git). Priestley approved the update after
+the test batch showed the bottle dominating (bible Standards 03: "the pill or tablet is the hero, not the bottle") and asked what the
+bible says on colour (no Spark direction; global "warm, sun-lit"). Originals in `_originals/2026-10-30/skills/everlife-spark/`.
+- `references/winners/`: winners.md rewritten with a card per winner (what to take, what never to copy) + small previews.
+- `references/image-batch.md`, `SKILL.md`: tablet hero (larger than the bottle, in front), the winners' "big SPARK + huge tablet +
+  three icon pills" framework, warm-and-light default mood (dark is an option), "spin a winner" points at the cards.
+- `references/video-prompting.md`, `references/lessons.md`, `references/personas.md`: 3D-animated couple videos are an option for
+  Spark (2 of its 3 winning videos), replacing the inherited PT-141 "no cartoons" lesson for this product only.
+
+## 2026-10-30 — Spark skill setup (branch `spark-skill`, from `main` 4ee62c6)
+Logged before editing. New product skill `skills/everlife-spark/` (PT-141 + Apomorphine + Tadalafil, sublingual tablet,
+men and women 30–65+), scaffolded with the new-product builder (`new-product-skill` branch, run from a scratch copy) from the
+`everlife-pt-141` template. Bible checked first: no changes since the 30 Oct sync; Spark disclaimer ✅. Renders from the asset
+library (`TABLETS-CAPSULES/SPARK/`), looked at both. Gaps left PENDING: CTAs (all 4 pending approval), ED headlines (pending,
+Jeremy). Product Hard NO: never tie a benefit to one ingredient. Setup only: no credits, no push, no PR until every skill is tested.
+- Adapted from the PT-141 template (originals in `_originals/2026-10-30/skills/everlife-spark/`): one form (sublingual tablet), men +
+  women, combo-only ingredient rule, CTA gate (all 4 ⏳; the user OKs one per session), "SPARK" big / never "by Everlife" on images,
+  4:5 default + Lovara's layout block, product-only by default, no palette limit (≥1 dark ad per batch), offer Save up to 51%.
+- `references/product-bible.md`: product facts + a filled compliance pre-screen (ED headlines ⏳ + ⚠ Jeremy). `references/winners/
+  winners.md` from the Meta export (Base04/08/14 lead, one video; creative files not on hand). `assets/RENDERS.md` bottle wording;
+  `assets/creatify.json` stub (project made on the first run).
+- `core/tests/regression.py` (original in `_originals/2026-10-30/core/tests/`): 4 Spark checks (static disclaimer, wrong disclaimer
+  refused, end cards default + tiktok, looked at both). Smoke 22/22. `bible_sync --check`: Spark ✅. Preflight 8/10 (Marketing Studio
+  registration optional for UGC; venv flag only because the run pointed at the repo tools).
+- Test batch (14 Creatify credits, approved by Priestley; CTA "Explore Spark" OK'd for the test, ⏳ for Jeremy): `assets/creatify.json`
+  (project), `references/lessons.md` (native 9:16 failed 4/4 on safe zones; 4:5 → compose916 → `--fit trusted` passed 4/4; 2/4
+  4:5 raws needed a fix for product under the footer). Results in `~/Everlife-Creative/output/Spark/2026-10-30_batch-2-4x5/SESSION.md`.
+  The finisher gap it exposed is fixed on its own branch (`safezone-sides`).
+
 ## 2026-10-30 — Creative bible: the live artifact is the source; repo copy synced from it (branch bible-live-sync)
 Logged before editing. The bible now lives as a shared claude.ai artifact (visible to the whole Everlife org):
 https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (replaces the Claude Design project, which closes 14 Dec 2026).

@@ -365,6 +365,30 @@ def smoke(core, out):
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"Lovara video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # Spark (sublingual tablet): statics take its disclaimer; video end cards render the bottle + tablet
+    d = os.path.join(out, "sk_static"); os.makedirs(d)
+    expect("finish_batch takes the Spark disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "spark"], True)
+    expect("Spark refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "spark",
+            "--disclaimer", RZ_DISC], False, "differs")
+    sk = {"product": "spark", "head": ["SPARK BY EVERLIFE"], "head_always": True,
+          "end_head": ["SPONTANEITY,", "BACK ON"],
+          "benefits": ["On-Demand Desire Support", "Non-Hormonal Desire Support", "Supports Spontaneous Intimacy"],
+          "ingredients_label": "3-IN-1: PT-141 + APOMORPHINE + TADALAFIL",
+          "ingredients": [["ON-DEMAND", "On-Demand Desire Support"], ["NON-HORMONAL", "Non-Hormonal Desire Support"],
+                          ["SPONTANEOUS", "Supports Spontaneous Intimacy"]],
+          "cta": "EXPLORE SPARK", "vocab": "Spark."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"sk_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(sk, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "SPONTANEITY, BACK ON", [[0.4, 1.4], [1.4, 1.8], [1.8, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"Spark video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")
