@@ -5,7 +5,7 @@ Why it works: recovery is a conversation people already have at the rack and on 
 
 ## 1A — Creator to camera (post-session)
 - **Looks like:** a man 25–55, still breathing from a session, phone propped on a bench, talking plainly. The product
-  sits in frame; never used. One ✅ line, e.g. "Two-Peptide Recovery Stack."
+  sits in frame; never used. One ✅ line, e.g. "2-Peptide Whole-Body Recovery."
 - **Lines:** ≤ 35 words, one angle, one quick-hit line, pronoun-free, no "I" (the creator talks about recovery, not about themselves).
 
 ## 1B — Training-partner POV

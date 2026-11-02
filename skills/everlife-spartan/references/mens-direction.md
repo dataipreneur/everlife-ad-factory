@@ -37,7 +37,7 @@ man, the support is in the product.
    sans. Three-word power stacks work (e.g. "TRAIN. RECOVER. REPEAT.": Tier B, needs an OK; the Spartan page has no ✅ headline yet). Red, chalk
    white or mustard-gold accent. Three benefit pills with simple icons when the brief wants bullets; one line when it wants less text.
 6. **Copy register:** plain, blunt, earned. No "bro" slang, no shouting about results. Hooks: only the Spartan page's lines in
-   `product-bible.md` (⏳ headlines with an OK; ✅ PROVISIONAL benefits). The BPC-157 Men list belongs to another product.
+   `product-bible.md` (⏳ headlines with an OK; ✅ benefits). The BPC-157 Men list belongs to another product.
 
 ## Scene bank (pick one per ad; never repeat in a batch)
 - Loaded barbell on the floor, plates toward camera, the vial standing on the inner plate; chalk dust in the light.

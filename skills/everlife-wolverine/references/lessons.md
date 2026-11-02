@@ -42,8 +42,8 @@ Wolverine Stack risks to watch (carried from BPC-157, an ingredient and the temp
 - **Any "peptide vial" prompt invites a syringe, needle, pen or droplets.** Every prompt says "the vial is a still object; no syringe,
   needle, pen, dropper, droplets or injecting anywhere" and QA checks every frame. One syringe = reject, no exceptions (global Hard NO).
 - **"Recovery" copy drifts to cure talk** ("heals", "repairs", "reduces inflammation", "pain"): only the lines in `product-bible.md`
-  (✅ PROVISIONAL benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). "Supports Connective Tissue Repair" is the one repair
-  line, exact wording only.
+  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). there is no ✅ repair line ("Supports Tissue Repair" is ⚠ Jeremy;
+  the page says "No direct claims"). "Supports Healthy Inflammatory Balance" is held (KPV's benefit; asked Justin).
 - **Men must look HARDCORE (Mitansh, 2026-10-29: "extremely masculine, gym, barbells, bodybuilders with tattoos")**: the Sermorelin
   "not bodybuilders" rule does not apply here. Use `mens-direction.md`; the only body rules left are no before/after, no body comparison,
   no body-composition words in copy.
@@ -95,6 +95,6 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - A plain, unlabelled prop (grey shaker) as "the old way" renders clean; keep props unbranded.
 
 ## Wolverine Stack (from 2026-10-30)
-- The vial label and the bible disagree (pages swapped; cause: the NEW Product Benefits Doc). PROVISIONAL swap applied 2026-10-30 (Jeremy to confirm).
+- Resolved 2026-11-02: Justin un-swapped the bible's Spartan / Wolverine pages; the vial labels were right all along.
 - Test 1 (2026-10-30, 4 ads, shared lines only): 2 of 4 had the CTA under or at the footer at 4:5; the finisher does not catch it at 4:5: look at every final.
 - Lovara batch-1 (2026-10-30): at 4:5 `finish_batch.py` does not refuse text under the footer: look at every final.

@@ -37,21 +37,21 @@ Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (
 in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
-**⚠ PROVISIONAL (2026-10-30, Priestley; Jeremy to confirm):** the vial labels are correct and the creative bible has the Spartan/Wolverine pages swapped (cause: the NEW Product Benefits Doc has the two labels flipped). Until the bible owner fixes the source, this skill uses the **swapped** benefit lines (`references/product-bible.md` pre-screen), provisional headlines and the provisional offer Save up to 39%. Ads are drafts: every SESSION.md says "provisional copy: bible swap pending, Jeremy to confirm". When the live bible is fixed: sync, re-copy the extract, re-screen, drop this note.
+**✅ Bible fixed (2026-11-02):** Justin un-swapped the Spartan / Wolverine pages; the bible now matches the vial label (Wolverine Stack = BPC-157 / TB-500). This skill uses its own page (`references/product-bible.md`): benefits and CTAs ✅, headlines and hook options ⏳ (only with the user's OK, flagged for Jeremy), offer "Save up to 39%". **Every design includes "Wolverine Stack" and "BPC-157 / TB-500"**; talent: fit, rugged men 30–45 (bible).
 
 **Hard stops:**
 - Claims: only the ✅ quick-hit benefits in `product-bible.md` (pre-screen). ❌/⛔ lines never; ⏳ headlines and ⚠ lines only with the
   user's explicit OK + flagged for Jeremy.
 - Wolverine Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation", "torn", "cure", "treat", "boost",
-  "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Connective Tissue Repair"
-  only exactly as the bible writes it (where the pre-screen allows it).
+  "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Tissue Repair"
+  only with Jeremy's OK (⚠), exactly as the bible writes it; the page also says "No direct claims".
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. The vial stands or lies on a surface; a hand may hold it.
 - One product image: the Rx vial. Copy never states a strength, dose, mL or count; ingredients only together as on the label (BPC-157 + TB-500 (two peptides)).
 - People: active men 25–55, rugged, strong, unmistakably masculine (`mens-direction.md`); fighting imagery fine **without blood or gore,
   no animal death**; no before/after, no body comparison, no body-composition words in copy.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
-- **Offer:** "Save up to 39%" PROVISIONAL: seen on the landing page only (exception approved by Priestley 2026-10-30); must be added to the bible; Jeremy to confirm.
-- "Wolverine Stack" big in every ad (brand name, bible direction); never "by Everlife" on images.
+- **Offer:** "Save up to 39%" (on the bible's Wolverine page since 2026-11-02): exact string, percent only, never a $ price.
+- "Wolverine Stack" big in every ad and "BPC-157 / TB-500" on every design (bible, 2026-11-02); never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
 **Headline tiers:**

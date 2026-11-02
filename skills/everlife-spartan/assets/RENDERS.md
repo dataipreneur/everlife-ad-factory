@@ -7,5 +7,4 @@ Looked at 2026-10-30 (cut-out checked on green: clean edges, clear glass kept).
 
 **Vial wording for prompts:** a squat clear glass vial with a mustard-gold flip-off cap over a brushed-silver crimp; a mustard-gold label with the white EVERLIFE wordmark, 'SPARTAN' large in charcoal, 'BPC-157 / KPV / TB-500', '3MG/3MG/3MG/ML', 'RX ONLY', '5ML'.
 
-**✅ Label confirmed correct (2026-10-30); ⛔ the bible pages are swapped (waiting for the fix).** Was: the label's ingredients (BPC-157 / KPV / TB-500 (three peptides, 3MG/3MG/3MG/ML)) disagree with the bible page (BPC-157 / TB-500 (the bible heading; the page says "Dual-peptide" and "Two-Peptide Recovery Stack")).
-Generation is blocked until it is settled (SKILL.md). If the render is wrong, replace this file and re-check it on green.
+**✅ Label confirmed correct (2026-10-30), and the bible matches it since 2026-11-02** (Justin un-swapped the Spartan / Wolverine pages). If the render is ever replaced, re-check it on green.

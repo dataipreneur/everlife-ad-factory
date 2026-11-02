@@ -2,6 +2,23 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Bible sync to 1793642193-f927: Spartan/Wolverine un-swapped, PT-141 lines removed (branch `bible-sync-f927`)
+Logged before editing. Priestley: "go ahead with the sync and merge". Justin's version f927 (after 1793640737-714c) fixes the
+Spartan/Wolverine swap: **Spartan Stack (BPC-157/KPV/TB500)** and **Wolverine Stack (BPC-157/TB500)** now match the vial labels.
+It also moves the Ambien comparison into Restora-Z (layout only; the Restora-Z skill is unchanged) and drops three PT-141 lines.
+Originals: `_originals/2026-11-02/bible-sync-f927/`.
+- `core/claude/creative-bible.md` → version 1793642193-f927 (`bible_sync.py --write`).
+- **Spartan + Wolverine:** `product.json` `bible_section` = the new headings; the PROVISIONAL swap is removed everywhere (SKILL.md,
+  video-prompting, image-batch, lessons, RENDERS, product.json); `product-bible.md` rebuilt from each product's own page (facts,
+  pre-screen, VERBATIM). Lines the swap had borrowed from the other stack are replaced with the product's own ✅ lines
+  (reference-guide, hook-bank, styles, video copy example, lessons). Setup questions and end-card rows were already right.
+- **Wolverine (Justin's new content):** talent 30–45, "Wolverine Stack" + "BPC-157 / TB-500" on every design, "Save up to 39%",
+  Hard NO "No direct claims", hooks / headlines ⏳, new benefits screened (Tissue Repair, Joint Comfort ⚠ Jeremy).
+- **Held for Justin:** "Supports Healthy Inflammatory Balance" (KPV's benefit) sits on Wolverine, which has no KPV: not used by
+  either skill until he answers.
+- **PT-141:** "Gentle on the Vascular System", "Helps Wake Up the Want" and "Sublingual or Nasal Spray Desire Support" are no longer
+  on the page: ❌ removed (Justin to confirm it was deliberate; the spray/tablet line was the only mention of the two forms).
+
 ## 2026-11-02 — Bible sync to Justin's version 1793638690-e4ca (branch `bible-sync-2026-11-02`)
 Logged before editing. Priestley: "Lets merge the arousal sync. Check if anything else has been updated since then." Repo copy
 was `1793291361-2416`. Justin's changes since: a new Hard NO "Never use 'arousal' or any form of it" (Lovara, PT-141, Spark,
