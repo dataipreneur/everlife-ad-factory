@@ -415,6 +415,32 @@ def smoke(core, out):
         os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
         expect(f"Spark video renders ({style})",
                [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
+
+    # GHK Peptide Cream (topical cream, pump bottle, no tablet; PROVISIONAL standard disclaimer): statics take its
+    # disclaimer; video end cards render the bottle alone
+    d = os.path.join(out, "gc_static"); os.makedirs(d)
+    expect("finish_batch takes the GHK Peptide Cream disclaimer from --product",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "batch.png"), "--product", "ghk-cream"], True)
+    expect("GHK Peptide Cream refuses another product's disclaimer",
+           [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "x.png"), "--product", "ghk-cream",
+            "--disclaimer", RZ_DISC], False, "differs")
+    gc = {"product": "ghk-cream", "head": ["GHK PEPTIDE CREAM BY EVERLIFE"], "head_always": True,
+          "end_head": ["FIRMER-LOOKING SKIN", "STARTS WITH SUPPORT"],
+          "benefits": ["Supports Collagen + Elastin", "Supports Smoother-Looking Texture",
+                       "Supports a Brighter, More Even-Looking Tone"],
+          "ingredients_label": "PEPTIDE SKIN SUPPORT",
+          "ingredients": [["COLLAGEN", "Supports Collagen + Elastin"], ["TEXTURE", "Supports Smoother-Looking Texture"],
+                          ["TONE", "Supports a Brighter, More Even-Looking Tone"]],
+          "cta": "SUPPORT FIRMER SKIN", "vocab": "GHK Peptide Cream."}
+    for style in ("default", "tiktok"):
+        d = os.path.join(out, f"gc_{style}")
+        os.makedirs(os.path.join(d, "layers_full"))
+        json.dump(dict(gc, style=style), open(os.path.join(d, "copy.json"), "w"))
+        cache = os.path.join(d, "layers_full", "T_caps.json")
+        json.dump([[0.4, 2.4, "PEPTIDE-POWERED SKIN SUPPORT", [[0.4, 1.2], [1.2, 1.7], [1.7, 2.3]]]], open(cache, "w"))
+        os.utime(cache, (os.path.getmtime(clip) + 10,) * 2)
+        expect(f"GHK Peptide Cream video renders ({style})",
+               [PY, "-I", os.path.join(T, "full_layout.py"), d, clip, "T", "--end", "11"], True)
     for ok, name, rc, last in checks:
         print(f"{'PASS' if ok else 'FAIL'}  {name}  (rc={rc}) {'' if ok else last}")
     print(f"{sum(c[0] for c in checks)}/{len(checks)} passed")

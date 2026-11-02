@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — GHK-Cu Cream skill brought up to date with main before merging (branch `ghk-cream-skill`)
+Merged main (#23–#28) and gave the skill what those PRs gave the other skills (from its Lovara template): the AI Avatar
+"ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
+the Winners Board read-first and rate steps. Smoke 53/53.
+
 ## 2026-11-02 — Bible sync to 1793655503-c3e7: captions on every video, kept out of the safe zones (branch `bible-sync-c3e7`)
 Logged before editing. Justin's change (Standards 02 + 04), no product page or disclaimer changed: "Every video carries on-screen
 captions for all spoken audio. Captions stay clear of Meta's safe zones"; the Safe zones list now names captions too.
@@ -102,6 +107,19 @@ Originals: `_originals/2026-11-02/winners-board/`.
   the batch after it (Sermorelin + Sermorelin GHK had no "After the batch" section: a short §4 is added at the end).
   `skills/everlife-new-product/references/adapt-checklist.md` §3: new skills inherit both steps.
 - **Follow-up (needs Priestley's OK):** the same two lines for `skills/everlife-restora-z/references/image-batch.md`.
+
+## 2026-11-02 — New skill: GHK-Cu Cream (`skills/everlife-ghk-cream/`, branch `ghk-cream-skill`)
+Logged before editing. Built with `everlife-new-product` from the **Lovara** template (women 30–55, product-led; the builder's
+default suggestion was BPC-157, a men's vial skill, which doesn't fit a women's topical cream). Bible page "## GHK-Cu Cream".
+Originals: `_originals/2026-11-02/ghk-cream/`.
+- **Disclaimer: PROVISIONAL.** The bible page says "Disclaimer pending"; on Priestley's instruction (2026-11-02) the skill uses the
+  standard ad disclaimer, verbatim the same string as MOTS-c, with a `_disclaimer_status` note. Jeremy to confirm.
+- **Naming:** "GHK-Cu Cream" only as the H2 product name; on FB / GL / TK the name is "GHK Peptide Cream"; never "-Cu" or
+  "copper peptide" anywhere else in creative.
+- **Render:** the strength-free pump bottle (`GHK-PEPTIDE CREAM.webp`); the 0.5% and 2% versions are not used (the bible names no
+  strength). Form = topical cream in an airless pump; there is no tablet.
+- Shared files touched: `core/tests/regression.py` (the product's smoke block), `core/references/ultra-premium.md` (its row).
+- Not done (needs an outside service or a person): Higgsfield Marketing Studio registration; the first 4-image test batch.
 
 ## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
 Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
