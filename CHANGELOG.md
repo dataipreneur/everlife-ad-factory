@@ -2,6 +2,20 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Winners Board v2: reviewer features (branch `winners-board`)
+Logged before editing. Priestley approved reviewer features: 7 operators write entries through their Claude; 4 reviewers use
+the page in a browser as Contributors. Same board URL, republished in place (stored data kept). Originals:
+`_originals/2026-11-02/winners-board-reviews/` (incl. the v1 page source).
+- **Page:** "Review" on every card (Winner/Good/Weak/Kill + feedback, one per reviewer, editable), reviews listed under the ad;
+  a "To review" view (no review yet / not reviewed by me); per-product feedback notes; ad preview thumbnails; each card says what
+  decided its rating ("Meta" / "Reviewers 3–1" / "Operator"). Products added: Epithalon, GHK cream, Titan-Rx.
+- **Combining rule:** newest Meta verdict → else reviewers' majority (newest review per reviewer; a tie goes to the lower rating)
+  → else the operator's rating.
+- **Previews:** a ~480 px JPEG as a data URL in a small sub-document under the entry (`…/<entry id>/preview/img`), written by
+  the operator's Claude from a JSON file (`file_path`), so base64 never passes through the conversation.
+- **`core/winners-board/WINNERS-BOARD.md`:** schema (review, product_note, preview), §4 also reads reviews + notes and summarises
+  recurring points as guidance only, §5 attaches the preview. Per-skill lines unchanged (they point at the doc).
+
 ## 2026-11-02 — Winners Board: one shared rating store for hooks + image ads (branch `winners-board`)
 Logged before editing. Priestley's decisions: one shared board for hooks and images; scale **Winner / Good / Weak / Kill**
 (AskUserQuestion shows max 4 options; one question per ad); Winner → one later slot mutates its recipe (exactly one variable);
