@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Titan-Rx skill brought up to date with main before merging (branch `titan-rx-skill`)
+Merged main (#23–#30; `regression.py` and `ultra-premium.md` conflicts with GHK/Epithalon resolved by hand: each product's
+test block keeps its own closing line, the vial row takes Epithalon and the tablet row Titan-rx, both palette rows kept) and
+gave the skill what those PRs gave the other skills (from its Spark template): the AI Avatar "ALL on Creatify" line, the
+15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and the Winners Board steps.
+Smoke 61/61.
+
 ## 2026-11-02 — Epithalon skill brought up to date with main before merging (branch `epithalon-skill`)
 Merged main (#23–#29) and gave the skill what those PRs gave the other skills (from its MOTS-c template): the AI Avatar
 "ALL on Creatify" line, the 15-style Mood override, the no-smear + show-first banner, the proof split (images + videos), and
@@ -161,6 +168,22 @@ and no template was chosen. Original backed up: `_originals/2026-11-02/epithalon
 - **Contradiction flagged for Justin:** the page's audience line and two quick-hit benefits are about sleep, but its creative
   direction and Hard NO forbid sleep/overnight messaging (DSIP's territory). The Hard NO wins: the sleep lines are ❌ until fixed.
   Offer and landing page are [PLACEHOLDER]; all four headlines are ⏳ pending.
+
+## 2026-11-02 — New skill: Titan-rx (branch `titan-rx-skill`)
+Logged before editing. Priestley asked for a Titan-rx ad skill (men's once-daily 3-in-1 performance capsule: Tadalafil +
+Vardenafil + L-Arginine, men 40–65+). Built with `everlife-new-product` (`create "Titan-rx" --template everlife-spark --form capsule`).
+Template: **Spark** instead of the builder's default PT-141, because Spark (itself built from PT-141) already carries the Hook
+Engine, hook bank, Ultra premium and AI Avatar options and the intimate-wellness 3-in-1 flow; adapted to men-only, one oral capsule
+taken daily (no sublingual, no on-demand / timing language) and per-ingredient claims (each claim only on its own ingredient).
+Originals: `_originals/2026-11-02/titan-rx/`.
+- New: `skills/everlife-titan-rx/` (SKILL.md, product.json/env, renders + RENDERS.md, product-bible extract with pre-screen,
+  hook-bank, image-batch, video-prompting, finishing, personas, reference-guide, lessons, reviews, styles).
+- `core/references/ultra-premium.md`: Titan-rx row in "Per product".
+- `core/tests/regression.py`: Titan-rx smoke block (Lovara pattern). Smoke 43/43 before, 47/47 after; `bible_sync --check` ✅.
+- Name on creative "Titan-Rx" (bible CTA spelling; label TITAN-RX; `bible_section` = "Titan-rx"); `pill_end_scale` 0.85 (wide
+  horizontal capsule, checked on default + tiktok end cards).
+- Open: "Save up to 49%" [VERIFY CURRENT] not used; ingredient claims "Enhances…" / "Boosts…" ⚠ Jeremy; ED headlines ⏳;
+  Marketing Studio registration still to do; first paid test batch not run.
 
 ## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
 Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
