@@ -25,7 +25,7 @@ a violation (exit 3 video, 2 image): never override; fix the layout or re-roll. 
 - Fails finishing can't fix → offer a re-roll with its cost (max 2 per concept).
 
 ## 2. Video finishing
-**Proof split, videos too (bible 2026-11-02, Standards 02 · 06):** each video carries ONE proof in its footer, the trust row (~60%) or "Over 100,000 happy customers" (~40%); the end card has no count line of its own. Before finishing run `python -I core/scripts/proof_next.py --product wolverine --log <tag>` and put its answer in copy.json as `"proof": "trust"` or `"proof": "count"` (animated stills: `animate_still.py --proof …`).
+**Proof split, videos too (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of videos carry NO proof; 70% carry ONE footer proof: the trust row (60% of those) or the Trustpilot 4.9 badge + "Over 100,000 happy customers" (40%); the end card has no count line of its own. Before finishing run `python -I core/scripts/proof_next.py --product wolverine --log <tag>` and put its answer in copy.json as `"proof": "trust"`, `"count"` or `"none"` (animated stills: `animate_still.py --proof …`).
 
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json

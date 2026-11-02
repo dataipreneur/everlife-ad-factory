@@ -146,7 +146,8 @@ def block_layout():
     """Positions of the bottom proof block inside the safe area: (row_y, disc_y, block_top)."""
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
     lines = [] if DISC_BOTTOM else sf.disclaimer_lines(bl.DISCLAIMER)
-    rh = (sf.row_art(f"{P}/source/proof_row_clear.png") if PROOF == "trust" else sf.count_row("dark")).height
+    _r = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")
+    rh = _r.height if _r else 0
     top = BLOCK_BOTTOM - (rh + 12 + sf.DISC_LH * len(lines))
     return top, top + rh + 12, top, lines, rh
 
@@ -174,10 +175,11 @@ def bottom_layer():
     img = bl.canvas()
     row_y, disc_y, top, lines, rh = block_layout()
     bl.gradient_band(img, top - 380, H, 0, 225)
-    row = sf.row_art(f"{P}/source/proof_row_clear.png") if PROOF == "trust" else sf.count_row("dark")   # one proof per video
-    rx = (W - row.width) // 2
-    img.alpha_composite(row, (rx, row_y))
-    note((rx, row_y, rx + row.width, row_y + rh), "proof row")
+    row = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    if row:
+        rx = (W - row.width) // 2
+        img.alpha_composite(row, (rx, row_y))
+        note((rx, row_y, rx + row.width, row_y + rh), "proof row")
     d = ImageDraw.Draw(img)
     ty = disc_y
     for ln in lines:

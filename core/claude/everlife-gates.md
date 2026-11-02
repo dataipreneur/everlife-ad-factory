@@ -37,7 +37,7 @@ Naming:
 Proof:
 - Trustpilot always reads exactly **"Trustpilot rated 4.9 Excellent"**. Never "Trustpilot rating" alone.
 - Customer count locked at **100,000+** ("Over 100,000 happy customers").
-- Proof split (bible 2026-11-02, Standards 02 · 06): trust callouts (Trustpilot, Doctor Prescribed, Ships Free From Pharmacy) on ~60% of graphics, "Over 100,000 happy customers" on ~40%. Every creative, image or video, carries exactly one of the two (images: `finish_batch.py --proof-plan N`; videos: `core/scripts/proof_next.py`), so none is left without proof.
+- Proof split (bible 2026-11-02, Standards 02 · 06): applied as (Mitansh 2026-11-02): 30% of creatives carry no proof; 70% carry one footer proof, of which 60% the trust row (Trustpilot, Doctor Prescribed, Ships Free From Pharmacy) and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (images: `finish_batch.py --proof-plan N`; videos: `core/scripts/proof_next.py`). Logo + verbatim disclaimer on every creative.
 - Authority = sourced trust signals only (100,000+, Trustpilot, Doctor Prescribed / "Dr. Prescribed, Direct From Pharmacy", Ships Free From Pharmacy). No adjectives as authority.
 Disclaimers & AI disclosure:
 - Use the product's **Ad disclaimer verbatim** — from the bible, or from the product skill's `product.json` when the bible has none (e.g. BPC-157). Never written, paraphrased or invented. Don't stop over a missing bible disclaimer when the skill has one.

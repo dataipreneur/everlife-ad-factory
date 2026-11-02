@@ -67,33 +67,99 @@ def row_art(path):
     return r.resize((ROW_W, round(r.height * ROW_W / r.width)), Image.LANCZOS)
 
 
-# ---------- proof split (bible 2026-11-02, Standards 01 + 02 · 06) ----------
-# Trust callouts (the Trustpilot / Doctor Prescribed / Ships Free row) on ~60% of creatives, "Over 100,000 happy customers" on
-# ~40%: images AND videos (Priestley 2026-11-02: "it's for videos too"). Each creative carries exactly ONE of the two.
+# ---------- proof split (bible 2026-11-02, Standards 01 + 02 · 06; Mitansh's reading, 2026-11-02) ----------
+# "do 30% without anything and 70% with footer with 40% having trustpilot + 100k customers". So, of all creatives,
+# images AND videos:
+#   trust  ~42%  the Trustpilot / Doctor Prescribed / Ships Free row
+#   count  ~28%  the Trustpilot 4.9 badge + "Over 100,000 happy customers"
+#   none   ~30%  no proof element (the logo and the verbatim disclaimer stay on every creative)
 COUNT_LINE = "Over 100,000 happy customers"   # locked proof string (bible)
 COUNT_PX = 34                                 # reads at story size for 50+ (the trust row's art is ~100 px tall)
-PROOFS = ("trust", "count")
+PROOFS = ("trust", "count", "none")
+SHARE = {"trust": 0.7 * 0.6, "none": 0.3, "count": 0.7 * 0.4}
 LEDGER = os.path.join(os.path.expanduser(os.environ.get("EVERLIFE_HOME", "~/Everlife-Creative")), "proof-ledger.jsonl")
 
 
+COUNT_BADGE_H = 96   # Trustpilot badge height beside the count line (Mitansh 2026-11-02)
+COUNT_GAP = 28       # badge → divider → text spacing
+
+
+COUNT_STYLE = os.environ.get("EVERLIFE_COUNT_STYLE", "badge")   # badge (default) | serif (variation, Mitansh 2026-11-02)
+
+
+def count_row_serif(tone, fw=ROW_W):
+    """Variation: no badge, the locked count line set alone in Instrument Serif Italic, large, with thin hairlines either side."""
+    f = ImageFont.truetype(os.path.join(FD, "InstrumentSerif-Italic.ttf"), 60)
+    d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+    tw = int(d0.textlength(COUNT_LINE, font=f))
+    asc, desc = f.getmetrics()
+    h = COUNT_BADGE_H
+    row = Image.new("RGBA", (fw, h), (0, 0, 0, 0))
+    col = (246, 240, 226, 255) if tone == "dark" else (24, 30, 48, 255)
+    d = ImageDraw.Draw(row)
+    x = (fw - tw) // 2
+    d.text((x, (h - asc - desc) // 2), COUNT_LINE, font=f, fill=col)
+    cy, rl = h // 2 + 2, 70
+    d.line([(x - 28 - rl, cy), (x - 28, cy)], fill=col[:3] + (150,), width=2)
+    d.line([(x + tw + 28, cy), (x + tw + 28 + rl, cy)], fill=col[:3] + (150,), width=2)
+    return row
+
+
 def count_row(tone, fw=ROW_W):
-    """The customer-count line, centred in an RGBA strip `fw` wide (takes the trust row's place)."""
+    if COUNT_STYLE == "serif":
+        return count_row_serif(tone, fw)
+    return count_row_badge(tone, fw)
+
+
+def count_row_badge(tone, fw=ROW_W):
+    """The customer-count line with the approved Trustpilot 4.9 Excellent badge beside it, centred together in an RGBA
+    strip `fw` wide (takes the trust row's place). Mitansh 2026-11-02: "over 100k customers should at least have the
+    trustpilot logo besides it". Badge art = the same approved art as the trust row (assets/footer/badge_<tone>.png)."""
     f = ImageFont.truetype(os.path.join(FD, "Inter.ttf"), COUNT_PX)
     try:
         f.set_variation_by_name("SemiBold")
     except Exception:
         pass
-    tw = int(ImageDraw.Draw(Image.new("RGB", (4, 4))).textlength(COUNT_LINE, font=f))
-    row = Image.new("RGBA", (fw, COUNT_PX + 12), (0, 0, 0, 0))
+    badge = Image.open(os.path.join(os.path.dirname(FD), "footer",
+                                    "badge_dark.png" if tone == "dark" else "badge_light.png")).convert("RGBA")
+    badge = badge.resize((round(badge.width * COUNT_BADGE_H / badge.height), COUNT_BADGE_H), Image.LANCZOS)
+    d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+    tw = int(d0.textlength(COUNT_LINE, font=f))
+    asc, desc = f.getmetrics()
+    total = badge.width + 2 * COUNT_GAP + 2 + tw
+    row = Image.new("RGBA", (fw, COUNT_BADGE_H), (0, 0, 0, 0))
+    x = (fw - total) // 2
+    row.alpha_composite(badge, (x, 0))
     col = (246, 240, 226, 255) if tone == "dark" else (24, 30, 48, 255)
-    ImageDraw.Draw(row).text(((fw - tw) // 2, 2), COUNT_LINE, font=f, fill=col)
+    d = ImageDraw.Draw(row)
+    dx = x + badge.width + COUNT_GAP
+    d.line([(dx, 18), (dx, COUNT_BADGE_H - 18)], fill=col[:3] + (110,), width=2)   # thin divider, like the trust row
+    d.text((dx + 2 + COUNT_GAP, (COUNT_BADGE_H - asc - desc) // 2), COUNT_LINE, font=f, fill=col)
     return row
 
 
+def _pick(counts, n):
+    """The proof whose share is furthest behind after n creatives (largest remainder; ties: trust, none, count)."""
+    return max(PROOFS, key=lambda k: (SHARE[k] * n - counts.get(k, 0), -PROOFS.index(k)))
+
+
 def proof_plan(n):
-    """Which ads of an n-ad batch get the trust row and which the customer count (~60% / ~40%, the first ad trust)."""
-    k = round(0.4 * n + 1e-9) if n > 1 else 0
-    return ["count" if (i * k) // n != ((i - 1) * k) // n else "trust" for i in range(1, n + 1)]
+    """Which ads of an n-ad batch get the trust row, the badge + count line, or no proof (~42 / 28 / 30%)."""
+    counts, out = {}, []
+    for i in range(1, n + 1):
+        k = _pick(counts, i)
+        counts[k] = counts.get(k, 0) + 1
+        out.append(k)
+    if "trust" in out:                       # open every batch on the trust row (a one-ad "batch" = trust)
+        i = out.index("trust"); out = out[i:] + out[:i]
+    return ["trust"] if n == 1 else out
+
+
+def proof_row(proof, trust_art, tone="dark"):
+    """The proof element for a creative: the trust-row art, the count row, or None (no proof)."""
+    if proof == "none":
+        return None
+    return row_art(trust_art) if proof == "trust" else count_row(tone)
 
 
 def _ledger(product):
@@ -106,10 +172,10 @@ def _ledger(product):
 
 
 def next_proof(product):
-    """For creatives made one at a time (videos): the proof that keeps this product's running split nearest 60/40."""
+    """For creatives made one at a time (videos): the proof that keeps this product's running split nearest 42/28/30."""
     rows = _ledger(product)
-    n, c = len(rows), sum(r.get("proof") == "count" for r in rows)
-    return "count" if c < round(0.4 * (n + 1) + 1e-9) else "trust"
+    counts = {k: sum(r.get("proof") == k for r in rows) for k in PROOFS}
+    return _pick(counts, len(rows) + 1)
 
 
 def log_proof(product, proof, tag):
@@ -126,6 +192,6 @@ def proof_of(C):
         return p
     if p:
         raise SystemExit(f"❌ copy.json \"proof\" must be one of {PROOFS}, not {p!r}")
-    print("ℹ️  copy.json has no \"proof\": trust row. Bible 2026-11-02: trust row on ~60% of creatives, customer count on ~40% "
+    print("ℹ️  copy.json has no \"proof\": trust row. Split 2026-11-02: trust ~42%, badge + count ~28%, none ~30% "
           "(core/scripts/proof_next.py --product <id>).")
     return "trust"

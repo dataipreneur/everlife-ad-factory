@@ -48,7 +48,7 @@ PROOF_SCALE = float(os.environ.get("EVERLIFE_PROOF_SCALE", "1.3225"))   # proof 
 PROOF_W = int(os.environ.get("EVERLIFE_PROOF_W", "1000"))   # 9:16 proof-row column: wider than the 768 px safe column so the bigger row fits (crosses the Reels side bands by ~116 px; Mitansh 2026-10-29)
 PROOF = "trust"                # footer proof: trust = the Trustpilot / Doctor Prescribed / Ships Free row; count = "Over 100,000 happy
                                # customers" in its place; none = disclaimer only. Bible 2026-11-02 (Standards 02 · 06): trust callouts on
-                               # ~60% of graphics, customer count on ~40%, one per ad (proof_plan). Set per ad with --proof.
+                               # split 2026-11-02: trust ~42%, badge + count ~28%, none ~30% (proof_plan). Set per ad with --proof.
 MAX_SHIFT = 140                # max nudge DOWN (logo headroom)
 MAX_UP = 320                   # max nudge UP (9:16: pull the content above the safe-area footer)
 CONTENT_GAP = 20               # px of calm background wanted between the raw's last content row and the footer
@@ -407,9 +407,9 @@ def main():
     ap.add_argument("--logo-w", default="", help="logo width: px or percent of the ad width (creative-system: 40%% centre, 36%% corner, small 30%%/28%%); default 311 px")
     ap.add_argument("--logo-pos", default="center", choices=["center", "left", "right"])
     ap.add_argument("--proof", default="", choices=["", "trust", "count", "none"],
-                    help="this ad's proof (bible 2026-11-02: trust row on ~60%%, customer count on ~40%%; see --proof-plan). "
+                    help="this ad's proof (split 2026-11-02: trust ~42%%, badge + count ~28%%, none ~30%%; see --proof-plan). "
                          "Default: trust, with a reminder")
-    ap.add_argument("--proof-plan", type=int, metavar="N", help="print the trust / count split for an N-ad batch and exit")
+    ap.add_argument("--proof-plan", type=int, metavar="N", help="print the trust / count / none split for an N-ad batch and exit")
     a = ap.parse_args()
     global LOGO_W, LOGO_POS, PROOF
     if a.proof_plan:
@@ -419,7 +419,7 @@ def main():
     if a.proof:
         PROOF = a.proof
     elif a.gen:
-        print("ℹ️  no --proof given: trust row. Bible 2026-11-02: trust row on ~60% of graphics, customer count on ~40% "
+        print("ℹ️  no --proof given: trust row. Split 2026-11-02: trust ~42%, badge + count ~28%, none ~30% "
               "(finish_batch.py --proof-plan N).")
     LOGO_POS = a.logo_pos
     if a.logo_w:
