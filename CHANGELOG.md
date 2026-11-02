@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Three older branches brought to main: new-product builder, stricter 9:16 check, Sermorelin render notes (branch `older-three`)
+Logged before editing. Priestley: "go ahead with all three, skip avatar" (`avatar-format` is not merged: Mitansh's #14 is
+the avatar format in use). Merged onto today's main: `sermorelin` (500 mcg render doc fix), `new-product-skill` (the
+builder that scaffolded the 7 new products), `safezone-sides` (finish_batch 9:16 refuses the ad's own type under the logo,
+and type/product in the Reels side bands with `--fit none`). Plus: `skills/everlife-sermorelin/product.env` comments no
+longer say the 1000 bottle and tablet are "NOT YET ADDED" (both are in `assets/`, see `MISSING_RENDERS.md`); and the
+builder's `references/adapt-checklist.md` gets §3b, the lessons from building the 7 products (template leftovers are words,
+form rules, real renders in product.env, kicker, Hook Engine + hook bank, Marketing Studio, stale "nothing yet" notes).
+Originals: `_originals/2026-11-02/older-three/`.
+
 ## 2026-11-02 — Bible sync: every session checks, edit-access people sync, weekly job planned (branch `followup-7-hooks`)
 Logged before editing. Priestley: Justin is the only one who edits the live bible; the team just has to use his latest. Decisions:
 an unsynced change → **warn and continue** with the current approved lines; the **weekly automatic check** is documented

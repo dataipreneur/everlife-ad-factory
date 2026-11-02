@@ -35,6 +35,24 @@ disclaimer verbatim · landing page (facts only).
 - Intimate wellness: no beds, bedrooms, lingerie, couples, lips; shoulder-up. Peptides: never needles, syringes or "needle-free".
 - Higgsfield "no response received" = the upload failing: upload first (`higgsfield upload create`) and pass the IDs.
 
+## 3b. Lessons from the 7-product build (2026-11-02): check these before the first test
+- **Template leftovers are words, not just the name.** The 7 skills kept ~150 lines of their template's world (BPC-157:
+  recovery, gym, tattooed bodybuilders, ice baths, the "slate" vial, BPC-157's own headlines as examples; PT-141: the spray).
+  `grep -i` the template's name AND its scenes/props/colours/headlines in `styles/`, `video-prompting.md`, `image-batch.md`
+  (moods, type notes), `lessons.md` (its "<template>-specific risks" section must be rewritten), `animated-still.md`,
+  `reference-guide.md`, `mens-direction.md`. Replace examples only with the new product's ✅ lines.
+- **Form rules travel with the template.** A vial template says "no capsules or pills anywhere": wrong for a product with a
+  tablet (NAD+). Make the video PRODUCT block and the QA lines (`finishing.md`, `image-batch.md`) match the new forms.
+- **`product.env` must name the real renders** (GLP-1 shipped with the placeholder `<id>_bottle.png`): preflight's
+  "Real product render present" must be ✅. Same for the name (`PRODUCT_NAME` = the bible's name) and the output folder.
+- **`finishing.md` kicker:** "defaults to …" must match the new `product.json` `kicker_default`.
+- **Hook Engine:** add the "Hook Engine (mandatory for every video)" section before Step 0 (`core/hook-engine/HOOK-ENGINE.md`)
+  and a `references/hook-bank.md` (8 hooks, the product's limits first, every bridge an exact ✅ line); see any of the 7.
+- **Marketing Studio:** register the product (title = `PRODUCT_NAME`) with copies whose transparent pixels are set to white
+  (preflight's hidden-pixel ⚠); one form per product when the skill says one form per ad.
+- **Stale "nothing yet" notes:** after the first batch, update "no ads / no winners yet" lines in `lessons.md`,
+  `video-prompting.md` and `reference-guide.md`.
+
 ## 4. Tests (all free)
 1. `bible_sync.py <saved html> --check` → the new product's line is ✅.
 2. `bash skills/everlife-<id>/core/scripts/preflight.sh` → only optional items open (Marketing Studio registration, Nano Banana MCP).
