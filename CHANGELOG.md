@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Fix: preflight read only the digits of the bible version (branch `fix-bible-version`)
+Logged before editing. Found after #21: preflight showed "version 1793642193-" for `1793642193-f927`, because its pattern
+`version [0-9-]*` stops at letters (earlier versions such as `…-2416` happened to be all digits). The every-session check would
+then always see a difference from the live version and warn "Justin updated the bible" when he hadn't. `core/scripts/preflight.sh`
+now reads `version [0-9a-f-]*`. Originals: `_originals/2026-11-02/fix-bible-version/`.
+
 ## 2026-11-02 — Bible sync to 1793642193-f927: Spartan/Wolverine un-swapped, PT-141 lines removed (branch `bible-sync-f927`)
 Logged before editing. Priestley: "go ahead with the sync and merge". Justin's version f927 (after 1793640737-714c) fixes the
 Spartan/Wolverine swap: **Spartan Stack (BPC-157/KPV/TB500)** and **Wolverine Stack (BPC-157/TB500)** now match the vial labels.

@@ -134,7 +134,7 @@ pass "Output folder: $OUT"
 
 # 6b. One bible for everyone: the gates read ~/.claude/everlife/creative-bible.md; it must be this repo's synced copy
 BIB="$HOME/.claude/everlife/creative-bible.md"
-BVER="$(grep -o -m1 'version [0-9-]*' "$CORE/claude/creative-bible.md" 2>/dev/null)"
+BVER="$(grep -o -m1 'version [0-9a-f-]*' "$CORE/claude/creative-bible.md" 2>/dev/null)"   # versions are digits + hex (e.g. 1793642193-f927)
 if cmp -s "$BIB" "$CORE/claude/creative-bible.md"; then pass "Creative bible = this repo's copy (${BVER:-version unknown})"
 else fail "Creative bible at $BIB is missing or a separate (old) copy, not this repo's (${BVER:-version unknown})" "bash \"$(cd "$CORE" && pwd -P)/../install.sh\" (moves your copy to ~/.claude/everlife/_originals/ and links the repo's)"; fi
 # 6c. Is Justin's live bible newer than the repo copy? Claude checks (read-only); an unsynced change warns, never blocks
