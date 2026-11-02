@@ -37,7 +37,7 @@ Paths: skill dir = this folder (`assets/` holds the real bottle + capsule render
 ---
 
 ## Hook Engine (mandatory for every video, all products)
-Before writing any video concept, script or prompt, read `~/.claude/everlife/hook-engine/HOOK-ENGINE.md` and this product's section of `~/.claude/everlife/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
+Before writing any video concept, script or prompt, read `core/hook-engine/HOOK-ENGINE.md` and this product's section of `core/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
 
 ## Step 0 — Preflight: are we connected?
 
@@ -71,7 +71,7 @@ If the user wants images (or picks "Image ads" in step 1), follow **`references/
 
 ## Step 1 — Setup (keep it simple; every question has a ✨ Recommended first option)
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a handheld mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~9 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply.
 - **Images** → go straight to `references/image-batch.md` (its own setup question; NEVER show video styles to an image run).
 - **Video** → ONE AskUserQuestion with 3 questions:
   1. **Placement:** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1".

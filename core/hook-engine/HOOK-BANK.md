@@ -47,7 +47,7 @@ Urgency = a vibrating twin-bell alarm clock in the ad's palette (never red flash
 11. MS Product Hit · soft toss to the shoulder at a backyard BBQ.
 12. CONTRAST SPLIT · Left: couch scrolling; right: the same backyard, pickup basketball. Activity, never bodies.
 
-## BPC-157 (recovery · compounded Rx VIAL · the vial is NEVER thrown, dropped or smashed: throw the pharmacy box or a foam ball instead · never a syringe or needle · never name a body area or show an injury · men: no bodybuilders, tattoos or hard light · women: pinks, tans, beige)
+## BPC-157 (recovery · compounded Rx VIAL · the vial is NEVER thrown, dropped or smashed: throw the pharmacy box or a foam ball instead · never a syringe or needle · never name a body area or show an injury · men: hardcore direction per references/mens-direction.md (bodybuilders, tattoos, hard light allowed) · women: pinks, tans, beige)
 1. IMPACT · Ice-pack swat. An ice pack is tossed at him; he swats it away, and suddenly he's holding the pharmacy box. Nothing is applied to a body part.
 2. INTERRUPTION · Coach's whistle; he jogs straight back into the pickup game.
 3. ABSURD ESCALATION · The horror-movie creak. Getting up off the floor creaks louder and louder like a haunted door, then he springs up easily (light comedy, no claim).
@@ -62,8 +62,8 @@ Urgency = a vibrating twin-bell alarm clock in the ad's palette (never red flash
 12. Women · IMPACT: a yoga block tossed and caught in a sunlit studio (pink/tan/beige), the vial on a shelf behind.
 
 ## PT-141 (intimate wellness · ONE form per ad: nasal spray OR tablet · clothed, candid, real-looking 30–55 · daylight · video shoulder-up · NEVER a bed or bedroom · no lingerie or body shots · tasteful, product-led · never MS Spicy or Epic Fail)
-1. IMPACT · Wine glass caught mid-fall. It tips in slow motion, a hand catches it, the couple laughs (kitchen).
-2. SOUND-FIRST · Cork pop at 0.0 s; both flinch, then laugh.
+1. IMPACT · Water glass caught mid-fall. It tips in slow motion, a hand catches it, the couple laughs (kitchen).
+2. SOUND-FIRST · Bottle-cap pop at 0.0 s (sparkling water); both flinch, then laugh.
 3. SPEED · Calendar pages rip away fast (blank pages, no readable dates), then stop. Bridge: "Made for Moments, Not Calendars".
 4. MISDIRECTION · Cooking-show open; "turning up the heat" becomes a playful shared glance, cut to the product.
 5. SAME-FRAME FLIP · A chaotic weekday kitchen (laptop calls, timers, kids' noise off-screen) → the same frame quiet, a shared look, the product on the counter.

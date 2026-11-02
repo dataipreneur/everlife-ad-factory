@@ -39,7 +39,7 @@ Paths: skill dir = this folder (`assets/` holds the real bottle + tablet renders
 ---
 
 ## Hook Engine (mandatory for every video, all products)
-Before writing any video concept, script or prompt, read `~/.claude/everlife/hook-engine/HOOK-ENGINE.md` and this product's section of `~/.claude/everlife/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
+Before writing any video concept, script or prompt, read `core/hook-engine/HOOK-ENGINE.md` and this product's section of `core/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
 
 ## Step 0 — Preflight + product gate
 
@@ -71,7 +71,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 1. **Audience:** "Men 35–65 (Recommended)" / "Women 35–65" / "Both (5 each)". This picks the bible page (headlines, benefits). Bible v3 sets no colour limit for Sermorelin; women's colours follow Justin's direction in `image-batch.md` §2b (preferred pinks, tans, neutrals, warm tones, white, teal).
 2. **Strength:** "1000 mcg · Double Strength (Recommended for men)" / "1000 mcg, strength not mentioned (Recommended for women)" / "500 mcg". It decides which bottle the ad shows (QA checks the label). "Double Strength Sermorelin" is a men's bible headline and the hook of 4 of 5 men's winners: only with the 1000 mcg bottle in frame. Never state a dose in mcg.
 3. **What are we making?** "🖼️ Image ads: batch of 5 (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a handheld mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~9 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; one B-roll shot shows the tablet held between thumb and index; men's presenter = fit silver fox, fully clothed.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; one B-roll shot shows the tablet held between thumb and index; men's presenter = fit silver fox, fully clothed.
 - **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).
 - **Video** → ONE AskUserQuestion with: **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1"; **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md`; **Angle** "✨ Auto (Recommended)" / 3 approved territories (energy + stamina · strength + vitality · natural growth hormone support · healthy aging).
 

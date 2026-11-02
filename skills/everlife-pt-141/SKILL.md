@@ -53,7 +53,7 @@ settings). `core/` = the shared Everlife toolkit. Tools = `$EVERLIFE_TOOLS` or `
 ---
 
 ## Hook Engine (mandatory for every video, all products)
-Before writing any video concept, script or prompt, read `~/.claude/everlife/hook-engine/HOOK-ENGINE.md` and this product's section of `~/.claude/everlife/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
+Before writing any video concept, script or prompt, read `core/hook-engine/HOOK-ENGINE.md` and this product's section of `core/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
 
 ## Step 0 — Preflight + product gate
 
@@ -94,7 +94,7 @@ say "use F2 and F8" in chat).
 1. **Form:** "Either: pick per ad (Recommended)" / "Nasal spray" / "Sublingual tablet". Decides the bottle in the picture; "either"
    alternates across a batch. Copy may name the form; never the strength, dose or count. One form per ad (Dave's rule).
 2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a handheld mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~9 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; PT-141: the presenter is framed shoulder-up, and the B-roll has NO beds or bedrooms, product-led and tasteful.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; PT-141: the presenter is framed shoulder-up, and the B-roll has NO beds or bedrooms, product-led and tasteful.
 3. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "The wanting, not the ability" ("It Was Never Just Physical", "More
    Than Blood Flow", "Desire Starts in the Brain") / "Unplanned nights" ("Some Nights Aren't Planned.", "Made for Moments, Not
    Calendars", "Desire Support on Your Schedule") / "Your body changed" ("Your Body Changed. Your Desire Doesn't Have to Disappear.",

@@ -198,8 +198,11 @@ def bottom_layer():
 
 
 def cap_y():
-    if os.environ.get("EVERLIFE_CAP_Y"):   # e.g. 1405 = just under the proof row (outside the Reels safe line; flag it)
-        return int(os.environ["EVERLIFE_CAP_Y"])
+    if os.environ.get("EVERLIFE_CAP_Y"):
+        v = int(os.environ["EVERLIFE_CAP_Y"])
+        if not 144 <= v <= 1385:   # Meta 9:16 safe band (bible "Safe zones"): refuse, never ship captions outside it
+            raise SystemExit(f"EVERLIFE_CAP_Y={v} is outside the Reels safe band (y 144-1385); refusing to render.")
+        return v
     y = block_layout()[2] - 96   # caption line sits just above the proof block
     if DISC_BOTTOM:   # a shorter proof block sits lower: keep captions above the Reels profile corner
         y = min(y, sz.NOTCH[1] - 76)

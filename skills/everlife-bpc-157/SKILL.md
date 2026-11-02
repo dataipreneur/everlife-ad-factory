@@ -60,7 +60,7 @@ Paths: skill dir = this folder (`assets/` holds the vial render; `product.env`/`
 ---
 
 ## Hook Engine (mandatory for every video, all products)
-Before writing any video concept, script or prompt, read `~/.claude/everlife/hook-engine/HOOK-ENGINE.md` and this product's section of `~/.claude/everlife/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
+Before writing any video concept, script or prompt, read `core/hook-engine/HOOK-ENGINE.md` and this product's section of `core/hook-engine/HOOK-BANK.md`. Score three hook options (frame-0 action, sound at 0.0 s, hook landing by 1.5 s), pick one, write it into the prompt, run the engine's hook QA on every raw video, then append the result to `~/Everlife-Creative/hook-ledger.jsonl`. Gates and this skill's rules win on any conflict. Not used for statics.
 
 ## Step 0 — Preflight + product gates
 
@@ -99,7 +99,7 @@ footer, contact sheet.
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🧑‍💼 AI Avatar Video" / "🎬 Video ad or 🎞️ animated still (an
 approved static + 8 s of motion, Seedance; a follow-up question picks which)" / "🔁 Remake one of ours". (AskUserQuestion takes at most 4 options.)
-- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a handheld mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~9 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; the vial is the hero in the product B-roll.
+- **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 52.5 Higgsfield + ~3.6 Creatify credits; its own single setup question). This skill's casting, claims, colours and banned settings still apply; the vial is the hero in the product B-roll.
 - **Animated still** → `references/animated-still.md`: pick the approved static, write the one-line motion prompt, ask the
   Unlimited-mode A/B question (0 credits in Chrome, else quote Seedance), generate 8 s from the RAW, `animate_still.py`, QA, save.
 
