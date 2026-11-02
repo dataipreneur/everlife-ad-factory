@@ -102,3 +102,10 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 
 ## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
 - `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
+
+## Wolverine V1 (2026-11-02): avatar presenter via Seedance on Creatify
+- Mitansh: "I dont want to burn higgsfield credits, make videos through seedance on creatify". Route that worked: presenter still (GPT Image 2.5, green) → `bytedance/seedance-2.5/image-to-video` on the Creatify Model Playground (10 s 480p, generate_audio, exact quoted lines + pronunciation) = 10.25 Creatify, 0 Higgsfield; every word exact, locked shot, tiny mic kept.
+- Boreal end-frame vial sat behind the presenter's head → `avatar_video.py bgvideo --dx 230` cleared it (0 cr).
+- premium_finish quietluxe title-cased the sub ("Bpc-157 / Tb-500"); fixed in core/tools (labels with digits keep their case).
+- caps-auto dropped the opening line: always hand-check captions against the transcript.
+- Mitansh: "the only problem… it doesnt have very strong manly background music!" → every men's video gets a heavy track: `composer_generate_music` (0.8 Creatify, Lyria 3 Pro, ~11 s, hit at 0.0 s = the hook's real sound), ducked under the VO with ffmpeg sidechaincompress. First pick trap-metal (A), then the user asked for a new sound and chose D: hip-hop / hard-rock walk-out (90 BPM boom-bap, palm-muted power chords, stomp-claps, big final chord). Offer 2 contrasting takes each round.

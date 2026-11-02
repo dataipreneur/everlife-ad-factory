@@ -7,6 +7,8 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-02 | Mitansh (Wolverine session) | "please add this a new rule for all the skills! That AI Avatar videos, always goes to creatify for everything!!! No higgsfield needed at all!" (after: "I dont want to burn higgsfield credits, instead why dont you make a videos through seedance on creatify!?") | `ai-avatar-video.md` ALL-CREATIFY route (Seedance 2.5 presenter on Creatify + Boreal-H3 + Lyria music); every skill's AI Avatar line. | `all-creatify-avatar` |
+| 2026-11-02 | Mitansh (Wolverine session) | "the only problem in the video is that it doesnt have very strong manly background music!" · "can you do a new bg sound!?" | Music step in `ai-avatar-video.md` (2 contrasting Lyria takes, ducked under the VO); Wolverine lessons. | `all-creatify-avatar` |
 | 2026-11-02 | Priestley | "It seems trust callout is for videos too." | The 60/40 split now covers video ads: one proof per video in the footer (`core/scripts/proof_next.py`, copy.json `"proof"`); end cards have no separate count line. | `trust-callouts` |
 | 2026-11-02 | Mitansh (NAD+ session) | No incoming-call screens, no Accept / Decline buttons, ever. | New Hard NO in `style-library/STYLES.md`; S15 forum post only, S09 no AirDrop card. | PR #24 |
 | 2026-11-02 | Mitansh (PT-141 batch 11) | "Why the hell are these things blurry on the edges! Who told you to do that!" · "make sure to do it always" · "show me first!" | `reposition_916.py` banned; `mirror_fit_916.py` first for any raw that runs into the footer; show every result before any re-roll. | PR #24 |

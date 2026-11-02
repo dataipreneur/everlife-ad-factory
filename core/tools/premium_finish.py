@@ -324,7 +324,7 @@ elif a.style == "quietluxe":
     y = logo(top, W / 2, 150, 190)
     f = fit(d, C["head"], HN, HN_LIGHT, 60, SW, 0.16, floor=52); text(d, W / 2, y + 22, C["head"], f, SOFT, 0.16, "c")
     ly = y + 22 + f.size + 22; d.rectangle([W / 2 - 34, ly, W / 2 + 34, ly + 1], fill=SAND)
-    if C.get("sub"): text(d, W / 2, ly + 14, C["sub"].title(), F(HN, HN_MED, 28), SAND_HI, 0.10, "c")
+    if C.get("sub"): text(d, W / 2, ly + 14, (C["sub"] if any(ch.isdigit() for ch in C["sub"]) else C["sub"].title()), F(HN, HN_MED, 28), SAND_HI, 0.10, "c")
     save_checked(TG, top, "top")
     captions(lambda d, t: centred_caption(d, t, HN, HN_REG, 44, SOFT, 0.01))
     e = canvas(); EW = canvas(); vgrad(EW, 0, H, 175, 215, (14, 14, 16)); d = ImageDraw.Draw(e)
