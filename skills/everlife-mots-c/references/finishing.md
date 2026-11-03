@@ -2,7 +2,7 @@
 
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
-Disclaimer: **PROVISIONAL** standard text in product.json (bible: "Disclaimer pending"); the finishers render it. Flag every asset "provisional disclaimer: Jeremy to confirm".
+Disclaimer: the standard text in product.json, now on the bible page too (sync 2026-11-03); the finishers render it.
 
 ## 0. Safe zones (every 9:16 image and video)
 Logo, headline, offer, CTA, captions, proof and disclaimer live only inside **x 156–924, y 144–1385** (`tools/safezones.py`); the

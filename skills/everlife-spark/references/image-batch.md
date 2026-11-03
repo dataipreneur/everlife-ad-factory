@@ -7,6 +7,8 @@
 > history notes mention PT-141 batches, they are lessons carried over, not Spark facts. Default ratio: **4:5** (9:16 from the
 > approved masters); default people: product only.
 
+**🎯 FOCAL-POINT MIX (bible Standards 03, synced 2026-11-03; REPLACES "the pill is the hero, not the bottle" everywhere in this skill):** plan it in the batch table's **Focal** column before writing prompts, like the proof split: **50% pill-focused** (the tablet/capsule is the primary focal point: foreground, sharp, clearly visible; the old "tablet is the hero" wording below applies to THESE slots only) · **25% bottle-focused** (the bottle is the primary focal point: premium product photography, strong composition; the pill may appear smaller or not at all) · **25% person-focused** (a person is the primary focal point: lifestyle, emotion, relatability; product still in focus and identifiable). Batch of 4 = 2 / 1 / 1; batch of 8 = 4 / 2 / 2; odd counts round the pill share up. **Videos use the same split** (Justin, 2026-11-03: "Videos and statics should really be the same in the sense of how we’re presenting products"). Every ad, whatever its focus: product and benefit identifiable in under 2 s, product in focus, nothing covering it (`core/references/creative-system.md` §1).
+
 **Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product spark --proof count`. Rule: `core/references/creative-system.md` §2. **PROOF SPLIT IS HARD (Mitansh 2026-11-02, no conflicts):** ~42/28/30 per batch and per ratio; proof slots get a clean shelf in the LAYOUT (9:16: product, CTA, sticker, faces end above y 1150 of 1920); never swap a planned proof to "none" yourself (re-roll with cost or ask); `finish_batch.py --proof-check <batch folder>` must pass before showing.
 
 Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
@@ -43,7 +45,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   **Never tie a benefit to one ingredient**: name the three together as a combo, or not at all. "ED" only in the bible's ⏳ ED
   headlines with explicit approval; no "erectile", "Viagra", "Cialis", "instant", no timing promises ("tonight", "in minutes"),
   no guarantees. Mechanism first; "supports", never "builds"/"boosts".
-- **CTA:** "Get Started Now" is the PROVISIONAL default (Jeremy to confirm); the other bible CTAs are ⏳ and need the user's OK.
+- **CTA:** "Save Up to 51%" is the PROVISIONAL default (Jeremy to confirm; "Get Started Now" is banned, bible 2026-11-03); the other bible CTAs are ⏳ and need the user's OK.
 - **No beds or bedroom scenes**, no lingerie, no body shots, no couples in bed, no before/after. A person (only when asked) is
   clothed, candid, 30–65, shoulder-up or waist-up, in a daytime setting (kitchen, hallway, terrace, café, car, garden).
 - Form: copy may say "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count. Exactly one tablet.

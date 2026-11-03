@@ -1,5 +1,7 @@
 # GHK-Cu Cream — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 75%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 75%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## GHK-Cu Cream"), copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
 
 ## Product facts for this skill
@@ -23,12 +25,10 @@
   "results in N days"; body areas.
 - **Offer:** Save up to 75% (percent only, never a $ price).
 - **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers (the finisher's footer adds the approved art).
-- **Disclaimer — PROVISIONAL (2026-11-02):** the bible page says "Disclaimer pending". On Priestley's instruction the skill uses the
-  standard ad disclaimer (same string as MOTS-c), verbatim from `product.json`:
+- **Disclaimer (bible, synced 2026-11-03):** the standard ad disclaimer, verbatim in `product.json`:
   "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical
   providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription."
-  **Jeremy to confirm.** Every SESSION.md says "provisional disclaimer: Jeremy to confirm".
-- **Landing page:** [PLACEHOLDER] in the bible. Ads take claims from the bible, never a landing page.
+- **Landing page:** https://everlifemd.com/ghk-peptide-cream/fb (bible, verified Nov. 3, 2026). Ads take claims from the bible, never a landing page.
 
 ## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
 
@@ -47,7 +47,9 @@
 | Supports a Brighter, More Even-Looking Tone | benefits | ✅ (care) | never "dark spots", "melasma" or "hyperpigmentation" |
 | Upgrade Your Skin Routine | ctas | ✅ |  |
 | Explore GHK Peptide Cream | ctas | ✅ (FB/GL/TK) | the FB/GL/TK name; ⚠ Jeremy before any H2 use |
-| Get Started Now | ctas | ✅ |  |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
+| Save Up to 75% | ctas | ✅ | default CTA (bible 2026-11-03) |
+| Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
 | Support Firmer Skin | ctas | ✅ |  |
 | Start Skin Renewal | ctas | ⚠ Jeremy | same "skin renewal" outcome wording as the headline above |
 | Save up to 75% | offer | ✅ | percent, not $ |
@@ -56,7 +58,7 @@
 - Headlines (Tier A): Firmer-Looking Skin Starts With Support · Peptide-Powered Skin Support · Glow Smarter With GHK Peptide Cream
   (FB/GL/TK) · Your Daily GHK Glow. **Four lines: say so up front** (headline rule in `image-batch.md` §0).
 - Benefits: all five quick-hit benefits (care notes above).
-- CTAs: Upgrade Your Skin Routine · Explore GHK Peptide Cream (FB/GL/TK) · Get Started Now · Support Firmer Skin.
+- CTAs: Save Up to 75% (default) · Ships Free From Pharmacy · Upgrade Your Skin Routine · Explore GHK Peptide Cream (FB/GL/TK) · Support Firmer Skin.
 - Offer: Save up to 75%.
 
 **For Jeremy / Justin:** the disclaimer (provisional), "The Peptide Behind Skin Renewal" and "Start Skin Renewal" (⚠), whether the
@@ -97,9 +99,10 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 ### CTAs
 - CTA: Upgrade Your Skin Routine
 - CTA: Explore GHK Peptide Cream
-- CTA: Get Started Now
+- CTA: Save Up to 75%
 - CTA: Support Firmer Skin
 - CTA: Start Skin Renewal
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -112,7 +115,7 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 - No bodybuilding or “huge” physique imagery.
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/ghk-peptide-cream/fbLast verified Nov. 3, 2026
 Hormone support
 ```

@@ -16,7 +16,7 @@ Golden rules, all non-negotiable:
 2. **Lead with the choice (bible):** sublingual tablet **or** injection. "Injection" may be named; **never show or mention needles,
    syringes, pens or injecting, and never "needle free"** (bible Hard NO: say "easy sublingual delivery"). The vial is a still object.
    One form per ad, or both shown side by side as "the choice" (bottle + tablet beside the vial, nothing else).
-3. **The tablet is the hero** in tablet ads (bible Standards 03): larger than the bottle in frame. Strengths (200 mg / 1000 mg) never
+3. **Focal-point mix** (bible Standards 03, 2026-11-03): tablet ads 50% tablet / 25% bottle / 25% person; injection ads 75% vial / 25% person (`image-batch.md`). Strengths (200 mg / 1000 mg) never
    in copy. Voiceovers say **"N-A-D plus"**.
 4. No disease words; no "anti-aging" promises ("healthy aging" is the bible's wording); no celebrity look-alikes.
 5. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every
@@ -81,7 +81,7 @@ everyday, an ordinary non-famous face).
 > **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 **Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "✨ Ultra
 premium, product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Warm and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" (the question shows 4; "Surprise me" via Other) · **Copy density** "Headline +
-3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Explore NAD+" / "Choose Your Form" / "Get Started Now" / "Start Your Plan" / "Recharge Your Cells" · **How many** "4 (Recommended)" / "8".
+3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Save Up to 62% (Recommended; tablet-only ads: Save Up to 56%)" / "Ships Free From Pharmacy" / "Explore NAD+" / "Choose Your Form" ("Start Your Plan", "Recharge Your Cells" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body or a brand), one script at a time

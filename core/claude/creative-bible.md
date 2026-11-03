@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793655503-c3e7) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793730765-9d0d) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -126,18 +126,32 @@ How the work should look and behave. Composition, format and landing-page rules 
 Applies to every product
 
 #### Composition
-- The pill or tablet is the hero, not the bottle.
 - If a bottle appears, it is large, foreground and legible.
 - Product and benefit must be identifiable in under two seconds.
 - Product names run big. Make them memorable.
 - Texture and depth behind the product — never flat color.
 - No shadows or outlines on type.
+- Bottles, pills, CTAs and text are never obscured by another element — including a gradient from the footer.
+
+#### Focal-point mix
+Official split for all products. This replaces the earlier “pill is the hero, not the bottle” rule.
+50%
+Pill-focused
+The pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible.
+25%
+Bottle-focused
+The product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments.
+25%
+Person-focused
+A person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery.
 
 #### Format
 - Bullet type stays readable at story size — set a minimum and keep it generous.
 - Don’t over-bullet. A simpler layout often performs better.
+- Keep capitalization consistent across a set of copy. If two benefits are in Title Case, the third is too — never mix Title Case and sentence case in the same headline set, benefit list or CTA row.
 - Creative must hold up in square and vertical alike.
 - Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
+- Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
 - The Everlife logo appears on every ad.
 
 #### Imagery
@@ -212,9 +226,10 @@ More benefits & claims on page 8
 ### CTAs
 - CTA: Get Lean Today
 - CTA: Explore Sermorelin
-- CTA: Get Started Now
+- CTA: Save Up to 65%
 - CTA: Support Natural Growth Hormone
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -282,9 +297,10 @@ More benefits & claims on page 10
 ### CTAs
 - CTA: Get Lean Today
 - CTA: Explore Sermorelin
-- CTA: Get Started Now
+- CTA: Save Up to 65%
 - CTA: Support Natural Growth Hormone
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -320,7 +336,7 @@ Men 35–60 who want lean muscle, strength and growth hormone support from one f
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Benefit scope: skin, visceral fat, lean muscle, Growth Hormone drive, hair thickening (male).
+- Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 
 A 3-in-1 formula combining growth-hormone support, skin renewal, circulation, muscle, and metabolism benefit territories.
@@ -361,9 +377,10 @@ More headlines on page 12
 ### CTAs
 - CTA: Unlock 3-in-1 Support
 - CTA: Explore Sermorelin GHK
-- CTA: Get Started Now
+- CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
 - CTA: Start Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Hard NOs
 - Approved language: “toned” and “lean.”
@@ -418,7 +435,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 #### Sermorelin
 - Supports metabolism and lean muscle tone
 - Supports natural growth hormone production
-- Stimulates natural Growth Hormone and IGF-1 production
+- Stimulates natural growth hormone and IGF-1 production
 - Promotes lean muscle growth and fat loss
 - Enhances sleep quality and cellular repair
 - A foundation for healthy aging, strength and vitality
@@ -429,7 +446,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Promotes radiant, firmer, youthful-looking skin and fuller hair
 - Protects and repairs DNA and tissue damage at the cellular level
 - Enhances skin tone, firmness, and youthful appearance
-- Synergizes with Growth Hormone pathways to accelerate repair and regeneration
+- Synergizes with growth hormone pathways to accelerate repair and regeneration
 
 #### L-Citrulline Malate
 - Boosts stamina and muscle performance
@@ -452,7 +469,7 @@ Longevity + skin · Women
 Women 35–60 who want tone, strength and skin glow from one formula.
 
 ### Creative direction
-- Benefit scope: skin, visceral fat, lean muscle, Growth Hormone drive, hair thickening (male).
+- Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 - Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
 
@@ -495,9 +512,10 @@ More headlines on page 15
 ### CTAs
 - CTA: Unlock 3-in-1 Support
 - CTA: Explore Sermorelin GHK
-- CTA: Get Started Now
+- CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
 - CTA: Start Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Hard NOs
 - Approved language: “toned” and “lean.”
@@ -541,7 +559,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 #### Sermorelin
 - Supports metabolism and lean muscle tone
 - Supports natural growth hormone production
-- Stimulates natural Growth Hormone and IGF-1 production
+- Stimulates natural growth hormone and IGF-1 production
 - Promotes lean muscle growth and fat loss
 - Enhances sleep quality and cellular repair
 - A foundation for healthy aging, strength and vitality
@@ -552,7 +570,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Promotes radiant, firmer, youthful-looking skin and fuller hair
 - Protects and repairs DNA and tissue damage at the cellular level
 - Enhances skin tone, firmness, and youthful appearance
-- Synergizes with Growth Hormone pathways to accelerate repair and regeneration
+- Synergizes with growth hormone pathways to accelerate repair and regeneration
 
 #### L-Citrulline Malate
 - Boosts stamina and muscle performance
@@ -607,9 +625,10 @@ More benefits & claims on page 18
 ### CTAs
 - CTA: Explore Lovara
 - CTA: Support Your Spark
-- CTA: Get Started Now
+- CTA: Save Up to 45%
 - CTA: Discover Lovara
 - CTA: Start Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -696,9 +715,10 @@ More headlines on page 20
 ### CTAs
 - CTA: Explore Restora-Z
 - CTA: Support Better Sleep
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Your Sleep Plan
 - CTA: Build a Better Night
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -853,9 +873,10 @@ More headlines on page 24
 ### CTAs
 - CTA: Support Your Spark
 - CTA: Explore PT-141
-- CTA: Get Started Now
+- CTA: Save Up to 23%
 - CTA: Start Desire Support
 - CTA: Find Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -933,8 +954,9 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 ### CTAs [Pending approval]
 - CTA: Explore Spark
 - CTA: Ignite Your Spark
-- CTA: Get Started Now
+- CTA: Save Up to 51%
 - CTA: Find Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -949,7 +971,7 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Landing pagehttps://everlifemd.com/spark/fbLast verified Nov. 2, 2026
 Topical skin
 
 ## GHK-Cu Cream
@@ -982,9 +1004,10 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 ### CTAs
 - CTA: Upgrade Your Skin Routine
 - CTA: Explore GHK Peptide Cream
-- CTA: Get Started Now
+- CTA: Save Up to 75%
 - CTA: Support Firmer Skin
 - CTA: Start Skin Renewal
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -997,8 +1020,8 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 - No bodybuilding or “huge” physique imagery.
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/ghk-peptide-cream/fbLast verified Nov. 3, 2026
 Hormone support
 
 ## TRT / Enclomiphene
@@ -1043,7 +1066,8 @@ More headlines on page 28
 - CTA: Explore TRT
 - CTA: Check Eligibility
 - CTA: Find Your Protocol
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1136,9 +1160,10 @@ More headlines on page 30
 ### CTAs
 - CTA: Recharge Your Cells
 - CTA: Explore Optima NAD+
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Cellular Energy
 - CTA: Start Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1220,9 +1245,10 @@ More headlines on page 32
 ### CTAs
 - CTA: Explore NAD+
 - CTA: Choose Your Form
-- CTA: Get Started Now
+- CTA: Save Up to 62%
 - CTA: Start Your Plan
 - CTA: Recharge Your Cells
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1292,10 +1318,11 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### CTAs
 - CTA: Explore MOTS-c
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Fuel Cellular Energy
 - CTA: Support Your Metabolism
 - CTA: Start Metabolic Support
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1308,7 +1335,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Sexual performance
 
@@ -1361,9 +1388,10 @@ More headlines on page 35
 ### CTAs
 - CTA: Get Performance Support
 - CTA: Explore Titan-Rx
-- CTA: Get Started Now
+- CTA: Save Up to 49%
 - CTA: Start Daily Support
 - CTA: Find Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Hard NOs
 - Never use “arousal” or any form of it (“aroused,” “arousing”).
@@ -1447,14 +1475,15 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore Tesamorelin
 - CTA: Support Lean Muscle
-- CTA: Get Started Now
+- CTA: Save Up to 40%
 - CTA: Start Growth Hormone Support
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pagehttps://everlifemd.com/tesamorelin/fb-fLast verified Page content crawled; seasonal offer needs re-check
 Weight management
 
@@ -1497,9 +1526,10 @@ More headlines on page 38
 ### CTAs
 - CTA: Start Weight Support
 - CTA: Explore GLP-1
-- CTA: Get Started Now
+- CTA: Save Up to 59%
 - CTA: Check Your Options
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1515,7 +1545,7 @@ More headlines on page 38
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Landing pagehttps://everlifemd.com/glp1/fb-v2Last verified Nov. 3, 2026
 
 ### Headline bank
 GLP-1
@@ -1577,9 +1607,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Support Your Recovery
 - CTA: Explore BPC-157
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Recovery Plan
 - CTA: Get Back to Moving
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1591,8 +1622,8 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/bpc-157/fbLast verified Nov. 3, 2026
 Recovery
 
 ## TB-500 [Approved by JL]
@@ -1622,9 +1653,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Support Your Recovery
 - CTA: Explore TB-500
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Recovery Plan
 - CTA: Get Back to Moving
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1636,7 +1668,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Longevity
 
@@ -1667,9 +1699,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore LDN
 - CTA: Support Daily Wellness
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Wellness Plan
 - CTA: Start LDN Support
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1681,7 +1714,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Longevity
 
@@ -1714,9 +1747,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore Epithalon
 - CTA: Support Healthy Aging
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Longevity Support
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1729,7 +1763,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - No sleep or overnight claims.
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Body composition
 
@@ -1761,9 +1795,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Growth Hormone Stack
 - CTA: Support Lean Muscle
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Protocol
 - CTA: Start Growth Hormone Support
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1775,7 +1810,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Recovery stack
 
@@ -1811,9 +1846,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Spartan Stack
 - CTA: Build Your Recovery Stack
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Stronger Recovery
 - CTA: Start Your Protocol
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1889,9 +1925,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Wolverine Stack
 - CTA: Build Your Recovery Protocol
-- CTA: Get Started Now
+- CTA: Save Up to 39%
 - CTA: Support Whole-Body Recovery
 - CTA: Start Your Stack
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1906,7 +1943,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Landing pagehttps://everlifemd.com/wolverine/fbLast verified Nov. 3, 2026
 Recovery stack
 
 ## Klow Stack (BPC-157/GHK-CU/KPV/TB500)
@@ -1941,9 +1978,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Klow Stack
 - CTA: Build Your Recovery Stack
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Whole-Body Recovery
 - CTA: Start Your Protocol
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1955,7 +1993,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Skin + longevity
 
@@ -1991,9 +2029,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Longevity Stack
 - CTA: Support Skin + Longevity
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Aging-Well Plan
 - CTA: Start Your Protocol
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -2005,7 +2044,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Skin stack
 
@@ -2038,9 +2077,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Build Your Glow
 - CTA: Explore the Glow Stack
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Skin From Within
 - CTA: Start Your Protocol
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent

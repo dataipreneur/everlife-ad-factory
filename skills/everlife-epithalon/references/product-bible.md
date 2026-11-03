@@ -1,5 +1,7 @@
 # Epithalon — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none: "[PLACEHOLDER] Save Up to X%" in the bible, so no offer CTA until Justin fills it. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## Epithalon", bible version
 > 1793642193-f927), copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules:
 > `core/references/global-rules.md` (they win). This page's Hard NO wins over its own sleep lines (see below).
@@ -23,8 +25,7 @@ line is ❌, and no sleep or night imagery is used (beds, pillows, night, waking
 - **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers (exact strings; the footer art carries them).
 - **Offer:** none usable ([PLACEHOLDER] on the page) → no offer line, no % and no $ in any ad until Justin fills it.
 - **Landing page:** [PLACEHOLDER] → nothing goes live until it exists (and Jeremy approves).
-- **Disclaimer:** "Disclaimer pending" on the page → product.json carries the PROVISIONAL standard ad disclaimer (Priestley
-  2026-11-02, same text as MOTS-c), flagged "provisional disclaimer: Jeremy to confirm" on every asset.
+- **Disclaimer:** the standard ad disclaimer, now on the bible page (sync 2026-11-03), word for word product.json's text.
 - **Not this product:** the **GHK-Cu/Epithalon** stack (women 35–60, skin + longevity) is a separate page: never its lines; and
   "GHK-Cu" is never written in creative.
 
@@ -43,7 +44,8 @@ line is ❌, and no sleep or night imagery is used (beds, pillows, night, waking
 | B5 | Supports Healthy Sleep-Wake Cycles | benefit | ❌ | Same as B1: sleep claim, product Hard NO. |
 | C1 | Explore Epithalon | CTA | ✅ | |
 | C2 | Support Healthy Aging | CTA | ✅ | |
-| C3 | Get Started Now | CTA | ✅ | Generic: pair with a specific ✅ benefit on the last frame. |
+| C3 | Get Started Now | CTA | ❌ | Banned by the bible (2026-11-03). |
+| C6 | Ships Free From Pharmacy | CTA | ✅ | Bible 2026-11-03; default CTA while the offer is a placeholder. |
 | C4 | Start Longevity Support | CTA | ✅ | |
 | C5 | Build Your Plan | CTA | ✅ | "Your" is fine in a CTA (not a health question); pair with a benefit. |
 | P1 | Trustpilot rated 4.9 Excellent | proof | ✅ | Exact locked wording. |
@@ -55,7 +57,7 @@ line is ❌, and no sleep or night imagery is used (beds, pillows, night, waking
 **Counts (19 lines):** ✅ 9 · ⚠ Jeremy 1 (B3; H1 and H2 carry a ⚠ on top of ⏳) · ⏳ 4 (H1–H4) · ❌ 5 (B1, B5, O1, L1, A1).
 
 **✅ pool (usable today, verbatim):** Supports Healthy Aging · Supports Oxidative Stress Defense · Explore Epithalon · Support Healthy
-Aging · Get Started Now · Start Longevity Support · Build Your Plan · Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
+Aging · Ships Free From Pharmacy · Start Longevity Support · Build Your Plan · Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
 
 **Headlines:** none approved. Until one is: the product name "Epithalon" big + a ✅ benefit as the headline (Tier A = ✅ benefit
 lines, verbatim); ⏳ H3/H4 only with the user's explicit OK per line, flagged for Jeremy; H1/H2 not without Jeremy. Fresh wording =
@@ -97,9 +99,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore Epithalon
 - CTA: Support Healthy Aging
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Longevity Support
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -112,7 +115,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - No sleep or overnight claims.
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Body composition
 ```

@@ -1,5 +1,7 @@
 # PT-141 — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 23%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 23%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: Claude Design project 8cc4e3fe-5189-436d-aaba-6eb2320f14c6, page "PT-141" (p. 21) and "PT-141 · headline bank" (p. 22), from the
 > 26 Oct 2026 export (`Creative Messaging Reference.dc.html`), re-checked 2026-10-28. Two quick-hit benefits that appear on the LIVE page
 > (Mitansh's screenshot, 2026-10-28) but not in the export are added and labelled. Global rules: `core/references/global-rules.md` (they win).
@@ -95,9 +97,10 @@ Quick-hit benefits
 CTAs
 - Support Your Spark
 - Explore PT-141
-- Get Started Now
+- Save Up to 23%
 - Start Desire Support
 - Find Your Plan
+- Ships Free From Pharmacy
 Proof & value props
 - —Trustpilot rated 4.9 Excellent
 - —Over 100,000 happy customers

@@ -108,3 +108,4 @@ apply; the hardcore-gym scenes do NOT: Epithalon scenes come from direction.md)
 - Disclaimer pending in the bible: product.json carries the PROVISIONAL standard text; Jeremy to confirm.
 - Open for Justin: the sleep contradiction (Hard NO wins), the spelling (Epithalon vs the label's EPITALON), the offer and landing
   page ([PLACEHOLDER]), the four ⏳ headlines, the VO pronunciation.
+- 2026-11-03: the bible now carries the standard disclaimer for this product (same text as product.json): the provisional flag is retired.

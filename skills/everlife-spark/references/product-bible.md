@@ -1,5 +1,7 @@
 # Spark — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 51%" (the Spark CTA list is still ⏳ Pending approval as a whole: this is the PROVISIONAL default, Jeremy to confirm). "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 51%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## Spark"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
 
 ## Product facts for this skill
@@ -11,7 +13,7 @@
 - **Not in the bible, so not in copy:** strengths, dose, onset time, how long it lasts, "brain-based" attributed to PT-141 alone.
 - **Approved offer:** Save up to 51% (percent only). **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
 - **Creative direction:** none on the bible page → global rules + the intimate-wellness gate (tasteful, product-led, no beds).
-- **Landing page:** [PLACEHOLDER] in the bible.
+- **Landing page:** https://everlifemd.com/spark/fb (bible, verified Nov. 2, 2026).
 
 ## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
 
@@ -36,7 +38,9 @@
 | Desire Support for Men + Women | benefits | ✅ | |
 | Explore Spark | ctas | ⏳ | All CTAs Pending approval: explicit OK per session, flagged for Jeremy |
 | Ignite Your Spark | ctas | ⏳ | same |
-| Get Started Now | ctas | ⚠ PROVISIONAL default | Priestley 2026-10-30 (✅ on MOTS-c, GLP-1, NAD+ pages); Jeremy to confirm |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
+| Save Up to 51% | ctas | ⚠ PROVISIONAL default | bible CTA (list still Pending approval); leads with the offer per the 2026-11-03 standard; Jeremy to confirm |
+| Ships Free From Pharmacy | ctas | ⏳ | bible CTA, list Pending approval |
 | Find Your Plan | ctas | ⏳ | same |
 | Save up to 51% | offer | ✅ | Percent only, never a $ price |
 | Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
@@ -79,8 +83,9 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 ### CTAs [Pending approval]
 - CTA: Explore Spark
 - CTA: Ignite Your Spark
-- CTA: Get Started Now
+- CTA: Save Up to 51%
 - CTA: Find Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -95,6 +100,6 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Landing pagehttps://everlifemd.com/spark/fbLast verified Nov. 2, 2026
 Topical skin
 ```

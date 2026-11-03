@@ -2,6 +2,32 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Bible sync to 1793728650-5a0d: offer CTAs replace "Get Started Now" (branch `bible-sync-5a0d`)
+Logged before editing. Justin's update: "Get Started Now" is banned (lead with the offer, "Save Up to N%"); "Ships Free From
+Pharmacy" added as a CTA on every product; standard disclaimer filled in where the bible said "Disclaimer pending"; landing pages
+filled in; two new standards (nothing obscures product/CTA/text, incl. a footer gradient; consistent capitalization in a set).
+Priestley approved the sync including Restora-Z (2026-11-03). Originals: `_originals/2026-11-03/bible-sync-5a0d/`.
+- `core/claude/creative-bible.md` re-synced (`bible_sync.py --write`); `global-rules.md` + `everlife-gates.md` carry the three new
+  standards; `change-requests.md` row; REFS.md H8 note (its "Get Started Now" button is layout only).
+- Every skill's `product-bible.md`: a "CTA update" block at the top (wins over older CTA lists), VERBATIM sections re-copied (10
+  swapped whole; PT-141, Restora-Z, Sermorelin, Sermorelin GHK patched line by line; BPC-157's verbatim is the docx, left as is),
+  "Get Started Now" rows marked ❌, new CTA rows screened.
+- Default CTA per skill: the bible's offer CTA where it has a % (GLP-1 59, NAD+ 62, GHK Cream 75, Lovara 45, PT-141 23, Sermorelin
+  65, Sermorelin GHK 47, Wolverine 39; Spark 51 PROVISIONAL, its CTA list is still Pending approval; MOTS-c 40 from its doc).
+  "Ships Free From Pharmacy" where the bible % is a placeholder (BPC-157, Epithalon, Restora-Z, Spartan) and for Titan-Rx (offer
+  still [VERIFY CURRENT]). SKILL.md CTA questions updated (Epithalon, GLP-1, MOTS-c, NAD+, Spark, Spartan, Titan-Rx, Wolverine).
+- Disclaimer now on the bible pages for Epithalon, MOTS-c, GHK Cream (same text as product.json, `--check` ✅): provisional flags
+  retired. Landing pages filled (BPC-157, GHK Cream, GLP-1, Spark, Wolverine). Sermorelin GHK: "growth hormone" lower-cased per bible.
+- Smoke 62/62.
+- **Then bible 1793730765-9d0d (same day, same branch, Priestley OK):** the **focal-point mix** replaces "the pill is the hero, not the
+  bottle": 50% pill-focused / 25% bottle-focused / 25% person-focused. Gates, global rules, `creative-system.md` §1 (batch table
+  Focal column; batch of 4 = 2/1/1), `ultra-premium.md`, Hook Engine; a FOCAL-POINT MIX banner in all 15 skills' `image-batch.md`
+  (old "tablet is the hero" lines now apply to pill-focused slots only); SKILL.md product-truth lines and style notes. Products
+  without a pill (vials, GHK pump): 75% product-focused / 25% person-focused. Smoke 62/62.
+- **Justin's answers (2026-11-03, via Priestley):** (1) "Yes that would be correct. For non pill products the vial should be 75%"
+  → 75/25 confirmed, provisional flags removed. (2) men in pill/bottle slots count toward the hardcore share: "That is fine."
+  (3) "Videos and statics should really be the same in the sense of how we're presenting products" → videos use the same split.
+
 ## 2026-11-03 — Winners Board: finished ads only (branch `board-no-briefs`)
 Logged before editing. BERNS's Claude wrote 10 Sermorelin GHK "BRIEF ONLY: image not made yet" entries with placeholder "Good"
 ratings; Priestley approved deleting them (done) and closing the gap. Originals: `_originals/2026-11-03/board-no-briefs/`.

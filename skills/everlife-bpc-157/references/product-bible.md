@@ -1,5 +1,7 @@
 # BPC-157 — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none usable: the bible's CTA is "[PLACEHOLDER] Save Up to X%". The docx's "Take up to 40% Off" stays this skill's offer (Justin Junior, 2026-10-29) but differs from the bible: flag "Justin to fill the bible %" in SESSION.md. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > Source: `bpc157-creative-messaging-reference.docx` (Mitansh, 2026-10-29), which consolidates the Creative Messaging Reference page
@@ -13,7 +15,7 @@
 > - **Headlines:** Tier A = a hook from the lists below without a flag, verbatim or lightly trimmed. "Image – Pending approval"
 >   lines only with explicit approval (ask the user, flag for Jeremy). Tier B (fresh wording) max 2 per batch, PROPOSED, approved
 >   line by line (⚠ PENDING CREATIVE-LEAD CONFIRMATION, 2026-10-28 rule).
-> - **Disclaimer:** not in the docx or the bible; Mitansh confirmed (2026-10-29) the PT-141 wording for BPC-157. Stored verbatim in
+> - **Disclaimer:** the bible's BPC-157 page now carries it (sync 2026-11-03), the same PT-141 wording Mitansh confirmed (2026-10-29). Stored verbatim in
 >   `product.json`; flag "Jeremy to sign off" in every SESSION.md.
 
 ## Product facts for this skill
@@ -30,7 +32,7 @@
   with hooks + bullets, some with less text. The hook list also has a women's set (Pilates, barre, lifting, "soft life"): women →
   pinks, tans, beige (global: never orange or green). Everyone: no body-comparison or before/after imagery; no body-composition words.
 - **Offer:** "Take up to 40% Off" (CTA list). Price "as low as $180/mo" is NOT for ads (global: percent-off, never $).
-- **Landing page:** none live yet. H2 page in Claude Design (`/bpc-157/h2`, status Ready For Jeremy). Approved statics (Canva link in the docx).
+- **Landing page:** https://everlifemd.com/bpc-157/fb (bible, verified Nov. 3, 2026). H2 page in Claude Design (`/bpc-157/h2`, status Ready For Jeremy). Approved statics (Canva link in the docx).
 
 ## The angle (agreed with Mitansh, 2026-10-29: "Mix: a different angle per ad"; 4th angle added the same day)
 Rotate four angles across every batch; each ad gets one:

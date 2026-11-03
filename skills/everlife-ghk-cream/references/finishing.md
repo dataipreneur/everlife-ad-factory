@@ -2,8 +2,8 @@
 
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
-**Disclaimer:** `product.json` carries the PROVISIONAL standard ad disclaimer (bible: "Disclaimer pending"; Priestley 2026-11-02).
-The finishers add it verbatim; every SESSION.md says "provisional disclaimer: Jeremy to confirm".
+**Disclaimer:** `product.json` carries the standard ad disclaimer, now on the bible page too (sync 2026-11-03).
+The finishers add it verbatim.
 
 ## 0. Safe zones (every 9:16 image and video)
 Logo, headline, offer, CTA, captions and proof live only inside **x 156–924, y 144–1385, minus the Reels profile notch 156–375 ×

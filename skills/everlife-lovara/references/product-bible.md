@@ -1,5 +1,7 @@
 # Lovara — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 45%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 45%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible (https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG), synced into
 > `core/claude/creative-bible.md` (section "## Lovara"); copied 2026-10-30 after `bible_sync.py` reported no changes. Re-copy when the
 > bible changes. Global rules: `core/references/global-rules.md` (they win over anything here).
@@ -56,13 +58,14 @@
 | Apomorphine: "Boosts desire and emotional readiness" | ingredient claim | ⚠ Jeremy | "Boosts" = outcome; global "supports, never builds" |
 | Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
 | CTA: Support Your Spark | CTA | ❌ until Justin confirms | names another product (Spark); likely a copy error |
-| CTA: Explore Lovara · Get Started Now · Discover Lovara · Start Your Plan | CTA | ✅ | |
+| CTA: Save Up to 45% · Ships Free From Pharmacy · Explore Lovara · Discover Lovara · Start Your Plan | CTA | ✅ | Save Up to 45% = default (bible 2026-11-03) |
+| CTA: Get Started Now | CTA | ❌ | banned by the bible (2026-11-03) |
 | Save up to 45% | offer | ✅ | |
 
 Clean pools after the screen:
 - **Headlines (Tier A):** From Distant to Deeply Connected · Unlock Confidence, Desire & Connection · 3-in-1 Female Sexual Wellness Blend · Say Yes to More Pleasure, Desire & Intimacy (with care).
 - **Benefits:** the seven ✅ quick-hit lines + "Feel More Connected".
-- **CTAs:** Explore Lovara · Get Started Now · Discover Lovara · Start Your Plan.
+- **CTAs:** Save Up to 45% (default) · Ships Free From Pharmacy · Explore Lovara · Discover Lovara · Start Your Plan.
 - **Offer:** Save up to 45%.
 
 The headline pool is small (4 lines): say so up front and ask whether to allow Tier B, a ⚠ line with the user's OK, or new approved
@@ -111,9 +114,10 @@ More benefits & claims on page 18
 ### CTAs
 - CTA: Explore Lovara
 - CTA: Support Your Spark
-- CTA: Get Started Now
+- CTA: Save Up to 45%
 - CTA: Discover Lovara
 - CTA: Start Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent

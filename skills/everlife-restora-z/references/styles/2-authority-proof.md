@@ -12,7 +12,7 @@ Why it works for Restora-Z: it's a prescription product, so authority cues (doct
 - **Looks like (Clinical-Research):** a warm clinician (45–60, white coat, stethoscope) in a bright consult room listening to a tired patient (50s); the product large in the foreground.
 - **Image recipe:** GPT Image 2.5: "candid photo, a friendly female physician in her 50s in a sunlit consult room, listening to a tired man in his late 50s; the Restora-Z bottle (attached reference) large and sharp on the desk in the foreground with one capsule; top 22% and bottom 25% soft and clear."
 - **Video recipe:** Marketing Studio UGC, the clinician talking to camera: "Waking at three every night? Ask about a 3-in-1 prescription." (no diagnosis, no "I prescribe").
-- **Finishing:** `standard` layout; header from the bible (e.g. *Fall Asleep Fast, Stay Asleep*), 3 ingredient claims, CTA *Get Started Now*.
+- **Finishing:** `standard` layout; header from the bible (e.g. *Fall Asleep Fast, Stay Asleep*), 3 ingredient claims, CTA from the bible (never "Get Started Now": banned 2026-11-03; default *Ships Free From Pharmacy* while the offer is a placeholder).
 - **Guardrails:** AI disclosure is already in the verbatim disclaimer ("not actual … medical providers"); the doctor never names a disease or promises results; no "clinically proven Restora-Z".
 - **Starter concept:** "The 3 a.m. question": the doctor across the desk from a tired patient; headline *3-in-1 Sleep Support. No Narcotics.* (Any Ambien headline is gated: see 5A.)
 

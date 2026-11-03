@@ -1,5 +1,7 @@
 # Sermorelin — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 65%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 65%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > Source: ~/.claude/everlife/creative-bible.md (bible **v3**, imported 2026-10-29: pages 7 "Sermorelin — Men", 8 "more
@@ -25,7 +27,7 @@
 - **Form this skill advertises: the sublingual tablet only.** The bible says Sermorelin is "available as sublingual
   tablets or injections", but creative never mentions or shows needles, injections, vials or syringes (global rule), so
   injections are out of scope. Say "easy sublingual delivery". Never "all natural".
-- **The tablet is the hero.** Not confirmed yet (see `assets/MISSING_RENDERS.md`), but every current men's winner shows
+- **Focal-point mix (bible 2026-11-03):** 50% tablet / 25% bottle / 25% person. In tablet-focused ads the tablet is the hero. Not confirmed yet (see `assets/MISSING_RENDERS.md`), but every current men's winner shows
   a **round orange tablet with an embossed "S"**; an older women's winner shows an oblong tablet stamped "SERMORELIN".
 - **Strengths (this skill covers both tablets):** **1000 mcg** ("double strength") and **500 mcg** sublingual tablets,
   same price, per the Winning Ads Reference catalog (2026-10-28; recheck on the landing page). The men's page approves
@@ -81,7 +83,7 @@ Clean pools after the screen (small; say so when they run low and ask for Tier B
 - **Women headlines (Tier A):** Thrive After 35 · Rediscover Energy and Vitality · Stay Fit, Age Beautifully · Strength for Today, Vitality for Life.
 - **Benefits:** Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Supports Strength + Vitality ·
   (men, 1000 mcg only) 2x-Strength Growth Hormone Support.
-- **CTAs:** Explore Sermorelin · Get Started Now · Support Natural Growth Hormone · Build Your Plan.
+- **CTAs:** Save Up to 65% (default) · Ships Free From Pharmacy · Explore Sermorelin · Support Natural Growth Hormone · Build Your Plan.
 
 Everything else in the verbatim section is usable under its own label (Weak headline → avoid unless the brief asks).
 
@@ -140,9 +142,10 @@ Hormone Support
 CTA S
 Get Lean Today
 Explore Sermorelin
-Get Started Now
+Save Up to 65%
 Support Natural Growth Hormone
 Build Your Plan
+Ships Free From Pharmacy
 PROOF  &  VALUE  PROPS
 — Trustpilot rated 4.9 Excellent
 — Over 100,000 happy customers
@@ -214,9 +217,10 @@ Hormone Activity
 CTA S
 Get Lean Today
 Explore Sermorelin
-Get Started Now
+Save Up to 65%
 Support Natural Growth Hormone
 Build Your Plan
+Ships Free From Pharmacy
 PROOF  &  VALUE  PROPS
 — Trustpilot rated 4.9 Excellent
 — Over 100,000 happy customers

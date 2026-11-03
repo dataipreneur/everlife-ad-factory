@@ -1,5 +1,7 @@
 # GLP1 — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 59%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 59%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## GLP1"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
 
 ## Product facts for this skill
@@ -13,7 +15,7 @@
 - **Disclaimer:** GLP-1's own verbatim text (product.json), ending "Compounded medications are not FDA-approved."
 - **Weight-loss outcome lines:** ⚠ held for Jeremy (Priestley, 2026-10-30): the global rules ban body-composition, guaranteed-outcome
   and transformation claims.
-- **Landing page:** [PLACEHOLDER].
+- **Landing page:** https://everlifemd.com/glp1/fb-v2 (bible, verified Nov. 3, 2026).
 
 ## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
 
@@ -56,7 +58,9 @@
 | Supports Steady Weight-Loss Progress | more_benefits | Weak (bible) | avoid |
 | Start Weight Support | ctas | ✅ |  |
 | Explore GLP-1 | ctas | ✅ |  |
-| Get Started Now | ctas | ✅ |  |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
+| Save Up to 59% | ctas | ✅ | default CTA (bible 2026-11-03) |
+| Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
 | Check Your Options | ctas | ✅ |  |
 | Build Your Plan | ctas | ✅ |  |
 | Up to 59% off | offer | ✅ | percent only |
@@ -106,9 +110,10 @@ More headlines on page 38
 ### CTAs
 - CTA: Start Weight Support
 - CTA: Explore GLP-1
-- CTA: Get Started Now
+- CTA: Save Up to 59%
 - CTA: Check Your Options
 - CTA: Build Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -124,7 +129,7 @@ More headlines on page 38
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Landing pagehttps://everlifemd.com/glp1/fb-v2Last verified Nov. 3, 2026
 
 ### Headline bank
 GLP-1
