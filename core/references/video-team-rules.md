@@ -33,7 +33,8 @@
 - **Picked:** trap-metal (half-time trap drums, booming 808s, a crushing detuned riff) and the hip-hop / hard-rock walk-out.
   **Rejected:** taiko / tribal war-drums only. Offer 2 contrasting takes when the user doesn't like a track.
 
-## 5. Proven winners (rated 5 by Mitansh, 2026-11-03): reuse the format, never copy the lines
+## 5. Proven winners (Mitansh, 2026-11-03): reuse the format, never copy the lines
+- **All eight of 2026-11-03's videos are the reference set: `core/references/video-winners.md`** (frame sheets in `core/references/video-winners/`). Open it before every video concept.
 - **⚔️ Animated Warriors** (Wolverine Stack): `skills/everlife-wolverine/references/styles/7-animated-warriors.md`.
 - **🚗 Car Throw Review** (every tablet / capsule product): `core/references/car-throw-review.md`.
 

@@ -24,6 +24,14 @@ Priestley: "why is headline missing for few in prompt & outcome log?" → all 20
   (prints which gen records to re-send); the checker warns on a take with neither.
 - Prompt log: column "Headline / hook" (videos show the opening spoken line), "missing" flag, and a data-quality line.
 
+## 2026-11-03 — 🏆 Video winners reference set (every video skill)
+Mitansh: "These videos should be refered! BY all video making skills man! Whatever videos I made today all were amazing!"
+- New `core/references/video-winners.md` + 8 frame sheets in `core/references/video-winners/` (Wolverine Animated Warriors + Run-Through; SGHK Car Throw Review, Comic Gauge, Comic Heist, AI Avatar Edge Reloaded, Three Orbs; Restora-Z Car Throw Review): format, why it works, recipe, cost, and the shared rules all eight follow.
+- 🏆 banner in all 16 `skills/*/SKILL.md`; `video-team-rules.md` §5 points to it.
+- Review (Priestley: "bring in the new PR"): a "Known flaws" list (W3/W4 "Get started now", W3 open bottle with a tablet pile,
+  W4 testimonial-style line, W5/W6 no captions) and captions + stack peptide list added to the shared rules; merged with main
+  (both banners kept in Spartan / Wolverine).
+
 ## 2026-11-03 — Team logs: data quality built in (branch `teamlogs-quality`)
 Priestley asked to fix the logging system after Mitansh's first (backfilled) records showed summaries instead of prompts, empty
 refs, date-only times, re-take counts that didn't match, a banned CTA labelled "bible ✅", a missing CTA line and caption-free
