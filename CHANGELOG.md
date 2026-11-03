@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Winners Board locked for reading too (branch `board-lock-read`)
+Priestley: "yes lock reading too. they shoudnt see any error though". Until teammates update, their old skills still READ the
+board; now only Owner/Editors can read it (db rules `read: "admin"`). Non-editors opening the page see only the "Paused"
+notice (no lists, no red status). Originals: `_originals/2026-11-03/board-lock-read/`.
+
 ## 2026-11-03 — Winners Board paused: rating/feedback loop unplugged (branch `board-pause`)
 Logged before editing. Priestley: "Can we somehow unplug the rating or feedback system? We might need a new way to refine the
 system." → pause, freeze the page (read-only, data kept). Reversible: one switch (`PAUSED` in WINNERS-BOARD.md + the page).
