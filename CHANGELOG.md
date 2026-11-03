@@ -12,6 +12,8 @@ Originals: `_originals/2026-11-03/logs-video-routes/`.
 - Restora-Z: the same two lines the other 14 skills got (`image-batch.md` before §1b, `finishing.md` before §4).
 - Verified the same day: all three pages accept a Contributor-level write (self-test rows written and deleted).
 - `TEAM-LOGS.md` §2 step 4 no longer says "the Winners Board as today" (paused).
+- **Videos log as they go** (Priestley: "yes add it", after Mitansh's unfinished video left nothing in the logs): every skill's `video-prompting.md` and the three recipes write each still/clip/music `gen` record the moment the job is submitted, then update it after QA; `finishing.md` adds only copy, proof and spend; TEAM-LOGS §2.3 says so.
+- Coverage check (Priestley: "I hope all products are covered and also both images/videos have it"): all 15 product skills carry the line in `image-batch.md`, `finishing.md` and `video-prompting.md`; added to the 7 `animated-still.md` files (BPC-157, Epithalon, GLP-1, MOTS-c, NAD+, Spartan, Wolverine) and to the new-product checklist.
 
 ## 2026-11-03 — Gates: AI avatar model routing (branch `gates-avatar-routing`)
 Logged before editing. The gates sent "talking head" to Boreal-style; Mitansh's all-Creatify avatar rule (2026-11-02) routes the

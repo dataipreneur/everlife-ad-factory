@@ -51,7 +51,7 @@ breakdown to camera, ending on an urgent spoken CTA. It's simple UGC, and it doe
 5. **Finish:** `premium_finish.py` (Black Label suited it; rotate styles) with **the header for the first ~5.5 s, then logo only**
    (render a full version + a logo-only version and overlay the full one with `fade=out:st=5.5:d=0.3:alpha=1`); captions
    hand-timed from word-level whisper (shifted by the speed-up); `"end"` = last word + 0.1 s; proof from `proof_next.py`.
-6. **Team logs:** before writing the script, read this product's Copy Ledger rows (never reuse a logged hook, line or CTA). Log every paid generation (still, clip, music) to the Prompt & Outcome Log (inputs, exact prompt, refs, model, credits, QA result), the final video's spoken lines, captions, CTA and proof to the Copy Ledger, and the run's spend to the Activity & Spend Log. Unreachable → the pending file, never block.
+6. **Team logs:** before writing the script, read this product's Copy Ledger rows (never reuse a logged hook, line or CTA). Log every paid generation (still, clip, music) to the Prompt & Outcome Log **the moment its job is submitted** (inputs, exact prompt, refs, model, credits), then update that record after QA (pass/fail, reasons, re-takes), the final video's spoken lines, captions, CTA and proof to the Copy Ledger, and the run's spend to the Activity & Spend Log. Unreachable → the pending file, never block.
 7. **QA:** throw fast and readable, the bottle sealed, exactly one loose pill, the name said and captioned correctly, the label never
    mirrored. Show the raw right away; any paid re-take needs an explicit go (the free fixes above come first).
 

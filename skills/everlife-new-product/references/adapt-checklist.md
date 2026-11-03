@@ -49,7 +49,8 @@ disclaimer verbatim · landing page (facts only).
   table and ends "After the batch" with the "Rate the batch (Winners Board)" step, both pointing at
   `core/winners-board/WINNERS-BOARD.md` (§4 read, §5 write). Use the new product's `product.json` id as `product` on the board.
 - **Team logs (REQUIRED, Priestley 2026-11-03).** `references/image-batch.md` and `references/finishing.md` each carry the
-  "Team logs" line pointing at `core/team-logs/TEAM-LOGS.md` (Copy Ledger read before copy; Prompt log per generation; copy,
+  "Team logs" line, and `references/video-prompting.md` (and `animated-still.md` if the skill has one) carries the "Team logs, as you go"
+  line (each clip logged the moment it is submitted, 2026-11-03) pointing at `core/team-logs/TEAM-LOGS.md` (Copy Ledger read before copy; Prompt log per generation; copy,
   styles, proofs and the run's spend after the batch).
 
 ## 3b. Lessons from the 7-product build (2026-11-02): check these before the first test
