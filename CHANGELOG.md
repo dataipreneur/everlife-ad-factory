@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — 🏆 Video winners reference set (every video skill)
+Mitansh: "These videos should be refered! BY all video making skills man! Whatever videos I made today all were amazing!"
+- New `core/references/video-winners.md` + 8 frame sheets in `core/references/video-winners/` (Wolverine Animated Warriors + Run-Through; SGHK Car Throw Review, Comic Gauge, Comic Heist, AI Avatar Edge Reloaded, Three Orbs; Restora-Z Car Throw Review): format, why it works, recipe, cost, and the shared rules all eight follow.
+- 🏆 banner in all 16 `skills/*/SKILL.md`; `video-team-rules.md` §5 points to it.
+
 ## 2026-11-03 — Team logs: data quality built in (branch `teamlogs-quality`)
 Priestley asked to fix the logging system after Mitansh's first (backfilled) records showed summaries instead of prompts, empty
 refs, date-only times, re-take counts that didn't match, a banned CTA labelled "bible ✅", a missing CTA line and caption-free
