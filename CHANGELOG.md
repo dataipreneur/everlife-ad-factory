@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Prompt log: headline / hook on every generation (branch `teamlogs-headline`)
+Priestley: "why is headline missing for few in prompt & outcome log?" → all 20 backfilled rows had an empty `copy`, and
+`teamlog.py gen` wrote it empty too. "yes fix it, push and merge". Originals: `_originals/2026-11-03/teamlogs-headline/`.
+- `teamlog.py gen --headline / --hook / --cta`; `teamlog.py copy` fills any blank headline / hook / CTA on that ad's takes
+  (prints which gen records to re-send); the checker warns on a take with neither.
+- Prompt log: column "Headline / hook" (videos show the opening spoken line), "missing" flag, and a data-quality line.
+
 ## 2026-11-03 — Team logs: data quality built in (branch `teamlogs-quality`)
 Priestley asked to fix the logging system after Mitansh's first (backfilled) records showed summaries instead of prompts, empty
 refs, date-only times, re-take counts that didn't match, a banned CTA labelled "bible ✅", a missing CTA line and caption-free

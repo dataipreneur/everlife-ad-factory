@@ -6,6 +6,7 @@ first and a local copy stays in the job folder.
   teamlog.py gen   <job> --run-id R --ad-id A --product P --model M --prompt-file F [--ref-type T --ref-id I] [--refs a,b]
                    [--cost-creatify N] [--cost-higgsfield N] [--ratio 9:16] [--resolution 720p] [--setup k=v ...] [--ask "..."]
                    [--retake-of <doc_id of the take it replaces>] [--edited-by-user]  (the operator rewrote the prompt themselves)
+                   [--headline "..." (images) | --hook "<opening spoken line>" (videos)] [--cta "..."]   the copy this take carries
                    → copies the exact prompt to <job>/prompts/NN.txt, writes gen-<run>-NN.json (call it when the job is SUBMITTED)
   teamlog.py qa    <job> <doc_id> --pass | --fail [--reason "..."] [--result-file out/raw.mp4]
   teamlog.py tool  <job> <doc_id> --file F --source "<the read call>"   what the TOOL actually ran (an expanded prompt, a
@@ -186,6 +187,9 @@ def check(rec):
         qa = rec.get("qa") or {}
         if EXPANDS.search(rec.get("model", "")) and qa.get("pass") is not None and not rec.get("tool_prompt"):
             W.append("gen: this tool writes its own prompt/script: read it back and save it (`teamlog.py tool`)")
+        cp = rec.get("copy") or {}
+        if not (cp.get("headline") or cp.get("hook")) and not NO_REFS_OK.search(rec.get("model", "")):
+            W.append("gen: no headline / hook on this take (--headline for images, --hook for videos; `teamlog.py copy` fills it after the batch)")
         if qa.get("pass") is None:
             W.append("gen: QA not recorded yet (update it with `teamlog.py qa`)")
     elif t == "copy":
@@ -251,7 +255,8 @@ def cmd_gen(a):
     rec = {"type": "gen", "run_id": a.run_id, "ad_id": a.ad_id, "product": a.product, "created_at": now(), "model": a.model,
            "prompt": text, "prompt_file": os.path.relpath(pf, a.job), "refs": [r for r in (a.refs or "").split(",") if r],
            "ref": {"type": a.ref_type, "id": a.ref_id or ""}, "reference": a.ref_id or "", "setup": kv(a.setup), "asks": a.ask or [],
-           "settings": {"ratio": a.ratio, "resolution": a.resolution}, "copy": {}, "result_file": "",
+           "settings": {"ratio": a.ratio, "resolution": a.resolution},
+           "copy": {k: v for k, v in (("headline", a.headline), ("hook", a.hook), ("cta", a.cta)) if v}, "result_file": "",
            "qa": {"pass": None, "reasons": []}, "rerolls": 0, "retake_of": a.retake_of or "",
            "prompt_by": "operator" if a.edited_by_user else "claude", "feedback": [],
            "cost": {"creatify": a.cost_creatify, "higgsfield": a.cost_higgsfield}}
@@ -339,7 +344,20 @@ def cmd_copy(a):
         l["source"] = label_line(l["text"], l["kind"], a.product, a.kind)[0]
     rec = {"type": "copy", "product": a.product, "ad_id": a.ad_id, "ad": a.ad or a.ad_id, "run_id": a.run_id, "audience": a.audience,
            "date": now()[:10], "media": a.kind, "lines": lines, "status": "draft"}
-    return write(a.job, f"copy-{a.ad_id}", rec)
+    rc = write(a.job, f"copy-{a.ad_id}", rec)
+    # Fill the headline / hook / CTA on every take of this ad that has none, so the Prompt log never shows a blank (re-send those).
+    first = lambda kinds: next((l["text"] for l in lines if l["kind"] in kinds), "")
+    fill = {"headline": first(("headline",)), "hook": first(("hook", "vo", "caption")), "cta": first(("cta", "offer"))}
+    for doc, g in records(a.job).items():
+        if g.get("type") != "gen" or g.get("ad_id") != a.ad_id:
+            continue
+        cp = g.setdefault("copy", {})
+        new = {k: v for k, v in fill.items() if v and not cp.get(k)}
+        if new:
+            cp.update(new)
+            json.dump(g, open(os.path.join(a.job, "teamlog", doc + ".json"), "w"), ensure_ascii=False, indent=1)
+            print(f"↻ {doc}: copy filled ({', '.join(new)}): re-send this gen record")
+    return rc
 
 
 def cmd_proof(a):
@@ -435,6 +453,7 @@ def main():
     g.add_argument("--ratio", default=""); g.add_argument("--resolution", default="")
     g.add_argument("--setup", nargs="*"); g.add_argument("--ask", action="append")
     g.add_argument("--retake-of"); g.add_argument("--edited-by-user", action="store_true")
+    g.add_argument("--headline"); g.add_argument("--hook"); g.add_argument("--cta")
     t = sp.add_parser("tool"); t.add_argument("job"); t.add_argument("doc_id"); t.add_argument("--source")
     tg = t.add_mutually_exclusive_group(required=True); tg.add_argument("--file"); tg.add_argument("--none", action="store_true")
     n = sp.add_parser("note"); n.add_argument("job"); n.add_argument("doc_id"); n.add_argument("--ask", action="append", required=True)
