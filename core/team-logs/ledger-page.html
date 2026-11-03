@@ -75,6 +75,7 @@ a { color: var(--accent); }
 <div class="bar">
   <div class="wrap">
     <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
+    <label class="inline" for="fPerson">Person <select id="fPerson"><option value="">Everyone</option></select></label>
     <label class="inline" for="fStatus">Status <select id="fStatus"><option value="">Any</option><option value="draft">Draft</option><option value="approved">Approved</option><option value="live">Live</option></select></label>
     <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in any line"></label>
   </div>
@@ -111,12 +112,22 @@ a { color: var(--accent); }
   function setStatus(m, warn) { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); }
   const of = (t) => [...state.docs.values()].filter(d => d.type === t);
 
+
+  // Person filter: one option per person who wrote rows (names from their claude.ai accounts), plus "Imported" where relevant.
+  function fillPeople(ids, who, extra) {
+    const s = $("fPerson"), cur = s.value;
+    const opts = ids.map(id => [id, who(id)]).sort((a, b) => a[1].localeCompare(b[1]));
+    s.replaceChildren(h("option", { value: "" }, "Everyone"), ...opts.map(([v, l]) => h("option", { value: v }, l)), ...(extra || []).map(([v, l]) => h("option", { value: v }, l)));
+    s.value = [...s.options].some(o => o.value === cur) ? cur : "";
+  }
   async function render() {
-    const prod = $("fProduct").value, st = $("fStatus").value, txt = $("fText").value.trim().toLowerCase();
+    const prod = $("fProduct").value, st = $("fStatus").value, per = $("fPerson").value, txt = $("fText").value.trim().toLowerCase();
     const ids = [...new Set([...state.docs.values()].map(d => d.by).filter(Boolean))];
     if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
     const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
-    const copy = of("copy").filter(d => (!prod || d.product === prod) && (!st || d.status === st) &&
+    fillPeople(ids.filter(id => of("copy").some(d => d.by === id && !d.imported)), who, of("copy").some(d => d.imported) ? [["__imported", "Imported (old copy logs)"]] : []);
+    const byPerson = (d) => !per || (per === "__imported" ? !!d.imported : (d.by === per && !d.imported));
+    const copy = of("copy").filter(d => byPerson(d) && (!prod || d.product === prod) && (!st || d.status === st) &&
       (!txt || (d.lines || []).some(l => String(l.text || "").toLowerCase().includes(txt)) || String(d.ad || "").toLowerCase().includes(txt)))
       .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
     $("countChip").textContent = of("copy").length + " ads";
@@ -150,7 +161,7 @@ a { color: var(--accent); }
   }
   async function start() {
     $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
-    for (const id of ["fProduct", "fStatus"]) $(id).addEventListener("change", render);
+    for (const id of ["fProduct", "fStatus", "fPerson"]) $(id).addEventListener("change", render);
     $("fText").addEventListener("input", queue);
     if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to see the ledger.", true); $("roleChip").textContent = "Offline"; return; }
     const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);

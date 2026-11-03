@@ -85,6 +85,7 @@ ul.plain { margin: 0; padding-left: 18px; }
     <label class="inline" for="fStyle">Style <select id="fStyle"><option value="">Any style</option></select></label>
     <label class="inline" for="fModel">Model <select id="fModel"><option value="">Any model</option></select></label>
     <label class="inline" for="fQa">QA <select id="fQa"><option value="">Pass or fail</option><option value="pass">Passed</option><option value="fail">Failed</option></select></label>
+    <label class="inline" for="fPerson">Person <select id="fPerson"><option value="">Everyone</option></select></label>
     <label class="inline" for="fRef">Built from <select id="fRef"><option value="">Any reference</option></select></label>
     <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in the prompt"></label>
   </div>
@@ -139,6 +140,13 @@ ul.plain { margin: 0; padding-left: 18px; }
   const styleOf = (g) => (g.setup && (g.setup.style || g.setup.mood)) || "";
   const qaOf = (g) => (g.qa && typeof g.qa.pass === "boolean" ? (g.qa.pass ? "pass" : "fail") : "");
   const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
+  // Person filter: one option per person who wrote rows (names from their claude.ai accounts), plus "Imported" where relevant.
+  function fillPeople(ids, who, extra) {
+    const s = $("fPerson"), cur = s.value;
+    const opts = ids.map(id => [id, who(id)]).sort((a, b) => a[1].localeCompare(b[1]));
+    s.replaceChildren(h("option", { value: "" }, "Everyone"), ...opts.map(([v, l]) => h("option", { value: v }, l)), ...(extra || []).map(([v, l]) => h("option", { value: v }, l)));
+    s.value = [...s.options].some(o => o.value === cur) ? cur : "";
+  }
   function fillSelect(id, values, label) {
     const s = $(id), cur = s.value;
     s.replaceChildren(h("option", { value: "" }, label), ...values.map(v => h("option", { value: v }, v)));
@@ -169,8 +177,9 @@ ul.plain { margin: 0; padding-left: 18px; }
     if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
     fillSelect("fStyle", [...new Set(all.map(styleOf).filter(Boolean))].sort(), "Any style");
     fillSelect("fModel", [...new Set(all.map(g => g.model).filter(Boolean))].sort(), "Any model");
-    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, txt = $("fText").value.trim().toLowerCase();
-    const gs = all.filter(g => (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) &&
+    fillPeople(ids, who);
+    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, per = $("fPerson").value, txt = $("fText").value.trim().toLowerCase();
+    const gs = all.filter(g => (!per || g.by === per) && (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) &&
       (!txt || String(g.prompt || "").toLowerCase().includes(txt) || String((g.copy && g.copy.headline) || "").toLowerCase().includes(txt)))
       .sort((a, b) => String(b.created_at || "").localeCompare(String(a.created_at || "")));
     $("countChip").textContent = all.length + (all.length === 1 ? " generation" : " generations");
@@ -204,7 +213,7 @@ ul.plain { margin: 0; padding-left: 18px; }
   async function start() {
     $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
     $("fRef").append(...REF_TYPES.map(([v, l]) => h("option", { value: v }, l)), h("option", { value: "unlogged" }, "Not logged"));
-    for (const id of ["fProduct", "fStyle", "fModel", "fQa", "fRef"]) $(id).addEventListener("change", render);
+    for (const id of ["fProduct", "fStyle", "fModel", "fQa", "fRef", "fPerson"]) $(id).addEventListener("change", render);
     $("fText").addEventListener("input", queue);
     $("detClose").addEventListener("click", () => $("detDlg").close());
     $("detDlg").addEventListener("click", (e) => { if (e.target === $("detDlg")) $("detDlg").close(); });

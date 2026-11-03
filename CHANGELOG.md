@@ -18,6 +18,8 @@ better prompting is most likely helpful". Originals: `_originals/2026-11-03/team
 - **What each generation was built from** (Priestley: "will our logs see if we are using winners or other references?"): `gen.ref`
   = `{type, id, parent_ad_id, changed}`, type one of board_winner · meta_winner · style_board · hardcore_ref · product_example ·
   outside · hook_engine · none. Prompt log page: "Built from" filter, column and summary tile; the learning report compares by type.
+- **Person filter** on the Copy Ledger and the Prompt log (Priestley): one option per person who wrote rows (account names); the
+  Copy Ledger also offers "Imported (old copy logs)".
 
 ## 2026-11-02 — Hardcore men: shirtless / bodybuilder casting for the men's-muscle products, 40% of random slots (branch `hardcore-men-40`)
 Jeremy's direction (via Mitansh): bodybuilding / men's-muscle products recommend intense, shirtless, hardcore models and images,
