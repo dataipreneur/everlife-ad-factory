@@ -67,6 +67,10 @@ Peptide stacks — all peptides listed (mandatory)
 - —Keep the layout clean and premium. The peptide list never overwhelms the primary headline or product imagery.
 - —Applies to every concept, variation and format, including 4:5 and 9:16.
 - —Applies to all current and future peptide stacks, not just the ones listed below.
+Article-style (advertorial) bylines
+- —Male-focused article ads are written by “Brian L.”
+- —Female-focused article ads are written by “Erika S.”
+- —Unisex article ads can be written by either “Brian L.” or “Erika S.”
 Peptides by stack
 - —Spartan Stack: BPC-157, TB-500, KPV
 - —Wolverine Stack: BPC-157, TB-500 — confirm against the official product page, everlifemd.com/wolverine/fb

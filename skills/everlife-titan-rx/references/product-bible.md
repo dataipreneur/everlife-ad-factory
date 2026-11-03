@@ -1,6 +1,7 @@
 # Titan-Rx — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 49%" is now a bible CTA, but Offers & conversion still says [VERIFY CURRENT]: this skill keeps "no offer until verified" (rule 3). "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Titan-rx for $1.50/day" is in the bible, but **held**: the Titan-Rx offer is still [VERIFY CURRENT] (rule 3). Not used until Justin confirms; on creative the name is "Titan-Rx". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## Titan-rx", version 1793642193-f927),
 > copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` and
@@ -162,6 +163,7 @@ More headlines on page 35
 - CTA: Save Up to 49%
 - CTA: Start Daily Support
 - CTA: Find Your Plan
+- CTA: Titan-rx for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs

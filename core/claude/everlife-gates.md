@@ -54,6 +54,8 @@ Disclaimers & AI disclosure:
 - Bullet type readable at story size; don't over-bullet. Text legible for age **50+**; spelling checked.
 - Capitalization consistent within a headline set, benefit list or CTA row: never mix Title Case and sentence case (bible 3 Nov 2026).
 - Must hold up in square and vertical. Never end on a passive frame — last frame is benefits + a clear, specific CTA.
+- **Price CTAs** (bible 3 Nov 2026): each product's "<product> for $N/day" CTA from its bible page is an approved alternative CTA; the offer CTA ("Save Up to N%") stays the default. It is the only $ amount allowed in ads (the "percent-off, not dollar prices" default still holds for everything else). Sermorelin: "Starting at $95/month" on 10% of Sermorelin creatives. Titan-Rx's $/day is held while its offer is [VERIFY CURRENT]; Spark's needs the user's OK (its CTA list is Pending approval); GHK cream on Meta/Google/TikTok: "GHK Peptide Cream for $1.50/day".
+- **Advertorial bylines** (bible 3 Nov 2026): article-style ads carry a byline: men "Brian L.", women "Erika S.", unisex either. ⚠ Needs Jeremy before any byline ad runs (a named author on an AI-made advertorial); flag it in SESSION.md.
 - **Peptide stacks list every peptide** (bible 3 Nov 2026, mandatory): every ad for a stack shows each peptide, legibly, as supporting copy, a subheadline or an ingredient callout, never overwhelming the headline or product; every concept, variation and format (4:5, 9:16; videos on screen, at least on the end card). Spartan = BPC-157 / TB-500 / KPV · Wolverine = BPC-157 / TB-500 · Klow = BPC-157 / GHK / KPV / TB-500 · Glow = [PLACEHOLDER]. The stack name alone fails.
 - **Never "Get Started Now" as a CTA** (bible 3 Nov 2026): lead with the offer ("Save Up to N%", the product's current % from its bible page); "Ships Free From Pharmacy" is the bible CTA where the % is still a placeholder.
 - **Everlife logo on every ad.**
@@ -106,6 +108,7 @@ Higgsfield (Marketing Studio only) and Creatify (Seedance, stills, Boreal, music
 - NAD+ (non-Optima) product page not imported.
 - No ad disclaimers on file for Parts B/C products.
 - AI disclosure wording mismatch (global vs product disclaimer).
+- Advertorial bylines ("Brian L." / "Erika S.", 3 Nov 2026): Jeremy to approve before use. Titan-Rx $1.50/day CTA held until its offer is verified.
 - Klow Stack's bible page lists "GHK-Cu" (stack rule, 3 Nov 2026) but the global Hard NO says creative uses "GHK": Justin to confirm before any Klow ad. Glow Stack's peptides are [PLACEHOLDER].
 - Bible source: Claude Design project 8cc4e3fe-5189-436d-aaba-6eb2320f14c6 (standalone Claude Design closes 14 Dec 2026). Re-import when it changes.
 

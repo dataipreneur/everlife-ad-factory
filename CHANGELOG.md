@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Bible sync to 1793746711-6285: $/day CTAs, Sermorelin $95/month, advertorial bylines (branch `bible-sync-6285`)
+Justin's update: a "<product> for $N/day" CTA on most products; Sermorelin "Starting at $95/month" on 10% of creatives; article ads
+bylined "Brian L." (men) / "Erika S." (women). Priestley: "yes sync it". Originals: `_originals/2026-11-03/bible-sync-6285/`.
+- Repo bible written; verbatim sections re-copied (10 swapped whole; PT-141, Restora-Z, Sermorelin, Sermorelin GHK patched; BPC-157's
+  verbatim is the docx). A "Price CTA" note in each skill: an approved alternative, the offer stays the default, the only $ amount
+  allowed. Sermorelin plans the $95/month CTA on 1 in 10. Titan-Rx's $/day held (offer [VERIFY CURRENT]); Spark's needs an OK (list
+  pending); GHK cream uses "GHK Peptide Cream" on Meta/Google/TikTok; Spartan has none.
+- Gates + global rules: price CTAs; bylines added but ⚠ Jeremy before use (named author on an AI-made advertorial).
+
 ## 2026-11-03 — Team logs: automatic capture hooks (branch `teamlog-hooks`)
 Priestley: "Are you sure claude will log every time into those artifacts?" → "yes build it, push and merge".
 - New `core/hooks/teamlog_hook.py`: `capture` (PostToolUse) writes every paid Creatify / Higgsfield generation call with its exact

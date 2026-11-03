@@ -1,6 +1,7 @@
 # GHK-Cu Cream — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 75%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 75%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "GHK-Cu Cream for $1.50/day" in the bible; on Meta / Google / TikTok write it "GHK Peptide Cream for $1.50/day" (the channel naming rule). An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## GHK-Cu Cream"), copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
 
@@ -102,6 +103,7 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 - CTA: Save Up to 75%
 - CTA: Support Firmer Skin
 - CTA: Start Skin Renewal
+- CTA: GHK-Cu Cream for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
