@@ -112,7 +112,7 @@ approved static + 8 s of motion, Seedance; a follow-up question picks which)" / 
 1. **Angle:** "Mix: a different angle per ad (Recommended)" / "Bounce back" ("Bounce Back Stronger" (⏳), "Supports Mobility") / "Tendons + ligaments" ("Supports Tendons + Ligaments") / "All in one stack" ("Supports Joints, Gut + Mobility in One Stack", "Supports Gut Lining Health").
 2. **How bold on copy:** "Safe: approved benefit lines as headlines (Recommended)" / "Use bible headlines (⏳, I OK each line)" /
    "Bold: one PROPOSED line". Every ⏳ or PROPOSED line needs the user's explicit OK and goes to Jeremy.
-3. **CTA:** "Explore the Wolverine Stack" / "Build Your Recovery Protocol" / "Get Started Now" / "Support Whole-Body Recovery" / "Start Your Stack" (all ✅; first = Recommended).
+3. **CTA:** "Save Up to 39%" / "Ships Free From Pharmacy" / "Explore the Wolverine Stack" / "Build Your Recovery Protocol" / "Support Whole-Body Recovery" / "Start Your Stack" (all ✅; first = Recommended). Never "Get Started Now" (bible, 2026-11-03).
 
 **Images** → then `references/image-batch.md` §2 (mood, copy density, people, how many in one more round, then the table).
 **Video** → ONE more AskUserQuestion: **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" · **Style**

@@ -7,7 +7,7 @@ room, object, cast and angle every time. "Bridge" = the ✅ line from `product-b
 shots, video shoulder-up, clothed, candid men and women 30–65, daylight or warm evening light. The tablet is the hero (exactly ONE,
 larger than the bottle); it never spills. Never tie a benefit to one ingredient; never a timing promise ("tonight", "in minutes",
 "instant"). No wine or other alcohol near the product (PT-141's wine was flagged for Jeremy). Never Marketing Studio "Spicy" or "Epic
-Fail". CTA "Get Started Now" is PROVISIONAL. VO: "Spark by Ever-life".
+Fail". CTA "Get Started Now" is now banned (bible 2026-11-03): use "Save Up to 51%" (provisional). VO: "Spark by Ever-life".
 
 1. SAME-FRAME FLIP · A chaotic weeknight kitchen (two laptops, timers, phones) → the same frame, laptops closed, a shared laugh, the product on the counter. Bridge: "Spontaneity, Back On".
 2. SOUND-FIRST · A vinyl record starts at 0.0 s; they dance in the living room, shoulder-up. Bridge: "Ignite Connection. Fuel Confidence."

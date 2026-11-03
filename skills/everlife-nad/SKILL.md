@@ -81,7 +81,7 @@ everyday, an ordinary non-famous face).
 > **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 **Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "✨ Ultra
 premium, product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Warm and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" (the question shows 4; "Surprise me" via Other) · **Copy density** "Headline +
-3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Explore NAD+" / "Choose Your Form" / "Get Started Now" / "Start Your Plan" / "Recharge Your Cells" · **How many** "4 (Recommended)" / "8".
+3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Save Up to 62% (Recommended; tablet-only ads: Save Up to 56%)" / "Ships Free From Pharmacy" / "Explore NAD+" / "Choose Your Form" ("Start Your Plan", "Recharge Your Cells" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body or a brand), one script at a time

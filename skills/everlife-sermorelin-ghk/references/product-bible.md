@@ -1,5 +1,7 @@
 # Sermorelin GHK — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 47%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 47%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > Source: ~/.claude/everlife/creative-bible.md (Part A, pages "Sermorelin GHK — Men / Women", headline banks, ingredient claims), copied 2026-10-28; **checked against the v3 master export on 2026-10-29: the Sermorelin GHK pages are identical to the "APPROVED UPDATE" section below** (v3 also adds the men's direction "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel." and drops the women's palette rule). Re-copy when the bible changes. **Updated 2026-10-29 with Justin Junior's approved Creative Messaging Reference** (Justin owns marketing for this product; approved per Priestley): the "APPROVED UPDATE" section below **wins over the older bible copy where they differ**. That section plus the older verbatim section are the ONLY approved copy for Sermorelin GHK. Global rules: `core/references/global-rules.md` (they win over anything here).
@@ -41,8 +43,8 @@ The bible's ingredient-claim lists were never annotated the way the headline lis
 | "muscle recovery" (any wording) | everywhere | ❌ | **Justin:** say "exercise recovery", never "muscle recovery" |
 | Any direct claim (product promises an outcome) | everywhere | ❌ | **Justin: "No direct claims."** Read with the global rule: mechanism / ingredient first, "supports", never a promised result (exact scope: ask Justin if a line is borderline) |
 | Supports skin tightening, wound healing, and hair regrowth | GHK claim | ⚠ Jeremy | "wound healing" / "hair regrowth" read as treatment claims |
-| Synergizes with Growth Hormone pathways to accelerate repair and regeneration | GHK claim | ⚠ Jeremy | "accelerate" is an exaggerated outcome |
-| Stimulates natural Growth Hormone and IGF-1 production | Sermorelin claim | ✅ | mechanism line (the global rule says lead with mechanism) |
+| Synergizes with growth hormone pathways to accelerate repair and regeneration | GHK claim | ⚠ Jeremy | "accelerate" is an exaggerated outcome |
+| Stimulates natural growth hormone and IGF-1 production | Sermorelin claim | ✅ | mechanism line (the global rule says lead with mechanism) |
 | Supports a lean, defined physique · Helps You Look Lean + Toned · "Forge a Stronger Physique" · "Lean. Defined. Glowing." · "Lean. Strong. Defined" | various | ⚠ Jeremy | "lean/toned" are approved words, but "physique"/"defined" drift into body composition — use sparingly, never with a body shot |
 | "Promotes Youthful-Looking Skin & Thicker Hair", "One Daily Tablet for Muscle, Skin + Hair" on **women's** creative | quick-hit (Women page) | ⚠ Justin/Jeremy | Justin's page lists both for women, but its benefit scope still says "hair thickening (male)"; drop hair on women's creative until that's confirmed |
 | GLP-1 complement headlines | headline lists | ✅ with care | no named product; never imply it replaces or is a GLP-1; if a compounded GLP-1 is shown/named it must carry "compounded" |
@@ -78,7 +80,7 @@ Source: Creative Messaging Reference, Men product page and headline bank (images
 Line: Men’s Health
 Who it’s for: Men 35–60 who want lean muscle, strength and growth hormone support from one formula.
 Creative direction
-Benefit scope: skin, visceral fat, lean muscle, Growth Hormone drive, hair thickening (male).
+Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
 Ingredient list reads Sermorelin, GHK, Citrulline.
 Headlines & hooks (product page)
 Age Hits Growth Hormone. Hit Back.
@@ -125,7 +127,7 @@ Source: Creative Messaging Reference, Women product page and headline bank (imag
 Line: Women’s Health
 Who it’s for: Women 35–60 who want tone, strength and skin glow from one formula.
 Creative direction
-Benefit scope: skin, visceral fat, lean muscle, Growth Hormone drive, hair thickening (male).
+Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
 Ingredient list reads Sermorelin, GHK, Citrulline.
 Headlines & hooks (product page)
 Tone, Tighten, Glow
@@ -166,9 +168,10 @@ Helps You Look Lean + Toned
 Source: Creative Messaging Reference, Men and Women product pages (images)
 Unlock 3-in-1 Support
 Explore Sermorelin GHK
-Get Started Now
+Save Up to 47%
 Support Strength + Vitality
 Start Your Plan
+Ships Free From Pharmacy
 7. Proof & value props
 Source: Creative Messaging Reference, Men and Women product pages (images)
 Trustpilot rated 4.9 Excellent
@@ -187,7 +190,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 Sermorelin
 Supports metabolism and lean muscle tone
 Supports natural growth hormone production
-Stimulates natural Growth Hormone and IGF-1 production
+Stimulates natural growth hormone and IGF-1 production
 Promotes lean muscle growth and fat loss
 Enhances sleep quality and cellular repair
 A foundation for healthy aging, strength and vitality
@@ -197,7 +200,7 @@ Supports skin tightening, wound healing, and hair regrowth
 Promotes radiant, firmer, youthful-looking skin and fuller hair
 Protects and repairs DNA and tissue damage at the cellular level
 Enhances skin tone, firmness, and youthful appearance
-Synergizes with Growth Hormone pathways to accelerate repair and regeneration
+Synergizes with growth hormone pathways to accelerate repair and regeneration
 L-Citrulline Malate
 Boosts stamina and muscle performance
 Supports nitric oxide production
@@ -223,7 +226,7 @@ AI-generated depictions and simulated portrayals used for illustrative advertisi
 Who it's for
 Men 35–60 who want lean muscle, strength and growth hormone support from one formula.
 Creative direction
-- —Benefit scope: skin, visceral fat, lean muscle, Growth Hormone drive, hair thickening (male).
+- —Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
 - —Ingredient list reads Sermorelin, GHK, Citrulline.
 Men’s health
 Longevity + skin · Men
@@ -252,9 +255,10 @@ Quick-hit benefits
 CTAs
 - Unlock 3-in-1 Support
 - Explore Sermorelin GHK
-- Get Started Now
+- Save Up to 47%
 - Support Strength + Vitality
 - Start Your Plan
+- Ships Free From Pharmacy
 Proof & value props
 - —Trustpilot rated 4.9 Excellent
 - —Over 100,000 happy customers
@@ -312,7 +316,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 Sermorelin
 - —Supports metabolism and lean muscle tone
 - —A growth hormone–releasing hormone analog
-- —Stimulates natural Growth Hormone and IGF-1 production
+- —Stimulates natural growth hormone and IGF-1 production
 - —Promotes lean muscle growth and fat loss
 - —Enhances sleep quality and cellular repair
 - —A safer long-term alternative to synthetic HGH
@@ -324,7 +328,7 @@ GHK
 - —Reduces inflammation, oxidative stress, and signs of aging
 - —Protects and repairs DNA and tissue damage at the cellular level
 - —Enhances skin tone, firmness, and youthful appearance
-- —Synergizes with Growth Hormone pathways to accelerate repair and regeneration
+- —Synergizes with growth hormone pathways to accelerate repair and regeneration
 L-Citrulline Malate
 - —Boosts stamina and muscle performance
 - —Supports nitric oxide production
@@ -343,7 +347,7 @@ Sermorelin GHK — Men — ingredient claims
 Who it's for
 Women 35–60 who want tone, strength and skin glow from one formula.
 Creative direction
-- —Benefit scope: skin, visceral fat, lean muscle, Growth Hormone drive, hair thickening (male).
+- —Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
 - —Ingredient list reads Sermorelin, GHK, Citrulline.
 Women’s health
 Longevity + skin · Women
@@ -373,9 +377,10 @@ Quick-hit benefits
 CTAs
 - Unlock 3-in-1 Support
 - Explore Sermorelin GHK
-- Get Started Now
+- Save Up to 47%
 - Support Strength + Vitality
 - Start Your Plan
+- Ships Free From Pharmacy
 Proof & value props
 - —Trustpilot rated 4.9 Excellent
 - —Over 100,000 happy customers
@@ -422,7 +427,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 Sermorelin
 - —Supports metabolism and lean muscle tone
 - —A growth hormone–releasing hormone analog
-- —Stimulates natural Growth Hormone and IGF-1 production
+- —Stimulates natural growth hormone and IGF-1 production
 - —Promotes lean muscle growth and fat loss
 - —Enhances sleep quality and cellular repair
 - —A safer long-term alternative to synthetic HGH
@@ -434,7 +439,7 @@ GHK
 - —Reduces inflammation, oxidative stress, and signs of aging
 - —Protects and repairs DNA and tissue damage at the cellular level
 - —Enhances skin tone, firmness, and youthful appearance
-- —Synergizes with Growth Hormone pathways to accelerate repair and regeneration
+- —Synergizes with growth hormone pathways to accelerate repair and regeneration
 L-Citrulline Malate
 - —Boosts stamina and muscle performance
 - —Supports nitric oxide production

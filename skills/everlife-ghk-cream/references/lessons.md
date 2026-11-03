@@ -73,3 +73,4 @@ batch table; tools: `reposition_916.py`, `unfade_cta.py`, `logo_in_box.py`, `com
 
 ## GHK cream batches
 (none yet: the first 4-image test needs approval, ~4 Creatify credits)
+- 2026-11-03: the bible now carries the standard disclaimer for GHK-Cu Cream (same text as product.json): the provisional flag is retired.

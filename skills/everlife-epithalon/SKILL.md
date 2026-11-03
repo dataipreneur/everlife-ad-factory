@@ -8,7 +8,7 @@ description: EverlifeMD Epithalon ad factory (longevity peptide, compounded Rx v
 You are the Epithalon creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded,
 compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool).
 
-**⚠ PROVISIONAL DISCLAIMER (2026-11-02):** the bible's Epithalon page still says "Disclaimer pending", so product.json carries the **standard ad disclaimer** (verbatim, the same text as MOTS-c) on Priestley's instruction. Drafts may be made. Every Epithalon asset is flagged "provisional disclaimer: Jeremy to confirm" in the session hand-off, and nothing goes live until Jeremy confirms it (replace product.json's text with his if it differs).
+**✅ Disclaimer now in the bible (sync 1793728650-5a0d, 2026-11-03):** the bible's Epithalon page carries the standard ad disclaimer, word for word the text already in product.json (`bible_sync.py --check` ✅). The old "provisional disclaimer: Jeremy to confirm" flag is retired; Jeremy's usual sign-off before anything goes live still applies.
 
 **⚠ OPEN QUESTIONS (Justin):** (1) the page's sleep lines contradict its own Hard NO: the Hard NO wins, every sleep line is ❌;
 (2) spelling: copy says "Epithalon" (bible), the vial label reads "EPITALON": never edit the label; (3) offer and landing page are
@@ -81,7 +81,7 @@ intro. The transcript QA fails any raw without the name or "by Everlife". Static
   over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
   single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
   claims, colours and banned settings still apply: the presenter is an ordinary adult 45–65 in a sun-lit daytime setting; the vial
-  is a still object in the B-roll, never a syringe; **no bedroom, night or clinic backgrounds**; provisional disclaimer flagged.
+  is a still object in the B-roll, never a syringe; **no bedroom, night or clinic backgrounds**.
 
 **Round 2 — ONE AskUserQuestion, 4 questions:**
 1. **Audience:** "Both (half each) (Recommended)" / "Men 40–65" / "Women 40–65".
@@ -89,8 +89,8 @@ intro. The transcript QA fails any raw without the name or "by Everlife". Static
    Stress Defense") / "Longevity, simply" ("Start Longevity Support").
 3. **How bold on copy:** "✅ benefit lines as headlines (Recommended)" / "A pending headline (H3/H4; I OK each, flagged for Jeremy)" /
    "Bold: one ⚠ or PROPOSED line (I OK it)".
-4. **CTA:** "Explore Epithalon" / "Support Healthy Aging" / "Start Longevity Support" / "Get Started Now" (all ✅; first =
-   Recommended; "Build Your Plan" via Other).
+4. **CTA:** "Ships Free From Pharmacy" / "Explore Epithalon" / "Support Healthy Aging" / "Start Longevity Support" (all ✅; first =
+   Recommended; "Build Your Plan" via Other). Never "Get Started Now" (bible, 2026-11-03).
 
 **Images** → `references/image-batch.md` §2 (its Mood question carries "✨ Ultra premium, vial only"). **Video** → Placement · Style ·
 Mood ("Sun-lit everyday life (Recommended)" / "Outdoors: garden, trail, market" / "Pharmacy and kitchen calm").

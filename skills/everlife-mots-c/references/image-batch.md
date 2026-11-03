@@ -42,7 +42,7 @@ Renders: `assets/RENDERS.md`. The Creatify project is created on the first run (
 in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 
 ## 0. Copy rules: hard stops vs references
-**⚠ PROVISIONAL DISCLAIMER (2026-10-30):** product.json carries the standard ad disclaimer (the bible's MOTS-c page still says "Disclaimer pending"; Priestley: "use it for now"). The finishers render it. Drafts may be made; every SESSION.md flags each asset "provisional disclaimer: Jeremy to confirm"; nothing goes live until he confirms (then replace product.json's text with his and `bible_sync.py --check` must show ✅).
+**✅ Disclaimer now in the bible (sync 1793728650-5a0d, 2026-11-03):** the bible's MOTS-c page carries the standard ad disclaimer, word for word the text already in product.json (`bible_sync.py --check` ✅). The old "provisional disclaimer: Jeremy to confirm" flag is retired; Jeremy's usual sign-off before anything goes live still applies.
 
 **Hard stops:**
 - Claims: only the ✅ lines of the pre-screen (`product-bible.md`, APPROVED UPDATE); ⚠ lines (the glucose lines, "Supports Energy

@@ -1,5 +1,7 @@
 # Titan-Rx — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 49%" is now a bible CTA, but Offers & conversion still says [VERIFY CURRENT]: this skill keeps "no offer until verified" (rule 3). "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## Titan-rx", version 1793642193-f927),
 > copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` and
 > the gates in `~/.claude/CLAUDE.md` (they win).
@@ -76,7 +78,9 @@
 | L-Arginine: "Boosts circulation and stamina" | ingredient claims | ❌ as written | "Boosts" breaks "supports, never boosts"; a "Supports…" rewording is Tier B and needs Jeremy |
 | Get Performance Support | ctas | ✅ | Bible CTA (no pending flag) |
 | Explore Titan-Rx | ctas | ✅ | |
-| Get Started Now | ctas | ✅ | Default CTA |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
+| Ships Free From Pharmacy | ctas | ✅ | default CTA (bible 2026-11-03) |
+| Save Up to 49% | ctas | ⏳ | bible CTA, but Offers & conversion still [VERIFY CURRENT]: no offer until verified |
 | Start Daily Support | ctas | ✅ | |
 | Find Your Plan | ctas | ✅ | |
 | Save up to 49% [VERIFY CURRENT] | offer | ⏳ | Not confirmed current: no offer in any ad until verified |
@@ -94,7 +98,7 @@
   Readiness · 3-in-1 Performance Formula · Helps Maintain Firmness During Intimacy · Once-Daily, No Timing Required · Supports
   Confidence + Control · Helps Sustain Intimate Performance · Supports Blood Flow When It Counts · Helps Improve Consistency During
   Intimacy · Helps Reduce Interruptions During Intimacy.
-- CTAs: Get Started Now (default) · Get Performance Support · Explore Titan-Rx · Start Daily Support · Find Your Plan.
+- CTAs: Ships Free From Pharmacy (default) · Get Performance Support · Explore Titan-Rx · Start Daily Support · Find Your Plan.
 - Proof: Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · Doctor-guided prescription.
 - Formula fact: "Tadalafil + Vardenafil + L-Arginine" (all three, this order, no claim attached).
 
@@ -155,9 +159,10 @@ More headlines on page 35
 ### CTAs
 - CTA: Get Performance Support
 - CTA: Explore Titan-Rx
-- CTA: Get Started Now
+- CTA: Save Up to 49%
 - CTA: Start Daily Support
 - CTA: Find Your Plan
+- CTA: Ships Free From Pharmacy
 
 ### Hard NOs
 - Never use “arousal” or any form of it (“aroused,” “arousing”).

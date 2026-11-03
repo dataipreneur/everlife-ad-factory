@@ -1,5 +1,7 @@
 # Wolverine Stack — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 39%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 39%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > Source: the live creative bible (Justin), synced into `core/claude/creative-bible.md` (section "## Wolverine Stack (BPC-157/TB500)"), re-synced
@@ -21,7 +23,7 @@
 - **Offer:** "Save up to 39%" (bible). **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
 - **Headlines:** every bible headline and hook option is ⏳ Pending approval (the "Asana hook options" carry no approval mark):
   use one only with the user's OK, flagged for Jeremy. Benefits and CTAs below are usable.
-- **Landing page:** [PLACEHOLDER].
+- **Landing page:** https://everlifemd.com/wolverine/fb (bible, verified Nov. 3, 2026).
 - **Held (asked Justin 2026-11-02):** "Supports Healthy Inflammatory Balance" is KPV's benefit, and Wolverine has no KPV. Not used.
 
 ## Compliance pre-screen (2026-11-02, against Justin's un-swapped page; Claude's reading of the GLOBAL rules — confirm with Jeremy)
@@ -45,7 +47,8 @@
 | Promotes Joint Comfort | benefits | ⚠ Jeremy | "comfort" implies pain relief |
 | Supports Connective Tissue Health · Supports Digestive Resilience · Supports Whole-Body Recovery | benefits | ⏳ | pending approval (bible) |
 | Supports Healthy Inflammatory Balance | benefits | ⛔ held | KPV's benefit on a stack without KPV; asked Justin |
-| Explore the Wolverine Stack · Build Your Recovery Protocol · Get Started Now · Support Whole-Body Recovery · Start Your Stack | ctas | ✅ | |
+| Save Up to 39% · Ships Free From Pharmacy · Explore the Wolverine Stack · Build Your Recovery Protocol · Support Whole-Body Recovery · Start Your Stack | ctas | ✅ | Save Up to 39% = default (bible 2026-11-03) |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
 | Save up to 39% | offer | ✅ | percent only, never a $ price |
 
 The VERBATIM block below is the bible page as written; the table above is what the skill uses.
@@ -114,9 +117,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Wolverine Stack
 - CTA: Build Your Recovery Protocol
-- CTA: Get Started Now
+- CTA: Save Up to 39%
 - CTA: Support Whole-Body Recovery
 - CTA: Start Your Stack
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -131,6 +135,6 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Plus all global Hard NOs on page 3.
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
-Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
+Landing pagehttps://everlifemd.com/wolverine/fbLast verified Nov. 3, 2026
 Recovery stack
 ```

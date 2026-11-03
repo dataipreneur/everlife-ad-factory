@@ -1,5 +1,7 @@
 # MOTS-c — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: the bible's CTA is "[PLACEHOLDER] Save Up to X%"; this skill's offer stays the Creative Messaging doc's "Save up to 40%" (rule 4), written as the CTA "Save Up to 40%". Flag "Justin to fill the bible %" in SESSION.md. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 40%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## MOTS-c"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. **Updated 2026-10-30 with the MOTS-c Creative Messaging doc: the "APPROVED UPDATE" section below wins over the older bible copy where they differ.** Global rules: `core/references/global-rules.md` (they win).
 
 # APPROVED UPDATE — MOTS-c Creative Messaging (2026-10-30) — verbatim; wins over the older bible copy below
@@ -87,7 +89,9 @@
 | Supports Energy Balance | benefits | ⚠ Jeremy | "energy balance" reads as calories in/out = weight territory |
 | Supports Endurance | benefits (older bible, not in the doc) | ✅ | kept: the doc does not remove it |
 | Explore MOTS-c | ctas | ✅ |  |
-| Get Started Now | ctas | ✅ |  |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
+| Save Up to 40% | ctas | ✅ | default CTA (doc offer; the bible % is still a placeholder) |
+| Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
 | Fuel Cellular Energy | ctas | ✅ |  |
 | Support Your Metabolism | ctas | ✅ |  |
 | Start Metabolic Support | ctas | ✅ |  |
@@ -169,7 +173,7 @@ Supports Everyday Physical Performance
 Supports Energy Balance
 5 | Offer, CTAs & Proof
 Offer: Save up to 40%
-CTAs: Explore MOTS-c • Get Started Now • Fuel Cellular Energy • Support Your Metabolism • Start Metabolic Support • See How It Works
+CTAs: Explore MOTS-c • ~~Get Started Now~~ (banned 2026-11-03) • Fuel Cellular Energy • Support Your Metabolism • Start Metabolic Support • See How It Works
 Social Proof: Trustpilot 4.9 Excellent • 100,000+ Happy Customers
 6 | Compliance & disclaimer
 No direct claims. No “clinically backed.” No “clinically studied” unless tied to a named ingredient. No needle imagery or references. Claims from Asana and the lander still require ad-compliance review. No body composition.
@@ -184,7 +188,7 @@ https://stagingapp.everlifemd.com/mots-c/h2
 # OLDER BIBLE COPY (superseded where the update differs)
 
 ## Product facts for this skill
-- **⚠ Disclaimer:** "Disclaimer pending" in the bible → product.json carries the PROVISIONAL standard text (see the APPROVED UPDATE above).
+- **Disclaimer:** the standard ad disclaimer, now on the bible page (sync 2026-11-03), word for word product.json's text.
 - **What it is:** metabolic peptide support (compounded Rx vial; 10 mg/mL, 5 mL on the label, never in copy). Doctor-prescribed.
 - **Who:** active adults 30–55 focused on mitochondrial support, energy and endurance; "All audiences" (men and women).
 - **Focus (bible):** cellular energy, mitochondrial function, glucose metabolism, endurance.
@@ -206,7 +210,7 @@ https://stagingapp.everlifemd.com/mots-c/h2
 | Supports Glucose Metabolism | benefits | ⚠ Jeremy | Close to blood-sugar / diabetes territory; only with explicit approval, never with disease words |
 | Supports Endurance | benefits | ✅ |  |
 | Explore MOTS-c | ctas | ✅ | |
-| Get Started Now | ctas | ✅ | |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
 | Fuel Cellular Energy | ctas | ✅ | |
 | Support Your Metabolism | ctas | ✅ | |
 | Start Metabolic Support | ctas | ✅ | |
@@ -242,10 +246,11 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### CTAs
 - CTA: Explore MOTS-c
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Fuel Cellular Energy
 - CTA: Support Your Metabolism
 - CTA: Start Metabolic Support
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -258,7 +263,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
 
-Ad disclaimerDisclaimer pending — add from the disclaimer doc.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Sexual performance
 ```

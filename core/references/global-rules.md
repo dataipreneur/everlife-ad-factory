@@ -51,11 +51,14 @@ Composition
 - —Product names run big. Make them memorable.
 - —Texture and depth behind the product — never flat color.
 - —No shadows or outlines on type.
+- —Bottles, pills, CTAs and text are never obscured by another element — including a gradient from the footer.
 Format
 - —Bullet type stays readable at story size — set a minimum and keep it generous.
 - —Don’t over-bullet. A simpler layout often performs better.
+- —Keep capitalization consistent across a set of copy. If two benefits are in Title Case, the third is too — never mix Title Case and sentence case in the same headline set, benefit list or CTA row.
 - —Creative must hold up in square and vertical alike.
 - —Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
+- —Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
 - —The Everlife logo appears on every ad.
 Imagery
 - —Warm, sun-lit and candid. Real people, calm moments.

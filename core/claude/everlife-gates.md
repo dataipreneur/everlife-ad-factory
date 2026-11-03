@@ -50,8 +50,11 @@ Disclaimers & AI disclosure:
 - The pill/tablet is the hero, not the bottle. If a bottle appears it is large, foreground and legible.
 - Product and benefit identifiable in under 2 seconds; product names run big.
 - Texture and depth behind the product — never flat color. No shadows or outlines on type.
+- Bottles, pills, CTAs and text are never covered by another element, including a footer gradient (bible 3 Nov 2026).
 - Bullet type readable at story size; don't over-bullet. Text legible for age **50+**; spelling checked.
+- Capitalization consistent within a headline set, benefit list or CTA row: never mix Title Case and sentence case (bible 3 Nov 2026).
 - Must hold up in square and vertical. Never end on a passive frame — last frame is benefits + a clear, specific CTA.
+- **Never "Get Started Now" as a CTA** (bible 3 Nov 2026): lead with the offer ("Save Up to N%", the product's current % from its bible page); "Ships Free From Pharmacy" is the bible CTA where the % is still a placeholder.
 - **Everlife logo on every ad.**
 - Imagery: warm, sun-lit, candid, real people, calm moments; pharmacy framing as a trust cue (45+). No generic stock-style couples.
 - Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens.

@@ -14,8 +14,8 @@ Golden rules, all non-negotiable:
    (quick-hit benefits, ✅ headlines and CTAs), every Hard NO, the bible page's **compliance pre-screen** (❌ never; ⚠ only after the
    user's explicit OK, flagged for Jeremy). **Headlines are Tier A by default** (bible wording); fresh wording is **Tier B**: max 2 per
    batch, PROPOSED, approved line by line, flagged for Jeremy. The disclaimer is used verbatim from `product.json`.
-2. **The disclaimer is PROVISIONAL** (bible: "Disclaimer pending"; Priestley 2026-11-02: use the standard ad disclaimer until Jeremy
-   confirms). Say so when the session starts, and every `SESSION.md` carries the line **"provisional disclaimer: Jeremy to confirm"**.
+2. **The disclaimer** is the standard ad disclaimer, now on the bible page (sync 2026-11-03; word for word product.json's text). The
+   old "provisional disclaimer" flag is retired.
 3. **Naming (global rule):** on Meta (FB), Google (GL) and TikTok (TK) the product is **"GHK Peptide Cream"**. **"GHK-Cu Cream"** is
    used only as the product name on the **H2** channel. Never "GHK-Cu" as a word, never "-Cu", never "copper peptide", anywhere
    else (copy, VO, captions, prompts' TEXT strings, file names shown to the team). Inside a line the peptide is "GHK".
@@ -172,9 +172,8 @@ women 30–55, no bodybuilder physique, no before/after, no orange or green, no 
 `full_layout.py` (video) or `finish_batch.py` (images). Save `FINAL_*.mp4|png`, open it, report what it is, cost, known issues, path.
 
 ## Step 6 — Wrap up
-- Write `~/Everlife-Creative/output/GHK-Cu-Cream/<YYYY-MM-DD>_SESSION.md`. Its first line: **"provisional disclaimer: Jeremy to
-  confirm"**. Then one row per asset (path, channel/name used, sub-style, hook, header, end card, CTA, every claim with its bible
+- Write `~/Everlife-Creative/output/GHK-Cu-Cream/<YYYY-MM-DD>_SESSION.md`. One row per asset (path, channel/name used, sub-style, hook, header, end card, CTA, every claim with its bible
   source, any ⚠ line, cost, known issues). This is the hand-off for creative review and Jeremy.
 - Tell the user: every finished file with its path, total credits spent, remaining balance, untried sub-styles.
-- Remind: drafts only → creative review → Jeremy's sign-off (including the provisional disclaimer) before anything goes live. Other
+- Remind: drafts only → creative review → Jeremy's sign-off before anything goes live. Other
   sizes only after the master is approved. Delivery (Drive, Master Creative Library, tell Emily) happens after approval, not here.

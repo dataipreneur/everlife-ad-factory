@@ -117,3 +117,4 @@ apply; the hardcore-gym scenes do NOT: MOTS-c scenes come from direction.md)
 - Batch 3 (same day): scene-geometry prompts (shelf/ledge/wall top at 40%) → 4/4 landed at 54–71%, all fixable with ≤ 21% shrink.
   Edge fill that works: TRANSLATED copy of the art's own edge strip (cap the strip width below where text starts), never mirror/stretch.
   GPT edit "fix one misspelled word" did NOT change the word (1 credit wasted): fix typos locally by copying a real glyph from another line.
+- 2026-11-03: the bible now carries the standard disclaimer for this product (same text as product.json): the provisional flag is retired.

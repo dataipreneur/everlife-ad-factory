@@ -22,8 +22,8 @@ Golden rules, all non-negotiable:
    Copy may say "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count. **Tasteful, product-led: no beds
    or bedroom scenes, no body shots, no before/after, video framing shoulder-up.** **The tablet is the hero** (bible Standards 03 and
    every winner): bigger than the bottle in frame, in front, close to the lens; the bottle is secondary but legible.
-3. **CTA: "Get Started Now" is the PROVISIONAL default (2026-10-30, Priestley; Jeremy to confirm).** All four bible CTAs are still
-   ⏳ Pending approval; "Get Started Now" is ✅ on the MOTS-c, GLP-1 and NAD+ pages. Any other Spark CTA needs the user's explicit OK
+3. **CTA: "Save Up to 51%" is the PROVISIONAL default (2026-11-03: the bible banned "Get Started Now" and says lead with the
+   offer; Jeremy to confirm).** The bible's Spark CTA list is still ⏳ Pending approval. Any other Spark CTA needs the user's explicit OK
    for that session. Every SESSION.md says "provisional CTA: Jeremy to confirm".
 4. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
 5. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown (shared Everlife credits).
@@ -70,7 +70,7 @@ or "by Everlife". Statics never say "by Everlife".
 
 1. **Renders gate:** `spark_bottle.png` (+ `spark_bottle_ref.jpg` on white) and `spark_tablet.png` are on file (`assets/RENDERS.md`).
    One tablet per ad, always the render.
-2. **CTA gate:** "Get Started Now" is the provisional default (rule 3); the round-1 question offers it first.
+2. **CTA gate:** "Save Up to 51%" is the provisional default (rule 3); the round-1 question offers it first.
 3. Run `bash <skill-dir>/core/scripts/preflight.sh` and read its report. Use **AskUserQuestion** to walk the user through anything that
    is not ✅, one item at a time:
 
@@ -114,8 +114,8 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
    approval)" ("On-Demand ED Support", "ED Support on Your Schedule", "A Smarter Approach to ED": only with the user's explicit OK, Jeremy).
 3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
-4. **CTA:** "Get Started Now (Recommended: provisional default, Jeremy to confirm)" / "Explore Spark (⏳)" / "Find Your Plan (⏳)" /
-   "Ignite Your Spark (⏳)". A ⏳ pick is the explicit OK for this session; log the CTA in SESSION.md for Jeremy either way.
+4. **CTA:** "Save Up to 51% (Recommended: provisional default, Jeremy to confirm)" / "Ships Free From Pharmacy (⏳)" / "Explore Spark (⏳)" /
+   "Find Your Plan (⏳)" ("Ignite Your Spark (⏳)" via Other). A ⏳ pick is the explicit OK for this session; log the CTA in SESSION.md for Jeremy either way.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**
 > **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.

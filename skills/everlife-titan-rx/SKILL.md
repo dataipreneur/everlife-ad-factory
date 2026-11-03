@@ -26,8 +26,8 @@ Golden rules, all non-negotiable:
    (gates §3): exactly one, bigger than the bottle in frame, in front, close to the lens; the bottle is secondary but legible.
 3. **Offer: none until verified.** The bible's "Save up to 49%" is marked [VERIFY CURRENT] → no offer slot, no "% off", no price
    in any ad until Justin/Jeremy confirm it. Every SESSION.md says "offer not verified".
-4. **CTA:** "Get Started Now" is the default; the other four bible CTAs ("Get Performance Support", "Explore Titan-Rx", "Start Daily
-   Support", "Find Your Plan") are approved too. Name on creative: **"Titan-Rx"** / "TITAN-RX" (spelling ⚠ Justin, see the bible facts).
+4. **CTA:** "Ships Free From Pharmacy" is the default ("Get Started Now" is banned, bible 2026-11-03; "Save Up to 49%" waits for the
+   offer check, rule 3); "Get Performance Support", "Explore Titan-Rx", "Start Daily Support", "Find Your Plan" are approved too. Name on creative: **"Titan-Rx"** / "TITAN-RX" (spelling ⚠ Justin, see the bible facts).
 5. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
 6. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown (shared Everlife credits).
 7. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly; never call a weak take good.
@@ -118,7 +118,7 @@ approved masters), frameworks (random mix; the user can say "use F2 and F8" in c
    are used only when the user asks by name AND Jeremy has approved them in writing.
 3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
-4. **CTA:** "Get Started Now (Recommended)" / "Get Performance Support" / "Start Daily Support" / "Explore Titan-Rx" ("Find Your
+4. **CTA:** "Ships Free From Pharmacy (Recommended)" / "Get Performance Support" / "Start Daily Support" / "Explore Titan-Rx" ("Find Your
    Plan" via Other). All five are bible CTAs.
 
 **Round 2 (images) — one AskUserQuestion, 4 questions:**

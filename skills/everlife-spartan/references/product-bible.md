@@ -1,5 +1,7 @@
 # Spartan Stack — creative bible (verbatim extract)
 
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none: "[PLACEHOLDER] Save Up to X%" in the bible (Ronnel to confirm), so no offer CTA. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > Source: the live creative bible (Justin), synced into `core/claude/creative-bible.md` (section "## Spartan Stack (BPC-157/KPV/TB500)"), re-synced
@@ -38,7 +40,8 @@
 | Supports Gut Lining Health | benefits | ✅ | |
 | Three-Peptide Recovery Stack | benefits | ✅ | |
 | Supports Training Harder, More Often | benefits | ✅ (care) | never with a number or a timeline |
-| Explore the Spartan Stack · Build Your Recovery Stack · Get Started Now · Support Stronger Recovery · Start Your Protocol | ctas | ✅ | |
+| Ships Free From Pharmacy · Explore the Spartan Stack · Build Your Recovery Stack · Support Stronger Recovery · Start Your Protocol | ctas | ✅ | Ships Free = default (bible 2026-11-03) |
+| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
 | (no offer) | offer | ⛔ | [PLACEHOLDER] on the bible; Ronnel to confirm. No F6, no "% off". |
 | Supports Healthy Inflammatory Balance | — | ⛔ held | KPV's benefit, but on the Wolverine page; asked Justin |
 
@@ -81,9 +84,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 ### CTAs
 - CTA: Explore the Spartan Stack
 - CTA: Build Your Recovery Stack
-- CTA: Get Started Now
+- CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Stronger Recovery
 - CTA: Start Your Protocol
+- CTA: Ships Free From Pharmacy
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
