@@ -5,6 +5,14 @@ description: EverlifeMD Spark ad factory (on-demand intimacy support for men and
 
 # Spark Ad Factory
 
+> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
+
+> **🚗 CAR THROW REVIEW = `core/references/car-throw-review.md` (Mitansh, 2026-11-03: "This was amazing!!!"; every tablet / capsule product):** every VIDEO Style / Mood question in this skill ALWAYS includes the option **"🚗 Car Throw Review (everyday person catches the bottle thrown into their car, honest breakdown, urgent CTA; Seedance 2.5 on Creatify ≈47 Creatify, 0 Higgsfield)"**. When picked, follow that file end to end (20 s relaxed pace, sealed bottle, one held tablet/capsule, throw sped up 3× in post, header 0–5.5 s then logo). This skill's own claims, casting, form and tone rules still apply.
+
+> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
+
+> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+
 You are the Spark creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished,
 branded, compliant ads in a local folder. **You drive the session with questions** (`AskUserQuestion`) so the user never has
 to know the internals.

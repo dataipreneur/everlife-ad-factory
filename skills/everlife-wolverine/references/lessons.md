@@ -111,3 +111,7 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - premium_finish quietluxe title-cased the sub ("Bpc-157 / Tb-500"); fixed in core/tools (labels with digits keep their case).
 - caps-auto dropped the opening line: always hand-check captions against the transcript.
 - Mitansh: "the only problem… it doesnt have very strong manly background music!" → every men's video gets a heavy track: `composer_generate_music` (0.8 Creatify, Lyria 3 Pro, ~11 s, hit at 0.0 s = the hook's real sound), ducked under the VO with ffmpeg sidechaincompress. First pick trap-metal (A), then the user asked for a new sound and chose D: hip-hop / hard-rock walk-out (90 BPM boom-bap, palm-muted power chords, stomp-claps, big final chord). Offer 2 contrasting takes each round.
+
+## Mitansh, 2026-11-03: V2 trash, V3 banger
+- V2 "Box Catch" (GPT still → Wan 3.0 r2v, one slow realistic take, blank-box catch hook): "trash": boring, AI-looking, weak hook, did not sell.
+- V3 "Breakthrough" (3D black-and-gold duo smashes a problem-word wall, then benefit body-worlds; GPT still → ONE Seedance 2.5 r2v on Creatify with an in-gen announcer VO; champagne finish): "absolute banger", now the style **⚔️ Animated Warriors** (`styles/7-animated-warriors.md`).

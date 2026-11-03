@@ -112,3 +112,5 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - End card (smoke test, 2026-11-02): the capsule is wide and horizontal, so Lovara's 0.36 (tall capsule) made it tiny; at 1.0 it
   touched the bottle's label in `default`. `pill_end_scale` = 0.85: capsule about as wide as the bottle, headline and label clear in
   `default` and `tiktok`. `tiktok` title-cases headlines: "It's" / "She'll" are in `keep_case` so they don't become "It'S".
+- **Batch 1 (2026-11-02, 4 × 4:5, 4 credits, 0 re-rolls):** the numbered TOP-TO-BOTTOM order + "product is the LOWEST element, ends at 64%" + "bottom 34% plain" landed 4/4 above the footer. Capsule hero worked when it levitates/lies in front on its own (#1, #3); next to a standing bottle it came out bottle-sized (#2, #4): say "capsule at least 40% of the canvas width, in front of and overlapping the bottle's base".
+- Testimonial without screened reviews = a proof card (exact proof strings, no quote, no stars, no name). Garage plates print "45 LB": ask for "plain unmarked plates".

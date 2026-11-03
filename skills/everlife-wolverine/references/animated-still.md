@@ -20,12 +20,10 @@ approved static, 8 seconds, one slow move, the brand layers crisp on top.
    ```
    Pick a different environment move per ad in a batch. Never "the vial opens / fills / is drawn from".
 3. **Generate** (Seedance, image-to-video, 8 s, 9:16, 720p, audio off). Two routes, same prompt:
-   - **Unlimited mode in Chrome, 0 credits** (the standing memory: ask the A/B question first; in the web UI set Duration to 8, not 15,
-     and use the raw as the single reference image). Preferred.
-   - **CLI, costs credits** (quote first): Seedance 2.5 `higgsfield generate create seedance_2_5 --mode omni_reference --start-image
-     <raw.png> --prompt "$(cat prompt.txt)" --duration 8 --aspect_ratio 9:16 --resolution 720p --generate-audio false --wait --json`
-     ≈ 56 credits; Seedance 2.0 (`seedance_2_0 --start-image … --mode std`) ≈ 36. Always `higgsfield generate cost …` first.
-   Download `result_url` to `<job>/out/raw.mp4`.
+   - **Creatify only** (`core/references/seedance-on-creatify.md`, HARD 2026-11-03): upload the raw, then
+     `model_playground_generate("bytedance/seedance-2.5/image-to-video", {image_url: <raw cdn_url>, prompt, duration: "8",
+     resolution: "720p", generate_audio: false})` (quote the Creatify cost first; ≈ 1 cr/s at 480p, more at 720p). Never Higgsfield.
+   Download `outputs[0].url` (from `model_playground_get`) to `<job>/out/raw.mp4`.
 4. **Finish:** `$T/venv/bin/python -I $T/animate_still.py <job>/out/raw.mp4 <job>/FINAL_<n>_anim8s_9x16.mp4 --product wolverine`
    (logo at the top + proof footer at y 1179–1385 on every frame, same safe-area rules and refusal as the static).
 5. **QA** (contact sheet `fps=2,tile=8x2` + the first/last frame at full size): the label is unchanged letter by letter; the headline

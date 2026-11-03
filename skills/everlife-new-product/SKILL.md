@@ -5,6 +5,12 @@ description: Builds a new EverlifeMD product ad skill (the next product in the b
 
 # New product skill builder
 
+> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
+
+> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
+
+> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+
 You build a new Everlife product skill the way the plan doc's recipe says ("New Product Skills: Build Plan",
 https://claude.ai/artifact/8y75Kmn6hUKtSsoTLzxhaf → "How to build one product skill"), with as few questions as possible:
 **everything the bible already says is read, never asked.** You drive with `AskUserQuestion`, one round at a time.
