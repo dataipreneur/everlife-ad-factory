@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793743706-38c1) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793746711-6285) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -159,6 +159,11 @@ Every ad for a peptide stack must clearly show each peptide in that stack. The s
 - Klow Stack: BPC-157, GHK-Cu, KPV, TB-500
 - Glow Stack: [PLACEHOLDER] confirm peptides
 
+#### Article-style (advertorial) bylines
+- Male-focused article ads are written by “Brian L.”
+- Female-focused article ads are written by “Erika S.”
+- Unisex article ads can be written by either “Brian L.” or “Erika S.”
+
 #### Format
 - Bullet type stays readable at story size — set a minimum and keep it generous.
 - Don’t over-bullet. A simpler layout often performs better.
@@ -243,6 +248,8 @@ More benefits & claims on page 8
 - CTA: Save Up to 65%
 - CTA: Support Natural Growth Hormone
 - CTA: Build Your Plan
+- CTA: Sermorelin for $3.00/day
+- CTA: Starting at $95/month
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -255,6 +262,7 @@ More benefits & claims on page 8
 - Save up to 65%
 - Starting at $95/month
 - Save 70% compared to HGH
+- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -314,6 +322,8 @@ More benefits & claims on page 10
 - CTA: Save Up to 65%
 - CTA: Support Natural Growth Hormone
 - CTA: Build Your Plan
+- CTA: Sermorelin for $3.00/day
+- CTA: Starting at $95/month
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -326,6 +336,7 @@ More benefits & claims on page 10
 - Save up to 65%
 - Starting at $95/month
 - Save 70% compared to HGH
+- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -394,6 +405,7 @@ More headlines on page 12
 - CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
 - CTA: Start Your Plan
+- CTA: Sermorelin GHK for $4.25/day
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -529,6 +541,7 @@ More headlines on page 15
 - CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
 - CTA: Start Your Plan
+- CTA: Sermorelin GHK for $4.25/day
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -642,6 +655,7 @@ More benefits & claims on page 18
 - CTA: Save Up to 45%
 - CTA: Discover Lovara
 - CTA: Start Your Plan
+- CTA: Lovara for $1.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -732,6 +746,7 @@ More headlines on page 20
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Your Sleep Plan
 - CTA: Build a Better Night
+- CTA: Restora-Z for $2.25/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -890,6 +905,7 @@ More headlines on page 24
 - CTA: Save Up to 23%
 - CTA: Start Desire Support
 - CTA: Find Your Plan
+- CTA: PT-141 for $2.00/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -970,6 +986,7 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - CTA: Ignite Your Spark
 - CTA: Save Up to 51%
 - CTA: Find Your Plan
+- CTA: Spark for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1021,6 +1038,7 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 - CTA: Save Up to 75%
 - CTA: Support Firmer Skin
 - CTA: Start Skin Renewal
+- CTA: GHK-Cu Cream for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1081,6 +1099,7 @@ More headlines on page 28
 - CTA: Check Eligibility
 - CTA: Find Your Protocol
 - CTA: [PLACEHOLDER] Save Up to X%
+- CTA: Enclomiphene for $2.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1177,6 +1196,7 @@ More headlines on page 30
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Cellular Energy
 - CTA: Start Your Plan
+- CTA: Optima-NAD+ for $2.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1262,6 +1282,7 @@ More headlines on page 32
 - CTA: Save Up to 62%
 - CTA: Start Your Plan
 - CTA: Recharge Your Cells
+- CTA: NAD+ for $3.25/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1336,6 +1357,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Fuel Cellular Energy
 - CTA: Support Your Metabolism
 - CTA: Start Metabolic Support
+- CTA: MOTS-c for $5.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1405,6 +1427,7 @@ More headlines on page 35
 - CTA: Save Up to 49%
 - CTA: Start Daily Support
 - CTA: Find Your Plan
+- CTA: Titan-rx for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -1543,6 +1566,7 @@ More headlines on page 38
 - CTA: Save Up to 59%
 - CTA: Check Your Options
 - CTA: Build Your Plan
+- CTA: GLP-1 for $2.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1624,6 +1648,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Recovery Plan
 - CTA: Get Back to Moving
+- CTA: BPC-157 for $5.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1670,6 +1695,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Recovery Plan
 - CTA: Get Back to Moving
+- CTA: TB-500 for $5.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1716,6 +1742,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Build Your Wellness Plan
 - CTA: Start LDN Support
+- CTA: LDN for $1.00/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1764,6 +1791,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Longevity Support
 - CTA: Build Your Plan
+- CTA: Epithalon for $6.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1942,6 +1970,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Save Up to 39%
 - CTA: Support Whole-Body Recovery
 - CTA: Start Your Stack
+- CTA: Wolverine Stack for $6.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props

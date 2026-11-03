@@ -1,6 +1,7 @@
 # Wolverine Stack — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 39%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 39%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Wolverine Stack for $6.50/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
@@ -120,6 +121,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Save Up to 39%
 - CTA: Support Whole-Body Recovery
 - CTA: Start Your Stack
+- CTA: Wolverine Stack for $6.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props

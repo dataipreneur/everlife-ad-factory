@@ -1,6 +1,7 @@
 # PT-141 — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 23%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 23%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "PT-141 for $2.00/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > Source: Claude Design project 8cc4e3fe-5189-436d-aaba-6eb2320f14c6, page "PT-141" (p. 21) and "PT-141 · headline bank" (p. 22), from the
 > 26 Oct 2026 export (`Creative Messaging Reference.dc.html`), re-checked 2026-10-28. Two quick-hit benefits that appear on the LIVE page
@@ -100,6 +101,7 @@ CTAs
 - Save Up to 23%
 - Start Desire Support
 - Find Your Plan
+- PT-141 for $2.00/day
 - Ships Free From Pharmacy
 Proof & value props
 - —Trustpilot rated 4.9 Excellent

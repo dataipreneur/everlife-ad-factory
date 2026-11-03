@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-03 | Justin (live bible) | Bible 1793746711-6285: "<product> for $N/day" CTAs; "Use 'Starting at $95/month' as the CTA on 10% of Sermorelin creatives"; article bylines "Brian L." / "Erika S." | Price CTAs as approved alternatives (offer stays default); Sermorelin 1-in-10; Titan-Rx held; bylines flagged for Jeremy | `bible-sync-6285` |
 | 2026-11-03 | Priestley | "Are you sure claude will log every time into those artifacts?" → "yes build it, push and merge" | Claude Code hooks: automatic capture of every paid generation + a Stop check that sends Claude back to log; installed by install.sh / update.sh | `teamlog-hooks` |
 | 2026-11-03 | Justin (live bible) | Bible 1793743706-38c1: "Every ad for a peptide stack must clearly show each peptide in that stack. The stack name alone is not enough" | Stack rule in gates + global rules; Spartan + Wolverine banners and QA; Klow GHK-Cu flagged | `bible-sync-38c1` |
 | 2026-11-03 | Priestley | "why check shows warning for few. i dont see any" → "yes fix it, push and merge" | Check cell shows the reasons in the row; backfilled = grey label, not a warning (all three pages) | `teamlogs-flags-visible` |

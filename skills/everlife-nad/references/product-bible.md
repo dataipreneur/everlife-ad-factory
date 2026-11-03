@@ -1,6 +1,7 @@
 # NAD+ — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 62%" (the bible's CTA; injections). For a tablet-only ad use the tablet offer "Save up to 56%" from Offers & conversion. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 62%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "NAD+ for $3.25/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## NAD+"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
 
@@ -113,6 +114,7 @@ More headlines on page 32
 - CTA: Save Up to 62%
 - CTA: Start Your Plan
 - CTA: Recharge Your Cells
+- CTA: NAD+ for $3.25/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props

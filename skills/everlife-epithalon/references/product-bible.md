@@ -1,6 +1,7 @@
 # Epithalon — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none: "[PLACEHOLDER] Save Up to X%" in the bible, so no offer CTA until Justin fills it. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Epithalon for $6.75/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## Epithalon", bible version
 > 1793642193-f927), copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules:
@@ -102,6 +103,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Longevity Support
 - CTA: Build Your Plan
+- CTA: Epithalon for $6.75/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props

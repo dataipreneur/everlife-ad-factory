@@ -1,6 +1,7 @@
 # Restora-Z — creative bible (verbatim extract)
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none: "[PLACEHOLDER] Save Up to X%" in the bible, so no offer CTA until Justin fills it. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Restora-Z for $2.25/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > **How to use this page (creative lead, 2026-10-27):**
 > - **HARD STOPS (never cross):** the Approved pain points list; the Approved claims (quick-hit benefits, more approved benefits and the per-ingredient claims, each claim only on its own ingredient); every Hard NO (product + global); the verbatim disclaimer; the proof wording.
@@ -48,6 +49,7 @@ CTAs
 - [PLACEHOLDER] Save Up to X%
 - Start Your Sleep Plan
 - Build a Better Night
+- Restora-Z for $2.25/day
 - Ships Free From Pharmacy
 Proof & value props
 - —Trustpilot rated 4.9 Excellent
