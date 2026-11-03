@@ -84,7 +84,7 @@ Disclaimers & AI disclosure:
 - Explicit approval of the master (Frame.io / Asana Review Status = Approved) before ANY other sizes. Compliance sign-off by Jeremy before anything goes live.
 
 ## 8. Pre-review checklist
-Concept direction · approved benefits/subheaders · full section 2 pass · section 3 standards · legibility 50+ and spelling · product correctness · ratio/safe zone · disclaimer verbatim + AI disclosure · logo · proof per the 60/40 plan.
+Concept direction · approved benefits/subheaders · full section 2 pass · section 3 standards · legibility 50+ and spelling · product correctness · ratio/safe zone · disclaimer verbatim + AI disclosure · logo · proof per the 42/28/30 split (`--proof-check` passes).
 
 ## 9. Delivery gate
 - Base 1:1 and 9:16 to Drive; tell Emily.
