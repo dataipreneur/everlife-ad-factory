@@ -5,6 +5,7 @@
   pick_styles.py --product pt-141 --n 5 --allow S12   # also allow gated styles (Testimonial needs screened reviews)
   pick_styles.py --log --product pt-141 --codes S02,S09,S13   # record what the batch used
   pick_styles.py --product sermorelin --n 5 --audience men     # hardcore-men products: 40% of men's slots tagged HARDCORE
+  pick_styles.py --product pt-141 --n 4 --skip S02,S09        # also avoid styles the TEAM used lately (Copy Ledger style records)
 
 Hardcore men (Jeremy, 2026-11-02): products in references/hardcore-men.json get `share` of their men's slots tagged
 HARDCORE (shirtless, bodybuilder-level physique, hard gym light; rule in references/hardcore-men.md).
@@ -61,6 +62,7 @@ def main():
     ap.add_argument('--allow', default='', help='comma-separated gated codes to allow, e.g. S12')
     ap.add_argument('--log', action='store_true')
     ap.add_argument('--codes', default='')
+    ap.add_argument('--skip', default='', help='comma-separated codes the team used lately (from the Copy Ledger): drawn last, like this computer\'s last batch')
     ap.add_argument('--audience', default='men', choices=['men', 'women', 'both'],
                     help='who the batch is for; hardcore slots go only to men (both: even slots are men, odd women)')
     a = ap.parse_args()
@@ -80,7 +82,7 @@ def main():
 
     allow = {c.strip() for c in a.allow.split(',') if c.strip()}
     pool = [s for s in styles if s['gate'] == 'open' or s['code'] in allow]
-    recent = set(last_batch(a.product))
+    recent = set(last_batch(a.product)) | {c.strip() for c in a.skip.split(',') if c.strip()}
     fresh = [s for s in pool if s['code'] not in recent]
     random.shuffle(fresh)
     stale = [s for s in pool if s['code'] in recent]

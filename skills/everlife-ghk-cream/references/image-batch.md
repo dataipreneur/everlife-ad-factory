@@ -69,6 +69,8 @@ and real, label wrapped and legible (the slim pump: upright ≥ 20% of the width
 with `hero.never` written into the prompt; the CTA and every line as exact strings (then QA'd); "NO logo or wordmark anywhere"
 (the finisher adds the real one).
 
+**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block.
+
 **Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
 entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
 table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.

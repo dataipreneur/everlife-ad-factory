@@ -1,0 +1,198 @@
+<title>Everlife Activity & Spend</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a pharmacy-ledger tool (same family as the Winners Board). Sticky filters, four figure tiles, three bar ledgers, the run register. */
+:root {
+  --bg: #f5f7f6; --surface: #ffffff; --sunken: #e9eeec; --ink: #15201d; --muted: #56645f; --line: #d3dcd8;
+  --accent: #0d5c55; --accent-ink: #ffffff; --bar: #2f7f76; --warn: #a3261d; --focus: #1a73b8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+    --accent: #4fb8ac; --accent-ink: #06201d; --bar: #5cc2b6; --warn: #f08a80; --focus: #6cb6f0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+  --accent: #4fb8ac; --accent-ink: #06201d; --bar: #5cc2b6; --warn: #f08a80; --focus: #6cb6f0; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 22px 10px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; justify-content: space-between; }
+h1 { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 10px; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 62ch; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--sunken); color: var(--muted); }
+.chip.role { background: var(--accent); color: var(--accent-ink); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-block: 10px; }
+label.inline { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
+select:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
+.status.warn { color: var(--warn); }
+main { display: grid; gap: 18px; padding-block: 8px 40px; }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0; }
+.tile .k { font-size: 12.5px; color: var(--muted); }
+.tile .v { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 28px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.tile .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.ledgers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) { .ledgers { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.bars { display: grid; gap: 6px; }
+.brow { display: grid; grid-template-columns: minmax(0, 9em) minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 13.5px; }
+.brow .lab { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.brow .track { height: 12px; background: var(--sunken); border-radius: 0 4px 4px 0; overflow: hidden; }
+.brow .fill { height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; min-width: 2px; }
+.brow .val { font-family: var(--f-mono); font-size: 12.5px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .03em; text-transform: uppercase; white-space: nowrap; }
+td.num { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; min-width: 12em; }
+.empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; display: grid; gap: 6px; }
+.empty strong { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="top wrap">
+  <div>
+    <h1>Activity &amp; Spend</h1>
+    <p class="sub">Every skill run, who made it, and the credits it cost. Claude adds one row per run when it hands off a batch.</p>
+  </div>
+  <div><span class="chip role" id="roleChip">Connecting…</span> <span class="chip" id="countChip">0 runs</span></div>
+</header>
+<div class="bar">
+  <div class="wrap">
+    <label class="inline" for="fPeriod">Period <select id="fPeriod"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option><option value="0">All time</option></select></label>
+    <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
+    <label class="inline" for="fPerson" id="personWrap">Person <select id="fPerson"><option value="">Everyone</option></select></label>
+  </div>
+</div>
+<div class="wrap"><div class="status" id="status" role="status">Loading runs…</div></div>
+<main class="wrap">
+  <p class="hint" id="scopeNote" hidden>You see your own runs. Team totals are visible to Priestley and the leads.</p>
+  <section class="tiles" aria-label="Summary">
+    <div class="tile"><span class="k">Runs</span><span class="v" id="tRuns">0</span><span class="n" id="tRunsN">0 finished ads</span></div>
+    <div class="tile"><span class="k">Creatify credits</span><span class="v" id="tCre">0</span><span class="n" id="tCreN">0 per finished ad</span></div>
+    <div class="tile"><span class="k">Higgsfield credits</span><span class="v" id="tHig">0</span><span class="n" id="tHigN">0 per finished ad</span></div>
+    <div class="tile"><span class="k">Re-roll rate</span><span class="v" id="tRe">0%</span><span class="n" id="tReN">0 of 0 made</span></div>
+  </section>
+  <section class="ledgers" aria-label="Creatify credits">
+    <div class="panel"><h2>Creatify credits by week</h2><div class="bars" id="bWeek"></div></div>
+    <div class="panel" id="personPanel"><h2>Creatify credits by person</h2><div class="bars" id="bPerson"></div></div>
+    <div class="panel"><h2>Creatify credits by product</h2><div class="bars" id="bProduct"></div></div>
+  </section>
+  <section class="panel">
+    <h2>Runs</h2>
+    <div id="emptyRuns" class="empty" hidden><strong>No runs yet.</strong><span>When an operator finishes a batch, their Claude adds a row here: product, format, how many ads, credits spent and the output folder.</span></div>
+    <div class="tbl"><table id="runTbl" hidden>
+      <thead><tr><th>Date</th><th>Person</th><th>Product</th><th>Format</th><th class="num">Made</th><th class="num">Finished</th><th class="num">Re-rolled</th><th class="num">Creatify</th><th class="num">Higgsfield</th><th>Board</th><th>Output folder</th></tr></thead>
+      <tbody id="runBody"></tbody>
+    </table></div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const PRODUCTS = [["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]];
+  const FORMATS = { images: "Images", video: "Video", avatar: "AI Avatar", still: "Animated still" };
+  const $ = (id) => document.getElementById(id);
+  const pname = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id || "—"])[1];
+  const state = { db: null, user: null, me: null, admin: false, members: new Set(), subs: new Map(), runs: new Map(), names: {}, loaded: false };
+  const num = (v) => (typeof v === "number" && isFinite(v) ? v : 0);
+  const spent = (r, k) => num(r.credits && r.credits[k] && r.credits[k].spent);
+  const fmt = (n) => (Math.round(n * 10) / 10).toLocaleString();
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) { if (v == null || v === false) continue; if (k === "class") el.className = v; else el.setAttribute(k, v); }
+    for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+    return el;
+  }
+  function setStatus(m, warn) { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); }
+  function weekOf(iso) { const d = new Date(iso); if (isNaN(d)) return ""; const day = (d.getUTCDay() + 6) % 7; d.setUTCDate(d.getUTCDate() - day); return d.toISOString().slice(0, 10); }
+
+  function filtered() {
+    const days = Number($("fPeriod").value), prod = $("fProduct").value, who = $("fPerson").value;
+    const since = days ? Date.now() - days * 864e5 : 0;
+    return [...state.runs.values()].filter(r => (!since || Date.parse(r.ended_at || r.started_at || 0) >= since) && (!prod || r.product === prod) && (!who || r.by === who))
+      .sort((a, b) => String(b.ended_at || b.started_at || "").localeCompare(String(a.ended_at || a.started_at || "")));
+  }
+  function bars(boxId, rows) {
+    const box = $(boxId), max = Math.max(1, ...rows.map(r => r[1]));
+    if (!rows.length) { box.replaceChildren(h("p", { class: "hint" }, "Nothing in this period.")); return; }
+    box.replaceChildren(...rows.map(([label, v]) => h("div", { class: "brow", title: label + ": " + fmt(v) + " Creatify credits" },
+      h("span", { class: "lab" }, label), h("span", { class: "track" }, h("span", { class: "fill", style: "width:" + (100 * v / max).toFixed(1) + "%" })), h("span", { class: "val" }, fmt(v)))));
+  }
+  function group(rs, key) { const m = new Map(); for (const r of rs) { const k = key(r); m.set(k, (m.get(k) || 0) + spent(r, "creatify")); } return [...m.entries()]; }
+
+  async function render() {
+    const rs = filtered();
+    const ids = [...new Set([...state.runs.values()].map(r => r.by).filter(Boolean))];
+    if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
+    const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
+    const sel = $("fPerson"), cur = sel.value;
+    sel.replaceChildren(h("option", { value: "" }, "Everyone"), ...ids.map(id => h("option", { value: id }, who(id)))); sel.value = ids.includes(cur) ? cur : "";
+    $("countChip").textContent = state.runs.size + (state.runs.size === 1 ? " run" : " runs");
+    const fin = rs.reduce((s, r) => s + num(r.finished), 0), made = rs.reduce((s, r) => s + num(r.made), 0), re = rs.reduce((s, r) => s + num(r.rerolled), 0);
+    const cre = rs.reduce((s, r) => s + spent(r, "creatify"), 0), hig = rs.reduce((s, r) => s + spent(r, "higgsfield"), 0);
+    $("tRuns").textContent = rs.length; $("tRunsN").textContent = fin + " finished ads";
+    $("tCre").textContent = fmt(cre); $("tCreN").textContent = (fin ? fmt(cre / fin) : "0") + " per finished ad";
+    $("tHig").textContent = fmt(hig); $("tHigN").textContent = (fin ? fmt(hig / fin) : "0") + " per finished ad";
+    $("tRe").textContent = made ? Math.round(100 * re / made) + "%" : "0%"; $("tReN").textContent = re + " of " + made + " made";
+    bars("bWeek", group(rs, r => weekOf(r.ended_at || r.started_at)).filter(r => r[0]).sort((a, b) => a[0].localeCompare(b[0])).slice(-8).map(([w, v]) => ["Week of " + w.slice(5), v]));
+    bars("bPerson", group(rs, r => r.by).sort((a, b) => b[1] - a[1]).map(([id, v]) => [who(id), v]));
+    bars("bProduct", group(rs, r => r.product).sort((a, b) => b[1] - a[1]).map(([p, v]) => [pname(p), v]));
+    $("emptyRuns").hidden = !(state.loaded && rs.length === 0); $("runTbl").hidden = rs.length === 0;
+    $("runBody").replaceChildren(...rs.slice(0, 300).map(r => h("tr", null,
+      h("td", null, String(r.ended_at || r.started_at || "").slice(0, 10)), h("td", null, who(r.by)), h("td", null, pname(r.product)),
+      h("td", null, FORMATS[r.format] || r.format || "—"), h("td", { class: "num" }, num(r.made)), h("td", { class: "num" }, num(r.finished)),
+      h("td", { class: "num" }, num(r.rerolled)), h("td", { class: "num" }, fmt(spent(r, "creatify"))), h("td", { class: "num" }, fmt(spent(r, "higgsfield"))),
+      h("td", null, r.on_board ? "Yes" : "No"), h("td", { class: "path" }, r.out_dir || ""))));
+  }
+  let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
+
+  function watch(uid) {
+    if (state.subs.has(uid)) return;
+    state.subs.set(uid, state.db.collection("data/users/" + uid).onSnapshot((snap) => {
+      for (const k of [...state.runs.keys()]) if (k.startsWith(uid + "/")) state.runs.delete(k);
+      for (const d of snap.docs) { const v = d.exists ? d.data() : null; if (v && v.type === "run") state.runs.set(uid + "/" + d.id, Object.assign({ by: uid }, v)); }
+      state.loaded = true; queue();
+    }, () => { state.subs.delete(uid); }));
+  }
+
+  async function start() {
+    $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
+    for (const id of ["fPeriod", "fProduct", "fPerson"]) $(id).addEventListener("change", render);
+    if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to see the runs.", true); $("roleChip").textContent = "Offline"; return; }
+    const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);
+    state.db = db; state.user = user;
+    if (!db || !user) { setStatus("Sign in to claude.ai and open the page again to see the runs.", true); $("roleChip").textContent = "Signed out"; return; }
+    state.me = await user.id();
+    const owner = await user.isOwner(); state.admin = await user.canEdit();
+    $("roleChip").textContent = owner ? "Owner" : state.admin ? "Lead" : "Operator";
+    $("scopeNote").hidden = state.admin; $("personWrap").hidden = !state.admin; $("personPanel").hidden = !state.admin;
+    let settled = false;
+    const timer = setTimeout(() => { if (!settled) setStatus("The log can't be reached yet. It fills in when the connection answers.", true); }, 10000);
+    const done = () => { if (!settled) { settled = true; clearTimeout(timer); setStatus(""); } };
+    if (state.me) watch(state.me);
+    if (state.admin) {
+      db.collection("members").onSnapshot((snap) => { for (const d of snap.docs) if (d.exists) watch(d.id); state.loaded = true; done(); queue(); },
+        (err) => { settled = true; clearTimeout(timer); setStatus("The log stopped updating (" + err.code + "). Reload the page to reconnect.", true); });
+    } else { setTimeout(() => { state.loaded = true; done(); queue(); }, 1500); }
+    render();
+  }
+  start();
+})();
+</script>
