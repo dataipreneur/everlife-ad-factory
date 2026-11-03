@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Gates: AI avatar model routing (branch `gates-avatar-routing`)
+Logged before editing. The gates sent "talking head" to Boreal-style; Mitansh's all-Creatify avatar rule (2026-11-02) routes the
+presenter to Creatify Seedance + Boreal-H3 background, 0 Higgsfield. One line added under Model routing in `everlife-gates.md`
+(and Priestley's personal CLAUDE.md). Originals: `_originals/2026-11-03/gates-avatar-routing/`.
+
 ## 2026-11-03 — Winners Board locked for reading too (branch `board-lock-read`)
 Priestley: "yes lock reading too. they shoudnt see any error though". Until teammates update, their old skills still READ the
 board; now only Owner/Editors can read it (db rules `read: "admin"`). Non-editors opening the page see only the "Paused"

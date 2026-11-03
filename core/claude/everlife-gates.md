@@ -80,6 +80,7 @@ Disclaimers & AI disclosure:
 
 ## 6. Production gate
 - Model routing: single locked slow shot / talking head / simple product hero → Boreal-style; multi-scene, camera moves, fast motion, transitions → Seedance.
+- **AI avatar videos: everything on Creatify** (Mitansh, 2 Nov 2026: "AI Avatar videos always go to Creatify for everything!!! No Higgsfield needed at all!"): the presenter on Creatify Seedance, the animated background on Creatify Boreal-H3, music on Creatify; 0 Higgsfield credits (`core/references/ai-avatar-video.md`). This wins over the talking-head line above for avatar videos.
 - 9:16 safe zone (bible "Safe zones", Meta): **x 156–924, y 144–1385 on 1080×1920, minus the Reels profile corner x 156–375 × y 1216–1385**. Footer exception: the proof row may run x 39–1041 and cross the corner. Feed (4:5, 1:1): 60 px margin. Logo, headline, offer, CTA, disclaimer **and captions** stay inside it (bible 2026-11-02).
 - AI expand 1:1→9:16 OK for photo ads; flat infographics are rebuilt.
 
