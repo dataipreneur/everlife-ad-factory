@@ -2,6 +2,19 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Team logs reach every video route and Restora-Z (branch `logs-video-routes`)
+Priestley asked "are you sure our new logs work?"; a check found no real run logged yet, Restora-Z without log lines and four
+self-contained video recipes that never mention the logs. Priestley: "do a first please" (incl. Restora-Z).
+Originals: `_originals/2026-11-03/logs-video-routes/`.
+- One "Team logs" step in `ai-avatar-video.md` (before Assemble), `car-throw-review.md` (step 6, before QA) and
+  `seedance-on-creatify.md`: read the Copy Ledger before the script; log every paid still/clip/music, the final copy and proof,
+  and the run's spend. The Hook Engine (Mitansh's) is covered through these routes and each skill's finishing step; not edited.
+- Restora-Z: the same two lines the other 14 skills got (`image-batch.md` before §1b, `finishing.md` before §4).
+- Verified the same day: all three pages accept a Contributor-level write (self-test rows written and deleted).
+- `TEAM-LOGS.md` §2 step 4 no longer says "the Winners Board as today" (paused).
+- **Videos log as they go** (Priestley: "yes add it", after Mitansh's unfinished video left nothing in the logs): every skill's `video-prompting.md` and the three recipes write each still/clip/music `gen` record the moment the job is submitted, then update it after QA; `finishing.md` adds only copy, proof and spend; TEAM-LOGS §2.3 says so.
+- Coverage check (Priestley: "I hope all products are covered and also both images/videos have it"): all 15 product skills carry the line in `image-batch.md`, `finishing.md` and `video-prompting.md`; added to the 7 `animated-still.md` files (BPC-157, Epithalon, GLP-1, MOTS-c, NAD+, Spartan, Wolverine) and to the new-product checklist.
+
 ## 2026-11-03 — Gates: AI avatar model routing (branch `gates-avatar-routing`)
 Logged before editing. The gates sent "talking head" to Boreal-style; Mitansh's all-Creatify avatar rule (2026-11-02) routes the
 presenter to Creatify Seedance + Boreal-H3 background, 0 Higgsfield. One line added under Model routing in `everlife-gates.md`

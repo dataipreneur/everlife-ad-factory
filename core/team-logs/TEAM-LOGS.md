@@ -40,11 +40,11 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
    `core/scripts/pick_styles.py --skip <codes>` (the team's recent styles are drawn last, like this computer's own last batch); the
    local `style-ledger.jsonl` stays the fallback. Read this product's `proof` records and choose the next proofs so the team split moves
    toward 42/28/30 (`finish_batch.py --proof-plan N` / `proof_next.py` give the local plan; adjust it toward the team's shares).
-3. **Each generation (each prompt sent to an image or video model):** write one `gen` record to the Prompt log; update it after QA
+3. **Each generation (each prompt sent to an image or video model, the moment the job is submitted; videos too, never only at finishing):** write one `gen` record to the Prompt log; update it after QA
    (pass/fail and the reasons, re-rolls). One `batch` per wave is fine.
 4. **After the batch (when SESSION.md is written):** one `copy` record per ad to the Copy Ledger, one `style` record for the batch, one
-   `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); the Winners
-   Board as today. Still append the local copy log as before (fallback and offline history).
+   `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); nothing to the Winners
+   Board (⏸ paused since 2026-11-03). Still append the local copy log as before (fallback and offline history).
 
 ## 3. Schemas (every record has `"type"`)
 **Activity log, `run`:** `{type:"run", run_id, product, format:"images|video|avatar|still", made, finished, rerolled,

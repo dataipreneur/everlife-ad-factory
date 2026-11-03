@@ -1,5 +1,7 @@
 # Animated still: an approved static + 8 s of motion (GLP-1; recipe from BPC-157, Mitansh 2026-10-29)
 
+> **Team logs, as you go (`core/team-logs/TEAM-LOGS.md` §2.3):** each paid animation job (Seedance image-to-video or any other) gets its `gen` record in the Prompt & Outcome Log the moment it is submitted (inputs, exact prompt, refs, model, credits), updated after QA; a 0-credit `animate_code.py` render is logged too (model "animate_code", credits 0). Copy, proof and spend after finishing (`finishing.md`). Unreachable → the pending file, never block.
+
 The fourth thing the skill makes. Reference: `vial-refs/pins/V43.mp4` (Sculptra, 14 s): a premium vial on a deep single-colour
 field, the camera creeping in, headline words drifting around the vial, nothing else moving. Ours is simpler and shorter: the
 approved static, 8 seconds, one slow move, the brand layers crisp on top.

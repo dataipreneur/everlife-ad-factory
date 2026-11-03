@@ -30,6 +30,8 @@ any Seedance, image-to-video, animated-still or start-frame step through Higgsfi
 4. Poll `model_playground_get(asset_id)` (wait ~4 min for 15 s; never leave the user waiting without an update), download
    `outputs[0].url` to `<job>/out/raw.mp4`, run the skill's QA, and show the raw right away (open it + a contact sheet).
 
+**Team logs (every video made with this recipe, `core/team-logs/TEAM-LOGS.md`):** before writing the script, read this product's Copy Ledger rows (never reuse a logged hook, line or CTA). Log every paid generation (still, clip, music) to the Prompt & Outcome Log **the moment its job is submitted** (inputs, exact prompt, refs, model, credits), then update that record after QA (pass/fail, reasons, re-takes), the final video's spoken lines, captions, CTA and proof to the Copy Ledger, and the run's spend to the Activity & Spend Log. Unreachable → the pending file, never block.
+
 **Costs seen (Creatify credits):** Seedance 2.5 reference-to-video 15 s 720p = **34.25** · Seedance 2.5 image-to-video 10 s 480p
 ≈ 10.25 · GPT Image 2.5 still = 1 · Lyria music = 0.8. Roughly half the credits of the old Higgsfield Seedance route
 (≈ 67.5 for 15 s 720p), but the two are different currencies: compare dollars only with each plan's price per credit.

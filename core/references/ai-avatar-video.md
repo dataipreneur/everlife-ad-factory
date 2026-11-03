@@ -82,6 +82,8 @@ music, no sound effects. Nobody says I or my. No white coat." 480p is fine becau
 While it renders: write `plan.json`, build the B-roll (`$AV broll <job> plan.json`) and the free animatic
 (`$AV animatic <job> gen/p01_presenter_green.png`). For a new format or cast, show the animatic before step 4.
 
+**Team logs (every video made with this recipe, `core/team-logs/TEAM-LOGS.md`):** before writing the script, read this product's Copy Ledger rows (never reuse a logged hook, line or CTA). Log every paid generation (still, clip, music) to the Prompt & Outcome Log **the moment its job is submitted** (inputs, exact prompt, refs, model, credits), then update that record after QA (pass/fail, reasons, re-takes), the final video's spoken lines, captions, CTA and proof to the Copy Ledger, and the run's spend to the Activity & Spend Log. Unreachable → the pending file, never block.
+
 ## Step 5 · Assemble (0 cr)
 1. Download `result_url` → `out/presenter_raw.mp4`. Transcribe with word timestamps (faster-whisper in `$T/venv`). QA: same
    person, every line said as written, **product name + "by Everlife" heard**, ends by ~13.5 s.
