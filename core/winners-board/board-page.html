@@ -205,10 +205,10 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
 </div>
 
 <main class="wrap">
-  <div class="status" id="status" role="status">Loading the board…</div>
+  <div class="status" id="status" role="status"></div>
   <section class="panel paused" id="pausedNote" hidden>
     <h2>Paused</h2>
-    <p style="margin:0;max-width:70ch">The rating and feedback system is switched off while the team works out a new way to refine the ads. The board is read-only: nothing new is rated or reviewed, and Claude no longer reads it before a batch. Every rating already here is kept.</p>
+    <p style="margin:0;max-width:70ch" id="pausedText">The rating and feedback system is switched off while the team works out a new way to refine the ads. The board is read-only: nothing new is rated or reviewed, and Claude no longer reads it before a batch. Every rating already here is kept.</p>
   </section>
   <div id="emptyHero" class="empty-hero" hidden>
     <h2>No ratings yet</h2>
@@ -965,6 +965,16 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     });
   }
 
+  // Paused and locked (2026-11-03): only the Owner and Editors may read the data. Everyone else sees the notice, never an error.
+  function pausedOnly() {
+    setStatus("");
+    document.querySelector(".bar").hidden = true;
+    $("countChip").hidden = true;
+    $("roleChip").textContent = "Paused";
+    $("pausedText").textContent = "The rating and feedback system is switched off while the team works out a new way to refine the ads. Nothing is rated or reviewed here for now, and Claude doesn't use this board. Every rating already given is kept safely.";
+    $("pausedNote").hidden = false;
+  }
+
   async function start() {
     ratingRadios("rRatings", "rr"); ratingRadios("mRatings", "mr"); ratingRadios("vRatings", "vr");
     $("hFamily").replaceChildren(...FAMILIES.map(f => h("option", { value: f }, f)));
@@ -998,6 +1008,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this board in claude.ai to see the team's ratings.", true); $("roleChip").textContent = "Offline"; return; }
     const [db, user, downloads] = await Promise.all([claude.use("db"), claude.use("user"), claude.use("downloads")]);
     state.db = db; state.user = user; state.downloads = downloads;
+    if (!db && PAUSED) { pausedOnly(); return; }
     if (!db) { setStatus("The board's data is not available in this view. Sign in to claude.ai and open the board again.", true); $("roleChip").textContent = "Signed out"; applyRole(); return; }
 
     state.me = user ? await user.id() : null;
@@ -1006,6 +1017,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     const can = user ? await user.can("data.write") : null;
     state.canWrite = !!state.me && (state.isAdmin || can !== false);
     state.role = isOwner ? "Owner" : state.isAdmin ? "Editor" : state.canWrite ? "Contributor" : "Viewer";
+    if (PAUSED && !state.isAdmin) { pausedOnly(); return; }
     if (PAUSED) { state.canWrite = false; state.isAdmin = false; state.role += " · paused"; $("pausedNote").hidden = false; }
     applyRole();
 
