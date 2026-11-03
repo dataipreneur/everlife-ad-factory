@@ -2,6 +2,12 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Team-log pages: warning reasons shown in the row (branch `teamlogs-flags-visible`)
+Priestley on the Copy Ledger: "why check shows warning for few. i dont see any" → the reasons were only in a hover tooltip.
+"yes fix it, push and merge". Originals: `_originals/2026-11-03/teamlogs-flags-visible/`.
+- All three pages: the Check cell lists each reason under the ⚠ count (no hover needed); "backfilled" is a grey label, not a
+  warning, so ⚠ only marks something to fix.
+
 ## 2026-11-03 — Prompt log: headline / hook on every generation (branch `teamlogs-headline`)
 Priestley: "why is headline missing for few in prompt & outcome log?" → all 20 backfilled rows had an empty `copy`, and
 `teamlog.py gen` wrote it empty too. "yes fix it, push and merge". Originals: `_originals/2026-11-03/teamlogs-headline/`.
