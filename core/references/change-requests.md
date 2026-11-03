@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-03 | Priestley | "why check shows warning for few. i dont see any" → "yes fix it, push and merge" | Check cell shows the reasons in the row; backfilled = grey label, not a warning (all three pages) | `teamlogs-flags-visible` |
 | 2026-11-03 | Priestley | "why is headline missing for few in prompt & outcome log?" → "yes fix it, push and merge" | teamlog.py carries headline / hook / CTA per take and back-fills them from the copy record; page column "Headline / hook" + missing flag | `teamlogs-headline` |
 | 2026-11-03 | Priestley | Fix the logging system ("Lets do it") + "If the user reprompts or modifies the prompt, are those details captured?" | `core/scripts/teamlog.py` (saves exact prompts, checks every record, closing check, re-takes + feedback), schema + page data-quality flags | `teamlogs-quality` |
 | 2026-11-03 | Priestley | "are you sure our new logs work?" → "do a first please" (add the log step to the video recipes and Restora-Z) | Team-log step in ai-avatar-video, car-throw-review, seedance-on-creatify; Restora-Z image-batch + finishing | `logs-video-routes` |

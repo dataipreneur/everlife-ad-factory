@@ -67,6 +67,8 @@ td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); over
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .flag { background: #3a2c0c; color: #f0c060; } }
 :root[data-theme="dark"] .flag { background: #3a2c0c; color: #f0c060; }
 ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
+.tag { display: inline-block; font-family: var(--f-mono); font-size: 11px; padding: 1px 6px; border-radius: 4px; background: var(--sunken); color: var(--muted); white-space: nowrap; margin-top: 4px; }
+td.check { min-width: 13em; } td.check ul.issues { margin: 4px 0 0; padding-left: 16px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -129,11 +131,15 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
   // Data gaps and rule breaks a run record shows (TEAM-LOGS.md §6).
   const isVideo = (r) => r.format === "video" || r.format === "avatar";
   const isBackfill = (r) => !!r.backfill || /backfilled/i.test(r.notes || "");
+  // The Check cell: the reasons are written out (no hover needed); "backfilled" is a grey label, not a warning.
+  function checkCell(list, backfill) {
+    return h("td", { class: "check" }, list.length ? [h("span", { class: "flag" }, "⚠ " + list.length), h("ul", { class: "issues" }, ...list.map(x => h("li", null, x)))] : "✓",
+      backfill ? h("div", null, h("span", { class: "tag", title: "Logged after the fact from the job folder" }, "backfilled")) : null);
+  }
   function issues(r) {
     const out = [];
     if (isVideo(r) && r.captions === false) out.push("No captions: the bible requires captions on every video");
     if (isVideo(r) && r.captions == null) out.push("Captions not recorded");
-    if (isBackfill(r)) out.push("Backfilled: logged after the fact");
     for (const k of ["creatify", "higgsfield"]) { const c = (r.credits || {})[k] || {}; if (num(c.spent) > 0 && c.before == null) out.push(k[0].toUpperCase() + k.slice(1) + " balances not recorded (spend = sum of charges)"); }
     if (r.started_at && !/T\d\d:\d\d/.test(r.started_at)) out.push("Date only, no time");
     return out;
@@ -177,7 +183,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
       h("td", null, FORMATS[r.format] || r.format || "—"), h("td", { class: "num" }, num(r.made)), h("td", { class: "num" }, num(r.finished)),
       h("td", { class: "num" }, num(r.rerolled)), h("td", { class: "num" }, fmt(spent(r, "creatify"))), h("td", { class: "num" }, fmt(spent(r, "higgsfield"))),
       h("td", null, !isVideo(r) ? "—" : r.captions === true ? "Yes" : r.captions === false ? h("span", { class: "flag" }, "No") : "?"),
-      h("td", null, issues(r).length ? h("span", { class: "flag", title: issues(r).join("\n") }, "⚠ " + issues(r).length) : "✓"),
+      checkCell(issues(r), isBackfill(r)),
       h("td", { class: "path" }, r.out_dir || ""))));
   }
   let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
