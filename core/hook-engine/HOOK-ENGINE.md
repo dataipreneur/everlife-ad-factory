@@ -21,7 +21,8 @@ still comes only from the bible. This engine decides the opening ACTION, not new
    unless the skill says otherwise.
 8. **Compliance applies to visuals too:** nobody gets hurt (no hit to the face, no fall by 50+ talent, no injury or medical
    emergency); pills never spill, scatter or get shared (exactly one pill/tablet/capsule on screen); no needles or syringes, ever; no
-   bedrooms or beds for intimate products; no shirtless, no flexing, no body before/after or body comparison; no "Breaking News";
+   bedrooms or beds for intimate products; no shirtless, no flexing (EXCEPT the hardcore-men products in `core/references/hardcore-men.md`:
+   shirtless, flexing and bodybuilder casts are allowed and recommended there, Jeremy 2026-11-02), no body before/after or body comparison; no "Breaking News";
    no named competitors (except the skill's approved ones); dialogue has no I/me/my and no "Are you…?"; no readable text in the
    generated video except the real label (headers are added in finishing).
 9. **Safe zone:** the hook action happens inside the skill's 9:16 COMPOSITION block (central column, top 8% to 63% of height).

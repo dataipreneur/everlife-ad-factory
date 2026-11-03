@@ -1,5 +1,7 @@
 # Spartan Stack: borrowed winners (proxy until our own exist)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 The Spartan Stack has no ads yet, so no winners. **Emily (2026-10-30): "Wolverine, Spartan and MOTS-c: use GHK and Sermorelin visuals
 instead. Rugged manly men."** These cards point to the **men's winners of the Sermorelin and Sermorelin GHK skills**, ranked by CPA.
 The files are not copied: open the paths below (relative to this folder), and read the full source cards in those skills'

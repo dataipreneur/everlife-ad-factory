@@ -77,6 +77,11 @@ JPEG, 720 px wide, ≤ 80 KB (about 110 KB stored): big enough for reviewers to 
 "feedback": "<up to 800 chars>", "by": "<uid>", "createdAt", "updatedAt"?}`. Doc id `r-…`. One per reviewer per entry (the page
 edits the existing one); if there are several, the newest per reviewer counts.
 
+### Comment (`type: "comment"`; anyone signed in, from the card's detail panel, added 2026-11-02)
+`{"type": "comment", "target": "<rater uid>/<entry doc_id>", "product", "kind", "name": "<commenter's typed name>", "text": "<up to 800
+chars>", "by": "<uid>", "createdAt"}`. Doc id `c-…`, in the commenter's OWN collection. Free-form team feedback: Claude reads the
+comments on a product's entries with the reviews before a batch (guidance only; comments never change a rating).
+
 ### Meta report (`type: "meta"`; anyone at Contributor or above)
 `{"type": "meta", "target": "<rater uid>/<entry doc_id>", "product", "kind", "ctr", "cpa", "hook_rate", "spend", "from", "to",
 "verdict": "winner|good|weak|kill", "notes", "by", "createdAt"}`. Doc id `m-…`. The verdict is set from the numbers by whoever

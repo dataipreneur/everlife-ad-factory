@@ -1,5 +1,7 @@
 # Sermorelin — creative bible (verbatim extract)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 > Source: ~/.claude/everlife/creative-bible.md (bible **v3**, imported 2026-10-29: pages 7 "Sermorelin — Men", 8 "more
 > claims", 9 "Sermorelin — Women", 10 "more claims"), re-copied 2026-10-29 (first copy 2026-10-28 from the older
 > import). Re-copy when the bible changes. The verbatim section below is the ONLY approved copy
@@ -31,7 +33,7 @@
   them only with the **1000 mcg bottle** in frame. Copy never states a dose in mcg until the creative lead approves it.
 - **Audiences (pick one per session):** **Men 35–65+** (lean muscle, energy, strength, healthy aging; frame around muscle,
   fitness and performance, never the bedroom; v3 talent: "rugged, strong and unmistakably masculine — a serious gym-goer
-  with a hardcore training feel", cast as in `video-prompting.md` CAST, always fully clothed) · **Women 35–65+** (lean
+  with a hardcore training feel", cast as in `video-prompting.md` CAST; HARDCORE slots shirtless per `core/references/hardcore-men.md`) · **Women 35–65+** (lean
   muscle, energy, graceful aging).
 - **Colour:** bible v3 keeps "pinks, tans and beige; no oranges or greens" only for GHK-Cu Cream and Glow Stack, so
   Sermorelin has no palette limit. Women's colours follow Justin's preferences (`image-batch.md` §2b). The orange bottle

@@ -1,5 +1,7 @@
 # Lessons already paid for (read every session)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 No plain Sermorelin ads have been made with this skill yet. These lessons come from the Restora-Z skill (2026-10-27) and
 the Sermorelin GHK skill, and apply to every product. Add Sermorelin-specific lessons at the bottom as they happen.
 
@@ -85,7 +87,7 @@ Sermorelin-specific risks to watch (expected, not yet seen):
   check Marketing Studio picked "Sermorelin", not "Sermorelin GHK".
 - **Two tablet shapes in past ads** (round "S" vs oblong "SERMORELIN"): only the confirmed render; QA the shape.
 - "Hardcore fitness-model" casting drifts to shirtless, flexing or mirror-selfie bodies → "fully clothed in a fitted
-  training tee, no bare torso, no flexing poses, no mirrors".
+  training tee, no bare torso, no flexing poses, no mirrors" for NON-hardcore slots only (HARDCORE slots: 💪 hardcore-men.md).
 - Any "toned/lean" visual can turn into a body before/after → never show two states of one body.
 
 Compliance traps:
@@ -103,3 +105,16 @@ Compliance traps:
 
 ## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
 - `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
+
+## Mitansh, 2026-11-02: one-shot 9:16 (hardcore batch)
+- Raws with headlines from ~8% and bottles to ~75% can't be finished without mirror-fit, and mirror-fit smears ("trash … one shot them"). The STRICT layout block fixed 3 of 5 in one shot: top 16% "completely EMPTY, near-black, out-of-focus"; text 17–40%; product/tablet/hand 30–50% ("bottle base at 50% height"); below 55% only dark scene. Still failed when a 5-line text stack (strike-through + headline + name + 2 lines) or a 3-line headline was asked: give those a 20% empty top and product ending at 45%.
+- Never send a mirror-fitted final; finish raws as-is and drop or re-roll what the finisher refuses. Also check the logo doesn't touch the headline even when the finisher passes.
+- Same day, after the 3 finals: "They are holding a tablet in hand! This is soo soo redundant!" → tablet-in-hand max 20% of a batch (banner at the top of image-batch.md); the rest stage the tablet without a hand.
+- Same day, round 3: the bottles landed ~65–70% and covered the safe-area proof row; Claude moved the proof to the bottom with `EVERLIFE_PROOF_AT=bottom`. Mitansh: "No NO NO! Why did it override the Meta Safezone instructions!" → NEVER change the footer placement (env or flags) to dodge a collision. The proof row stays in the safe area (ends y 1385); a product under it = re-roll with the bottle base asked at 45%.
+
+## Mitansh, 2026-11-02: 4:5 hardcore batch (restart, Restora-style: one reference ad opened per slot)
+- "TOP 14% calm" was ignored in 4 of 5 raws: headlines started at 4–8%, and the finisher's logo landed on or touching them (#3 logo on "SERMORELIN"). Fix that worked as a prompt rule: "TOP 18% COMPLETELY EMPTY … FIRST line of text starts at 19% or lower; head below 20%" (now in the §3 template).
+- A headline placed at the bottom-left (copying M2's lower stack) ran under the 4:5 footer: on 4:5 every text line ends above 72%; move M2's stacked headline up under the name.
+- Small two-line benefit rows rendered "Actıvity" with a broken i: ask for rows on ONE line, ≥ 4% height, and spell the risky word out letter by letter.
+- QA failures are re-rolled by Claude without asking (see the banner in image-batch.md).
+- Never skip "Rate the batch" (image-batch.md §4 / WINNERS-BOARD §5): after showing the contact sheet, OPEN the finals and ask Winner/Good/Weak/Kill per ad, then write the board. Mitansh 2026-11-02: "why did you not ask for feedback?" Ratings that day: #3 M2 mono + crimson stat column = WINNER; #4 toggle card (tall card stack, no room for product) = weak.

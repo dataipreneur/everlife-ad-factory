@@ -115,8 +115,9 @@ def captions():
 
 
 # --- 2. layers (every text element stays inside the Meta 9:16 safe area: see safezones.py)
-if C.get("proof_at") in ("safe", "bottom"):   # per-job footer placement override (default: safezones.PROOF_AT)
-    os.environ["EVERLIFE_PROOF_AT"] = C["proof_at"]
+if C.get("proof_at") not in (None, "", "safe"):   # ⛔ HARD LOCK 2026-11-02: proof row never leaves the Meta safe area
+    sys.exit(f"⛔ copy.json proof_at={C['proof_at']!r} refused: the proof row always stays inside the Meta safe area "
+             "(Mitansh 2026-11-02). Re-roll the raw if the product collides; never move the footer.")
 import safezones as sz  # noqa: E402
 
 # disclaimer stays 21 px and wraps (Mitansh, 2026-10-29: kept over bible v3's 2-line/13 px rule)
@@ -174,8 +175,9 @@ def top_layer():
 def bottom_layer():
     img = bl.canvas()
     row_y, disc_y, top, lines, rh = block_layout()
-    bl.gradient_band(img, top - 380, H, 0, 225)
     row = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    if row or lines:   # nothing in the proof block → no dark band over the video (Mitansh 2026-11-02: "Why do you have this shadow??"; captions carry their own box)
+        bl.gradient_band(img, top - 380, H, 0, 225)
     if row:
         rx = (W - row.width) // 2
         img.alpha_composite(row, (rx, row_y))

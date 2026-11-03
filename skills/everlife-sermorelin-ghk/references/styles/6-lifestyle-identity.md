@@ -1,10 +1,12 @@
 # Category 6 — Lifestyle & Identity  (top fit for Sermorelin GHK)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 Library folders: Hero Fitness Guy · Sports · Fighter UFC · Dad Bod · Female Glow Up · Life Cell (boards 2, 3, 5).
 What the library shows: gym heroes, runners, tennis, UFC cages, "kiss your dad-bod goodbye", glow-up portraits. Built for this product family, but full of today's banned framing.
 Why it works: the bible frames Sermorelin GHK around **muscle, fitness and performance** (men) and **tone, strength, glow** (women). Identity ("still in the game at 55") sells without a body claim.
 
-**Hard NOs here:** body composition, fat, "dad bod", "new 40", "physique" transformations, shirtless or bodybuilder heroes, gym-mirror body shots, before/after, age reversal, bedroom. Performance comes from *activity and attitude*, never from showing a changed body.
+**Hard NOs here:** body composition, fat, "dad bod", "new 40", "physique" transformations (shirtless / bodybuilder heroes ALLOWED: 💪 hardcore-men.md), gym-mirror body shots, before/after, age reversal, bedroom. Performance comes from *activity and attitude*, never from showing a changed body.
 **Engine:** Marketing Studio UGC for people (75 cr), Seedance for multi-shot montages (45 cr), GPT Image 2.5 statics.
 
 ---

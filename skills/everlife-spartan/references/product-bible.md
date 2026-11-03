@@ -1,5 +1,7 @@
 # Spartan Stack — creative bible (verbatim extract)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 > Source: the live creative bible (Justin), synced into `core/claude/creative-bible.md` (section "## Spartan Stack (BPC-157/KPV/TB500)"), re-synced
 > 2026-11-02 from version 1793642193-f927, the version that un-swapped the Spartan / Wolverine pages. Re-copy when the bible
 > changes (`core/references/bible-sync.md`). Global rules: `core/references/global-rules.md` (they win).

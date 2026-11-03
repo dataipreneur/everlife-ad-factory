@@ -1,5 +1,10 @@
+> **💪 MEN = "💪 Hardcore shirtless (Recommended)" is ALWAYS option 1 of the style/mood question** (Mitansh 2026-11-02; `core/references/style-library/MOOD-QUESTION.md`). Never hide it in another option's description.
+
 # Sermorelin GHK IMAGE ads: Batch Mode (the default for every image request)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
+> **🖼️ HARDCORE REFERENCES H3–H11 (Mitansh, 2026-11-02: "Add all of these are Hardcore Images, references for Serm Ghk and Serm. The new ones should be inspired by these!"):** every HARDCORE slot starts from one of `core/references/hardcore-men-refs/H3…H11` (Read `REFS.md` + LOOK at the file; a different one per slot; put it in the Source column). Take format, type treatment, cast and light; rebuild with the tablet + bottle and this bible (never BPC claims, the vial or "40% Off"). Their recipe: product name as the giant headline, ONE benefit line, ONE pill CTA, lots of air.
 > **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
 > **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
 
@@ -8,7 +13,7 @@ mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify desi
 and tablet; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor
 Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
 
-**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin-ghk --proof count`. Rule: `core/references/creative-system.md` §2.
+**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin-ghk --proof count`. Rule: `core/references/creative-system.md` §2. **PROOF SPLIT IS HARD (Mitansh 2026-11-02, no conflicts):** ~42/28/30 per batch and per ratio; proof slots get a clean shelf in the LAYOUT (9:16: product, CTA, sticker, faces end above y 1150 of 1920); never swap a planned proof to "none" yourself (re-roll with cost or ask); `finish_batch.py --proof-check <batch folder>` must pass before showing.
 
 **Superseded 2026-10-29 (creative-system §5): never buy a reposition edit. A raw whose text or product dips into the footer is fixed for free with `reposition_916.py` (full-bleed, edge-stretch slivers, no blur), then `finish_batch.py … --fit trusted`. The paragraph below is kept for history only.**
 
@@ -35,12 +40,13 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 **Hard stops:**
 - Claims: only approved quick-hit benefits, more approved benefits, or a per-ingredient claim on its OWN ingredient
   (Sermorelin / GHK / L-Citrulline Malate). Pre-screen ❌ lines never; ⚠ lines only with the user's explicit OK + flagged for Jeremy.
-- No body composition, fat, "melt/burn/ripped/shred", no "physique transformation", no body before/after, no shirtless heroes.
+- No body composition, fat, "melt/burn/ripped/shred", no "physique transformation", no body before/after (shirtless heroes ARE allowed: 💪 hardcore-men.md).
 - "GHK" only (never -Cu / copper peptide); "growth hormone" spelled out; "easy sublingual delivery"; no needles; no "all natural".
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product.
 - Offer: only "Save up to 47%" (percent, never a $ price).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
+> 🔥 **Boldness question (Mitansh 2026-11-02)** sets the Tier B count; Claude writes the new lines itself (hardcore voice, see SKILL.md step 1 Q4).
 > ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
 > `_originals/2026-10-28/`), to match the global gate (CLAUDE.md ranks above skills: headlines only from the bible/brief,
 > new hooks need explicit approval). Remove this note once the creative lead and Jeremy confirm, or revert if they don't.
@@ -48,7 +54,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 **Headline tiers:**
 - **Tier A (default):** a headline from the chosen audience page or its headline bank, word for word or lightly trimmed;
   never a "Weak headline", "Hard NO conflict" or pre-screen ⚠ line (e.g. "Forge a Stronger Physique", "Lean. Defined. Glowing.").
-- **Tier B (max 2 per batch):** fresh wording whose every claim maps to an approved claim, **or** a winner's headline
+- **Tier B (how many = the 🔥 boldness answer in SKILL.md step 1: Safe 0 · Balanced 1 · Bold 2 · All-in every slot; default Bold):** fresh wording whose every claim maps to an approved claim, **or** a winner's headline
   that isn't in the bible (e.g. "Support your strongest era", "Lean. Strong. Ready."). Mark it **PROPOSED**; it needs the
   user's explicit OK for that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
 - **Reuse (Priestley, 2026-10-29: the approved pool is used up):** a bible headline or CTA may be reused across batches,
@@ -116,13 +122,16 @@ that file.
    doesn't say what's for sale. The tan tablets inside the bottle render are a known issue (`assets/MISSING_RENDERS.md`):
    keep using the render until design or the pharmacy confirms a corrected one; never drop the bottle to avoid it, and
    flag it in the session sheet.
-   **The tablet is HELD** (bible v3, 2026-10-29): between thumb and index finger in a "pull" toward the camera, or
-   resting in an open palm, sharp and in the foreground, beside the bottle (never covering its label). **Vary the hold per
-   ad** (Restora feedback, Berna): fingertips raised to the lens, open palm low in frame, hand beside the face, hand
-   resting on a bench with the palm up, two fingers offering it forward…; never the same hold or angle twice in a batch. **No two ads in a batch share a framework or an accent colour.**
+   **✋ Tablet in a hand: max 30% of the batch** (Mitansh, 2026-11-02, overrides bible v3 "tablet held": 4 ads → max 1,
+   8 → 2, 12 → 3). When held: between thumb and index toward the camera, or in an open palm, sharp, foreground, beside the
+   bottle (never covering its label); never the same hold twice. **Every other ad: NO hand on the tablet**; the real tablet
+   sits big and sharp in the foreground on a surface (bench, weight plate, chalked barbell, towel, stone plinth, counter)
+   beside the bottle, levitates, or fills a macro; say "no hand touching the tablet" in those prompts. People may still be
+   in the scene (training, resting, gripping a bar): they just don't hold the pill. Batch table: a **Hold** column.
+   **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
+   people look 40s–50s (men: hardcore fitness-model build, fitted top; HARDCORE slots shirtless 40–45 per hardcore-men.md); "SERMORELIN GHK" present in type (without "by Everlife"); tablet held in no more than 30% of the batch (✋ rule), unheld ads have no hand on the tablet; women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -143,13 +152,13 @@ Fonts and colours alone don't make a batch varied (batch 9: five dark-gym ads wi
 bottle right" picture). Before writing prompts, give every ad its own row in each rotation; no value twice in one batch:
 - **Scene:** gym / outdoor (sunrise trail, track, beach, park) / home (kitchen counter, morning coffee, bathroom shelf) /
   clean studio product shot (seamless backdrop, plinth) / pharmacy or doctor trust cue (bible: pharmacy framing for 45+) /
-  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch**; the "rugged, hardcore
+  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch, not counting HARDCORE slots (those are always a hardcore gym)**; the "rugged, hardcore
   training" direction is about the MAN (casting), not the setting: he can be on a trail or in a kitchen.
   Women: studio / home / outdoor / article page / pharmacy; not two linen-and-stone still lifes.
 - **Light:** at least 2 of every 5 ads bright (daylight, white or pale studio, sunrise); the rest moody, golden hour,
   overcast soft. Never 4 dark ads.
 - **Composition:** person-led photo / macro product close-up (tablet fills the frame, bottle behind) / text-led article or
-  letter / split screen / still life on a surface / product held toward the lens. At most 2 "hand + bottle side by side".
+  letter / split screen / still life on a surface / product held toward the lens. Tablet in a hand in at most 30% of ads (✋ rule).
 - **Name placement:** "SERMORELIN GHK" at the top, directly under the headline, on a lower-third band, in the text panel
   of a split layout, or as part of the headline: not the same spot twice in a row. Never "beside" an object (batch 9: it
   landed on a coffee mug and read as a mug print); props stay plain, and the name is always big.
@@ -234,13 +243,24 @@ badges, prices, website, disclaimer):
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
 <MEN: scene and light from this ad's row in §2c (not always a dark gym); any person a man 42–50, a fit silver fox with a hardcore fitness-model
-physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training
-tee or long sleeve, no bare torso, no flexing poses.>
+physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, in a fitted training
+tee or long sleeve. HARDCORE slot (💪 40% of random batches): instead the EXACT prompt line from `core/references/hardcore-men.md` ("a rugged, EXTREMELY JACKED man aged 40–45 … veins popping …"): never soften it to "fit" or "athletic"; QA rejects any HARDCORE raw where he isn't massive and vascular>
 <WOMEN: lead colour <this ad's own lead per §2b (Justin): preferred pinks / tans / neutrals / warm tones / white / teal (soft
 or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white background for advertorial ads; pink-led at most
 once per batch>; any person a woman 40–60, natural, candid, glowing
-skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
+skin, clothed.> No bedroom, no before/after, no needles or syringes, no mirrors showing bodies.
 
+STRICT LAYOUT (9:16, ✅ PROVEN 2026-11-02 hardcore-v3: 4/4 finished first try, logo band clean on all 4; Mitansh: "You already have the
+instructions on where the logo and footer go: write the prompt that way") - paste with real pixel numbers, GPT Image 2.5 = 1152 x 2048:
+- ZONE A, y 0-330 px (top 16%): EMPTY HEADROOM, plain background only (name the surface: dark wall, sky, concrete). NO text,
+  product or head. "The very first line of text starts BELOW y 340." Also put "(first line, starting at y 360)" on the Name string.
+- ZONE B, y 340-1180 px: ALL text + bottle + tablet. Ask the product base at about y 950 (asking 1100 landed at ~1400 on 2/4:
+  the tablet then sat under the trust row). Give the man's HEAD a y-range inside Zone B (e.g. "head at y 450-650").
+- ZONE C, y 1180-2048 px: ONLY the man's body / floor / scene. NO text, product or hand.
+- All text inside x 170-980 px. Nothing important touches the side edges.
+Then finish AS IS (`--fit trusted --shift 0`). If the tablet still dips under the trust row, finish that ad with `--proof none`
+(disclaimer only) and note the proof-split deviation; never mirror-fit a raw whose top edge is text.
+(Older block below kept for reference.)
 LAYOUT (9:16, Sermorelin GHK, 2026-10-29: "use as much of the artboard as possible around the safe zones"): the TOP 12%
 is calm continuation of the background (the Everlife logo is laid there). ALL TEXT (headline, name, lines, badges) stays
 inside the central column (15% in from the left and right edges). PICTURES are full-bleed: the product, hands, person and

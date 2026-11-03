@@ -1,5 +1,7 @@
 # QA + finishing (zero manual editing)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
 ## 0. Safe zones (every 9:16 image and video)
@@ -16,7 +18,7 @@ Feed (4:5, 1:1): 60 px margin.
   - **product correctness:** the tablet matches the tablet render exactly (shape, colour, markings) and the bottle label
     matches its render; not mirrored (`--mirror-until <cut>`); exactly one tablet; **no injection vial** (the past ads
     always paired the bottle with one: models will add it back)
-  - people: real-looking, the cast age (men 42–50 hardcore fitness-model build), fully clothed, no flexing; no bedroom;
+  - people: real-looking, the cast age (men 42–50 hardcore fitness-model build; HARDCORE slots shirtless 40–45 per hardcore-men.md); no bedroom;
     the tablet held (fingers or palm) beside the bottle, not covering the label
   - no needles/syringes/vials, no gym-mirror body shots, no garbled text on props, no second phone (`--zoom 1.2`)
   - "growth hormone" said in full; never "GH"; product name pronounced clearly; no "GHK" anywhere

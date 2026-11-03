@@ -36,7 +36,7 @@ Log the reference used per slot in `prompts.md` and SESSION.md.
   the overall look (e.g. NAD+ green, tirzepatide green; Mitansh 2026-11-02).
 - Intimate wellness (PT-141, Spark, Lovara, Titan-rx): no bed, bedroom, lingerie; product-led is already the rule.
 - No needles, syringes, pens or droppers next to any vial. One form per ad unless the skill allows side by side.
-- The footer still adds the Everlife logo, the social proof (Trustpilot rated 4.9 Excellent / 100,000+), the verbatim disclaimer and
+- The footer still adds the Everlife logo, the planned proof per the 42/28/30 split (trust row, Trustpilot 4.9 badge + 100,000+, or none; creative-system §2), the verbatim disclaimer and
   the AI disclosure: the canvas itself stays clean (no logo, stars or badges in the generated image).
 
 ## Per product (field colours; women's runs per the women's rule above)

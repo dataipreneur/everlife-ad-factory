@@ -19,7 +19,7 @@ Urgency = a vibrating twin-bell alarm clock in the ad's palette (never red flash
 11. MS Product Dodge · a bottle flies across the living room, they duck, come up holding it.
 12. CONTRAST SPLIT · Same room, two halves: left side, wide awake with the lamp on; right side, dark and peaceful. Not a body comparison.
 
-## Sermorelin GHK (tablet is the hero · men: 40s–50s fit silver fox in a fitted training top, no bare torso, no flexing · women: pinks, tans, beige · speech from second 1 · "SERMORELIN GHK" on screen from frame 1 · "Sermorelin GHK by Everlife" in the intro · never the bedroom)
+## Sermorelin GHK (tablet is the hero · men: hardcore per core/references/hardcore-men.md (shirtless 40–45, flawless muscular condition, hard gym light; 40% of random slots) · women: pinks, tans, beige · speech from second 1 · "SERMORELIN GHK" on screen from frame 1 · "Sermorelin GHK by Everlife" in the intro · never the bedroom)
 1. IMPACT · Gym toss, one-handed catch. A training partner throws the bottle across the gym; he catches it without stopping his sentence.
 2. INTERRUPTION · Dumbbell racked, camera shakes. The weight slams onto the rack at 0.0 s; he says the product name through the shake.
 3. SPEED · Freeze at the box-jump peak. Frozen mid-air for 0.5 s (the header goes on in finishing), then he lands and holds up the tablet.
@@ -33,7 +33,7 @@ Urgency = a vibrating twin-bell alarm clock in the ad's palette (never red flash
 11. Women · IMPACT: a pilates mat unrolls with a snap, the tablet held up in a sunny studio (pink/tan/beige).
 12. Women · SAME-FRAME FLIP: a cluttered vanity → the same frame calm and tidy, tablet in an open palm.
 
-## Sermorelin (plain, NOT GHK · tablet hero · speech from second 1, hook by 2.5 s · "Double Strength" only with the 1000 mcg bottle in frame · must look different from Sermorelin GHK ads: everyday, outdoor, home settings rather than the gym)
+## Sermorelin (plain, NOT GHK · tablet hero · men: hardcore per core/references/hardcore-men.md (shirtless allowed, 40% of random slots) · speech from second 1, hook by 2.5 s · "Double Strength" only with the 1000 mcg bottle in frame · must look different from Sermorelin GHK ads: everyday, outdoor, home settings rather than the gym)
 1. IMPACT · Pharmacy bag drop on the kitchen island; the bottle slides out and stops at the camera.
 2. POV · From inside the mailbox as it's yanked open; a hand grabs the box.
 3. STREET · "Double what?" ambush interview (1000 mcg bottle only).

@@ -1,5 +1,7 @@
 # EverlifeMD Creative Gates — MANDATORY
 
+> **⛔ Proof row ALWAYS inside the Meta safe area (Mitansh, 2026-11-02, HARD, every product, every skill, image AND video):** the Trustpilot / Doctor Prescribed / Ships Free / 100,000+ proof row ends at or above y 1385 on 1080×1920 (`safezones.py`). Never move it lower or outside the safe area by any means (env `EVERLIFE_PROOF_AT`, copy.json `proof_at`, flags, manual edits); the tools refuse. If the product or text collides with the proof row: re-roll the raw (cost approved) or ask the user. Never move the footer. The disclaimer alone may sit at the very bottom.
+
 These gates apply to ALL creative work for EverlifeMD: scripts, prompts, images, videos, statics, landers, copy, on-screen text. A gate is pass/fail. If any gate fails, STOP, report which gate and why, and do not proceed, generate, upload or hand off. When a brief conflicts with a gate, follow the gate and flag the conflict.
 
 **Precedence:** (1) Creative bible global rules (section 2–3 below; full text in `~/.claude/everlife/creative-bible.md`, Part A) → (2) the product's bible page → (3) the Asana brief → (4) everything else. Compliance questions route to **Jeremy**; nothing goes live without his approval.
@@ -38,6 +40,7 @@ Proof:
 - Trustpilot always reads exactly **"Trustpilot rated 4.9 Excellent"**. Never "Trustpilot rating" alone.
 - Customer count locked at **100,000+** ("Over 100,000 happy customers").
 - Proof split (bible 2026-11-02, Standards 02 · 06): applied as (Mitansh 2026-11-02): 30% of creatives carry no proof; 70% carry one footer proof, of which 60% the trust row (Trustpilot, Doctor Prescribed, Ships Free From Pharmacy) and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (images: `finish_batch.py --proof-plan N`; videos: `core/scripts/proof_next.py`). Logo + verbatim disclaimer on every creative.
+  **HARD, no conflicts (Mitansh 2026-11-02: "This should be followed without any conflicts!"):** ≈ 42% trust / 28% badge + count / 30% none, per batch and per ratio; replaces every "every ad carries visible social proof" line. Compose proof ads with a clean shelf for the row (9:16: product + CTA end above y 1150); never swap a planned proof to "none" on your own (re-roll with cost shown, or ask); `finish_batch.py --proof-check <batch folder>` must pass before a batch is shown.
 - Authority = sourced trust signals only (100,000+, Trustpilot, Doctor Prescribed / "Dr. Prescribed, Direct From Pharmacy", Ships Free From Pharmacy). No adjectives as authority.
 Disclaimers & AI disclosure:
 - Use the product's **Ad disclaimer verbatim** — from the bible, or from the product skill's `product.json` when the bible has none (e.g. BPC-157). Never written, paraphrased or invented. Don't stop over a missing bible disclaimer when the skill has one.
@@ -54,7 +57,8 @@ Disclaimers & AI disclosure:
 - Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens.
   **Exception: Sermorelin and Sermorelin GHK** follow Justin's direction (product owner, 2026-10-29): pinks, tans, neutrals and warm tones preferred; white and teal welcome (white backgrounds for advertorials); these are preferences, not limits — keep exploring trends. Their skills' rules apply.
 - Intimate wellness (Lovara, PT-141, Spark): tasteful, product-led, no beds/bedroom scenes; PT-141 video stays shoulder-up.
-- Sermorelin: frame around muscle, fitness, performance — not the bedroom. Male talent: fit, mature, not bodybuilders.
+- Sermorelin: frame around muscle, fitness, performance — not the bedroom. Male talent: rugged, unmistakably masculine, hardcore training feel.
+- **Hardcore men (Jeremy, 2026-11-02):** bodybuilding / men's-muscle products (Sermorelin, Sermorelin GHK, BPC-157, Wolverine, Spartan; later TRT, Tesamorelin) lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light; random/Surprise-me batches make 40% of men's slots HARDCORE. Overrides any "clothed / no shirtless / no flexing / not bodybuilders" line. Rule: `core/references/hardcore-men.md`. Copy still never ties the body to the product (no before/after, body comparison or body-composition claims).
 - Reference top-performing, lowest-CPA creative before generating new iterations. Cap at five iterations per base concept.
 - Landing pages: mobile first; build from the approved template; no hamburger, no login, no links to other products on a traffic page; test structurally (A/B, multivariate); default to percent-off, not dollar prices.
 
@@ -80,7 +84,7 @@ Disclaimers & AI disclosure:
 - Explicit approval of the master (Frame.io / Asana Review Status = Approved) before ANY other sizes. Compliance sign-off by Jeremy before anything goes live.
 
 ## 8. Pre-review checklist
-Concept direction · approved benefits/subheaders · full section 2 pass · section 3 standards · legibility 50+ and spelling · product correctness · ratio/safe zone · disclaimer verbatim + AI disclosure · logo · proof per the 60/40 plan.
+Concept direction · approved benefits/subheaders · full section 2 pass · section 3 standards · legibility 50+ and spelling · product correctness · ratio/safe zone · disclaimer verbatim + AI disclosure · logo · proof per the 42/28/30 split (`--proof-check` passes).
 
 ## 9. Delivery gate
 - Base 1:1 and 9:16 to Drive; tell Emily.

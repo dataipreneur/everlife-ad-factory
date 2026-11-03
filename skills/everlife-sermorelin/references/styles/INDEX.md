@@ -1,5 +1,7 @@
 # Style system — index (Sermorelin)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 Source: the team's style library "Everlife Ad Style Examples" (Drive folder `1aQv40GQ3vwsF2EkJ_L41vnvZDYInTckF`), condensed into 6 categories. Same structure as the Restora-Z and Sermorelin GHK skills; the fit and recipes are rewritten for plain Sermorelin. Example boards (library thumbnails, all products) are in `../style-boards/board_1..6.jpg`:
 
 | Board | Rows (library folders) |
@@ -41,4 +43,4 @@ Product as Hero leads here (unlike GHK): every Sermorelin winner (`../winners/wi
 | ALL words, numbers, logos, review text | finishing only (`finish_batch.py`, `full_layout.py`) | 0 |
 
 ## Library compliance traps (never copy)
-"Breaking News" · "Dad Bod", "Man Bod", "From Flab to Fab", "Get Ripped", "new 40" · "Same man, double strength" body splits · shirtless/bodybuilder heroes, UFC cage bodies · split-face or body before/after · "No More Needles" / "Skip the needles" / any vial or needle imagery · "Injections or sublingual tablets" · "Fat burning", "visceral fat" · "Sermorelin GH Peptide" ("GH") · "Featured in" NIH/Mayo logos · celebrity names · $ prices · old proof (4.8 / 50,000 / 70,000 / "750,000 tablets sold") · named competitors · anything GHK.
+"Breaking News" · "Dad Bod", "Man Bod", "From Flab to Fab", "Get Ripped", "new 40" · "Same man, double strength" body splits ·  split-face or body before/after · "No More Needles" / "Skip the needles" / any vial or needle imagery · "Injections or sublingual tablets" · "Fat burning", "visceral fat" · "Sermorelin GH Peptide" ("GH") · "Featured in" NIH/Mayo logos · celebrity names · $ prices · old proof (4.8 / 50,000 / 70,000 / "750,000 tablets sold") · named competitors · anything GHK.

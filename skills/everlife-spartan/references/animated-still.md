@@ -1,5 +1,7 @@
 # Animated still: an approved static + 8 s of motion (Spartan Stack; recipe from BPC-157, Mitansh 2026-10-29)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 The fourth thing the skill makes. Reference: `vial-refs/pins/V43.mp4` (Sculptra, 14 s): a premium vial on a deep single-colour
 field, the camera creeping in, headline words drifting around the vial, nothing else moving. Ours is simpler and shorter: the
 approved static, 8 seconds, one slow move, the brand layers crisp on top.
