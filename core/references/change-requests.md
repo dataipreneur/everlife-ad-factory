@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-03 | Priestley | "are you sure our new logs work?" → "do a first please" (add the log step to the video recipes and Restora-Z) | Team-log step in ai-avatar-video, car-throw-review, seedance-on-creatify; Restora-Z image-batch + finishing | `logs-video-routes` |
 | 2026-11-03 | Mitansh (via Priestley) | PR #38 review flags: Mitansh said to override flag 1 (keep Car Throw Review for Restora-Z and Spark), 2 (keep the review format and its reaction lines) and 7 (keep the gates wording); Priestley approved the Restora-Z banners and scoped "no specific ages" to videos only | PR #38 merged as written except the ages rule: video scripts and captions only | PR #38 |
 | 2026-11-03 | Priestley (rule by Mitansh, 2026-11-02) | Gates should say AI avatar videos run on Creatify ("yes do it, push and merge") | `everlife-gates.md` §6: all-Creatify avatar line, wins over the talking-head line | `gates-avatar-routing` |
 | 2026-11-03 | Priestley | "yes lock reading too. they shoudnt see any error though" | Board readable only by Owner/Editors (page v10); non-editors see a Paused notice, no error | `board-lock-read` |
