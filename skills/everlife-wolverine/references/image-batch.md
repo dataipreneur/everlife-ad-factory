@@ -63,7 +63,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   no animal death**; no before/after, no body comparison, no body-composition words in copy.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
 - **Offer:** "Save up to 39%" (on the bible's Wolverine page since 2026-11-02): exact string, percent only, never a $ price.
-- "Wolverine Stack" big in every ad and "BPC-157 / TB-500" on every design (bible, 2026-11-02); never "by Everlife" on images.
+- "Wolverine Stack" big in every ad and "BPC-157 / TB-500" on every design (bible, 2026-11-02; mandatory stack rule 2026-11-03: legible, as supporting copy, a subheadline or an ingredient callout, 4:5 and 9:16). An ad without the peptide list fails QA. Never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
 **Headline tiers:**

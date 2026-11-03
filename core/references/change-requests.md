@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-03 | Justin (live bible) | Bible 1793743706-38c1: "Every ad for a peptide stack must clearly show each peptide in that stack. The stack name alone is not enough" | Stack rule in gates + global rules; Spartan + Wolverine banners and QA; Klow GHK-Cu flagged | `bible-sync-38c1` |
 | 2026-11-03 | Priestley | "why check shows warning for few. i dont see any" → "yes fix it, push and merge" | Check cell shows the reasons in the row; backfilled = grey label, not a warning (all three pages) | `teamlogs-flags-visible` |
 | 2026-11-03 | Priestley | "why is headline missing for few in prompt & outcome log?" → "yes fix it, push and merge" | teamlog.py carries headline / hook / CTA per take and back-fills them from the copy record; page column "Headline / hook" + missing flag | `teamlogs-headline` |
 | 2026-11-03 | Priestley | Fix the logging system ("Lets do it") + "If the user reprompts or modifies the prompt, are those details captured?" | `core/scripts/teamlog.py` (saves exact prompts, checks every record, closing check, re-takes + feedback), schema + page data-quality flags | `teamlogs-quality` |

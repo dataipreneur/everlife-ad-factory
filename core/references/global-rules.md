@@ -60,6 +60,18 @@ Format
 - —Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
 - —Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
 - —The Everlife logo appears on every ad.
+Peptide stacks — all peptides listed (mandatory)
+- —Every ad for a peptide stack must clearly show each peptide in that stack. The stack name alone is not enough — customers may not know what the branded name stands for.
+- —List every included peptide, clearly and legibly, on every static ad.
+- —Peptide names can run as supporting copy, a subheadline or a dedicated ingredient callout.
+- —Keep the layout clean and premium. The peptide list never overwhelms the primary headline or product imagery.
+- —Applies to every concept, variation and format, including 4:5 and 9:16.
+- —Applies to all current and future peptide stacks, not just the ones listed below.
+Peptides by stack
+- —Spartan Stack: BPC-157, TB-500, KPV
+- —Wolverine Stack: BPC-157, TB-500 — confirm against the official product page, everlifemd.com/wolverine/fb
+- —Klow Stack: BPC-157, GHK-Cu, KPV, TB-500
+- —Glow Stack: [PLACEHOLDER] confirm peptides
 Imagery
 - —Warm, sun-lit and candid. Real people, calm moments.
 - —Pharmacy framing is a deliberate trust cue, especially for 45+.
