@@ -19,6 +19,7 @@ videos ("Lets do it"). Also: "If the user reprompts or modifies the prompt, are 
   Activity log shows Captions yes/no (and drops the paused board column).
 - Every skill's logging lines (image-batch, finishing, video-prompting, animated-still) and the three video recipes now say to use
   the script and to close before SESSION.md. Smoke: two new teamlog checks.
+- **What the tool actually ran** (Priestley: "What a tool does to prompt after receiving it? We cant capture it?" → "yes add it"): `teamlog.py tool <job> <doc_id> --file F --source <call>` saves a tool's expanded prompt / script / concepts as `tool_prompt` next to ours (`prompts/NN_…_tool.txt`); the check and the Prompt log flag Marketing Studio / Ads Studio / composer takes without it. Read calls listed in TEAM-LOGS §6; untested until the first real job per route.
 
 ## 2026-11-03 — Team logs reach every video route and Restora-Z (branch `logs-video-routes`)
 Priestley asked "are you sure our new logs work?"; a check found no real run logged yet, Restora-Z without log lines and four

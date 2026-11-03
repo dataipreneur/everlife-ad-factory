@@ -65,6 +65,7 @@ status:"draft|approved|live"}`. **`style`:** `{type:"style", product, run_id, ba
 125 `copy` rows were imported from Priestley's local copy logs on 2026-11-03 (`imported: true`, doc ids `imp-<product>-NNN`).
 
 **Prompt log, `gen`:** `{type:"gen", run_id, ad_id, product, created_at (ISO time), prompt_file:"prompts/NN_<model>.txt",
+tool_prompt, tool_prompt_file, tool_prompt_source (what the tool actually ran, §6), retake_of, prompt_by, feedback:[{at, text}],
 setup:{audience, angle, boldness, mood, style, density, people, hardcore}, asks:["<operator's own words>"], reference:"<ref ad or
 style board>", ref:{type, id, parent_ad_id, changed}, model, settings:{ratio, resolution, seed}, prompt:"<exact text sent>", refs:["<render / tablet / board file>"],
 copy:{headline, lines:[...], cta}, result_file, qa:{pass:true|false, reasons:["..."]}, rerolls, cost:{creatify, higgsfield}}`.
@@ -106,4 +107,13 @@ Writes each record as `<job>/teamlog/<doc_id>.json` (a local mirror that stays w
   rewrote themselves (`prompt_by: "operator"`). Feedback given after seeing a result (before or without a re-take) goes on that
   take with `teamlog.py note <job> <doc_id> --ask "..."` (`feedback: [{at, text}]`). Free fixes (trims, speed, re-finishing) are
   not generations: put them in the run's `--notes`. So the log shows prompt → result → what the person said → the changed prompt.
+- **What the tool actually ran** (Priestley 2026-11-03: "What a tool does to prompt after receiving it? We cant capture it?"):
+  some routes rewrite what we send. After the job, read it back and save it with `teamlog.py tool <job> <doc_id> --file F
+  --source "<the call>"` (`tool_prompt`, saved as `prompts/NN_…_tool.txt`; `--none` when the tool returned nothing extra). Where:
+  Higgsfield Marketing Studio / project assets → `get_project_asset_prompt` (the asset's prompt details); Ads Studio →
+  `ads_studio_get_run` (every concept with its copy; read it only for the run just made); Creatify Ad Agent (composer) →
+  `composer_project_get` / `composer_read_file` (the plan and each clip's prompt); Creatify Model Playground (Seedance, GPT Image) →
+  `model_playground_get` (only if it returns a revised prompt; these endpoints otherwise run our prompt as sent). **Untested as of
+  2026-11-03:** the first real job on each route confirms what the read returns; note it here. The check warns when a Marketing
+  Studio / Ads Studio / composer generation has no `tool_prompt`.
 - **Backfills** (records written after the fact): set `"backfill": true`; missing prompt files and date-only times are then ⚠, not ❌.

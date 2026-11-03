@@ -8,6 +8,8 @@ first and a local copy stays in the job folder.
                    [--retake-of <doc_id of the take it replaces>] [--edited-by-user]  (the operator rewrote the prompt themselves)
                    → copies the exact prompt to <job>/prompts/NN.txt, writes gen-<run>-NN.json (call it when the job is SUBMITTED)
   teamlog.py qa    <job> <doc_id> --pass | --fail [--reason "..."] [--result-file out/raw.mp4]
+  teamlog.py tool  <job> <doc_id> --file F --source "<the read call>"   what the TOOL actually ran (an expanded prompt, a
+                   script, concepts, a revised prompt), read back after the job; saved next to our prompt as prompts/NN_tool.txt
   teamlog.py note  <job> <doc_id> --ask "<the operator's own words>"   feedback or a change request on that generation
                    ("make it slower", "script makes 0 sense"); the next take is logged with --retake-of <doc_id> --ask "<same words>"
   teamlog.py copy  <job> --run-id R --ad-id A --product P --kind image|video [--ad "label"] [--audience men]
@@ -26,6 +28,8 @@ import argparse, datetime, glob, json, os, re, shutil, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 SKILLS = [os.path.expanduser(os.environ.get("EVERLIFE_SKILLS_DIR", "~/.claude/skills")),
           os.path.normpath(os.path.join(HERE, "..", "..", "skills"))]
+# Routes that rewrite or expand what we send: their gen records should carry tool_prompt (TEAM-LOGS §6).
+EXPANDS = re.compile(r"marketing[_ -]?studio|ads[_ -]?studio|composer|ad[_ -]?agent|ugc", re.I)
 REF_TYPES = {"board_winner", "meta_winner", "own_ad", "style_board", "hardcore_ref", "product_example", "outside", "hook_engine", "none"}
 LINE_KINDS = {"headline", "hook", "vo", "caption", "benefit", "end_head", "cta", "offer"}
 SPOKEN = {"hook", "vo", "caption"}
@@ -180,6 +184,8 @@ def check(rec):
         if not rec.get("refs") and not NO_REFS_OK.search(rec.get("model", "")):
             W.append("gen: 'refs' is empty: list the product render / start frame / reference files attached")
         qa = rec.get("qa") or {}
+        if EXPANDS.search(rec.get("model", "")) and qa.get("pass") is not None and not rec.get("tool_prompt"):
+            W.append("gen: this tool writes its own prompt/script: read it back and save it (`teamlog.py tool`)")
         if qa.get("pass") is None:
             W.append("gen: QA not recorded yet (update it with `teamlog.py qa`)")
     elif t == "copy":
@@ -256,6 +262,28 @@ def cmd_note(a):
     path = os.path.join(a.job, "teamlog", a.doc_id + ".json")
     rec = json.load(open(path))
     rec.setdefault("feedback", []).extend({"at": now(), "text": t} for t in a.ask)
+    return write(a.job, a.doc_id, rec)
+
+
+def cmd_tool(a):
+    path = os.path.join(a.job, "teamlog", a.doc_id + ".json")
+    rec = json.load(open(path))
+    text = open(a.file, encoding="utf-8").read()
+    if not text.strip():
+        sys.exit("❌ the file is empty: if the tool returned nothing, say so with --none instead")
+    pf = os.path.join(a.job, rec.get("prompt_file") or f"prompts/{a.doc_id}.txt")
+    tf = re.sub(r"\.txt$", "", pf) + "_tool.txt"
+    os.makedirs(os.path.dirname(tf), exist_ok=True)
+    if os.path.abspath(a.file) != os.path.abspath(tf):
+        shutil.copyfile(a.file, tf)
+    rec.update({"tool_prompt": text, "tool_prompt_file": os.path.relpath(tf, a.job), "tool_prompt_source": a.source or ""})
+    return write(a.job, a.doc_id, rec)
+
+
+def cmd_tool_none(a):
+    path = os.path.join(a.job, "teamlog", a.doc_id + ".json")
+    rec = json.load(open(path))
+    rec.update({"tool_prompt": "(the tool returned no expanded prompt)", "tool_prompt_source": a.source or ""})
     return write(a.job, a.doc_id, rec)
 
 
@@ -407,6 +435,8 @@ def main():
     g.add_argument("--ratio", default=""); g.add_argument("--resolution", default="")
     g.add_argument("--setup", nargs="*"); g.add_argument("--ask", action="append")
     g.add_argument("--retake-of"); g.add_argument("--edited-by-user", action="store_true")
+    t = sp.add_parser("tool"); t.add_argument("job"); t.add_argument("doc_id"); t.add_argument("--source")
+    tg = t.add_mutually_exclusive_group(required=True); tg.add_argument("--file"); tg.add_argument("--none", action="store_true")
     n = sp.add_parser("note"); n.add_argument("job"); n.add_argument("doc_id"); n.add_argument("--ask", action="append", required=True)
     q = sp.add_parser("qa"); q.add_argument("job"); q.add_argument("doc_id")
     m = q.add_mutually_exclusive_group(required=True); m.add_argument("--pass", dest="ok", action="store_true"); m.add_argument("--fail", dest="ok", action="store_false")
@@ -430,7 +460,7 @@ def main():
     k = sp.add_parser("check"); k.add_argument("files", nargs="+")
     z = sp.add_parser("close"); z.add_argument("job")
     a = ap.parse_args()
-    sys.exit({"gen": cmd_gen, "note": cmd_note, "qa": cmd_qa, "copy": cmd_copy, "proof": cmd_proof, "run": cmd_run, "check": cmd_check, "close": cmd_close}[a.cmd](a))
+    sys.exit({"gen": cmd_gen, "tool": lambda a: cmd_tool_none(a) if a.none else cmd_tool(a), "note": cmd_note, "qa": cmd_qa, "copy": cmd_copy, "proof": cmd_proof, "run": cmd_run, "check": cmd_check, "close": cmd_close}[a.cmd](a))
 
 
 if __name__ == "__main__":

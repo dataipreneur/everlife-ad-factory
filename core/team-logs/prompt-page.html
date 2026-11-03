@@ -121,6 +121,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     <div class="kv" id="detKv"></div>
     <div><h3>Operator's setup and asks</h3><div id="detAsks"></div></div>
     <div><h3>Prompt sent</h3><pre id="detPrompt"></pre></div>
+    <div id="detToolWrap" hidden><h3>What the tool actually ran</h3><p class="chip" id="detToolSrc" style="display:inline-block;margin:0 0 6px"></p><pre id="detTool"></pre></div>
     <div><h3>References attached</h3><div id="detRefs"></div></div>
     <div><h3>QA</h3><div id="detQa"></div></div>
     <div><h3>What the operator said after seeing it</h3><div id="detFb"></div></div>
@@ -159,6 +160,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     if (g.created_at && !/T\d\d:\d\d/.test(g.created_at)) out.push("Date only, no time");
     if (refOf(g) === "outside" && /everlife|sermorelin|restora|wolverine|spartan|base\d+|_video_|_static_/i.test((g.ref && g.ref.id) || "")) out.push("An Everlife ad marked as an outside reference");
     if (g.retake_of && !(g.asks || []).length) out.push("Re-take without the operator's words");
+    if (/marketing[_ -]?studio|ads[_ -]?studio|composer|ad[_ -]?agent|ugc/i.test(g.model || "") && qaOf(g) && !g.tool_prompt) out.push("This tool rewrites prompts: what it actually ran is not saved");
     return out;
   }
   // Person filter: one option per person who wrote rows (names from their claude.ai accounts), plus "Imported" where relevant.
@@ -185,6 +187,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     const asks = g.asks || [];
     $("detAsks").replaceChildren(asks.length ? h("ul", { class: "plain" }, ...asks.map(a => h("li", null, a))) : h("span", { class: "chip" }, "No free-text asks"));
     $("detPrompt").textContent = g.prompt || "(not logged)";
+    $("detToolWrap").hidden = !g.tool_prompt; $("detTool").textContent = g.tool_prompt || ""; $("detToolSrc").textContent = g.tool_prompt_source ? "read with " + g.tool_prompt_source : "read back from the tool";
     const refs = g.refs || [];
     $("detRefs").replaceChildren(refs.length ? h("ul", { class: "plain" }, ...refs.map(r => h("li", null, r))) : h("span", { class: "chip" }, "None logged"));
     const qa = g.qa || {}, reasons = qa.reasons || [];
