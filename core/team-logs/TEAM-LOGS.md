@@ -15,6 +15,8 @@ Sharing (Priestley, from each page's Share menu): Activity log → Priestley + l
 Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must be signed in to claude.ai.
 
 **Rules for Claude, always:**
+- **Every record is built and checked with `core/scripts/teamlog.py` (§6), then sent with `ArtifactData` using `file_path` = the
+  file it prints.** Never hand-type a record. A record it marks ❌ NOT READY is fixed first, never sent.
 - Never block a batch on these pages. If one can't be reached (signed out, no access, an error), append the write as one JSON line
   `{"page": "<activity|ledger|prompt>", "collection": "data/users/me", "doc_id": "...", "data": {...}}` to
   `~/Everlife-Creative/team-logs-pending.jsonl`, say so in one line, and carry on. Next time the page answers, write the pending
@@ -40,30 +42,37 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
    `core/scripts/pick_styles.py --skip <codes>` (the team's recent styles are drawn last, like this computer's own last batch); the
    local `style-ledger.jsonl` stays the fallback. Read this product's `proof` records and choose the next proofs so the team split moves
    toward 42/28/30 (`finish_batch.py --proof-plan N` / `proof_next.py` give the local plan; adjust it toward the team's shares).
-3. **Each generation (each prompt sent to an image or video model, the moment the job is submitted; videos too, never only at finishing):** write one `gen` record to the Prompt log; update it after QA
-   (pass/fail and the reasons, re-rolls). One `batch` per wave is fine.
-4. **After the batch (when SESSION.md is written):** one `copy` record per ad to the Copy Ledger, one `style` record for the batch, one
+3. **Each generation (each prompt sent to an image or video model, the moment the job is submitted; videos too, never only at finishing):** save the exact prompt to a file and run `teamlog.py gen` (it copies it to `<job>/prompts/NN_<model>.txt` and writes the record), send it to the Prompt log; update it after QA
+   (pass/fail and the reasons, re-rolls) with `teamlog.py qa`. One `batch` per wave is fine.
+4. **After the batch (when SESSION.md is written):** `teamlog.py copy` per ad (it reads the job's copy.json / premium.json /
+   phrases.json, so every spoken line, caption and the CTA are in it, and labels each line from the bible pre-screen; it refuses a
+   banned line), `teamlog.py proof` per creative and `teamlog.py run` (made / finished / rerolled / spent come from the gens; say
+   `--captions yes|no`). Then **`teamlog.py close <job>` must print ✅ closed** before SESSION.md is written; its ❌ lines are fixed
+   first, its ⚠ lines go into SESSION.md. Send what is not sent yet: one `copy` record per ad to the Copy Ledger, one `style` record for the batch, one
    `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); nothing to the Winners
    Board (⏸ paused since 2026-11-03). Still append the local copy log as before (fallback and offline history).
 
 ## 3. Schemas (every record has `"type"`)
-**Activity log, `run`:** `{type:"run", run_id, product, format:"images|video|avatar|still", made, finished, rerolled,
+**Activity log, `run`:** `{type:"run", run_id, product, format:"images|video|avatar|still", made, finished, rerolled, captions:true|false,
 credits:{creatify:{before, after, spent, quoted}, higgsfield:{before, after, spent, quoted}}, out_dir, on_board:true|false,
 started_at, ended_at, notes}` (ISO times; `spent` = before − after, or the sum of the approved quotes when a balance is unknown).
 
 **Copy Ledger, `copy`:** `{type:"copy", product, ad_id, ad:"<short label>", run_id, audience, date,
-lines:[{kind:"headline|hook|vo|benefit|end_head|cta|offer", text:"<exact>", source:"bible ✅|⏳ approved|Tier B proposed"}],
+media:"image|video", lines:[{kind:"headline|hook|vo|caption|benefit|end_head|cta|offer", text:"<exact>",
+source:"bible ✅|⏳ needs approval|Tier B proposed"}] (the source is set by `teamlog.py`, never by hand),
 status:"draft|approved|live"}`. **`style`:** `{type:"style", product, run_id, batch, date, styles:["S02", ...]}`.
 **`proof`:** `{type:"proof", product, ad_id, kind:"image|video", proof:"trust|count|none", date, run_id}`.
 125 `copy` rows were imported from Priestley's local copy logs on 2026-11-03 (`imported: true`, doc ids `imp-<product>-NNN`).
 
-**Prompt log, `gen`:** `{type:"gen", run_id, ad_id, product, created_at,
+**Prompt log, `gen`:** `{type:"gen", run_id, ad_id, product, created_at (ISO time), prompt_file:"prompts/NN_<model>.txt",
+tool_prompt, tool_prompt_file, tool_prompt_source (what the tool actually ran, §6), retake_of, prompt_by, feedback:[{at, text}],
 setup:{audience, angle, boldness, mood, style, density, people, hardcore}, asks:["<operator's own words>"], reference:"<ref ad or
 style board>", ref:{type, id, parent_ad_id, changed}, model, settings:{ratio, resolution, seed}, prompt:"<exact text sent>", refs:["<render / tablet / board file>"],
 copy:{headline, lines:[...], cta}, result_file, qa:{pass:true|false, reasons:["..."]}, rerolls, cost:{creatify, higgsfield}}`.
 Keep `prompt` exact (it is the point of the log); never put a preview image here (the board holds previews).
 **`ref` (what this generation was built from; always set it, images and videos):** `type` = `board_winner` (a Winners Board
-winner, its mutation slot) · `meta_winner` (the CPA-ranked Winning Ads Reference) · `style_board` (one of the 15 styles, S01–S15)
+winner, its mutation slot) · `meta_winner` (the CPA-ranked Winning Ads Reference) · `own_ad` (any earlier Everlife ad that is not
+on the CPA ranking, e.g. an old Frame.io / Drive base like Base116) · `style_board` (one of the 15 styles, S01–S15)
 · `hardcore_ref` (H1–H11) · `product_example` (style-library product examples) · `outside` (Pinterest or any other outside ad)
 · `hook_engine` (video: a Hook Bank family/hook) · `none`. `id` = which one (board entry id `<uid>/e-…`, `S13`, `H7`, the winning ad's
 name, the hook family). For `board_winner` also `parent_ad_id` (= the board entry) and `changed` (the one variable changed). The
@@ -79,3 +88,32 @@ rule only through a PR to that skill's `lessons.md` / style recipe, reviewed by 
 ## 5. Limits
 Each page: 100 MB and 25,000 records. A `gen` record is ~2–5 KB (≈ 20,000 generations per page). When a page fills: export, then
 delete records older than 180 days (an Editor does it; Claude asks first).
+
+## 6. `core/scripts/teamlog.py` (added 2026-11-03 after the first real backfill showed summaries instead of prompts)
+Writes each record as `<job>/teamlog/<doc_id>.json` (a local mirror that stays with the job), checks it, and prints `✅ ready` or
+`❌ NOT READY` with the reasons. It never calls the network: Claude sends the printed file with `ArtifactData` (`file_path`).
+- `gen` (when a job is submitted) · `qa` (after QA) · `copy` · `proof` · `run` (after the batch) · `close` (before SESSION.md) ·
+  `check <file>` (any record, also old ones). Usage: `teamlog.py -h`.
+- **What it checks:** required fields; ISO times; the exact prompt saved in `<job>/prompts/`; refs listed; `ref.type` valid (an
+  Everlife ad marked `outside` is flagged → `own_ad`); `captions` set on video runs (false = ⚠ bible Standards 02); every copy line
+  against the global Hard NOs it can see mechanically ("Get Started Now", first person, needles, "GH", "GHK-Cu", melt/burn, arousal,
+  ages in video, disease words, "Trustpilot rating") and against the product's pre-screen (❌ refused, ⚠/⏳ flagged, ✅ / verbatim →
+  "bible ✅", anything else → "Tier B proposed"); `close` also checks that every finished ad has copy + proof and that `rerolled`
+  equals the generations that failed QA.
+- It is a safety net, not the compliance review: Jeremy still signs off, and a line it passes can still be wrong in context.
+- **Reprompts and feedback are captured** (Priestley 2026-11-03: "If the user reprompts or modifies the prompt, are those details
+  captured?"): every new take is its own `gen` with its own saved prompt file; `--retake-of <doc_id>` links it to the take it
+  replaces and `--ask "<the operator's exact words>"` records why ("make it slower"); `--edited-by-user` marks a prompt the operator
+  rewrote themselves (`prompt_by: "operator"`). Feedback given after seeing a result (before or without a re-take) goes on that
+  take with `teamlog.py note <job> <doc_id> --ask "..."` (`feedback: [{at, text}]`). Free fixes (trims, speed, re-finishing) are
+  not generations: put them in the run's `--notes`. So the log shows prompt → result → what the person said → the changed prompt.
+- **What the tool actually ran** (Priestley 2026-11-03: "What a tool does to prompt after receiving it? We cant capture it?"):
+  some routes rewrite what we send. After the job, read it back and save it with `teamlog.py tool <job> <doc_id> --file F
+  --source "<the call>"` (`tool_prompt`, saved as `prompts/NN_…_tool.txt`; `--none` when the tool returned nothing extra). Where:
+  Higgsfield Marketing Studio / project assets → `get_project_asset_prompt` (the asset's prompt details); Ads Studio →
+  `ads_studio_get_run` (every concept with its copy; read it only for the run just made); Creatify Ad Agent (composer) →
+  `composer_project_get` / `composer_read_file` (the plan and each clip's prompt); Creatify Model Playground (Seedance, GPT Image) →
+  `model_playground_get` (only if it returns a revised prompt; these endpoints otherwise run our prompt as sent). **Untested as of
+  2026-11-03:** the first real job on each route confirms what the read returns; note it here. The check warns when a Marketing
+  Studio / Ads Studio / composer generation has no `tool_prompt`.
+- **Backfills** (records written after the fact): set `"backfill": true`; missing prompt files and date-only times are then ⚠, not ❌.

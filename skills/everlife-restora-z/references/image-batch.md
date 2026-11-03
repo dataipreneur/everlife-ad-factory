@@ -76,7 +76,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 **Random (recommended):** pick N different frameworks (no repeats, skip F6), mixing text-heavy (F1, F3, F4, F9) and
 visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which match the winners.
 
-**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block. (The local `restora-z-copy-log.md` below stays as the fallback.)
+**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block. Build every record with `core/scripts/teamlog.py` (it saves the exact prompt and checks the record; TEAM-LOGS §6) and send the file it prints. `teamlog.py close <job>` must print ✅ before SESSION.md. (The local `restora-z-copy-log.md` below stays as the fallback.)
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
