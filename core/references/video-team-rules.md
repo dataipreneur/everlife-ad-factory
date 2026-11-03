@@ -12,8 +12,9 @@
 - The problem is said in the first ~1–2 s (a pronoun-free question works: "Training hard but still feeling flat?").
 - End on an urgent, specific spoken CTA that **leads with the approved offer** ("Save up to 47%. Don't sit on this!"). "Get Started
   Now" is banned (bible sync 2026-11-03); where the offer is a `[PLACEHOLDER]`, use "Ships Free From Pharmacy". No fake deadlines or scarcity.
-- **No specific ages or age numbers** anywhere in scripts, captions or headlines ("45", "after 35", "forty-five").
-  Say "with age" / "every birthday" if needed.
+- **No specific ages or age numbers** in video scripts, spoken lines or captions ("45", "after 35", "forty-five").
+  Say "with age" / "every birthday" if needed. (Priestley 2026-11-03: videos only; bible-approved image headlines with an age,
+  e.g. "Thrive After 35", stay usable.)
 - Read it aloud before showing it; if a line needs explaining, rewrite it.
 
 ## 2. Show scripts in the chat, then stop

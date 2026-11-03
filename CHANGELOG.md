@@ -11,6 +11,7 @@ presenter to Creatify Seedance + Boreal-H3 background, 0 Higgsfield. One line ad
 Mitansh: "this should be across all skills, not just my local system!"
 - New `core/references/video-team-rules.md`: scripts as a clear mini-story (no cryptic fragments, problem in the first 1–2 s, no specific ages, urgent CTA with the approved offer only); scripts shown as chat text with no popup in the same turn; no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music trap-metal / walk-out, never taiko; winners to reuse (Animated Warriors, Car Throw Review); Sermorelin GHK cast = lean, jacked grey-haired fitness model 45–50, not bulky.
 - Banner in all 16 `skills/*/SKILL.md`; gates §5 line; `hardcore-men.md` SGHK exception; SGHK SKILL.md men's-talent line rewritten.
+- PR #38 review (Priestley, 2026-11-03): "no specific ages" scoped to video scripts and captions; bible-approved image headlines with an age stay usable. Mitansh kept Car Throw Review for Restora-Z and Spark, the review format and the gates wording (flags 1, 2, 7 overridden); Priestley approved the Restora-Z banners.
 
 ## 2026-11-03 — 🚗 Car Throw Review video style for every tablet / capsule product
 Mitansh on the SGHK 1000 car review: "This was amazing!!! Save it as a form in video 'Mood' questionnaire, Car Throw Review" + "have it for all the tablets".
