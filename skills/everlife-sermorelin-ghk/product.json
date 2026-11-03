@@ -47,7 +47,7 @@
   "element": "the sublingual tablet (the bottle is secondary, large and legible when shown)",
   "min_width": 0.35,
   "label": "wraps the curved bottle in perspective; strength only from the chosen render",
-  "never": "needles, bedroom framing, bodybuilder physiques, body comparison",
+  "never": "needles, bedroom framing, body comparison",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
  }
 }

@@ -1,5 +1,7 @@
 # BPC-157 — creative bible (verbatim extract)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 > Source: `bpc157-creative-messaging-reference.docx` (Mitansh, 2026-10-29), which consolidates the Creative Messaging Reference page
 > (image), the Asana task "BPC-157 Male" (approved brief), the NEW Product Benefits Doc and Justin Junior's offer/Hard-NO notes
 > (confirmed Oct 29, 2026). The older creative bible (Part B, `~/.claude/everlife/creative-bible.md` "## BPC-157") carries only

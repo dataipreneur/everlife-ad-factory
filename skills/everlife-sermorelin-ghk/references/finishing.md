@@ -1,5 +1,7 @@
 # QA + finishing (zero manual editing)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
 ## 0. Safe zones (every 9:16 image and video)
@@ -15,7 +17,7 @@ Feed (4:5, 1:1): 60 px margin.
 - Pass/fail (tell the user every fail):
   - **product correctness:** the tablet matches the tablet render exactly (shape, colour, markings) and the bottle label
     matches its render; not mirrored (`--mirror-until <cut>`); exactly one tablet
-  - people: real-looking, the right age (men 40s–50s fitness-model build, fitted top), fully clothed; speech starts in the first second; "SERMORELIN GHK" on screen from frame 1 (copy.json `head`, e.g. `["SERMORELIN GHK BY EVERLIFE"]`); no bedroom (men); palette right (women)
+  - people: real-looking, the right age (men 40s–50s fitness-model build, fitted top; HARDCORE slots shirtless 40–45 per hardcore-men.md); speech starts in the first second; "SERMORELIN GHK" on screen from frame 1 (copy.json `head`, e.g. `["SERMORELIN GHK BY EVERLIFE"]`); no bedroom (men); palette right (women)
   - no needles/syringes/vials, no gym-mirror body shots, no garbled text on props, no second phone (`--zoom 1.2`)
   - "growth hormone" said in full; product name pronounced clearly
   - last spoken line ends before ~10.5 s (15 s clip); if it runs later, start the end card after the last word or re-roll

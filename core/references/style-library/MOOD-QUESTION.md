@@ -17,6 +17,9 @@ product's `reviews.md` has screened reviews). It draws N different styles at ran
 (`~/Everlife-Creative/style-ledger.jsonl`), and prints one line per slot: code, name, board path. Use those as the slot
 frameworks, Read each board before writing that slot's prompt, and show the style code in the batch table. After generating,
 `pick_styles.py --log --product <id> --codes S02,S09,…` records the batch.
+**Hardcore men (Jeremy, 2026-11-02):** always pass `--audience men|women|both`. For the products in
+`core/references/hardcore-men.json` the picker tags 40% of the men's slots `HARDCORE`; write those slots per
+`core/references/hardcore-men.md` (shirtless 40–45, flawless muscular condition, hard gym light) whatever the style is.
 
 ## 📚 Pick from the 15 styles: ONE AskUserQuestion, 4 questions, multiSelect, every option with its one-line look
 - **Text-led:** Bold Headlines · Crossed Out Words · Reasons Why · Benefit Stacks

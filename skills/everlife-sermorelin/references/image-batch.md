@@ -1,5 +1,7 @@
 # Sermorelin IMAGE ads: Batch Mode (the default for every image request)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 > **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
 > **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
 
@@ -17,8 +19,8 @@ Doctor Prescribed / Ships Free art, verbatim disclaimer) as a compact transparen
 **Hard stops:**
 - Claims: only the ✅ approved benefits in `product-bible.md` (clean pool). Pre-screen ❌ lines never; ⚠ lines only with
   the user's explicit OK + flagged for Jeremy.
-- No body composition, fat, "dad bod", "melt/burn/ripped/shred", no "physique transformation", no body before/after, no
-  shirtless heroes, no age-reversal ("the new 40") unless Jeremy clears it.
+- No body composition, fat, "dad bod", "melt/burn/ripped/shred", no "physique transformation", no body before/after (shirtless
+  heroes ARE allowed: 💪 hardcore-men.md), no age-reversal ("the new 40") unless Jeremy clears it.
 - "growth hormone" spelled out; never imply the tablet *is* growth hormone; "easy sublingual delivery"; no needles,
   injections or vials; no "all natural"; never "GHK", "Citrulline" or "3-in-1" (that's the other product).
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product, no
@@ -98,7 +100,7 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    label matches the render (not garbled, not mirrored); the **tablet is identical to the tablet render** (no invented
    pill, not the other past tablet shape), held, at least ~15% of the canvas width (17% when a person shares the frame);
    **no vial, syringe or second container**; every line big enough for 50+; men 42–50, hardcore fitness-model build,
-   fitted top, never shirtless or flexing; women 40–60, clothed; men's headline not in an elegant/italic serif or script;
+   fitted top (HARDCORE slots: shirtless 40–45, flawless muscular condition, per hardcore-men.md); women 40–60, clothed; men's headline not in an elegant/italic serif or script;
    women's batch: ≤ 1 pink-led ad, ≥ 1 teal ad, advertorials on white, ≤ 2 of 5 "explore" colours; no Everlife logo or
    wordmark drawn by the model (finishing adds the real one); nothing breaks a Hard NO.
    Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
@@ -171,12 +173,12 @@ badges, prices, website, disclaimer):
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, premium.
 <MEN: palette <this ad's own>; any person: <THIS ad's own man: age 42–50, ethnicity, hair, beard, wardrobe colour,
 all different from every other ad in the batch>, a fit silver fox with a hardcore fitness-model physique (visibly
-muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training tee or long
-sleeve, no bare torso, no flexing poses; a real gym or hard training.>
+muscular, lean, athletic; tattoos optional), rugged and confident, in a fitted training tee or long sleeve; a real gym or
+hard training. HARDCORE slot (💪 40% of random batches): instead "a rugged man aged 40–45 in flawless physical condition: lean, dense and visibly muscular shoulders, chest, arms and back, veins, real skin texture and sweat, tattoos optional, stubble; shirtless (or a stringer tank), training shorts, lifting belt, chalked hands; intense and confident, mid-set or between sets in a hardcore gym under hard light; a real person, not a stage bodybuilder, not a celebrity look-alike".>
 <WOMEN: lead colour <this ad's own per §2b: pinks / tans / neutrals / warm tones / white / soft teal, or an "explore"
 trend colour for up to 2 of 5; white background for advertorials; pink-led at most once per batch>; any person: <THIS
 ad's own woman: age 40–58, ethnicity, hair, wardrobe, all different from every other ad>, natural fit build, candid,
-clothed.> No bedroom, no shirtless, no before/after, no needles, syringes or vials, no
+clothed.> No bedroom, no before/after, no needles, syringes or vials, no
 mirrors showing bodies.
 
 LAYOUT (4:5 / 1:1): 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no

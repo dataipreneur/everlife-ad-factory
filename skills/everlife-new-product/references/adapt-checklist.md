@@ -34,6 +34,7 @@ disclaimer verbatim · landing page (facts only).
   between 8% and 58% of the height; 9:16 statics from the approved 4:5.
 - Intimate wellness: no beds, bedrooms, lingerie, couples, lips; shoulder-up. Peptides: never needles, syringes or "needle-free".
 - Higgsfield "no response received" = the upload failing: upload first (`higgsfield upload create`) and pass the IDs.
+- **Hardcore men (REQUIRED for men's-muscle products: TRT / Enclomiphene, Tesamorelin, Tesamorelin/Ipamorelin, any "serious gym-goer with a hardcore training feel" product; Jeremy 2026-11-02).** Add the product id to `core/references/hardcore-men.json` and the 💪 banner from `core/references/hardcore-men.md` to SKILL.md, image-batch.md, video-prompting.md and finishing.md; no "clothed / no shirtless / no flexing" lines for men.
 - **The 15 Drive styles in the image Mood question (REQUIRED, Mitansh 2026-11-02).** Add the 🎨 MOOD override line from `core/references/style-library/MOOD-QUESTION.md` right above the skill's image Mood (or Frameworks) question: option 1 "🎲 Surprise me (Recommended)" = `core/scripts/pick_styles.py`, option 2 "📚 Pick from the 15 styles", options 3–4 = the product's own top moods. Add product notes to `core/references/style-library/STYLES.md` if a style needs a product-specific gate.
 - **"✨ Ultra premium, product only" in the image setup (REQUIRED, Mitansh 2026-11-02).** Every product offers it: as a Mood option
   where the skill asks mood (SKILL.md or image-batch.md, asked ONCE, never in both), else as a "Look" question in the image round.

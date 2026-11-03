@@ -54,7 +54,8 @@ Disclaimers & AI disclosure:
 - Women's creative (incl. GHK cream): pinks, tans, beige — no oranges or greens.
   **Exception: Sermorelin and Sermorelin GHK** follow Justin's direction (product owner, 2026-10-29): pinks, tans, neutrals and warm tones preferred; white and teal welcome (white backgrounds for advertorials); these are preferences, not limits — keep exploring trends. Their skills' rules apply.
 - Intimate wellness (Lovara, PT-141, Spark): tasteful, product-led, no beds/bedroom scenes; PT-141 video stays shoulder-up.
-- Sermorelin: frame around muscle, fitness, performance — not the bedroom. Male talent: fit, mature, not bodybuilders.
+- Sermorelin: frame around muscle, fitness, performance — not the bedroom. Male talent: rugged, unmistakably masculine, hardcore training feel.
+- **Hardcore men (Jeremy, 2026-11-02):** bodybuilding / men's-muscle products (Sermorelin, Sermorelin GHK, BPC-157, Wolverine, Spartan; later TRT, Tesamorelin) lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light; random/Surprise-me batches make 40% of men's slots HARDCORE. Overrides any "clothed / no shirtless / no flexing / not bodybuilders" line. Rule: `core/references/hardcore-men.md`. Copy still never ties the body to the product (no before/after, body comparison or body-composition claims).
 - Reference top-performing, lowest-CPA creative before generating new iterations. Cap at five iterations per base concept.
 - Landing pages: mobile first; build from the approved template; no hamburger, no login, no links to other products on a traffic page; test structurally (A/B, multivariate); default to percent-off, not dollar prices.
 

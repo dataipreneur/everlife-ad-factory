@@ -1,5 +1,7 @@
 # Sermorelin GHK IMAGE ads: Batch Mode (the default for every image request)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 > **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
 > **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
 
@@ -35,7 +37,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 **Hard stops:**
 - Claims: only approved quick-hit benefits, more approved benefits, or a per-ingredient claim on its OWN ingredient
   (Sermorelin / GHK / L-Citrulline Malate). Pre-screen ❌ lines never; ⚠ lines only with the user's explicit OK + flagged for Jeremy.
-- No body composition, fat, "melt/burn/ripped/shred", no "physique transformation", no body before/after, no shirtless heroes.
+- No body composition, fat, "melt/burn/ripped/shred", no "physique transformation", no body before/after (shirtless heroes ARE allowed: 💪 hardcore-men.md).
 - "GHK" only (never -Cu / copper peptide); "growth hormone" spelled out; "easy sublingual delivery"; no needles; no "all natural".
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product.
 - Offer: only "Save up to 47%" (percent, never a $ price).
@@ -122,7 +124,7 @@ that file.
    resting on a bench with the palm up, two fingers offering it forward…; never the same hold or angle twice in a batch. **No two ads in a batch share a framework or an accent colour.**
 4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
    not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 40s–50s (men: hardcore fitness-model build, fitted top, never shirtless), clothed; "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
+   people look 40s–50s (men: hardcore fitness-model build, fitted top; HARDCORE slots shirtless 40–45 per hardcore-men.md); "SERMORELIN GHK" present in type (without "by Everlife"); the tablet held (fingers or palm); women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
    the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
    width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
    across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
@@ -143,7 +145,7 @@ Fonts and colours alone don't make a batch varied (batch 9: five dark-gym ads wi
 bottle right" picture). Before writing prompts, give every ad its own row in each rotation; no value twice in one batch:
 - **Scene:** gym / outdoor (sunrise trail, track, beach, park) / home (kitchen counter, morning coffee, bathroom shelf) /
   clean studio product shot (seamless backdrop, plinth) / pharmacy or doctor trust cue (bible: pharmacy framing for 45+) /
-  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch**; the "rugged, hardcore
+  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch, not counting HARDCORE slots (those are always a hardcore gym)**; the "rugged, hardcore
   training" direction is about the MAN (casting), not the setting: he can be on a trail or in a kitchen.
   Women: studio / home / outdoor / article page / pharmacy; not two linen-and-stone still lifes.
 - **Light:** at least 2 of every 5 ads bright (daylight, white or pale studio, sunrise); the rest moody, golden hour,
@@ -234,12 +236,12 @@ badges, prices, website, disclaimer):
 
 SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
 <MEN: scene and light from this ad's row in §2c (not always a dark gym); any person a man 42–50, a fit silver fox with a hardcore fitness-model
-physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, fully clothed in a fitted training
-tee or long sleeve, no bare torso, no flexing poses.>
+physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, in a fitted training
+tee or long sleeve. HARDCORE slot (💪 40% of random batches): instead "a rugged man aged 40–45 in flawless physical condition: lean, dense and visibly muscular shoulders, chest, arms and back, veins, real skin texture and sweat, tattoos optional, stubble; shirtless (or a stringer tank), training shorts, lifting belt, chalked hands; intense and confident, mid-set or between sets in a hardcore gym under hard light; a real person, not a stage bodybuilder, not a celebrity look-alike".>
 <WOMEN: lead colour <this ad's own lead per §2b (Justin): preferred pinks / tans / neutrals / warm tones / white / teal (soft
 or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white background for advertorial ads; pink-led at most
 once per batch>; any person a woman 40–60, natural, candid, glowing
-skin, clothed.> No bedroom, no shirtless, no before/after, no needles or syringes, no mirrors showing bodies.
+skin, clothed.> No bedroom, no before/after, no needles or syringes, no mirrors showing bodies.
 
 LAYOUT (9:16, Sermorelin GHK, 2026-10-29: "use as much of the artboard as possible around the safe zones"): the TOP 12%
 is calm continuation of the background (the Everlife logo is laid there). ALL TEXT (headline, name, lines, badges) stays

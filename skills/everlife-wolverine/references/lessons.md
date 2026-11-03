@@ -1,5 +1,7 @@
 # Lessons already paid for (read every session)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 > **Wolverine Stack (adapted 2026-10-30 from BPC-157):** audience is active men 25–55 only (ignore any women's notes), cast 25–55 (not only bodybuilders), fighting imagery fine without blood or gore, no animal death; "Wolverine Stack" is the brand name in every asset. Where this file says BPC-157 it describes the template product's history, not Wolverine Stack facts.
 
 

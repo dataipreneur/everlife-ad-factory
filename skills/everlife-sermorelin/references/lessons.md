@@ -1,5 +1,7 @@
 # Lessons already paid for (read every session)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 No plain Sermorelin ads have been made with this skill yet. These lessons come from the Restora-Z skill (2026-10-27) and
 the Sermorelin GHK skill, and apply to every product. Add Sermorelin-specific lessons at the bottom as they happen.
 
@@ -85,7 +87,7 @@ Sermorelin-specific risks to watch (expected, not yet seen):
   check Marketing Studio picked "Sermorelin", not "Sermorelin GHK".
 - **Two tablet shapes in past ads** (round "S" vs oblong "SERMORELIN"): only the confirmed render; QA the shape.
 - "Hardcore fitness-model" casting drifts to shirtless, flexing or mirror-selfie bodies → "fully clothed in a fitted
-  training tee, no bare torso, no flexing poses, no mirrors".
+  training tee, no bare torso, no flexing poses, no mirrors" for NON-hardcore slots only (HARDCORE slots: 💪 hardcore-men.md).
 - Any "toned/lean" visual can turn into a body before/after → never show two states of one body.
 
 Compliance traps:

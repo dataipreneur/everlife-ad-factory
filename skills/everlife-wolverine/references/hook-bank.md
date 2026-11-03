@@ -1,10 +1,12 @@
 # Wolverine Stack hook bank (Hook Engine starting points, 2026-11-02)
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 Rules: `core/hook-engine/HOOK-ENGINE.md` (contract, families, HOOK-10, QA, ledger). These are starting points, not scripts: vary
 room, object, cast and angle every time. "Bridge" = a line from `product-bible.md`: the page has no ✅ headline yet, so hooks lead
 into a ✅ benefit; a ⏳ / ⚠ headline (e.g. "Bounce Back Stronger") only with the user's OK, flagged for Jeremy.
 
-**Limits first (they beat any hook):** fit, rugged men 30–45 (bible 2026-11-02), clothed (the engine's no-shirtless / no-flexing rule wins).
+**Limits first (they beat any hook):** fit, rugged men 30–45 (bible 2026-11-02), shirtless or stringer allowed and recommended (`core/references/hardcore-men.md`, Jeremy 2026-11-02, overrides the engine's old no-shirtless / no-flexing line).
 The matte-black and gold vial is a still object: **never thrown, dropped or smashed** (throw the pharmacy box or a towel instead);
 never a needle, syringe, pen or injecting. Fighting imagery is fine without blood or gore; nobody gets hurt; no animal death, no claws
 or scratches on anyone. Offer only "Save up to 39%" (⚠ PROVISIONAL). VO: "Wolverine Stack by Ever-life".

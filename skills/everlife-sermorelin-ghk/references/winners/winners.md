@@ -1,5 +1,7 @@
 # Sermorelin GHK winners: what works, what not to copy
 
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+
 Source: the creative team's "Winning Ads Reference" page (claude.ai artifact 5gDbB7ibXwcNoWnKqcU9Sc), report week **Oct 9–15,
 2026**, ranked by CPA (spend ÷ purchases). Cards written 2026-10-28 after looking at every ad that could be opened. Images
 here are small previews: `<code>.jpg` (square / 4:5) and `<code>_916.jpg` (vertical: use these for 9:16 batches).

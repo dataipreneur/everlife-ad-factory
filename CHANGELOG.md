@@ -2,6 +2,18 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-02 — Hardcore men: shirtless / bodybuilder casting for the men's-muscle products, 40% of random slots (branch `hardcore-men-40`)
+Jeremy's direction (via Mitansh): bodybuilding / men's-muscle products recommend intense, shirtless, hardcore models and images,
+and in random mode 40% of images are hardcore. New `core/references/hardcore-men.md` (the rule, the cast, the prompt line, what
+still applies) + `hardcore-men.json` (products: sermorelin, sermorelin-ghk, bpc-157, wolverine, spartan; share 0.4).
+`pick_styles.py` gains `--audience men|women|both` and tags floor(0.4×men's slots) + a 40% chance of one more as `HARDCORE`
+(averages exactly 40%; women's slots never). Overrides removed or rewritten: gates Sermorelin "fit, mature, not bodybuilders";
+Hook Engine §8 no-shirtless/no-flexing (exception for these products); Hook Bank Sermorelin / Sermorelin GHK limits; Wolverine and
+Spartan hook-bank "clothed" limits; Sermorelin + Sermorelin GHK prompt templates, video CAST lines, closing guards, QA checks
+and style guardrails; SGHK `product.json` "never: bodybuilder physiques"; "bodybuilder bodies" dropped from the BPC/Wolverine/
+Spartan style Hard-NO lists. A 💪 banner tops every file of the five skills. New-product checklist: TRT, Tesamorelin and
+Tesamorelin/Ipamorelin opt in when built. Kept: no before/after, no body comparison, no body-composition claims, product hero.
+
 ## 2026-11-02 — Titan-Rx skill brought up to date with main before merging (branch `titan-rx-skill`)
 Merged main (#23–#30; `regression.py` and `ultra-premium.md` conflicts with GHK/Epithalon resolved by hand: each product's
 test block keeps its own closing line, the vial row takes Epithalon and the tablet row Titan-rx, both palette rows kept) and
