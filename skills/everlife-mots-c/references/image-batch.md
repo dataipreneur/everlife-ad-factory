@@ -84,7 +84,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
 **Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block.
 
-**Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
+**Winners Board (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: do not read the board, use no board winner or rating; see `WINNERS-BOARD.md` top) (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
 entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
 table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.
 
@@ -190,6 +190,6 @@ QA that the label matches the vial render.
 
 ## 4. After the batch
 - Contact sheet first, then let the user pick winners. Winners → the other ratio only after approval.
-- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+- **Rate the batch (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: no rating question, no board entry, no preview upload) (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
   question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
   board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.

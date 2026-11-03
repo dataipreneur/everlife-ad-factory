@@ -150,6 +150,7 @@ button.thumb:focus-visible { outline: 2px solid var(--accent); outline-offset: 2
 .empty-hero h2 { font-family: var(--f-display); font-stretch: 80%; margin: 0; font-size: 22px; }
 .empty-hero ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; max-width: 70ch; }
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-block: 12px 4px; display: grid; gap: 10px; }
+.panel.paused { border-left: 4px solid var(--winner); }
 .notes { display: grid; gap: 8px; }
 .note { display: grid; gap: 2px; font-size: 14px; border-left: 3px solid var(--line); padding-left: 10px; }
 .note p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 80ch; }
@@ -178,7 +179,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
 <header class="wrap top">
   <div>
     <h1>Everlife Winners Board</h1>
-    <p class="sub">Ratings and reviews for every hook and image ad, shared by the team. Claude reads this board before each batch and writes the ratings after it. Meta results come first, then the reviewers, then the operator.</p>
+    <p class="sub">Ratings and reviews for every hook and image ad, shared by the team. Meta results come first, then the reviewers, then the operator.</p>
   </div>
   <div class="who"><span class="chip role" id="roleChip">Connecting…</span><span class="chip" id="countChip">0 entries</span></div>
 </header>
@@ -205,6 +206,10 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
 
 <main class="wrap">
   <div class="status" id="status" role="status">Loading the board…</div>
+  <section class="panel paused" id="pausedNote" hidden>
+    <h2>Paused</h2>
+    <p style="margin:0;max-width:70ch">The rating and feedback system is switched off while the team works out a new way to refine the ads. The board is read-only: nothing new is rated or reviewed, and Claude no longer reads it before a batch. Every rating already here is kept.</p>
+  </section>
   <div id="emptyHero" class="empty-hero" hidden>
     <h2>No ratings yet</h2>
     <p style="margin:0">The board fills as the team rates finished work. Each rating becomes a card here with a preview of the ad, sorted into Winners, Active and Retired.</p>
@@ -359,7 +364,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
           </label>
           <div class="formfoot"><span class="formerr" id="cErr"></span><button type="submit" class="primary" id="cSave">Add comment</button></div>
         </form>
-        <p class="hint" id="cReadonly" hidden style="margin:0">Sign in to claude.ai with access to this board to comment.</p>
+        <p class="hint" id="cReadonly" hidden style="margin:0">Comments are off while the board is paused.</p>
       </section>
       <div class="close-row"><button type="button" id="detailClose">Close</button></div>
     </div>
@@ -377,6 +382,8 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
 
 <script>
 (() => {
+  // Paused 2026-11-03 (Priestley): read-only for everyone; no ratings, reviews, Meta results, notes or comments.
+  const PAUSED = true;
   const PRODUCTS = [
     ["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],
     ["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],
@@ -581,7 +588,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     }
     const notes = all.filter(n => n.product === p);
     $("notesCount").textContent = productName(p) + " · " + notes.length;
-    $("notesHint").textContent = notes.length ? "Claude reads these before the next " + productName(p) + " batch, as guidance only." : "No feedback notes for " + productName(p) + " yet.";
+    $("notesHint").textContent = PAUSED ? (notes.length ? "Kept for reference. Claude does not read them while the board is paused." : "No feedback notes for " + productName(p) + ".") : notes.length ? "Claude reads these before the next " + productName(p) + " batch, as guidance only." : "No feedback notes for " + productName(p) + " yet.";
     $("notesList").replaceChildren(...notes.map(n => {
       const mine = n.by && n.by === state.me;
       const canChange = state.isAdmin || (state.canWrite && mine);
@@ -657,7 +664,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
       else if (can) parts.push(h("div", { class: "actions" }, h("button", { type: "button", class: "link", onclick: () => { state.confirmDel = c.key; render(); } }, "Delete")));
       return h("div", { class: "comment" }, parts);
     }) : [h("p", { class: "hint", style: "margin:0" }, "No comments yet. Be the first.")]));
-    const canComment = !!(state.db && state.me);
+    const canComment = !!(state.db && state.me) && !PAUSED;
     $("commentForm").hidden = !canComment;
     $("cReadonly").hidden = canComment;
   }
@@ -999,6 +1006,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     const can = user ? await user.can("data.write") : null;
     state.canWrite = !!state.me && (state.isAdmin || can !== false);
     state.role = isOwner ? "Owner" : state.isAdmin ? "Editor" : state.canWrite ? "Contributor" : "Viewer";
+    if (PAUSED) { state.canWrite = false; state.isAdmin = false; state.role += " · paused"; $("pausedNote").hidden = false; }
     applyRole();
 
     let settled = false;

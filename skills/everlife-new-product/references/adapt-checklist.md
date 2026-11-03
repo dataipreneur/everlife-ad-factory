@@ -45,7 +45,7 @@ disclaimer verbatim · landing page (facts only).
 - **"🧑‍💼 AI Avatar Video" in "What are we making?" (REQUIRED, Mitansh 2026-11-02).** Offer it in the format question (max 4 options:
   merge "Video ad or animated still" if needed) with a bullet pointing to `core/references/ai-avatar-video.md` and naming this product's casting,
   hero form and banned settings. Register the product in Higgsfield Marketing Studio (preflight prints the command).
-- **Winners Board (REQUIRED, Priestley 2026-11-02).** `references/image-batch.md` reads the shared board before the batch
+- **Winners Board (REQUIRED, Priestley 2026-11-02; ⏸ the board is PAUSED since 2026-11-03: still add both steps with the same PAUSED prefix the other skills carry).** `references/image-batch.md` reads the shared board before the batch
   table and ends "After the batch" with the "Rate the batch (Winners Board)" step, both pointing at
   `core/winners-board/WINNERS-BOARD.md` (§4 read, §5 write). Use the new product's `product.json` id as `product` on the board.
 - **Team logs (REQUIRED, Priestley 2026-11-03).** `references/image-batch.md` and `references/finishing.md` each carry the

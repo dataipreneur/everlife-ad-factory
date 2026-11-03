@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Winners Board paused: rating/feedback loop unplugged (branch `board-pause`)
+Logged before editing. Priestley: "Can we somehow unplug the rating or feedback system? We might need a new way to refine the
+system." → pause, freeze the page (read-only, data kept). Reversible: one switch (`PAUSED` in WINNERS-BOARD.md + the page).
+Originals: `_originals/2026-11-03/board-pause/`.
+
 ## 2026-11-03 — Bible sync to 1793728650-5a0d: offer CTAs replace "Get Started Now" (branch `bible-sync-5a0d`)
 Logged before editing. Justin's update: "Get Started Now" is banned (lead with the offer, "Save Up to N%"); "Ships Free From
 Pharmacy" added as a CTA on every product; standard disclaimer filled in where the bible said "Disclaimer pending"; landing pages

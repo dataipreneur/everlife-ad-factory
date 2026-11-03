@@ -1,5 +1,13 @@
 # Everlife Winners Board (v2, 2026-11-02)
 
+> **⏸ PAUSED (Priestley, 2026-11-03: "Can we somehow unplug the rating or feedback system? We might need a new way to refine the
+> system.")** Until this banner is removed: Claude does NOT read the board before a batch (§4), does NOT ask for ratings or write
+> entries, reviews, notes or previews after a batch (§5), and never uses a board winner, rating or note to steer copy, style or
+> recipes. The page is frozen read-only (its `PAUSED` flag; the database rules let only Owner/Editors write) and every existing
+> entry is kept. The team logs keep running; `gen.ref.type` is never `board_winner` and `ad_id` is `<run_id>-<slot>`.
+> **To switch it back on:** remove this banner and the skills' "⏸ PAUSED" prefixes, set `PAUSED = false` in `board-page.html`,
+> and republish the page with the rules `data/users/{self}` and `raters/{self}` back at `write: "interact"`.
+
 One shared claude.ai page that stores the team's ratings, reviews and feedback for **video hooks AND image ads**, so every
 teammate's Claude reads the same history before a batch and writes ratings after it. It replaces "each Mac keeps its own notes".
 
