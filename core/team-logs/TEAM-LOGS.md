@@ -43,8 +43,8 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
 3. **Each generation (each prompt sent to an image or video model):** write one `gen` record to the Prompt log; update it after QA
    (pass/fail and the reasons, re-rolls). One `batch` per wave is fine.
 4. **After the batch (when SESSION.md is written):** one `copy` record per ad to the Copy Ledger, one `style` record for the batch, one
-   `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); the Winners
-   Board as today. Still append the local copy log as before (fallback and offline history).
+   `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); nothing to the Winners
+   Board (⏸ paused since 2026-11-03). Still append the local copy log as before (fallback and offline history).
 
 ## 3. Schemas (every record has `"type"`)
 **Activity log, `run`:** `{type:"run", run_id, product, format:"images|video|avatar|still", made, finished, rerolled,

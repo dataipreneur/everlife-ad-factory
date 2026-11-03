@@ -11,6 +11,7 @@ Originals: `_originals/2026-11-03/logs-video-routes/`.
   and the run's spend. The Hook Engine (Mitansh's) is covered through these routes and each skill's finishing step; not edited.
 - Restora-Z: the same two lines the other 14 skills got (`image-batch.md` before §1b, `finishing.md` before §4).
 - Verified the same day: all three pages accept a Contributor-level write (self-test rows written and deleted).
+- `TEAM-LOGS.md` §2 step 4 no longer says "the Winners Board as today" (paused).
 
 ## 2026-11-03 — Gates: AI avatar model routing (branch `gates-avatar-routing`)
 Logged before editing. The gates sent "talking head" to Boreal-style; Mitansh's all-Creatify avatar rule (2026-11-02) routes the
