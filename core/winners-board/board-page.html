@@ -419,7 +419,10 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
 
   // ---------- derived data ----------
   function ofType(type) { const out = []; for (const [key, d] of state.docs) if (d.type === type) out.push({ key, ...d }); return out; }
-  function allEntries() { return ofType("entry"); }
+  // An image entry with no preview was never generated (a brief or plan written by mistake): hidden, never counted (2026-11-03).
+  function isGhost(e) { return e.kind === "image" && !e.preview; }
+  function allEntries() { return ofType("entry").filter(e => !isGhost(e)); }
+  function ghostCount() { return ofType("entry").filter(isGhost).length; }
   function metaFor(key) { return ofType("meta").filter(d => d.target === key).sort(newest); }
   function reviewsFor(key) { return ofType("review").filter(d => d.target === key).sort(newest); }
   function latestReviewPerReviewer(key) {
@@ -500,7 +503,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
 
   async function render() {
     const entries = allEntries();
-    $("countChip").textContent = entries.length + (entries.length === 1 ? " entry" : " entries");
+    $("countChip").textContent = entries.length + (entries.length === 1 ? " entry" : " entries") + (ghostCount() ? " · " + ghostCount() + " not generated (hidden)" : "");
     renderProductOptions();
     const f = state.filter;
     const shown = filtered();

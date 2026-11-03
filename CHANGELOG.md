@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Winners Board: finished ads only (branch `board-no-briefs`)
+Logged before editing. BERNS's Claude wrote 10 Sermorelin GHK "BRIEF ONLY: image not made yet" entries with placeholder "Good"
+ratings; Priestley approved deleting them (done) and closing the gap. Originals: `_originals/2026-11-03/board-no-briefs/`.
+- `WINNERS-BOARD.md` §5: entries only for finished ads with a preview; never briefs, plans or placeholder ratings. §4: skip image
+  entries without a preview when reading history.
+- `board-page.html`: image entries without a preview are hidden and never counted (the entry count shows how many are hidden).
+
 ## 2026-11-03 — Team logs: Activity & Spend Log, Copy Ledger, Prompt & Outcome Log (branch `team-logs`)
 Logged before editing. Priestley's decisions (2026-11-03): three separate shared pages next to the Winners Board; the Activity &
 Spend Log is read only by Priestley + leads (Editors), each operator writes only their own runs; the Copy Ledger and the Prompt &
