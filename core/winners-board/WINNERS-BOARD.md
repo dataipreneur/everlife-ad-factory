@@ -118,6 +118,7 @@ name / Seedance / Boreal), `frame0`, `sound`. Hook mutation variables: object, a
    reviews, Meta reports and product notes for the product (never the preview images). With many people, add `out_dir` (the
    scratchpad) and read the files.
 3. Compute, for this product and the batch's kind:
+   - **Skip** image entries without `preview` (never generated; the page hides them too). They are not history.
    - **Effective rating/status** of every entry (§2: Meta → reviewers' majority → operator).
    - **Last 15** = the 15 entries with the newest `createdAt`; **bar** = the median `score` of the last 15 (hooks: the Hook
      Engine's own bar rules still decide what is pitched).
@@ -143,6 +144,11 @@ name / Seedance / Boreal), `frame0`, `sound`. Hook mutation variables: object, a
    - **Board line** above the table: `Board: last 15 <product> <kind>s · W winners · G good · R retired · median <x> · <n> to review`.
 
 ## 5. WRITE after the batch (rate the batch)
+**Finished ads only (2026-11-03).** Write an entry only for an ad that exists: a FINAL image you have looked at (with its preview)
+or a finished video. Never for a plan, a brief, a batch table or an ad that is "not generated yet"; never a placeholder rating
+or a rating the user didn't give. A planned batch stays in SESSION.md until it is generated, then it is rated here. (Ten
+"BRIEF ONLY" Sermorelin GHK entries with placeholder "Good" ratings were written on 2026-11-03 and had to be deleted.) The page
+hides image entries without a preview and never counts them.
 1. **Ask:** AskUserQuestion, **one question per ad**, max 4 questions per screen (a batch of 4 is one screen; 8 is two):
    - header: `Ad <n>` · question: `Rate ad <n>: <framework> · "<headline>"` (hooks: `Rate the hook: <FAMILY> · <mechanic>`)
    - options, in this order: **Winner** ("Breed it: future batches reuse this recipe with one change") · **Good** ("Keep: counts
@@ -160,8 +166,8 @@ name / Seedance / Boreal), `frame0`, `sound`. Hook mutation variables: object, a
 4. **Write everything in ONE call:** `ArtifactData {action: "batch", url, writes: [...]}` with, per ad, the entry
    `{op: "set", collection: "data/users/me", doc_id: "e-…", data: {…entry…}}` and its preview
    `{op: "set", collection: "data/users/me/e-…/preview", doc_id: "img", file_path: "<scratch>/preview_<n>.json"}`
-   (max 50 writes per call: 25 ads; new docs need no `if_version`). A preview that fails → write the entry without `preview`
-   and say so.
+   (max 50 writes per call: 25 ads; new docs need no `if_version`). A preview that fails for an image → fix it and retry; an
+   image entry without a preview is hidden on the page and ignored by §4, so don't write it without one.
 5. Add one line per ad to SESSION.md (`#n · rating · board doc id`) and tell the user "Rated on the Winners Board; reviewers
    will see it under To review".
 6. **Editing later:** `get` the doc, then `update` with `if_version` = the version you read. Only your own docs, unless the user
