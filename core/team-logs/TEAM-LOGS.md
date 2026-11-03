@@ -118,3 +118,18 @@ Writes each record as `<job>/teamlog/<doc_id>.json` (a local mirror that stays w
   2026-11-03:** the first real job on each route confirms what the read returns; note it here. The check warns when a Marketing
   Studio / Ads Studio / composer generation has no `tool_prompt`.
 - **Backfills** (records written after the fact): set `"backfill": true`; missing prompt files and date-only times are then ⚠, not ❌.
+
+## 7. Automatic capture (Claude Code hooks, added 2026-11-03)
+Priestley: "Are you sure claude will log every time into those artifacts?" Logging used to depend on Claude following the steps.
+`install.sh` (run by `update.sh`) now adds two hooks to each person's `~/.claude/settings.json` (merged, backed up, idempotent):
+- **Capture (PostToolUse, `mcp__.*|Bash`):** every paid Creatify / Higgsfield generation call (MCP generate / edit / voice /
+  upscale tools, `higgsfield generate create`, `model_playground_generate`) is appended to `~/Everlife-Creative/teamlog-auto.jsonl`
+  with its exact input (prompts whole, image blobs shortened), the session id and any credit cost in the response. Reads,
+  quotes, billing and status calls are ignored. It runs whatever Claude does and never blocks.
+- **Stop:** when Claude tries to finish, it compares this session's captured calls with the `teamlog.py gen` records written
+  since the first one (`~/Everlife-Creative/teamlog-index.jsonl`, 10-minute window). If calls are missing, Claude is sent back
+  once to log them (prompt text from the capture file). The second time it lets the turn end and shows a warning, so a session
+  can never get stuck.
+- New hooks load when Claude Code starts (or after opening `/hooks` once). `core/hooks/teamlog_hook.py`, stdlib only.
+- Still not covered: work done in Creatify / Higgsfield outside Claude; and an offline machine's records wait in the pending
+  file until the pages answer.
