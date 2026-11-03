@@ -59,9 +59,15 @@ status:"draft|approved|live"}`. **`style`:** `{type:"style", product, run_id, ba
 
 **Prompt log, `gen`:** `{type:"gen", run_id, ad_id, product, created_at,
 setup:{audience, angle, boldness, mood, style, density, people, hardcore}, asks:["<operator's own words>"], reference:"<ref ad or
-style board>", model, settings:{ratio, resolution, seed}, prompt:"<exact text sent>", refs:["<render / tablet / board file>"],
+style board>", ref:{type, id, parent_ad_id, changed}, model, settings:{ratio, resolution, seed}, prompt:"<exact text sent>", refs:["<render / tablet / board file>"],
 copy:{headline, lines:[...], cta}, result_file, qa:{pass:true|false, reasons:["..."]}, rerolls, cost:{creatify, higgsfield}}`.
 Keep `prompt` exact (it is the point of the log); never put a preview image here (the board holds previews).
+**`ref` (what this generation was built from; always set it, images and videos):** `type` = `board_winner` (a Winners Board
+winner, its mutation slot) · `meta_winner` (the CPA-ranked Winning Ads Reference) · `style_board` (one of the 15 styles, S01–S15)
+· `hardcore_ref` (H1–H11) · `product_example` (style-library product examples) · `outside` (Pinterest or any other outside ad)
+· `hook_engine` (video: a Hook Bank family/hook) · `none`. `id` = which one (board entry id `<uid>/e-…`, `S13`, `H7`, the winning ad's
+name, the hook family). For `board_winner` also `parent_ad_id` (= the board entry) and `changed` (the one variable changed). The
+page filters and counts by `type`; the learning report compares outcomes by `type` ("board-winner copies vs style boards").
 
 ## 4. Learning report: only when someone asks
 Trigger: "what's working for <product>?", "learning report", "which prompts win?". Read the Prompt log `gen` records for the

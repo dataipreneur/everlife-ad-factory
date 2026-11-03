@@ -44,7 +44,7 @@ select:focus-visible, input:focus-visible, button:focus-visible { outline: 2px s
 .status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
 .status.warn { color: var(--fail); }
 main { display: grid; gap: 18px; padding-block: 8px 40px; }
-.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
 @media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0; }
 .tile .k { font-size: 12.5px; color: var(--muted); }
@@ -85,6 +85,7 @@ ul.plain { margin: 0; padding-left: 18px; }
     <label class="inline" for="fStyle">Style <select id="fStyle"><option value="">Any style</option></select></label>
     <label class="inline" for="fModel">Model <select id="fModel"><option value="">Any model</option></select></label>
     <label class="inline" for="fQa">QA <select id="fQa"><option value="">Pass or fail</option><option value="pass">Passed</option><option value="fail">Failed</option></select></label>
+    <label class="inline" for="fRef">Built from <select id="fRef"><option value="">Any reference</option></select></label>
     <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in the prompt"></label>
   </div>
 </div>
@@ -94,13 +95,14 @@ ul.plain { margin: 0; padding-left: 18px; }
     <div class="tile"><span class="k">Generations</span><span class="v" id="tGen">0</span><span class="n" id="tGenN">0 runs</span></div>
     <div class="tile"><span class="k">Passed QA first time</span><span class="v" id="tPass">0%</span><span class="n" id="tPassN">0 of 0</span></div>
     <div class="tile"><span class="k">Re-rolls</span><span class="v" id="tRe">0</span><span class="n" id="tReN">0 per generation</span></div>
+    <div class="tile"><span class="k">Built from</span><span class="v" id="tRef" style="font-size:18px">—</span><span class="n" id="tRefN">no references logged</span></div>
     <div class="tile"><span class="k">Top QA failure</span><span class="v" id="tFail" style="font-size:18px">—</span><span class="n" id="tFailN">no failures logged</span></div>
   </section>
   <section class="panel">
     <h2>Generations</h2>
     <div id="emptyGen" class="empty" hidden><strong>No generations logged for this filter.</strong><span>Each time Claude sends a prompt to an image or video model, it adds a row here with the inputs, the prompt and the references, then updates it with the QA result.</span></div>
     <div class="tbl"><table id="genTbl" hidden>
-      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Model</th><th>Headline</th><th>QA</th><th class="num">Re-rolls</th><th>By</th></tr></thead>
+      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Built from</th><th>Model</th><th>Headline</th><th>QA</th><th class="num">Re-rolls</th><th>By</th></tr></thead>
       <tbody id="genBody"></tbody>
     </table></div>
   </section>
@@ -118,6 +120,11 @@ ul.plain { margin: 0; padding-left: 18px; }
 
 <script>
 (() => {
+  // What each generation was built from (TEAM-LOGS.md §3, ref.type). Older records without it show as "Not logged".
+  const REF_TYPES = [["board_winner","Board winner"],["meta_winner","Meta winner (Winning Ads Reference)"],["style_board","Style board (15 styles)"],
+    ["hardcore_ref","Hardcore ref (H1–H11)"],["product_example","Product example"],["outside","Pinterest / outside ref"],["hook_engine","Hook Engine (video)"],["none","No reference"]];
+  const refOf = (g) => (g.ref && g.ref.type) || "unlogged";
+  const refName = (t) => t === "unlogged" ? "Not logged" : ((REF_TYPES.find(r => r[0] === t) || [t, t])[1]);
   const PRODUCTS = [["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]];
   const $ = (id) => document.getElementById(id);
   const pname = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id || "—"])[1];
@@ -142,6 +149,7 @@ ul.plain { margin: 0; padding-left: 18px; }
     const s = g.setup || {}, set = g.settings || {}, cost = g.cost || {};
     const pairs = [["Model", g.model], ["Ratio", set.ratio], ["Resolution", set.resolution], ["Seed", set.seed], ["Audience", s.audience], ["Angle", s.angle],
       ["Boldness", s.boldness], ["Mood / style", s.style || s.mood], ["Copy density", s.density], ["People", s.people], ["Hardcore", s.hardcore == null ? "" : (s.hardcore ? "yes" : "no")],
+      ["Built from", refName(refOf(g))], ["Reference id", g.ref && g.ref.id], ["Copy of ad", g.ref && g.ref.parent_ad_id], ["Changed", g.ref && g.ref.changed],
       ["Reference / board", g.reference], ["Headline", g.copy && g.copy.headline], ["CTA", g.copy && g.copy.cta], ["Result file", g.result_file], ["Run", g.run_id],
       ["Re-rolls", g.rerolls], ["Cost", [cost.creatify ? cost.creatify + " Creatify" : "", cost.higgsfield ? cost.higgsfield + " Higgsfield" : ""].filter(Boolean).join(" · ")]];
     $("detKv").replaceChildren(...pairs.filter(p => p[1] != null && p[1] !== "").map(([k, v]) => h("div", null, h("span", null, k), String(v))));
@@ -161,8 +169,8 @@ ul.plain { margin: 0; padding-left: 18px; }
     if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
     fillSelect("fStyle", [...new Set(all.map(styleOf).filter(Boolean))].sort(), "Any style");
     fillSelect("fModel", [...new Set(all.map(g => g.model).filter(Boolean))].sort(), "Any model");
-    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, txt = $("fText").value.trim().toLowerCase();
-    const gs = all.filter(g => (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) &&
+    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, txt = $("fText").value.trim().toLowerCase();
+    const gs = all.filter(g => (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) &&
       (!txt || String(g.prompt || "").toLowerCase().includes(txt) || String((g.copy && g.copy.headline) || "").toLowerCase().includes(txt)))
       .sort((a, b) => String(b.created_at || "").localeCompare(String(a.created_at || "")));
     $("countChip").textContent = all.length + (all.length === 1 ? " generation" : " generations");
@@ -172,11 +180,15 @@ ul.plain { margin: 0; padding-left: 18px; }
     $("tPass").textContent = checked.length ? Math.round(100 * passed / checked.length) + "%" : "0%"; $("tPassN").textContent = passed + " of " + checked.length;
     $("tRe").textContent = re; $("tReN").textContent = (gs.length ? (re / gs.length).toFixed(2) : "0") + " per generation";
     const fails = new Map(); for (const g of gs) for (const r of ((g.qa && !g.qa.pass && g.qa.reasons) || [])) fails.set(r, (fails.get(r) || 0) + 1);
+    const refs = new Map(); for (const g of gs) refs.set(refOf(g), (refs.get(refOf(g)) || 0) + 1);
+    const refList = [...refs.entries()].sort((a, b) => b[1] - a[1]);
+    $("tRef").textContent = refList.length ? refName(refList[0][0]) : "—";
+    $("tRefN").textContent = refList.length ? refList.map(([t, n]) => n + " " + refName(t).split(" (")[0].toLowerCase()).join(" · ") : "no references logged";
     const top = [...fails.entries()].sort((a, b) => b[1] - a[1])[0];
     $("tFail").textContent = top ? top[0] : "—"; $("tFailN").textContent = top ? top[1] + " times" : "no failures logged";
     $("emptyGen").hidden = !(state.loaded && gs.length === 0); $("genTbl").hidden = gs.length === 0;
     $("genBody").replaceChildren(...gs.slice(0, 400).map(g => h("tr", { tabindex: "0", onclick: () => openDetail(g), onkeydown: (e) => { if (e.key === "Enter") openDetail(g); } },
-      h("td", { class: "meta" }, String(g.created_at || "").slice(0, 10)), h("td", null, pname(g.product)), h("td", null, styleOf(g) || "—"), h("td", { class: "meta" }, g.model || "—"),
+      h("td", { class: "meta" }, String(g.created_at || "").slice(0, 10)), h("td", null, pname(g.product)), h("td", null, styleOf(g) || "—"), h("td", null, refName(refOf(g))), h("td", { class: "meta" }, g.model || "—"),
       h("td", { class: "txt" }, (g.copy && g.copy.headline) || ""), h("td", null, qaOf(g) ? h("span", { class: "qa " + qaOf(g) }, qaOf(g) === "pass" ? "Pass" : "Fail") : "—"),
       h("td", { class: "num" }, Number(g.rerolls) || 0), h("td", { class: "meta" }, who(g.by)))));
   }
@@ -191,7 +203,8 @@ ul.plain { margin: 0; padding-left: 18px; }
   }
   async function start() {
     $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
-    for (const id of ["fProduct", "fStyle", "fModel", "fQa"]) $(id).addEventListener("change", render);
+    $("fRef").append(...REF_TYPES.map(([v, l]) => h("option", { value: v }, l)), h("option", { value: "unlogged" }, "Not logged"));
+    for (const id of ["fProduct", "fStyle", "fModel", "fQa", "fRef"]) $(id).addEventListener("change", render);
     $("fText").addEventListener("input", queue);
     $("detClose").addEventListener("click", () => $("detDlg").close());
     $("detDlg").addEventListener("click", (e) => { if (e.target === $("detDlg")) $("detDlg").close(); });
