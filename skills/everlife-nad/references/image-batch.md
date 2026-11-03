@@ -75,6 +75,8 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 **Random (recommended):** N different frameworks (skip F5, F7), always one F4 "choice" slot per batch. Weight towards F2, F4, F8, F11, F14.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
+**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block.
+
 **Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
 entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
 table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.

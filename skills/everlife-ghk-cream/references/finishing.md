@@ -30,6 +30,8 @@ Feed (4:5, 1:1): 60 px margin.
 ## 2. Video finishing
 **Proof split, videos too (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of videos carry NO proof; 70% carry ONE footer proof: the trust row (60% of those) or the Trustpilot 4.9 badge + "Over 100,000 happy customers" (40%); the end card has no count line of its own. Before finishing run `python -I core/scripts/proof_next.py --product ghk-cream --log <tag>` and put its answer in copy.json as `"proof": "trust"`, `"count"` or `"none"` (animated stills: `animate_still.py --proof …`).
 
+**Team logs, videos too (`core/team-logs/TEAM-LOGS.md`):** log each generated clip to the Prompt & Outcome Log, the video's copy and proof to the Copy Ledger, and the run's spend to the Activity & Spend Log. Unreachable → the pending file, never block.
+
 Write `<job>/copy.json` fresh each time (all copy from the bible, new against the copy log):
 ```json
 {"product": "ghk-cream", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",

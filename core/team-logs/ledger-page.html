@@ -1,0 +1,185 @@
+<title>Everlife Copy Ledger</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a pharmacy-ledger register. Sticky product + type filters, the team's proof split and recent styles, then every line used, newest first. */
+:root {
+  --bg: #f5f7f6; --surface: #ffffff; --sunken: #e9eeec; --ink: #15201d; --muted: #56645f; --line: #d3dcd8;
+  --accent: #0d5c55; --accent-ink: #ffffff; --bar: #2f7f76; --warn: #a3261d; --focus: #1a73b8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+    --accent: #4fb8ac; --accent-ink: #06201d; --bar: #5cc2b6; --warn: #f08a80; --focus: #6cb6f0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+  --accent: #4fb8ac; --accent-ink: #06201d; --bar: #5cc2b6; --warn: #f08a80; --focus: #6cb6f0; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 22px 10px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; justify-content: space-between; }
+h1 { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 10px; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 64ch; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--sunken); color: var(--muted); }
+.chip.role { background: var(--accent); color: var(--accent-ink); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-block: 10px; }
+label.inline { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+select, input { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; min-width: 0; }
+input[type=search] { width: min(260px, 60vw); }
+select:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
+.status.warn { color: var(--warn); }
+main { display: grid; gap: 18px; padding-block: 8px 40px; }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 820px) { .two { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.bars { display: grid; gap: 6px; }
+.brow { display: grid; grid-template-columns: minmax(0, 8em) minmax(0, 1fr) auto; gap: 8px; align-items: center; font-size: 13.5px; }
+.brow .track { height: 12px; background: var(--sunken); border-radius: 0 4px 4px 0; overflow: hidden; }
+.brow .fill { height: 100%; background: var(--bar); border-radius: 0 4px 4px 0; min-width: 2px; }
+.brow .val { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.styles { display: flex; flex-wrap: wrap; gap: 6px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .03em; text-transform: uppercase; white-space: nowrap; }
+td.line { min-width: 16em; overflow-wrap: anywhere; }
+td .kind { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+td.meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+td.num { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.lines { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; display: grid; gap: 6px; }
+.empty strong { color: var(--ink); }
+a { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="top wrap">
+  <div>
+    <h1>Copy Ledger</h1>
+    <p class="sub">Every headline, benefit, VO line and CTA the team has used, per product. Claude reads it before writing new copy so nobody repeats a line, and keeps the team's style and proof split here.</p>
+  </div>
+  <div><span class="chip role" id="roleChip">Connecting…</span> <span class="chip" id="countChip">0 ads</span></div>
+</header>
+<div class="bar">
+  <div class="wrap">
+    <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
+    <label class="inline" for="fPerson">Person <select id="fPerson"><option value="">Everyone</option></select></label>
+    <label class="inline" for="fStatus">Status <select id="fStatus"><option value="">Any</option><option value="draft">Draft</option><option value="approved">Approved</option><option value="live">Live</option></select></label>
+    <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in any line"></label>
+  </div>
+</div>
+<div class="wrap"><div class="status" id="status" role="status">Loading the ledger…</div></div>
+<main class="wrap">
+  <section class="two">
+    <div class="panel"><h2>Proof split, whole team</h2><div class="bars" id="bProof"></div><p class="hint" id="proofNote">Target: about 42% trust row, 28% badge + count, 30% none.</p></div>
+    <div class="panel"><h2>Styles used, last two batches</h2><div class="styles" id="styleBox"></div><p class="hint">"Surprise me" skips these for this product.</p></div>
+  </section>
+  <section class="panel">
+    <h2>Copy used</h2>
+    <div id="emptyCopy" class="empty" hidden><strong>No copy logged for this filter.</strong><span>After each batch, the operator's Claude adds one row per ad: the headline, the benefit and VO lines, the end headline and the CTA, with where each came from.</span></div>
+    <div class="tbl"><table id="copyTbl" hidden>
+      <thead><tr><th>Date</th><th>Product</th><th>Ad</th><th>Lines used</th><th>Status</th><th>By</th></tr></thead>
+      <tbody id="copyBody"></tbody>
+    </table></div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const PRODUCTS = [["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]];
+  const KINDS = { headline: "Headline", hook: "Hook", vo: "VO / benefit", benefit: "Benefit", end_head: "End headline", cta: "CTA", offer: "Offer" };
+  const $ = (id) => document.getElementById(id);
+  const pname = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id || "—"])[1];
+  const state = { db: null, user: null, me: null, subs: new Map(), docs: new Map(), names: {}, loaded: false };
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) { if (v == null || v === false) continue; if (k === "class") el.className = v; else el.setAttribute(k, v); }
+    for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+    return el;
+  }
+  function setStatus(m, warn) { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); }
+  const of = (t) => [...state.docs.values()].filter(d => d.type === t);
+
+
+  // Person filter: one option per person who wrote rows (names from their claude.ai accounts), plus "Imported" where relevant.
+  function fillPeople(ids, who, extra) {
+    const s = $("fPerson"), cur = s.value;
+    const opts = ids.map(id => [id, who(id)]).sort((a, b) => a[1].localeCompare(b[1]));
+    s.replaceChildren(h("option", { value: "" }, "Everyone"), ...opts.map(([v, l]) => h("option", { value: v }, l)), ...(extra || []).map(([v, l]) => h("option", { value: v }, l)));
+    s.value = [...s.options].some(o => o.value === cur) ? cur : "";
+  }
+  async function render() {
+    const prod = $("fProduct").value, st = $("fStatus").value, per = $("fPerson").value, txt = $("fText").value.trim().toLowerCase();
+    const ids = [...new Set([...state.docs.values()].map(d => d.by).filter(Boolean))];
+    if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
+    const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
+    fillPeople(ids.filter(id => of("copy").some(d => d.by === id && !d.imported)), who, of("copy").some(d => d.imported) ? [["__imported", "Imported (old copy logs)"]] : []);
+    const byPerson = (d) => !per || (per === "__imported" ? !!d.imported : (d.by === per && !d.imported));
+    const copy = of("copy").filter(d => byPerson(d) && (!prod || d.product === prod) && (!st || d.status === st) &&
+      (!txt || (d.lines || []).some(l => String(l.text || "").toLowerCase().includes(txt)) || String(d.ad || "").toLowerCase().includes(txt)))
+      .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+    $("countChip").textContent = of("copy").length + " ads";
+    $("emptyCopy").hidden = !(state.loaded && copy.length === 0); $("copyTbl").hidden = copy.length === 0;
+    $("copyBody").replaceChildren(...copy.slice(0, 400).map(d => h("tr", null,
+      h("td", { class: "meta" }, String(d.date || "").slice(0, 10)), h("td", null, pname(d.product)),
+      h("td", { class: "line" }, d.ad || d.ad_id || "", d.ad_id && d.ad ? h("div", { class: "kind" }, d.ad_id) : null),
+      h("td", { class: "line" }, h("ul", { class: "lines" }, ...(d.lines || []).map(l => h("li", null, h("span", { class: "kind" }, (KINDS[l.kind] || l.kind || "line") + (l.source ? " · " + l.source : "") + " "), l.text || "")))),
+      h("td", { class: "meta" }, d.status || "draft"), h("td", { class: "meta" }, d.imported ? "Imported" : who(d.by)))));
+    // proof split (team-wide, filtered by product)
+    const proofs = of("proof").filter(d => !prod || d.product === prod);
+    const tot = proofs.length, cnt = (k) => proofs.filter(d => d.proof === k).length;
+    const rows = [["Trust row", cnt("trust")], ["Badge + count", cnt("count")], ["None", cnt("none")]];
+    $("bProof").replaceChildren(...(tot ? rows.map(([l, v]) => h("div", { class: "brow", title: l + ": " + v + " of " + tot },
+      h("span", null, l), h("span", { class: "track" }, h("span", { class: "fill", style: "width:" + (100 * v / tot).toFixed(1) + "%" })), h("span", { class: "val" }, Math.round(100 * v / tot) + "% · " + v)))
+      : [h("p", { class: "hint" }, "No finished creatives logged yet.")]));
+    // styles: last two batches per product (or for the chosen product)
+    const styles = of("style").filter(d => !prod || d.product === prod).sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+    const recent = prod ? styles.slice(0, 2) : styles.slice(0, 6);
+    $("styleBox").replaceChildren(...(recent.length ? recent.flatMap(d => (d.styles || []).map(s => h("span", { class: "chip", title: pname(d.product) + " · " + (d.batch || "") }, s + (prod ? "" : " · " + pname(d.product)))))
+      : [h("p", { class: "hint" }, "No style picks logged yet.")]));
+  }
+  let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
+  function watch(uid) {
+    if (state.subs.has(uid)) return;
+    state.subs.set(uid, state.db.collection("data/users/" + uid).onSnapshot((snap) => {
+      for (const k of [...state.docs.keys()]) if (k.startsWith(uid + "/")) state.docs.delete(k);
+      for (const d of snap.docs) { const v = d.exists ? d.data() : null; if (v && v.type) state.docs.set(uid + "/" + d.id, Object.assign({ by: uid }, v)); }
+      queue();
+    }, () => { state.subs.delete(uid); }));
+  }
+  async function start() {
+    $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
+    for (const id of ["fProduct", "fStatus", "fPerson"]) $(id).addEventListener("change", render);
+    $("fText").addEventListener("input", queue);
+    if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to see the ledger.", true); $("roleChip").textContent = "Offline"; return; }
+    const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);
+    state.db = db; state.user = user;
+    if (!db) { setStatus("Sign in to claude.ai and open the page again to see the ledger.", true); $("roleChip").textContent = "Signed out"; return; }
+    state.me = user ? await user.id() : null;
+    const owner = user ? await user.isOwner() : false, admin = user ? await user.canEdit() : false;
+    $("roleChip").textContent = owner ? "Owner" : admin ? "Editor" : "Team";
+    let settled = false;
+    const timer = setTimeout(() => { if (!settled) setStatus("The ledger can't be reached yet. It fills in when the connection answers.", true); }, 10000);
+    if (state.me) watch(state.me);
+    db.collection("members").onSnapshot((snap) => {
+      for (const d of snap.docs) if (d.exists) watch(d.id);
+      if (!settled) { settled = true; clearTimeout(timer); setStatus(""); }
+      state.loaded = true; queue();
+    }, (err) => { settled = true; clearTimeout(timer); setStatus("The ledger stopped updating (" + err.code + "). Reload the page to reconnect.", true); });
+    render();
+  }
+  start();
+})();
+</script>

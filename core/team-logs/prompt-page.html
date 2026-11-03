@@ -1,0 +1,239 @@
+<title>Everlife Prompt Log</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a lab notebook. Sticky filters, QA pass-rate figures, the generation list; tap a row for the full prompt, inputs and QA notes. */
+:root {
+  --bg: #f5f7f6; --surface: #ffffff; --sunken: #e9eeec; --ink: #15201d; --muted: #56645f; --line: #d3dcd8;
+  --accent: #0d5c55; --accent-ink: #ffffff; --pass: #1d6b3a; --pass-bg: #dcf0e2; --fail: #a3261d; --fail-bg: #f8dedb; --focus: #1a73b8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+    --accent: #4fb8ac; --accent-ink: #06201d; --pass: #74d197; --pass-bg: #133222; --fail: #f08a80; --fail-bg: #3e1816; --focus: #6cb6f0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+  --accent: #4fb8ac; --accent-ink: #06201d; --pass: #74d197; --pass-bg: #133222; --fail: #f08a80; --fail-bg: #3e1816; --focus: #6cb6f0; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 22px 10px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; justify-content: space-between; }
+h1 { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 10px; }
+h3 { font-size: 13px; color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 4px; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 64ch; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--sunken); color: var(--muted); }
+.chip.role { background: var(--accent); color: var(--accent-ink); }
+.qa { font-family: var(--f-mono); font-size: 11.5px; font-weight: 500; text-transform: uppercase; letter-spacing: .05em; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+.qa.pass { background: var(--pass-bg); color: var(--pass); } .qa.fail { background: var(--fail-bg); color: var(--fail); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-block: 10px; }
+label.inline { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+select, input, button { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; min-width: 0; }
+button { cursor: pointer; font-weight: 600; }
+input[type=search] { width: min(240px, 60vw); }
+select:focus-visible, input:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
+.status.warn { color: var(--fail); }
+main { display: grid; gap: 18px; padding-block: 8px 40px; }
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0; }
+.tile .k { font-size: 12.5px; color: var(--muted); }
+.tile .v { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 28px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.tile .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; color: var(--muted); font-weight: 600; letter-spacing: .03em; text-transform: uppercase; white-space: nowrap; }
+tbody tr { cursor: pointer; } tbody tr:hover { background: var(--sunken); }
+td.meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+td.num { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+td.txt { min-width: 14em; overflow-wrap: anywhere; }
+.empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; display: grid; gap: 6px; }
+.empty strong { color: var(--ink); }
+dialog { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); padding: 0; width: min(820px, calc(100vw - 32px)); max-height: calc(100vh - 48px); }
+dialog::backdrop { background: rgba(0,0,0,.45); }
+.det { padding: 16px 18px; display: grid; gap: 14px; }
+.det .head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.kv { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px 14px; font-size: 13.5px; }
+.kv div span { display: block; font-size: 12px; color: var(--muted); }
+pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--f-mono); font-size: 12.5px; background: var(--sunken); border-radius: 6px; padding: 10px 12px; max-height: 40vh; overflow-y: auto; }
+ul.plain { margin: 0; padding-left: 18px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<header class="top wrap">
+  <div>
+    <h1>Prompt &amp; Outcome Log</h1>
+    <p class="sub">What went into every generation (the operator's setup and asks, the exact prompt and references) and what came out (the file, QA pass or fail and why, re-rolls, cost). Ratings live on the Winners Board under the same ad id.</p>
+  </div>
+  <div><span class="chip role" id="roleChip">Connecting…</span> <span class="chip" id="countChip">0 generations</span></div>
+</header>
+<div class="bar">
+  <div class="wrap">
+    <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
+    <label class="inline" for="fStyle">Style <select id="fStyle"><option value="">Any style</option></select></label>
+    <label class="inline" for="fModel">Model <select id="fModel"><option value="">Any model</option></select></label>
+    <label class="inline" for="fQa">QA <select id="fQa"><option value="">Pass or fail</option><option value="pass">Passed</option><option value="fail">Failed</option></select></label>
+    <label class="inline" for="fPerson">Person <select id="fPerson"><option value="">Everyone</option></select></label>
+    <label class="inline" for="fRef">Built from <select id="fRef"><option value="">Any reference</option></select></label>
+    <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in the prompt"></label>
+  </div>
+</div>
+<div class="wrap"><div class="status" id="status" role="status">Loading generations…</div></div>
+<main class="wrap">
+  <section class="tiles" aria-label="Summary">
+    <div class="tile"><span class="k">Generations</span><span class="v" id="tGen">0</span><span class="n" id="tGenN">0 runs</span></div>
+    <div class="tile"><span class="k">Passed QA first time</span><span class="v" id="tPass">0%</span><span class="n" id="tPassN">0 of 0</span></div>
+    <div class="tile"><span class="k">Re-rolls</span><span class="v" id="tRe">0</span><span class="n" id="tReN">0 per generation</span></div>
+    <div class="tile"><span class="k">Built from</span><span class="v" id="tRef" style="font-size:18px">—</span><span class="n" id="tRefN">no references logged</span></div>
+    <div class="tile"><span class="k">Top QA failure</span><span class="v" id="tFail" style="font-size:18px">—</span><span class="n" id="tFailN">no failures logged</span></div>
+  </section>
+  <section class="panel">
+    <h2>Generations</h2>
+    <div id="emptyGen" class="empty" hidden><strong>No generations logged for this filter.</strong><span>Each time Claude sends a prompt to an image or video model, it adds a row here with the inputs, the prompt and the references, then updates it with the QA result.</span></div>
+    <div class="tbl"><table id="genTbl" hidden>
+      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Built from</th><th>Model</th><th>Headline</th><th>QA</th><th class="num">Re-rolls</th><th>By</th></tr></thead>
+      <tbody id="genBody"></tbody>
+    </table></div>
+  </section>
+</main>
+<dialog id="detDlg" aria-labelledby="detTitle">
+  <div class="det">
+    <div class="head"><strong id="detTitle"></strong><button type="button" id="detClose">Close</button></div>
+    <div class="kv" id="detKv"></div>
+    <div><h3>Operator's setup and asks</h3><div id="detAsks"></div></div>
+    <div><h3>Prompt sent</h3><pre id="detPrompt"></pre></div>
+    <div><h3>References attached</h3><div id="detRefs"></div></div>
+    <div><h3>QA</h3><div id="detQa"></div></div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  // What each generation was built from (TEAM-LOGS.md §3, ref.type). Older records without it show as "Not logged".
+  const REF_TYPES = [["board_winner","Board winner"],["meta_winner","Meta winner (Winning Ads Reference)"],["style_board","Style board (15 styles)"],
+    ["hardcore_ref","Hardcore ref (H1–H11)"],["product_example","Product example"],["outside","Pinterest / outside ref"],["hook_engine","Hook Engine (video)"],["none","No reference"]];
+  const refOf = (g) => (g.ref && g.ref.type) || "unlogged";
+  const refName = (t) => t === "unlogged" ? "Not logged" : ((REF_TYPES.find(r => r[0] === t) || [t, t])[1]);
+  const PRODUCTS = [["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]];
+  const $ = (id) => document.getElementById(id);
+  const pname = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id || "—"])[1];
+  const state = { db: null, user: null, me: null, subs: new Map(), docs: new Map(), names: {}, loaded: false, open: null };
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) { if (v == null || v === false) continue; if (k === "class") el.className = v; else if (k.startsWith("on")) el.addEventListener(k.slice(2), v); else el.setAttribute(k, v); }
+    for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+    return el;
+  }
+  function setStatus(m, warn) { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); }
+  const styleOf = (g) => (g.setup && (g.setup.style || g.setup.mood)) || "";
+  const qaOf = (g) => (g.qa && typeof g.qa.pass === "boolean" ? (g.qa.pass ? "pass" : "fail") : "");
+  const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
+  // Person filter: one option per person who wrote rows (names from their claude.ai accounts), plus "Imported" where relevant.
+  function fillPeople(ids, who, extra) {
+    const s = $("fPerson"), cur = s.value;
+    const opts = ids.map(id => [id, who(id)]).sort((a, b) => a[1].localeCompare(b[1]));
+    s.replaceChildren(h("option", { value: "" }, "Everyone"), ...opts.map(([v, l]) => h("option", { value: v }, l)), ...(extra || []).map(([v, l]) => h("option", { value: v }, l)));
+    s.value = [...s.options].some(o => o.value === cur) ? cur : "";
+  }
+  function fillSelect(id, values, label) {
+    const s = $(id), cur = s.value;
+    s.replaceChildren(h("option", { value: "" }, label), ...values.map(v => h("option", { value: v }, v)));
+    s.value = values.includes(cur) ? cur : "";
+  }
+  function openDetail(g) {
+    $("detTitle").textContent = pname(g.product) + " · " + (g.ad_id || g.run_id || "generation");
+    const s = g.setup || {}, set = g.settings || {}, cost = g.cost || {};
+    const pairs = [["Model", g.model], ["Ratio", set.ratio], ["Resolution", set.resolution], ["Seed", set.seed], ["Audience", s.audience], ["Angle", s.angle],
+      ["Boldness", s.boldness], ["Mood / style", s.style || s.mood], ["Copy density", s.density], ["People", s.people], ["Hardcore", s.hardcore == null ? "" : (s.hardcore ? "yes" : "no")],
+      ["Built from", refName(refOf(g))], ["Reference id", g.ref && g.ref.id], ["Copy of ad", g.ref && g.ref.parent_ad_id], ["Changed", g.ref && g.ref.changed],
+      ["Reference / board", g.reference], ["Headline", g.copy && g.copy.headline], ["CTA", g.copy && g.copy.cta], ["Result file", g.result_file], ["Run", g.run_id],
+      ["Re-rolls", g.rerolls], ["Cost", [cost.creatify ? cost.creatify + " Creatify" : "", cost.higgsfield ? cost.higgsfield + " Higgsfield" : ""].filter(Boolean).join(" · ")]];
+    $("detKv").replaceChildren(...pairs.filter(p => p[1] != null && p[1] !== "").map(([k, v]) => h("div", null, h("span", null, k), String(v))));
+    const asks = g.asks || [];
+    $("detAsks").replaceChildren(asks.length ? h("ul", { class: "plain" }, ...asks.map(a => h("li", null, a))) : h("span", { class: "chip" }, "No free-text asks"));
+    $("detPrompt").textContent = g.prompt || "(not logged)";
+    const refs = g.refs || [];
+    $("detRefs").replaceChildren(refs.length ? h("ul", { class: "plain" }, ...refs.map(r => h("li", null, r))) : h("span", { class: "chip" }, "None logged"));
+    const qa = g.qa || {}, reasons = qa.reasons || [];
+    $("detQa").replaceChildren(h("span", { class: "qa " + (qaOf(g) || "pass") }, qaOf(g) ? (qa.pass ? "Passed" : "Failed") : "Not checked yet"),
+      reasons.length ? h("ul", { class: "plain" }, ...reasons.map(r => h("li", null, r))) : null);
+    $("detDlg").showModal();
+  }
+  async function render() {
+    const all = [...state.docs.values()].filter(d => d.type === "gen");
+    const ids = [...new Set(all.map(d => d.by).filter(Boolean))];
+    if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
+    fillSelect("fStyle", [...new Set(all.map(styleOf).filter(Boolean))].sort(), "Any style");
+    fillSelect("fModel", [...new Set(all.map(g => g.model).filter(Boolean))].sort(), "Any model");
+    fillPeople(ids, who);
+    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, per = $("fPerson").value, txt = $("fText").value.trim().toLowerCase();
+    const gs = all.filter(g => (!per || g.by === per) && (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) &&
+      (!txt || String(g.prompt || "").toLowerCase().includes(txt) || String((g.copy && g.copy.headline) || "").toLowerCase().includes(txt)))
+      .sort((a, b) => String(b.created_at || "").localeCompare(String(a.created_at || "")));
+    $("countChip").textContent = all.length + (all.length === 1 ? " generation" : " generations");
+    const checked = gs.filter(g => qaOf(g)), passed = checked.filter(g => qaOf(g) === "pass" && !(g.rerolls > 0)).length;
+    const re = gs.reduce((s, g) => s + (Number(g.rerolls) || 0), 0);
+    $("tGen").textContent = gs.length; $("tGenN").textContent = new Set(gs.map(g => g.run_id)).size + " runs";
+    $("tPass").textContent = checked.length ? Math.round(100 * passed / checked.length) + "%" : "0%"; $("tPassN").textContent = passed + " of " + checked.length;
+    $("tRe").textContent = re; $("tReN").textContent = (gs.length ? (re / gs.length).toFixed(2) : "0") + " per generation";
+    const fails = new Map(); for (const g of gs) for (const r of ((g.qa && !g.qa.pass && g.qa.reasons) || [])) fails.set(r, (fails.get(r) || 0) + 1);
+    const refs = new Map(); for (const g of gs) refs.set(refOf(g), (refs.get(refOf(g)) || 0) + 1);
+    const refList = [...refs.entries()].sort((a, b) => b[1] - a[1]);
+    $("tRef").textContent = refList.length ? refName(refList[0][0]) : "—";
+    $("tRefN").textContent = refList.length ? refList.map(([t, n]) => n + " " + refName(t).split(" (")[0].toLowerCase()).join(" · ") : "no references logged";
+    const top = [...fails.entries()].sort((a, b) => b[1] - a[1])[0];
+    $("tFail").textContent = top ? top[0] : "—"; $("tFailN").textContent = top ? top[1] + " times" : "no failures logged";
+    $("emptyGen").hidden = !(state.loaded && gs.length === 0); $("genTbl").hidden = gs.length === 0;
+    $("genBody").replaceChildren(...gs.slice(0, 400).map(g => h("tr", { tabindex: "0", onclick: () => openDetail(g), onkeydown: (e) => { if (e.key === "Enter") openDetail(g); } },
+      h("td", { class: "meta" }, String(g.created_at || "").slice(0, 10)), h("td", null, pname(g.product)), h("td", null, styleOf(g) || "—"), h("td", null, refName(refOf(g))), h("td", { class: "meta" }, g.model || "—"),
+      h("td", { class: "txt" }, (g.copy && g.copy.headline) || ""), h("td", null, qaOf(g) ? h("span", { class: "qa " + qaOf(g) }, qaOf(g) === "pass" ? "Pass" : "Fail") : "—"),
+      h("td", { class: "num" }, Number(g.rerolls) || 0), h("td", { class: "meta" }, who(g.by)))));
+  }
+  let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
+  function watch(uid) {
+    if (state.subs.has(uid)) return;
+    state.subs.set(uid, state.db.collection("data/users/" + uid).onSnapshot((snap) => {
+      for (const k of [...state.docs.keys()]) if (k.startsWith(uid + "/")) state.docs.delete(k);
+      for (const d of snap.docs) { const v = d.exists ? d.data() : null; if (v && v.type) state.docs.set(uid + "/" + d.id, Object.assign({ by: uid }, v)); }
+      queue();
+    }, () => { state.subs.delete(uid); }));
+  }
+  async function start() {
+    $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
+    $("fRef").append(...REF_TYPES.map(([v, l]) => h("option", { value: v }, l)), h("option", { value: "unlogged" }, "Not logged"));
+    for (const id of ["fProduct", "fStyle", "fModel", "fQa", "fRef", "fPerson"]) $(id).addEventListener("change", render);
+    $("fText").addEventListener("input", queue);
+    $("detClose").addEventListener("click", () => $("detDlg").close());
+    $("detDlg").addEventListener("click", (e) => { if (e.target === $("detDlg")) $("detDlg").close(); });
+    if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to see the log.", true); $("roleChip").textContent = "Offline"; return; }
+    const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);
+    state.db = db; state.user = user;
+    if (!db) { setStatus("Sign in to claude.ai and open the page again to see the log.", true); $("roleChip").textContent = "Signed out"; return; }
+    state.me = user ? await user.id() : null;
+    const owner = user ? await user.isOwner() : false, admin = user ? await user.canEdit() : false;
+    $("roleChip").textContent = owner ? "Owner" : admin ? "Editor" : "Team";
+    let settled = false;
+    const timer = setTimeout(() => { if (!settled) setStatus("The log can't be reached yet. It fills in when the connection answers.", true); }, 10000);
+    if (state.me) watch(state.me);
+    db.collection("members").onSnapshot((snap) => {
+      for (const d of snap.docs) if (d.exists) watch(d.id);
+      if (!settled) { settled = true; clearTimeout(timer); setStatus(""); }
+      state.loaded = true; queue();
+    }, (err) => { settled = true; clearTimeout(timer); setStatus("The log stopped updating (" + err.code + "). Reload the page to reconnect.", true); });
+    render();
+  }
+  start();
+})();
+</script>

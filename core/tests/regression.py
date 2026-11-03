@@ -217,6 +217,9 @@ def smoke(core, out):
            [PY, "-I", os.path.join(T, "finish_batch.py"), "--proof-plan", "10"], True, "ad 1: --proof trust")
     expect("finish_batch --proof-plan gives 4 trust / 3 count / 3 none for 10 ads",
            [PY, "-I", os.path.join(T, "finish_batch.py"), "--proof-plan", "10"], True, "ad 10: --proof count")
+    expect("pick_styles --skip draws the team's recent styles last (team logs, 2026-11-03)",
+           [PY, "-I", os.path.join(core, "scripts", "pick_styles.py"), "--product", "smoke-test", "--n", "1", "--audience", "women",
+            "--skip", "S01,S02,S03,S04,S05,S06,S07,S08,S09,S10,S11,S13,S14"], True, "slot 1: S15")
     expect("finish_batch lays no proof element (--proof none)",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "none.png"), "--product", "sermorelin-ghk",
             "--proof", "none"], True, "proof=none")

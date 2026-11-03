@@ -4,6 +4,8 @@ One shared claude.ai page that stores the team's ratings, reviews and feedback f
 teammate's Claude reads the same history before a batch and writes ratings after it. It replaces "each Mac keeps its own notes".
 
 - **Board:** https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M (title "Everlife Winners Board", owner Priestley)
+- **Sister pages (2026-11-03):** the Activity & Spend Log, the Copy Ledger and the Prompt & Outcome Log, written in the same
+  flow and linked by `ad_id` (= this board's entry id): `core/team-logs/TEAM-LOGS.md`.
 - **Tools:** Claude reads and writes it with the `ArtifactData` tool (load it with ToolSearch `select:ArtifactData` when it is
   only listed as deferred). Every call passes `url` = the board URL above.
 - **Precedence:** CLAUDE.md Creative Gates → the product skill and its bible → this file. The board stores recipes, ratings and

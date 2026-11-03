@@ -90,6 +90,9 @@ result for each string (the model still drops a CTA ~1 in 10). A missing or alte
 `finish_batch.py --ratio 9:16 --fit trusted` lays the logo and the safe-area footer. 5/5 worked where native 9:16 re-makes failed 5/5.
 
 ## 7. Feedback becomes rules the same day
+**Team logs (every batch, 2026-11-03):** before writing copy read the Copy Ledger (no repeated lines, the team's recent styles and
+proof split); log every generation to the Prompt & Outcome Log; after the batch log copy, styles, proofs and the run's spend.
+Never blocks a batch. How: `core/team-logs/TEAM-LOGS.md`. Learning report only when someone asks.
 Team feedback → `references/lessons.md` with the fail count → applied in the next batch → helper promoted into `core/tools/`.
 Nothing lives only in an output folder.
 
