@@ -24,6 +24,8 @@ picks moods or styles by hand, still **recommend** hardcore first for men's slot
 "💪 Hardcore shirtless" mood wherever the skill's mood question has room.
 
 ## A HARDCORE slot looks like this
+- **Visual references (read first):** `core/references/hardcore-men-refs/REFS.md`: H1 (stringer-tank lifter on a box,
+  dark gym, benefit-icon column) and H2 (shirtless 45–50 silver fox, low-key side light, check-list). Take the look, never the copy.
 - **Cast:** a man **40–45** (Wolverine / Spartan / BPC-157 may use their own 25–55 / 30–45 range), flawless condition: lean,
   dense, visibly muscular shoulders, chest, arms and back, veins, defined but natural (not a stage bodybuilder in posing trunks,
   not a cartoon). Tattoos welcome. Beard or stubble, cropped or silver hair, rugged and confident, real skin, sweat, chalk.
