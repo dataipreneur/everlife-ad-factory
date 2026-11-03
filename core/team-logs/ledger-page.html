@@ -62,6 +62,10 @@ td.num { text-align: right; font-family: var(--f-mono); font-variant-numeric: ta
 .empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; display: grid; gap: 6px; }
 .empty strong { color: var(--ink); }
 a { color: var(--accent); }
+.flag { display: inline-block; font-family: var(--f-mono); font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; background: #fbefd2; color: #7a4f00; white-space: nowrap; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .flag { background: #3a2c0c; color: #f0c060; } }
+:root[data-theme="dark"] .flag { background: #3a2c0c; color: #f0c060; }
+ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -77,6 +81,7 @@ a { color: var(--accent); }
     <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
     <label class="inline" for="fPerson">Person <select id="fPerson"><option value="">Everyone</option></select></label>
     <label class="inline" for="fStatus">Status <select id="fStatus"><option value="">Any</option><option value="draft">Draft</option><option value="approved">Approved</option><option value="live">Live</option></select></label>
+    <label class="inline" for="fDq">Data quality <select id="fDq"><option value="">All rows</option><option value="issues">Needs attention</option><option value="backfill">Backfilled</option></select></label>
     <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in any line"></label>
   </div>
 </div>
@@ -90,7 +95,7 @@ a { color: var(--accent); }
     <h2>Copy used</h2>
     <div id="emptyCopy" class="empty" hidden><strong>No copy logged for this filter.</strong><span>After each batch, the operator's Claude adds one row per ad: the headline, the benefit and VO lines, the end headline and the CTA, with where each came from.</span></div>
     <div class="tbl"><table id="copyTbl" hidden>
-      <thead><tr><th>Date</th><th>Product</th><th>Ad</th><th>Lines used</th><th>Status</th><th>By</th></tr></thead>
+      <thead><tr><th>Date</th><th>Product</th><th>Ad</th><th>Lines used</th><th>Status</th><th>By</th><th>Check</th></tr></thead>
       <tbody id="copyBody"></tbody>
     </table></div>
   </section>
@@ -99,7 +104,19 @@ a { color: var(--accent); }
 <script>
 (() => {
   const PRODUCTS = [["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]];
-  const KINDS = { headline: "Headline", hook: "Hook", vo: "VO / benefit", benefit: "Benefit", end_head: "End headline", cta: "CTA", offer: "Offer" };
+  const KINDS = { headline: "Headline", hook: "Hook", vo: "VO / benefit", caption: "Caption", benefit: "Benefit", end_head: "End headline", cta: "CTA", offer: "Offer" };
+  // Lines the global Hard NOs ban outright (teamlog.py checks the same, plus each product's pre-screen, before a record is sent).
+  const BANNED = [[/\bget started now\b/i, "\"Get Started Now\" is banned (bible 2026-11-03)"], [/\b(i|i'm|i've|me|my|mine)\b/i, "First person"],
+    [/\bneedles?\b|needle-free/i, "Mentions needles"], [/\bGH\b/, "\"GH\" instead of growth hormone"], [/ghk-cu|copper peptide/i, "GHK-Cu / copper peptide"],
+    [/\b(melt\w*|burn\w*|ripped|shred\w*)\b/i, "melt / burn / ripped / shred"], [/arous/i, "\"arousal\""], [/trustpilot rating/i, "\"Trustpilot rating\""]];
+  const lineIssue = (l) => { const t = String(l.text || "").replace(/’/g, "'"); const b = BANNED.find(([re]) => re.test(t)); return b ? b[1] : (String(l.source || "").startsWith("❌") ? "Marked ❌" : ""); };
+  function issues(d) {
+    const out = [];
+    for (const l of d.lines || []) { const x = lineIssue(l); if (x) out.push(x + ": \"" + (l.text || "") + "\""); }
+    if (!d.imported && !(d.lines || []).some(l => l.kind === "cta" || l.kind === "offer")) out.push("No CTA or offer line");
+    if (d.backfill) out.push("Backfilled: logged after the fact");
+    return out;
+  }
   const $ = (id) => document.getElementById(id);
   const pname = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id || "—"])[1];
   const state = { db: null, user: null, me: null, subs: new Map(), docs: new Map(), names: {}, loaded: false };
@@ -121,13 +138,13 @@ a { color: var(--accent); }
     s.value = [...s.options].some(o => o.value === cur) ? cur : "";
   }
   async function render() {
-    const prod = $("fProduct").value, st = $("fStatus").value, per = $("fPerson").value, txt = $("fText").value.trim().toLowerCase();
+    const prod = $("fProduct").value, st = $("fStatus").value, per = $("fPerson").value, dq = $("fDq").value, txt = $("fText").value.trim().toLowerCase();
     const ids = [...new Set([...state.docs.values()].map(d => d.by).filter(Boolean))];
     if (state.user && ids.some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles(ids)); } catch (_) {} }
     const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
     fillPeople(ids.filter(id => of("copy").some(d => d.by === id && !d.imported)), who, of("copy").some(d => d.imported) ? [["__imported", "Imported (old copy logs)"]] : []);
     const byPerson = (d) => !per || (per === "__imported" ? !!d.imported : (d.by === per && !d.imported));
-    const copy = of("copy").filter(d => byPerson(d) && (!prod || d.product === prod) && (!st || d.status === st) &&
+    const copy = of("copy").filter(d => byPerson(d) && (!prod || d.product === prod) && (!st || d.status === st) && (!dq || (dq === "backfill" ? !!d.backfill : issues(d).length > 0)) &&
       (!txt || (d.lines || []).some(l => String(l.text || "").toLowerCase().includes(txt)) || String(d.ad || "").toLowerCase().includes(txt)))
       .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
     $("countChip").textContent = of("copy").length + " ads";
@@ -135,14 +152,15 @@ a { color: var(--accent); }
     $("copyBody").replaceChildren(...copy.slice(0, 400).map(d => h("tr", null,
       h("td", { class: "meta" }, String(d.date || "").slice(0, 10)), h("td", null, pname(d.product)),
       h("td", { class: "line" }, d.ad || d.ad_id || "", d.ad_id && d.ad ? h("div", { class: "kind" }, d.ad_id) : null),
-      h("td", { class: "line" }, h("ul", { class: "lines" }, ...(d.lines || []).map(l => h("li", null, h("span", { class: "kind" }, (KINDS[l.kind] || l.kind || "line") + (l.source ? " · " + l.source : "") + " "), l.text || "")))),
-      h("td", { class: "meta" }, d.status || "draft"), h("td", { class: "meta" }, d.imported ? "Imported" : who(d.by)))));
+      h("td", { class: "line" }, h("ul", { class: "lines" }, ...(d.lines || []).map(l => h("li", null, h("span", { class: "kind" }, (KINDS[l.kind] || l.kind || "line") + (l.source ? " · " + l.source : "") + " "), l.text || "", lineIssue(l) ? h("span", { class: "flag", title: lineIssue(l) }, " ⚠ " + lineIssue(l)) : null)))),
+      h("td", { class: "meta" }, d.status || "draft"), h("td", { class: "meta" }, d.imported ? "Imported" : who(d.by)),
+      h("td", null, issues(d).length ? h("span", { class: "flag", title: issues(d).join("\n") }, "⚠ " + issues(d).length) : "✓"))));
     // proof split (team-wide, filtered by product)
     const proofs = of("proof").filter(d => !prod || d.product === prod);
     const tot = proofs.length, cnt = (k) => proofs.filter(d => d.proof === k).length;
-    const rows = [["Trust row", cnt("trust")], ["Badge + count", cnt("count")], ["None", cnt("none")]];
-    $("bProof").replaceChildren(...(tot ? rows.map(([l, v]) => h("div", { class: "brow", title: l + ": " + v + " of " + tot },
-      h("span", null, l), h("span", { class: "track" }, h("span", { class: "fill", style: "width:" + (100 * v / tot).toFixed(1) + "%" })), h("span", { class: "val" }, Math.round(100 * v / tot) + "% · " + v)))
+    const rows = [["Trust row", cnt("trust"), 42], ["Badge + count", cnt("count"), 28], ["None", cnt("none"), 30]];
+    $("bProof").replaceChildren(...(tot ? rows.map(([l, v, tgt]) => h("div", { class: "brow", title: l + ": " + v + " of " + tot + " (target " + tgt + "%)" },
+      h("span", null, l), h("span", { class: "track" }, h("span", { class: "fill", style: "width:" + (100 * v / tot).toFixed(1) + "%" })), h("span", { class: "val" }, Math.round(100 * v / tot) + "% · " + v + (Math.abs(100 * v / tot - tgt) > 10 && tot >= 5 ? " ⚠ target " + tgt + "%" : ""))))
       : [h("p", { class: "hint" }, "No finished creatives logged yet.")]));
     // styles: last two batches per product (or for the chosen product)
     const styles = of("style").filter(d => !prod || d.product === prod).sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
@@ -161,7 +179,7 @@ a { color: var(--accent); }
   }
   async function start() {
     $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
-    for (const id of ["fProduct", "fStatus", "fPerson"]) $(id).addEventListener("change", render);
+    for (const id of ["fProduct", "fStatus", "fPerson", "fDq"]) $(id).addEventListener("change", render);
     $("fText").addEventListener("input", queue);
     if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to see the ledger.", true); $("roleChip").textContent = "Offline"; return; }
     const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);

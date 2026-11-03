@@ -2,6 +2,24 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Team logs: data quality built in (branch `teamlogs-quality`)
+Priestley asked to fix the logging system after Mitansh's first (backfilled) records showed summaries instead of prompts, empty
+refs, date-only times, re-take counts that didn't match, a banned CTA labelled "bible ✅", a missing CTA line and caption-free
+videos ("Lets do it"). Also: "If the user reprompts or modifies the prompt, are those details captured?" Originals:
+`_originals/2026-11-03/teamlogs-quality/`.
+- New `core/scripts/teamlog.py` (no network): `gen` saves the exact prompt to `<job>/prompts/` and writes the record; `qa`;
+  `note` (the operator's feedback on a take); `copy` builds the copy record from copy.json / premium.json / phrases.json and labels
+  every line from the global Hard NOs + the product pre-screen (refuses a banned line); `proof`; `run` (made / finished / rerolled /
+  spent from the gens; `--captions yes|no`); `check`; `close` (✅ before SESSION.md). Re-takes: `--retake-of` + `--ask`;
+  `--edited-by-user` for a prompt the operator rewrote.
+- Schema: run.captions; gen.prompt_file, ISO times, retake_of, prompt_by, feedback; ref type `own_ad`; copy kind `caption`, `media`;
+  source labels set by the script. TEAM-LOGS §2, §3, new §6.
+- Pages: a Data-quality filter and a ⚠ Check column on all three; the Prompt log gets a "Needs attention" tile and shows feedback,
+  re-take links and data gaps per generation; the Copy Ledger flags banned lines and shows the proof split against 42/28/30; the
+  Activity log shows Captions yes/no (and drops the paused board column).
+- Every skill's logging lines (image-batch, finishing, video-prompting, animated-still) and the three video recipes now say to use
+  the script and to close before SESSION.md. Smoke: two new teamlog checks.
+
 ## 2026-11-03 — Team logs reach every video route and Restora-Z (branch `logs-video-routes`)
 Priestley asked "are you sure our new logs work?"; a check found no real run logged yet, Restora-Z without log lines and four
 self-contained video recipes that never mention the logs. Priestley: "do a first please" (incl. Restora-Z).

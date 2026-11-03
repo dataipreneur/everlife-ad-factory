@@ -63,6 +63,10 @@ td.num { text-align: right; font-family: var(--f-mono); font-variant-numeric: ta
 td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; min-width: 12em; }
 .empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; display: grid; gap: 6px; }
 .empty strong { color: var(--ink); }
+.flag { display: inline-block; font-family: var(--f-mono); font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; background: #fbefd2; color: #7a4f00; white-space: nowrap; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .flag { background: #3a2c0c; color: #f0c060; } }
+:root[data-theme="dark"] .flag { background: #3a2c0c; color: #f0c060; }
+ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -78,6 +82,7 @@ td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); over
     <label class="inline" for="fPeriod">Period <select id="fPeriod"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option><option value="0">All time</option></select></label>
     <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
     <label class="inline" for="fPerson" id="personWrap">Person <select id="fPerson"><option value="">Everyone</option></select></label>
+    <label class="inline" for="fDq">Data quality <select id="fDq"><option value="">All rows</option><option value="issues">Needs attention</option><option value="backfill">Backfilled</option></select></label>
   </div>
 </div>
 <div class="wrap"><div class="status" id="status" role="status">Loading runs…</div></div>
@@ -98,7 +103,7 @@ td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); over
     <h2>Runs</h2>
     <div id="emptyRuns" class="empty" hidden><strong>No runs yet.</strong><span>When an operator finishes a batch, their Claude adds a row here: product, format, how many ads, credits spent and the output folder.</span></div>
     <div class="tbl"><table id="runTbl" hidden>
-      <thead><tr><th>Date</th><th>Person</th><th>Product</th><th>Format</th><th class="num">Made</th><th class="num">Finished</th><th class="num">Re-rolled</th><th class="num">Creatify</th><th class="num">Higgsfield</th><th>Board</th><th>Output folder</th></tr></thead>
+      <thead><tr><th>Date</th><th>Person</th><th>Product</th><th>Format</th><th class="num">Made</th><th class="num">Finished</th><th class="num">Re-rolled</th><th class="num">Creatify</th><th class="num">Higgsfield</th><th>Captions</th><th>Check</th><th>Output folder</th></tr></thead>
       <tbody id="runBody"></tbody>
     </table></div>
   </section>
@@ -121,12 +126,24 @@ td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); over
     return el;
   }
   function setStatus(m, warn) { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); }
+  // Data gaps and rule breaks a run record shows (TEAM-LOGS.md §6).
+  const isVideo = (r) => r.format === "video" || r.format === "avatar";
+  const isBackfill = (r) => !!r.backfill || /backfilled/i.test(r.notes || "");
+  function issues(r) {
+    const out = [];
+    if (isVideo(r) && r.captions === false) out.push("No captions: the bible requires captions on every video");
+    if (isVideo(r) && r.captions == null) out.push("Captions not recorded");
+    if (isBackfill(r)) out.push("Backfilled: logged after the fact");
+    for (const k of ["creatify", "higgsfield"]) { const c = (r.credits || {})[k] || {}; if (num(c.spent) > 0 && c.before == null) out.push(k[0].toUpperCase() + k.slice(1) + " balances not recorded (spend = sum of charges)"); }
+    if (r.started_at && !/T\d\d:\d\d/.test(r.started_at)) out.push("Date only, no time");
+    return out;
+  }
   function weekOf(iso) { const d = new Date(iso); if (isNaN(d)) return ""; const day = (d.getUTCDay() + 6) % 7; d.setUTCDate(d.getUTCDate() - day); return d.toISOString().slice(0, 10); }
 
   function filtered() {
-    const days = Number($("fPeriod").value), prod = $("fProduct").value, who = $("fPerson").value;
+    const days = Number($("fPeriod").value), prod = $("fProduct").value, who = $("fPerson").value, dq = $("fDq").value;
     const since = days ? Date.now() - days * 864e5 : 0;
-    return [...state.runs.values()].filter(r => (!since || Date.parse(r.ended_at || r.started_at || 0) >= since) && (!prod || r.product === prod) && (!who || r.by === who))
+    return [...state.runs.values()].filter(r => (!since || Date.parse(r.ended_at || r.started_at || 0) >= since) && (!prod || r.product === prod) && (!who || r.by === who) && (!dq || (dq === "backfill" ? isBackfill(r) : issues(r).length > 0)))
       .sort((a, b) => String(b.ended_at || b.started_at || "").localeCompare(String(a.ended_at || a.started_at || "")));
   }
   function bars(boxId, rows) {
@@ -159,7 +176,9 @@ td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); over
       h("td", null, String(r.ended_at || r.started_at || "").slice(0, 10)), h("td", null, who(r.by)), h("td", null, pname(r.product)),
       h("td", null, FORMATS[r.format] || r.format || "—"), h("td", { class: "num" }, num(r.made)), h("td", { class: "num" }, num(r.finished)),
       h("td", { class: "num" }, num(r.rerolled)), h("td", { class: "num" }, fmt(spent(r, "creatify"))), h("td", { class: "num" }, fmt(spent(r, "higgsfield"))),
-      h("td", null, r.on_board ? "Yes" : "No"), h("td", { class: "path" }, r.out_dir || ""))));
+      h("td", null, !isVideo(r) ? "—" : r.captions === true ? "Yes" : r.captions === false ? h("span", { class: "flag" }, "No") : "?"),
+      h("td", null, issues(r).length ? h("span", { class: "flag", title: issues(r).join("\n") }, "⚠ " + issues(r).length) : "✓"),
+      h("td", { class: "path" }, r.out_dir || ""))));
   }
   let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
 
@@ -174,7 +193,7 @@ td.path { font-family: var(--f-mono); font-size: 12px; color: var(--muted); over
 
   async function start() {
     $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
-    for (const id of ["fPeriod", "fProduct", "fPerson"]) $(id).addEventListener("change", render);
+    for (const id of ["fPeriod", "fProduct", "fPerson", "fDq"]) $(id).addEventListener("change", render);
     if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to see the runs.", true); $("roleChip").textContent = "Offline"; return; }
     const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);
     state.db = db; state.user = user;

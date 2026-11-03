@@ -44,8 +44,9 @@ select:focus-visible, input:focus-visible, button:focus-visible { outline: 2px s
 .status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
 .status.warn { color: var(--fail); }
 main { display: grid; gap: 18px; padding-block: 8px 40px; }
-.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
-@media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 900px) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0; }
 .tile .k { font-size: 12.5px; color: var(--muted); }
 .tile .v { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 28px; font-variant-numeric: tabular-nums; line-height: 1.1; }
@@ -69,6 +70,10 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
 .kv div span { display: block; font-size: 12px; color: var(--muted); }
 pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--f-mono); font-size: 12.5px; background: var(--sunken); border-radius: 6px; padding: 10px 12px; max-height: 40vh; overflow-y: auto; }
 ul.plain { margin: 0; padding-left: 18px; }
+.flag { display: inline-block; font-family: var(--f-mono); font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; background: #fbefd2; color: #7a4f00; white-space: nowrap; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .flag { background: #3a2c0c; color: #f0c060; } }
+:root[data-theme="dark"] .flag { background: #3a2c0c; color: #f0c060; }
+ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -87,6 +92,7 @@ ul.plain { margin: 0; padding-left: 18px; }
     <label class="inline" for="fQa">QA <select id="fQa"><option value="">Pass or fail</option><option value="pass">Passed</option><option value="fail">Failed</option></select></label>
     <label class="inline" for="fPerson">Person <select id="fPerson"><option value="">Everyone</option></select></label>
     <label class="inline" for="fRef">Built from <select id="fRef"><option value="">Any reference</option></select></label>
+    <label class="inline" for="fDq">Data quality <select id="fDq"><option value="">All rows</option><option value="issues">Needs attention</option><option value="backfill">Backfilled</option></select></label>
     <label class="inline" for="fText">Find <input type="search" id="fText" placeholder="a word in the prompt"></label>
   </div>
 </div>
@@ -98,12 +104,13 @@ ul.plain { margin: 0; padding-left: 18px; }
     <div class="tile"><span class="k">Re-rolls</span><span class="v" id="tRe">0</span><span class="n" id="tReN">0 per generation</span></div>
     <div class="tile"><span class="k">Built from</span><span class="v" id="tRef" style="font-size:18px">—</span><span class="n" id="tRefN">no references logged</span></div>
     <div class="tile"><span class="k">Top QA failure</span><span class="v" id="tFail" style="font-size:18px">—</span><span class="n" id="tFailN">no failures logged</span></div>
+    <div class="tile"><span class="k">Needs attention</span><span class="v" id="tDq">0</span><span class="n" id="tDqN">rows with data gaps</span></div>
   </section>
   <section class="panel">
     <h2>Generations</h2>
     <div id="emptyGen" class="empty" hidden><strong>No generations logged for this filter.</strong><span>Each time Claude sends a prompt to an image or video model, it adds a row here with the inputs, the prompt and the references, then updates it with the QA result.</span></div>
     <div class="tbl"><table id="genTbl" hidden>
-      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Built from</th><th>Model</th><th>Headline</th><th>QA</th><th class="num">Re-rolls</th><th>By</th></tr></thead>
+      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Built from</th><th>Model</th><th>Headline</th><th>QA</th><th class="num">Re-rolls</th><th>By</th><th>Check</th></tr></thead>
       <tbody id="genBody"></tbody>
     </table></div>
   </section>
@@ -116,13 +123,15 @@ ul.plain { margin: 0; padding-left: 18px; }
     <div><h3>Prompt sent</h3><pre id="detPrompt"></pre></div>
     <div><h3>References attached</h3><div id="detRefs"></div></div>
     <div><h3>QA</h3><div id="detQa"></div></div>
+    <div><h3>What the operator said after seeing it</h3><div id="detFb"></div></div>
+    <div><h3>Data quality</h3><div id="detDq"></div></div>
   </div>
 </dialog>
 
 <script>
 (() => {
   // What each generation was built from (TEAM-LOGS.md §3, ref.type). Older records without it show as "Not logged".
-  const REF_TYPES = [["board_winner","Board winner"],["meta_winner","Meta winner (Winning Ads Reference)"],["style_board","Style board (15 styles)"],
+  const REF_TYPES = [["board_winner","Board winner"],["meta_winner","Meta winner (Winning Ads Reference)"],["own_ad","Earlier Everlife ad"],["style_board","Style board (15 styles)"],
     ["hardcore_ref","Hardcore ref (H1–H11)"],["product_example","Product example"],["outside","Pinterest / outside ref"],["hook_engine","Hook Engine (video)"],["none","No reference"]];
   const refOf = (g) => (g.ref && g.ref.type) || "unlogged";
   const refName = (t) => t === "unlogged" ? "Not logged" : ((REF_TYPES.find(r => r[0] === t) || [t, t])[1]);
@@ -140,6 +149,18 @@ ul.plain { margin: 0; padding-left: 18px; }
   const styleOf = (g) => (g.setup && (g.setup.style || g.setup.mood)) || "";
   const qaOf = (g) => (g.qa && typeof g.qa.pass === "boolean" ? (g.qa.pass ? "pass" : "fail") : "");
   const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
+  // Data gaps the logging rules forbid (TEAM-LOGS.md §6); the same checks teamlog.py makes before a record is sent.
+  function issues(g) {
+    const out = [], p = String(g.prompt || "");
+    if (g.backfill) out.push("Backfilled: logged after the fact");
+    if (!g.prompt_file || /^BACKFILL|not saved/.test(p)) out.push("Prompt is a summary, not the exact text sent");
+    if (!(g.refs || []).length && !/lyria|music|voice|tts|animate_code/i.test(g.model || "")) out.push("No reference files listed");
+    if (!qaOf(g)) out.push("QA not recorded");
+    if (g.created_at && !/T\d\d:\d\d/.test(g.created_at)) out.push("Date only, no time");
+    if (refOf(g) === "outside" && /everlife|sermorelin|restora|wolverine|spartan|base\d+|_video_|_static_/i.test((g.ref && g.ref.id) || "")) out.push("An Everlife ad marked as an outside reference");
+    if (g.retake_of && !(g.asks || []).length) out.push("Re-take without the operator's words");
+    return out;
+  }
   // Person filter: one option per person who wrote rows (names from their claude.ai accounts), plus "Imported" where relevant.
   function fillPeople(ids, who, extra) {
     const s = $("fPerson"), cur = s.value;
@@ -155,7 +176,7 @@ ul.plain { margin: 0; padding-left: 18px; }
   function openDetail(g) {
     $("detTitle").textContent = pname(g.product) + " · " + (g.ad_id || g.run_id || "generation");
     const s = g.setup || {}, set = g.settings || {}, cost = g.cost || {};
-    const pairs = [["Model", g.model], ["Ratio", set.ratio], ["Resolution", set.resolution], ["Seed", set.seed], ["Audience", s.audience], ["Angle", s.angle],
+    const pairs = [["Model", g.model], ["Prompt file", g.prompt_file], ["Prompt written by", g.prompt_by === "operator" ? "the operator" : g.prompt_by ? "Claude" : ""], ["Re-take of", g.retake_of], ["Ratio", set.ratio], ["Resolution", set.resolution], ["Seed", set.seed], ["Audience", s.audience], ["Angle", s.angle],
       ["Boldness", s.boldness], ["Mood / style", s.style || s.mood], ["Copy density", s.density], ["People", s.people], ["Hardcore", s.hardcore == null ? "" : (s.hardcore ? "yes" : "no")],
       ["Built from", refName(refOf(g))], ["Reference id", g.ref && g.ref.id], ["Copy of ad", g.ref && g.ref.parent_ad_id], ["Changed", g.ref && g.ref.changed],
       ["Reference / board", g.reference], ["Headline", g.copy && g.copy.headline], ["CTA", g.copy && g.copy.cta], ["Result file", g.result_file], ["Run", g.run_id],
@@ -169,6 +190,10 @@ ul.plain { margin: 0; padding-left: 18px; }
     const qa = g.qa || {}, reasons = qa.reasons || [];
     $("detQa").replaceChildren(h("span", { class: "qa " + (qaOf(g) || "pass") }, qaOf(g) ? (qa.pass ? "Passed" : "Failed") : "Not checked yet"),
       reasons.length ? h("ul", { class: "plain" }, ...reasons.map(r => h("li", null, r))) : null);
+    const fb = g.feedback || [];
+    $("detFb").replaceChildren(fb.length ? h("ul", { class: "plain" }, ...fb.map(f => h("li", null, (f.at ? String(f.at).slice(0, 16).replace("T", " ") + " · " : "") + (f.text || "")))) : h("span", { class: "chip" }, "Nothing logged"));
+    const dq = issues(g);
+    $("detDq").replaceChildren(dq.length ? h("ul", { class: "issues" }, ...dq.map(x => h("li", null, x))) : h("span", { class: "chip" }, "Complete"));
     $("detDlg").showModal();
   }
   async function render() {
@@ -178,8 +203,8 @@ ul.plain { margin: 0; padding-left: 18px; }
     fillSelect("fStyle", [...new Set(all.map(styleOf).filter(Boolean))].sort(), "Any style");
     fillSelect("fModel", [...new Set(all.map(g => g.model).filter(Boolean))].sort(), "Any model");
     fillPeople(ids, who);
-    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, per = $("fPerson").value, txt = $("fText").value.trim().toLowerCase();
-    const gs = all.filter(g => (!per || g.by === per) && (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) &&
+    const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, per = $("fPerson").value, dq = $("fDq").value, txt = $("fText").value.trim().toLowerCase();
+    const gs = all.filter(g => (!per || g.by === per) && (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) && (!dq || (dq === "backfill" ? !!g.backfill : issues(g).length > 0)) &&
       (!txt || String(g.prompt || "").toLowerCase().includes(txt) || String((g.copy && g.copy.headline) || "").toLowerCase().includes(txt)))
       .sort((a, b) => String(b.created_at || "").localeCompare(String(a.created_at || "")));
     $("countChip").textContent = all.length + (all.length === 1 ? " generation" : " generations");
@@ -195,11 +220,14 @@ ul.plain { margin: 0; padding-left: 18px; }
     $("tRefN").textContent = refList.length ? refList.map(([t, n]) => n + " " + refName(t).split(" (")[0].toLowerCase()).join(" · ") : "no references logged";
     const top = [...fails.entries()].sort((a, b) => b[1] - a[1])[0];
     $("tFail").textContent = top ? top[0] : "—"; $("tFailN").textContent = top ? top[1] + " times" : "no failures logged";
+    const bad = gs.filter(g => issues(g).length).length;
+    $("tDq").textContent = bad; $("tDqN").textContent = gs.length ? Math.round(100 * bad / gs.length) + "% of rows · " + gs.filter(g => g.backfill).length + " backfilled" : "rows with data gaps";
     $("emptyGen").hidden = !(state.loaded && gs.length === 0); $("genTbl").hidden = gs.length === 0;
     $("genBody").replaceChildren(...gs.slice(0, 400).map(g => h("tr", { tabindex: "0", onclick: () => openDetail(g), onkeydown: (e) => { if (e.key === "Enter") openDetail(g); } },
       h("td", { class: "meta" }, String(g.created_at || "").slice(0, 10)), h("td", null, pname(g.product)), h("td", null, styleOf(g) || "—"), h("td", null, refName(refOf(g))), h("td", { class: "meta" }, g.model || "—"),
       h("td", { class: "txt" }, (g.copy && g.copy.headline) || ""), h("td", null, qaOf(g) ? h("span", { class: "qa " + qaOf(g) }, qaOf(g) === "pass" ? "Pass" : "Fail") : "—"),
-      h("td", { class: "num" }, Number(g.rerolls) || 0), h("td", { class: "meta" }, who(g.by)))));
+      h("td", { class: "num" }, Number(g.rerolls) || 0), h("td", { class: "meta" }, who(g.by)),
+      h("td", null, issues(g).length ? h("span", { class: "flag", title: issues(g).join("\n") }, "⚠ " + issues(g).length) : "✓"))));
   }
   let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
   function watch(uid) {
@@ -213,7 +241,7 @@ ul.plain { margin: 0; padding-left: 18px; }
   async function start() {
     $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
     $("fRef").append(...REF_TYPES.map(([v, l]) => h("option", { value: v }, l)), h("option", { value: "unlogged" }, "Not logged"));
-    for (const id of ["fProduct", "fStyle", "fModel", "fQa", "fRef", "fPerson"]) $(id).addEventListener("change", render);
+    for (const id of ["fProduct", "fStyle", "fModel", "fQa", "fRef", "fPerson", "fDq"]) $(id).addEventListener("change", render);
     $("fText").addEventListener("input", queue);
     $("detClose").addEventListener("click", () => $("detDlg").close());
     $("detDlg").addEventListener("click", (e) => { if (e.target === $("detDlg")) $("detDlg").close(); });

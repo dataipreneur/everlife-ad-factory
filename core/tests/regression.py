@@ -220,6 +220,16 @@ def smoke(core, out):
     expect("pick_styles --skip draws the team's recent styles last (team logs, 2026-11-03)",
            [PY, "-I", os.path.join(core, "scripts", "pick_styles.py"), "--product", "smoke-test", "--n", "1", "--audience", "women",
             "--skip", "S01,S02,S03,S04,S05,S06,S07,S08,S09,S10,S11,S13,S14"], True, "slot 1: S15")
+    tl = os.path.join(out, "teamlog_job"); os.makedirs(tl)   # team-log records are checked before they are sent (2026-11-03)
+    json.dump({"product": "wolverine", "head": ["HEAVY IRON."], "cta": "GET STARTED NOW"}, open(os.path.join(tl, "copy.json"), "w"))
+    expect("teamlog copy refuses a banned line (\"Get Started Now\")",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "R", "--ad-id", "R-1",
+            "--product", "wolverine", "--kind", "video"], False, "Get Started Now")
+    json.dump({"type": "gen", "run_id": "R", "ad_id": "R-1", "product": "wolverine", "created_at": "2026-11-03T21:00:00-05:00",
+               "model": "bytedance/seedance-2.5/reference-to-video", "prompt": "exact text", "ref": {"type": "none"},
+               "refs": ["start.png"], "qa": {"pass": True}, "cost": {"creatify": 34.25}}, open(os.path.join(tl, "gen.json"), "w"))
+    expect("teamlog check refuses a gen record without its saved prompt file",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "check", os.path.join(tl, "gen.json")], False, "prompt_file")
     expect("finish_batch lays no proof element (--proof none)",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "none.png"), "--product", "sermorelin-ghk",
             "--proof", "none"], True, "proof=none")

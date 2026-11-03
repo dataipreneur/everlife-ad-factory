@@ -84,7 +84,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 F10, F11, F12). Weight towards F2, F4, F11, F6.
 
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
-**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block.
+**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block. Build every record with `core/scripts/teamlog.py` (it saves the exact prompt and checks the record; TEAM-LOGS §6) and send the file it prints. `teamlog.py close <job>` must print ✅ before SESSION.md.
 
 **Winners Board (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: do not read the board, use no board winner or rating; see `WINNERS-BOARD.md` top) (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
 entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
