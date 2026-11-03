@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Team logs: automatic capture hooks (branch `teamlog-hooks`)
+Priestley: "Are you sure claude will log every time into those artifacts?" → "yes build it, push and merge".
+- New `core/hooks/teamlog_hook.py`: `capture` (PostToolUse) writes every paid Creatify / Higgsfield generation call with its exact
+  input to `~/Everlife-Creative/teamlog-auto.jsonl`; `stop` (Stop) sends Claude back once when the session's paid calls outnumber
+  the `teamlog.py gen` records, then lets it finish with a warning.
+- `teamlog.py gen` also appends to `~/Everlife-Creative/teamlog-index.jsonl` (what the Stop hook compares against).
+- `install.sh` merges both hooks into `~/.claude/settings.json` (backup first; other hooks kept; re-run replaces only ours).
+- Tested: 7 simulated calls (3 paid captured, 4 ignored), stop blocks then releases, other sessions untouched, install twice on a
+  fake home with an existing hook (kept, no duplicates). TEAM-LOGS §7.
+
 ## 2026-11-03 — Bible sync to 1793743706-38c1: peptide stacks list every peptide (branch `bible-sync-38c1`)
 Justin's update: every ad for a peptide stack shows each peptide (Spartan BPC-157 / TB-500 / KPV, Wolverine BPC-157 / TB-500, Klow
 BPC-157 / GHK-Cu / KPV / TB-500, Glow [PLACEHOLDER]); Spartan and Klow pages: name + peptide list on every design. Priestley: "yes sync it,

@@ -260,7 +260,13 @@ def cmd_gen(a):
            "qa": {"pass": None, "reasons": []}, "rerolls": 0, "retake_of": a.retake_of or "",
            "prompt_by": "operator" if a.edited_by_user else "claude", "feedback": [],
            "cost": {"creatify": a.cost_creatify, "higgsfield": a.cost_higgsfield}}
-    return write(a.job, f"gen-{a.run_id}-{n:02d}", rec)
+    rc = write(a.job, f"gen-{a.run_id}-{n:02d}", rec)
+    # The Stop hook (core/hooks/teamlog_hook.py) compares this index with the paid calls it captured in the session.
+    idx = os.path.expanduser(os.environ.get("EVERLIFE_CREATIVE", "~/Everlife-Creative"))
+    os.makedirs(idx, exist_ok=True)
+    with open(os.path.join(idx, "teamlog-index.jsonl"), "a", encoding="utf-8") as f:
+        f.write(json.dumps({"at": now(), "doc_id": f"gen-{a.run_id}-{n:02d}", "job": os.path.abspath(a.job), "model": a.model}) + "\n")
+    return rc
 
 
 def cmd_note(a):

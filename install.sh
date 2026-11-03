@@ -101,6 +101,35 @@ json.dump(d, open(p, "w"), indent=2)
 print(f"✅ {len(new)} read-only commands added to Claude Code's allow list")
 EOF
 
+# Team-log hooks (TEAM-LOGS.md §7): every paid Creatify / Higgsfield generation is captured automatically, and Claude is
+# sent back once to log it before finishing. Re-running replaces our two entries (matched by script path), never others.
+python3 - "$HOME/.claude/settings.json" "$STAMP" "$REPO/core/hooks/teamlog_hook.py" <<'EOF'
+import json, os, shutil, sys
+p, stamp, script = sys.argv[1:]
+d = {}
+if os.path.exists(p):
+    try:
+        d = json.load(open(p))
+    except ValueError:
+        print(f"… {p} is not valid JSON: team-log hooks not added"); sys.exit(0)
+ours = lambda e: any("core/hooks/teamlog_hook.py" in h.get("command", "") for h in e.get("hooks", []))
+want = {
+    "PostToolUse": {"matcher": "mcp__.*|Bash", "hooks": [{"type": "command", "command": f'python3 "{script}" capture', "timeout": 10}]},
+    "Stop": {"hooks": [{"type": "command", "command": f'python3 "{script}" stop', "timeout": 10}]},
+}
+hooks = d.setdefault("hooks", {})
+before = json.dumps(hooks, sort_keys=True)
+for ev, entry in want.items():
+    hooks[ev] = [e for e in hooks.get(ev, []) if not ours(e)] + [entry]
+if json.dumps(hooks, sort_keys=True) == before:
+    print("✅ team-log hooks already installed"); sys.exit(0)
+if os.path.exists(p):
+    shutil.copy(p, f"{p}.backup-{stamp}")
+os.makedirs(os.path.dirname(p), exist_ok=True)
+json.dump(d, open(p, "w"), indent=2)
+print("✅ team-log hooks installed (paid generations are captured and must be logged before Claude finishes)")
+EOF
+
 echo
 echo "Next: install the shared finishing toolkit once (or run core/scripts/update.sh, which does everything):"
 echo "  bash ~/.claude/skills/everlife-restora-z/core/scripts/preflight.sh --install"
