@@ -27,7 +27,7 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
 
 ## 1. IDs
 - **run_id** = `<YYYYMMDD>-<product id>-<4 random letters>`, made once at the start of a skill run; every record of that run carries it.
-- **ad_id** = the id of the ad's Winners Board entry (`e-...`) when it has one, else `<run_id>-<slot number>`. The prompt log and the
+- **ad_id** = the id of the ad's Winners Board entry (`e-...`) when it has one, else `<run_id>-<slot number>` (⏸ board PAUSED since 2026-11-03: always `<run_id>-<slot number>`). The prompt log and the
   copy ledger carry it, so a generation links to its rating, reviews and Meta results on the board.
 
 ## 2. When Claude writes and reads (the flow)

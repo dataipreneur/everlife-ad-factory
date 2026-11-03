@@ -72,7 +72,7 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
 2. Read the bible + copy log + `winners/winners.md` (one cat). **Winners first, then frameworks** (hand-off from the GHK
    skill, 2026-10-29; rule `core/references/REFERENCE-PRIORITY.md`):
    - **Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block.
-   - **Winners Board (read first, `core/winners-board/WINNERS-BOARD.md` §4):** this product's image entries on the shared
+   - **Winners Board (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: do not read the board, use no board winner or rating; see `WINNERS-BOARD.md` top) (read first, `core/winners-board/WINNERS-BOARD.md` §4):** this product's image entries on the shared
      board; one slot mutates a board winner (exactly one variable), retired recipes are skipped, the table opens with the
      board line. Board unreachable → "no history yet", say so, carry on.
    - **At least 3 of every 5 slots (6 of 10, 9 of 15) start from a winner for this audience**: pick the winner first,
@@ -225,6 +225,6 @@ vertical white EVERLIFE wordmark, a white 'RX' box top right, a white band 'SERM
 QA that the label shows the session's strength. Never describe the tablet in words.
 
 ## 4. After the batch
-- **Rate the batch (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
+- **Rate the batch (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: no rating question, no board entry, no preview upload) (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
   question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
   board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.
