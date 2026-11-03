@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Gates: AI avatar model routing (branch `gates-avatar-routing`)
+Logged before editing. The gates sent "talking head" to Boreal-style; Mitansh's all-Creatify avatar rule (2026-11-02) routes the
+presenter to Creatify Seedance + Boreal-H3 background, 0 Higgsfield. One line added under Model routing in `everlife-gates.md`
+(and Priestley's personal CLAUDE.md). Originals: `_originals/2026-11-03/gates-avatar-routing/`.
+
 ## 2026-11-03 — 📋 Team video rules (HARD, every skill, every teammate)
 Mitansh: "this should be across all skills, not just my local system!"
 - New `core/references/video-team-rules.md`: scripts as a clear mini-story (no cryptic fragments, problem in the first 1–2 s, no specific ages, urgent CTA with the approved offer only); scripts shown as chat text with no popup in the same turn; no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music trap-metal / walk-out, never taiko; winners to reuse (Animated Warriors, Car Throw Review); Sermorelin GHK cast = lean, jacked grey-haired fitness model 45–50, not bulky.
@@ -24,6 +29,7 @@ Mitansh: "All Seedance videos goes to Creatify, remove higgs! Higgs would only g
 Mitansh: "In all the videos, whichever requires a human! The voice / speech should be coming from the human, not as a background voiceover!"
 - New `core/references/on-camera-speech.md`: any person in a video speaks every line on camera, lip-synced; J-cut product cutaways inside the speaker's line are fine; voiceover only in no-person videos; pronunciation fix = re-voice on a cutaway or re-take.
 - Banner added to all 16 `skills/*/SKILL.md`; `core/claude/everlife-gates.md` §5 and `core/hook-engine/HOOK-ENGINE.md` §1 (rule 0) and §6 Route B updated.
+
 ## 2026-11-03 — Winners Board locked for reading too (branch `board-lock-read`)
 Priestley: "yes lock reading too. they shoudnt see any error though". Until teammates update, their old skills still READ the
 board; now only Owner/Editors can read it (db rules `read: "admin"`). Non-editors opening the page see only the "Paused"

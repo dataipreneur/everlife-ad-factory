@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-03 | Priestley (rule by Mitansh, 2026-11-02) | Gates should say AI avatar videos run on Creatify ("yes do it, push and merge") | `everlife-gates.md` §6: all-Creatify avatar line, wins over the talking-head line | `gates-avatar-routing` |
 | 2026-11-03 | Priestley | "yes lock reading too. they shoudnt see any error though" | Board readable only by Owner/Editors (page v10); non-editors see a Paused notice, no error | `board-lock-read` |
 | 2026-11-03 | Priestley | "Can we somehow unplug the rating or feedback system? We might need a new way to refine the system." → freeze the page | Winners Board PAUSED: skills skip the board read and the rating step; page read-only (v9, rules write admin); data kept; switch-back steps in WINNERS-BOARD.md | `board-pause` |
 | 2026-11-03 | Justin (via Priestley) | Focal-mix questions: (1) "Yes that would be correct. For non pill products the vial should be 75%" (2) hardcore men in pill/bottle slots: "That is fine." (3) "Videos and statics should really be the same in the sense of how we’re presenting products" | 75/25 for non-pill products confirmed; videos follow the same 50/25/25 (75/25) split as statics | `bible-sync-5a0d` |
