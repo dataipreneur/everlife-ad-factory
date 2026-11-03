@@ -23,6 +23,7 @@ Show them for *look and layout* only.
 
 | # | Category | File | Sub-styles | Fit | Formats |
 |---|---|---|---|---|---|
+| 7 | **⚔️ Animated Warriors** (winner, 2026-11-03) | `7-animated-warriors.md` | 3D black-and-gold duo smashes through a problem-word wall → vial hero → benefit "body worlds" → vial + CTA; one-shot Seedance 2.5 r2v on Creatify (≈35 cr) | ⭐⭐⭐⭐ | Video |
 | 6 | **Lifestyle & Identity** | `6-lifestyle-identity.md` | 6A Garage-gym morning (men) · 6B Trail / track at dawn · 6C Fight gym, no blood (men) · 6D The comeback session | ⭐⭐⭐ | Video + image |
 | 4 | **Product as Hero** | `4-product-hero.md` | 4A Bench still life (chalk, steel, concrete) · 4B Vial / bottle macro · 4C Minimal bold · 4D Ad in a frame · 4E Gym-bag ASMR | ⭐⭐⭐ | Image + video |
 | 1 | **Real People Talking** | `1-real-people.md` | 1A Creator to camera (post-session) · 1B Training-partner POV · 1C Podcast set · 1D Voice-over lifestyle | ⭐⭐⭐ | Video (+ stills) |
@@ -32,7 +33,7 @@ Show them for *look and layout* only.
 
 ## How to ask (minimal clicks)
 1. **"Pick a style direction"** (single select): "✨ Recommend for me" (you pick 1–3 sub-styles with one line why) · "Lifestyle & Real
-   People" (Marketing Studio, ~75 cr/video) · "Product as Hero" (statics ~1 Creatify cr, video Seedance ~45 cr) · "Authority & Big Idea".
+   People" (Marketing Studio, ~75 cr/video) · "Product as Hero" (statics ~1 Creatify cr, video Seedance on Creatify ≈34 Creatify) · "Authority & Big Idea".
 2. **"Which one?"**: the sub-styles of that category (≤ 4 options, look + cost). Add "👀 Show me examples first" → Read the board, show it, ask again.
 3. Batches: "Mix it up (different sub-style per concept)" is the default.
 
@@ -41,7 +42,7 @@ Show them for *look and layout* only.
 |---|---|---|
 | Realistic humans talking / acting | Higgsfield Marketing Studio UGC (720p) | ~75 / 15 s |
 | One locked slow shot, talking head, simple product hero | Boreal-style (Creatify Ad Agent) | see `composer_billing_state` |
-| Multi-scene, camera moves, fast motion, animation | Seedance (+ the form's render `--image`); Unlimited mode in Chrome when that memory is active | ~45 / 15 s (67.5 at 720p) or 0 |
+| Multi-scene, camera moves, fast motion, animation | Seedance 2.5 on the Creatify Model Playground only (`core/references/seedance-on-creatify.md`) | 34.25 Creatify / 15 s 720p |
 | Statics | GPT Image 2.5 via Creatify, render attached | ~1 Creatify credit |
 | ALL words, numbers, logos, review text | finishing only (`finish_batch.py`, `full_layout.py`) | 0 |
 

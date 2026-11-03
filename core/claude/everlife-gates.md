@@ -74,12 +74,15 @@ Disclaimers & AI disclosure:
 
 ## 5. Script gate (video)
 - 7-beat spine: Hook → Authority → Emotion → Visual element → Structure → Connection → Payoff, with a throughline.
-- The hook or key benefit is both **said** (voiceover or talent) **and shown on screen** within the first 2–3 seconds (bible 2026-11-02). Copy minimal; motion carries emotion, text carries information.
+- The hook or key benefit is both **said** (by the on-screen talent; voiceover only in no-person videos) **and shown on screen** within the first 2–3 seconds (bible 2026-11-02). Copy minimal; motion carries emotion, text carries information.
 - Every video carries on-screen captions for all spoken audio (bible 2026-11-02, Standards 02).
+- **⛔ Humans speak on camera (Mitansh 2026-11-03, HARD):** in any video with a person, that person speaks every line on camera, lip-synced; never a background voiceover over a person (J-cut product cutaways inside the speaker's line are fine). Voiceover only in videos with no person. Rule: `core/references/on-camera-speech.md`.
 - The product is always in focus whenever it's on screen: never soft, blurred or racked out of focus (bible 2026-11-02).
+- **📋 Team video rules (Mitansh 2026-11-03, HARD):** scripts are a clear, connected mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments; the problem is said in the first ~1–2 s; no specific ages anywhere; scripts are shown as plain chat text with no popup in the same turn; no paid re-take without an explicit "go" (free fix first; never speed up talking); men's music = trap-metal or walk-out, never taiko. Rule: `core/references/video-team-rules.md`.
 
 ## 6. Production gate
 - Model routing: single locked slow shot / talking head / simple product hero → Boreal-style; multi-scene, camera moves, fast motion, transitions → Seedance.
+- **⛔ Seedance = Creatify, Higgsfield = Marketing Studio only (Mitansh 2026-11-03, HARD):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground; Higgsfield credits go ONLY to Marketing Studio. Rule: `core/references/seedance-on-creatify.md`.
 - 9:16 safe zone (bible "Safe zones", Meta): **x 156–924, y 144–1385 on 1080×1920, minus the Reels profile corner x 156–375 × y 1216–1385**. Footer exception: the proof row may run x 39–1041 and cross the corner. Feed (4:5, 1:1): 60 px margin. Logo, headline, offer, CTA, disclaimer **and captions** stay inside it (bible 2026-11-02).
 - AI expand 1:1→9:16 OK for photo ads; flat infographics are rebuilt.
 
@@ -95,7 +98,7 @@ Concept direction · approved benefits/subheaders · full section 2 pass · sect
 - Update the Asana task (Review Status, links).
 
 ## Spend gate
-Higgsfield uses shared Everlife team credits: run a cost estimate and get the user's OK before any paid generation.
+Higgsfield (Marketing Studio only) and Creatify (Seedance, stills, Boreal, music) both use shared Everlife team credits: run a cost estimate and get the user's OK before any paid generation.
 
 ## Known gaps (flag when touched)
 - NAD+ (non-Optima) product page not imported.

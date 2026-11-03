@@ -38,3 +38,8 @@ it has run.
 
 **Vial staging:** `../../../everlife-bpc-157/references/vial-refs/` (48 vial-hero ads) and BPC-157's batch 5 (product-only,
 GPT Image 2.5: Mitansh "Amazing!", see that skill's `lessons.md`).
+
+## Wolverine Stack own winners
+| # | Ad | Result | Style |
+|---|---|---|---|
+| W1 | V3 Breakthrough, `~/Everlife-Creative/output/Wolverine-Stack/2026-11-03_remake-base116/` | Mitansh: "absolute banger" (no Meta data yet) | ⚔️ Animated Warriors (`../styles/7-animated-warriors.md`) |

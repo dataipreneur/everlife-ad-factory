@@ -1,0 +1,24 @@
+{
+ "product": "wolverine",
+ "audience": "men",
+ "end": 12.6,
+ "head": "WOLVERINE STACK",
+ "sub": "BPC-157 / TB-500",
+ "end_label": "WOLVERINE STACK  ·  BPC-157 / TB-500",
+ "end_head": "Save up to 39%",
+ "end_sub": "2-Peptide Whole-Body Recovery",
+ "benefits": ["Supports Tendons + Ligaments", "Supports Gut Lining Health", "Supports Mobility"],
+ "cta": "Build Your Recovery Protocol",
+ "bottle": "wolverine_bottle.png",
+ "pill": "",
+ "proof": "trust",
+ "caps": [
+  [0.0, 1.95, "Heavy days. Heavy wear."],
+  [2.2, 3.85, "Meet Wolverine Stack by Everlife."],
+  [3.9, 7.0, "BPC-157 + TB-500, in one stack."],
+  [7.15, 8.5, "Supports tendons and ligaments."],
+  [8.7, 9.9, "Supports gut lining health."],
+  [10.05, 10.8, "Supports mobility."],
+  [11.1, 12.5, "Doctor prescribed."]
+ ]
+}

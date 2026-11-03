@@ -285,3 +285,14 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 - **4:5 pixel zones were ignored** (CTA at 87–89% on #3/#4 twice, even with "y 1300–2048 empty"). What worked: a numbered TOP-TO-BOTTOM element order with "the CTA comes BEFORE the product; the product is the LAST and LOWEST element" + "bottom 35% empty" + product size as % of height.
 - 4:5 finisher shifts ~90–130 px down for the logo; plan the content to end at ~62% so the 18% footer stays clear.
 - Neon/gym scenes invent wall slogans ("DISCIPLINE BUILDS FREEDOM"): say "NO signs, posters, slogans or lettering on walls or equipment".
+
+## "Replay of the Day" (2026-11-03, Wan 3.0 Prime 720p 15 s, 2 Creatify + 45 Higgsfield): "bullshit video! bullshit prompt!"
+- The concept lived only in the VO: a "sports replay" with no replay look (no rewind, no broadcast feel), frame 0 nearly still for 0.4 s.
+- 1-5 s was a static bottle-on-plates beauty shot and 10-15 s a passive hold: two dead stretches out of 15 s (Emily's "nothing is happening" again).
+- The VO read the feature list over pictures that didn't show those things. Picture and words must tell the same story beat by beat.
+
+## "Wait" (2026-11-03, Seedance 2.5 reference-to-video 480p, 15.25 Creatify) — hook rated 4 (best of the day)
+- Rebuilding a real reference ad (Creatify inspiration UGC) AND passing it as `video_urls` motion reference to Seedance 2.5 r2v copied the phone swing + palm-stop + selfie→product→selfie rhythm almost exactly. Do this for every reference-led video.
+- On-camera speech worked: real lip sync, name heard "Cermerellin" (pass).
+- 480p garbled the label in the product cutaway; product shots need 720p. The model copies a still's wardrobe (black sleeve) over the prompt: make every still match the cast (shirtless).
+- Close selfie framing puts the header over his forehead: ask "his head top at 20% of the height, camera at arm's length" in the selfie still.

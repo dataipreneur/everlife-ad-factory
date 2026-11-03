@@ -8,6 +8,7 @@ them, the hook is dropped. Where a skill says "Hook (0–2 s)", use this engine'
 still comes only from the bible. This engine decides the opening ACTION, not new claims.
 
 ## 1. The hook contract (pass/fail, checked on every script AND on every raw video)
+0. **⛔ Humans speak on camera (HARD, 2026-11-03):** any person in the video speaks the lines on camera, lip-synced; no off-screen narrator over a person (`core/references/on-camera-speech.md`).
 1. **Frame 0 is already mid-action.** No fade-in, no establishing shot, no logo, no still product, no person about to start.
    The first frame alone should look like a screenshot someone would send a friend.
 2. **Timing:** motion or impact by 0.5 s · the hook lands by 1.5 s · the product (or its name) on screen by 3 s. Products that
@@ -95,16 +96,16 @@ follow for a 50+ viewer ⑧ model-feasible with a clean landing moment ⑨ safe-
 "Continuing straight from the opening hook: <the Everlife adaptation from §3>. The hook is light comedy; nobody is hurt; no pills
 spill. All dialogue is third-person or pronoun-free; nobody says I, me or my." Then all of the skill's normal prompt blocks, unchanged.
 
-**Route B: Seedance** (physics, camera moves, chaos): put this block first, before the skill's normal blocks:
+**Route B: Seedance, on the Creatify Model Playground ONLY** (`core/references/seedance-on-creatify.md`, HARD 2026-11-03; Higgsfield = Marketing Studio only) (physics, camera moves, chaos): put this block first, before the skill's normal blocks (if a person is in the clip, the DIALOGUE block says "spoken ON CAMERA by <him/her>, lips in sync", never off-screen / narrator):
 "HOOK 0.0–1.5 s: Frame 0 starts mid-action: <exact action>. <camera move>. Sound at 0.0 s: <sound>. At ~1.2 s <landing/catch>:
 the product (attached reference, exact) is still and label-readable for 0.6 s inside the central safe column. No slow fade-in,
 no establishing shot, no static opening frame."
 **Start frame (mandatory for physical hooks, learned 2026-10-30):** text-only Seedance ignores "frame 0 mid-action" (it opened on a
-still glass). First make a ~0.25 cr still of the exact hook moment (GPT Image 2.5, 9:16, the product references attached, faces below
+still glass). First make a ~1 Creatify cr still of the exact hook moment (`gpt-image-2.5-sunburst/edit` on Creatify, 9:16, the product references attached, faces below
 the top 25%), show it to the user, then pass it as the video's START image. Put the 0.0 s sound in the HOOK block AND as the first
 AUDIO item. Write dialogue to end by ~11 s ("all dialogue ends by 11 seconds"). Prefer non-alcoholic props near an Rx product.
 
-Model routing stays as in the gates: talking UGC → Marketing Studio; multi-scene/camera moves/chaos → Seedance; a single locked
+Model routing stays as in the gates: talking UGC → Marketing Studio (Higgsfield) or Seedance with on-camera speech (Creatify); multi-scene/camera moves/chaos → Seedance (Creatify); a single locked
 product hero → Boreal. Always quote the cost and get approval before generating.
 
 ## 7. Hook QA on every raw (free, before finishing, before showing the user)

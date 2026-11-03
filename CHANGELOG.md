@@ -2,6 +2,28 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — 📋 Team video rules (HARD, every skill, every teammate)
+Mitansh: "this should be across all skills, not just my local system!"
+- New `core/references/video-team-rules.md`: scripts as a clear mini-story (no cryptic fragments, problem in the first 1–2 s, no specific ages, urgent CTA with the approved offer only); scripts shown as chat text with no popup in the same turn; no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music trap-metal / walk-out, never taiko; winners to reuse (Animated Warriors, Car Throw Review); Sermorelin GHK cast = lean, jacked grey-haired fitness model 45–50, not bulky.
+- Banner in all 16 `skills/*/SKILL.md`; gates §5 line; `hardcore-men.md` SGHK exception; SGHK SKILL.md men's-talent line rewritten.
+
+## 2026-11-03 — 🚗 Car Throw Review video style for every tablet / capsule product
+Mitansh on the SGHK 1000 car review: "This was amazing!!! Save it as a form in video 'Mood' questionnaire, Car Throw Review" + "have it for all the tablets".
+- New `core/references/car-throw-review.md` (script shape, Creatify Seedance 2.5 recipe, free 3× throw speed-up, end-card hold, header 0–5.5 s then logo, QA).
+- Banner in the 8 tablet/capsule skills (Sermorelin GHK, Sermorelin, Restora-Z, PT-141, Spark, NAD+, Titan-Rx, Lovara): every video Style/Mood question always offers "🚗 Car Throw Review".
+- Sermorelin GHK: `styles/7-car-throw-review.md` (the winning script) + examples in `styles/car-throw-review/`, INDEX row, video Style question updated.
+
+## 2026-11-03 — Seedance = Creatify; Higgsfield = Marketing Studio only (HARD, every product video)
+Mitansh: "All Seedance videos goes to Creatify, remove higgs! Higgs would only go for marketing studio!"
+- New `core/references/seedance-on-creatify.md`: the rule, the proven Creatify Model Playground recipe (upload → GPT Image 2.5 start still → `bytedance/seedance-2.5/reference-to-video` 15 s 720p = 34.25 Creatify), costs, animated stills via `seedance-2.5/image-to-video`.
+- 🎬 banner added to all 16 `skills/*/SKILL.md` (overrides every Higgsfield Seedance command and Unlimited-mode line); `core/claude/everlife-gates.md` §6 + Spend gate and `core/hook-engine/HOOK-ENGINE.md` §6 Route B updated.
+- Wolverine Stack: `animated-still.md`, `video-prompting.md`, `styles/INDEX.md`, `styles/3-cinematic-big-idea.md` rewritten to the Creatify route; new style ⚔️ Animated Warriors (`styles/7-animated-warriors.md`, the V3 "Breakthrough" winner).
+- Other skills still contain old Higgsfield Seedance lines underneath; the banner overrides them (clean-up per skill when next touched).
+
+## 2026-11-03 — Humans speak on camera (HARD, every product video)
+Mitansh: "In all the videos, whichever requires a human! The voice / speech should be coming from the human, not as a background voiceover!"
+- New `core/references/on-camera-speech.md`: any person in a video speaks every line on camera, lip-synced; J-cut product cutaways inside the speaker's line are fine; voiceover only in no-person videos; pronunciation fix = re-voice on a cutaway or re-take.
+- Banner added to all 16 `skills/*/SKILL.md`; `core/claude/everlife-gates.md` §5 and `core/hook-engine/HOOK-ENGINE.md` §1 (rule 0) and §6 Route B updated.
 ## 2026-11-03 — Winners Board locked for reading too (branch `board-lock-read`)
 Priestley: "yes lock reading too. they shoudnt see any error though". Until teammates update, their old skills still READ the
 board; now only Owner/Editors can read it (db rules `read: "admin"`). Non-editors opening the page see only the "Paused"

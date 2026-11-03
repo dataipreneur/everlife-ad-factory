@@ -19,6 +19,7 @@ Boards show library ads as they ran, including some that break today's rules ("D
 
 | # | Category | File | Sub-styles | Fit | Formats |
 |---|---|---|---|---|---|
+| 7 | **🚗 Car Throw Review** (winner, 2026-11-03) | `7-car-throw-review.md` | everyday man/woman catches the bottle thrown into the car, honest breakdown, urgent CTA; Seedance 2.5 r2v 20 s on Creatify (≈47 cr) | ⭐⭐⭐⭐ | Video |
 | 6 | **Lifestyle & Identity** | `6-lifestyle-identity.md` | 6A Prime-time training · 6B Still in the game · 6C Glow + strength (women) · 6D GLP-1 complement | ⭐⭐⭐ | Video + image |
 | 1 | **Real People Talking** | `1-real-people.md` | 1A Creator to camera · 1B Training partner POV · 1C Friends chatting · 1D Podcast set · 1E Voice-over lifestyle | ⭐⭐⭐ | Video (+ stills) |
 | 4 | **Product as Hero** | `4-product-hero.md` | 4A Premium still life · 4B Tablet in hand · 4C Minimal bold · 4D Ad in a frame · 4E Morning routine ASMR | ⭐⭐⭐ | Image + video |

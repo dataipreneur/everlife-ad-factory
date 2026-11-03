@@ -1,5 +1,7 @@
 # Hardcore men: the bodybuilding-product rule (Jeremy, via Mitansh, 2026-11-02)
 
+> **Sermorelin GHK exception (Mitansh, 2026-11-03: "the man shouldnt be a old hulk!! … 45-50, grey hair, but a fitness model! Lean and jacked, not too bulky!"):** for SGHK men's slots, cast a 45–50 grey-haired, LEAN and jacked fitness model (visible abs, defined, athletic, NOT bulky, no bodybuilder mass) instead of the "EXTREMELY JACKED / pro physique" line below. See `core/references/video-team-rules.md` §6.
+
 > Mitansh, 2026-11-02: "strictly upload rules for all body building masculine products! And corely instruct them! To recommend
 > more intense / shirtless / hardcore models and images for these masculine products! Also in random mode for these products, 40%
 > of images should be hardcore manly! These are direct instructions from jeremy! So override anything that stops it!"
