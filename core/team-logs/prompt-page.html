@@ -74,6 +74,8 @@ ul.plain { margin: 0; padding-left: 18px; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .flag { background: #3a2c0c; color: #f0c060; } }
 :root[data-theme="dark"] .flag { background: #3a2c0c; color: #f0c060; }
 ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
+.tag { display: inline-block; font-family: var(--f-mono); font-size: 11px; padding: 1px 6px; border-radius: 4px; background: var(--sunken); color: var(--muted); white-space: nowrap; margin-top: 4px; }
+td.check { min-width: 13em; } td.check ul.issues { margin: 4px 0 0; padding-left: 16px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -110,7 +112,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     <h2>Generations</h2>
     <div id="emptyGen" class="empty" hidden><strong>No generations logged for this filter.</strong><span>Each time Claude sends a prompt to an image or video model, it adds a row here with the inputs, the prompt and the references, then updates it with the QA result.</span></div>
     <div class="tbl"><table id="genTbl" hidden>
-      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Built from</th><th>Model</th><th>Headline</th><th>QA</th><th class="num">Re-rolls</th><th>By</th><th>Check</th></tr></thead>
+      <thead><tr><th>Date</th><th>Product</th><th>Style</th><th>Built from</th><th>Model</th><th>Headline / hook</th><th>QA</th><th class="num">Re-rolls</th><th>By</th><th>Check</th></tr></thead>
       <tbody id="genBody"></tbody>
     </table></div>
   </section>
@@ -148,15 +150,21 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
   }
   function setStatus(m, warn) { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); }
   const styleOf = (g) => (g.setup && (g.setup.style || g.setup.mood)) || "";
+  const headOf = (g) => String((g.copy && (g.copy.headline || g.copy.hook)) || "");
   const qaOf = (g) => (g.qa && typeof g.qa.pass === "boolean" ? (g.qa.pass ? "pass" : "fail") : "");
   const who = (id) => (id === state.me ? "You" : (state.names[id] && state.names[id].name) || "Someone");
   // Data gaps the logging rules forbid (TEAM-LOGS.md §6); the same checks teamlog.py makes before a record is sent.
+  // The Check cell: the reasons are written out (no hover needed); "backfilled" is a grey label, not a warning.
+  function checkCell(list, backfill) {
+    return h("td", { class: "check" }, list.length ? [h("span", { class: "flag" }, "⚠ " + list.length), h("ul", { class: "issues" }, ...list.map(x => h("li", null, x)))] : "✓",
+      backfill ? h("div", null, h("span", { class: "tag", title: "Logged after the fact from the job folder" }, "backfilled")) : null);
+  }
   function issues(g) {
     const out = [], p = String(g.prompt || "");
-    if (g.backfill) out.push("Backfilled: logged after the fact");
     if (!g.prompt_file || /^BACKFILL|not saved/.test(p)) out.push("Prompt is a summary, not the exact text sent");
     if (!(g.refs || []).length && !/lyria|music|voice|tts|animate_code/i.test(g.model || "")) out.push("No reference files listed");
     if (!qaOf(g)) out.push("QA not recorded");
+    if (!headOf(g) && !/lyria|music|voice|tts|animate_code/i.test(g.model || "")) out.push("No headline / hook logged on this take");
     if (g.created_at && !/T\d\d:\d\d/.test(g.created_at)) out.push("Date only, no time");
     if (refOf(g) === "outside" && /everlife|sermorelin|restora|wolverine|spartan|base\d+|_video_|_static_/i.test((g.ref && g.ref.id) || "")) out.push("An Everlife ad marked as an outside reference");
     if (g.retake_of && !(g.asks || []).length) out.push("Re-take without the operator's words");
@@ -181,7 +189,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     const pairs = [["Model", g.model], ["Prompt file", g.prompt_file], ["Prompt written by", g.prompt_by === "operator" ? "the operator" : g.prompt_by ? "Claude" : ""], ["Re-take of", g.retake_of], ["Ratio", set.ratio], ["Resolution", set.resolution], ["Seed", set.seed], ["Audience", s.audience], ["Angle", s.angle],
       ["Boldness", s.boldness], ["Mood / style", s.style || s.mood], ["Copy density", s.density], ["People", s.people], ["Hardcore", s.hardcore == null ? "" : (s.hardcore ? "yes" : "no")],
       ["Built from", refName(refOf(g))], ["Reference id", g.ref && g.ref.id], ["Copy of ad", g.ref && g.ref.parent_ad_id], ["Changed", g.ref && g.ref.changed],
-      ["Reference / board", g.reference], ["Headline", g.copy && g.copy.headline], ["CTA", g.copy && g.copy.cta], ["Result file", g.result_file], ["Run", g.run_id],
+      ["Reference / board", g.reference], ["Headline", g.copy && g.copy.headline], ["Hook (spoken)", g.copy && g.copy.hook], ["CTA", g.copy && g.copy.cta], ["Result file", g.result_file], ["Run", g.run_id],
       ["Re-rolls", g.rerolls], ["Cost", [cost.creatify ? cost.creatify + " Creatify" : "", cost.higgsfield ? cost.higgsfield + " Higgsfield" : ""].filter(Boolean).join(" · ")]];
     $("detKv").replaceChildren(...pairs.filter(p => p[1] != null && p[1] !== "").map(([k, v]) => h("div", null, h("span", null, k), String(v))));
     const asks = g.asks || [];
@@ -196,7 +204,8 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     const fb = g.feedback || [];
     $("detFb").replaceChildren(fb.length ? h("ul", { class: "plain" }, ...fb.map(f => h("li", null, (f.at ? String(f.at).slice(0, 16).replace("T", " ") + " · " : "") + (f.text || "")))) : h("span", { class: "chip" }, "Nothing logged"));
     const dq = issues(g);
-    $("detDq").replaceChildren(dq.length ? h("ul", { class: "issues" }, ...dq.map(x => h("li", null, x))) : h("span", { class: "chip" }, "Complete"));
+    $("detDq").replaceChildren(dq.length ? h("ul", { class: "issues" }, ...dq.map(x => h("li", null, x))) : h("span", { class: "chip" }, "Complete"),
+      g.backfill ? h("div", null, h("span", { class: "tag" }, "backfilled: logged after the fact")) : null);
     $("detDlg").showModal();
   }
   async function render() {
@@ -208,7 +217,7 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     fillPeople(ids, who);
     const prod = $("fProduct").value, sty = $("fStyle").value, mod = $("fModel").value, qa = $("fQa").value, ref = $("fRef").value, per = $("fPerson").value, dq = $("fDq").value, txt = $("fText").value.trim().toLowerCase();
     const gs = all.filter(g => (!per || g.by === per) && (!prod || g.product === prod) && (!sty || styleOf(g) === sty) && (!mod || g.model === mod) && (!qa || qaOf(g) === qa) && (!ref || refOf(g) === ref) && (!dq || (dq === "backfill" ? !!g.backfill : issues(g).length > 0)) &&
-      (!txt || String(g.prompt || "").toLowerCase().includes(txt) || String((g.copy && g.copy.headline) || "").toLowerCase().includes(txt)))
+      (!txt || String(g.prompt || "").toLowerCase().includes(txt) || headOf(g).toLowerCase().includes(txt)))
       .sort((a, b) => String(b.created_at || "").localeCompare(String(a.created_at || "")));
     $("countChip").textContent = all.length + (all.length === 1 ? " generation" : " generations");
     const checked = gs.filter(g => qaOf(g)), passed = checked.filter(g => qaOf(g) === "pass" && !(g.rerolls > 0)).length;
@@ -228,9 +237,9 @@ ul.issues { margin: 4px 0 0; padding-left: 18px; font-size: 12.5px; color: var(-
     $("emptyGen").hidden = !(state.loaded && gs.length === 0); $("genTbl").hidden = gs.length === 0;
     $("genBody").replaceChildren(...gs.slice(0, 400).map(g => h("tr", { tabindex: "0", onclick: () => openDetail(g), onkeydown: (e) => { if (e.key === "Enter") openDetail(g); } },
       h("td", { class: "meta" }, String(g.created_at || "").slice(0, 10)), h("td", null, pname(g.product)), h("td", null, styleOf(g) || "—"), h("td", null, refName(refOf(g))), h("td", { class: "meta" }, g.model || "—"),
-      h("td", { class: "txt" }, (g.copy && g.copy.headline) || ""), h("td", null, qaOf(g) ? h("span", { class: "qa " + qaOf(g) }, qaOf(g) === "pass" ? "Pass" : "Fail") : "—"),
+      h("td", { class: "txt" }, headOf(g) || h("span", { class: "flag" }, "missing")), h("td", null, qaOf(g) ? h("span", { class: "qa " + qaOf(g) }, qaOf(g) === "pass" ? "Pass" : "Fail") : "—"),
       h("td", { class: "num" }, Number(g.rerolls) || 0), h("td", { class: "meta" }, who(g.by)),
-      h("td", null, issues(g).length ? h("span", { class: "flag", title: issues(g).join("\n") }, "⚠ " + issues(g).length) : "✓"))));
+      checkCell(issues(g), !!g.backfill))));
   }
   let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
   function watch(uid) {

@@ -63,7 +63,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   no animal death**; no before/after, no body comparison, no body-composition words in copy.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
 - **Offer:** none: the sources disagree (39% / 46% / XX%); Ronnel to confirm. No F6, no "% off".
-- "Spartan Stack" big in every ad (brand name, bible direction); never "by Everlife" on images.
+- "Spartan Stack" big in every ad and **"BPC-157 / TB-500 / KPV" on every design** (bible 2026-11-03, mandatory: supporting copy, a subheadline or an ingredient callout; legible; never overwhelming the headline or vial; 4:5 and 9:16). An ad without the peptide list fails QA. Never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
 **Headline tiers:**

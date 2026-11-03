@@ -68,7 +68,8 @@ status:"draft|approved|live"}`. **`style`:** `{type:"style", product, run_id, ba
 tool_prompt, tool_prompt_file, tool_prompt_source (what the tool actually ran, §6), retake_of, prompt_by, feedback:[{at, text}],
 setup:{audience, angle, boldness, mood, style, density, people, hardcore}, asks:["<operator's own words>"], reference:"<ref ad or
 style board>", ref:{type, id, parent_ad_id, changed}, model, settings:{ratio, resolution, seed}, prompt:"<exact text sent>", refs:["<render / tablet / board file>"],
-copy:{headline, lines:[...], cta}, result_file, qa:{pass:true|false, reasons:["..."]}, rerolls, cost:{creatify, higgsfield}}`.
+copy:{headline (images), hook (videos: the opening spoken line), cta} (set at submit with `--headline`/`--hook`/`--cta`; `teamlog.py
+copy` fills any blank after the batch), result_file, qa:{pass:true|false, reasons:["..."]}, rerolls, cost:{creatify, higgsfield}}`.
 Keep `prompt` exact (it is the point of the log); never put a preview image here (the board holds previews).
 **`ref` (what this generation was built from; always set it, images and videos):** `type` = `board_winner` (a Winners Board
 winner, its mutation slot) · `meta_winner` (the CPA-ranked Winning Ads Reference) · `own_ad` (any earlier Everlife ad that is not

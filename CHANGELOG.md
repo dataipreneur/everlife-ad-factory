@@ -2,10 +2,35 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Bible sync to 1793743706-38c1: peptide stacks list every peptide (branch `bible-sync-38c1`)
+Justin's update: every ad for a peptide stack shows each peptide (Spartan BPC-157 / TB-500 / KPV, Wolverine BPC-157 / TB-500, Klow
+BPC-157 / GHK-Cu / KPV / TB-500, Glow [PLACEHOLDER]); Spartan and Klow pages: name + peptide list on every design. Priestley: "yes sync it,
+push and merge". Originals: `_originals/2026-11-03/bible-sync-38c1/`.
+- Repo bible written; Spartan's verbatim section re-copied; global rules + gates carry the stack rule; Klow "GHK-Cu" vs the GHK Hard NO
+  and Glow's placeholder added to the gates' known gaps (Justin).
+- Spartan + Wolverine: a 💊 PEPTIDE LIST banner in SKILL.md (statics on the design in 4:5 and 9:16; videos at least on the end card;
+  missing list fails QA); Spartan image-batch now requires "BPC-157 / TB-500 / KPV" (Wolverine already had its list).
+
+## 2026-11-03 — Team-log pages: warning reasons shown in the row (branch `teamlogs-flags-visible`)
+Priestley on the Copy Ledger: "why check shows warning for few. i dont see any" → the reasons were only in a hover tooltip.
+"yes fix it, push and merge". Originals: `_originals/2026-11-03/teamlogs-flags-visible/`.
+- All three pages: the Check cell lists each reason under the ⚠ count (no hover needed); "backfilled" is a grey label, not a
+  warning, so ⚠ only marks something to fix.
+
+## 2026-11-03 — Prompt log: headline / hook on every generation (branch `teamlogs-headline`)
+Priestley: "why is headline missing for few in prompt & outcome log?" → all 20 backfilled rows had an empty `copy`, and
+`teamlog.py gen` wrote it empty too. "yes fix it, push and merge". Originals: `_originals/2026-11-03/teamlogs-headline/`.
+- `teamlog.py gen --headline / --hook / --cta`; `teamlog.py copy` fills any blank headline / hook / CTA on that ad's takes
+  (prints which gen records to re-send); the checker warns on a take with neither.
+- Prompt log: column "Headline / hook" (videos show the opening spoken line), "missing" flag, and a data-quality line.
+
 ## 2026-11-03 — 🏆 Video winners reference set (every video skill)
 Mitansh: "These videos should be refered! BY all video making skills man! Whatever videos I made today all were amazing!"
 - New `core/references/video-winners.md` + 8 frame sheets in `core/references/video-winners/` (Wolverine Animated Warriors + Run-Through; SGHK Car Throw Review, Comic Gauge, Comic Heist, AI Avatar Edge Reloaded, Three Orbs; Restora-Z Car Throw Review): format, why it works, recipe, cost, and the shared rules all eight follow.
 - 🏆 banner in all 16 `skills/*/SKILL.md`; `video-team-rules.md` §5 points to it.
+- Review (Priestley: "bring in the new PR"): a "Known flaws" list (W3/W4 "Get started now", W3 open bottle with a tablet pile,
+  W4 testimonial-style line, W5/W6 no captions) and captions + stack peptide list added to the shared rules; merged with main
+  (both banners kept in Spartan / Wolverine).
 
 ## 2026-11-03 — Team logs: data quality built in (branch `teamlogs-quality`)
 Priestley asked to fix the logging system after Mitansh's first (backfilled) records showed summaries instead of prompts, empty
