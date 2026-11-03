@@ -23,7 +23,10 @@ Priestley approved the sync including Restora-Z (2026-11-03). Originals: `_origi
   bottle": 50% pill-focused / 25% bottle-focused / 25% person-focused. Gates, global rules, `creative-system.md` §1 (batch table
   Focal column; batch of 4 = 2/1/1), `ultra-premium.md`, Hook Engine; a FOCAL-POINT MIX banner in all 15 skills' `image-batch.md`
   (old "tablet is the hero" lines now apply to pill-focused slots only); SKILL.md product-truth lines and style notes. Products
-  without a pill (vials, GHK pump): 75% product-focused / 25% person-focused, PROVISIONAL (Justin to confirm). Smoke 62/62.
+  without a pill (vials, GHK pump): 75% product-focused / 25% person-focused. Smoke 62/62.
+- **Justin's answers (2026-11-03, via Priestley):** (1) "Yes that would be correct. For non pill products the vial should be 75%"
+  → 75/25 confirmed, provisional flags removed. (2) men in pill/bottle slots count toward the hardcore share: "That is fine."
+  (3) "Videos and statics should really be the same in the sense of how we're presenting products" → videos use the same split.
 
 ## 2026-11-03 — Winners Board: finished ads only (branch `board-no-briefs`)
 Logged before editing. BERNS's Claude wrote 10 Sermorelin GHK "BRIEF ONLY: image not made yet" entries with placeholder "Good"
