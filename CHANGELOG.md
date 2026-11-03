@@ -19,6 +19,11 @@ Priestley approved the sync including Restora-Z (2026-11-03). Originals: `_origi
 - Disclaimer now on the bible pages for Epithalon, MOTS-c, GHK Cream (same text as product.json, `--check` ✅): provisional flags
   retired. Landing pages filled (BPC-157, GHK Cream, GLP-1, Spark, Wolverine). Sermorelin GHK: "growth hormone" lower-cased per bible.
 - Smoke 62/62.
+- **Then bible 1793730765-9d0d (same day, same branch, Priestley OK):** the **focal-point mix** replaces "the pill is the hero, not the
+  bottle": 50% pill-focused / 25% bottle-focused / 25% person-focused. Gates, global rules, `creative-system.md` §1 (batch table
+  Focal column; batch of 4 = 2/1/1), `ultra-premium.md`, Hook Engine; a FOCAL-POINT MIX banner in all 15 skills' `image-batch.md`
+  (old "tablet is the hero" lines now apply to pill-focused slots only); SKILL.md product-truth lines and style notes. Products
+  without a pill (vials, GHK pump): 75% product-focused / 25% person-focused, PROVISIONAL (Justin to confirm). Smoke 62/62.
 
 ## 2026-11-03 — Winners Board: finished ads only (branch `board-no-briefs`)
 Logged before editing. BERNS's Claude wrote 10 Sermorelin GHK "BRIEF ONLY: image not made yet" entries with placeholder "Good"

@@ -17,7 +17,7 @@
 
 ## What the winners have in common
 1. **The tablet is the hero:** huge, close to the lens, often bigger than the bottle (S03, S11, S13). The bottle is secondary.
-   This matches bible Standards 03 ("the pill or tablet is the hero, not the bottle").
+   Bible 2026-11-03 replaced that rule with the focal-point mix (50% tablet / 25% bottle / 25% person): use this look for the tablet-focused slots.
 2. **"SPARK" huge, in the logotype:** a wide serif with the star inside the A, in rose-gold or gold.
 3. **Three benefit "pills" with line icons** (brain-based / on-demand / non-hormonal), stacked or in a row.
 4. **Warm, premium palettes:**

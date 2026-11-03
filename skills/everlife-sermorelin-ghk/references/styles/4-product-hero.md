@@ -1,7 +1,7 @@
 # Category 4 — Product as Hero
 
 Library folders: Product Highlight · Pill-Product Focused · Minimalist · Product-as-Hero · Polaroid · Billboard (boards 1, 3, 4, 5).
-Why it works: the bible's first composition rule is "the pill/tablet is the hero"; real renders make fidelity easy.
+Why it works: this style fills the 50% pill-focused share of the bible's focal-point mix (2026-11-03; it replaced "the pill/tablet is the hero"); real renders make fidelity easy.
 
 **Statics:** GPT Image 2.5 via Creatify with bottle + tablet + type specimen attached (~1 cr). **Video:** Seedance 2.0 or Boreal-style for a single locked shot. Tablet prompt line, always: "use the attached tablet reference exactly; do not invent, alter, or substitute a different pill."
 

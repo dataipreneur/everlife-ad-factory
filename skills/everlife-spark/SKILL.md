@@ -20,7 +20,7 @@ Golden rules, all non-negotiable:
    only in the bible's ⏳ ED headlines, with explicit approval (Jeremy). No "erectile", "Viagra", "Cialis" or any brand comparison, no
    "instant", no timing promises ("tonight", "in minutes"), no guarantees. "Supports", never "builds"/"boosts"; mechanism first.
    Copy may say "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count. **Tasteful, product-led: no beds
-   or bedroom scenes, no body shots, no before/after, video framing shoulder-up.** **The tablet is the hero** (bible Standards 03 and
+   or bedroom scenes, no body shots, no before/after, video framing shoulder-up.** **Focal-point mix** (bible Standards 03, 2026-11-03: 50% tablet / 25% bottle / 25% person, `image-batch.md`); in tablet-focused ads the tablet leads (bible and
    every winner): bigger than the bottle in frame, in front, close to the lens; the bottle is secondary but legible.
 3. **CTA: "Save Up to 51%" is the PROVISIONAL default (2026-11-03: the bible banned "Get Started Now" and says lead with the
    offer; Jeremy to confirm).** The bible's Spark CTA list is still ⏳ Pending approval. Any other Spark CTA needs the user's explicit OK

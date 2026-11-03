@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793728650-5a0d) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793730765-9d0d) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -126,13 +126,24 @@ How the work should look and behave. Composition, format and landing-page rules 
 Applies to every product
 
 #### Composition
-- The pill or tablet is the hero, not the bottle.
 - If a bottle appears, it is large, foreground and legible.
 - Product and benefit must be identifiable in under two seconds.
 - Product names run big. Make them memorable.
 - Texture and depth behind the product — never flat color.
 - No shadows or outlines on type.
 - Bottles, pills, CTAs and text are never obscured by another element — including a gradient from the footer.
+
+#### Focal-point mix
+Official split for all products. This replaces the earlier “pill is the hero, not the bottle” rule.
+50%
+Pill-focused
+The pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible.
+25%
+Bottle-focused
+The product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments.
+25%
+Person-focused
+A person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery.
 
 #### Format
 - Bullet type stays readable at story size — set a minimum and keep it generous.

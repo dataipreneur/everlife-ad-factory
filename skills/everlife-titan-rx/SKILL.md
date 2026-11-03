@@ -22,7 +22,7 @@ Golden rules, all non-negotiable:
    competitor, no "instant", no timing promises ("tonight", "in minutes", "when you need it"), no guarantees. "Supports", never
    "boosts"/"enhances"/"builds"; mechanism first (circulation / blood flow), then the benefit. Copy may say "once-daily" / "daily
    capsule"; never a strength, dose or count, never "sublingual" or "on-demand". **Tasteful, product-led: no beds or bedroom
-   scenes, no body shots, no shirtless or flexing torsos, no before/after, video framing shoulder-up.** **The capsule is the hero**
+   scenes, no body shots, no shirtless or flexing torsos, no before/after, video framing shoulder-up.** **Focal-point mix** (bible 2026-11-03: 50% capsule / 25% bottle / 25% person, `image-batch.md`); in capsule-focused ads **the capsule is the hero**
    (gates §3): exactly one, bigger than the bottle in frame, in front, close to the lens; the bottle is secondary but legible.
 3. **Offer: none until verified.** The bible's "Save up to 49%" is marked [VERIFY CURRENT] → no offer slot, no "% off", no price
    in any ad until Justin/Jeremy confirm it. Every SESSION.md says "offer not verified".

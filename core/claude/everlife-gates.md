@@ -47,7 +47,7 @@ Disclaimers & AI disclosure:
 - Every AI-generated image/video carries the AI disclosure; nothing AI-generated goes live without it. Wording is "AI depictions", never "AI deceptions". Global line: "ADVERTISEMENT: AI-generated depiction and simulated portrayal. Not an actual patient or medical provider." (Differs from product disclaimers' wording — open question for Jeremy; flag until resolved.)
 
 ## 3. Creative standards gate
-- The pill/tablet is the hero, not the bottle. If a bottle appears it is large, foreground and legible.
+- **Focal-point mix** (bible 3 Nov 2026; replaces "the pill is the hero"): 50% pill-focused · 25% bottle-focused · 25% person-focused across a product's creatives (batch table Focal column; products without a pill: 75% product-focused · 25% person-focused, provisional). If a bottle appears it is large, foreground and legible.
 - Product and benefit identifiable in under 2 seconds; product names run big.
 - Texture and depth behind the product — never flat color. No shadows or outlines on type.
 - Bottles, pills, CTAs and text are never covered by another element, including a footer gradient (bible 3 Nov 2026).

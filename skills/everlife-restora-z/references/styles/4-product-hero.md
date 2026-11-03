@@ -2,7 +2,7 @@
 
 Library folders: Product Highlight · Pill-Product Focused · Minimalist · Product-as-Hero (Avatar) · Polaroid · Billboard (boards 1, 3, 4, 5).
 What the library shows: premium still lifes (bottle on wet stone with a water splash, linen and leaves, a spotlit plinth), a big serif product name, 3 icon benefits, a Trustpilot + Doctor Prescribed footer; a hand holding the pill up close; dark minimal posters with one bold headline and a 3-benefit strip; the ad shown inside an Instagram post, polaroid or city billboard.
-Why it works for Restora-Z: the creative bible says "the pill/tablet is the hero"; our real renders make product fidelity easy.
+Why it works for Restora-Z: this style fills the pill- or bottle-focused share of the bible's focal-point mix (2026-11-03); our real renders make product fidelity easy.
 
 **Statics: GPT Image 2.5** with BOTH renders attached (`--image rz_bottle.png --image rz_capsule.png`), `--quality high --resolution 2k`, ~2.75 credits. If the label comes out wrong, re-roll or composite the real render in finishing. **Video: Seedance 2.0** (45 cr) with the same references.
 

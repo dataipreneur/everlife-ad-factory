@@ -27,7 +27,7 @@
 - **Form this skill advertises: the sublingual tablet only.** The bible says Sermorelin is "available as sublingual
   tablets or injections", but creative never mentions or shows needles, injections, vials or syringes (global rule), so
   injections are out of scope. Say "easy sublingual delivery". Never "all natural".
-- **The tablet is the hero.** Not confirmed yet (see `assets/MISSING_RENDERS.md`), but every current men's winner shows
+- **Focal-point mix (bible 2026-11-03):** 50% tablet / 25% bottle / 25% person. In tablet-focused ads the tablet is the hero. Not confirmed yet (see `assets/MISSING_RENDERS.md`), but every current men's winner shows
   a **round orange tablet with an embossed "S"**; an older women's winner shows an oblong tablet stamped "SERMORELIN".
 - **Strengths (this skill covers both tablets):** **1000 mcg** ("double strength") and **500 mcg** sublingual tablets,
   same price, per the Winning Ads Reference catalog (2026-10-28; recheck on the landing page). The men's page approves

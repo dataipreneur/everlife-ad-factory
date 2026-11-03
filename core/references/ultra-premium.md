@@ -25,7 +25,8 @@ The Hims / Ro codes in `core/references/static-refs/13_Premium_DTC/README.md`, o
 Log the reference used per slot in `prompts.md` and SESSION.md.
 
 ## The gates still win (never relaxed by "premium")
-- **Tablet products: the tablet is the hero, not the bottle** (gates §3). Tablet large and sharp; a bottle, if shown, large,
+- **Focal-point mix** (gates §3, bible 2026-11-03): premium slots count toward the 50% pill / 25% bottle / 25% person split; a
+  pill-focused slot keeps the tablet large and sharp in the foreground; a bottle, if shown, large,
   foreground and legible. Tablet prompts use the attached render with the gate wording ("use the attached tablet reference exactly;
   do not invent, alter, or substitute a different pill") and never describe its shape, colour or markings.
 - **The product name runs big** and is identifiable in under 2 s: in the headline, or as the second large text. The quiet look

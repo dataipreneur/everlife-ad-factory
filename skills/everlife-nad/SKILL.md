@@ -16,7 +16,7 @@ Golden rules, all non-negotiable:
 2. **Lead with the choice (bible):** sublingual tablet **or** injection. "Injection" may be named; **never show or mention needles,
    syringes, pens or injecting, and never "needle free"** (bible Hard NO: say "easy sublingual delivery"). The vial is a still object.
    One form per ad, or both shown side by side as "the choice" (bottle + tablet beside the vial, nothing else).
-3. **The tablet is the hero** in tablet ads (bible Standards 03): larger than the bottle in frame. Strengths (200 mg / 1000 mg) never
+3. **Focal-point mix** (bible Standards 03, 2026-11-03): tablet ads 50% tablet / 25% bottle / 25% person; injection ads 75% vial / 25% person (`image-batch.md`). Strengths (200 mg / 1000 mg) never
    in copy. Voiceovers say **"N-A-D plus"**.
 4. No disease words; no "anti-aging" promises ("healthy aging" is the bible's wording); no celebrity look-alikes.
 5. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every

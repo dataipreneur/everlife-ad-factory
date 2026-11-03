@@ -45,7 +45,7 @@ How the work should look and behave. Composition, format and landing-page rules 
 Applies to every product
 Creative messaging reference
 Composition
-- —The pill or tablet is the hero, not the bottle.
+- —**Focal-point mix** (official split for all products; replaces the earlier “pill is the hero, not the bottle” rule): 50% pill-focused (the pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible) · 25% bottle-focused (the product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments) · 25% person-focused (a person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery).
 - —If a bottle appears, it is large, foreground and legible.
 - —Product and benefit must be identifiable in under two seconds.
 - —Product names run big. Make them memorable.
