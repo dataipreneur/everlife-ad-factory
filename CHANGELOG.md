@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Bible sync to 1793743706-38c1: peptide stacks list every peptide (branch `bible-sync-38c1`)
+Justin's update: every ad for a peptide stack shows each peptide (Spartan BPC-157 / TB-500 / KPV, Wolverine BPC-157 / TB-500, Klow
+BPC-157 / GHK-Cu / KPV / TB-500, Glow [PLACEHOLDER]); Spartan and Klow pages: name + peptide list on every design. Priestley: "yes sync it,
+push and merge". Originals: `_originals/2026-11-03/bible-sync-38c1/`.
+- Repo bible written; Spartan's verbatim section re-copied; global rules + gates carry the stack rule; Klow "GHK-Cu" vs the GHK Hard NO
+  and Glow's placeholder added to the gates' known gaps (Justin).
+- Spartan + Wolverine: a 💊 PEPTIDE LIST banner in SKILL.md (statics on the design in 4:5 and 9:16; videos at least on the end card;
+  missing list fails QA); Spartan image-batch now requires "BPC-157 / TB-500 / KPV" (Wolverine already had its list).
+
 ## 2026-11-03 — Team-log pages: warning reasons shown in the row (branch `teamlogs-flags-visible`)
 Priestley on the Copy Ledger: "why check shows warning for few. i dont see any" → the reasons were only in a hover tooltip.
 "yes fix it, push and merge". Originals: `_originals/2026-11-03/teamlogs-flags-visible/`.

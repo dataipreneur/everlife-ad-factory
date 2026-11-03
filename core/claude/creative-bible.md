@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793730765-9d0d) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793743706-38c1) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -144,6 +144,20 @@ The product bottle is the primary focal point, using premium product photography
 25%
 Person-focused
 A person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery.
+
+#### Peptide stacks — all peptides listed (mandatory)
+Every ad for a peptide stack must clearly show each peptide in that stack. The stack name alone is not enough — customers may not know what the branded name stands for.
+- List every included peptide, clearly and legibly, on every static ad.
+- Peptide names can run as supporting copy, a subheadline or a dedicated ingredient callout.
+- Keep the layout clean and premium. The peptide list never overwhelms the primary headline or product imagery.
+- Applies to every concept, variation and format, including 4:5 and 9:16.
+- Applies to all current and future peptide stacks, not just the ones listed below.
+
+#### Peptides by stack
+- Spartan Stack: BPC-157, TB-500, KPV
+- Wolverine Stack: BPC-157, TB-500 — confirm against the official product page, everlifemd.com/wolverine/fb
+- Klow Stack: BPC-157, GHK-Cu, KPV, TB-500
+- Glow Stack: [PLACEHOLDER] confirm peptides
 
 #### Format
 - Bullet type stays readable at story size — set a minimum and keep it generous.
@@ -1821,7 +1835,7 @@ Active men 25–55 training hard and recovering between sessions.
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Reinforce “Spartan Stack” as the brand name in every asset.
+- Include “Spartan Stack” and “BPC-157 / TB-500 / KPV” on every design.
 - No animal death. Fighting imagery is fine without blood or gore.
 
 3-peptide recovery stack focused on joints, ligaments, connective tissue, muscle repair, mobility, and gut support.
@@ -1952,7 +1966,7 @@ Recovery stack
 Adults 30–55 who want repair, gut and skin support in one protocol.
 
 ### Creative direction
-- Reinforce “Klow Stack” as the brand name in every asset.
+- Include “Klow Stack” and “BPC-157 / GHK-Cu / KPV / TB-500” on every design.
 - Write GHK in the stack name — never “GHK-Cu.”
 
 All audiences
@@ -2056,6 +2070,7 @@ Women 30–55 who want a layered approach to skin renewal.
 ### Creative direction
 - Beauty and fitness positioning — lean and fit, never bodybuilding.
 - Palette: pinks, tans and beige. No oranges or greens.
+- Include “Glow Stack” and every peptide in it on every design. [PLACEHOLDER] confirm peptides.
 
 Peptide stack focused on collagen, skin firmness, texture, tissue regeneration, gut support, and healthy inflammatory response.
 

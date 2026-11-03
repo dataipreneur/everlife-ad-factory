@@ -59,7 +59,7 @@ Active men 25–55 training hard and recovering between sessions.
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Reinforce “Spartan Stack” as the brand name in every asset.
+- Include “Spartan Stack” and “BPC-157 / TB-500 / KPV” on every design.
 - No animal death. Fighting imagery is fine without blood or gore.
 
 3-peptide recovery stack focused on joints, ligaments, connective tissue, muscle repair, mobility, and gut support.
