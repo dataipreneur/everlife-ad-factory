@@ -26,8 +26,18 @@ FEED_MARGIN = 60
 #           "that much is fine"); every other element still keeps out of it.
 #   "bottom": footer anchored at the bottom of the frame (creative lead 2026-10-27, "have it at the bottom!"); retired
 #           because the bottom ~535 px of a Reel is covered. Kept behind EVERLIFE_PROOF_AT=bottom for old jobs.
-PROOF_AT = os.environ.get("EVERLIFE_PROOF_AT", "safe")
-BOTTOM_MODE = PROOF_AT == "bottom"
+#   ⛔ HARD LOCK (Mitansh, 2026-11-02: "you should never move the proof row outside of meta safe zone for any products
+#   across all skills, image or videos! Make it a strong requirement!"). "bottom" is REMOVED: every finisher imports this
+#   module, so any attempt to move the proof row (env EVERLIFE_PROOF_AT, copy.json "proof_at") stops the run. A product
+#   that collides with the proof row = re-roll the raw, never move the footer. The disclaimer may still sit alone at the
+#   very bottom (EVERLIFE_DISC_AT / product.json "disclaimer_at", 2026-10-29 rule): it is not the proof row.
+_req = os.environ.get("EVERLIFE_PROOF_AT", "safe").strip().lower() or "safe"
+if _req != "safe":
+    raise SystemExit(f"⛔ EVERLIFE_PROOF_AT={_req!r} refused: the proof row ALWAYS stays inside the Meta safe area "
+                     f"(ends y {SAFE[3]}) on every product, image and video (Mitansh 2026-11-02). If the product collides "
+                     f"with the proof row, re-roll the raw; never move the footer.")
+PROOF_AT = "safe"
+BOTTOM_MODE = False
 FOOTER_BOTTOM = H - 48 if BOTTOM_MODE else SAFE[3]
 FOOT_W = W - 80 if BOTTOM_MODE else SAFE_W        # bottom mode = the approved full-width footer (matches the 10-26 videos)
 FOOT_X0 = (W - FOOT_W) // 2

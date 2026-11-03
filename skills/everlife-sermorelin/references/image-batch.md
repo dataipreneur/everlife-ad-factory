@@ -1,9 +1,13 @@
 # Sermorelin IMAGE ads: Batch Mode (the default for every image request)
 
+> **✋ TABLET-IN-HAND CAP (Mitansh, 2026-11-02: "Holding tablets in hand should never be more than 20% of times!"; OVERRIDES "the tablet is HELD", "Slot 1 is always F2 tablet in hand" and every hold line below):** at most 20% of the ads in any batch show a hand holding the tablet (5 ads → max 1; 10 → max 2). Every other ad stages the tablet WITHOUT a hand: on a surface beside the bottle, on a gym bench / plate / chalk tray, macro hero on texture, a big floating product shot, tablet on top of the cap, in the S-plate metaphor. The tablet stays the hero (large, sharp, exact render) and the person, if any, does something else (training, resting, looking at camera). Plan the hold column in the batch table and count it before asking to generate.
+
 > **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
+> **🖼️ HARDCORE REFERENCES H3–H11 (Mitansh, 2026-11-02: "Add all of these are Hardcore Images, references for Serm Ghk and Serm. The new ones should be inspired by these!"):** every HARDCORE slot starts from one of `core/references/hardcore-men-refs/H3…H11` (Read `REFS.md` + LOOK at the file; a different one per slot; put it in the Source column). Take format, type treatment, cast and light; rebuild with the tablet + bottle and this bible (never BPC claims, the vial or "40% Off"). Their recipe: product name as the giant headline, ONE benefit line, ONE pill CTA, lots of air.
 > **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
-> **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
+> **🔁 QA FAILS ARE RE-ROLLED BY CLAUDE, NOT ASKED (Mitansh, 2026-11-02, later the same day: "you should not be asking for rerolling the ones which doesnt pass the Q/A. Thats your task!! … Your prompts should 1shot these images!!!"; OVERRIDES the earlier "show first, then re-roll" banner):** the batch click approves the batch budget including one automatic re-roll per failed ad (≈1 Creatify credit each). After QA, re-roll every failed ad yourself with the fix named in the prompt, finish, and only then show the contact sheet with every ad and what was re-rolled. Still failing after one re-roll → show it flagged, don't ship. Never ask "re-roll?". Never ask line-by-line headline questions either (one generate click covers the batch's Tier B lines, all flagged for Jeremy).
+> **🎯 ONE-SHOT 9:16 LAYOUT = the Restora block (2026-11-02):** the WHOLE ad (text + product + tablet + hand) sits in the TOP 52%; ask for the lowest element at 40% (it lands near 50%); the bottom half is calm, empty continuation of the scene. Bottle MEDIUM (about 17% of canvas height, never 22%+), text compact (19–30%), product 30–40% as asked. A big bottle under a text block that ends at 42% physically can't end by 45%: batch hardcore2 (#1, #3, #4) landed bottles at 65–80% under the proof row. Use the LAYOUT (9:16) block in §3 verbatim.
 
 Same machine as the Restora-Z and Sermorelin GHK batches (creative lead, 2026-10-27: "speed, Creatify, batches of at least
 5 different types, mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad**
@@ -11,7 +15,7 @@ with the real bottle and tablet; `finish_batch.py` adds only the Everlife logo a
 Doctor Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip over the calm bottom band
 (prompt asks for 22%).
 
-**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin --proof count`. Rule: `core/references/creative-system.md` §2.
+**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin --proof count`. Rule: `core/references/creative-system.md` §2. **PROOF SPLIT IS HARD (Mitansh 2026-11-02, no conflicts):** ~42/28/30 per batch and per ratio; proof slots get a clean shelf in the LAYOUT (9:16: product, CTA, sticker, faces end above y 1150 of 1920); never swap a planned proof to "none" yourself (re-roll with cost or ask); `finish_batch.py --proof-check <batch folder>` must pass before showing.
 
 **Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
 
@@ -58,6 +62,7 @@ condensed Tier A headline): the all-time winners' format (~1,500 sales, `winners
 the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/tablet hero).
 
 ## 2. Flow (1 question, then generate)
+> **💪 MEN = "💪 Hardcore shirtless (Recommended)" is ALWAYS option 1 of the style/mood question** (Mitansh 2026-11-02; `core/references/style-library/MOOD-QUESTION.md`). Never hide it in another option's description.
 > **🎨 STYLES = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; replaces the Frameworks options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker). The F-framework table stays as a fallback. Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "5 (Recommended)" / "10" / "15" ·
    **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" · **Look:** "Standard: winners + frameworks (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot:
@@ -81,7 +86,7 @@ the ≥ 3 winner slots (§2 step 2). Then weight towards F4, F11, F6, F12 (name/
    table: # · source (winner ID / Meta / Pinterest file) · framework · territory · headline · tier (A / B PROPOSED) ·
    supporting lines · font / colour · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest").
    AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
-   its Tier A lines; each Tier B or ⚠ line needs its own explicit OK first** (ask before the generate question).
+   its Tier A and Tier B lines** (Tier B all marked PROPOSED, flagged for Jeremy in SESSION.md; never a line-by-line round, Mitansh 2026-11-02). Only a pre-screen ⚠ line needs its own OK.
 3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet] (add type_specimen only for the house
    editorial look, §2b), out='gen/b<date>_<n>.png', aspect_ratio=<final ratio>)` from `assets/creatify.json`. Max 4 in flight.
    **The tablet is HELD** (bible v3 page 4): between thumb and index finger in a "pull" toward the camera, or resting in
@@ -181,15 +186,18 @@ ad's own woman: age 40–58, ethnicity, hair, wardrobe, all different from every
 clothed.> No bedroom, no before/after, no needles, syringes or vials, no
 mirrors showing bodies.
 
-LAYOUT (4:5 / 1:1): 5% clear margin on every edge. The TOP 14% is calm continuation of the background (no text, no
-product): the Everlife logo is laid there. The BOTTOM 22% is calm continuation of the background (no text, product or
+LAYOUT (4:5 / 1:1): 5% clear margin on every edge. The TOP 18% of the canvas is COMPLETELY EMPTY: smooth, dark,
+out-of-focus background only, no text, no box, no product, no head, no bright lights (the Everlife logo is laid there later).
+The FIRST line of text starts at 19% of the canvas height or lower; the person's head stays below 20%. The BOTTOM 22% is calm continuation of the background (no text, product or
 hands): the proof footer is laid there. The whole product (bottle, tablet, hands, plinth tops) ends ABOVE 72% of the
 canvas height and all text above 76%.
-LAYOUT (9:16, same as Sermorelin GHK: "use as much of the artboard as possible around the safe zones"): the TOP 12% is
-calm continuation of the background (the Everlife logo is laid there). ALL TEXT (name, headline, lines, badges) stays
-inside the central column (15% in from the left and right edges). PICTURES are full-bleed: the product, hands, person and
-scene may use the whole width and come down to 56% of the canvas height (the model lands ~8% lower; the Trustpilot row
-sits at ~67–72%). Below that, the scene simply continues (floor, surface, fabric) with no text, product or hands: Meta's
+LAYOUT (9:16, ONE-SHOT, Restora block, 2026-11-02): the TOP 18% is completely empty, calm, dark continuation of the
+background (the Everlife logo is laid there). ALL TEXT stays compact between 19% and 33% of the height, inside the central
+column (15% in from the left and right edges). The product is MEDIUM: the bottle about 17% of the canvas height (never
+taller), its base at 40%; tablet and any hand also between 30% and 40%; its surface (box, plate, rack arm) has its top
+edge at 40%, shot from a low camera. EVERYTHING (text, product, tablet, hands) sits in the TOP 42%; the lowest element
+ends at 40% (GPT Image 2.5 lands ~10% lower, so this comes back near 50%: Restora's proven ask). The BOTTOM 48% is calm, empty continuation of the scene (dark floor, deep shadow, the person's legs in
+darkness): no text, product, hands or bright highlights. The person may be full-bleed behind. Meta's
 UI and the bottom disclaimer sit there.
 ```
 Ask high on purpose: GPT Image 2.5 on Creatify places the product lower than asked (GHK batch 4, 2026-10-29: "between

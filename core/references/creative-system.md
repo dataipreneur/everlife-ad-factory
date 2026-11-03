@@ -1,5 +1,11 @@
 # Creative system (shared by every Everlife product skill) — adopted 2026-10-29
 
+> **🔁 NEVER STOP AFTER A BATCH (Mitansh, 2026-11-02, every product, images AND video: "As soon as 1st batch is done, start writing prompts for 2nd batch! this is the rule for all products!"):** the moment a batch is finished, shown and rated, start the NEXT batch in the same turn, without asking: same setup (audience, strength/form, ratio, model, boldness, mood) unless the user changed it; new styles/scenes per the variety rules (untried styles first); fix what QA found in the last batch inside the new prompts; show the batch table + Tier B headline options and ask for the approval (cost shown). The spend gate still holds: nothing is generated until the user approves that batch. Videos: the next script is written while the last one renders (SKILL.md step 4).
+
+> **⛔ Proof row ALWAYS inside the Meta safe area (Mitansh, 2026-11-02, HARD, every product, every skill, image AND video):** the Trustpilot / Doctor Prescribed / Ships Free / 100,000+ proof row ends at or above y 1385 on 1080×1920 (`safezones.py`). Never move it lower or outside the safe area by any means (env `EVERLIFE_PROOF_AT`, copy.json `proof_at`, flags, manual edits); the tools refuse. If the product or text collides with the proof row: re-roll the raw (cost approved) or ask the user. Never move the footer. The disclaimer alone may sit at the very bottom.
+
+> **✋ TABLET-IN-HAND CAP (Mitansh, 2026-11-02: "Holding tablets in hand should never be more than 20% of times!"; OVERRIDES "the tablet is HELD", "Slot 1 is always F2 tablet in hand" and every hold line below):** at most 20% of the ads in any batch show a hand holding the tablet (5 ads → max 1; 10 → max 2). Every other ad stages the tablet WITHOUT a hand: on a surface beside the bottle, on a gym bench / plate / chalk tray, macro hero on texture, a big floating product shot, tablet on top of the cap, in the S-plate metaphor. The tablet stays the hero (large, sharp, exact render) and the person, if any, does something else (training, resting, looking at camera). Plan the hold column in the batch table and count it before asking to generate.
+
 > **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
 
 Source: the creative team member's Restora-Z work (audit `my-ad-changes.md`, 2026-10-29) distilled to what holds for ANY form:
@@ -49,6 +55,12 @@ Never trust the model with a logo, a label, a rating badge, a disclaimer or a pr
   column, and pass it on every finish: `--proof trust` / `--proof count` / `--proof none`. An ad's 4:5 and 9:16 use the same value.
   Videos too (Priestley 2026-11-02): `core/scripts/proof_next.py --product <id> --log <tag>` → copy.json `"proof"`; the footer
   carries the one proof (or none) through the end card, which has no count line of its own. Logo and verbatim disclaimer stay on every creative.
+- **Enforced, no exceptions (Mitansh 2026-11-02: "have this enforced everywhere… without any conflicts!"):** the split holds per batch
+  AND per ratio. (1) Plan it before writing prompts (`--proof-plan N`, Proof column). (2) Every slot planned trust/count gets a clean
+  shelf in its LAYOUT block: 9:16 product, CTA, sticker and faces end above y 1150 of 1920 (raw 2048: y 1225), with plain scene under
+  it; 4:5 / 1:1 bottom 18% calm. (3) Finish with the planned value; if the row would cover the product, CTA, a sticker or a face, do
+  NOT switch to none: re-roll that raw (cost shown) or ask. (4) `finish_batch.py --proof-check <batch folder>` must print ✅ before the
+  batch is shown (it reads `proof_log.jsonl`, written by every finish). Videos: `proof_next.py` per video, never overridden to none.
 
 ## 3. The hero is deliberate and sized
 The form's hero (`product.json → hero.element`: the capsule, the tablet, the vial, the spray) fills **≥ 35% of the canvas width**,
@@ -63,6 +75,10 @@ CTA (bible list), headline, every benefit line and any offer go in the prompt's 
 result for each string (the model still drops a CTA ~1 in 10). A missing or altered string = fail → one free local fix or one re-roll.
 
 ## 5. The footer must not degrade what sits above it
+- **No proof row → no shadow band (Mitansh, 2026-11-02, every product, image + video: "Why do you have this shadow??"):** the
+  finishers only paint the footer scrim/gradient when there IS a proof row (or disclaimer block) to read. `--proof none` /
+  copy.json `"proof": "none"` leaves the art untouched except the small fade behind the bottom disclaimer. QA every no-proof
+  final for a dark band across ~y 1230–1545; if one shows up, the installed toolkit is stale: `bash core/scripts/preflight.sh --install`.
 - Run `unfade_cta.py raw final out --ratio …` when a CTA or line sits just above the footer (the transparent footer's fade washes it out).
 - A native 9:16 raw is finished AS IS: `finish_batch.py --fit trusted --shift 0` (logo, proof row in the safe area, disclaimer at the
   bottom). NO repositioning, padding, blur or auto-shift (Mitansh 2026-10-29: "0 blurring, the raw ones look better"). If the raw

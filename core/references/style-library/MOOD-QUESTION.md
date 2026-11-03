@@ -11,6 +11,12 @@ which does random every time."
 3. **This product's own favourite mood** (the skill's existing first non-random mood, e.g. "✨ Ultra premium, product only").
 4. **This product's second mood** (the skill's existing next mood). Any other mood the skill used to list stays reachable via "Other".
 
+> **⛔ 💪 HARDCORE SHIRTLESS IS ALWAYS A VISIBLE OPTION (Mitansh, 2026-11-02: "WHy the fuck did Sermorelin skill didnt show
+> "HARDCORE SHIRTLESS" Option man!???"):** for any product in `core/references/hardcore-men.json` whose audience includes men, the
+> Mood question is: 1 **"💪 Hardcore shirtless (Recommended)"** (every men's slot HARDCORE per `hardcore-men.md`, H3–H11 refs,
+> styles still drawn at random) · 2 "🎲 Surprise me" (random styles, 40% HARDCORE) · 3 "📚 Pick from the 15 styles" · 4 the
+> product's own favourite mood. Never bury hardcore inside another option's description.
+
 ## 🎲 Surprise me
 Run `python3 -I <skill-dir>/core/scripts/pick_styles.py --product <product id> --n <how many>` (add `--allow S12` only when the
 product's `reviews.md` has screened reviews). It draws N different styles at random, skips styles used in this product's last two batches

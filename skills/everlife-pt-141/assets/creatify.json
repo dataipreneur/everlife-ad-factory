@@ -1,8 +1,14 @@
 {
  "project_id": "cdf841e5-3fa4-4306-8733-6f299cf101af",
  "spray": "assets/ebc4c5dd_pt141_spray.png",
- "sublingual_bottle": null,
- "tablet": null,
+ "sublingual_bottle": "assets/3baed754_pt141_sublingual_bottle.png",
+ "tablet": "assets/e657e29b_pt141_tablet_ref.jpg",
  "type_specimen": null,
- "note": "Created 2026-10-28 by mitansh@everlifemd.com (aspect 9:16, 1080p). Spray imported; sublingual bottle + tablet not yet imported: on the first sublingual run, upload_file (presigned) + curl PUT + composer_import_asset for assets/pt141_sublingual_bottle.png and assets/pt141_tablet.png and write their returned paths here. Reuse this project for every image. It belongs to the account that created it; if composer_project_get fails from another account, create a new one the same way and rewrite this file."
+ "note": "Created 2026-10-28 by mitansh@everlifemd.com (aspect 9:16, 1080p). Spray imported; sublingual bottle + tablet not yet imported: on the first sublingual run, upload_file (presigned) + curl PUT + composer_import_asset for assets/pt141_sublingual_bottle.png and assets/pt141_tablet.png and write their returned paths here. Reuse this project for every image. It belongs to the account that created it; if composer_project_get fails from another account, create a new one the same way and rewrite this file.",
+ "render_urls": {
+  "pt141_spray.png": "https://cdn.creatify.ai/api_uploads/48429c90-8d9e-4691-a9ad-630252f41d21/b8355c5c689e48de8b4bc1640f8685fc/pt141_spray.png",
+  "pt141_sublingual_bottle.png": "https://cdn.creatify.ai/api_uploads/48429c90-8d9e-4691-a9ad-630252f41d21/85403fee3af4467ca7f35d97149398f7/pt141_sublingual_bottle.png",
+  "pt141_tablet_ref.jpg": "https://cdn.creatify.ai/api_uploads/48429c90-8d9e-4691-a9ad-630252f41d21/cc80599a73dd4e09a199500961ff4adf/pt141_tablet_ref.jpg"
+ },
+ "render_urls_note": "Uploaded 2026-11-02 for Model Playground (Nano Banana); spray + bottle with hidden transparent pixels set to white."
 }

@@ -84,6 +84,36 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 .card.nothumb > .body { grid-column: 1 / -1; }
 .card.winner { border-left: 4px solid var(--winner); }
 .card.retired { opacity: .85; }
+/* Image tiles: the board shows only the ad + who made it; everything else opens in the detail dialog. */
+.lanes .cards, .queue .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+.cards > .empty { grid-column: 1 / -1; }
+.tile { display: flex; flex-direction: column; gap: 0; padding: 0; text-align: left; font-weight: 400; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; cursor: pointer; min-width: 0; transition: transform .12s ease, border-color .12s ease; }
+.tile:hover { transform: translateY(-2px); border-color: var(--accent); }
+.tile.winner { border: 2px solid var(--winner); }
+.tile.retired { opacity: .8; }
+.tile .img { aspect-ratio: 4 / 5; background: var(--sunken); display: grid; place-items: center; overflow: hidden; }
+.tile .img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.tile .img .ph { font-size: 12px; color: var(--muted); text-align: center; padding: 10px; overflow-wrap: anywhere; }
+.tile .by { font-size: 14px; color: var(--muted); padding: 10px 12px; border-top: 1px solid var(--line); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile .by b { color: var(--ink); font-weight: 600; }
+#detailDlg { width: min(1000px, calc(100vw - 32px)); }
+.detail { padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 760px) { .detail { grid-template-columns: 1fr; } }
+.detail .bigimg { padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; cursor: zoom-in; background: var(--sunken); font-weight: 400; }
+.detail .bigimg img { display: block; width: 100%; height: auto; }
+.detail .info { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.detail .info .head { display: flex; gap: 8px; align-items: start; justify-content: space-between; }
+.detail .info .title { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 20px; line-height: 1.2; overflow-wrap: anywhere; }
+.detail .close-row { display: flex; justify-content: flex-end; }
+.comments { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 12px; }
+.comments h4 { margin: 0; font-family: var(--f-display); font-stretch: 85%; font-size: 16px; text-transform: uppercase; letter-spacing: .05em; display: flex; gap: 8px; align-items: baseline; }
+.comments h4 small { font-family: var(--f-mono); font-size: 12px; color: var(--muted); letter-spacing: 0; }
+.clist { display: grid; gap: 8px; max-height: 280px; overflow-y: auto; }
+.comment { background: var(--sunken); border-radius: 8px; padding: 8px 10px; display: grid; gap: 2px; }
+.comment .ch { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); }
+.comment .ch b { color: var(--ink); font-size: 13.5px; }
+.comment p { margin: 0; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.cform { display: grid; gap: 8px; }
 .thumb { grid-column: 1; width: 160px; border-radius: 6px; background: var(--sunken); overflow: hidden; align-self: start; }
 @media (max-width: 520px) { .thumb { width: 120px; } }
 .thumb img { display: block; width: 100%; height: auto; }
@@ -312,6 +342,30 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
   </form>
 </dialog>
 
+<dialog id="detailDlg" aria-label="Ad details">
+  <div class="detail">
+    <div id="detailLeft"></div>
+    <div class="info">
+      <div class="info" id="detailInfo"></div>
+      <section class="comments" aria-labelledby="cHead">
+        <h4 id="cHead">Comments <small id="cCount"></small></h4>
+        <div id="cList" class="clist"></div>
+        <form id="commentForm" class="cform" novalidate>
+          <label class="field" for="cName">Your name
+            <input id="cName" maxlength="60" autocomplete="name" placeholder="e.g. Jack">
+          </label>
+          <label class="field" for="cText">Comment
+            <textarea id="cText" maxlength="800" placeholder="What works, what to change…"></textarea>
+          </label>
+          <div class="formfoot"><span class="formerr" id="cErr"></span><button type="submit" class="primary" id="cSave">Add comment</button></div>
+        </form>
+        <p class="hint" id="cReadonly" hidden style="margin:0">Sign in to claude.ai with access to this board to comment.</p>
+      </section>
+      <div class="close-row"><button type="button" id="detailClose">Close</button></div>
+    </div>
+  </div>
+</dialog>
+
 <dialog id="viewDlg" aria-labelledby="viewTitle">
   <div class="viewer">
     <div class="head"><strong id="viewTitle"></strong><span id="viewBadge"></span></div>
@@ -458,6 +512,8 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     let names = {};
     if (state.user && ids.size) { try { names = await state.user.profiles([...ids]); } catch (_) { names = {}; } }
     const who = (id) => (id && names[id] && names[id].name) || (id && id === state.me ? "you" : "a teammate");
+    state.who = who;
+    if (state.detailKey && $("detailDlg").open) renderDetail();
 
     renderNotes(who);
 
@@ -550,7 +606,75 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     return h("div", { class: "recipe" }, keys.map(k => h("span", null, h("i", null, k.replace(/_/g, " ") + " "), String(r[k]))));
   }
 
+  // Board tile: the ad image + "Created by" only. Click opens the full details.
   function card(e, who) {
+    const eff = effective(e);
+    let img;
+    if (!e.preview) img = h("div", { class: "ph" }, e.label || "No preview");
+    else {
+      const pk = previewKey(e);
+      if (!state.previews.has(pk)) { loadPreview(e); img = h("div", { class: "ph" }, "Loading…"); }
+      else { const src = state.previews.get(pk); img = src ? h("img", { src, alt: "", loading: "lazy" }) : h("div", { class: "ph" }, e.label || "No preview"); }
+    }
+    return h("button", { type: "button", class: "tile " + eff.status, title: e.label || "Open details",
+      "aria-label": (e.label || "Ad") + " · " + ratingLabel(eff.rating) + " · open details", onclick: () => openDetail(e) },
+      h("div", { class: "img" }, img),
+      h("div", { class: "by" }, "Created by: ", h("b", null, who(e.rater))));
+  }
+
+  function openDetail(e) {
+    state.detailKey = e.key; state.confirmDel = null;
+    renderDetail();
+    if (!$("detailDlg").open) $("detailDlg").showModal();
+  }
+  function renderDetail() {
+    if (!state.detailKey) return;
+    const e = allEntries().find(x => x.key === state.detailKey);
+    if (!e) { if ($("detailDlg").open) $("detailDlg").close(); state.detailKey = null; return; }
+    const who = state.who || ((id) => (id && id === state.me ? "you" : "a teammate"));
+    const src = previewSrc(e);
+    if (e.preview && !src) loadPreview(e);
+    const left = src ? h("button", { type: "button", class: "bigimg", title: "Open full size", "aria-label": "Open full size", onclick: () => openView(e) }, h("img", { src, alt: "The ad: " + (e.label || "") }))
+      : h("div", { class: "thumb" }, h("div", { class: "ph" }, e.preview ? "Loading preview" : "No preview"));
+    $("detailLeft").replaceChildren(left);
+    $("detailInfo").replaceChildren(...detailKids(e, who));
+    renderComments(e);
+  }
+
+  // ---------- comments (anyone signed in; saved in the writer's own collection, readable by everyone) ----------
+  function commentsFor(key) { return ofType("comment").filter(c => c.target === key).sort((a, b) => String(a.createdAt || "").localeCompare(String(b.createdAt || ""))); }
+  function renderComments(e) {
+    const list = commentsFor(e.key);
+    $("cCount").textContent = String(list.length);
+    $("cList").replaceChildren(...(list.length ? list.map(c => {
+      const mine = c.by && c.by === state.me;
+      const can = state.isAdmin || mine;
+      const parts = [h("div", { class: "ch" }, h("b", null, c.name || "Someone"), shortDate(c.createdAt)), h("p", null, c.text || "")];
+      if (state.confirmDel === c.key) parts.push(confirmRow("Delete this comment?", () => removeDoc(c.key, "Comment deleted.")));
+      else if (can) parts.push(h("div", { class: "actions" }, h("button", { type: "button", class: "link", onclick: () => { state.confirmDel = c.key; render(); } }, "Delete")));
+      return h("div", { class: "comment" }, parts);
+    }) : [h("p", { class: "hint", style: "margin:0" }, "No comments yet. Be the first.")]));
+    const canComment = !!(state.db && state.me);
+    $("commentForm").hidden = !canComment;
+    $("cReadonly").hidden = canComment;
+  }
+  async function saveComment(ev) {
+    ev.preventDefault();
+    const e = allEntries().find(x => x.key === state.detailKey); if (!e) return;
+    const name = $("cName").value.trim().slice(0, 60), text = $("cText").value.trim().slice(0, 800);
+    if (!name) { $("cErr").textContent = "Add your name."; $("cName").focus(); return; }
+    if (!text) { $("cErr").textContent = "Write a comment first."; $("cText").focus(); return; }
+    $("cErr").textContent = ""; $("cSave").disabled = true;
+    try {
+      await ensureRater();
+      await state.db.collection("data/users/" + state.me).doc(newId("c", e.label)).set({ type: "comment", target: e.key, product: e.product, kind: e.kind, name, text, by: state.me, createdAt: new Date().toISOString() });
+      try { localStorage.setItem("wb-comment-name", name); } catch (_) {}
+      $("cText").value = ""; setStatus("Comment added.");
+    } catch (err) { $("cErr").textContent = writeRefused(err); }
+    finally { $("cSave").disabled = false; }
+  }
+
+  function detailKids(e, who) {
     const eff = effective(e);
     const canChange = state.isAdmin || (state.canWrite && e.rater && e.rater === state.me);
     const kids = [];
@@ -596,8 +720,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
         canChange ? h("button", { type: "button", class: "link", onclick: () => openRate(e) }, "Edit") : null,
         canChange ? h("button", { type: "button", class: "link", onclick: () => { state.confirmDel = e.key; render(); } }, "Delete") : null));
     }
-    const t = thumb(e);
-    return h("article", { class: "card " + eff.status + (t ? "" : " nothumb") }, t, h("div", { class: "body" }, kids));
+    return kids;
   }
 
   // ---------- forms ----------
@@ -798,7 +921,7 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     const docs = [...state.docs].map(([key, d]) => ({ key, ...d }));
     const pick = (t) => docs.filter(d => d.type === t);
     const data = JSON.stringify({ board: "Everlife Winners Board", exportedAt: new Date().toISOString(), note: "Preview images are not included.",
-      raters: [...state.raters.keys()], entries: pick("entry"), reviews: pick("review"), meta: pick("meta"), product_notes: pick("product_note") }, null, 2);
+      raters: [...state.raters.keys()], entries: pick("entry"), reviews: pick("review"), meta: pick("meta"), product_notes: pick("product_note"), comments: pick("comment") }, null, 2);
     try { await state.downloads.save({ filename: "everlife-winners-board-" + today() + ".json", data }); setStatus("Backup saved."); }
     catch (err) { if (err && err.code !== "declined") setStatus("Export failed: " + (err.message || err.code) + ".", true); }
   }
@@ -854,6 +977,11 @@ legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
     $("reviewCancel").addEventListener("click", () => $("reviewDlg").close());
     $("metaCancel").addEventListener("click", () => $("metaDlg").close());
     $("viewClose").addEventListener("click", () => $("viewDlg").close());
+    $("detailDlg").addEventListener("click", (ev) => { if (ev.target === $("detailDlg")) $("detailDlg").close(); });
+    $("detailDlg").addEventListener("close", () => { state.detailKey = null; state.confirmDel = null; $("cErr").textContent = ""; });
+    $("detailClose").addEventListener("click", () => $("detailDlg").close());
+    $("commentForm").addEventListener("submit", saveComment);
+    try { const n = localStorage.getItem("wb-comment-name"); if (n) $("cName").value = n; } catch (_) {}
     $("viewDlg").addEventListener("click", (ev) => { if (ev.target === $("viewDlg")) $("viewDlg").close(); });
     $("viewReview").addEventListener("click", () => { const e = state.viewTarget; $("viewDlg").close(); if (e) openReview(e); });
 

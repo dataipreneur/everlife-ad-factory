@@ -255,3 +255,33 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 
 ## Mitansh, 2026-11-02: smeared edges (PT-141 batch 11)
 - `reposition_916.py` shrank 4 raws and edge-stretched the margins: visible streaks on the sides and bottom. "why the hell are these things blurry on the edges! Who told you to do that!" → never reposition/shrink/stretch/blur; finish as-is with `--shift 0`; a colliding raw is re-rolled.
+
+## Tablet-in-hand overuse (2026-11-02, Mitansh)
+- "Youre getting redundant on making images with the model holding a tablet in their hands! I dont want them everywhere."
+  Bible v3's "tablet held" had been applied to every slot (4/4 in the hardcore batch plan). Rule now: a hand on the tablet in
+  at most 30% of ads/shots (4 → 1); the rest show the real tablet big on a surface, levitating or macro. Hold column in every table.
+
+## Hardcore not hardcore enough (2026-11-02, Mitansh)
+- Batch hardcore1000 (Nano Banana Pro): "They are trash! Bullshit!!! Make them even more jacked! Even more hardcore! With veins
+  popping." The old line ("lean, dense, defined but natural, not a stage bodybuilder") gave fit-dad bodies. Now: EXTREMELY JACKED,
+  pro-physique size, veins popping, striations, full pump (hardcore-men.md prompt line). QA fails anything merely "athletic".
+
+## Logo band ignored → pixel-zone layout (2026-11-02, Mitansh)
+- "TOP 12% calm" in words was ignored by GPT Image 2.5 (3/4 raws had the name at y 2.5% → logo on top of the type; mirror-fit
+  then copied the text into the fill). Mitansh: "You need to write the prompt for image models in that way!" Fix that worked 4/4:
+  explicit pixel zones (A empty 0-330 / B 340-1180 all text+product / C 1180+ scene only) + head y-range + "first line starts at
+  y 360" (image-batch.md STRICT LAYOUT). Product still drifts ~+15%: ask base at y 950.
+
+## Hardcore style batches 1–3 (2026-11-02, men 1000, 12 statics, 12 credits, 0 re-rolls)
+- **Problem → solution wins:** the S05 problem/solution cards ("Growth Hormone Drops. The Work Doesn't.") was the only Winner; pure-attitude lines (bible "Dominate Your Potential") and the 3-problems list were rated weak. Lead Tier B options with problem → solution (memory + Mitansh: "write problem solution angles!").
+- **Product still lands ~25–30% lower than asked**, even at "ends above y 1000": the 9:16 proof row (raw y ~1325–1477) then covers the CTA/label on most ads. Free fix used 5×: `--proof none` + `unfade_cta.py --rows <CTA rows>`. Next time ask every product element to end above **y 900** and the CTA above y 1050, or plan proof=none for person-led layouts. Billboards are the exception: the trust row sits on the catwalk cleanly.
+- Skylight/beam tops trip the finisher's logo busy-check; keep Zone A a plain wall/sky.
+- Never stop after a batch: draft the next one straight away (core/references/creative-system.md top rule).
+- **Newspaper/advertorial 9:16 (H10, 2026-11-02):** make the page fill the whole frame with an EMPTY newsprint masthead band (y 0-330) + a double rule under it; `finish_batch.py --logo-w 311` lays the real logo as the paper's nameplate (Mitansh: "Have the logo as Newspaper heading!"). A blurred bright gym above the page made the logo vanish and failed the busy check.
+- **Proof rows kept landing on the product/face/CTA** (batch refs-b1: 4/4 finished with none). Plan person-led and product-low layouts as proof=none up front, and put the proof on layouts with a natural shelf under the content (billboard catwalk, newspaper columns) so the split doesn't collapse.
+- **Shadow band on no-proof 9:16 ads (fixed 2026-11-02):** `finish_batch.py` painted the footer scrim (dark gradient ~y 1230-1545) even with `--proof none`. Patched in core/tools + installed copy: no scrim without a proof row. Ads finished earlier today with `--proof none` (b1 #3, b2 #1/#2/#4, b3 #1/#2/#3) still carry the band; re-finish them from their raws if they're used.
+
+## Batch hardcore-refs-b2 (2026-11-02, men 1000, 4:5, 9 credits incl. 5 re-rolls)
+- **4:5 pixel zones were ignored** (CTA at 87–89% on #3/#4 twice, even with "y 1300–2048 empty"). What worked: a numbered TOP-TO-BOTTOM element order with "the CTA comes BEFORE the product; the product is the LAST and LOWEST element" + "bottom 35% empty" + product size as % of height.
+- 4:5 finisher shifts ~90–130 px down for the logo; plan the content to end at ~62% so the 18% footer stays clear.
+- Neon/gym scenes invent wall slogans ("DISCIPLINE BUILDS FREEDOM"): say "NO signs, posters, slogans or lettering on walls or equipment".

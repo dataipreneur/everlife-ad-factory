@@ -340,8 +340,9 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     o = out.convert("RGBA")
     if story:
         fy = sz.FOOTER_BOTTOM - foot.height
-        sc_layer = scrim(W, foot.height, tone, top_fade=120, bottom_fade=160)
-        o.alpha_composite(sc_layer, (0, fy - 120))
+        if PROOF != "none":   # no proof row → nothing to read there: no dark band across the art (Mitansh 2026-11-02: "Why do you have this shadow??")
+            sc_layer = scrim(W, foot.height, tone, top_fade=120, bottom_fade=160)
+            o.alpha_composite(sc_layer, (0, fy - 120))
     else:
         bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # retired bottom mode: same bottom line as the videos
         fy = H - foot.height - bottom_pad
@@ -410,12 +411,16 @@ def main():
                     help="this ad's proof (split 2026-11-02: trust ~42%%, badge + count ~28%%, none ~30%%; see --proof-plan). "
                          "Default: trust, with a reminder")
     ap.add_argument("--proof-plan", type=int, metavar="N", help="print the trust / count / none split for an N-ad batch and exit")
+    ap.add_argument("--proof-check", metavar="DIR", help="check a batch folder's FINALs against the split (~42/28/30, per ratio) "
+                    "from its proof_log.jsonl; exit 1 when it is off (HARD rule, Mitansh 2026-11-02)")
     a = ap.parse_args()
     global LOGO_W, LOGO_POS, PROOF
     if a.proof_plan:
         for i, p in enumerate(proof_plan(a.proof_plan), 1):
             print(f"ad {i}: --proof {p}")
         return
+    if a.proof_check:
+        raise SystemExit(proof_check(a.proof_check))
     if a.proof:
         PROOF = a.proof
     elif a.gen:
@@ -441,10 +446,51 @@ def main():
     tone, top_tone, shift, fy, story = info['tone'], info['top_tone'], info['shift'], info['fy'], info['story']
     ly = LOGO_TOP[a.ratio]; foot_h = info['foot_h']
     out.save(a.out, quality=95)
+    _log_proof(a.out, a.ratio, PROOF)
     where = f"y {fy}–{fy + foot_h} (safe area)" if story else "bottom"
     disc_where = "bottom of frame" if (story and DISC_AT == "bottom") else "in footer"
     print(f"done {a.out}  tone={tone}  logo=top@{ly}px({top_tone}) shift={shift}px  "
           f"footer={foot_h}px @ {where}  disclaimer={disc_where}  proof={PROOF}")
+
+
+def _log_proof(out_path, ratio, proof):
+    """Record each FINAL's proof next to it (proof_log.jsonl), so --proof-check can audit the batch split."""
+    import json, time
+    d = os.path.dirname(os.path.abspath(out_path)); f = os.path.join(d, "proof_log.jsonl")
+    with open(f, "a") as fh:
+        fh.write(json.dumps({"file": os.path.basename(out_path), "ratio": ratio, "proof": proof,
+                             "t": time.strftime("%Y-%m-%dT%H:%M:%S")}) + "\n")
+
+
+def proof_check(folder):
+    """HARD rule (Mitansh 2026-11-02): every batch follows ~42% trust row / ~28% Trustpilot badge + 100,000+ / ~30% none,
+    per ratio. Compares the batch's FINAL files (latest log entry per file, only files that still exist) with proof_plan(N)."""
+    import json
+    f = os.path.join(folder, "proof_log.jsonl")
+    if not os.path.exists(f):
+        print(f"❌ no proof_log.jsonl in {folder}: finish the FINALs with this finish_batch.py so their proof is recorded"); return 1
+    latest = {}
+    for ln in open(f):
+        try:
+            e = json.loads(ln)
+        except ValueError:
+            continue
+        if os.path.basename(e.get("file", "")).startswith("FINAL") and os.path.exists(os.path.join(folder, e["file"])):
+            latest[e["file"]] = e
+    bad = 0
+    for ratio in sorted({e["ratio"] for e in latest.values()}):
+        got = [e["proof"] for e in latest.values() if e["ratio"] == ratio]
+        n = len(got); want = proof_plan(n)
+        gc = {k: got.count(k) for k in ("trust", "count", "none")}; wc = {k: want.count(k) for k in ("trust", "count", "none")}
+        ok = gc == wc
+        bad += not ok
+        print(f"{'✅' if ok else '❌'} {ratio}: {n} ads · trust {gc['trust']}/{wc['trust']} · count {gc['count']}/{wc['count']} · "
+              f"none {gc['none']}/{wc['none']}  (got/required)")
+    if bad:
+        print("❌ Proof split is off. Fix BEFORE showing the batch: re-finish with the planned --proof; if the row would cover the product, "
+              "CTA or a face, re-roll that raw with a clean shelf above the row (cost shown) or ask the user. Never swap a planned proof to "
+              "'none' on your own.")
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":
