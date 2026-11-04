@@ -78,6 +78,8 @@ visual (F2, F5, F8, F10, F11, F12). Weight towards F2, F4, F8, F11, F3, which ma
 
 **Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block. Build every record with `core/scripts/teamlog.py` (it saves the exact prompt and checks the record; TEAM-LOGS §6) and send the file it prints. `teamlog.py close <job>` must print ✅ before SESSION.md. (The local `restora-z-copy-log.md` below stays as the fallback.)
 
+**Ad Review: read the flags first (`core/ad-review/AD-REVIEW.md` §3):** before the batch table, read this product's flagged ads (losers) and their reasons. Never repeat a flagged recipe (hook / headline + style + scene); a compliance flag bans anything close. Turn the top reasons into explicit checks for this batch, name them under the table, check them in QA. Unreachable → "no flags read", carry on.
+
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
 timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
@@ -192,6 +194,7 @@ LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for th
 ```
 
 ## 4. After the batch
+- **Post every finished ad (Ad Review, `core/ad-review/AD-REVIEW.md` §4):** after finishing, write each finished creative as an `entry` with its preview (no rating, no question to the operator). Reviewers flag the losers later; winners come from the data.
 - Contact sheet first, then let the user pick winners. Winners → `9:16` re-make (same prompt, MODEL_RATIO 2:3) only after approval.
 - Log each headline + framework in `~/Everlife-Creative/restora-z-copy-log.md`.
 - Everything is a draft → creative review → Jeremy. List any borderline line ("Chronic insomnia", "Calms anxiety") in `SESSION.md` for him.

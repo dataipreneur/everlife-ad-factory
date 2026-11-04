@@ -9,7 +9,7 @@ learn on that.. and then automate for better prompting is most likely helpful".
 | Activity & Spend Log | https://claude.ai/artifact/R2GqUTb8pKbSniNmjGqBre | each operator, own rows (Claude does it) | **Priestley + leads only** (Editors); an operator sees only their own runs |
 | Copy Ledger | https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o | each operator, own rows | the whole team |
 | Prompt & Outcome Log | https://claude.ai/artifact/YALbdpQKrMMfZzA9mr32Y2 | each operator, own rows | the whole team |
-| Winners Board (ratings) | https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M | see `core/winners-board/WINNERS-BOARD.md` | the whole team |
+| Ad Review (flag the losers; replaced the Winners Board) | https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M | see `core/ad-review/AD-REVIEW.md` | the whole team reads; reviewers flag |
 
 Sharing (Priestley, from each page's Share menu): Activity log → Priestley + leads as **Editors**, operators as **Contributors**;
 Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must be signed in to claude.ai.
@@ -29,7 +29,7 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
 
 ## 1. IDs
 - **run_id** = `<YYYYMMDD>-<product id>-<4 random letters>`, made once at the start of a skill run; every record of that run carries it.
-- **ad_id** = the id of the ad's Winners Board entry (`e-...`) when it has one, else `<run_id>-<slot number>` (⏸ board PAUSED since 2026-11-03: always `<run_id>-<slot number>`). The prompt log and the
+- **ad_id** = `<run_id>-<slot number>`; the same id goes on the ad's Ad Review `entry`, so flags join the logs.
   copy ledger carry it, so a generation links to its rating, reviews and Meta results on the board.
 
 ## 2. When Claude writes and reads (the flow)
@@ -71,8 +71,8 @@ style board>", ref:{type, id, parent_ad_id, changed}, model, settings:{ratio, re
 copy:{headline (images), hook (videos: the opening spoken line), cta} (set at submit with `--headline`/`--hook`/`--cta`; `teamlog.py
 copy` fills any blank after the batch), result_file, qa:{pass:true|false, reasons:["..."]}, rerolls, cost:{creatify, higgsfield}}`.
 Keep `prompt` exact (it is the point of the log); never put a preview image here (the board holds previews).
-**`ref` (what this generation was built from; always set it, images and videos):** `type` = `board_winner` (a Winners Board
-winner, its mutation slot) · `meta_winner` (the CPA-ranked Winning Ads Reference) · `own_ad` (any earlier Everlife ad that is not
+**`ref` (what this generation was built from; always set it, images and videos):** `type` = `board_winner` (archived: the old Winners Board
+winner, its mutation slot; not used since 2026-11-03) · `meta_winner` (the CPA-ranked Winning Ads Reference) · `own_ad` (any earlier Everlife ad that is not
 on the CPA ranking, e.g. an old Frame.io / Drive base like Base116) · `style_board` (one of the 15 styles, S01–S15)
 · `hardcore_ref` (H1–H11) · `product_example` (style-library product examples) · `outside` (Pinterest or any other outside ad)
 · `hook_engine` (video: a Hook Bank family/hook) · `none`. `id` = which one (board entry id `<uid>/e-…`, `S13`, `H7`, the winning ad's
@@ -81,7 +81,7 @@ page filters and counts by `type`; the learning report compares outcomes by `typ
 
 ## 4. Learning report: only when someone asks
 Trigger: "what's working for <product>?", "learning report", "which prompts win?". Read the Prompt log `gen` records for the
-product (and style/model if named), join them to the Winners Board by `ad_id` (final rating, reviews, Meta results), and report in
+product (and style/model if named), join them to Ad Review by `ad_id` (flags and their reasons; Meta results once imported), and report in
 chat: setups and prompt lines common in winners, inputs that lead to Weak/Kill, QA failures that repeat and the prompt fix that
 cured them, re-roll cost. Say how many rated ads it rests on (under ~30 per product = a hint, not a rule). A pattern becomes a
 rule only through a PR to that skill's `lessons.md` / style recipe, reviewed by a person. Nothing changes silently.

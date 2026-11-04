@@ -1,5 +1,9 @@
 # Everlife Winners Board (v2, 2026-11-02)
 
+> **🗄 ARCHIVED (2026-11-03): replaced by Ad Review (`core/ad-review/AD-REVIEW.md`), on the same page.** No ratings any more:
+> reviewers flag losers with reasons, winners come from the data. Everything below is history; the old ratings stay in the
+> database but are never read or used. Skip the PAUSED notes below.
+
 > **⏸ PAUSED (Priestley, 2026-11-03: "Can we somehow unplug the rating or feedback system? We might need a new way to refine the
 > system.")** Until this banner is removed: Claude does NOT read the board before a batch (§4), does NOT ask for ratings or write
 > entries, reviews, notes or previews after a batch (§5), and never uses a board winner, rating or note to steer copy, style or

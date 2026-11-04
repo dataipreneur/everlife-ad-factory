@@ -1,0 +1,284 @@
+<title>Everlife Ad Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a review wall. Sticky filters, every finished ad as a tile; open one to read its flags and, as a reviewer, flag it. No winners here: the data picks those. */
+:root {
+  --bg: #f5f7f6; --surface: #ffffff; --sunken: #e9eeec; --ink: #15201d; --muted: #56645f; --line: #d3dcd8;
+  --accent: #0d5c55; --accent-ink: #ffffff; --flag: #a3261d; --flag-bg: #f8dedb; --comp: #5b2a86; --comp-bg: #ece1f5; --focus: #1a73b8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+    --accent: #4fb8ac; --accent-ink: #06201d; --flag: #f08a80; --flag-bg: #3e1816; --comp: #c9a6ec; --comp-bg: #2c1a3d; --focus: #6cb6f0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #172120; --sunken: #1d2a28; --ink: #e6eeeb; --muted: #9aaba5; --line: #2c3c39;
+  --accent: #4fb8ac; --accent-ink: #06201d; --flag: #f08a80; --flag-bg: #3e1816; --comp: #c9a6ec; --comp-bg: #2c1a3d; --focus: #6cb6f0; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 22px 10px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; justify-content: space-between; }
+h1 { font-family: var(--f-display); font-stretch: 78%; font-weight: 800; font-size: clamp(28px, 5vw, 40px); line-height: 1; margin: 0; }
+h2 { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 15px; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 8px; }
+.sub { color: var(--muted); margin: 6px 0 0; max-width: 66ch; }
+.chip { font-family: var(--f-mono); font-size: 12px; padding: 3px 8px; border-radius: 4px; background: var(--sunken); color: var(--muted); }
+.chip.role { background: var(--accent); color: var(--accent-ink); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding-block: 10px; }
+label.inline { display: flex; gap: 6px; align-items: center; font-size: 13px; color: var(--muted); }
+select, input, textarea, button { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; min-width: 0; }
+textarea { width: 100%; min-height: 70px; resize: vertical; }
+button { cursor: pointer; font-weight: 600; }
+button.primary { background: var(--flag); color: #fff; border-color: var(--flag); }
+button.link { border: 0; background: transparent; padding: 2px 4px; color: var(--accent); font-size: 13px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.status { padding-block: 10px 0; color: var(--muted); font-size: 13px; min-height: 28px; }
+.status.warn { color: var(--flag); }
+.summary { display: flex; flex-wrap: wrap; gap: 8px 22px; padding-block: 8px 4px; font-size: 14px; }
+.summary b { font-family: var(--f-display); font-stretch: 85%; font-size: 22px; margin-right: 4px; font-variant-numeric: tabular-nums; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 16px; padding-block: 12px 40px; }
+.tile { display: flex; flex-direction: column; padding: 0; text-align: left; font-weight: 400; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; min-width: 0; }
+.tile.flagged { border: 2px solid var(--flag); }
+.tile.compliance { border: 2px solid var(--comp); }
+.tile .img { aspect-ratio: 4 / 5; background: var(--sunken); display: grid; place-items: center; overflow: hidden; }
+.tile .img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.tile .img .ph { font-size: 12px; color: var(--muted); padding: 10px; text-align: center; }
+.tile .meta { padding: 8px 12px 10px; display: grid; gap: 3px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
+.tile .meta b { color: var(--ink); font-weight: 600; }
+.badge { display: inline-block; font-family: var(--f-mono); font-size: 11px; font-weight: 500; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+.badge.flag { background: var(--flag-bg); color: var(--flag); } .badge.comp { background: var(--comp-bg); color: var(--comp); }
+.empty { border: 1px dashed var(--line); border-radius: 8px; padding: 16px; color: var(--muted); font-size: 14px; grid-column: 1 / -1; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-block: 12px 4px; display: grid; gap: 8px; }
+dialog { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); padding: 0; width: min(980px, calc(100vw - 32px)); max-height: calc(100vh - 48px); }
+dialog::backdrop { background: rgba(0,0,0,.45); }
+.detail { padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 760px) { .detail { grid-template-columns: 1fr; } }
+.detail img { width: 100%; height: auto; display: block; border-radius: 8px; border: 1px solid var(--line); }
+.info { display: grid; gap: 10px; min-width: 0; }
+.title { font-family: var(--f-display); font-stretch: 85%; font-weight: 700; font-size: 20px; line-height: 1.2; overflow-wrap: anywhere; }
+.meta-line { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+.recipe { display: flex; flex-wrap: wrap; gap: 4px; } .recipe span { font-size: 12px; background: var(--sunken); border-radius: 4px; padding: 2px 6px; overflow-wrap: anywhere; }
+.flags { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 10px; }
+.flagrow { background: var(--sunken); border-radius: 8px; padding: 8px 10px; display: grid; gap: 4px; font-size: 14px; }
+.flagrow .who { font-size: 12.5px; color: var(--muted); }
+.reasons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+@media (max-width: 520px) { .reasons { grid-template-columns: 1fr; } }
+.reasons label { display: flex; gap: 6px; align-items: center; border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; font-size: 13.5px; cursor: pointer; }
+.comp-box { display: flex; gap: 8px; align-items: center; font-size: 13.5px; }
+.row { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; align-items: center; }
+.err { color: var(--flag); font-size: 13px; flex: 1; }
+.people { display: flex; flex-wrap: wrap; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="top wrap">
+  <div>
+    <h1>Everlife Ad Review</h1>
+    <p class="sub">Every finished ad, as it was made. Reviewers flag the losers and say why; Claude reads the flags before the next batch and won't repeat them. Winners aren't picked here: the ad data picks them.</p>
+  </div>
+  <div><span class="chip role" id="roleChip">Connecting…</span> <span class="chip" id="countChip">0 ads</span></div>
+</header>
+<div class="bar"><div class="wrap">
+  <label class="inline" for="fView">Show <select id="fView"><option value="">All ads</option><option value="open">Not flagged</option><option value="flagged">Flagged</option><option value="compliance">Compliance flags</option></select></label>
+  <label class="inline" for="fProduct">Product <select id="fProduct"><option value="">All products</option></select></label>
+  <label class="inline" for="fKind">Kind <select id="fKind"><option value="">Images and videos</option><option value="image">Images</option><option value="video">Videos</option></select></label>
+</div></div>
+<main class="wrap">
+  <div class="status" id="status" role="status"></div>
+  <section class="panel" id="revPanel" hidden>
+    <h2>Reviewers</h2>
+    <p class="meta-line" style="margin:0">Only these people's flags count (Claude ignores flags from anyone else). Owner only.</p>
+    <div class="people" id="revList"></div>
+    <div class="row" style="justify-content:flex-start"><input type="search" id="revSearch" placeholder="Add a reviewer: type a name" style="width:min(320px,100%)"><span id="revHits" class="people"></span></div>
+  </section>
+  <div class="summary" id="summary"></div>
+  <section class="grid" id="grid"></section>
+</main>
+
+<dialog id="dlg" aria-label="Ad details">
+  <div class="detail">
+    <div id="dImg"></div>
+    <div class="info">
+      <div class="title" id="dTitle"></div>
+      <div class="meta-line" id="dMeta"></div>
+      <div class="recipe" id="dRecipe"></div>
+      <div class="flags"><h2>Flags <span class="chip" id="dCount"></span></h2><div id="dFlags"></div></div>
+      <form id="flagForm" hidden novalidate>
+        <h2>Flag as a loser</h2>
+        <div class="reasons" id="reasons"></div>
+        <label class="comp-box" for="fComp"><input type="checkbox" id="fComp"> Compliance issue: never reuse anything close to this</label>
+        <textarea id="fNote" maxlength="600" placeholder="What's wrong, in a line or two (what to do differently next time)"></textarea>
+        <div class="row"><span class="err" id="fErr"></span><button type="submit" class="primary" id="fSave">Flag it</button></div>
+      </form>
+      <p class="meta-line" id="noFlag" hidden style="margin:0">Only reviewers can flag ads. The page owner adds reviewers in the Reviewers panel at the top of the page.</p>
+      <div class="row"><button type="button" id="dClose">Close</button></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const PRODUCTS = [["restora-z","Restora-Z"],["sermorelin-ghk","Sermorelin GHK"],["sermorelin","Sermorelin"],["bpc-157","BPC-157"],["pt-141","PT-141"],["glp-1","GLP-1"],["nad","NAD+"],["mots-c","MOTS-c"],["lovara","Lovara"],["spark","Spark"],["spartan","Spartan Stack"],["wolverine","Wolverine Stack"],["epithalon","Epithalon"],["ghk-cream","GHK Peptide Cream"],["titan-rx","Titan-Rx"]];
+  // Reasons a reviewer can tick (AD-REVIEW.md §2). Keys are stored; Claude groups flags by them.
+  const REASONS = [["weak_hook","Weak hook / first seconds"],["product_focus","Product not in focus or hard to see"],["copy","Copy unclear, wrong or off-tone"],["claim","Claim or wording concern"],["off_brand","Off-brand look or palette"],["looks_ai","Looks AI / uncanny"],["wrong_product","Wrong product, label or pill"],["text_legibility","Text too small or hard to read"],["casting","Casting / people wrong"],["audio","Audio, voice or captions issue"],["boring","Boring, slow or generic"],["other","Other (say in the note)"]];
+  const $ = (id) => document.getElementById(id);
+  const pname = (id) => (PRODUCTS.find(p => p[0] === id) || [id, id || "—"])[1];
+  const reasonName = (k) => (REASONS.find(r => r[0] === k) || [k, k])[1];
+  const PREVIEW_RE = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/;
+  const state = { db: null, user: null, me: null, owner: false, reviewers: [], configVersion: null, docs: new Map(), subs: new Map(), previews: new Map(), loading: new Set(), names: {}, open: null, loaded: false };
+  function h(tag, attrs, ...kids) {
+    const el = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) { if (v == null || v === false) continue; if (k === "class") el.className = v; else if (k.startsWith("on")) el.addEventListener(k.slice(2), v); else el.setAttribute(k, v === true ? "" : v); }
+    for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+    return el;
+  }
+  const setStatus = (m, warn) => { $("status").textContent = m || ""; $("status").classList.toggle("warn", !!warn); };
+  const isReviewer = () => !!state.me && state.reviewers.includes(state.me);
+  const who = (id) => (id === state.me ? "you" : (state.names[id] && state.names[id].name) || "a teammate");
+  const docRef = (key) => { const i = key.indexOf("/"); return state.db.collection("data/users/" + key.slice(0, i)).doc(key.slice(i + 1)); };
+  const ofType = (t) => { const out = []; for (const [key, d] of state.docs) if (d.type === t) out.push({ key, ...d }); return out; };
+  // Every finished ad with a preview (old Winners Board entries included; their ratings are archived and ignored).
+  const ads = () => ofType("entry").filter(e => e.preview).map(e => ({ ...e, kind: e.kind === "image" ? "image" : "video" }));
+  // Only reviewers' flags count.
+  const flagsFor = (key) => ofType("flag").filter(f => f.target === key && state.reviewers.includes(f.by)).sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
+
+  function preview(e) {
+    const pk = e.key + "@" + ((e.preview && e.preview.updatedAt) || "");
+    if (!state.previews.has(pk) && !state.loading.has(pk) && state.db) {
+      state.loading.add(pk);
+      docRef(e.key).collection("preview").doc("img").get().then(s => { const d = s.exists ? s.data() : null; state.previews.set(pk, d && PREVIEW_RE.test(d.data || "") ? d.data : ""); })
+        .catch(() => state.previews.set(pk, "")).finally(() => { state.loading.delete(pk); queue(); });
+    }
+    return state.previews.get(pk);
+  }
+
+  async function render() {
+    const ids = new Set([...state.reviewers]); for (const d of state.docs.values()) for (const k of ["by", "rater"]) if (d[k]) ids.add(d[k]);
+    if (state.user && [...ids].some(id => !(id in state.names))) { try { Object.assign(state.names, await state.user.profiles([...ids])); } catch (_) {} }
+    const view = $("fView").value, prod = $("fProduct").value, kind = $("fKind").value;
+    const all = ads();
+    const list = all.filter(e => (!prod || e.product === prod) && (!kind || e.kind === kind)).filter(e => {
+      const fl = flagsFor(e.key);
+      return !view || (view === "open" ? fl.length === 0 : view === "flagged" ? fl.length > 0 : fl.some(f => f.compliance));
+    }).sort((a, b) => String(b.createdAt || b.date || "").localeCompare(String(a.createdAt || a.date || "")));
+    $("countChip").textContent = all.length + (all.length === 1 ? " ad" : " ads");
+    const flagged = all.filter(e => flagsFor(e.key).length).length, comp = all.filter(e => flagsFor(e.key).some(f => f.compliance)).length;
+    $("summary").replaceChildren(h("span", null, h("b", null, all.length), "finished ads"), h("span", null, h("b", null, flagged), "flagged as losers"),
+      h("span", null, h("b", null, comp), "compliance flags"), h("span", null, h("b", null, state.reviewers.length), "reviewers"));
+    $("grid").replaceChildren(...(list.length ? list.slice(0, 300).map(tile) : [h("div", { class: "empty" }, state.loaded ? "No ads for this filter yet. Finished ads appear here automatically when an operator's Claude finishes a batch." : "Loading…")]));
+    renderReviewers();
+    if (state.open && $("dlg").open) renderDetail();
+  }
+  function tile(e) {
+    const fl = flagsFor(e.key), comp = fl.some(f => f.compliance), src = preview(e);
+    return h("button", { type: "button", class: "tile" + (comp ? " compliance" : fl.length ? " flagged" : ""), onclick: () => { state.open = e.key; renderDetail(); if (!$("dlg").open) $("dlg").showModal(); } },
+      h("div", { class: "img" }, src ? h("img", { src, alt: "", loading: "lazy" }) : h("div", { class: "ph" }, src === "" ? "No preview" : "Loading…")),
+      h("div", { class: "meta" }, h("span", null, h("b", null, pname(e.product)), " · " + e.kind + " · " + String(e.date || e.createdAt || "").slice(0, 10)),
+        h("span", null, "By " + who(e.rater)),
+        fl.length ? h("span", null, h("span", { class: "badge " + (comp ? "comp" : "flag") }, (comp ? "Compliance · " : "Flagged · ") + fl.length), " " + [...new Set(fl.flatMap(f => f.reasons || []))].slice(0, 2).map(reasonName).join(", ")) : null));
+  }
+  function renderDetail() {
+    const e = ads().find(x => x.key === state.open); if (!e) { $("dlg").close(); return; }
+    const src = preview(e);
+    $("dImg").replaceChildren(src ? h("img", { src, alt: "The ad: " + (e.label || pname(e.product)) }) : h("div", { class: "meta-line" }, "Loading preview…"));
+    $("dTitle").textContent = e.label || pname(e.product);
+    $("dMeta").textContent = [pname(e.product), e.kind, String(e.date || "").slice(0, 10), "by " + who(e.rater), e.ad_id, e.job].filter(Boolean).join(" · ");
+    const r = e.recipe || {};
+    $("dRecipe").replaceChildren(...Object.keys(r).filter(k => r[k]).map(k => h("span", null, k.replace(/_/g, " ") + ": " + r[k])));
+    const fl = flagsFor(e.key);
+    $("dCount").textContent = String(fl.length);
+    $("dFlags").replaceChildren(...(fl.length ? fl.map(f => h("div", { class: "flagrow" },
+      h("div", { class: "who" }, who(f.by) + " · " + String(f.createdAt || "").slice(0, 10), f.compliance ? h("span", { class: "badge comp", style: "margin-left:6px" }, "compliance") : null),
+      h("div", null, (f.reasons || []).map(reasonName).join(" · ")), f.note ? h("div", null, f.note) : null,
+      (f.by === state.me || state.owner) ? h("div", null, h("button", { type: "button", class: "link", onclick: () => unflag(f) }, "Remove this flag")) : null))
+      : [h("div", { class: "meta-line" }, "Not flagged.")]));
+    const mine = fl.find(f => f.by === state.me);
+    $("flagForm").hidden = !isReviewer() || !!mine; $("noFlag").hidden = isReviewer();
+  }
+  async function saveFlag(ev) {
+    ev.preventDefault();
+    const e = ads().find(x => x.key === state.open); if (!e) return;
+    const reasons = [...document.querySelectorAll('#reasons input:checked')].map(i => i.value);
+    const note = $("fNote").value.trim().slice(0, 600);
+    if (!reasons.length) { $("fErr").textContent = "Tick at least one reason."; return; }
+    if (reasons.includes("other") && !note) { $("fErr").textContent = "Say what's wrong in the note."; return; }
+    $("fErr").textContent = ""; $("fSave").disabled = true;
+    try {
+      const rr = state.db.doc("raters/" + state.me); if (!(await rr.get()).exists) await rr.set({ since: new Date().toISOString().slice(0, 10) });
+      const id = "f-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 6);
+      await state.db.collection("data/users/" + state.me).doc(id).set({ type: "flag", target: e.key, product: e.product, kind: e.kind, ad_id: e.ad_id || "",
+        reasons, note, compliance: $("fComp").checked, by: state.me, createdAt: new Date().toISOString() });
+      for (const i of document.querySelectorAll('#reasons input')) i.checked = false; $("fNote").value = ""; $("fComp").checked = false;
+      setStatus("Flag saved. Claude reads it before the next " + pname(e.product) + " batch.");
+    } catch (err) { $("fErr").textContent = "Could not save: " + ((err && err.message) || "try again") + "."; }
+    finally { $("fSave").disabled = false; }
+  }
+  async function unflag(f) {
+    try { await docRef(f.key).delete(); setStatus("Flag removed."); } catch (err) { setStatus("Could not remove the flag: " + ((err && err.message) || ""), true); }
+  }
+  // Reviewers list (config/reviewers): the owner adds or removes people; everyone reads it.
+  function renderReviewers() {
+    $("revPanel").hidden = !state.owner;
+    if (!state.owner) return;
+    $("revList").replaceChildren(...(state.reviewers.length ? state.reviewers.map(id => h("span", { class: "chip" }, who(id), " ", h("button", { type: "button", class: "link", onclick: () => setReviewers(state.reviewers.filter(x => x !== id)) }, "remove")))
+      : [h("span", { class: "meta-line" }, "No reviewers yet: add Justin, Sarah and Jeremy.")]),
+      !state.reviewers.includes(state.me) ? h("button", { type: "button", class: "primary", onclick: () => setReviewers([...state.reviewers, state.me]) }, "Add me as a reviewer") : null);
+  }
+  async function setReviewers(ids) {
+    try { await state.db.doc("config/reviewers").set({ ids: [...new Set(ids)], updatedAt: new Date().toISOString() }); }
+    catch (err) { setStatus("Could not update reviewers: " + ((err && err.message) || ""), true); }
+  }
+  async function search() {
+    const q = $("revSearch").value.trim();
+    if (!state.user || !q) { $("revHits").replaceChildren(); return; }
+    let hits = []; try { hits = await state.user.search(q); } catch (_) {}
+    $("revHits").replaceChildren(...hits.slice(0, 6).map(p => h("button", { type: "button", class: "link", onclick: () => { setReviewers([...state.reviewers, p.id]); $("revSearch").value = ""; $("revHits").replaceChildren(); } }, "+ " + (p.name || "Someone"))));
+  }
+
+  let q = false; const queue = () => { if (q) return; q = true; requestAnimationFrame(() => { q = false; render(); }); };
+  function watch(uid) {
+    if (state.subs.has(uid)) return;
+    state.subs.set(uid, state.db.collection("data/users/" + uid).onSnapshot((snap) => {
+      for (const k of [...state.docs.keys()]) if (k.startsWith(uid + "/")) state.docs.delete(k);
+      for (const d of snap.docs) if (d.exists) state.docs.set(uid + "/" + d.id, d.data());
+      queue();
+    }, () => { state.subs.delete(uid); }));
+  }
+  async function start() {
+    $("fProduct").append(...PRODUCTS.map(([v, l]) => h("option", { value: v }, l)));
+    $("reasons").replaceChildren(...REASONS.map(([v, l]) => h("label", null, h("input", { type: "checkbox", value: v }), l)));
+    for (const id of ["fView", "fProduct", "fKind"]) $(id).addEventListener("change", render);
+    $("flagForm").addEventListener("submit", saveFlag);
+    $("dClose").addEventListener("click", () => $("dlg").close());
+    $("dlg").addEventListener("click", (ev) => { if (ev.target === $("dlg")) $("dlg").close(); });
+    $("revSearch").addEventListener("input", () => { clearTimeout(state.st); state.st = setTimeout(search, 250); });
+    if (!window.claude || typeof window.claude.use !== "function") { setStatus("Open this page in claude.ai to review ads.", true); $("roleChip").textContent = "Offline"; return; }
+    const [db, user] = await Promise.all([claude.use("db"), claude.use("user")]);
+    state.db = db; state.user = user;
+    if (!db) { setStatus("Sign in to claude.ai and open the page again.", true); $("roleChip").textContent = "Signed out"; return; }
+    state.me = user ? await user.id() : null;
+    state.owner = user ? await user.isOwner() : false;
+    const timer = setTimeout(() => { if (!state.loaded) setStatus("The page can't be reached yet. It fills in when the connection answers.", true); }, 10000);
+    db.doc("config/reviewers").onSnapshot((snap) => {
+      state.reviewers = (snap.exists && Array.isArray(snap.data().ids)) ? snap.data().ids : [];
+      $("roleChip").textContent = state.owner ? "Owner" : isReviewer() ? "Reviewer" : "Viewer";
+      queue();
+    }, () => {});
+    if (state.me) watch(state.me);
+    db.collection("raters").onSnapshot((snap) => {
+      for (const d of snap.docs) if (d.exists) watch(d.id);
+      state.loaded = true; clearTimeout(timer); setStatus(""); queue();
+    }, (err) => { clearTimeout(timer); setStatus("The page stopped updating (" + err.code + "). Reload to reconnect.", true); });
+    render();
+  }
+  start();
+})();
+</script>

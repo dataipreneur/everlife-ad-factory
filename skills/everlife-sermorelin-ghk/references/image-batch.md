@@ -86,9 +86,7 @@ F10, F11, F12). Weight towards F2, F4, F11, F6.
 ## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
 **Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block. Build every record with `core/scripts/teamlog.py` (it saves the exact prompt and checks the record; TEAM-LOGS §6) and send the file it prints. `teamlog.py close <job>` must print ✅ before SESSION.md.
 
-**Winners Board (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: do not read the board, use no board winner or rating; see `WINNERS-BOARD.md` top) (read first, `core/winners-board/WINNERS-BOARD.md` §4):** before the batch table, read this product's image
-entries on the shared board: one slot mutates a board winner (exactly one variable), retired recipes are skipped, and the
-table opens with the board line (`Board: last 15 … · median …`). Board unreachable → "no history yet", say so, carry on.
+**Ad Review: read the flags first (`core/ad-review/AD-REVIEW.md` §3):** before the batch table, read this product's flagged ads (losers) and their reasons. Never repeat a flagged recipe (hook / headline + style + scene); a compliance flag bans anything close. Turn the top reasons into explicit checks for this batch, name them under the table, check them in QA. Unreachable → "no flags read", carry on.
 
 Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
 timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
@@ -288,6 +286,4 @@ the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PR
 QA that the label shows the session's strength (1000 vs 500), not the other one. Never describe the tablet in words.
 
 ## 4. After the batch
-- **Rate the batch (⏸ PAUSED 2026-11-03 (Priestley): SKIP this step: no rating question, no board entry, no preview upload) (Winners Board, `core/winners-board/WINNERS-BOARD.md` §5):** after the contact sheet, one AskUserQuestion
-  question per ad (Winner / Good / Weak / Kill, max 4 per screen), then write every rated ad with its recipe to the shared
-  board in one `ArtifactData` batch. Board unreachable → the pending file (§7), and say so.
+- **Post every finished ad (Ad Review, `core/ad-review/AD-REVIEW.md` §4):** after finishing, write each finished creative as an `entry` with its preview (no rating, no question to the operator). Reviewers flag the losers later; winners come from the data.

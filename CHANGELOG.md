@@ -2,6 +2,17 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-03 — Ad Review replaces the Winners Board: flag the losers, the data picks the winners (branch `ad-review`)
+Team decision relayed by Priestley: no ratings; "we need to be able to basically flag and report losers but not winners. winners will
+be identified by the data"; all generated content recorded; reviewers Justin / Sarah / the lead / Jeremy; flags "ingest[ed] back
+into the system". Priestley: "try this".
+- New `core/ad-review/AD-REVIEW.md` + page `core/ad-review/review-page.html` (same address as the board): every finished ad with its
+  preview; reviewers (owner-managed list) flag losers with fixed reasons + a note; a compliance flag bans anything close. Old
+  ratings archived, never read.
+- 14 skills: the paused board steps become "read the flags first" (never repeat a flagged recipe, fix the top reasons, 3+ same
+  reason → a PR) and "post every finished ad" (no rating); finishing.md posts finished videos. Restora-Z included (Priestley: "merge #48 and include Restora-Z").
+- TEAM-LOGS points at Ad Review (`ad_id` joins flags to the logs); `WINNERS-BOARD.md` marked archived.
+
 ## 2026-11-03 — Bible sync to 1793746711-6285: $/day CTAs, Sermorelin $95/month, advertorial bylines (branch `bible-sync-6285`)
 Justin's update: a "<product> for $N/day" CTA on most products; Sermorelin "Starting at $95/month" on 10% of creatives; article ads
 bylined "Brian L." (men) / "Erika S." (women). Priestley: "yes sync it". Originals: `_originals/2026-11-03/bible-sync-6285/`.
