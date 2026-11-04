@@ -118,7 +118,7 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
         <textarea id="fNote" maxlength="600" placeholder="What's wrong, in a line or two (what to do differently next time)"></textarea>
         <div class="row"><span class="err" id="fErr"></span><button type="submit" class="primary" id="fSave">Flag it</button></div>
       </form>
-      <p class="meta-line" id="noFlag" hidden style="margin:0">Only reviewers can flag ads.</p>
+      <p class="meta-line" id="noFlag" hidden style="margin:0">Only reviewers can flag ads. The page owner adds reviewers in the Reviewers panel at the top of the page.</p>
       <div class="row"><button type="button" id="dClose">Close</button></div>
     </div>
   </div>
@@ -229,7 +229,8 @@ dialog::backdrop { background: rgba(0,0,0,.45); }
     $("revPanel").hidden = !state.owner;
     if (!state.owner) return;
     $("revList").replaceChildren(...(state.reviewers.length ? state.reviewers.map(id => h("span", { class: "chip" }, who(id), " ", h("button", { type: "button", class: "link", onclick: () => setReviewers(state.reviewers.filter(x => x !== id)) }, "remove")))
-      : [h("span", { class: "meta-line" }, "No reviewers yet: add Justin, Sarah and Jeremy.")]));
+      : [h("span", { class: "meta-line" }, "No reviewers yet: add Justin, Sarah and Jeremy.")]),
+      !state.reviewers.includes(state.me) ? h("button", { type: "button", class: "primary", onclick: () => setReviewers([...state.reviewers, state.me]) }, "Add me as a reviewer") : null);
   }
   async function setReviewers(ids) {
     try { await state.db.doc("config/reviewers").set({ ids: [...new Set(ids)], updatedAt: new Date().toISOString() }); }
