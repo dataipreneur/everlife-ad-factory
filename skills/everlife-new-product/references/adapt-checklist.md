@@ -84,3 +84,4 @@ disclaimer verbatim · landing page (facts only).
 ## 5. Hand-off line for the user
 "Built on `<id>-skill`, committed locally, nothing pushed, no credits. Tests N/N. Blocked on: … Human inputs open: … Next: approve the
 4-image test (~4 credits)."
+- **📐 BOTH SIZES AT ONCE (REQUIRED for every new product, Mitansh 2026-11-04):** the new SKILL.md keeps the 📐 BOTH SIZES AT ONCE banner (`core/references/creative-system.md` §2b) under the zones banner. Check with `grep "BOTH SIZES" skills/<new>/SKILL.md`.

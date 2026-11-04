@@ -65,6 +65,18 @@ Never trust the model with a logo, a label, a rating badge, a disclaimer or a pr
   NOT switch to none: re-roll that raw (cost shown) or ask. (4) `finish_batch.py --proof-check <batch folder>` must print ✅ before the
   batch is shown (it reads `proof_log.jsonl`, written by every finish). Videos: `proof_next.py` per video, never overridden to none.
 
+## 2b. Both sizes at once (Mitansh, 2026-11-04, every product, every image batch)
+"You did this crazy fast… always do such thing, both sizes simultaneously." Every image ad = a fresh 9:16 render AND a fresh 4:5
+render in the same run (proven on PT-141 "We're Sorry" and GLP-1 batch 1, 2026-11-04).
+1. Write BOTH prompts per ad before the first submit. Each carries its own STRICT LAYOUT block from
+   `core/references/prompt-layout-zones.md` (9:16 zones; 4:5 element order, product last and lowest).
+2. Submit every 9:16 raw, then every 4:5 raw straight after (Creatify queues past 4 in flight; never stop to finish or QA between).
+3. Only then download all raws, finish both ratios with the SAME planned proof per ad, QA both, and show one sheet with both sizes.
+4. Separate work folders (`916/`, `45/`) or `adN_916` / `adN_45` names; finals carry `_1080x1920` / `_1080x1350`.
+5. Never crop, pad, stretch or paste one size into the other (`compose916.py` is for re-making an approved old ad only).
+6. Quote 2 credits per ad (GPT Image 2.5). A size that fails QA is fixed alone (Free Fix, 0 cr; or a re-roll of that size only).
+Both sizes are drafts: the approval gate (gates §7) still governs delivery, and Jeremy signs off before anything goes live.
+
 ## 3. The hero is deliberate and sized
 The form's hero (`product.json → hero.element`: the capsule, the tablet, the vial, the spray) fills **≥ 35% of the canvas width**,
 is never abstracted (no glass orbs, icons or silhouettes), and its label follows the curved surface in perspective. Random, tiny or
