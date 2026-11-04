@@ -4,7 +4,7 @@
   pick_styles.py --product pt-141 --n 5            # draw 5 different styles, avoiding the product's last batch
   pick_styles.py --product pt-141 --n 5 --allow S12   # also allow gated styles (Testimonial needs screened reviews)
   pick_styles.py --log --product pt-141 --codes S02,S09,S13   # record what the batch used
-  pick_styles.py --product sermorelin --n 5 --audience men     # hardcore-men products: 40% of men's slots tagged HARDCORE
+  pick_styles.py --product sermorelin --n 5 --audience men     # hardcore-men products: up to 30% of men's slots tagged HARDCORE (bible 2026-11-04 cap)
   pick_styles.py --product pt-141 --n 4 --skip S02,S09        # also avoid styles the TEAM used lately (Copy Ledger style records)
 
 Hardcore men (Jeremy, 2026-11-02): products in references/hardcore-men.json get `share` of their men's slots tagged
@@ -35,8 +35,8 @@ def hardcore_slots(product, n, audience, rng=random):
     if product not in cfg.get('products', []) or audience == 'women':
         return set()
     men = list(range(n)) if audience == 'men' else list(range(0, n, 2))   # both: even slots are men's
-    want = cfg.get('share', 0.4) * len(men)
-    k = math.floor(want) + (1 if rng.random() < want - math.floor(want) else 0)
+    want = cfg.get('share', 0.3) * len(men)
+    k = math.floor(want)   # a CAP (bible 2026-11-04: shirtless talent on up to 30%): round down, never above 30% of the batch
     return set(rng.sample(men, k))
 
 

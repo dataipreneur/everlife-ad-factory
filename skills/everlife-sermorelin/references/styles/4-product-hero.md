@@ -1,7 +1,7 @@
 # Category 4 — Product as Hero  (top fit for Sermorelin)
 
 Library folders: Product Highlight · Pill-Product Focused · Minimalist · Product-as-Hero · Polaroid · Billboard (boards 1, 3, 4, 5).
-Why it works: this style fills the 50% pill-focused share of the bible's focal-point mix (2026-11-03; it replaced "the pill/tablet is the hero"); the past plain-Sermorelin ads that hold up best are the tablet held to the lens and the name run huge.
+Why it works: this style fills the 40% pill-focused share of the bible's focal-point mix (2026-11-03; it replaced "the pill/tablet is the hero"); the past plain-Sermorelin ads that hold up best are the tablet held to the lens and the name run huge.
 
 **Statics:** GPT Image 2.5 via Creatify with bottle + tablet + type specimen attached (~1 cr). **Video:** Seedance 2.0 or Boreal-style for a single locked shot. Tablet prompt line, always: "use the attached tablet reference exactly; do not invent, alter, or substitute a different pill." Plus: "no vial or second container."
 

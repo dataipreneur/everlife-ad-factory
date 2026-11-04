@@ -8,7 +8,7 @@ friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the
 product image); `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor Prescribed / Ships
 Free art, verbatim disclaimer) inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
 
-**🎯 FOCAL-POINT MIX (bible Standards 03, synced 2026-11-03; REPLACES "the pill is the hero, not the bottle" everywhere in this skill):** plan it in the batch table's **Focal** column before writing prompts, like the proof split: this product has no pill, so (Justin, 2026-11-03: "For non pill products the vial should be 75%") it is **75% product-focused** (the vial is the primary focal point: foreground, sharp, premium product photography) · **25% person-focused** (a person is the primary focal point; the vial still in focus and identifiable). Batch of 4 = 3 / 1. **Videos use the same split** (Justin, 2026-11-03: "Videos and statics should really be the same in the sense of how we’re presenting products"). Every ad, whatever its focus: product and benefit identifiable in under 2 s, product in focus, nothing covering it (`core/references/creative-system.md` §1).
+**🎯 FOCAL-POINT MIX (bible Standards 03, synced 2026-11-03; REPLACES "the pill is the hero, not the bottle" everywhere in this skill):** plan it in the batch table's **Focal** column before writing prompts, like the proof split: this product has no pill, so (Justin, 2026-11-03: "For non pill products the vial should be 75%") it is **75% product-focused** (the vial is the primary focal point: foreground, sharp, premium product photography) · **30% person-focused** (a person is the primary focal point; the vial still in focus and identifiable). Batch of 4 = 3 / 1. **Videos use the same split** (Justin, 2026-11-03: "Videos and statics should really be the same in the sense of how we’re presenting products"). Every ad, whatever its focus: product and benefit identifiable in under 2 s, product in focus, nothing covering it (`core/references/creative-system.md` §1).
 
 **Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product glp-1 --proof count`. Rule: `core/references/creative-system.md` §2. **PROOF SPLIT IS HARD (Mitansh 2026-11-02, no conflicts):** ~42/28/30 per batch and per ratio; proof slots get a clean shelf in the LAYOUT (9:16: product, CTA, sticker, faces end above y 1150 of 1920); never swap a planned proof to "none" yourself (re-roll with cost or ask); `finish_batch.py --proof-check <batch folder>` must pass before showing.
 
@@ -52,7 +52,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   guarantees; no disease words. "Supports / helps".
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. One vial or both side by side (the winners), a still object.
 - No "Are you/Do you…?" questions, no first person, no named competitors or drug brands, no "clinically" for the product.
-- Offer: "Up to 59% off" (percent, never $) and/or "One predictable price".
+- Offer (bible 2026-11-04): "Save Up to 83%" (semaglutide) / "Save Up to 70%" (tirzepatide), the featured drug's own maximum, both shown → 83% (percent, never $) and/or "One predictable price".
 - "GLP-1" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
 
 **Headline tiers:** Tier A = a ✅ bible headline or benefit · ⚠ lines: explicit OK per line · Tier B (max 2): PROPOSED, Jeremy.
@@ -65,7 +65,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a provider message or a simple plan on a phone ("Your Goal. Your Plan. Provider Guided."); the vial beside it |
 | F4 | Features & Benefits | 04_Features_and_Benefits | vial hero + three ✅ rows with icons (appetite · food noise · one price) |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: never |
-| F6 | Offer | 06_Offer | "Up to 59% off" + "One predictable price" + the vial + one ✅ line |
+| F6 | Offer | 06_Offer | "Save Up to 83%" / "Save Up to 70%" (per drug) + "One predictable price" + the vial + one ✅ line |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened GLP-1 reviews |
 | F8 | Question | 08_Question | pronoun-free question ("Ready to Make Progress Again?") + answer line + product |
 | F9 | Reasons Why | 09_Reasons_Why_Education | three ✅ lines numbered (appetite, cravings, one price), vial hero |

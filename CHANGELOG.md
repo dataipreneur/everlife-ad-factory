@@ -2,6 +2,20 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-04 — Bible sync to 1793832093-ced5 (branch `bible-sync-ced5`; originals in `_originals/2026-11-04/bible-sync-ced5/`)
+Priestley: "Check for bible updates please" → "I think we can sync now". Justin moved the live bible three times in an hour
+(…a565, …8765, …ced5); this syncs straight to …ced5 (from …6285). Restora-Z's files are NOT touched (needs the owner's OK).
+- **Proof split 42 / 28 / 30** (trust row / Trustpilot bar + "Over 100,000" / none): the bible now states the split Mitansh applied on 2026-11-02 (was 60/40).
+- **Focal mix 40 / 30 / 30** (pill / bottle / person; was 50/25/25): gates, global rules, creative-system and every skill's text (batch of 8 = 3/3/2). The 75/25 rule for products without a pill stays until Justin says otherwise.
+- **Shirtless talent capped at 30%** for Sermorelin, Sermorelin GHK, TRT, BPC-157, TB-500, Spartan, Wolverine; never on Lovara, PT-141, Spark, Titan-Rx. The hardcore share was 40%: `hardcore-men.json` share 0.3 and `pick_styles.py` now rounds DOWN (5 ads → 1, 10 → 3), docs and 63 skill banners say "up to 30%".
+- **AI disclosure:** the bible removed the global "ADVERTISEMENT: AI-generated depiction…" line: "each ad uses the disclaimer from that product's page". Our footers already do; the open question is closed.
+- **Logo** 4:5 width 31% → 29% (9:16 stays 40%); **minimum on-screen text 24 px**; new **Product accuracy & realistic scale** standard; the price rule is "lowest price or price per day on 10% of ALL ads".
+- **New Hard NOs:** never the phrase "body composition" (rewrite: "supports lean muscle"); no "fat" or "skinny" claims anywhere; benefits only from the Quick-hit list word for word; "Dr. Prescribed" is never a benefit. `teamlog.py` refuses "body composition" and "fat"/"skinny" (2 smoke checks).
+- **New section 09, discount accuracy:** the featured product + form's own maximum, always "Save Up to X%": PT-141 nasal 23% / sublingual 59%, Sermorelin sublingual 65% / injection 59%, NAD+ 62% / 62% (sublingual was 56%), GLP-1 semaglutide 83% / tirzepatide 70% (was 59%). PT-141, GLP-1 and NAD+ skills updated.
+- **CTA changes:** "Start / Build / Find Your Plan" etc. removed from Epithalon, GLP-1, Lovara, NAD+, Spark, Titan-Rx, Sermorelin GHK; PT-141 CTA "Save Up to 59%"; Sermorelin gets "Save Up to 59%" (⚠ the injection maximum: tablet ads keep 65%); GHK cream CTA "GHK Peptide Cream for $1.50/day".
+- **Sermorelin GHK:** the ingredient claim lost "and fat loss" ("Promotes lean muscle growth"); "visceral fat" left the benefit scope. Tesamorelin pages (no skill) lost visceral fat / "Body composition".
+- **Open for Justin / Priestley** (also in the gates' known gaps): non-pill 75/25 vs the new 40/30/30; what "benefits only from the Quick-hit list" means for per-ingredient claims; the Sermorelin "Save Up to 59%" CTA vs its 65% tablet maximum; gate §7 (master before other sizes) vs both-sizes in #50/#51; the 9:16 logo (finisher default 29% vs 40%).
+
 ## 2026-11-04 — Lean team logging + send/post check (branch `teamlog-fixes`, originals in `_originals/2026-11-04/lean-logging/`)
 Priestley: "I want to be wary of token usage bcoz of this logging system" → "Yes" to the lean version with a posting check. The
 same day's audit found ~150 generations logged locally but never sent and ~250 finished ads not on Ad Review.

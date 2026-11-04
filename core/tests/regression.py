@@ -239,6 +239,14 @@ def smoke(core, out):
     expect("teamlog copy accepts the bible's own quick-hit (the pre-screen 'why' column is not a line list; 2026-11-04)",
            [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "20261104-sermorelin-ghk-test", "--ad-id",
             "20261104-sermorelin-ghk-test-1", "--product", "sermorelin-ghk", "--kind", "image"], True, "✅")
+    json.dump({"product": "sermorelin-ghk", "head": ["Supports lean body composition"], "offer": "Save Up to 47%"}, open(os.path.join(tl, "copy.json"), "w"))
+    expect("teamlog copy refuses the phrase \"body composition\" (bible 2026-11-04)",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "20261104-sermorelin-ghk-test", "--ad-id",
+            "20261104-sermorelin-ghk-test-2", "--product", "sermorelin-ghk", "--kind", "image"], False, "body composition")
+    json.dump({"product": "sermorelin-ghk", "head": ["Lose fat, stay lean"], "offer": "Save Up to 47%"}, open(os.path.join(tl, "copy.json"), "w"))
+    expect("teamlog copy refuses \"fat\" claims (bible 2026-11-04)",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "20261104-sermorelin-ghk-test", "--ad-id",
+            "20261104-sermorelin-ghk-test-3", "--product", "sermorelin-ghk", "--kind", "image"], False, "fat")
     sm = os.path.join(out, "teamlog_rows", "data", "users", "u1"); os.makedirs(sm)   # the lean pre-batch read (2026-11-04)
     json.dump({"type": "style", "product": "wolverine", "date": "2026-11-04", "styles": ["S04"]}, open(os.path.join(sm, "s.json"), "w"))
     expect("teamlog summary digests downloaded rows (lean read)",
