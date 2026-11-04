@@ -5,7 +5,7 @@ description: Resize finished Everlife static ads between 4:5 (1080x1350) and 9:1
 
 # Resizing skill (4:5 ⇄ 9:16 for finished statics)
 
-> **⛔ PROMPT LAYOUT ZONES = `~/Desktop/All_Products/core/references/prompt-layout-zones.md` (HARD, 2026-11-04):** every resize prompt carries that file's STRICT LAYOUT block with its numbers; it overrides every layout number below.
+> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (via the skill's core link) (HARD, 2026-11-04):** every resize prompt carries that file's STRICT LAYOUT block with its numbers; it overrides every layout number below.
 
 Approved 2026-11-04 on Nomel (Sermorelin, 4:5→9:16), Wolverine (9:16→4:5) and Spartan. User: "amazing!! keep on going!".
 The user wants SPEED: batch everything, show side-by-side sheets fast, never ask per-ad questions.
@@ -44,7 +44,7 @@ Scripts: `~/.claude/skills/resizing/scripts/` (setup.py, put.sh, finish.sh, shee
    REMOVE completely: the EVERLIFE logo, the <proof row if any>, and the small disclaimer text. No logo, stars or small print.
    LAYOUT … (below) … Photoreal, sharp, label readable.
    ```
-   - **LAYOUT = the STRICT LAYOUT block from `~/Desktop/All_Products/core/references/prompt-layout-zones.md`, pasted word for
+   - **LAYOUT = the STRICT LAYOUT block from `core/references/prompt-layout-zones.md` (via the skill's core link), pasted word for
      word with its numbers (HARD, Mitansh 2026-11-04).** 9:16: ZONE A y 0-330 of 2048 empty (name the surface), ZONE B 340-1150
      all text + product (product base ~y 800, CTA above y 950), ZONE C plain calm surface, everything inside x 190-960.
      4:5: top 14% empty, elements top-to-bottom with the product LAST and lowest (base ~63%), bottom 33% plain, 7% side margins.
