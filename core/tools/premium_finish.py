@@ -167,10 +167,14 @@ def product_group(img, cx, y, bh, pill_w, glow):
 
 
 def bottom_layers(scrim_rgb=(6, 10, 14)):
-    scr = canvas(); vgrad(scr, 960, 1300, 0, 175, scrim_rgb); vgrad(scr, 1300, 1920, 175, 230, scrim_rgb)
+    # haze behind the footer OFF by default (Mitansh 2026-11-04: "the blurry area behind the Trustpilot footer"); EVERLIFE_SCRIM=1 = old band
+    k = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+    scr = canvas()
+    if k: vgrad(scr, 960, 1300, 0, int(175 * k), scrim_rgb); vgrad(scr, 1300, 1920, int(175 * k), int(230 * k), scrim_rgb)
     scr.save(f"{L}/scrim.png")
     bot = canvas()   # one proof per video: trust row, badge + count, or none (split 2026-11-02, 42/28/30)
-    pr = sf.proof_row(PROOF, f"{A}/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    vt = sf.video_tone(a.clip, FF)   # no haze any more (2026-11-04): footer text colour follows the footage
+    pr = sf.proof_row(PROOF, sf.trust_art(A, vt), tone=vt)   # trust row, badge + count, or none (split 2026-11-02)
     if pr:
         bot.alpha_composite(pr, ((W - pr.width) // 2, PROOF_Y + (sf.row_art(f"{A}/proof_row_clear.png").height - pr.height) // 2))   # count row centred in the row's slot
     d = ImageDraw.Draw(bot); fd = sf.disc_font()                     # standard disclaimer: 18 px, exactly 2 lines
@@ -178,7 +182,7 @@ def bottom_layers(scrim_rgb=(6, 10, 14)):
     base = 1884 if DISC_BOTTOM else sz.SAFE[3] - 2
     step = sf.DISC_LH
     for i, ln in enumerate(lines):
-        d.text(((W - d.textlength(ln, font=fd)) / 2, base - step * (len(lines) - i)), ln, font=fd, fill=(255, 255, 255, 190))
+        d.text(((W - d.textlength(ln, font=fd)) / 2, base - step * (len(lines) - i)), ln, font=fd, fill=sf.text_rgb(vt, 220))
     if not DISC_BOTTOM and base - step * len(lines) < PROOF_Y + (pr.height if pr else 0):
         sys.exit("❌ disclaimer does not fit between the proof row and y 1385")
     bot.save(f"{L}/bottom.png")

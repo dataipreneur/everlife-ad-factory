@@ -43,7 +43,7 @@ P = os.path.abspath(a.project)
 
 # shared brand assets -> project source/
 os.makedirs(f"{P}/source", exist_ok=True)
-for f in ("logo_cream.png", "proof_row_clear.png"):
+for f in ("logo_cream.png", "proof_row_clear.png", "proof_row_clear_dark.png"):
     if not os.path.exists(f"{P}/source/{f}"):
         shutil.copy(f"{T}/assets/{f}", f"{P}/source/{f}")
 
@@ -61,6 +61,10 @@ C.setdefault("bottle", _b)
 if "pill" not in C:
     C["pill"] = _p                      # None for a form without a tablet/capsule (e.g. a nasal spray)
 C["keep_case"] = PR["keep_case"]
+# Footer / disclaimer haze strength (0 = none). OFF by default (Mitansh 2026-11-04: the creative director flagged "the blurry
+# area behind the Trustpilot footer" all day). EVERLIFE_SCRIM=1 brings the old dark band back.
+SCRIM = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+VTONE = sf.video_tone(a.clip, FF)   # no haze any more: footer text colour follows the footage behind it
 PROOF = sf.proof_of(C)   # trust row or customer-count line, one per video (bible 2026-11-02, ~60/40)
 C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)
 C["_end_safe_shift"] = bool(PR.get("end_card_safe_shift"))   # product opt-in: tiktok end card clears the taller logo
@@ -147,7 +151,7 @@ def block_layout():
     """Positions of the bottom proof block inside the safe area: (row_y, disc_y, block_top)."""
     d0 = ImageDraw.Draw(Image.new("RGB", (4, 4)))
     lines = [] if DISC_BOTTOM else sf.disclaimer_lines(bl.DISCLAIMER)
-    _r = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")
+    _r = sf.proof_row(PROOF, sf.trust_art(f"{P}/source", VTONE), tone=VTONE)
     rh = _r.height if _r else 0
     top = BLOCK_BOTTOM - (rh + 12 + sf.DISC_LH * len(lines))
     return top, top + rh + 12, top, lines, rh
@@ -175,9 +179,9 @@ def top_layer():
 def bottom_layer():
     img = bl.canvas()
     row_y, disc_y, top, lines, rh = block_layout()
-    row = sf.proof_row(PROOF, f"{P}/source/proof_row_clear.png")   # trust row, badge + count, or none (split 2026-11-02)
+    row = sf.proof_row(PROOF, sf.trust_art(f"{P}/source", VTONE), tone=VTONE)   # trust row, badge + count, or none (split 2026-11-02)
     if row or lines:   # nothing in the proof block → no dark band over the video (Mitansh 2026-11-02: "Why do you have this shadow??"; captions carry their own box)
-        bl.gradient_band(img, top - 380, H, 0, 225)
+        if SCRIM: bl.gradient_band(img, top - 380, H, 0, int(225 * SCRIM))   # haze OFF by default (2026-11-04)
     if row:
         rx = (W - row.width) // 2
         img.alpha_composite(row, (rx, row_y))
@@ -185,16 +189,16 @@ def bottom_layer():
     d = ImageDraw.Draw(img)
     ty = disc_y
     for ln in lines:
-        bl.centered(d, ty, ln, DISC, (236, 236, 232))
+        bl.centered(d, ty, ln, DISC, sf.text_rgb(VTONE)[:3])
         ty += sf.DISC_LH
     if lines:
         note(((W - sf.DISC_W) // 2, disc_y, (W + sf.DISC_W) // 2, ty), "disclaimer")
     if DISC_BOTTOM:   # the disclaimer alone at the very bottom, full width, 2 lines (intentional exception to the safe area)
         dl = sf.disclaimer_lines(bl.DISCLAIMER)
-        bl.gradient_band(img, H - sf.DISC_LH * len(dl) - 200, H, 0, 225)
+        if SCRIM: bl.gradient_band(img, H - sf.DISC_LH * len(dl) - 200, H, 0, int(225 * SCRIM))
         ty = H - 48 - sf.DISC_LH * len(dl)
         for ln in dl:
-            bl.centered(d, ty, ln, DISC, (236, 236, 232))
+            bl.centered(d, ty, ln, DISC, sf.text_rgb(VTONE)[:3])
             ty += sf.DISC_LH
     return img
 

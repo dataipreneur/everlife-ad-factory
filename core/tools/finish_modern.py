@@ -364,6 +364,17 @@ class Modern:
         return y
 
     def footer(self):
+        """Feed footer without the panel fade (default since 2026-11-04): its art/text tone follows the photo behind it."""
+        if self.card or float(os.environ.get("EVERLIFE_SCRIM", "0")):
+            return self._footer()
+        keep = self.tone
+        self.tone = sf.tone_of(self.img, self.footer_top, self.H)
+        try:
+            return self._footer()
+        finally:
+            self.tone = keep
+
+    def _footer(self):
         """The APPROVED footer panel, anchored at the bottom: Trustpilot 4.9 badge, Doctor Prescribed,
         Ships Free From Pharmacy (exact art), rules, verbatim disclaimer. Content stays inside the safe area."""
         W, H, top = self.W, self.H, self.footer_top
@@ -377,7 +388,7 @@ class Modern:
             cd = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             ImageDraw.Draw(cd).rounded_rectangle([cx0, top, cx1, self.bottom], 30, fill=self.panel + (240,))
             self.img.alpha_composite(cd)
-        else:
+        elif float(os.environ.get("EVERLIFE_SCRIM", "0")):   # old full-width panel fade, OFF by default (Mitansh 2026-11-04)
             fade = 130
             band = Image.new("RGBA", (W, H - top + fade))
             bd = ImageDraw.Draw(band)
