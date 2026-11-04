@@ -10,7 +10,7 @@ into the system". Priestley: "try this".
   preview; reviewers (owner-managed list) flag losers with fixed reasons + a note; a compliance flag bans anything close. Old
   ratings archived, never read.
 - 14 skills: the paused board steps become "read the flags first" (never repeat a flagged recipe, fix the top reasons, 3+ same
-  reason → a PR) and "post every finished ad" (no rating); finishing.md posts finished videos. Restora-Z left out pending OK.
+  reason → a PR) and "post every finished ad" (no rating); finishing.md posts finished videos. Restora-Z included (Priestley: "merge #48 and include Restora-Z").
 - TEAM-LOGS points at Ad Review (`ad_id` joins flags to the logs); `WINNERS-BOARD.md` marked archived.
 
 ## 2026-11-03 — Bible sync to 1793746711-6285: $/day CTAs, Sermorelin $95/month, advertorial bylines (branch `bible-sync-6285`)
