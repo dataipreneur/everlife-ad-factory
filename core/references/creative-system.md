@@ -1,5 +1,7 @@
 # Creative system (shared by every Everlife product skill) — adopted 2026-10-29
 
+> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt, every product; wins over every LAYOUT number in this file):** every 9:16 / 4:5 prompt carries that file's STRICT LAYOUT block (9:16: top 16% empty, all text + product in 16-56%, plain calm surface below, central 67% width; 4:5: top 14% empty, product last and lowest, bottom 33% plain). Never 12% tops or 70-76% widths again.
+
 > **🔁 NEVER STOP AFTER A BATCH (Mitansh, 2026-11-02, every product, images AND video: "As soon as 1st batch is done, start writing prompts for 2nd batch! this is the rule for all products!"):** the moment a batch is finished, shown and rated, start the NEXT batch in the same turn, without asking: same setup (audience, strength/form, ratio, model, boldness, mood) unless the user changed it; new styles/scenes per the variety rules (untried styles first); fix what QA found in the last batch inside the new prompts; show the batch table + Tier B headline options and ask for the approval (cost shown). The spend gate still holds: nothing is generated until the user approves that batch. Videos: the next script is written while the last one renders (SKILL.md step 4).
 
 > **⛔ Proof row ALWAYS inside the Meta safe area (Mitansh, 2026-11-02, HARD, every product, every skill, image AND video):** the Trustpilot / Doctor Prescribed / Ships Free / 100,000+ proof row ends at or above y 1385 on 1080×1920 (`safezones.py`). Never move it lower or outside the safe area by any means (env `EVERLIFE_PROOF_AT`, copy.json `proof_at`, flags, manual edits); the tools refuse. If the product or text collides with the proof row: re-roll the raw (cost approved) or ask the user. Never move the footer. The disclaimer alone may sit at the very bottom.
@@ -104,3 +106,12 @@ men's/women's direction, claims. Those live in each skill's bible.
 ## Prompt checklist (paste into every batch table review)
 structure ≠ any other slot · article slot present · product angle ≠ others · typeface named · palette named · name treatment ·
 headline placement · hero ≥ 35% width, real, label wraps · CTA string in TEXT · "NO logo" or "empty box" · forbidden elements named
+
+## No haze behind the footer (Mitansh 2026-11-04, every product, image AND video)
+The creative director flagged "the blurry area behind the Trustpilot footer" all day. Every finisher now lays the proof row and the
+disclaimer straight on the art, with NO scrim, gradient band or panel fade behind them (`finish_batch.py`, `finish_modern.py` feed
+footer, `core/scripts/finish_image.py`, `full_layout.py`, `premium_finish.py`). The text colour follows what is behind it
+(`standard_footer.tone_of` / `video_tone`: mean luminance above 118 → dark text and the dark-text trust row
+`assets/proof_row_clear_dark.png`, badge art untouched; below → cream text). So prompts must keep the footer band CALM (plain
+continuing background, no product, no busy texture); if the product or CTA reaches the footer, drop the footer or re-roll, never add
+a haze. `EVERLIFE_SCRIM=1` brings the old haze back for one run (only if Mitansh asks); `EVERLIFE_FOOTER_TONE=dark|light` forces a tone.

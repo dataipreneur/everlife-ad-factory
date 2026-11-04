@@ -24,6 +24,8 @@ import argparse, json, os, sys
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 T = os.environ.get("EVERLIFE_TOOLS", os.path.expanduser("~/Everlife-Creative/tools"))
+sys.path.insert(0, T)
+import standard_footer as sf  # noqa: E402  (footer tone without a haze, 2026-11-04)
 AV_COND = "/System/Library/Fonts/Avenir Next Condensed.ttc"
 AV = "/System/Library/Fonts/Avenir Next.ttc"
 SERIF = "/System/Library/Fonts/Supplemental/Baskerville.ttc"
@@ -123,16 +125,21 @@ class Ad:
         d = self.d
         disc_f = font(AV, 19, "Medium")
         dl = wrap(d, C["disclaimer"], disc_f, W - 90)
-        row = Image.open(f"{T}/assets/proof_row_clear.png").convert("RGBA")
         rw = W - 90
+        probe = Image.open(f"{T}/assets/proof_row_clear.png")
+        top = H - (int(probe.height * rw / probe.width) + 18 + 24 * len(dl) + 26)
+        # no haze behind the footer by default (Mitansh 2026-11-04); text colour follows the art behind it
+        k = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+        if k:
+            fade(self.img, top - int(300 * self.k), H, 0, int(228 * k))
+        tone = "dark" if k else sf.tone_of(self.img, top, H)
+        row = Image.open(sf.trust_art(f"{T}/assets", tone)).convert("RGBA")
         row = row.resize((rw, int(row.height * rw / row.width)), Image.LANCZOS)
-        top = H - (row.height + 18 + 24 * len(dl) + 26)
-        fade(self.img, top - int(300 * self.k), H, 0, 228)
         self.img.alpha_composite(row, ((W - rw) // 2, top))
         d = self.d
         ty = top + row.height + 12
         for ln in dl:
-            centered(d, W, ty, ln, disc_f, (236, 236, 232))
+            centered(d, W, ty, ln, disc_f, sf.text_rgb(tone)[:3])
             ty += 24
         return top
 

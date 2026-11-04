@@ -96,8 +96,8 @@ Finishing: `reposition_916.py` (free, local) when anything dips into the footer;
 that file.
 
 ## 2. Flow (the two setup rounds live in SKILL.md step 1; here: write, critique, approve, generate)
-1. Inputs from SKILL.md step 1: form, hook angle, boldness, mood, copy density, spin-a-winner, how many. Placement is 9:16
-   (the other ratio comes from the approved masters). People: a mix unless the user said otherwise. Frameworks: random mix unless the
+1. Inputs from SKILL.md step 1: form, hook angle, boldness, mood, copy density, spin-a-winner, how many. Placement is ALWAYS
+   9:16 + 4:5 together (§2d; the table's cost column is 2 credits per ad). People: a mix unless the user said otherwise. Frameworks: random mix unless the
    user named some in chat.
 2. Read the bible + copy log + `winners/winners.md` (one cat). Per slot: pick a framework and a **form** (spray / sublingual, alternating
    when the session said "either"), **look at 1 reference ad** (a PT-141 winner card when they exist, else the framework folder; layout
@@ -119,7 +119,32 @@ that file.
 5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product pt-141`
    (the verbatim disclaimer comes from product.json).
 6. Save to `~/Everlife-Creative/output/PT-141/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
-   open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
+   open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k". (Both sizes already exist, §2d.)
+
+## 2d. Both sizes at once (Mitansh, 2026-11-04; overrides steps 3 and 5 above for sizes)
+Proven on the PT-141 "We're Sorry" set: 7 ads × 2 sizes, all finished and QA'd in one pass.
+1. **Write 2 prompts per ad before submitting anything.** Same design, product refs and TEXT block; only the size and LAYOUT change:
+   - **9:16** (`gpt-image-2.5-sunburst/edit`, `image_size: "portrait_16_9"`, quality high, png) and **4:5** (same model,
+     `image_size: "portrait_5_4"`, returns 832×1040): paste the STRICT LAYOUT block for that size from
+     `core/references/prompt-layout-zones.md`, with its numbers, word for word (9:16: ZONE A y 0-330 empty, ZONE B 340-1150,
+     ZONE C plain surface, x 190-960; 4:5: top 14% empty, product LAST and lowest, bottom 33% plain). The old "12% / 54% / 76%"
+     numbers in this section were wrong (2026-11-04: 5 of 8 raws put the headline under the logo).
+   - Both prompts: `REMOVE: the EVERLIFE logo, the proof row and the small print. DO NOT draw any EVERLIFE logo or wordmark except on
+     the product label.` (the finisher adds them).
+   - Women + intimacy wording gets blocked by GPT ~30% → send those ads to `nano-banana-pro/edit` (`aspect_ratio` "9:16" / "4:5",
+     resolution 2K, 1.5 credits each) from the start.
+2. **Fire every 9:16 in one parallel tool turn, then every 4:5 in the next**, all in one Creatify project. Don't wait, don't finish
+   anything in between (Creatify queues past its 4-at-a-time limit). Log `id · asset_id · proof` per size the moment each is submitted.
+3. While they render, set up two work folders: `<job>/916/` and `<job>/45/` (each with `raw/`, `final/`, `assets.tsv`), so the
+   two sizes never overwrite each other's `raw/<id>.png`.
+4. **Collect** with `model_playground_get` (GPT ≈1–3 min, Nano Banana Pro up to ~30 min), download the output URLs into each
+   folder's `raw/`, and resize every raw to exactly 1080×1920 / 1080×1350 (Nano Banana returns other sizes).
+5. **Finish both sizes together**: `~/.claude/skills/resizing/scripts/finish.sh <job>/916 9:16 pt-141` and `… <job>/45 4:5 pt-141`
+   (logo, the ad's proof (the SAME value on both sizes), verbatim disclaimer).
+6. **One QA sheet with both sizes** (9:16 row on top, 4:5 row below) and LOOK at every ad: spelling, footer not on the product or
+   button, no doubled logo, the right form. If the footer covers the product or button, set that ad's proof to `none` and re-finish
+   (free). Anything else broken: show it, offer one re-roll of that size with its cost.
+7. Deliver both sizes into one folder as `<name>N_9x16.png` + `<name>N_4x5.png`.
 
 ## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
 Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
@@ -187,20 +212,16 @@ tasteful and premium. <PERSON, if any: a <woman | man> 30–55, attractive in a 
 marble, cyan, navy, warm grey; or the §2b mood chosen for this ad.> No bed, no bedroom, no lingerie, no body shots, no couples
 in bed, no before/after, no needles, syringes or vials, no mirrors showing bodies.
 
-LAYOUT (9:16): 5% clear margin on every edge. The TOP 12% is calm continuation of the background (no text, no product): the
-Everlife logo is laid there. EVERYTHING ELSE (headline, tiny line, product, shadow) sits in the TOP 52% of the canvas; the
-lowest element ends at 50% height. The BOTTOM 48% is calm, plain continuation of the background (surface, wall, fabric: no
-text, no product, no hands, no key objects): the proof footer is laid at ~61–72% and Meta's Reels/Stories UI covers the rest.
-LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
+<STRICT LAYOUT block for this size, pasted word for word with its numbers from core/references/prompt-layout-zones.md>
 ```
 > GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at
-> 58–65%). Ask for the lowest element at **40%** (cap/nozzle tip at 13%) to get ~50%. `finish_batch.py` then shifts the image up by
-> whatever headroom is left under the logo band (max 320 px) before it refuses; a refusal means one reposition edit (1 credit).
+> 58–65%), which is why the zones file asks the product base at ~44%. `finish_batch.py` NEVER shifts the image any more
+> (2026-11-04: a shift filled the gap with a blurred strip); a refusal means a re-roll with the zones block, or `--proof none`.
 ```
 ```
 QA that the label matches the form the session chose. Never describe the tablet's shape, colour or markings in words beyond
 "use the attached tablet reference exactly".
 
 ## 4. After the batch
-- Contact sheet first, then let the user pick winners. Winners → the other ratio only after approval.
+- Contact sheet first, then let the user pick winners. Both sizes are made together (§2d); nothing is delivered or goes live before creative review + Jeremy.
 - **Post every finished ad (Ad Review, `core/ad-review/AD-REVIEW.md` §4):** after finishing, write each finished creative as an `entry` with its preview (no rating, no question to the operator). Reviewers flag the losers later; winners come from the data.

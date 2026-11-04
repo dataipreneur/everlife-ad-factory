@@ -5,6 +5,10 @@ description: EverlifeMD PT-141 ad factory (intimate wellness, two forms: nasal s
 
 # PT-141 Ad Factory
 
+> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
+
+> **📐 BOTH SIZES AT ONCE (Mitansh, 2026-11-04: "you did this crazy fast… always do such thing, both sizes simultaneously"; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after (Creatify queues them; don't wait between), then download, finish and QA both sizes together and show them on one sheet. Recipe: `references/image-batch.md` §2d. Cost = 2 credits per ad (GPT Image 2.5), quote it that way. Both sizes are drafts: creative review + Jeremy's sign-off still come before anything is delivered or goes live.
+
 > **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
 
 > **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
@@ -97,7 +101,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 ## Step 1 — Setup (every question has a ✨ Recommended first option; two rounds, four questions each, then the table)
 **Never asked:** audience (men and women together unless the user types "women only"/"men only"), people in frame (default: a mix,
 about half the batch with a clothed, candid person 30–55, shoulder-up/waist-up, daytime, never a bed; the rest product only),
-placement (images are made at 9:16; the other ratio is made from the approved masters), frameworks (random mix; the user can
+placement (images are always made in 9:16 AND 4:5 together, see "Both sizes at once" at the top), frameworks (random mix; the user can
 say "use F2 and F8" in chat).
 
 **Round 1 — one AskUserQuestion, 4 questions:**
@@ -122,7 +126,7 @@ say "use F2 and F8" in chat).
 7. **Start from a winner?** "Fresh concepts (Recommended)" / "Spin one of ours". If "Spin": ask in chat for the ad (a file path, a Drive
    link, or a `team-refs/` code like T1), look at it, and build the batch as 5 variations of its hook mechanics across 5 different
    frameworks, in the agreed register (never its old words, rating or faults).
-8. **How many:** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
+8. **How many:** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12". Each ad comes in both sizes, so quote 2 credits per ad (4 ads ≈ 8 credits).
 Then `references/image-batch.md` §2 step 2 onward (the table, the persona pass, the approval question).
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·

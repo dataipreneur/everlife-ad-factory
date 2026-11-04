@@ -50,6 +50,7 @@ PROOF = "trust"                # footer proof: trust = the Trustpilot / Doctor P
                                # customers" in its place; none = disclaimer only. Bible 2026-11-02 (Standards 02 · 06): trust callouts on
                                # split 2026-11-02: trust ~42%, badge + count ~28%, none ~30% (proof_plan). Set per ad with --proof.
 MAX_SHIFT = 140                # max nudge DOWN (logo headroom)
+ALLOW_SHIFT = os.environ.get("EVERLIFE_ALLOW_SHIFT") == "1"   # OFF: shifting = blurred filler strip (2026-11-04)
 MAX_UP = 320                   # max nudge UP (9:16: pull the content above the safe-area footer)
 CONTENT_GAP = 20               # px of calm background wanted between the raw's last content row and the footer
 # 9:16 side bands + logo (2026-10-30, Spark 9:16 test: three raws with type in the Reels side bands and one with the ad's own
@@ -259,6 +260,15 @@ def top_fade(W, h, tone):
     return band
 
 
+# Footer / disclaimer scrim strength (0 = none). OFF by default (Mitansh 2026-11-04: the creative director flagged "the blurry
+# area behind the Trustpilot footer" all day; it washed out the product and CTA). EVERLIFE_SCRIM=1 brings the old haze back.
+SCRIM = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+# Footer/disclaimer text colour by contrast: below this mean luminance (0-255) the background counts as dark (white text),
+# above it dark text. 118 ~ relative luminance 0.18, where white and black give equal contrast. Was 150: white text on
+# mid-light linen/marble became unreadable once the scrim was removed (2026-11-04).
+TEXT_T = float(os.environ.get("EVERLIFE_TEXT_T", "118"))
+
+
 def scrim(W, h, tone, top_fade=120, bottom_fade=0):
     """Soft gradient behind the footer so it reads on any photo: transparent at the top, ~70% behind the footer, and
     (9:16) fading out again below it."""
@@ -272,7 +282,52 @@ def scrim(W, h, tone, top_fade=120, bottom_fade=0):
             t = 1.0
         else:
             t = 1 - (i - top_fade - h) / bottom_fade
-        bd.line([(0, i), (W, i)], fill=col + (int(185 * max(0.0, t) ** 1.2),))
+        bd.line([(0, i), (W, i)], fill=col + (int(185 * SCRIM * max(0.0, t) ** 1.2),))
+    return band
+
+
+LIFT = os.environ.get("EVERLIFE_LIFT", "1") != "0"
+LIFT_CLEAR = {"9:16": 230, "4:5": 140, "1:1": 130}   # the ad's first content row sits right under the logo band
+
+
+def auto_lift(img, ratio):
+    """Q/A fix on EVERY finish (Mitansh 2026-11-04: "This is where we should be having the headers to start with!"): when the model
+    left extra empty headroom, move the whole ad UP so its first content row sits just under the logo band. Only empty headroom is
+    cut; the bottom gap is filled with a SHARP mirror of the raw's own plain bottom rows (no blur, no stretch). Skipped (returns 0)
+    when the bottom band isn't a plain surface. EVERLIFE_LIFT=0 turns it off."""
+    W, H = img.size
+    clear = LIFT_CLEAR.get(ratio, 140)
+    top = min(first_content_row(img, int(H * 0.45)), content_top(img, int(H * 0.45)))
+    up = top - clear
+    if up < 24:
+        return img, 0
+    strip = img.crop((0, H - up, W, H))
+    e = np.asarray(strip.convert("L").resize((270, max(1, up // 4)))).astype(np.float64)
+    if (np.abs(np.diff(e, axis=1)) > 28).mean() > 0.06:
+        print(f"   lift skipped: the bottom {up}px is not a plain surface (re-roll if the footer collides)")
+        return img, 0
+    out = Image.new("RGB", (W, H))
+    out.paste(img.crop((0, up, W, H)), (0, 0))
+    out.paste(strip.transpose(Image.FLIP_TOP_BOTTOM), (0, H - up))
+    return out, up
+
+
+# Solid dark footer panel for feed ratios (Mitansh 2026-11-04: "use such darker footer"; the approved green-black footer
+# card look: trust row, a hairline rule, the disclaimer). Opaque, crisp, NOT a haze. EVERLIFE_FOOTER_PANEL=dark or --panel dark.
+PANEL = os.environ.get("EVERLIFE_FOOTER_PANEL", "")
+
+
+def dark_panel(W, h, foot_h, with_disc):
+    band = Image.new("RGBA", (W, h))
+    bd = ImageDraw.Draw(band)
+    for i in range(h):
+        t = i / max(1, h - 1)
+        c = tuple(int(a + (b - a) * t) for a, b in zip((18, 30, 22), (8, 14, 10)))
+        bd.line([(0, i), (W, i)], fill=c + (255,))
+    bd.line([(0, 0), (W, 0)], fill=(52, 66, 56, 255))
+    if with_disc:   # hairline between the proof row and the disclaimer, like the approved footer card
+        ry = h - 22 - DISC_LH * 2 - 10
+        bd.line([(40, ry), (W - 40, ry)], fill=(58, 72, 62, 255), width=1)
     return band
 
 
@@ -306,6 +361,14 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
                 shift = -max(0, min(MAX_UP, over, first - need))
     else:
         shift = max(-MAX_UP, min(MAX_SHIFT, int(shift_opt)))
+    if shift and not ALLOW_SHIFT:
+        # ⛔ never move the image (Mitansh 2026-11-04: "why the fuck is the top blurred out!?"): a shift fills the gap with a
+        # blurred, stretched strip. Finish AS IS; a logo or footer collision is reported below → re-roll or drop the footer.
+        shift = 0
+    if not ALLOW_SHIFT and LIFT:
+        out, lifted = auto_lift(out, ratio)
+        if lifted:
+            print(f"   lift: moved the ad up {lifted}px into its own empty headroom (sharp mirrored floor, no blur)")
     if shift > 0:
         shifted = Image.new("RGB", (W, H))
         shifted.paste(out, (0, shift))
@@ -335,7 +398,9 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
         band = np.asarray(out.crop((0, fy - 60, W, sz.FOOTER_BOTTOM + 60)).resize((64, 16))).reshape(-1, 3).astype(np.float64)
     else:
         band = np.asarray(out.crop((0, int(H * 0.85), W, H)).resize((64, 16))).reshape(-1, 3).astype(np.float64)
-    tone = tone_opt if tone_opt != "auto" else ("dark" if lum(band).mean() < 150 else "light")
+    tone = tone_opt if tone_opt != "auto" else ("dark" if lum(band).mean() < TEXT_T else "light")
+    if PANEL == "dark" and not story:
+        tone = "dark"   # solid dark footer panel → light text and art
     foot = build_footer(W, tone, disclaimer, fw, wd)
     o = out.convert("RGBA")
     if story:
@@ -346,12 +411,15 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     else:
         bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # retired bottom mode: same bottom line as the videos
         fy = H - foot.height - bottom_pad
-        sc_layer = scrim(W, foot.height + bottom_pad, tone)
-        o.alpha_composite(sc_layer, (0, H - sc_layer.height))
+        if PANEL == "dark":
+            o.alpha_composite(dark_panel(W, H - fy + 28, foot.height, wd), (0, fy - 28))
+        else:
+            sc_layer = scrim(W, foot.height + bottom_pad, tone)
+            o.alpha_composite(sc_layer, (0, H - sc_layer.height))
     o.alpha_composite(foot, (0, fy))
     if not wd:   # disclaimer at the very bottom of the 9:16 frame (under the Reels UI band; legal line, not a safe-area element)
         bb = np.asarray(out.crop((0, H - 160, W, H)).resize((64, 8))).reshape(-1, 3).astype(np.float64)
-        dtone = "dark" if lum(bb).mean() < 150 else "light"
+        dtone = "dark" if lum(bb).mean() < TEXT_T else "light"
         disc = build_disclaimer(W, dtone, disclaimer, fw)
         dy = H - DISC_BOTTOM_MARGIN - disc.height
         o.alpha_composite(scrim(W, disc.height + DISC_BOTTOM_MARGIN, dtone, top_fade=70, bottom_fade=0), (0, dy - 70))
@@ -405,6 +473,7 @@ def main():
                          "it anyway (QA previews only, never a FINAL); trusted = the raw came from reposition_916.py / compose916.py, "
                          "which already placed text + product above the footer: scene under the footer is allowed (FINAL ok)")
     ap.add_argument("--content-ratio", help="print the model aspect ratio for this final ratio and exit")
+    ap.add_argument("--panel", choices=["dark"], help="solid dark footer panel (feed ratios)")
     ap.add_argument("--logo-w", default="", help="logo width: px or percent of the ad width (creative-system: 40%% centre, 36%% corner, small 30%%/28%%); default 311 px")
     ap.add_argument("--logo-pos", default="center", choices=["center", "left", "right"])
     ap.add_argument("--proof", default="", choices=["", "trust", "count", "none"],
@@ -414,7 +483,7 @@ def main():
     ap.add_argument("--proof-check", metavar="DIR", help="check a batch folder's FINALs against the split (~42/28/30, per ratio) "
                     "from its proof_log.jsonl; exit 1 when it is off (HARD rule, Mitansh 2026-11-02)")
     a = ap.parse_args()
-    global LOGO_W, LOGO_POS, PROOF
+    global LOGO_W, LOGO_POS, PROOF, PANEL
     if a.proof_plan:
         for i, p in enumerate(proof_plan(a.proof_plan), 1):
             print(f"ad {i}: --proof {p}")
@@ -427,6 +496,8 @@ def main():
         print("ℹ️  no --proof given: trust row. Split 2026-11-02: trust ~42%, badge + count ~28%, none ~30% "
               "(finish_batch.py --proof-plan N).")
     LOGO_POS = a.logo_pos
+    if a.panel:
+        PANEL = a.panel
     if a.logo_w:
         LOGO_W = int(SIZES[a.ratio][0] * float(a.logo_w.rstrip("%")) / 100) if a.logo_w.endswith("%") else int(a.logo_w)
     if a.content_ratio:
