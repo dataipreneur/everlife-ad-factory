@@ -5,12 +5,14 @@
                             creatify CLI through Bash) is appended to ~/Everlife-Creative/teamlog-auto.jsonl with its exact
                             input, whatever Claude does. Never blocks, never calls the network.
   teamlog_hook.py stop      Stop: if this session made more paid generations than `teamlog.py gen` logged since the first one,
-                            Claude is sent back once to log them (decision "block"). The second time it lets the turn end and
-                            warns the user, so a session can never get stuck.
+                            or its job folders hold records never sent to the pages (`teamlog.py sent`) or finished ads of a
+                            closed run never posted to Ad Review (`teamlog.py posted`), Claude is sent back once to do it
+                            (decision "block"). The second time it lets the turn end and warns the user, so a session can never
+                            get stuck. Local files only: no network, no tokens unless something is missing.
 
 Both read the hook payload (JSON) on stdin and stay silent for every other tool and every non-Everlife session.
 """
-import datetime, json, os, re, sys
+import datetime, glob, hashlib, json, os, re, sys
 
 HOME = os.path.expanduser(os.environ.get("EVERLIFE_CREATIVE", "~/Everlife-Creative"))
 AUTO = os.path.join(HOME, "teamlog-auto.jsonl")      # raw capture, one line per paid generation call
@@ -105,19 +107,60 @@ def stop(p):
         except ValueError:
             return False
     logged = [r for r in lines(INDEX) if since(r)]
-    missing = len(mine) - len(logged)
-    if missing <= 0:
+    missing = len(mine) - sum(int(r.get("count") or 1) for r in logged)   # a light (maintenance) record covers several calls
+    unsent, unposted = backlog({r.get("job") for r in logged if r.get("job")})
+    if missing <= 0 and not unsent and not unposted:
         return
-    tools = ", ".join(sorted({r["tool"].split("__")[-1] if r["tool"] != "Bash" else "Bash CLI" for r in mine}))
-    msg = (f"Team logs: this session made {len(mine)} paid generation(s) ({tools}) but only {len(logged)} were logged with "
-           f"`core/scripts/teamlog.py gen`. Their exact inputs were captured automatically in {AUTO} (session {sid[:8]}). "
-           "Log the missing ones now (teamlog.py gen per generation, prompt text from that file, then qa / copy / proof / run and "
-           "`teamlog.py close <job>`), send them to the logs, then finish. If the logs can't be reached, use the pending file.")
+    todo, short = [], []
+    if missing > 0:
+        tools = ", ".join(sorted({r["tool"].split("__")[-1] if r["tool"] != "Bash" else "Bash CLI" for r in mine}))
+        todo.append(f"this session made {len(mine)} paid generation(s) ({tools}) but {missing} are not logged with "
+                    f"`core/scripts/teamlog.py gen`/`gens` (exact inputs captured in {AUTO}, session {sid[:8]}): log them")
+        short.append(f"{missing} generation(s) not logged")
+    if unsent:
+        todo.append(f"{sum(unsent.values())} logged record(s) were never sent to the pages: run `teamlog.py pending <job>` "
+                    f"({', '.join(unsent)}), send one ArtifactData batch per page, then `teamlog.py sent <job> --all`")
+        short.append(f"{sum(unsent.values())} record(s) not sent")
+    if unposted:
+        todo.append(f"{sum(unposted.values())} finished ad(s) are not on Ad Review (AD-REVIEW §4): post them, then "
+                    "`teamlog.py posted <job> <ad_id…>`")
+        short.append(f"{sum(unposted.values())} ad(s) not posted")
     if p.get("stop_hook_active"):
-        print(json.dumps({"systemMessage": f"⚠ {missing} paid generation(s) in this session are still not in the team logs "
-                                           f"(raw copy kept in {AUTO})."}))
+        print(json.dumps({"systemMessage": "⚠ Team logs: " + "; ".join(short) + f" (raw copy kept in {AUTO})."}))
         return
-    print(json.dumps({"decision": "block", "reason": msg}))
+    print(json.dumps({"decision": "block", "reason": "Team logs: " + "; ".join(todo) + ". If a page can't be reached, append to "
+                      "the pending file and mark them with --queued. Then finish."}))
+
+
+def digest(rec):   # same as teamlog.digest
+    return hashlib.sha1(json.dumps(rec, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
+
+
+def backlog(jobs):
+    """{job: n} records not sent (new or changed since `teamlog.py sent`) and {job: n} finished ads of closed runs not posted."""
+    unsent, unposted = {}, {}
+    for job in jobs:
+        d = os.path.join(job, "teamlog")
+        if not os.path.isdir(d):
+            continue
+        load = lambda n: json.load(open(os.path.join(d, n))) if os.path.exists(os.path.join(d, n)) else {}
+        sent, posted = load(".sent.json"), load(".posted.json")
+        recs = {}
+        for f in glob.glob(os.path.join(d, "*.json")):
+            try:
+                recs[os.path.basename(f)[:-5]] = json.load(open(f))
+            except ValueError:
+                pass
+        n = sum(1 for doc, r in recs.items() if (sent.get(doc) or {}).get("digest") != digest(r))
+        closed = {r.get("run_id") for r in recs.values() if r.get("type") == "run"}
+        ads = {r.get("ad_id") for r in recs.values() if r.get("type") == "gen" and not r.get("light")
+               and r.get("run_id") in closed and (r.get("qa") or {}).get("pass")}
+        name = os.path.basename(job.rstrip("/"))
+        if n:
+            unsent[name] = n
+        if ads - set(posted):
+            unposted[name] = len(ads - set(posted))
+    return unsent, unposted
 
 
 def main():

@@ -35,22 +35,35 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
 ## 2. When Claude writes and reads (the flow)
 1. **Run start (setup answered, before any paid call):** make the run_id; note the credit balances it already checks (Higgsfield
    `balance` in preflight, Creatify `composer_billing_state`) as `before`.
-2. **Before writing copy:** read the Copy Ledger for this product (`query` `data/users/<each member>` where `product == <id>`, or the
-   page's members list then each member's rows; newest 60 are enough). Never reuse a headline, hook or CTA already logged for this
+2. **Before writing copy (lean read, 2026-11-04: rows never go through the chat):** list the page's `members`, then `query` each
+   member's `data/users/<id>` where `product == <id>` with **`out_dir` = `<job>/_team/ledger`** (Ad Review: the same with
+   `config/reviewers` and each collection's `flag` + `entry` rows → `<job>/_team/review`). Then run
+   **`teamlog.py summary <job>/_team/ledger <job>/_team/review --product <id>`** and work from its digest only (used headlines,
+   hooks and CTAs; the team's last two batches' styles with the `--skip` list; the proof split against 42/28/30; reviewer flags
+   with their reasons and recipes). Never reuse a headline, hook or CTA already logged for this
    product unless the user asks; treat the local `~/Everlife-Creative/<product>-copy-log.md` as a fallback when the ledger can't be
    reached. Read this product's `style` records (last two batches, whole team) and pass their codes to
    `core/scripts/pick_styles.py --skip <codes>` (the team's recent styles are drawn last, like this computer's own last batch); the
    local `style-ledger.jsonl` stays the fallback. Read this product's `proof` records and choose the next proofs so the team split moves
    toward 42/28/30 (`finish_batch.py --proof-plan N` / `proof_next.py` give the local plan; adjust it toward the team's shares).
-3. **Each generation (each prompt sent to an image or video model, the moment the job is submitted; videos too, never only at finishing):** save the exact prompt to a file and run `teamlog.py gen` (it copies it to `<job>/prompts/NN_<model>.txt` and writes the record), send it to the Prompt log; update it after QA
-   (pass/fail and the reasons, re-rolls) with `teamlog.py qa`. One `batch` per wave is fine.
+3. **Each generation (each prompt sent to an image or video model, the moment the job is submitted; videos too, never only at finishing):** save the exact prompt to a file and run `teamlog.py gen` (it copies it to `<job>/prompts/NN_<model>.txt` and writes the record); update it after QA
+   (pass/fail and the reasons, re-rolls) with `teamlog.py qa`. **A wave is one call:** `teamlog.py gens <job> --wave W.json` (one item
+   per take) and `teamlog.py qa <job> <doc_id> <doc_id> … --pass` (one call per result). Send with step 5.
+   **Maintenance jobs** (resizes, CTA swaps, text fixes over finished ads): `teamlog.py light <job> --task "…" --files a,b,…` logs the
+   shared prompt once with the file list (no copy / proof / Ad Review needed for it; the run's `--format maintenance`).
 4. **After the batch (when SESSION.md is written):** `teamlog.py copy` per ad (it reads the job's copy.json / premium.json /
    phrases.json, so every spoken line, caption and the CTA are in it, and labels each line from the bible pre-screen; it refuses a
-   banned line), `teamlog.py proof` per creative and `teamlog.py run` (made / finished / rerolled / spent come from the gens; say
-   `--captions yes|no`). Then **`teamlog.py close <job>` must print ✅ closed** before SESSION.md is written; its ❌ lines are fixed
+   banned line), `teamlog.py proof` per creative and `teamlog.py run` (made / finished / rerolled / spent and the start time come from the
+   gens; say `--captions yes|no`). **Send each record to the page the script prints ("send to: …")**: `gen` → Prompt log; `copy`,
+   `proof`, `style` → Copy Ledger; `run` → Activity log. Then **`teamlog.py close <job>` must print ✅ closed** before SESSION.md is written; its ❌ lines are fixed
    first, its ⚠ lines go into SESSION.md. Send what is not sent yet: one `copy` record per ad to the Copy Ledger, one `style` record for the batch, one
    `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); nothing to the Winners
    Board (⏸ paused since 2026-11-03). Still append the local copy log as before (fallback and offline history).
+5. **Sending (one batch per page, 2026-11-04):** `teamlog.py pending <job>` lists every record not sent yet (new, or changed since it
+   was sent) grouped per page with the page URL. Send each group as **one** `ArtifactData` `batch` (≤ 50 writes, `file_path` = the
+   listed file, doc_id = the file name), then `teamlog.py sent <job> --all` (or the doc ids). Page unreachable → the pending file,
+   then `teamlog.py sent <job> --all --queued`. Ad Review posts are marked the same way: `teamlog.py posted <job> <ad_id…>`.
+   The Stop hook (§7) checks both, so a forgotten send is caught before the session ends.
 
 ## 3. Schemas (every record has `"type"`)
 **Activity log, `run`:** `{type:"run", run_id, product, format:"images|video|avatar|still", made, finished, rerolled, captions:true|false,
@@ -117,6 +130,13 @@ Writes each record as `<job>/teamlog/<doc_id>.json` (a local mirror that stays w
   `model_playground_get` (only if it returns a revised prompt; these endpoints otherwise run our prompt as sent). **Untested as of
   2026-11-03:** the first real job on each route confirms what the read returns; note it here. The check warns when a Marketing
   Studio / Ads Studio / composer generation has no `tool_prompt`.
+- **Lean mode (Priestley 2026-11-04: "I want to be wary of token usage because of this logging system"):** `gens` (a wave in one
+  call), `qa` with several doc ids, `proof` with repeated `--ad-id`/`--proof` pairs, `light` (maintenance), `summary` (the
+  pre-batch digest), `pending` / `sent` / `posted` (send tracking in `<job>/teamlog/.sent.json` and `.posted.json`). Each record
+  prints **one line** (`✅ <doc_id> → <page> · ⚠ …`; errors in full under it); page URLs come from `pending`.
+- **Also checked (2026-11-04):** `run_id` must be `<YYYYMMDD>-<product id>-<4 letters>`; an offer without "Up to" ("Save 49% Off")
+  is refused; any % or $ line on Titan-Rx is flagged (its offer is [VERIFY CURRENT] and its $/day CTA is held); single-shot
+  composer tools (`composer_edit_image`, voice lines, music) no longer ask for a `tool_prompt`.
 - **Backfills** (records written after the fact): set `"backfill": true`; missing prompt files and date-only times are then ⚠, not ❌.
 
 ## 7. Automatic capture (Claude Code hooks, added 2026-11-03)
@@ -127,8 +147,10 @@ Priestley: "Are you sure claude will log every time into those artifacts?" Loggi
   with its exact input (prompts whole, image blobs shortened), the session id and any credit cost in the response. Reads,
   quotes, billing and status calls are ignored. It runs whatever Claude does and never blocks.
 - **Stop:** when Claude tries to finish, it compares this session's captured calls with the `teamlog.py gen` records written
-  since the first one (`~/Everlife-Creative/teamlog-index.jsonl`, 10-minute window). If calls are missing, Claude is sent back
-  once to log them (prompt text from the capture file). The second time it lets the turn end and shows a warning, so a session
+  since the first one (`~/Everlife-Creative/teamlog-index.jsonl`, 10-minute window; a `light` record counts once per file). If calls
+  are missing, Claude is sent back once to log them (prompt text from the capture file). **Since 2026-11-04 it also checks those
+  jobs' folders for records never sent (`teamlog.py sent`) and finished ads of a closed run never posted to Ad Review
+  (`teamlog.py posted`)**, after the 2026-11-04 audit found 150 logged-but-unsent generations and ~250 unposted ads. Local files only. The second time it lets the turn end and shows a warning, so a session
   can never get stuck.
 - New hooks load when Claude Code starts (or after opening `/hooks` once). `core/hooks/teamlog_hook.py`, stdlib only.
 - Still not covered: work done in Creatify / Higgsfield outside Claude; and an offline machine's records wait in the pending

@@ -2,6 +2,39 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-04 — Lean team logging + send/post check (branch `teamlog-fixes`, originals in `_originals/2026-11-04/lean-logging/`)
+Priestley: "I want to be wary of token usage bcoz of this logging system" → "Yes" to the lean version with a posting check. The
+same day's audit found ~150 generations logged locally but never sent and ~250 finished ads not on Ad Review.
+- **Lean reads:** pre-batch rows (Copy Ledger, Ad Review flags) are saved to files with `ArtifactData` `out_dir` and read through
+  `teamlog.py summary` (used headlines / hooks / CTAs, the team's recent styles with the `--skip` list, the proof split vs 42/28/30,
+  reviewer flags with reasons and recipes). TEAM-LOGS §2.2, AD-REVIEW §3.
+- **Grouped logging:** `teamlog.py gens --wave W.json` (a wave in one call), `qa` with several doc ids, `proof` with repeated
+  `--ad-id`/`--proof` pairs; `pending` lists what is unsent per page so each page gets one batch. **Light mode:** `teamlog.py light`
+  logs a maintenance job (resizes, CTA swaps, text fixes) once with its file list (run `--format maintenance`).
+- **Quieter output:** one line per record; page URLs come from `pending`.
+- **Send tracking:** `teamlog.py sent` / `posted` (`.sent.json`, `.posted.json` in `<job>/teamlog/`; a record changed after sending
+  counts as unsent again; `--queued` for the pending file). `close` lists what is still to send or post. The **Stop hook** now also
+  sends Claude back once when a session's job folders hold unsent records or finished ads of a closed run not posted to Ad Review.
+- **Checker:** run_id format enforced (`B3` refused); "Save N% Off" without "Up to" refused; any % / $ line on Titan-Rx flagged
+  (offer [VERIFY CURRENT], $/day held); single-shot composer tools (`composer_edit_image`, voice lines, music) no longer ask for a
+  `tool_prompt`.
+- Skill lines updated in 14 product skills (image-batch, video-prompting, animated-still, finishing). **Restora-Z not edited**
+  (needs Priestley's OK); it follows TEAM-LOGS / AD-REVIEW, which now describe the lean steps.
+- **Pre-screen false positive fixed (found by the first real both-sizes run, Sermorelin GHK):** `screen()` read every cell of a ❌ row as
+  a banned line, so a row whose "why" cell quoted the approved replacement (`use "Supports natural growth hormone production"`) made the
+  bible's own top quick-hit read "❌ pre-screen" and blocked `copy` / `close`. It now reads only the first (line) cell; the real ❌ lines
+  (Visceral-Fat, "safer alternative to synthetic HGH", Recover Like Wolverine, Support Lean Body Goals, …) still refuse.
+- Smoke: 67/67 (three new checks: the offer wording, the summary digest, the quick-hit false positive).
+
+## 2026-11-04 — teamlog.py: start time automatic, every record names its page (branch `teamlog-fixes`)
+First live runs (BERNS, Edge) showed start times typed after the end and 30 proof records sent to the Activity log. Priestley:
+"Fix first 2".
+- `teamlog.py run`: `started_at` = the run's first logged generation (no `--started` to type); the checker refuses a run that starts
+  after it ends.
+- Every record prints "send to: <page> (<url>)"; `close` lists the records per page; TEAM-LOGS §2 says which type goes where.
+- Data fixed the same day: Edge's 30 proof records moved from the Activity log to the Copy Ledger (marked `moved_from`); 8 run start
+  times set to their first logged generation (`started_at_source` note).
+
 ## 2026-11-03 — Ad Review replaces the Winners Board: flag the losers, the data picks the winners (branch `ad-review`)
 Team decision relayed by Priestley: no ratings; "we need to be able to basically flag and report losers but not winners. winners will
 be identified by the data"; all generated content recorded; reviewers Justin / Sarah / the lead / Jeremy; flags "ingest[ed] back
