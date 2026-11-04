@@ -25,7 +25,7 @@ The Hims / Ro codes in `core/references/static-refs/13_Premium_DTC/README.md`, o
 Log the reference used per slot in `prompts.md` and SESSION.md.
 
 ## The gates still win (never relaxed by "premium")
-- **Focal-point mix** (gates §3, bible 2026-11-03): premium slots count toward the 50% pill / 25% bottle / 25% person split; a
+- **Focal-point mix** (gates §3, bible 2026-11-03): premium slots count toward the 40% pill / 30% bottle / 30% person split; a
   pill-focused slot keeps the tablet large and sharp in the foreground; a bottle, if shown, large,
   foreground and legible. Tablet prompts use the attached render with the gate wording ("use the attached tablet reference exactly;
   do not invent, alter, or substitute a different pill") and never describe its shape, colour or markings.

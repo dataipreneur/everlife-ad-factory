@@ -19,7 +19,7 @@ Urgency = a vibrating twin-bell alarm clock in the ad's palette (never red flash
 11. MS Product Dodge · a bottle flies across the living room, they duck, come up holding it.
 12. CONTRAST SPLIT · Same room, two halves: left side, wide awake with the lamp on; right side, dark and peaceful. Not a body comparison.
 
-## Sermorelin GHK (focal mix 50% tablet / 25% bottle / 25% person · men: hardcore per core/references/hardcore-men.md (shirtless 40–45, flawless muscular condition, hard gym light; 40% of random slots) · women: pinks, tans, beige · speech from second 1 · "SERMORELIN GHK" on screen from frame 1 · "Sermorelin GHK by Everlife" in the intro · never the bedroom)
+## Sermorelin GHK (focal mix 40% tablet / 30% bottle / 30% person · men: hardcore per core/references/hardcore-men.md (shirtless 40–45, flawless muscular condition, hard gym light; 40% of random slots) · women: pinks, tans, beige · speech from second 1 · "SERMORELIN GHK" on screen from frame 1 · "Sermorelin GHK by Everlife" in the intro · never the bedroom)
 1. IMPACT · Gym toss, one-handed catch. A training partner throws the bottle across the gym; he catches it without stopping his sentence.
 2. INTERRUPTION · Dumbbell racked, camera shakes. The weight slams onto the rack at 0.0 s; he says the product name through the shake.
 3. SPEED · Freeze at the box-jump peak. Frozen mid-air for 0.5 s (the header goes on in finishing), then he lands and holds up the tablet.

@@ -14,7 +14,7 @@ which does random every time."
 > **⛔ 💪 HARDCORE SHIRTLESS IS ALWAYS A VISIBLE OPTION (Mitansh, 2026-11-02: "WHy the fuck did Sermorelin skill didnt show
 > "HARDCORE SHIRTLESS" Option man!???"):** for any product in `core/references/hardcore-men.json` whose audience includes men, the
 > Mood question is: 1 **"💪 Hardcore shirtless (Recommended)"** (every men's slot HARDCORE per `hardcore-men.md`, H3–H11 refs,
-> styles still drawn at random) · 2 "🎲 Surprise me" (random styles, 40% HARDCORE) · 3 "📚 Pick from the 15 styles" · 4 the
+> styles still drawn at random) · 2 "🎲 Surprise me" (random styles, up to 30% HARDCORE) · 3 "📚 Pick from the 15 styles" · 4 the
 > product's own favourite mood. Never bury hardcore inside another option's description.
 
 ## 🎲 Surprise me
@@ -24,7 +24,7 @@ product's `reviews.md` has screened reviews). It draws N different styles at ran
 frameworks, Read each board before writing that slot's prompt, and show the style code in the batch table. After generating,
 `pick_styles.py --log --product <id> --codes S02,S09,…` records the batch.
 **Hardcore men (Jeremy, 2026-11-02):** always pass `--audience men|women|both`. For the products in
-`core/references/hardcore-men.json` the picker tags 40% of the men's slots `HARDCORE`; write those slots per
+`core/references/hardcore-men.json` the picker tags up to 30% of the men's slots `HARDCORE`; write those slots per
 `core/references/hardcore-men.md` (shirtless 40–45, flawless muscular condition, hard gym light) whatever the style is.
 
 ## 📚 Pick from the 15 styles: ONE AskUserQuestion, 4 questions, multiSelect, every option with its one-line look

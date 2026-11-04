@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793746711-6285) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793832093-ced5) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -18,13 +18,16 @@ Applies to every product
 
 #### Claims
 - No “clinically studied” or “clinically backed” for a compound. Only a named ingredient can carry that claim.
-- Never attribute an outcome to the compound. Lead with the mechanism, then the downstream benefit — “raises testosterone, and healthy testosterone levels support body composition.”
-- No body-composition or “fat and skinny” claims on any product. They cause rejections.
+- Never attribute an outcome to the compound. Lead with the mechanism, then the downstream benefit — “raises testosterone, and healthy testosterone levels support lean muscle.”
+- Never use the phrase “body composition” anywhere. Rewrite it — e.g. “supports lean muscle.”
+- No “fat” or “skinny” claims anywhere — no fat loss, “melting fat,” “fat and skinny” or similar. They cause rejections.
 - No targeted fat loss, and never name a body area — FTC rules prohibit it. No “melting belly fat” style claims.
 - Avoid “melt,” “burn,” “ripped” and “shred.”
 - No unsupported medical-style claims.
 - No exaggerated transformation claims.
 - No claims outside a product’s approved benefit scope.
+- Benefits only ever come from the product’s Quick-hit benefits list, and must match that wording 100%. No paraphrasing, no new benefits.
+- “Dr. Prescribed” or “Doctor Prescribed” is never a benefit of any product.
 - Never call a sublingual all natural. Peptides support the body’s own production — that is the limit of the claim.
 - Say “supports,” never “builds.”
 - No “high circulation” — it doesn’t mean anything to the reader.
@@ -39,13 +42,12 @@ Applies to every product
 - No mention of needles, including “needle-free.” Say “easy sublingual delivery.”
 
 #### AI disclosure
-- Every AI-generated image or video carries: “ADVERTISEMENT: AI-generated depiction and simulated portrayal. Not an actual patient or medical provider.”
 - The wording is “AI depictions,” never “AI deceptions.”
 - Disclosure is not optional. Nothing AI-generated goes live without it.
 
 #### Proof & approval
 - Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
-- Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. “Over 100,000 happy customers” goes on 40%. See Standards 02 · 06.
+- Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 42% of graphics, not every one. “Over 100,000 happy customers” goes on 28%, with the Trustpilot bar. 30% show neither. See Standards 02 · 06.
 - Compliance questions route to Jeremy. Nothing goes live without his approval.
 
 Rules current as of 2 November 2026. Flag any rule that is later reversed or superseded.
@@ -60,6 +62,10 @@ Applies to every product unless a brief says otherwise
 - Product imagery feels intentional and premium, with the medication clearly visible.
 - The product is always in focus, in every static and video asset.
 - The product name stands out — never hidden or tiny. Exception: advertorial ads driving click-throughs may lead with the angle (e.g. “3-in-1 sleep prescription”).
+
+#### Talent — shirtless
+- Never show shirtless male or female talent on any sexual health product: Lovara, PT-141, Spark and Titan-rx.
+- Shirtless male talent is allowed on up to 30% of creatives (static and video) for Sermorelin, Sermorelin GHK, TRT, BPC-157, TB-500, Spartan Stack and Wolverine Stack.
 
 #### 02 · Proven creative approaches
 - Sexual health: macro shots of women’s lips with a pill, or an attractive woman looking into the camera, pushed to the foreground (neck-up is fine). Keep both as recurring directions.
@@ -77,7 +83,7 @@ Logo
 4:5
 Width
 40%
-31%
+29%
 Height
 3.5%
 3.5%
@@ -87,12 +93,13 @@ Area (bounding box)
 
 #### 04 · Disclaimers
 - Always at the bottom of the graphic.
+- Product-specific: each ad uses the disclaimer from that product’s page, not a shared global one.
 - Two lines maximum, 13 px minimum.
 - Clearly legible with strong contrast — never trade readability for aesthetics.
 
 #### 07 · Mobile-first typography
 - 95% of traffic is mobile — set all type for the phone first.
-- Minimum on-screen text: [mobile text min: __px — confirm w/ Justin]. Separate from the 13 px disclaimer minimum.
+- Minimum on-screen text: 24 px. Separate from the 13 px disclaimer minimum.
 
 #### 05 · Trustpilot branding
 - Use only the approved Trustpilot logo and assets.
@@ -103,15 +110,18 @@ Area (bounding box)
 - Doctor-prescribed medication
 - Free shipping from pharmacy
 
-60%
+42%
 Trust-focused
-Trustpilot, doctor-prescribed and/or free shipping — together or selectively.
-40%
-Minimalist
-Product- or headline-led, no trust callouts.
+Trustpilot bar, doctor-prescribed and/or ships free — together or selectively.
+28%
+Trustpilot + customer count
+Trustpilot bar plus “Over 100,000 happy customers.”
+30%
+None
+Neither element appears.
 
 #### Customer count
-- “Over 100,000 happy customers” runs on 40% of graphics only — set separately from the trust callouts above.
+- “Over 100,000 happy customers” runs on 28% of graphics, always alongside the Trustpilot bar (see the split above).
 
 #### 08 · Women’s color & typography
 - Pinks, tans, neutrals and warm tones have performed well — keep using them.
@@ -119,6 +129,27 @@ Product- or headline-led, no trust callouts.
 - These are preferred options, not limits. Explore current color and type trends that suit the product, imagery and concept.
 
 09 · Living reference — supplements, never overrides, the claims and compliance rules in this book.
+
+#### 09 · Discount accuracy & CTA selection
+Every advertised discount must reflect the specific product and delivery method shown in the creative. Applies to all AI-generated static and video ads.
+- Single product or delivery method shown: use its own discount.
+- Multiple products or delivery methods shown: use the highest available discount among them.
+- Identify which product and delivery method is featured before choosing the discount.
+- Never apply one formulation's discount to another unless both share the same approved offer.
+- These are maximum discounts — always write "Save Up to X%," never a guaranteed fixed discount.
+- If the product or formulation can't be confidently identified, don't guess — flag the creative for review before applying a discount.
+
+#### Approved discounts (maximum)
+- PT-141 — Nasal Spray: Save Up to 23%
+- PT-141 — Sublingual: Save Up to 59%
+- Sermorelin — Sublingual: Save Up to 65%
+- Sermorelin — Injection: Save Up to 59%
+- NAD+ — Sublingual: Save Up to 62%
+- NAD+ — Injection: Save Up to 62%
+- GLP-1 — Semaglutide: Save Up to 83%
+- GLP-1 — Tirzepatide: Save Up to 70%
+
+Example: a PT-141 creative showing both nasal spray and sublingual uses "Save Up to 59%." Nasal spray alone uses "Save Up to 23%."
 Standards 03
 
 ## Creative & page standards
@@ -135,15 +166,22 @@ Applies to every product
 
 #### Focal-point mix
 Official split for all products. This replaces the earlier “pill is the hero, not the bottle” rule.
-50%
+40%
 Pill-focused
 The pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible.
-25%
+30%
 Bottle-focused
 The product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments.
-25%
+30%
 Person-focused
 A person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery.
+
+#### Product accuracy & realistic scale
+All product imagery must accurately represent the actual product, including its label orientation, proportions and physical appearance. Applies to all AI-generated static and video creative, including oversized product concepts.
+- Label orientation: product labels, logos and text always face the correct direction and stay readable. Never generate mirrored, reversed or incorrectly positioned labels.
+- Realistic scale: when a person interacts with, sits on, holds or stands beside an oversized product, the person and product keep realistic proportions relative to one another.
+- Product integrity: never distort, stretch, deform or alter the product’s shape, packaging or identifying details.
+- Final QA: before finalizing any creative, verify that product labels are correctly oriented and all human-to-product interactions look natural and physically believable.
 
 #### Peptide stacks — all peptides listed (mandatory)
 Every ad for a peptide stack must clearly show each peptide in that stack. The stack name alone is not enough — customers may not know what the branded name stands for.
@@ -171,6 +209,7 @@ Every ad for a peptide stack must clearly show each peptide in that stack. The s
 - Creative must hold up in square and vertical alike.
 - Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
 - Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
+- Show the lowest price or the price per day on 10% of all ads (e.g. “Starting at $95/month” or “Sermorelin for $3.00/day”), using the product’s price from its CTAs or Offers & conversion.
 - The Everlife logo appears on every ad.
 
 #### Imagery
@@ -246,8 +285,8 @@ More benefits & claims on page 8
 - CTA: Get Lean Today
 - CTA: Explore Sermorelin
 - CTA: Save Up to 65%
+- CTA: Save Up to 59%
 - CTA: Support Natural Growth Hormone
-- CTA: Build Your Plan
 - CTA: Sermorelin for $3.00/day
 - CTA: Starting at $95/month
 - CTA: Ships Free From Pharmacy
@@ -259,7 +298,8 @@ More benefits & claims on page 8
 - Available as sublingual tablets or injections
 
 ### Offers & conversion
-- Save up to 65%
+- Save up to 65% (sublingual)
+- Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
 - Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
@@ -320,8 +360,8 @@ More benefits & claims on page 10
 - CTA: Get Lean Today
 - CTA: Explore Sermorelin
 - CTA: Save Up to 65%
+- CTA: Save Up to 59%
 - CTA: Support Natural Growth Hormone
-- CTA: Build Your Plan
 - CTA: Sermorelin for $3.00/day
 - CTA: Starting at $95/month
 - CTA: Ships Free From Pharmacy
@@ -333,7 +373,8 @@ More benefits & claims on page 10
 - Available as sublingual tablets or injections
 
 ### Offers & conversion
-- Save up to 65%
+- Save up to 65% (sublingual)
+- Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
 - Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
@@ -361,7 +402,7 @@ Men 35–60 who want lean muscle, strength and growth hormone support from one f
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
+- Benefit scope: skin, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 
 A 3-in-1 formula combining growth-hormone support, skin renewal, circulation, muscle, and metabolism benefit territories.
@@ -404,7 +445,6 @@ More headlines on page 12
 - CTA: Explore Sermorelin GHK
 - CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
-- CTA: Start Your Plan
 - CTA: Sermorelin GHK for $4.25/day
 - CTA: Ships Free From Pharmacy
 
@@ -462,7 +502,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Supports metabolism and lean muscle tone
 - Supports natural growth hormone production
 - Stimulates natural growth hormone and IGF-1 production
-- Promotes lean muscle growth and fat loss
+- Promotes lean muscle growth
 - Enhances sleep quality and cellular repair
 - A foundation for healthy aging, strength and vitality
 
@@ -495,7 +535,7 @@ Longevity + skin · Women
 Women 35–60 who want tone, strength and skin glow from one formula.
 
 ### Creative direction
-- Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
+- Benefit scope: skin, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 - Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
 
@@ -540,7 +580,6 @@ More headlines on page 15
 - CTA: Explore Sermorelin GHK
 - CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
-- CTA: Start Your Plan
 - CTA: Sermorelin GHK for $4.25/day
 - CTA: Ships Free From Pharmacy
 
@@ -587,7 +626,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Supports metabolism and lean muscle tone
 - Supports natural growth hormone production
 - Stimulates natural growth hormone and IGF-1 production
-- Promotes lean muscle growth and fat loss
+- Promotes lean muscle growth
 - Enhances sleep quality and cellular repair
 - A foundation for healthy aging, strength and vitality
 
@@ -654,7 +693,6 @@ More benefits & claims on page 18
 - CTA: Support Your Spark
 - CTA: Save Up to 45%
 - CTA: Discover Lovara
-- CTA: Start Your Plan
 - CTA: Lovara for $1.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -900,11 +938,10 @@ More headlines on page 24
 - Supports Central Desire Pathways
 
 ### CTAs
-- CTA: Support Your Spark
 - CTA: Explore PT-141
 - CTA: Save Up to 23%
+- CTA: Save Up to 59%
 - CTA: Start Desire Support
-- CTA: Find Your Plan
 - CTA: PT-141 for $2.00/day
 - CTA: Ships Free From Pharmacy
 
@@ -916,7 +953,8 @@ More headlines on page 24
 - Transparent, all-in-one pricing
 
 ### Offers & conversion
-- Save up to 23%
+- Save up to 23% (nasal spray)
+- Save up to 59% (sublingual)
 
 ### Hard NOs
 - No beds or bedroom scenes.
@@ -985,7 +1023,6 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - CTA: Explore Spark
 - CTA: Ignite Your Spark
 - CTA: Save Up to 51%
-- CTA: Find Your Plan
 - CTA: Spark for $1.50/day
 - CTA: Ships Free From Pharmacy
 
@@ -1038,7 +1075,7 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 - CTA: Save Up to 75%
 - CTA: Support Firmer Skin
 - CTA: Start Skin Renewal
-- CTA: GHK-Cu Cream for $1.50/day
+- CTA: GHK Peptide Cream for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1132,7 +1169,6 @@ Enclomiphene: https://everlifemd.com/enclomiphene/fb · Last verified: Needs LP 
 - Get Your Edge Back
 - Your Goals. Your Options. Your Protocols [Weak headline]
 - Less Guessing. More Answers. [Weak headline]
-- Raise Your Testosterone. Skip the Needles [Hard NO conflict]no needle mentions
 - More Drive Starts With Better Data [Weak headline]
 
 #### Enclomiphene
@@ -1195,7 +1231,6 @@ More headlines on page 30
 - CTA: Explore Optima NAD+
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Cellular Energy
-- CTA: Start Your Plan
 - CTA: Optima-NAD+ for $2.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1278,9 +1313,7 @@ More headlines on page 32
 
 ### CTAs
 - CTA: Explore NAD+
-- CTA: Choose Your Form
 - CTA: Save Up to 62%
-- CTA: Start Your Plan
 - CTA: Recharge Your Cells
 - CTA: NAD+ for $3.25/day
 - CTA: Ships Free From Pharmacy
@@ -1294,7 +1327,7 @@ More headlines on page 32
 
 ### Offers & conversion
 - Save up to 62% on injections
-- Save up to 56% on sublingual tablets
+- Save up to 62% on sublingual tablets
 - Starting at $119/month
 - 30-day money-back guarantee on your first order
 
@@ -1426,8 +1459,7 @@ More headlines on page 35
 - CTA: Explore Titan-Rx
 - CTA: Save Up to 49%
 - CTA: Start Daily Support
-- CTA: Find Your Plan
-- CTA: Titan-rx for $1.50/day
+- CTA: Titan-Rx for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -1470,18 +1502,18 @@ Tadalafil + Vardenafil + L-Arginine. Attribute each claim only to its own ingred
 #### L-Arginine
 - Boosts circulation and stamina
 
-Body composition
+Metabolic support
 
 ## Tesamorelin
 
 ### Who it's for
-Adults 40–60 focused on visceral fat, lean mass and metabolic performance.
+Adults 40–60 focused on lean mass and metabolic performance.
 
 ### Creative direction
 - The approved page template other products build from.
 
 All audiences
-Growth-hormone pathway support focused on visceral fat, lean muscle, metabolism, strength, and performance.
+Growth-hormone pathway support focused on lean muscle, metabolism, strength, and performance.
 
 ### Headlines & hooks [Pending approval]
 1. Support Lean Muscle as You Age
@@ -1514,7 +1546,6 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Support Lean Muscle
 - CTA: Save Up to 40%
 - CTA: Start Growth Hormone Support
-- CTA: Build Your Plan
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -1565,7 +1596,6 @@ More headlines on page 38
 - CTA: Explore GLP-1
 - CTA: Save Up to 59%
 - CTA: Check Your Options
-- CTA: Build Your Plan
 - CTA: GLP-1 for $2.50/day
 - CTA: Ships Free From Pharmacy
 
@@ -1790,7 +1820,6 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Support Healthy Aging
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Longevity Support
-- CTA: Build Your Plan
 - CTA: Epithalon for $6.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1807,15 +1836,15 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
-Body composition
+Metabolic support
 
 ## Tesamorelin/Ipamorelin [Approved by JL]
 
 ### Who it's for
-Adults 40–60 focused on visceral fat, lean muscle and metabolic support.
+Adults 40–60 focused on lean muscle and metabolic support.
 [Approved by JL]
 All audiences
-Growth-hormone peptide stack focused on visceral fat, lean muscle, natural Growth Hormone release, body composition, sleep, and recovery.
+Growth-hormone peptide stack focused on lean muscle, natural Growth Hormone release, sleep, and recovery.
 
 ### Headlines & hooks [Pending approval]
 1. Recover Better. Perform Stronger.

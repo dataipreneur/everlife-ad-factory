@@ -99,7 +99,7 @@ or "by Everlife". Statics never say "by Everlife".
 > **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 **Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "✨ Ultra premium,
 product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Clean clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
-"Headline + 1 line" · **CTA** "Save Up to 59% (Recommended)" / "Ships Free From Pharmacy" / "Start Weight Support" / "Explore GLP-1" ("Check Your Options", "Build Your Plan" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
+"Headline + 1 line" · **CTA** "Save Up to 83% (semaglutide) / Save Up to 70% (tirzepatide), the featured drug's own maximum (Recommended)" / "Ships Free From Pharmacy" / "Start Weight Support" / "Explore GLP-1" ("Check Your Options", "Build Your Plan" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body and never a named drug or
