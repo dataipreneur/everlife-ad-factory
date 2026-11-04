@@ -234,6 +234,11 @@ def smoke(core, out):
     expect("teamlog copy refuses an offer without \"Up to\" (2026-11-04)",
            [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "20261104-wolverine-test", "--ad-id",
             "20261104-wolverine-test-1", "--product", "wolverine", "--kind", "image"], False, "Save Up to N%")
+    json.dump({"product": "sermorelin-ghk", "head": ["Become Harder to Beat"], "benefits": ["Supports Natural Growth Hormone Production"],
+               "offer": "Save Up to 47%"}, open(os.path.join(tl, "copy.json"), "w"))
+    expect("teamlog copy accepts the bible's own quick-hit (the pre-screen 'why' column is not a line list; 2026-11-04)",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "20261104-sermorelin-ghk-test", "--ad-id",
+            "20261104-sermorelin-ghk-test-1", "--product", "sermorelin-ghk", "--kind", "image"], True, "✅")
     sm = os.path.join(out, "teamlog_rows", "data", "users", "u1"); os.makedirs(sm)   # the lean pre-batch read (2026-11-04)
     json.dump({"type": "style", "product": "wolverine", "date": "2026-11-04", "styles": ["S04"]}, open(os.path.join(sm, "s.json"), "w"))
     expect("teamlog summary digests downloaded rows (lean read)",

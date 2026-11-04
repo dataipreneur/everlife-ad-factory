@@ -117,7 +117,9 @@ def screen(product):
         if not st:
             continue
         s = "no" if ("❌" in st or "⛔" in st) else "hold" if ("⚠" in st or "⏳" in st) else "ok"
-        for c in cells:
+        # The line is always the FIRST cell. The later cells (where / why) quote approved replacements ('use "Supports natural growth
+        # hormone production"'), and reading them as lines marked the bible's own quick-hit ❌ (found 2026-11-04, Sermorelin GHK).
+        for c in cells[:1]:
             if c is st or not c:
                 continue
             for item in re.split(r"\s·\s|\s•\s", re.sub(r"^CTA:\s*", "", c)):

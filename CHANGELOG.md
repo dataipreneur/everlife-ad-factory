@@ -20,7 +20,11 @@ same day's audit found ~150 generations logged locally but never sent and ~250 f
   `tool_prompt`.
 - Skill lines updated in 14 product skills (image-batch, video-prompting, animated-still, finishing). **Restora-Z not edited**
   (needs Priestley's OK); it follows TEAM-LOGS / AD-REVIEW, which now describe the lean steps.
-- Smoke: 66/66 (two new checks: the offer wording, the summary digest).
+- **Pre-screen false positive fixed (found by the first real both-sizes run, Sermorelin GHK):** `screen()` read every cell of a ❌ row as
+  a banned line, so a row whose "why" cell quoted the approved replacement (`use "Supports natural growth hormone production"`) made the
+  bible's own top quick-hit read "❌ pre-screen" and blocked `copy` / `close`. It now reads only the first (line) cell; the real ❌ lines
+  (Visceral-Fat, "safer alternative to synthetic HGH", Recover Like Wolverine, Support Lean Body Goals, …) still refuse.
+- Smoke: 67/67 (three new checks: the offer wording, the summary digest, the quick-hit false positive).
 
 ## 2026-11-04 — teamlog.py: start time automatic, every record names its page (branch `teamlog-fixes`)
 First live runs (BERNS, Edge) showed start times typed after the end and 30 proof records sent to the Activity log. Priestley:
