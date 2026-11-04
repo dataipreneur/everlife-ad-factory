@@ -2,6 +2,26 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-04 — Lean team logging + send/post check (branch `teamlog-fixes`, originals in `_originals/2026-11-04/lean-logging/`)
+Priestley: "I want to be wary of token usage bcoz of this logging system" → "Yes" to the lean version with a posting check. The
+same day's audit found ~150 generations logged locally but never sent and ~250 finished ads not on Ad Review.
+- **Lean reads:** pre-batch rows (Copy Ledger, Ad Review flags) are saved to files with `ArtifactData` `out_dir` and read through
+  `teamlog.py summary` (used headlines / hooks / CTAs, the team's recent styles with the `--skip` list, the proof split vs 42/28/30,
+  reviewer flags with reasons and recipes). TEAM-LOGS §2.2, AD-REVIEW §3.
+- **Grouped logging:** `teamlog.py gens --wave W.json` (a wave in one call), `qa` with several doc ids, `proof` with repeated
+  `--ad-id`/`--proof` pairs; `pending` lists what is unsent per page so each page gets one batch. **Light mode:** `teamlog.py light`
+  logs a maintenance job (resizes, CTA swaps, text fixes) once with its file list (run `--format maintenance`).
+- **Quieter output:** one line per record; page URLs come from `pending`.
+- **Send tracking:** `teamlog.py sent` / `posted` (`.sent.json`, `.posted.json` in `<job>/teamlog/`; a record changed after sending
+  counts as unsent again; `--queued` for the pending file). `close` lists what is still to send or post. The **Stop hook** now also
+  sends Claude back once when a session's job folders hold unsent records or finished ads of a closed run not posted to Ad Review.
+- **Checker:** run_id format enforced (`B3` refused); "Save N% Off" without "Up to" refused; any % / $ line on Titan-Rx flagged
+  (offer [VERIFY CURRENT], $/day held); single-shot composer tools (`composer_edit_image`, voice lines, music) no longer ask for a
+  `tool_prompt`.
+- Skill lines updated in 14 product skills (image-batch, video-prompting, animated-still, finishing). **Restora-Z not edited**
+  (needs Priestley's OK); it follows TEAM-LOGS / AD-REVIEW, which now describe the lean steps.
+- Smoke: 66/66 (two new checks: the offer wording, the summary digest).
+
 ## 2026-11-04 — teamlog.py: start time automatic, every record names its page (branch `teamlog-fixes`)
 First live runs (BERNS, Edge) showed start times typed after the end and 30 proof records sent to the Activity log. Priestley:
 "Fix first 2".

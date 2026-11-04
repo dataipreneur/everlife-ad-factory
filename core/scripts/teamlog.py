@@ -24,20 +24,37 @@ first and a local copy stays in the job folder.
   teamlog.py check <file.json> ...      validate records (exit 1 on an error)
   teamlog.py close <job>                closing check before SESSION.md: every gen has QA and a prompt file, every finished ad has
                                         copy + proof, a run record exists and agrees with the gens (exit 1 on an error)
+
+Lean mode (Priestley 2026-11-04: keep the logging's token cost down):
+  teamlog.py gens  <job> --wave W.json --run-id R --product P [any gen option as the default]
+                   one call per wave: W.json = [{"ad_id": "...", "prompt_file": "...", "headline": "...", ...}, ...]
+                   (keys = the gen options with _ for -; each item overrides the defaults)
+  teamlog.py qa    <job> <doc_id> <doc_id> ... --pass | --fail     several takes with the same result in one call
+  teamlog.py light <job> --run-id R --product P --model M --prompt-file F --task "resize 4:5 → 9:16" --files a.png,b.png
+                   maintenance job (resizes, CTA swaps, text fixes): the shared prompt once, with the file list
+  teamlog.py summary <dir> ... --product P   short digest of page rows downloaded to files (ArtifactData `out_dir`): used
+                   headlines / hooks / CTAs, recent styles, the proof split, Ad Review flags. Read it instead of the rows.
+  teamlog.py pending <job>              records not sent yet (new or changed since sent), grouped per page with the page URL
+  teamlog.py sent  <job> [doc_id ...] [--all] [--queued]   mark records as sent (--queued: written to the pending file)
+  teamlog.py posted <job> <ad_id ...> [--queued]           mark finished ads as posted to Ad Review
 """
-import argparse, datetime, glob, json, os, re, shutil, sys
+import argparse, datetime, glob, hashlib, json, os, re, shutil, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SKILLS = [os.path.expanduser(os.environ.get("EVERLIFE_SKILLS_DIR", "~/.claude/skills")),
           os.path.normpath(os.path.join(HERE, "..", "..", "skills"))]
 # Routes that rewrite or expand what we send: their gen records should carry tool_prompt (TEAM-LOGS §6).
 EXPANDS = re.compile(r"marketing[_ -]?studio|ads[_ -]?studio|composer|ad[_ -]?agent|ugc", re.I)
+# Single-shot composer tools (an image edit, a voice line, music) run what we send: no tool_prompt to read back.
+SINGLE_SHOT = re.compile(r"edit_image|voice_line|generate_music|music|lyria", re.I)
+RUN_ID = re.compile(r"^\d{8}-[a-z0-9-]+-[A-Za-z0-9]{3,6}$")   # TEAM-LOGS §1: <YYYYMMDD>-<product id>-<4 random letters>
 # The page each record type goes to (TEAM-LOGS.md table). Printed with every record so it is never sent to the wrong page.
-PAGES = {"gen": ("Prompt & Outcome Log", "https://claude.ai/artifact/YALbdpQKrMMfZzA9mr32Y2"),
-         "copy": ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o"),
-         "proof": ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o"),
-         "style": ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o"),
-         "run": ("Activity & Spend Log", "https://claude.ai/artifact/R2GqUTb8pKbSniNmjGqBre")}
+PROMPT = ("Prompt log", "https://claude.ai/artifact/YALbdpQKrMMfZzA9mr32Y2")
+LEDGER = ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o")
+PAGES = {"gen": PROMPT, "copy": LEDGER, "proof": LEDGER, "style": LEDGER,
+         "run": ("Activity log", "https://claude.ai/artifact/R2GqUTb8pKbSniNmjGqBre")}
+AD_REVIEW = ("Ad Review", "https://claude.ai/artifact/QiQsRZvDdTTsKmsuVDG52M")
+PROOF_TARGET = {"trust": 0.42, "count": 0.28, "none": 0.30}
 REF_TYPES = {"board_winner", "meta_winner", "own_ad", "style_board", "hardcore_ref", "product_example", "outside", "hook_engine", "none"}
 LINE_KINDS = {"headline", "hook", "vo", "caption", "benefit", "end_head", "cta", "offer"}
 SPOKEN = {"hook", "vo", "caption"}
@@ -57,6 +74,7 @@ BANNED = [
     (r"\b(cure|cures|treats?|prevents?)\b", "no disease claims (cure / treat / prevent)", False),
     (r"trustpilot rating", "Trustpilot reads exactly \"Trustpilot rated 4.9 Excellent\"", False),
     (r"\bbreaking news\b", "no \"Breaking News\" framing", False),
+    (r"\bsave\s+\d+\s*%(?!\s+compared)", "the offer reads \"Save Up to N%\" (with \"Up to\"; the product's % from its bible page)", False),
     (r"\b(after|over|past|at|turning|under)\s+\d{2}\b|\b\d{2}\s*(\+|plus|years?|yrs?)\b|\b(twenty|thirty|forty|fifty|sixty|seventy)(-\w+)?\b",
      "no specific ages in video scripts or captions (team video rules, 2026-11-03)", True),
 ]
@@ -125,6 +143,8 @@ def label_line(text, kind, product, media):
             errs.append(why)
     if errs:
         return "❌ banned", errs, warns
+    if product == "titan-rx" and re.search(r"\d\s*%|\$\s*\d", low):
+        warns.append("Titan-Rx's offer is [VERIFY CURRENT] in the bible (and its $/day CTA is held): flag for Justin / Jeremy")
     status, verbatim = screen(product)
     if status is None:
         warns.append(f"no product-bible.md found for '{product}': label unchecked")
@@ -163,6 +183,8 @@ def check(rec):
         if rec.get(k) in (None, "", [], {}):
             E.append(f"{t}: '{k}' is missing")
     bf = rec.get("backfill")
+    if rec.get("run_id") and not RUN_ID.match(str(rec["run_id"])):
+        (W if bf else E).append(f"{t}: run_id {rec['run_id']!r} is not <YYYYMMDD>-<product id>-<4 letters> (TEAM-LOGS §1)")
     if t == "run":
         for k in ("started_at", "ended_at"):
             if rec.get(k) and not is_iso(rec[k]):
@@ -195,13 +217,17 @@ def check(rec):
             E.append(f"gen: ref.type {ref.get('type')!r} is not one of {sorted(REF_TYPES)}")
         if ref.get("type") == "outside" and re.search(r"everlife|sermorelin|restora|wolverine|spartan|base\d+|_video_|_static_", str(ref.get("id", "")), re.I):
             W.append("gen: ref looks like an earlier Everlife ad: use ref.type 'own_ad' (or 'meta_winner' if it is CPA-ranked)")
-        if not rec.get("refs") and not NO_REFS_OK.search(rec.get("model", "")):
+        light = rec.get("light")   # a maintenance job: the files it changed are its refs, no copy of its own
+        if light and not rec.get("files"):
+            E.append("gen: a light (maintenance) record lists the files it changed (--files)")
+        if not rec.get("refs") and not light and not NO_REFS_OK.search(rec.get("model", "")):
             W.append("gen: 'refs' is empty: list the product render / start frame / reference files attached")
         qa = rec.get("qa") or {}
-        if EXPANDS.search(rec.get("model", "")) and qa.get("pass") is not None and not rec.get("tool_prompt"):
+        m = rec.get("model", "")
+        if EXPANDS.search(m) and not SINGLE_SHOT.search(m) and qa.get("pass") is not None and not rec.get("tool_prompt"):
             W.append("gen: this tool writes its own prompt/script: read it back and save it (`teamlog.py tool`)")
         cp = rec.get("copy") or {}
-        if not (cp.get("headline") or cp.get("hook")) and not NO_REFS_OK.search(rec.get("model", "")):
+        if not (cp.get("headline") or cp.get("hook")) and not light and not NO_REFS_OK.search(rec.get("model", "")):
             W.append("gen: no headline / hook on this take (--headline for images, --hook for videos; `teamlog.py copy` fills it after the batch)")
         if qa.get("pass") is None:
             W.append("gen: QA not recorded yet (update it with `teamlog.py qa`)")
@@ -232,21 +258,61 @@ def tdir(job):
 
 
 def write(job, doc_id, rec):
+    """Save + check one record; print ONE line (errors in full under it). `pending` gives the page URLs when sending."""
     E, W = check(rec)
+    W = [w for w in W if "QA not recorded yet" not in w]   # expected until `qa`; `close` still reports it
     path = os.path.join(tdir(job), doc_id + ".json")
     json.dump(rec, open(path, "w"), ensure_ascii=False, indent=1)
-    for w in W:
-        print("⚠", w)
+    short = lambda x: (lambda y: y if len(y) <= 80 else y[:79] + "…")(re.sub(r"^\w+: ", "", x))
+    print(f"{'❌' if E else '✅'} {doc_id} → {PAGES.get(rec.get('type'), ('?',))[0]}" + (" · ⚠ " + "; ".join(short(w) for w in W) if W else ""))
     for e in E:
-        print("❌", e)
-    page = PAGES.get(rec.get("type"), ("?", "?"))
-    print(("❌ NOT READY: fix the errors, then run again" if E else "✅ ready") + f"\n  doc_id: {doc_id}\n  file:   {path}"
-          + f"\n  send to: {page[0]} ({page[1]}), collection data/users/me, doc_id {doc_id}")
+        print("   ❌", e)
     return 1 if E else 0
 
 
 def records(job):
     return {os.path.basename(f)[:-5]: json.load(open(f)) for f in sorted(glob.glob(os.path.join(job, "teamlog", "*.json")))}
+
+
+def digest(rec):
+    """Fingerprint of a record as sent; a record changed after sending (e.g. `copy` filling a gen) counts as unsent again.
+    core/hooks/teamlog_hook.py computes the same value."""
+    return hashlib.sha1(json.dumps(rec, sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
+
+
+def marks(job, name):
+    p = os.path.join(tdir(job), name)
+    return json.load(open(p)) if os.path.exists(p) else {}
+
+
+def save_marks(job, name, m):
+    json.dump(m, open(os.path.join(tdir(job), name), "w"), indent=1, sort_keys=True)
+
+
+def unsent(job):
+    sent = marks(job, ".sent.json")
+    return {doc: r for doc, r in records(job).items() if (sent.get(doc) or {}).get("digest") != digest(r)}
+
+
+def finished_ads(job):
+    """ad_ids that passed QA in runs that are closed (a run record exists): these must be posted to Ad Review."""
+    R = records(job).values()
+    closed = {r["run_id"] for r in R if r.get("type") == "run"}
+    return sorted({g["ad_id"] for g in R if g.get("type") == "gen" and not g.get("light") and g.get("run_id") in closed
+                   and (g.get("qa") or {}).get("pass")})
+
+
+def unposted(job):
+    posted = marks(job, ".posted.json")
+    return [ad for ad in finished_ads(job) if ad not in posted]
+
+
+def index(job, doc_id, model, count=1):
+    """One line per logged generation for the Stop hook (core/hooks/teamlog_hook.py), which compares it with the paid calls."""
+    idx = os.path.expanduser(os.environ.get("EVERLIFE_CREATIVE", "~/Everlife-Creative"))
+    os.makedirs(idx, exist_ok=True)
+    with open(os.path.join(idx, "teamlog-index.jsonl"), "a", encoding="utf-8") as f:
+        f.write(json.dumps({"at": now(), "doc_id": doc_id, "job": os.path.abspath(job), "model": model, "count": count}) + "\n")
 
 
 def kv(pairs):
@@ -275,12 +341,38 @@ def cmd_gen(a):
            "qa": {"pass": None, "reasons": []}, "rerolls": 0, "retake_of": a.retake_of or "",
            "prompt_by": "operator" if a.edited_by_user else "claude", "feedback": [],
            "cost": {"creatify": a.cost_creatify, "higgsfield": a.cost_higgsfield}}
+    if getattr(a, "light", False):
+        rec.update({"light": True, "task": a.task, "files": [f for f in (a.files or "").split(",") if f], "ad_id": f"{a.run_id}-maint"})
+        if a.ok is not None:
+            rec["qa"] = {"pass": a.ok, "reasons": []}
     rc = write(a.job, f"gen-{a.run_id}-{n:02d}", rec)
-    # The Stop hook (core/hooks/teamlog_hook.py) compares this index with the paid calls it captured in the session.
-    idx = os.path.expanduser(os.environ.get("EVERLIFE_CREATIVE", "~/Everlife-Creative"))
-    os.makedirs(idx, exist_ok=True)
-    with open(os.path.join(idx, "teamlog-index.jsonl"), "a", encoding="utf-8") as f:
-        f.write(json.dumps({"at": now(), "doc_id": f"gen-{a.run_id}-{n:02d}", "job": os.path.abspath(a.job), "model": a.model}) + "\n")
+    index(a.job, f"gen-{a.run_id}-{n:02d}", a.model, len(rec.get("files") or []) or 1)
+    return rc
+
+
+GEN_DEFAULTS = {"ref_type": "none", "ref_id": None, "refs": None, "cost_creatify": 0, "cost_higgsfield": 0, "ratio": "", "resolution": "",
+                "setup": None, "ask": None, "retake_of": None, "edited_by_user": False, "headline": None, "hook": None, "cta": None}
+
+
+def cmd_gens(a):
+    """One call per wave: every item of the wave file becomes a gen record (defaults from the command line)."""
+    items = json.load(open(a.wave, encoding="utf-8"))
+    base = {k: getattr(a, k) for k in list(GEN_DEFAULTS) + ["run_id", "product", "model"]}
+    rc = 0
+    for it in items:
+        it = {k.replace("-", "_"): v for k, v in it.items()}
+        if isinstance(it.get("refs"), list):
+            it["refs"] = ",".join(it["refs"])
+        if isinstance(it.get("setup"), dict):
+            it["setup"] = [f"{k}={v}" for k, v in it["setup"].items()]
+        if isinstance(it.get("ask"), str):
+            it["ask"] = [it["ask"]]
+        ns = argparse.Namespace(job=a.job, **{**base, **it})
+        if not (ns.ad_id and ns.prompt_file and ns.model):
+            print(f"❌ wave item {it} needs ad_id, prompt_file and a model")
+            rc = 1
+            continue
+        rc |= cmd_gen(ns)
     return rc
 
 
@@ -314,13 +406,17 @@ def cmd_tool_none(a):
 
 
 def cmd_qa(a):
-    path = os.path.join(a.job, "teamlog", a.doc_id + ".json")
-    rec = json.load(open(path))
-    rec["qa"] = {"pass": bool(a.ok), "reasons": a.reason or []}
-    if a.result_file:
-        rec["result_file"] = a.result_file
-    rec["qa_at"] = now()
-    return write(a.job, a.doc_id, rec)
+    if a.result_file and len(a.doc_id) > 1:
+        sys.exit("❌ --result-file names one take: give one doc_id with it")
+    rc = 0
+    for doc in a.doc_id:
+        rec = json.load(open(os.path.join(a.job, "teamlog", doc + ".json")))
+        rec["qa"] = {"pass": bool(a.ok), "reasons": a.reason or []}
+        if a.result_file:
+            rec["result_file"] = a.result_file
+        rec["qa_at"] = now()
+        rc |= write(a.job, doc, rec)
+    return rc
 
 
 def job_copy(job):
@@ -377,21 +473,33 @@ def cmd_copy(a):
         if new:
             cp.update(new)
             json.dump(g, open(os.path.join(a.job, "teamlog", doc + ".json"), "w"), ensure_ascii=False, indent=1)
-            print(f"↻ {doc}: copy filled ({', '.join(new)}): re-send this gen record")
+            print(f"↻ {doc}: copy filled ({', '.join(new)}): unsent again, `pending` lists it")
     return rc
 
 
 def cmd_proof(a):
-    rec = {"type": "proof", "product": a.product, "ad_id": a.ad_id, "kind": a.kind, "proof": a.proof, "date": now()[:10], "run_id": a.run_id}
-    return write(a.job, f"proof-{a.ad_id}", rec)
+    """--ad-id / --proof repeat in pairs, so a whole batch is one call."""
+    if len(a.ad_id) != len(a.proof):
+        sys.exit(f"❌ {len(a.ad_id)} --ad-id but {len(a.proof)} --proof: give one proof per ad")
+    rc = 0
+    for ad, pr in zip(a.ad_id, a.proof):
+        rec = {"type": "proof", "product": a.product, "ad_id": ad, "kind": a.kind, "proof": pr, "date": now()[:10], "run_id": a.run_id}
+        rc |= write(a.job, f"proof-{ad}", rec)
+    return rc
 
 
 def cmd_run(a):
     gens = [r for r in records(a.job).values() if r.get("type") == "gen" and r.get("run_id") == a.run_id]
     ads = {}
     for g in gens:
-        ads.setdefault(g["ad_id"], []).append(g)
+        if not g.get("light"):
+            ads.setdefault(g["ad_id"], []).append(g)
     finished = sum(1 for ad in ads.values() if any((g.get("qa") or {}).get("pass") for g in ad))
+    made = len(ads)
+    for g in gens:   # a maintenance job counts each file it changed
+        if g.get("light"):
+            made += len(g.get("files") or [])
+            finished += len(g.get("files") or []) if (g.get("qa") or {}).get("pass") else 0
     rerolled = sum(1 for g in gens if (g.get("qa") or {}).get("pass") is False)
     def tool(name, before, after):
         spent = round(sum(float((g.get("cost") or {}).get(name) or 0) for g in gens), 2)
@@ -402,7 +510,7 @@ def cmd_run(a):
     started = times[0] if times else now()
     if not times:
         print("⚠ no generation logged for this run: started_at = now (log generations with `teamlog.py gen` when they are submitted)")
-    rec = {"type": "run", "run_id": a.run_id, "product": a.product, "format": a.format, "made": len(ads), "finished": finished,
+    rec = {"type": "run", "run_id": a.run_id, "product": a.product, "format": a.format, "made": made, "finished": finished,
            "rerolled": rerolled, "captions": a.captions == "yes",
            "credits": {"creatify": tool("creatify", a.creatify_before, a.creatify_after),
                        "higgsfield": tool("higgsfield", a.higgsfield_before, a.higgsfield_after)},
@@ -444,8 +552,7 @@ def cmd_close(a):
             W.append(f"{g['ad_id']}: retake_of {g['retake_of']} is not in this job's records")
         if g.get("retake_of") and not g.get("asks"):
             W.append(f"{g['ad_id']}: a re-take without the operator's words (--ask): what did they ask to change?")
-    finished_ads = {g["ad_id"] for g in gens if (g.get("qa") or {}).get("pass")}
-    for ad in sorted(finished_ads):
+    for ad in sorted({g["ad_id"] for g in gens if (g.get("qa") or {}).get("pass") and not g.get("light")}):
         for t in ("copy", "proof"):
             if not any(r.get("type") == t and r.get("ad_id") == ad for r in R.values()):
                 E.append(f"{ad}: finished, but no {t} record (`teamlog.py {t}`)")
@@ -462,32 +569,152 @@ def cmd_close(a):
     for x in E:
         print("❌", x)
     n = {t: sum(1 for r in R.values() if r.get('type') == t) for t in ("gen", "copy", "proof", "run")}
-    by_page = {}
-    for doc, r in R.items():
-        by_page.setdefault(PAGES.get(r.get("type"), ("?", "?")), []).append(doc)
-    for (name, url), docs in by_page.items():
-        print(f"  → {name} ({url}): {len(docs)} record(s)")
-    print(("❌ NOT CLOSED" if E else "✅ closed") + f": {n['gen']} gen · {n['copy']} copy · {n['proof']} proof · {n['run']} run "
-          f"in {os.path.join(a.job, 'teamlog')} (send any not yet sent: one ArtifactData batch per page)")
+    print(("❌ NOT CLOSED" if E else "✅ closed") + f": {n['gen']} gen · {n['copy']} copy · {n['proof']} proof · {n['run']} run")
+    left, ads = unsent(a.job), unposted(a.job)
+    if left or ads:
+        print(f"   still to do: {len(left)} record(s) not sent (`teamlog.py pending {a.job}`)"
+              + (f" · {len(ads)} finished ad(s) not posted to Ad Review: {', '.join(ads)}" if ads else ""))
     return 1 if E else 0
+
+
+def cmd_pending(a):
+    """What is left to send, one block per page: Claude sends each block as ONE ArtifactData batch (file_path entries), then `sent`."""
+    left = unsent(a.job)
+    by = {}
+    for doc, r in left.items():
+        by.setdefault(PAGES.get(r.get("type"), ("?", "?")), []).append(doc)
+    for (name, url), docs in by.items():
+        print(f"{name} {url}  ({len(docs)}; collection data/users/me; doc_id = file name)")
+        for d in docs:
+            print(f"   {os.path.join(a.job, 'teamlog', d + '.json')}")
+    ads = unposted(a.job)
+    if ads:
+        print(f"{AD_REVIEW[0]} {AD_REVIEW[1]}  (finished, not posted: {', '.join(ads)}; AD-REVIEW §4, then `teamlog.py posted`)")
+    if not by and not ads:
+        print("✅ nothing pending")
+    elif by:
+        print(f"→ after each page's batch succeeds: teamlog.py sent {a.job} --all   (page unreachable: append to the pending file, then --queued)")
+    return 0
+
+
+def cmd_sent(a):
+    R = records(a.job)
+    docs = list(R) if a.all else a.doc_id
+    m = marks(a.job, ".sent.json")
+    for d in docs:
+        if d not in R:
+            sys.exit(f"❌ {d} is not a record in {a.job}/teamlog")
+        m[d] = {"digest": digest(R[d]), "at": now(), "queued": a.queued}
+    save_marks(a.job, ".sent.json", m)
+    print(f"✅ {len(docs)} marked {'queued (pending file)' if a.queued else 'sent'} · {len(unsent(a.job))} left")
+    return 0
+
+
+def cmd_posted(a):
+    m = marks(a.job, ".posted.json")
+    for ad in a.ad_id:
+        m[ad] = {"at": now(), "queued": a.queued}
+    save_marks(a.job, ".posted.json", m)
+    left = unposted(a.job)
+    print(f"✅ {len(a.ad_id)} marked {'queued' if a.queued else 'posted'}" + (f" · not posted yet: {', '.join(left)}" if left else ""))
+    return 0
+
+
+# ---------- summary: the lean pre-batch read ----------
+def page_rows(dirs):
+    """Every record saved under the given folders (ArtifactData `out_dir` downloads), as (collection path, doc id, data)."""
+    for d in dirs:
+        for f in sorted(glob.glob(os.path.join(d, "**", "*.json"), recursive=True)):
+            try:
+                x = json.load(open(f, encoding="utf-8"))
+            except ValueError:
+                continue
+            if isinstance(x, dict):
+                x = x["data"] if isinstance(x.get("data"), dict) and "type" not in x else x
+                yield os.path.relpath(os.path.dirname(f), d), os.path.basename(f)[:-5], x
+
+
+def cmd_summary(a):
+    rows = list(page_rows(a.dirs))
+    when = lambda r: str(r.get("createdAt") or r.get("created_at") or r.get("date") or "")
+    mine = sorted((r for _, _, r in rows if r.get("product") == a.product), key=when, reverse=True)
+    out = []
+    # 1. copy already used (never reuse unless the user asks)
+    used = {}
+    for r in (r for r in mine if r.get("type") == "copy"):
+        for ln in r.get("lines", []):
+            k = {"vo": "hook", "caption": "hook", "end_head": "headline"}.get(ln.get("kind"), ln.get("kind"))   # offers repeat by design
+            if k in ("headline", "hook", "cta"):
+                used.setdefault(k, {}).setdefault(norm(ln.get("text", "")), ln.get("text", "").strip())
+    n_copy = sum(1 for r in mine if r.get("type") == "copy")
+    out.append(f"{a.product}: {n_copy} copy rows read")
+    for k, rule in (("headline", "don't reuse"), ("hook", "don't reuse"), ("cta", "vary; the offer CTA is always fine")):
+        texts = list(used.get(k, {}).values())[: a.limit]
+        if texts:
+            out.append(f"USED {k.upper()}S ({len(used[k])}, newest first; {rule}): " + " | ".join(t[:90] for t in texts))
+    # 2. styles of the team's last two batches
+    st = [r for r in mine if r.get("type") == "style"][:2]
+    codes = sorted({c for r in st for c in r.get("styles", [])})
+    out.append("RECENT STYLES (last 2 batches): " + (" ".join(codes) + f"  → pick_styles.py --skip {','.join(codes)}" if codes else "none"))
+    # 3. proof split vs the 42/28/30 plan
+    pr = [r.get("proof") for r in mine if r.get("type") == "proof"]
+    if pr:
+        share = {k: pr.count(k) / len(pr) for k in PROOF_TARGET}
+        behind = sorted(PROOF_TARGET, key=lambda k: share[k] - PROOF_TARGET[k])
+        out.append(f"PROOF ({len(pr)}): " + " · ".join(f"{k} {share[k]:.0%} (plan {PROOF_TARGET[k]:.0%})" for k in PROOF_TARGET)
+                   + f" → lean next toward {behind[0]}")
+    else:
+        out.append("PROOF: no proof rows yet → follow finish_batch.py --proof-plan")
+    # 4. Ad Review flags (reviewers only when the reviewer list was downloaded)
+    revs = next((r.get("ids") for c, d, r in rows if d == "reviewers" and isinstance(r.get("ids"), list)), None)
+    entries = {f"{c.split('/')[-1]}/{d}": r for c, d, r in rows if r.get("type") == "entry"}
+    flags = [r for r in mine if r.get("type") == "flag" and (revs is None or r.get("by") in revs)][:30]
+    if flags:
+        reasons = {}
+        for f in flags:
+            for x in f.get("reasons", []):
+                reasons[x] = reasons.get(x, 0) + 1
+        top = sorted(reasons.items(), key=lambda kv: -kv[1])
+        out.append(f"FLAGS ({len(flags)} by {'reviewers' if revs is not None else 'anyone: reviewer list not read'}): top reasons "
+                   + ", ".join(f"{k} ×{v}" for k, v in top[:5]) + ("  (≥3 of one reason → propose a lessons.md PR)" if top and top[0][1] >= 3 else ""))
+        for f in flags:
+            e = entries.get(f.get("target", ""), {})
+            rc = e.get("recipe") or {}
+            recipe = " · ".join(str(rc[k]) for k in ("hook", "headline", "framework", "style", "scene") if rc.get(k)) or e.get("label") or f.get("ad_id", "?")
+            out.append(f"  {'⛔ COMPLIANCE ' if f.get('compliance') else '✗ '}{recipe[:140]} — {', '.join(f.get('reasons', []))}"
+                       + (f" — \"{f['note'][:100]}\"" if f.get("note") else ""))
+    else:
+        out.append("FLAGS: none for this product" + ("" if any(r.get("type") == "entry" for _, _, r in rows) else " (Ad Review rows not in these folders)"))
+    print("\n".join(out))
+    return 0
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = ap.add_subparsers(dest="cmd", required=True)
-    g = sp.add_parser("gen"); g.add_argument("job")
-    for k in ("--run-id", "--ad-id", "--product", "--model", "--prompt-file"):
-        g.add_argument(k, required=True)
-    g.add_argument("--ref-type", default="none", choices=sorted(REF_TYPES)); g.add_argument("--ref-id")
-    g.add_argument("--refs"); g.add_argument("--cost-creatify", type=float, default=0); g.add_argument("--cost-higgsfield", type=float, default=0)
-    g.add_argument("--ratio", default=""); g.add_argument("--resolution", default="")
-    g.add_argument("--setup", nargs="*"); g.add_argument("--ask", action="append")
-    g.add_argument("--retake-of"); g.add_argument("--edited-by-user", action="store_true")
-    g.add_argument("--headline"); g.add_argument("--hook"); g.add_argument("--cta")
+    def gen_opts(g, wave=False):
+        for k in ("--run-id", "--product"):
+            g.add_argument(k, required=True)
+        for k in (("--model",) if wave else ("--ad-id", "--model", "--prompt-file")):
+            g.add_argument(k, required=not wave)
+        g.add_argument("--ref-type", default="none", choices=sorted(REF_TYPES)); g.add_argument("--ref-id")
+        g.add_argument("--refs"); g.add_argument("--cost-creatify", type=float, default=0); g.add_argument("--cost-higgsfield", type=float, default=0)
+        g.add_argument("--ratio", default=""); g.add_argument("--resolution", default="")
+        g.add_argument("--setup", nargs="*"); g.add_argument("--ask", action="append")
+        g.add_argument("--retake-of"); g.add_argument("--edited-by-user", action="store_true")
+        g.add_argument("--headline"); g.add_argument("--hook"); g.add_argument("--cta")
+    g = sp.add_parser("gen"); g.add_argument("job"); gen_opts(g)
+    w = sp.add_parser("gens"); w.add_argument("job"); w.add_argument("--wave", required=True); gen_opts(w, wave=True)
+    li = sp.add_parser("light"); li.add_argument("job")
+    for k in ("--run-id", "--product", "--model", "--prompt-file", "--task", "--files"):
+        li.add_argument(k, required=True)
+    li.add_argument("--cost-creatify", type=float, default=0); li.add_argument("--cost-higgsfield", type=float, default=0)
+    lm = li.add_mutually_exclusive_group(); lm.add_argument("--pass", dest="ok", action="store_true", default=None); lm.add_argument("--fail", dest="ok", action="store_false")
+    li.set_defaults(light=True, ad_id="maint", refs=None, **{k: v for k, v in GEN_DEFAULTS.items() if k not in ("refs", "cost_creatify", "cost_higgsfield")})
     t = sp.add_parser("tool"); t.add_argument("job"); t.add_argument("doc_id"); t.add_argument("--source")
     tg = t.add_mutually_exclusive_group(required=True); tg.add_argument("--file"); tg.add_argument("--none", action="store_true")
     n = sp.add_parser("note"); n.add_argument("job"); n.add_argument("doc_id"); n.add_argument("--ask", action="append", required=True)
-    q = sp.add_parser("qa"); q.add_argument("job"); q.add_argument("doc_id")
+    q = sp.add_parser("qa"); q.add_argument("job"); q.add_argument("doc_id", nargs="+")
     m = q.add_mutually_exclusive_group(required=True); m.add_argument("--pass", dest="ok", action="store_true"); m.add_argument("--fail", dest="ok", action="store_false")
     q.add_argument("--reason", action="append"); q.add_argument("--result-file")
     c = sp.add_parser("copy"); c.add_argument("job")
@@ -495,22 +722,34 @@ def main():
         c.add_argument(k, required=True)
     c.add_argument("--kind", required=True, choices=["image", "video"]); c.add_argument("--ad"); c.add_argument("--audience", default="")
     p = sp.add_parser("proof"); p.add_argument("job")
-    for k in ("--run-id", "--ad-id", "--product"):
+    for k in ("--run-id", "--product"):
         p.add_argument(k, required=True)
-    p.add_argument("--kind", required=True, choices=["image", "video"]); p.add_argument("--proof", required=True, choices=["trust", "count", "none"])
+    p.add_argument("--ad-id", required=True, action="append")
+    p.add_argument("--kind", required=True, choices=["image", "video"])
+    p.add_argument("--proof", required=True, action="append", choices=["trust", "count", "none"])
     r = sp.add_parser("run"); r.add_argument("job")
     for k in ("--run-id", "--product"):
         r.add_argument(k, required=True)
     r.add_argument("--started", help=argparse.SUPPRESS)   # ignored: the start comes from the first logged generation
-    r.add_argument("--format", required=True, choices=["images", "video", "avatar", "still"])
+    r.add_argument("--format", required=True, choices=["images", "video", "avatar", "still", "maintenance"])
     r.add_argument("--captions", required=True, choices=["yes", "no"])
     for k in ("--creatify-before", "--creatify-after", "--higgsfield-before", "--higgsfield-after"):
         r.add_argument(k, type=float)
     r.add_argument("--notes")
     k = sp.add_parser("check"); k.add_argument("files", nargs="+")
     z = sp.add_parser("close"); z.add_argument("job")
+    pe = sp.add_parser("pending"); pe.add_argument("job")
+    se = sp.add_parser("sent"); se.add_argument("job"); se.add_argument("doc_id", nargs="*")
+    se.add_argument("--all", action="store_true"); se.add_argument("--queued", action="store_true")
+    po = sp.add_parser("posted"); po.add_argument("job"); po.add_argument("ad_id", nargs="+"); po.add_argument("--queued", action="store_true")
+    su = sp.add_parser("summary"); su.add_argument("dirs", nargs="+"); su.add_argument("--product", required=True)
+    su.add_argument("--limit", type=int, default=60)
     a = ap.parse_args()
-    sys.exit({"gen": cmd_gen, "tool": lambda a: cmd_tool_none(a) if a.none else cmd_tool(a), "note": cmd_note, "qa": cmd_qa, "copy": cmd_copy, "proof": cmd_proof, "run": cmd_run, "check": cmd_check, "close": cmd_close}[a.cmd](a))
+    if a.cmd == "sent" and not (a.all or a.doc_id):
+        ap.error("sent: give doc ids or --all")
+    sys.exit({"gen": cmd_gen, "gens": cmd_gens, "light": cmd_gen, "tool": lambda a: cmd_tool_none(a) if a.none else cmd_tool(a),
+              "note": cmd_note, "qa": cmd_qa, "copy": cmd_copy, "proof": cmd_proof, "run": cmd_run, "check": cmd_check,
+              "close": cmd_close, "pending": cmd_pending, "sent": cmd_sent, "posted": cmd_posted, "summary": cmd_summary}[a.cmd](a))
 
 
 if __name__ == "__main__":

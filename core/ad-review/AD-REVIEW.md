@@ -29,7 +29,9 @@ Reviewers **flag losers with feedback**; every finished ad is recorded so they h
 
 ## 3. Before every batch (images and videos): read the flags (the "ingest")
 1. Read `config/reviewers`, the `raters` roster, then every collection's `flag` docs for this **product** (only flags whose `by`
-   is a reviewer) and the `entry` each one targets.
+   is a reviewer) and the `entry` each one targets, **saved to files** (`ArtifactData` `out_dir` = `<job>/_team/review`), and read
+   only the digest of `core/scripts/teamlog.py summary <job>/_team/review --product <id>` (reviewer flags, reasons, recipes,
+   compliance flags; TEAM-LOGS §2.2). The rows themselves never go through the chat (token cost, 2026-11-04).
 2. **Never repeat a flagged recipe:** no new ad may share a flagged ad's hook / headline + style + scene. A **compliance** flag
    bans anything close (same claim wording, same concept); quote it in the batch table so the user sees it.
 3. **Fix the reasons:** count this product's reasons over its last 30 flags. Turn the top ones into explicit checks for this batch
@@ -41,8 +43,9 @@ Reviewers **flag losers with feedback**; every finished ad is recorded so they h
 
 ## 4. After finishing: post every finished ad (no question to the operator)
 For each finished creative (each final 4:5 / 9:16 / video), make the preview and write the `entry` + preview in one `ArtifactData`
-`batch` (first write of a session also sets `raters/<own id>`). No rating, nothing to ask. Unreachable → append the writes to
-`~/Everlife-Creative/ad-review-pending.jsonl` and send them next time.
+`batch` (first write of a session also sets `raters/<own id>`). No rating, nothing to ask. Then mark them:
+`teamlog.py posted <job> <ad_id…>`. Unreachable → append the writes to `~/Everlife-Creative/ad-review-pending.jsonl`, mark them
+`--queued`, and send them next time. The Stop hook flags finished ads of a closed run that were never posted (TEAM-LOGS §7).
 
 ## 5. Winners (from the data, later)
 Meta results (CTR, CPA, hook rate) are joined to ads by `ad_id`; until that import exists, "what works" comes from the CPA-ranked

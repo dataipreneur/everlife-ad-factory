@@ -230,6 +230,15 @@ def smoke(core, out):
                "refs": ["start.png"], "qa": {"pass": True}, "cost": {"creatify": 34.25}}, open(os.path.join(tl, "gen.json"), "w"))
     expect("teamlog check refuses a gen record without its saved prompt file",
            [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "check", os.path.join(tl, "gen.json")], False, "prompt_file")
+    json.dump({"product": "wolverine", "head": ["HEAVY IRON."], "offer": "Save 39% Off"}, open(os.path.join(tl, "copy.json"), "w"))
+    expect("teamlog copy refuses an offer without \"Up to\" (2026-11-04)",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "copy", tl, "--run-id", "20261104-wolverine-test", "--ad-id",
+            "20261104-wolverine-test-1", "--product", "wolverine", "--kind", "image"], False, "Save Up to N%")
+    sm = os.path.join(out, "teamlog_rows", "data", "users", "u1"); os.makedirs(sm)   # the lean pre-batch read (2026-11-04)
+    json.dump({"type": "style", "product": "wolverine", "date": "2026-11-04", "styles": ["S04"]}, open(os.path.join(sm, "s.json"), "w"))
+    expect("teamlog summary digests downloaded rows (lean read)",
+           [PY, "-I", os.path.join(core, "scripts", "teamlog.py"), "summary", os.path.join(out, "teamlog_rows"), "--product",
+            "wolverine"], True, "--skip S04")
     expect("finish_batch lays no proof element (--proof none)",
            [PY, "-I", os.path.join(T, "finish_batch.py"), raw, os.path.join(d, "none.png"), "--product", "sermorelin-ghk",
             "--proof", "none"], True, "proof=none")
