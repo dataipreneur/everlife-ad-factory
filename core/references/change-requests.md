@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-04 | Priestley | "Fix first 2" (start times typed after the end; proof records on the wrong page) | teamlog.py: start from the first generation, page printed per record; 8 runs + 30 proofs corrected on the pages | `teamlog-fixes` |
 | 2026-11-03 | Team (via Priestley) | "we need to be able to basically flag and report losers but not winners. winners will be identified by the data"; flags "ingest[ed] back into the system"; reviewers Justin / Sarah / lead / Jeremy | Ad Review page + protocol replace the Winners Board; skills read flags before batches and post every finished ad | `ad-review` |
 | 2026-11-03 | Justin (live bible) | Bible 1793746711-6285: "<product> for $N/day" CTAs; "Use 'Starting at $95/month' as the CTA on 10% of Sermorelin creatives"; article bylines "Brian L." / "Erika S." | Price CTAs as approved alternatives (offer stays default); Sermorelin 1-in-10; Titan-Rx held; bylines flagged for Jeremy | `bible-sync-6285` |
 | 2026-11-03 | Priestley | "Are you sure claude will log every time into those artifacts?" → "yes build it, push and merge" | Claude Code hooks: automatic capture of every paid generation + a Stop check that sends Claude back to log; installed by install.sh / update.sh | `teamlog-hooks` |

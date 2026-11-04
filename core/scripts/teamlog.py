@@ -17,7 +17,8 @@ first and a local copy stays in the job folder.
                    → builds the copy record from <job>/copy.json, premium.json (captions) and phrases.json, labels every line
                      against the product's bible pre-screen and the global Hard NOs; refuses a banned line
   teamlog.py proof <job> --run-id R --ad-id A --product P --kind image|video --proof trust|count|none
-  teamlog.py run   <job> --run-id R --product P --format images|video|avatar|still --captions yes|no --started ISO
+  teamlog.py run   <job> --run-id R --product P --format images|video|avatar|still --captions yes|no
+                   (started_at = the run's first logged generation, automatically; never typed)
                    [--creatify-before N --creatify-after N] [--higgsfield-before N --higgsfield-after N] [--notes "..."]
                    → made / finished / rerolled / spent come from the gen records in <job>/teamlog/
   teamlog.py check <file.json> ...      validate records (exit 1 on an error)
@@ -31,6 +32,12 @@ SKILLS = [os.path.expanduser(os.environ.get("EVERLIFE_SKILLS_DIR", "~/.claude/sk
           os.path.normpath(os.path.join(HERE, "..", "..", "skills"))]
 # Routes that rewrite or expand what we send: their gen records should carry tool_prompt (TEAM-LOGS §6).
 EXPANDS = re.compile(r"marketing[_ -]?studio|ads[_ -]?studio|composer|ad[_ -]?agent|ugc", re.I)
+# The page each record type goes to (TEAM-LOGS.md table). Printed with every record so it is never sent to the wrong page.
+PAGES = {"gen": ("Prompt & Outcome Log", "https://claude.ai/artifact/YALbdpQKrMMfZzA9mr32Y2"),
+         "copy": ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o"),
+         "proof": ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o"),
+         "style": ("Copy Ledger", "https://claude.ai/artifact/4acQzvt2mZ592jU45RLB9o"),
+         "run": ("Activity & Spend Log", "https://claude.ai/artifact/R2GqUTb8pKbSniNmjGqBre")}
 REF_TYPES = {"board_winner", "meta_winner", "own_ad", "style_board", "hardcore_ref", "product_example", "outside", "hook_engine", "none"}
 LINE_KINDS = {"headline", "hook", "vo", "caption", "benefit", "end_head", "cta", "offer"}
 SPOKEN = {"hook", "vo", "caption"}
@@ -160,6 +167,12 @@ def check(rec):
         for k in ("started_at", "ended_at"):
             if rec.get(k) and not is_iso(rec[k]):
                 (W if bf else E).append(f"run: '{k}' must be an ISO time (2026-11-03T14:05:00-05:00), not {rec[k]!r}")
+        if is_iso(rec.get("started_at")) and is_iso(rec.get("ended_at")):
+            try:
+                if datetime.datetime.fromisoformat(rec["started_at"]) > datetime.datetime.fromisoformat(rec["ended_at"]):
+                    (W if bf else E).append(f"run: started_at {rec['started_at']} is after ended_at {rec['ended_at']}")
+            except ValueError:
+                pass
         if rec.get("format") in ("video", "avatar", "still") and rec.get("captions") is None:
             E.append("run: 'captions' (true/false) is required for video")
         if rec.get("captions") is False and rec.get("format") in ("video", "avatar"):
@@ -226,7 +239,9 @@ def write(job, doc_id, rec):
         print("⚠", w)
     for e in E:
         print("❌", e)
-    print(("❌ NOT READY: fix the errors, then run again" if E else "✅ ready") + f"\n  doc_id: {doc_id}\n  file:   {path}")
+    page = PAGES.get(rec.get("type"), ("?", "?"))
+    print(("❌ NOT READY: fix the errors, then run again" if E else "✅ ready") + f"\n  doc_id: {doc_id}\n  file:   {path}"
+          + f"\n  send to: {page[0]} ({page[1]}), collection data/users/me, doc_id {doc_id}")
     return 1 if E else 0
 
 
@@ -383,11 +398,15 @@ def cmd_run(a):
         if before is not None and after is not None:
             spent = round(before - after, 2)
         return {"before": before, "after": after, "spent": spent, "quoted": round(sum(float((g.get("cost") or {}).get(name) or 0) for g in gens), 2)}
+    times = sorted(g["created_at"] for g in gens if is_iso(g.get("created_at")))
+    started = times[0] if times else now()
+    if not times:
+        print("⚠ no generation logged for this run: started_at = now (log generations with `teamlog.py gen` when they are submitted)")
     rec = {"type": "run", "run_id": a.run_id, "product": a.product, "format": a.format, "made": len(ads), "finished": finished,
            "rerolled": rerolled, "captions": a.captions == "yes",
            "credits": {"creatify": tool("creatify", a.creatify_before, a.creatify_after),
                        "higgsfield": tool("higgsfield", a.higgsfield_before, a.higgsfield_after)},
-           "out_dir": os.path.abspath(a.job), "on_board": False, "started_at": a.started, "ended_at": now(), "notes": a.notes or ""}
+           "out_dir": os.path.abspath(a.job), "on_board": False, "started_at": started, "ended_at": now(), "notes": a.notes or ""}
     return write(a.job, f"run-{a.run_id}", rec)
 
 
@@ -443,6 +462,11 @@ def cmd_close(a):
     for x in E:
         print("❌", x)
     n = {t: sum(1 for r in R.values() if r.get('type') == t) for t in ("gen", "copy", "proof", "run")}
+    by_page = {}
+    for doc, r in R.items():
+        by_page.setdefault(PAGES.get(r.get("type"), ("?", "?")), []).append(doc)
+    for (name, url), docs in by_page.items():
+        print(f"  → {name} ({url}): {len(docs)} record(s)")
     print(("❌ NOT CLOSED" if E else "✅ closed") + f": {n['gen']} gen · {n['copy']} copy · {n['proof']} proof · {n['run']} run "
           f"in {os.path.join(a.job, 'teamlog')} (send any not yet sent: one ArtifactData batch per page)")
     return 1 if E else 0
@@ -475,8 +499,9 @@ def main():
         p.add_argument(k, required=True)
     p.add_argument("--kind", required=True, choices=["image", "video"]); p.add_argument("--proof", required=True, choices=["trust", "count", "none"])
     r = sp.add_parser("run"); r.add_argument("job")
-    for k in ("--run-id", "--product", "--started"):
+    for k in ("--run-id", "--product"):
         r.add_argument(k, required=True)
+    r.add_argument("--started", help=argparse.SUPPRESS)   # ignored: the start comes from the first logged generation
     r.add_argument("--format", required=True, choices=["images", "video", "avatar", "still"])
     r.add_argument("--captions", required=True, choices=["yes", "no"])
     for k in ("--creatify-before", "--creatify-after", "--higgsfield-before", "--higgsfield-after"):

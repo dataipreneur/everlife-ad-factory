@@ -46,8 +46,9 @@ Copy Ledger and Prompt log → the whole team as **Contributors**. Everyone must
    (pass/fail and the reasons, re-rolls) with `teamlog.py qa`. One `batch` per wave is fine.
 4. **After the batch (when SESSION.md is written):** `teamlog.py copy` per ad (it reads the job's copy.json / premium.json /
    phrases.json, so every spoken line, caption and the CTA are in it, and labels each line from the bible pre-screen; it refuses a
-   banned line), `teamlog.py proof` per creative and `teamlog.py run` (made / finished / rerolled / spent come from the gens; say
-   `--captions yes|no`). Then **`teamlog.py close <job>` must print ✅ closed** before SESSION.md is written; its ❌ lines are fixed
+   banned line), `teamlog.py proof` per creative and `teamlog.py run` (made / finished / rerolled / spent and the start time come from the
+   gens; say `--captions yes|no`). **Send each record to the page the script prints ("send to: …")**: `gen` → Prompt log; `copy`,
+   `proof`, `style` → Copy Ledger; `run` → Activity log. Then **`teamlog.py close <job>` must print ✅ closed** before SESSION.md is written; its ❌ lines are fixed
    first, its ⚠ lines go into SESSION.md. Send what is not sent yet: one `copy` record per ad to the Copy Ledger, one `style` record for the batch, one
    `proof` record per finished creative; one `run` record to the Activity log with the real spend (`after` balances); nothing to the Winners
    Board (⏸ paused since 2026-11-03). Still append the local copy log as before (fallback and offline history).

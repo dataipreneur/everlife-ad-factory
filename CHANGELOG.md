@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-04 — teamlog.py: start time automatic, every record names its page (branch `teamlog-fixes`)
+First live runs (BERNS, Edge) showed start times typed after the end and 30 proof records sent to the Activity log. Priestley:
+"Fix first 2".
+- `teamlog.py run`: `started_at` = the run's first logged generation (no `--started` to type); the checker refuses a run that starts
+  after it ends.
+- Every record prints "send to: <page> (<url>)"; `close` lists the records per page; TEAM-LOGS §2 says which type goes where.
+- Data fixed the same day: Edge's 30 proof records moved from the Activity log to the Copy Ledger (marked `moved_from`); 8 run start
+  times set to their first logged generation (`started_at_source` note).
+
 ## 2026-11-03 — Ad Review replaces the Winners Board: flag the losers, the data picks the winners (branch `ad-review`)
 Team decision relayed by Priestley: no ratings; "we need to be able to basically flag and report losers but not winners. winners will
 be identified by the data"; all generated content recorded; reviewers Justin / Sarah / the lead / Jeremy; flags "ingest[ed] back
