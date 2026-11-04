@@ -195,3 +195,41 @@ def proof_of(C):
     print("ℹ️  copy.json has no \"proof\": trust row. Split 2026-11-02: trust ~42%, badge + count ~28%, none ~30% "
           "(core/scripts/proof_next.py --product <id>).")
     return "trust"
+
+
+# ---------- footer text colour without a haze (Mitansh 2026-11-04: no more "blurry area behind the Trustpilot footer") ----------
+# The footer sits straight on the art/footage, so its text colour has to come from what is behind it.
+TEXT_T = float(os.environ.get("EVERLIFE_TEXT_T", "118"))   # mean luminance 0-255; above = light background -> dark text
+
+
+def tone_of(img, y0, y1):
+    """'dark' (light text) or 'light' (dark text) for the band y0..y1 of an RGB/RGBA PIL image."""
+    g = img.convert("L").crop((0, max(0, y0), img.width, min(img.height, y1))).resize((64, 16))
+    v = sum(g.getdata()) / (64 * 16)
+    return "dark" if v < TEXT_T else "light"
+
+
+def video_tone(clip, ff, times=(1.0, 4.0, 8.0), y0=1100, y1=1920):
+    """Footer tone for a 9:16 video: sample a few frames, scaled like the finisher scales them. EVERLIFE_FOOTER_TONE overrides."""
+    forced = os.environ.get("EVERLIFE_FOOTER_TONE")
+    if forced in ("dark", "light"):
+        return forced
+    import subprocess, tempfile
+    votes = []
+    for t in times:
+        with tempfile.NamedTemporaryFile(suffix=".png") as f:
+            r = subprocess.run([ff, "-v", "error", "-y", "-ss", str(t), "-i", clip, "-frames:v", "1", "-vf",
+                                "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920", f.name])
+            if r.returncode == 0 and os.path.getsize(f.name):
+                votes.append(tone_of(Image.open(f.name), y0, y1))
+    return "light" if votes and votes.count("light") > len(votes) / 2 else "dark"
+
+
+def text_rgb(tone, alpha=255):
+    return (236, 236, 232, alpha) if tone == "dark" else (24, 30, 48, alpha)
+
+
+def trust_art(assets_dir, tone):
+    """The approved trust row: white text for dark backgrounds, dark text (badge untouched) for light ones."""
+    dark_txt = os.path.join(assets_dir, "proof_row_clear_dark.png")
+    return dark_txt if tone == "light" and os.path.exists(dark_txt) else os.path.join(assets_dir, "proof_row_clear.png")
