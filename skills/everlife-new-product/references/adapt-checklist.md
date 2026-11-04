@@ -45,9 +45,7 @@ disclaimer verbatim · landing page (facts only).
 - **"🧑‍💼 AI Avatar Video" in "What are we making?" (REQUIRED, Mitansh 2026-11-02).** Offer it in the format question (max 4 options:
   merge "Video ad or animated still" if needed) with a bullet pointing to `core/references/ai-avatar-video.md` and naming this product's casting,
   hero form and banned settings. Register the product in Higgsfield Marketing Studio (preflight prints the command).
-- **Winners Board (REQUIRED, Priestley 2026-11-02; ⏸ the board is PAUSED since 2026-11-03: still add both steps with the same PAUSED prefix the other skills carry).** `references/image-batch.md` reads the shared board before the batch
-  table and ends "After the batch" with the "Rate the batch (Winners Board)" step, both pointing at
-  `core/winners-board/WINNERS-BOARD.md` (§4 read, §5 write). Use the new product's `product.json` id as `product` on the board.
+- **Ad Review (REQUIRED, 2026-11-03).** `references/image-batch.md` reads the product's flagged losers before the batch table and posts every finished ad after it (no rating), both pointing at `core/ad-review/AD-REVIEW.md` (§3 read, §4 post); `finishing.md` posts finished videos the same way. Use the product.json id as `product`.
 - **Team logs (REQUIRED, Priestley 2026-11-03).** `references/image-batch.md` and `references/finishing.md` each carry the
   "Team logs" line, and `references/video-prompting.md` (and `animated-still.md` if the skill has one) carries the "Team logs, as you go"
   line (each clip logged the moment it is submitted, 2026-11-03), all pointing at `core/scripts/teamlog.py` pointing at `core/team-logs/TEAM-LOGS.md` (Copy Ledger read before copy; Prompt log per generation; copy,

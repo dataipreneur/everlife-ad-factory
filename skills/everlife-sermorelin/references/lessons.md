@@ -117,4 +117,4 @@ Compliance traps:
 - A headline placed at the bottom-left (copying M2's lower stack) ran under the 4:5 footer: on 4:5 every text line ends above 72%; move M2's stacked headline up under the name.
 - Small two-line benefit rows rendered "Actıvity" with a broken i: ask for rows on ONE line, ≥ 4% height, and spell the risky word out letter by letter.
 - QA failures are re-rolled by Claude without asking (see the banner in image-batch.md).
-- (⏸ Winners Board PAUSED 2026-11-03: skip rating until it is switched back on.) Never skip "Rate the batch" (image-batch.md §4 / WINNERS-BOARD §5): after showing the contact sheet, OPEN the finals and ask Winner/Good/Weak/Kill per ad, then write the board. Mitansh 2026-11-02: "why did you not ask for feedback?" Ratings that day: #3 M2 mono + crimson stat column = WINNER; #4 toggle card (tall card stack, no room for product) = weak.
+- (2026-11-03) No more rating: post every finished ad to Ad Review (`core/ad-review/AD-REVIEW.md` §4); reviewers flag losers.
