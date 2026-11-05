@@ -43,6 +43,13 @@ the batch or in this product's last 3 batches, max 2 per family, no two slots sh
 Re-deal (`--seed`) if a world makes no sense for the product; **never swap a slot's world for one already in the batch.**
 When the batch is approved: run it again with `--log` so the ledger remembers.
 
+**Team scale (Mitansh 2026-11-05: 6 designers × 70 images a day):** the ledger is per laptop, so before dealing, pull the worlds
+the TEAM used for this product in the last 2 days and pass them as `--skip`: finals are named `FINAL_<n>_<world>_<WxH>` and are
+posted to Ad Review, so `teamlog.py summary --product <id>` (recent ad titles) → the world ids → `--skip a,b,c`. Also take the
+front door's product recommendation (`everlife-ads`: the product with the fewest recent finals) so six people don't all make the
+same product on the same day. Variety budget: 132 worlds × 10 type pairings × 18 accents × 6 placements × 7 lights; a product
+can run ~16 batches before any world is allowed back, and the deck grows weekly from winners and the reference harvest.
+
 ## 3. Write each ad from its slot (this is the creative work)
 For every slot, in order:
 1. **Open one reference.** First a winner for this product (`references/winners/`), else a batch-2 ad from the same world

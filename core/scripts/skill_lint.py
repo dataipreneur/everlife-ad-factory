@@ -40,7 +40,7 @@ def main():
         print('❌ shared files missing: ' + ', '.join(missing)); sys.exit(1)
     bad_total = warn_total = 0
     for d in sorted(os.listdir(SKILLS)):
-        if not d.startswith('everlife-') or d == 'everlife-new-product': continue
+        if not d.startswith('everlife-') or d in ('everlife-new-product', 'everlife-ads'): continue
         sd = os.path.join(SKILLS, d); errs, warns = [], []
         ib_p = os.path.join(sd, 'references', 'image-batch.md'); sk_p = os.path.join(sd, 'SKILL.md'); pj_p = os.path.join(sd, 'product.json')
         ib = open(ib_p).read() if os.path.exists(ib_p) else ''
