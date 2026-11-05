@@ -1,8 +1,8 @@
-# Sermorelin GHK — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Sermorelin GHK — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** Save Up to 47% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 47%
 - **CTAs (bible):** Unlock 3-in-1 Support · Explore Sermorelin GHK · Save Up to 47% · Support Strength + Vitality · Sermorelin GHK for $4.25/day · Ships Free From Pharmacy
@@ -120,7 +120,7 @@
 | Promotes lean muscle growth and fat loss | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 | Promotes radiant, firmer, youthful-looking skin and hair | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-## Verbatim (bible section "Sermorelin GHK — Men", version 1793905953-bc2f)
+## Verbatim (bible section "Sermorelin GHK — Men", version 1793912918-b19b)
 ```text
 
 ### Who it's for
@@ -254,7 +254,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Supports a lean, defined physique
 ```
 
-## Verbatim (bible section "Sermorelin GHK — Women", version 1793905953-bc2f)
+## Verbatim (bible section "Sermorelin GHK — Women", version 1793912918-b19b)
 ```text
 
 ### Who it's for

@@ -1,6 +1,6 @@
 {
  "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
- "version": "1793905953-bc2f",
+ "version": "1793912918-b19b",
  "id": "spark",
  "name": "Spark",
  "sections": [

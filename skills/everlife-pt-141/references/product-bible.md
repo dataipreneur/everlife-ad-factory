@@ -1,8 +1,8 @@
-# PT-141 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# PT-141 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** Save Up to 59% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 59%
 - **CTAs (bible):** Explore PT-141 · Save Up to 59% · Start Desire Support · PT-141 for $2.00/day · Ships Free From Pharmacy
@@ -70,7 +70,7 @@
 | Support Your Spark | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 | Find Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-## Verbatim (bible section "PT-141", version 1793905953-bc2f)
+## Verbatim (bible section "PT-141", version 1793912918-b19b)
 ```text
 
 ### Who it's for

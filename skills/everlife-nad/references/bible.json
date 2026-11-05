@@ -1,6 +1,6 @@
 {
  "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
- "version": "1793905953-bc2f",
+ "version": "1793912918-b19b",
  "id": "nad",
  "name": "NAD+",
  "sections": [
@@ -21,7 +21,7 @@
   "lines": [
    "Save up to 62% on injections",
    "Save up to 62% on sublingual tablets",
-   "Starting at $119/month",
+   "Starting at $99/month",
    "30-day money-back guarantee on your first order"
   ],
   "variants": {
@@ -198,7 +198,7 @@
  "offer_lines": [
   "Save up to 62% on injections",
   "Save up to 62% on sublingual tablets",
-  "Starting at $119/month",
+  "Starting at $99/month",
   "30-day money-back guarantee on your first order"
  ],
  "proof": [
@@ -289,6 +289,10 @@
   "optimizes metabolic health": {
    "status": "Weak (bible)",
    "why": "bible badge [Weak benefit]"
+  },
+  "starting at $99/month": {
+   "status": "✅ NEW in 1793912918-b19b",
+   "why": "new or reworded in this sync: not yet reviewed by Jeremy"
   }
  },
  "first_seen": {
@@ -324,7 +328,6 @@
   "save up to 62% on sublingual tablets": "baseline",
   "ships free from pharmacy": "baseline",
   "small molecule. big conversation.": "baseline",
-  "starting at $119/month": "baseline",
   "stop scrolling. meet nad+.": "baseline",
   "sublingual or injection options": "baseline",
   "supports bounce-back from burnout": "baseline",
@@ -338,7 +341,8 @@
   "what's your nad+ iq?": "baseline",
   "your 30s called & want you back": "baseline",
   "your cells know nad+.": "baseline",
-  "your future deserves attention.": "baseline"
+  "your future deserves attention.": "baseline",
+  "starting at $99/month": "1793912918-b19b"
  },
  "retired": [
   {
@@ -352,6 +356,10 @@
   {
    "line": "Start Your Plan",
    "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Starting at $119/month",
+   "why": "left the bible in 1793912918-b19b"
   }
  ],
  "patterns": [],

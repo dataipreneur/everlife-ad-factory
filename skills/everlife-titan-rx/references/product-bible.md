@@ -1,8 +1,8 @@
-# Titan-Rx — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Titan-Rx — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** Save Up to 49% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 49%
 - **CTAs (bible):** Get Performance Support · Explore Titan-Rx · Save Up to 49% · Start Daily Support · Titan-Rx for $1.50/day · Ships Free From Pharmacy
@@ -66,7 +66,7 @@
 | Confidence. Control. Titan Rx. | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 | Find Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-## Verbatim (bible section "Titan-Rx", version 1793905953-bc2f)
+## Verbatim (bible section "Titan-Rx", version 1793912918-b19b)
 ```text
 
 ### Who it's for
