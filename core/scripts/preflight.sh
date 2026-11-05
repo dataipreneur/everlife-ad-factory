@@ -137,6 +137,17 @@ BIB="$HOME/.claude/everlife/creative-bible.md"
 BVER="$(grep -o -m1 'version [0-9a-f-]*' "$CORE/claude/creative-bible.md" 2>/dev/null)"   # versions are digits + hex (e.g. 1793642193-f927)
 if cmp -s "$BIB" "$CORE/claude/creative-bible.md"; then pass "Creative bible = this repo's copy (${BVER:-version unknown})"
 else fail "Creative bible at $BIB is missing or a separate (old) copy, not this repo's (${BVER:-version unknown})" "bash \"$(cd "$CORE" && pwd -P)/../install.sh\" (moves your copy to ~/.claude/everlife/_originals/ and links the repo's)"; fi
+# 6b2. Team-log hooks (TEAM-LOGS §7): without them nothing is auto-captured and the Stop check never runs
+if python3 - "$HOME/.claude/settings.json" <<'PY' 2>/dev/null
+import json,sys
+d=json.load(open(sys.argv[1])); h=d.get("hooks",{})
+ok=any("teamlog_hook.py" in x.get("command","") for ev in ("PostToolUse","Stop") for e in h.get(ev,[]) for x in e.get("hooks",[]))
+sys.exit(0 if ok else 1)
+PY
+then pass "Team-log hooks installed (automatic capture + Stop check)"
+else fail "Team-log hooks are NOT installed in ~/.claude/settings.json" "run: bash <repo>/install.sh (re-links skills and adds the two hooks; nothing else changes)"
+fi
+
 # 6c. Is Justin's live bible newer than the repo copy? Claude checks (read-only); an unsynced change warns, never blocks
 echo "🔎 Live bible check (Claude, do it now; read-only): read https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG with the"
 echo "   Artifact tool and compare the version it reports with ${BVER#version }. Same → say \"Bible: up to date\"."
