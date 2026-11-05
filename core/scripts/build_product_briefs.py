@@ -54,7 +54,10 @@ def hard_stops(skill_dir):
             if os.path.exists(p):
                 sec = section(open(p).read(), r'^## 0\. '); break
     sec = re.sub(r'^## 0\. .*\n', '', sec)
-    return sec.strip()
+    sec = re.sub(r'^\*\*Headline tiers:?\*\*.*?(?=\n\n|\Z)', '', sec, flags=re.M | re.S)   # tiers are gone (Mitansh 2026-11-05)
+    sec = re.sub(r'^> ⚠ \*\*PENDING CREATIVE-LEAD CONFIRMATION\*\*.*?(?=\n\n|\Z)', '', sec, flags=re.M | re.S)
+    sec = '\n'.join(ln for ln in sec.splitlines() if not re.search(r'Tier [AB]|PROPOSED', ln))
+    return re.sub(r'\n{3,}', '\n\n', sec).strip()
 
 
 def build(skill_dir, pid, prod):
@@ -82,7 +85,10 @@ def build(skill_dir, pid, prod):
     if hero: out.append(f"- **Hero:** {hero.get('element', '')}; min width {hero.get('min_width', 0.35)} of canvas; never: {hero.get('never', 'covered, blurred, mirrored')}.")
     out.append(f"- **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/{pid}-copy-log.md`. **Output:** `~/Everlife-Creative/output/{name}/`.")
     hs = hard_stops(skill_dir)
-    out += ["", "## Hard stops and headline tiers (this product)", hs or "Claims only from `references/product-bible.md` (✅ lines; ⚠ with explicit OK + Jeremy; ❌ never).", ""]
+    out += ["", "## Headlines: references, not limits",
+            "The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. "
+            "Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).", "",
+            "## Hard stops (this product)", hs or "Claims only from `references/product-bible.md`; Hard NO conflict lines never.", ""]
     refs = [(rel, why) for rel, why in [
         ('references/product-bible.md', 'every claim, headline, CTA, offer, Hard NO'),
         ('references/winners/winners.md', 'reference level 1: our own winners, open first'),
@@ -109,7 +115,7 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--only', default=''); ap.add_argument('--dry', action='store_true'); a = ap.parse_args()
     only = {s for s in a.only.split(',') if s}
     for d in sorted(os.listdir(SKILLS)):
-        if not d.startswith('everlife-') or d == 'everlife-new-product': continue
+        if not d.startswith('everlife-') or d in ('everlife-new-product', 'everlife-ads'): continue
         pid = d[len('everlife-'):]
         if only and pid not in only: continue
         sd = os.path.join(SKILLS, d); pj = os.path.join(sd, 'product.json')

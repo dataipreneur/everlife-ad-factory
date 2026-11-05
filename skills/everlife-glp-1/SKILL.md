@@ -75,7 +75,7 @@ or "by Everlife". Statics never say "by Everlife".
    "Appetite + cravings" ("Stop Fighting Hunger All Day", "Take Control of Your Appetite") / "One price, provider-guided"
    ("One Simple Plan. One Clear Price.", "Your Goal. Your Plan. Provider Guided.").
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ weight-loss line (I OK it, Jeremy reviews)" / "Bold:
-   one PROPOSED line".
+   one fresh line".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body and never a named drug or

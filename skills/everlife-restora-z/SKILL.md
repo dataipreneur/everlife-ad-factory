@@ -103,7 +103,7 @@ Style gates (check before offering):
    - **Hook (0–2s)** in one line
    - **Script / shot list** (timestamps), every spoken line in quotes
    - **On-screen copy**: header, end-card headline, 3 ingredient claims (each on its own ingredient), CTA, all from the bible
-   - **Compliance notes**: which bible lines each claim came from; any Tier B line marked PROPOSED FOR APPROVAL (needs the user's explicit OK now, Jeremy later); anything borderline
+   - **Compliance notes**: which bible lines each claim came from; any fresh line (Jeremy signs off on wording) FOR APPROVAL (needs the user's explicit OK now, Jeremy later); anything borderline
    - The full generation prompt in a collapsed code block
 3. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style". On edits, revise and ask again. Label each concept with its sub-style code (e.g. "1B · Partner POV") so the team learns the system.
 4. On approval: create the job folder `~/Everlife-Creative/output/Restora-Z/<YYYY-MM-DD>_<slug>/` with `prompt.txt`, `copy.json`, `source/` (copy `assets/` renders); run the cost check, submit the generation **in the background**, append the concept to the copy log.

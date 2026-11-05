@@ -58,19 +58,20 @@ For every slot, in order:
 2. **Translate the world to this product.** The card's "translate" line is the hint: a boarding pass for a sleep product flies
    FROM tossing & turning TO deep sleep; for a muscle product FROM sore TO back on the bar; for an intimacy product FROM
    calendars TO moments. Keep it one clear idea a 50+ reader gets in two seconds.
-3. **Headline:** Tier A from the bible by default (verbatim or lightly trimmed), bent to the world's voice (a wanted poster
-   shouts, a dictionary defines, a memo is terse). Tier B (fresh wording) only if the batch is marked Balanced/Bold, max 2,
-   marked PROPOSED. Never a line already in the product copy log. Never "Get Started Now". Lead CTAs with the offer.
-4. **Supporting lines:** up to 3 approved claims, exact. Peptide stacks name every peptide.
+3. **Headline: write it.** The bible's headlines and benefits are your references and inspiration, never a fence (Mitansh
+   2026-11-05: "be as bold and creative as you want; that is mandatory for diversity"). Write the line the WORLD would say: a wanted
+   poster shouts, a dictionary defines, a memo is terse, a boarding pass prints. **The only fence is the Hard NOs** (section 2 + the product page's Hard NOs): no disease / cure / treat words, no outcome
+   promises or guarantees, no body-composition, no pronoun questions, no first person, no competitor names, no "Get Started Now".
+   Everything else is yours. Never a line already in the product copy log. Never "Get Started Now". CTAs: lead with the offer or write one in the world's voice.
+4. **Supporting lines:** up to 3 short lines in the same voice, the bible's benefits as the reference for what to say; same fence. Peptide stacks name every peptide.
 5. **Type & colour:** the world's own type hint leads; the dealt pairing is the partner face. Accent from the dealt list
    (men's products skip rose / blush; women's and intimacy skip orange / green). Placement and light as dealt. Headline ≥ 9%
    of canvas height per line, every other line ≥ 3.5%, no thin grey text, no shadows or outlines on type.
 6. **Prompt** (template §4). Both ratios: write the 9:16 prompt, then the 4:5 prompt (same world, same copy, its own LAYOUT block).
 7. **Persona pass** (if the skill has `references/personas.md`): one line of critique per ad, fix, move on.
 
-Show ONE compact table: # · world · focal · proof · headline (tier) · lines · persona · ≈2 credits. One AskUserQuestion:
-"Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" / "Swap some" / "Rewrite headlines". That click approves the batch and its Tier A
-lines; each Tier B line needs its own explicit OK first.
+Show ONE compact table: # · world · focal · proof · headline · lines · persona · ≈2 credits. One AskUserQuestion:
+"Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" / "Swap some" / "Rewrite headlines". That click approves the batch; Jeremy's compliance sign-off still comes before anything goes live.
 
 ## 4. Prompt template (fill everything; keep the quotes exact)
 ```

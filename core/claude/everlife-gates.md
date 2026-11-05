@@ -10,8 +10,8 @@ These gates apply to ALL creative work for EverlifeMD: scripts, prompts, images,
 
 ## 1. Claims sources
 - No Asana brief is required to start work: never ask about one or stop for a missing one. The product skill's own flow decides what to make.
-- Benefits, headlines, CTAs, offers come ONLY from the brief's approved list or the product's bible page — and must also pass sections 2–3. Never invent new claims.
-- Headline status in the bible: lines marked **Hard NO conflict** → never use. **Pending approval** (and every "PROPOSED FOR APPROVAL" hook in Parts B/C) → only with explicit approval. **Weak headline / Weak benefit** → avoid unless the brief asks for it.
+- **Claims** (benefits, ingredient claims, offers, proof) come ONLY from the brief's approved list or the product's bible page, and must pass sections 2–3. Never invent new claims.
+- **Headline and CTA WORDING is free creative writing (Mitansh, 2026-11-05, every product, images and videos):** the bible's headlines, hooks and benefits are references and inspiration for what the product does, never a fence. Be bold and varied: diversity is mandatory. There are no Tier A / Tier B headlines and no per-line approval rounds. **The only fence is the Hard NOs** (section 2 + the product page's Hard NOs): nothing that breaks one, ever; everything else is allowed. Jeremy's compliance sign-off (gate 7) still comes before anything goes live. "Weak headline" / "Pending approval" marks are notes on the references, not bans on your wording.
 - Offers marked [PLACEHOLDER] are not usable — flag.
 
 ## 2. Compliance gate — global Hard NOs (every line, every image)

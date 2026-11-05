@@ -16,7 +16,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the Wolverine Stack vial (a still object, label to camera); min width 0.35 of canvas; never: needles, syringes, pens or injecting; capsules or pills; blood, gore or animal death; before/after or body comparison; another product's vial.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/wolverine-copy-log.md`. **Output:** `~/Everlife-Creative/output/Wolverine Stack/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **✅ Bible fixed (2026-11-02):** Justin un-swapped the Spartan / Wolverine pages; the bible now matches the vial label (Wolverine Stack = BPC-157 / TB-500). This skill uses its own page (`references/product-bible.md`): benefits and CTAs ✅, headlines and hook options ⏳ (only with the user's OK, flagged for Jeremy), offer "Save up to 39%". **Every design includes "Wolverine Stack" and "BPC-157 / TB-500"**; talent: fit, rugged men 30–45 (bible).
 
 **Hard stops:**
@@ -33,12 +36,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Offer:** "Save up to 39%" (on the bible's Wolverine page since 2026-11-02): exact string, percent only, never a $ price.
 - "Wolverine Stack" big in every ad and "BPC-157 / TB-500" on every design (bible, 2026-11-02; mandatory stack rule 2026-11-03: legible, as supporting copy, a subheadline or an ingredient callout, 4:5 and 9:16). An ad without the peptide list fails QA. Never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:**
-- **Tier A (default):** an ✅ quick-hit benefit used as the headline, verbatim or lightly trimmed.
-- **⏳ bible headlines:** all four are Pending approval: each needs the user's explicit OK for that exact line, flagged for Jeremy.
-- **Tier B (max 2 per batch):** fresh wording whose every claim maps to an ✅ benefit. Mark it **PROPOSED**; explicit OK; Jeremy.
-- Never repeat a headline in the copy log. The pool is small: when it runs low, say so and ask for approved headlines.
 
 ## This product's references
 | File | Read for |

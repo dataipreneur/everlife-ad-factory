@@ -17,7 +17,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the GLP-1 vial of the ad's form, or both vials side by side (a still object, labels to camera); min width 0.35 of canvas; never: needles, syringes, pens or injecting; scales, tape measures, waistlines, bellies, before/after or any body-composition cue; food 'cheat' imagery; another product's vial.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/glp-1-copy-log.md`. **Output:** `~/Everlife-Creative/output/GLP-1/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only ✅ pre-screen lines; ⚠ lines (every weight-loss outcome line) only with the user's explicit OK + flagged for Jeremy.
 - **Every ad carries the price line:** "One Price, No Surprise Increases" / "One predictable price" (as a line, a pill or the offer badge).
@@ -28,8 +31,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - No "Are you/Do you…?" questions, no first person, no named competitors or drug brands, no "clinically" for the product.
 - Offer: "Up to 59% off" (percent, never $) and/or "One predictable price".
 - "GLP-1" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:** Tier A = a ✅ bible headline or benefit · ⚠ lines: explicit OK per line · Tier B (max 2): PROPOSED, Jeremy.
 
 ## This product's references
 | File | Read for |

@@ -17,7 +17,7 @@ than hype. Advertorials sit on **white** (bible + Justin's direction).
 - **Looks like:** "Dear Everlife community," letter card beside the product; every sentence assembled from ✅ bible lines; signed "The Everlife team".
 
 ## 2D — Article (on white)
-- **Looks like:** an editorial page, kicker "WOMEN'S INTIMATE WELLNESS", Tier A headline ("From Distant to Deeply Connected"), a calm product
+- **Looks like:** an editorial page, kicker "WOMEN'S INTIMATE WELLNESS", bible reference headlines ("From Distant to Deeply Connected"), a calm product
   still life (or, when people are approved, a candid woman shoulder-up), proof. No fake byline, no fake site menu.
 
 ## 2E — 3-in-1 explained

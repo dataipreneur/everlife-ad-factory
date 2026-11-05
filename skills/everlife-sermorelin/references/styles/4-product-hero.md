@@ -17,7 +17,7 @@ Why it works: this style fills the 50% pill-focused share of the bible's focal-p
 - **Guardrails:** exactly one tablet; no lips/mouth macro (past "tablet on the tongue" crops read as intimate); no swallowing several.
 
 ## 4C — Minimal bold name
-- **Looks like:** dark textured background, single key light on the tablet + bottle, "SERMORELIN" or one short Tier A headline set huge (men: *Double Strength Sermorelin* only with the confirmed bottle), a 3-benefit strip.
+- **Looks like:** dark textured background, single key light on the tablet + bottle, "SERMORELIN" or one short bible reference headlines set huge (men: *Double Strength Sermorelin* only with the confirmed bottle), a 3-benefit strip.
 
 ## 4D — Ad in a frame
 - **Looks like:** a hand holding a phone or polaroid showing the ad, a gym-locker poster, a billboard at dawn. Generate the scene with a blank frame; finishing places the ad in it (`finish_image.py --layout frame`).

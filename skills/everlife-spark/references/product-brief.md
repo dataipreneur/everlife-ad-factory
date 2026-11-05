@@ -14,7 +14,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the Spark tablet (exactly one, as the render; the black + rose-gold bottle is secondary, large and legible when shown); min width 0.35 of canvas; never: beds or bedroom scenes, lingerie, body shots, lips macro, couples in bed, needles, syringes or vials, a benefit tied to one ingredient, another product's bottle or pill.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/spark-copy-log.md`. **Output:** `~/Everlife-Creative/output/Spark/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only approved quick-hit benefits and more approved benefits from `product-bible.md`. Pre-screen ❌ lines never;
   ⏳ Pending-approval and ⚠ lines only with the user's explicit OK + flagged for Jeremy. Weak headline / Weak benefit → avoid.
@@ -31,19 +34,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - Offer: only "Save up to 51%" (percent, never a $ price).
 - **Name:** "SPARK" big in every ad (one of the two largest texts); never "by Everlife" on images.
 - Proof wording exact; disclaimer verbatim (the footer handles both).
-
-> ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
-> `_originals/2026-10-28/`), to match the global gate (CLAUDE.md ranks above skills: headlines only from the bible/brief,
-> new hooks need explicit approval). Remove this note once the creative lead and Jeremy confirm, or revert if they don't.
-
-**Headline tiers:**
-- **Tier A (default):** a headline from the bible page or its headline bank, word for word or lightly trimmed;
-  never a "Weak headline", "Hard NO conflict" or pre-screen ⚠ line (e.g. "Forge a Stronger Physique", "Lean. Defined. Glowing.").
-- **Tier B (max 2 per batch):** fresh wording whose every claim maps to an approved claim, **or** a winner's headline
-  that isn't in the bible (e.g. "Support your strongest era", "Lean. Strong. Ready."). Mark it **PROPOSED**; it needs the
-  user's explicit OK for that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
-- Never repeat a headline in the copy log. The Tier A pool is small (3 approved headlines + 7 approved benefit lines usable as
-  headlines): when it runs low, say so and ask whether to allow more Tier B or request new approved headlines from Jeremy.
 
 ## This product's references
 | File | Read for |

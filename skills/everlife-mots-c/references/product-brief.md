@@ -14,7 +14,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the MOTS-c vial (a still object, label to camera); min width 0.35 of canvas; never: needles, syringes, pens or injecting; capsules or pills; scales, tape measures, waistlines, bellies or any body-composition cue; before/after or body comparison; another product's vial.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/mots-c-copy-log.md`. **Output:** `~/Everlife-Creative/output/MOTS-c/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **✅ Disclaimer now in the bible (sync 1793728650-5a0d, 2026-11-03):** the bible's MOTS-c page carries the standard ad disclaimer, word for word the text already in product.json (`bible_sync.py --check` ✅). The old "provisional disclaimer: Jeremy to confirm" flag is retired; Jeremy's usual sign-off before anything goes live still applies.
 
 **Hard stops:**
@@ -29,8 +32,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
 - **Offer: "Save up to 40%"** (Creative Messaging doc), exact string; never the lander's "Start MOTS-C — 40% Off", never a $ price.
 - "MOTS-C" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:** Tier A = the Creative Messaging doc's ✅ headlines, verbatim (prefer the top of its ranking) or an ✅ benefit · ⚠ lines: explicit OK per line, Jeremy · Tier B (max 2): PROPOSED, Jeremy.
 
 ## This product's references
 | File | Read for |

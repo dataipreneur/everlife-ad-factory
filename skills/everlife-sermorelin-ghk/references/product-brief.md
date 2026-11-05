@@ -20,7 +20,10 @@ Men 35–60 who want lean muscle, strength and growth hormone support from one f
 - **Hero:** the sublingual tablet (the bottle is secondary, large and legible when shown); min width 0.35 of canvas; never: needles, bedroom framing, body comparison.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/sermorelin-ghk-copy-log.md`. **Output:** `~/Everlife-Creative/output/Sermorelin GHK/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only approved quick-hit benefits, more approved benefits, or a per-ingredient claim on its OWN ingredient
   (Sermorelin / GHK / L-Citrulline Malate). Pre-screen ❌ lines never; ⚠ lines only with the user's explicit OK + flagged for Jeremy.
@@ -29,22 +32,6 @@ Men 35–60 who want lean muscle, strength and growth hormone support from one f
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product.
 - Offer: only "Save up to 47%" (percent, never a $ price).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
-
-> 🔥 **Boldness question (Mitansh 2026-11-02)** sets the Tier B count; Claude writes the new lines itself (hardcore voice, see SKILL.md step 1 Q4).
-> ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
-> `_originals/2026-10-28/`), to match the global gate (CLAUDE.md ranks above skills: headlines only from the bible/brief,
-> new hooks need explicit approval). Remove this note once the creative lead and Jeremy confirm, or revert if they don't.
-
-**Headline tiers:**
-- **Tier A (default):** a headline from the chosen audience page or its headline bank, word for word or lightly trimmed;
-  never a "Weak headline", "Hard NO conflict" or pre-screen ⚠ line (e.g. "Forge a Stronger Physique", "Lean. Defined. Glowing.").
-- **Tier B (how many = the 🔥 boldness answer in SKILL.md step 1: Safe 0 · Balanced 1 · Bold 2 · All-in every slot; default Bold):** fresh wording whose every claim maps to an approved claim, **or** a winner's headline
-  that isn't in the bible (e.g. "Support your strongest era", "Lean. Strong. Ready."). Mark it **PROPOSED**; it needs the
-  user's explicit OK for that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
-- **Reuse (Priestley, 2026-10-29: the approved pool is used up):** a bible headline or CTA may be reused across batches,
-  least-recently-used first (check the copy log); never twice in one batch; never with the same framework/layout it had
-  before. New lines only as Tier B (max 2, approved line by line). Ask Justin for fresh headlines when the pool feels stale.
-- Facts: Citrulline is NOT a peptide ("2 peptides + 1", never "3 peptides").
 
 ## This product's references
 | File | Read for |

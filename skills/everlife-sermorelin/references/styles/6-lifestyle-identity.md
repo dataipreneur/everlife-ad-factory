@@ -14,7 +14,7 @@ Why it still works: the bible frames Sermorelin around **muscle, fitness and per
 ## 6A — Prime-time training (men)
 - **Looks like:** a rugged 42–50 "fit silver fox" with a hardcore fitness-model build, in a fitted training tee or (HARDCORE) shirtless, early-morning sun: a heavy farmer's carry, a sled push, a rowing sprint, a boxing bag. Real sweat, hard-training intensity; a natural pump or flex is fine.
 - **Beats:** 0–2 a sound-led hook (a kettlebell set down hard, breath) → 2–6 the effort → 6–10 the tablet in his palm at the gym bag, bottle beside it → 10–12 he nods and goes again.
-- **Copy:** men Tier A (*Built for Men Who Still Want More*); benefit *Supports Strength + Vitality*.
+- **Copy:** men a bible reference line (*Built for Men Who Still Want More*); benefit *Supports Strength + Vitality*.
 - **Finishing:** `house`.
 
 ## 6B — Still in the game (men)
@@ -24,7 +24,7 @@ Why it still works: the bible frames Sermorelin around **muscle, fitness and per
 
 ## 6C — Thrive after 35 (women)
 - **Looks like:** a woman 45–52 in warm light (lead colours per `image-batch.md` §2b): a pilates reformer session, a morning hike, a tennis rally, then the tablet at a sunlit counter.
-- **Copy:** women Tier A (*Thrive After 35*, *Rediscover Energy and Vitality*, *Stay Fit, Age Beautifully*); benefit *Supports Energy + Stamina*.
+- **Copy:** women a bible reference line (*Thrive After 35*, *Rediscover Energy and Vitality*, *Stay Fit, Age Beautifully*); benefit *Supports Energy + Stamina*.
 - **Guardrails:** no body-shape focus, no sports-bra ab shots (common in past ads); never "Get Ripped".
 - **Finishing:** `editorial`.
 

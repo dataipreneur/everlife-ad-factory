@@ -92,7 +92,7 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
    - **Hook (0–2.5 s, speech from the first second)** in one line
    - **Script / shot list** (timestamps), every spoken line in quotes
    - **On-screen copy**: header, end-card headline, up to 3 benefits (✅ clean pool), CTA, all from the bible
-   - **Compliance notes**: the bible line behind each claim; any ⚠ pre-screen line used (needs the user's explicit OK now, Jeremy later); any Tier B line marked PROPOSED FOR APPROVAL
+   - **Compliance notes**: the bible line behind each claim; any ⚠ pre-screen line used (needs the user's explicit OK now, Jeremy later); any fresh line (Jeremy signs off on wording) FOR APPROVAL
    - The full generation prompt in a collapsed code block
 3. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style". Label each concept with its sub-style code.
 4. On approval: job folder `~/Everlife-Creative/output/Sermorelin/<YYYY-MM-DD>_<slug>/` with `prompt.txt`, `copy.json`, `source/` (copy the `assets/` renders); run the cost check, submit **in the background**, append the concept to the copy log.

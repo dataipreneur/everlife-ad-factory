@@ -74,7 +74,7 @@ or "by Everlife". Statics never say "by Everlife".
 3. **Angle:** "Mix (Recommended)" / "Clear head" ("Less Fog. More Focus.", "Clear Head. Full Day.", "Brain Fog, Who?") / "Energy that
    lasts" ("Supports All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy
    aging" ("More Life in Your Years.", "Your 30s Called & Want You Back").
-4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one PROPOSED line".
+4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one fresh line".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body or a brand), one script at a time

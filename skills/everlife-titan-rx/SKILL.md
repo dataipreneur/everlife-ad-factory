@@ -104,8 +104,8 @@ If everything is ✅, say so in one line and go straight to step 1.
    Her.", "An Upgrade She’ll Notice") / "Circulation + confidence" ("Supports Blood Flow When It Counts", "Supports Circulation +
    Firmness", "Supports Confidence + Control", "When It’s Go Time, Be Ready"). The ⏳ ED headlines are never offered here; they
    are used only when the user asks by name AND Jeremy has approved them in writing.
-3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
-   lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
+3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one fresh line in the batch" / "Bold: two fresh
+   lines". Safe = a bible reference line only. Balanced/Bold = fresh lines (Jeremy signs off on wording), each needs the user's explicit OK and goes to Jeremy.
 4. **CTA:** "Ships Free From Pharmacy (Recommended)" / "Get Performance Support" / "Start Daily Support" / "Explore Titan-Rx" ("Find Your
    Plan" via Other). All five are bible CTAs.
 
@@ -123,7 +123,7 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
 1. Read `product-bible.md`, `global-rules.md`, `lessons.md`, the chosen sub-style file, `video-prompting.md`, `hook-bank.md` and the copy log.
 2. Write **one** concept and show it compactly: Hook (0–2 s) · Script / shot list with timestamps, every spoken line in quotes ·
    On-screen copy: header, end-card headline, 3 benefits (✅ lines only), CTA (the session's CTA), all from the bible ·
-   Compliance notes: the bible line behind each claim; any ⏳/⚠ line used; any Tier B line marked PROPOSED · the full generation prompt
+   Compliance notes: the bible line behind each claim; any ⏳/⚠ line used; any fresh line (Jeremy signs off on wording) · the full generation prompt
    in a collapsed code block.
 3. **Persona critique** (`references/personas.md`): read the concept as Skeptical Mike, then as Grounded Ray; score the 5-point rubric;
    fix anything under 4 (one product, one capsule, no ingredient claims, no synonym stacking, plain-English mechanism, no timing

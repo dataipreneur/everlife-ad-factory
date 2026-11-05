@@ -14,7 +14,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the GHK Peptide Cream airless pump bottle (navy label, champagne-gold cap and base; label to camera). There is no tablet or capsule.; min width 0.2 of canvas; never: a strength or percentage on the bottle; another product's bottle, tube or jar; tablets, capsules or pills; needles, syringes, droppers or vials; before/after or side-by-side skin comparison; close-ups of wrinkles, blemishes, scars or any skin condition; bodybuilding or 'huge' physique imagery; body-shape, waist or weight cues; beds or bedroom scenes; orange or green colours.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/ghk-cream-copy-log.md`. **Output:** `~/Everlife-Creative/output/GHK Peptide Cream/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only the ✅ lines in `product-bible.md` (quick-hit benefits, ✅ headlines and CTAs). Pre-screen ❌ never; ⚠ only with the
   user's explicit OK + flagged for Jeremy. Weak headline → avoid.
@@ -28,13 +31,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - No "Are you/Do you…?" questions, no first person, no named competitors.
 - Offer: only "Save up to 75%" (percent, never a $ price).
 - Images: the name big, never "by Everlife". Proof wording exact; disclaimer verbatim (the finisher adds both).
-
-**Headline tiers:**
-- **Tier A (default):** a ✅ bible headline, word for word or lightly trimmed. The pool is small (4 on FB/GL/TK, 3 on H2): say so up front.
-- **Tier B (max 2 per batch):** fresh wording whose every claim maps to a ✅ line. Mark it **PROPOSED**; it needs the user's explicit
-  OK for that exact line and goes in SESSION.md as "Tier B, needs Jeremy".
-- Never repeat a headline in the copy log; when the pool runs out, ask: reuse least-used with a new layout (the Sermorelin rule), allow
-  Tier B, a ⚠ line with the user's OK, or new approved headlines from Jeremy.
 
 ## This product's references
 | File | Read for |

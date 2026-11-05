@@ -14,7 +14,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the Epithalon vial (a still object, label to camera); min width 0.35 of canvas; never: needles, syringes, pens or injecting (and the words 'needle-free'); capsules, tablets or pills; beds, bedrooms, pillows, night or overnight scenes, waking up, alarm clocks, moons or any sleep cue (DSIP's territory, product Hard NO); before/after, younger-vs-older-self or any body or age comparison; age-reversal or 'turn back the clock' imagery; DNA-helix or lab-result graphics presented as a medical result; scales, tape measures or any body-composition cue; another product's vial (incl. the GHK-Cu/Epithalon stack).
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/epithalon-copy-log.md`. **Output:** `~/Everlife-Creative/output/Epithalon/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **✅ Disclaimer now in the bible (sync 1793728650-5a0d, 2026-11-03):** the bible's Epithalon page carries the standard ad disclaimer, word for word the text already in product.json (`bible_sync.py --check` ✅). The old "provisional disclaimer: Jeremy to confirm" flag is retired; Jeremy's usual sign-off before anything goes live still applies.
 
 **Hard stops:**
@@ -30,8 +33,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically" for the product.
 - **Offer: none.** The bible's offer is [PLACEHOLDER]: no %, no $, no offer slot (F6 skipped) until Justin fills it.
 - "Epithalon" big in every ad (the bible's spelling; the vial label's "EPITALON" is never edited); never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:** Tier A = a ✅ benefit line, verbatim (no headline is approved yet) · ⏳ H3 "Support Healthy Aging at the Cellular Level" / H4 "Longevity Support, Made Simple" and ⚠ B3: explicit OK per line, Jeremy · Tier B (max 2): PROPOSED, Jeremy. **Two ✅ benefits only:** a three-row layout uses "Doctor Prescribed" (sourced trust signal) as the third row, or B3 with an OK.
 
 ## This product's references
 | File | Read for |

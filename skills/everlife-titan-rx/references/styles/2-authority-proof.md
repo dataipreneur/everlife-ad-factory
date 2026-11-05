@@ -16,7 +16,7 @@ Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; 
 - Static: `finish_image.py --layout letter`.
 
 ## 2D — Article
-- **Looks like:** an editorial page, kicker "MEN'S PERFORMANCE", Tier A headline ("When It’s Go Time, Be Ready"), a candid photo of a rugged man 40–65 (shoulder-up, clothed) or the product, plus proof. No fake byline, no fake site menu.
+- **Looks like:** an editorial page, kicker "MEN'S PERFORMANCE", bible reference headlines ("When It’s Go Time, Be Ready"), a candid photo of a rugged man 40–65 (shoulder-up, clothed) or the product, plus proof. No fake byline, no fake site menu.
 - Static: `finish_image.py --layout article`.
 
 ## 2E — Formula map

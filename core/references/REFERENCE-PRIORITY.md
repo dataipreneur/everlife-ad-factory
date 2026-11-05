@@ -19,7 +19,7 @@ The ad types are the same at every level (F1–F12 in each skill's `image-batch.
 
 ## Rules that apply to every level
 - **References decide the idea and the layout, never the words.** Headlines, claims, offers, proof and the disclaimer come only
-  from the creative bible (Tier A headlines; Tier B only as approved). A winner's or another brand's wording is never copied.
+  from the creative bible as references (wording is free; the only fence is the Hard NOs). A winner's or another brand's wording is never copied.
 - **The image generator never sees a reference.** Only Claude looks at it; the generator gets the product renders and the type
   specimen. This keeps a reference's rule breaks (e.g. "GHK-Cu", "Save 70% vs HGH", competitor names) out of our ads.
 - **Follow each winner card's "Don't copy" list.**

@@ -86,7 +86,7 @@ intro. The transcript QA fails any raw without the name or "by Everlife". Static
 2. **Angle:** "Mix (Recommended)" / "Healthy aging, plainly" ("Supports Healthy Aging") / "Cellular defense" ("Supports Oxidative
    Stress Defense") / "Longevity, simply" ("Start Longevity Support").
 3. **How bold on copy:** "✅ benefit lines as headlines (Recommended)" / "A pending headline (H3/H4; I OK each, flagged for Jeremy)" /
-   "Bold: one ⚠ or PROPOSED line (I OK it)".
+   "Bold: one ⚠ or fresh line (I OK it)".
 4. **CTA:** "Ships Free From Pharmacy" / "Explore Epithalon" / "Support Healthy Aging" / "Start Longevity Support" (all ✅; first =
    Recommended; "Build Your Plan" via Other). Never "Get Started Now" (bible, 2026-11-03).
 

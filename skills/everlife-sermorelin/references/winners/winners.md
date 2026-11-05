@@ -29,14 +29,14 @@ Preview: `ALLTIME_top12.jpg` (12 ads, labelled with sales and CPA).
 | M8 | 273610-3.01 | 223 | **$252** | best CPA among the big ones (file not on this Mac) |
 | M9 | 281136-1.01 | 196 | $351 | **fist pushing the tablet at the lens** in a blue gym, "Featured in" logos |
 | F1 | 273400-2.04 | 137 | **$248** | oblong tablet over "SERMORELIN" ×5, dark textured background, 3 check lines |
-| F2/F22 | 273390-2.01 / -1.01 | 86 + 155 | $326 / $402 | **woman 40s holding the "S" tablet to camera**, "Stay Fit, Age Beautifully" (Tier A), bottle bottom-left, 5 benefit bars (red version beat blue on CPA) |
+| F2/F22 | 273390-2.01 / -1.01 | 86 + 155 | $326 / $402 | **woman 40s holding the "S" tablet to camera**, "Stay Fit, Age Beautifully" (a bible reference line), bottle bottom-left, 5 benefit bars (red version beat blue on CPA) |
 | F3 | 301616-1.01 | 69 | $273 | orange/pink "SERMORELIN" header, woman training, 5 white benefit pills |
 | F4 | 273588-3.01 | 68 | $349 | giant tablet on orange, "Strength · Vitality · Burn" boxes |
 
 **The proven mechanic: ONE tablet held up to the lens by a real hand** (M2, M3, M5, M6, M9, F2/F22: ~1,500 sales
 between them), with a huge condensed headline on the other side and the product name as a small kicker. That is
 sub-style **4B Tablet in hand** / F2 Bold claim: make it the default first slot in every batch.
-Second: **name or tablet as the hero** (F1, F4, BASE130). Women: a woman 40–55 holding the tablet + a Tier A line.
+Second: **name or tablet as the hero** (F1, F4, BASE130). Women: a woman 40–55 holding the tablet + a a bible reference line line.
 
 **Don't copy (all of them break a current rule):** "Get Ripped and Lean" / "Get Toned and Lean" (⚠), "or get your money
 back" (guarantee), "Save 70% vs HGH" (⚠), "Featured in NIH / Healthline / Mayo Clinic" (unsourced authority), "Kiss your
@@ -57,7 +57,7 @@ Drive folders as downloaded 2026-10-28. Ask for these files (Ads Manager or whoe
 
 ## How to use these cards (read before writing a batch)
 - Take **layout, format, hook mechanics, mood and product staging** from a card. Take **every word** from the bible
-  (Tier A) or as an approved Tier B line. The image model never sees these ads, only you do.
+  (a bible reference line) or as an approved a fresh line line. The image model never sees these ads, only you do.
 - **Never copy the "Don't copy" items.** Every one of these winners breaks at least one of today's rules (shirtless
   bodies, before/after, fat claims, "HGH", injections, $ prices, old proof, non-bible disclaimers).
 - Small samples (3–5 purchases) can be luck; weight **M5 BASE130-01** (43 purchases, $10.5k spend) and **M4 VIDEO82B** (8).
@@ -88,7 +88,7 @@ Not in "Sermorelin M" (only #82B is). Base concept #83B; Drive links on the page
 - **Don't copy:** shirtless bodybuilder; "Look Leaner" (body composition), "Age Better"; "50% more potent INJECTIONS";
   "Up to 40% off" (bible offer is **"Save up to 65%"**); no product, no tablet, no proof in frame.
 - **Rebuild with:** a clothed fit man 50+ in the same mono gritty gym; the dumbbell-plate "S" metaphor; headline
-  "Double Strength Sermorelin" (Tier A); the real tablet + bottle in the foreground; stat column → "Save up to 65%" +
+  "Double Strength Sermorelin" (a bible reference line); the real tablet + bottle in the foreground; stat column → "Save up to 65%" +
   two ✅ benefits.
 
 ### M3 · ID323819-3.01 (+ 1.01) · static · ~$214 CPA (5, $1,069) · `M3_ID323819-3.01.jpg`, `M3b_ID323819-1.01.jpg`
@@ -115,7 +115,7 @@ box + warm orange light; 3.01 = grey name box + cooler light. Same copy.
 - **Don't copy:** "the strongest … on the market" (unsupported superiority), "Maximum potency", injections, the vial;
   "Trusted by 70,000+" (now **100,000+**); "Lean Muscle Definition" (⚠); 19 s with the CTA buried; dragon/shark gore
   (the creative lead rejected surreal-from-scratch: see lessons). A Restora-Z-style "surreal" rebuild needs care.
-- **Rebuild with:** keep the "Now Double Strength" news header and sound-off design (Tier A "Double Strength
+- **Rebuild with:** keep the "Now Double Strength" news header and sound-off design (a bible reference line "Double Strength
   Sermorelin"); a grounded pattern interrupt instead of creatures (3A movie-peg, 5B versus-a-problem); VO ≤ 35 words,
   15 s, end card with a bible CTA.
 
@@ -131,7 +131,7 @@ box + warm orange light; 3.01 = grey name box + cooler light. Same copy.
   "Get Ripped and Lean", "Trusted by Thousands" (now 100,000+), "Free Rush Shipping", the vial, a woman avatar fronting a
   men's ad without casting intent.
 - **Rebuild with:** open on the pinched tablet + "SERMORELIN BY EVERLIFE" header and a VO line in the first second
-  (Tier A "Double Strength Sermorelin" with the 1000 bottle); the features card becomes the end card with three ✅
+  (a bible reference line "Double Strength Sermorelin" with the 1000 bottle); the features card becomes the end card with three ✅
   benefits + a bible CTA; no talking avatar unless it's a real Marketing Studio actor (lip-sync on stills is banned).
 
 ### MV3 · Base56 (03 / 05 / 06) · video, 28 s, 9:16 + 1:1 · 23 sales across cuts, best ~$262–407 CPA · `MV3_BASE56.jpg`
@@ -159,7 +159,7 @@ box + warm orange light; 3.01 = grey name box + cooler light. Same copy.
   Trustpilot 4.9, "Starting at $95 / Direct from pharmacy", disclaimer. VO (8 words): "Momentum isn't built on excuses.
   Double strength. Stay ready."
 - **Works:** very short (11 s, 8 spoken words); the tablet pushed toward the lens (bible v3 "pull"); "Double Strength
-  Sermorelin" as the header (Tier A, men); a fixed info panel for sound-off.
+  Sermorelin" as the header (a bible reference line, men); a fixed info panel for sound-off.
 - **Don't copy:** shirtless viking in a leather harness (no bare torso), "Lean Muscle Definition" (⚠), injections, "$95",
   the phone-UI fake "liked by user and 1,234 others" (fake social proof), split-screen layouts (rejected for Restora).
 - **Rebuild with:** a clothed 42–50 "fit silver fox" pushing the tablet toward the lens in frame 1, the "Double

@@ -99,8 +99,8 @@ approved static + 8 s of motion, Seedance; a follow-up question picks which)" / 
 2. **Angle** (the question tool shows 4 choices): "Mix: a different angle per ad (Recommended, Mitansh 2026-10-29)" / "Problem →
    solution" / "Recovery is the bottleneck" / "The comeback". "More than muscle, inside out" is the fourth named angle: Mix rotates all
    four, and the user can type it in the Other slot. Each is defined in `product-bible.md` "The angle" with its hooks.
-3. **How bold on copy:** "Safe: bible hooks only (Recommended)" / "Balanced: one PROPOSED line" / "Bold: two PROPOSED lines".
-   Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
+3. **How bold on copy:** "Safe: bible hooks only (Recommended)" / "Balanced: one fresh line" / "Bold: two fresh lines".
+   Safe = a bible reference line only. Balanced/Bold = fresh lines (Jeremy signs off on wording), each needs the user's explicit OK and goes to Jeremy.
    (The three "Image – Pending approval" headlines count as ⏳: offer them only here, never silently.)
 
 **Images** → then `references/image-batch.md` §2 (copy density, mood, how many are decided there in one more round, then the table).
@@ -121,7 +121,7 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
 1. Read `product-bible.md`, `global-rules.md`, `lessons.md`, the chosen sub-style file, `video-prompting.md` and the copy log.
 2. Write **one** concept and show it compactly: Hook (0–2 s) · Script / shot list with timestamps, every spoken line in quotes ·
    On-screen copy: header, end-card headline, 3 benefits (quick-hit lines only), CTA · Compliance notes: the bible line behind each
-   claim; any ⏳/⚠ line used (needs the user's explicit OK now, Jeremy later); any Tier B line marked PROPOSED · the full
+   claim; any ⏳/⚠ line used (needs the user's explicit OK now, Jeremy later); any fresh line (Jeremy signs off on wording) · the full
    generation prompt in a collapsed code block.
 3. **Persona critique** (`references/personas.md`): read it as Lifter Marcus, then as Pilates Dana; score the 5-point rubric; fix
    anything under 4; show the critique and the fixes under the concept.

@@ -26,6 +26,7 @@ STALE = {
     r'Round 2 \(images\)': 'old two-round image setup',
     r'GHK-Cu(?![ -]Cream)': 'naming Hard NO (GHK, never GHK-Cu) outside the cream product name',
     r'Provider-Guided From Home': 'unapproved line the team QA keeps flagging',
+    r'Tier [AB]\b': 'headline tiers are gone: bible headlines are references, wording is free (Mitansh 2026-11-05)',
 }
 IMAGE_BANNERS = ('PROMPT LAYOUT ZONES', 'BOTH SIZES AT ONCE', 'NEVER `reposition_916', 'SHOW FIRST, THEN RE-ROLL', 'MOOD =', 'FOCAL-POINT MIX')
 SHARED = ['core/references/image-flow.md', 'core/references/world-deck/worlds.json', 'core/scripts/deal_worlds.py',

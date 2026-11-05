@@ -18,7 +18,10 @@ Adults 45–65+ who wake through the night or dislike next-day grogginess.
 - **Hero:** the Restora-Z capsule (the bottle is secondary and must be large and legible when shown); min width 0.35 of canvas; never: glass orbs or icons instead of the real tablets, a broken product name.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/restora-z-copy-log.md`. **Output:** `~/Everlife-Creative/output/Restora-Z/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops (never cross):**
 - Pain points: ONLY the bible's 12 *Approved pain points*.
 - Claims: every claim must map to an *approved claim*: quick-hit benefits, more approved benefits, or a per-ingredient
@@ -28,20 +31,6 @@ Adults 45–65+ who wake through the night or dislike next-day grogginess.
   (and Ambien only with its real pill photo, which we don't have yet, so **no Ambien in images for now**), no lines flagged
   "Hard NO conflict" (Insomnia Solved, Knock Out Insomnia, The Last Sleep Medication…, Non-Addictive Safe Long-Term).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
-
-> ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
-> `_originals/2026-10-28/`). It replaces the 2026-10-27 "rework freely" rule because the global gate (CLAUDE.md, which ranks
-> above skills) says headlines come only from the bible/brief and new hooks need explicit approval. Remove this note once
-> the creative lead and Jeremy confirm, or revert if they don't.
-
-**Headline tiers:**
-- **Tier A (default):** a bible headline/hook (product page or headline bank) word for word, or lightly trimmed, never a
-  line flagged "Hard NO conflict", "Weak headline" or "Pending approval". Lead with "sleep" where it reads naturally.
-- **Tier B (max 2 per batch):** fresh wording (wordplay, a twist) whose every claim maps to an approved claim, **or** a
-  winner's headline that isn't in the bible. Mark it **PROPOSED** in the batch table; it needs the user's explicit OK for
-  that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
-- Never repeat a headline in the copy log. When unused Tier A headlines run low, say so and ask whether to allow more
-  Tier B or request new approved headlines from Jeremy.
 
 ## This product's references
 | File | Read for |

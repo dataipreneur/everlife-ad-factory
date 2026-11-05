@@ -15,7 +15,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the compounded Rx vial (the only approved image); min width 0.35 of canvas; never: syringe, needle, pen, dropper, droplets, capsules, pills, tablets, a second vial.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/bpc-157-copy-log.md`. **Output:** `~/Everlife-Creative/output/BPC-157/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only the seven quick-hit benefits in `product-bible.md` §5 (+ "Supports tissue repair"). Section 6 is BLOCKED. Pre-screen
   ❌ lines never; ⏳ "Image – Pending approval" headlines and ⚠ glow/skin lines only with the user's explicit OK + flagged for Jeremy.
@@ -30,13 +33,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - No "Are you/Do you…?" questions ("Is Your Recovery?" is ❌), no first person, no named competitors, no "clinically" for the product.
 - Offer: only "Take up to 40% Off" (percent, never $).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:**
-- **Tier A (default):** a hook from the bible's Men / Women / Unisex lists without a flag, verbatim or lightly trimmed (sentence case
-  allowed for the premium look). Audience decides the list.
-- **Tier B (max 2 per batch):** fresh wording whose every claim maps to a quick-hit benefit. Mark it **PROPOSED**; needs the user's
-  explicit OK for that exact line and goes in SESSION.md as "Tier B, needs Jeremy".
-- Never repeat a headline in the copy log. The pool is large (60+ unflagged hooks), so Tier B should rarely be needed.
 
 ## This product's references
 | File | Read for |

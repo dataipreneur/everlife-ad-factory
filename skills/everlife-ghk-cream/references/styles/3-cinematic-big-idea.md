@@ -6,13 +6,13 @@ surreal-from-scratch videos: keep it real, object-based, 720p.)
 
 ## 3A — Object metaphor
 - **Looks like:** a silk ribbon pulled gently taut; a creased beige linen sheet smoothed flat by a hand; morning light sliding across a
-  blush plaster wall. The bottle arrives in the final beat, label to camera. One Tier A line in finishing ("Firmer-Looking Skin Starts
+  blush plaster wall. The bottle arrives in the final beat, label to camera. One a bible reference line line in finishing ("Firmer-Looking Skin Starts
   With Support").
 - **Guardrails:** the metaphor is about support and smoothness of objects, never a face or body transforming.
 
 ## 3B — The cleared shelf
 - **Looks like:** a crowded bathroom shelf of anonymous jars and tubes (plain, unbranded) → the same frame with just the bottle; one
-  Tier A line ("Your Daily GHK Glow"); "Upgrade Your Skin Routine".
+  a bible reference line line ("Your Daily GHK Glow"); "Upgrade Your Skin Routine".
 - **Guardrails:** no competitor brands or readable labels; no "throw away your products" claims.
 
 ## 3C — Retro film

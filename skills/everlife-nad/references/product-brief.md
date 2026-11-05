@@ -15,7 +15,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Hero:** the NAD+ tablet (sublingual ads) or the NAD+ vial (injection ads), large and in front; the bottle secondary; min width 0.35 of canvas; never: needles, syringes, pens or injecting; 'needle free'; the nasal spray; celebrity look-alikes; another product's bottle, tablet or vial.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/nad-copy-log.md`. **Output:** `~/Everlife-Creative/output/NAD+/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only ✅ pre-screen lines; ⚠ lines ("boost(s)", "reduces fatigue", "DNA repair", celebrity/CEO/athlete authority) only with
   the user's explicit OK + flagged for Jeremy. Weak lines: avoid.
@@ -26,8 +29,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
   30-day money-back guarantee. Never mix a tablet offer onto an injection ad.
 - No disease words, no age-reversal promises, no "Are you/Do you…?" questions, no first person, no named competitors.
 - "NAD+" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:** Tier A = a ✅ bible headline or benefit · ⚠ lines: explicit OK per line · Tier B (max 2): PROPOSED, Jeremy.
 
 ## This product's references
 | File | Read for |

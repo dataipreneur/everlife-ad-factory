@@ -13,7 +13,10 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 - **Renders (assets/):** bottle: `sermorelin1000_bottle.png`, pill: `sermorelin_tablet.png`. Use them exactly; never describe the pill's shape or markings in text.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/sermorelin-copy-log.md`. **Output:** `~/Everlife-Creative/output/Sermorelin/`.
 
-## Hard stops and headline tiers (this product)
+## Headlines: references, not limits
+The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).
+
+## Hard stops (this product)
 **Hard stops:**
 - Claims: only the ✅ approved benefits in `product-bible.md` (clean pool). Pre-screen ❌ lines never; ⚠ lines only with
   the user's explicit OK + flagged for Jeremy.
@@ -25,14 +28,6 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
   "Breaking News".
 - Offer: only "Save up to 65%" (percent, never a $ price unless the brief is a price test; never "vs HGH" without Jeremy).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
-
-**Headline tiers:**
-- **Tier A (default):** a headline from the chosen audience page's clean pool (`product-bible.md`), word for word or
-  lightly trimmed. Never a "Weak headline", "Hard NO conflict" or pre-screen ❌/⚠ line.
-- **Tier B (max 2 per batch):** fresh wording whose every claim maps to a ✅ benefit. Mark it **PROPOSED**; it needs the
-  user's explicit OK for that exact line (not the batch click) and goes in SESSION.md as "Tier B, needs Jeremy".
-- Never repeat a headline in the copy log. **The Tier A pool is very small** (3 men's, 4 women's): say so up front and ask
-  whether to allow Tier B, use a ⚠ line with the user's OK, or request new approved headlines from Jeremy.
 
 ## This product's references
 | File | Read for |

@@ -79,7 +79,7 @@ or "by Everlife". Statics never say "by Everlife".
 2. **Angle:** "Mix (Recommended)" / "Energy from the inside" ("Supports Mitochondrial Energy") / "Go the distance" ("Supports
    Endurance") / "Metabolism, plainly" ("Supports Healthy Metabolism"; never with weight or body words).
 3. **How bold on copy:** "Doc headlines, ✅ only (Recommended)" /
-   "Benefit lines as headlines" / "Bold: one ⚠ or PROPOSED line (I OK it)".
+   "Benefit lines as headlines" / "Bold: one ⚠ or fresh line (I OK it)".
 4. **CTA:** "Save Up to 40%" / "Ships Free From Pharmacy" / "Explore MOTS-c" / "Fuel Cellular Energy" / "Support Your Metabolism" / "Start Metabolic Support" / "See How It Works" (all ✅; first = Recommended; AskUserQuestion shows 4, so offer the first 4 and the rest via Other). Never "Get Started Now" (bible, 2026-11-03).
 
 **Images** → `references/image-batch.md` §2. **Video** → Placement · Style · Mood ("Outdoor endurance at dawn (Recommended)" /

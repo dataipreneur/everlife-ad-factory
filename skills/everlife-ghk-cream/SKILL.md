@@ -108,8 +108,8 @@ If everything is ✅, say so in one line and go straight to step 1.
 3. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Firmness" ("Firmer-Looking Skin Starts With Support", "Support
    Firmer Skin") / "The peptide step" ("Peptide-Powered Skin Support", "Your Daily GHK Glow") / "Glow" ("Glow Smarter With GHK Peptide
    Cream", "Supports a Brighter, More Even-Looking Tone"). ⚠ lines (pre-screen) only with the user's OK.
-4. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
-   lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
+4. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one fresh line in the batch" / "Bold: two fresh
+   lines". Safe = a bible reference line only. Balanced/Bold = fresh lines (Jeremy signs off on wording), each needs the user's explicit OK and goes to Jeremy.
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·
 **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md` · **Mood** (the options of 5,
@@ -128,7 +128,7 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
 2. Write **one** concept and show it compactly: Hook (0–2.5 s, speech from the first second) · Script / shot list with timestamps,
    every spoken line in quotes · On-screen copy: header "GHK PEPTIDE CREAM BY EVERLIFE", end-card headline, 3 benefits (✅ lines
    only), CTA, all from the bible · Compliance notes: the bible line behind each claim; any ⚠ line used (needs the user's explicit OK
-   now, Jeremy later); any Tier B line marked PROPOSED · the full generation prompt in a collapsed code block.
+   now, Jeremy later); any fresh line (Jeremy signs off on wording) · the full generation prompt in a collapsed code block.
 3. **Persona critique** (`references/personas.md`): read the concept as both personas; score the rubric; fix anything under 4; show
    the critique and the fixes under the concept.
 4. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style".

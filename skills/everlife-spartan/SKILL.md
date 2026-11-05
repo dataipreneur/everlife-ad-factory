@@ -103,7 +103,7 @@ approved static + 8 s of motion, Seedance; a follow-up question picks which)" / 
 **Round 2 — ONE AskUserQuestion, 3 questions:**
 1. **Angle:** "Mix: a different angle per ad (Recommended)" / "Train hard, recover" ("Train Like a Spartan. Recover Like One." (⏳), "Supports Training Harder, More Often") / "Joints + connective tissue" ("Supports Joints + Ligaments", "Supports Connective Tissue Repair") / "Mobility" ("Supports Mobility + Range of Motion", "Supports Muscle Recovery").
 2. **How bold on copy:** "Safe: approved benefit lines as headlines (Recommended)" / "Use bible headlines (⏳, I OK each line)" /
-   "Bold: one PROPOSED line". Every ⏳ or PROPOSED line needs the user's explicit OK and goes to Jeremy.
+   "Bold: one fresh line". Every ⏳ or fresh line needs the user's explicit OK and goes to Jeremy.
 3. **CTA:** "Ships Free From Pharmacy" / "Explore the Spartan Stack" / "Build Your Recovery Stack" / "Support Stronger Recovery" / "Start Your Protocol" (all ✅; first = Recommended). Never "Get Started Now" (bible, 2026-11-03).
 
 **Images** → then `references/image-batch.md` §2 (mood, copy density, people, how many in one more round, then the table).
@@ -120,8 +120,8 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
 ## Step 3 — Script → approve → generate (video)
 1. Read `product-bible.md`, `global-rules.md`, `lessons.md`, the chosen sub-style file, `video-prompting.md` and the copy log.
 2. Write **one** concept: Hook (0–2 s) · Script / shot list with timestamps, every spoken line in quotes · On-screen copy: header,
-   end-card headline, 3 benefits (✅ lines only), CTA · Compliance notes: the bible line behind each claim; any ⏳/⚠ line; any Tier B
-   line marked PROPOSED · the full generation prompt in a collapsed code block.
+   end-card headline, 3 benefits (✅ lines only), CTA · Compliance notes: the bible line behind each claim; any ⏳/⚠ line; any a fresh line
+   line marked fresh · the full generation prompt in a collapsed code block.
 3. **Persona critique** (`references/personas.md`) as Lifter Marcus; score the rubric; fix anything under 4; show it.
 4. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style".
 5. On approval: job folder `~/Everlife-Creative/output/Spartan-Stack/<YYYY-MM-DD>_<slug>/` with `prompt.txt`, `copy.json` (with
