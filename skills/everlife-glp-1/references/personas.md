@@ -18,6 +18,6 @@ Doctor told him to watch his weight; wants a provider, not an influencer. What R
 2. **Plain English:** every claim word is explained by the scene or a bible line; no jargon stack.
 3. **Not scammy:** real product, real pharmacy proof, no cure words, no timing numbers, no needles.
 4. **Looks like me:** an everyday adult and a calm kitchen, not a body.
-5. **Worth a click:** the end card answers "what do I do now" (a bible CTA) and "what's it cost" (the price line, Save Up to 83% / 70% by drug).
+5. **Worth a click:** the end card answers "what do I do now" (a bible CTA) and "what's it cost" (the price line, Save Up to 83%).
 
 Write the critique honestly. If Maria or Ron wouldn't click, say so and fix the concept before showing it.

@@ -25,7 +25,7 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "G-
   "Supports Appetite Regulation" leads, then "Helps Reduce Food Noise" (both ✅), plus the price line. Never "this melts the weight off".
 - No weight-loss numbers or timelines, no "melt", "burn", "shred", no body areas (FTC); no drug-brand names (Ozempic, Wegovy,
   Mounjaro, Zepbound); "compounded" always before semaglutide / tirzepatide; no timing promises.
-- No "I"/"my", no testimonials, no "Are you…?". No disease words, no "clinically" for the product, percent only ("Save Up to 83%" semaglutide / "Save Up to 70%" tirzepatide) and the price line.
+- No "I"/"my", no testimonials, no "Are you…?". No disease words, no "clinically" for the product, percent only ("Save Up to 83%", whichever vial is shown) and the price line.
 - **Settings:** bright kitchen at breakfast, fridge door with a simple plan, a calm evening on the sofa, a walk in daylight, a phone with a provider message.
 - **Framing:** clothed, shoulder-up; never a body shot, scale, tape, waistline or mirror; no before/after.
 - Palette: warm and light; the vial's navy or green as the accent.
