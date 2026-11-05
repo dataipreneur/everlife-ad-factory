@@ -85,7 +85,8 @@ to be dropped (2 of 8 ads ended with proof).
 7. **QA every raw against the zones at full size** before finishing: first text line below the logo band, product and CTA above
    the footer line, nothing outside the width band. A raw that breaks a zone is re-rolled with the block repeated and the
    offending element moved higher by ~10%; or, if only the footer collides, finished with `--proof none` (free, noted in the
-   batch's proof split). **Never** fix it with a shift, mirror-fit, pad, stretch, blur or haze.
+   batch's proof split). **Footer drop (Mitansh 2026-11-05, approved):** `finish_batch.py` first lowers the proof row by the
+   minimum that clears the content, up to 20% of the height (384 px); only a deeper collision is refused. **Never** fix it with a shift, mirror-fit, pad, stretch, blur or haze.
 7b. **AUTO-LIFT Q/A FIX, built into `finish_batch.py` (Mitansh 2026-11-04: "This is where we should be having the headers to
    start with!"):** on EVERY finish (9:16, 4:5, 1:1) the finisher measures the raw's empty headroom and moves the whole ad UP so
    its first content row sits right under the logo band (9:16 y 230, 4:5 y 140). Only empty headroom is cut; the bottom gap gets a
