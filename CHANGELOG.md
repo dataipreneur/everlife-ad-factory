@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — "Build the team zip" phrase (branch `team-zip-phrase`)
+Priestley: "add the build the team zip phrase" (a teammate with git pulls main and builds the zip for the others).
+- `core/claude/everlife-team.md`: saying "build the team zip" makes Claude check the repo is clean on `main`, pull, run
+  `core/scripts/make_zip.sh main ~/Desktop`, and verify the zip's `VERSION` sha and that it contains `core/team-logs/PAUSED`. Git copies only.
+
 ## 2026-11-04 — Team-log hooks-installed check (branch `teamlog-session-check`)
 Priestley: "run the installer and add the check" (after asking how automatic the team logging really is).
 - `core/hooks/teamlog_hook.py`: new `start` mode (SessionStart) warns when the capture or Stop hook is missing or points at a missing script. Never blocks.
