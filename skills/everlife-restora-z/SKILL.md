@@ -5,26 +5,15 @@ description: EverlifeMD Restora-Z ad factory. Guides the user step by step (conn
 
 # Restora-Z Ad Factory
 
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🚗 CAR THROW REVIEW = `core/references/car-throw-review.md` (Mitansh, 2026-11-03: "This was amazing!!!"; every tablet / capsule product):** every VIDEO Style / Mood question in this skill ALWAYS includes the option **"🚗 Car Throw Review (everyday person catches the bottle thrown into their car, honest breakdown, urgent CTA; Seedance 2.5 on Creatify ≈47 Creatify, 0 Higgsfield)"**. When picked, follow that file end to end (20 s relaxed pace, sealed bottle, one held tablet/capsule, throw sped up 3× in post, header 0–5.5 s then logo). This skill's own claims, casting, form and tone rules still apply.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the Restora-Z creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded, compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool) so the user never has to know the internals.
 
-Golden rules, all non-negotiable:
-0. **MANDATORY in every video (Mitansh, 2026-10-30): the VO says "Restora-Z by Everlife"** in the first spoken lines (by ~3 s) and names the product (not just "this"); "RESTORA-Z by Everlife" on screen in the intro. Pronunciation in the prompt: "res-TOR-uh zee". QA fails any raw where the transcript lacks the name or "by Everlife". Statics: no "by Everlife". Details: `core/references/creative-system.md` §0.
-1. **Claims come only from `references/product-bible.md` + `references/global-rules.md`.** Hard stops: the approved pain points, the approved claims (benefits + per-ingredient claims) and every Hard NO. Never invent a claim. **Headlines are Tier A by default** (bible wording, verbatim or lightly trimmed); fresh wording or a non-bible winner headline is **Tier B**: max 2 per batch, marked PROPOSED, approved line by line and flagged for Jeremy (⚠ PENDING CREATIVE-LEAD CONFIRMATION, changed 2026-10-28; this replaces the 2026-10-27 "fresh wording is fine" rule; details in `references/image-batch.md` §0). The disclaimer is used verbatim.
-2. **One script at a time.** Write → user approves/edits → generate → write the next while it renders.
-3. **Never spend credits without an explicit approval** of that specific script, and the approval option must show the cost. (Images: approving the batch table, with its total cost shown, is that approval.)
-4. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly; never call a weak take good.
-5. **Every script is new.** Check and append `~/Everlife-Creative/restora-z-copy-log.md`; never repeat a line, header, end-card headline or CTA already logged.
-6. Everything is a draft until creative review approves it and Jeremy signs off on compliance. Nothing is posted or uploaded anywhere.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 

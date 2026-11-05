@@ -5,33 +5,16 @@ description: EverlifeMD NAD+ ad factory (prescription NAD+ as a sublingual table
 
 # NAD+ Ad Factory
 
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🚗 CAR THROW REVIEW = `core/references/car-throw-review.md` (Mitansh, 2026-11-03: "This was amazing!!!"; every tablet / capsule product):** every VIDEO Style / Mood question in this skill ALWAYS includes the option **"🚗 Car Throw Review (everyday person catches the bottle thrown into their car, honest breakdown, urgent CTA; Seedance 2.5 on Creatify ≈47 Creatify, 0 Higgsfield)"**. When picked, follow that file end to end (20 s relaxed pace, sealed bottle, one held tablet/capsule, throw sped up 3× in post, header 0–5.5 s then logo). This skill's own claims, casting, form and tone rules still apply.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the NAD+ creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded,
 compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool).
 
-Golden rules, all non-negotiable:
-1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the ✅ pre-screen lines,
-   every Hard NO; ⚠ lines only after the user's explicit OK, flagged for Jeremy. **Held ⚠ (2026-10-30, same decision as GLP-1):**
-   "Boost(s)…" lines (global: "supports", never "boosts"), "Reduces Fatigue + Brain Fog" (treatment-like), "Supports DNA Repair"
-   (medical-style), "What Celebrities and CEOs Are Using…" and "Trusted by Entrepreneurs and Athletes" (unsourced authority).
-2. **Lead with the choice (bible):** sublingual tablet **or** injection. "Injection" may be named; **never show or mention needles,
-   syringes, pens or injecting, and never "needle free"** (bible Hard NO: say "easy sublingual delivery"). The vial is a still object.
-   One form per ad, or both shown side by side as "the choice" (bottle + tablet beside the vial, nothing else).
-3. **Focal-point mix** (bible Standards 03, 2026-11-03): tablet ads 50% tablet / 25% bottle / 25% person; injection ads 75% vial / 25% person (`image-batch.md`). Strengths (200 mg / 1000 mg) never
-   in copy. Voiceovers say **"N-A-D plus"**.
-4. No disease words; no "anti-aging" promises ("healthy aging" is the bible's wording); no celebrity look-alikes.
-5. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every
-   result**; **every script is new** (`~/Everlife-Creative/nad-copy-log.md`); everything is a draft until creative review and
-   Jeremy approve. Nothing is posted or uploaded anywhere.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 

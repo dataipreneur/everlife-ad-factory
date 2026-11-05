@@ -50,7 +50,6 @@ def main():
             for needle, why in [('core/references/image-flow.md', 'does not follow the shared image flow'),
                                 ('deal_worlds.py', 'does not deal worlds'),
                                 ('9:16 AND 4:5', 'both sizes not stated'),
-                                ('## 0. Copy rules', 'no product copy rules section'),
                                 ('finish_batch.py', 'no finishing command')]:
                 if needle not in ib: errs.append(f'image-batch.md: {why}')
             if len(ib.splitlines()) > 120: warns.append(f'image-batch.md is {len(ib.splitlines())} lines (should hold product facts only)')
@@ -77,7 +76,12 @@ def main():
             for v in pj.get('variations', []):
                 if not os.path.exists(os.path.join(REPO, 'core', 'references', 'variations', v + '.md')) and not os.path.exists(os.path.join(REPO, 'core', 'references', v + '.md')):
                     errs.append(f'product.json: unknown variation "{v}"')
-        if not os.path.exists(os.path.join(sd, 'references', 'product-brief.md')): errs.append('no references/product-brief.md (run build_product_briefs.py)')
+        pb_p = os.path.join(sd, 'references', 'product-brief.md')
+        if not os.path.exists(pb_p): errs.append('no references/product-brief.md (run build_product_briefs.py)')
+        elif '## Hard stops' not in open(pb_p).read(): errs.append('product-brief.md: no hard stops section')
+        banners = re.findall(r'^> \*\*(?!Engine)', sk, flags=re.M)
+        if banners: errs.append(f'SKILL.md carries {len(banners)} rule banner(s); only the Engine block is allowed')
+        if 'core/references/golden-rules.md' not in sk: errs.append('SKILL.md does not point at golden-rules.md')
         if 'INSPIRATIONS.md' not in sk: errs.append('SKILL.md Step 1 does not offer the inspiration directions')
         for rel in ['references/product-bible.md']:
             if not os.path.exists(os.path.join(sd, rel)): errs.append(f'missing {rel}')

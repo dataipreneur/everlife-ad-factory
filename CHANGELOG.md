@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — The Engine: global core, product briefs, variations, inspiration directions, banners gone (branch `world-deck-golden-flow`, local only)
+Mitansh: "make everything global and in core … with some exceptional variations like shirtless mode in bodybuilding products and
+ultra premium for vials … the skills should only load up the product briefs"; "Claude should recommend based on the product what
+styles to make, with Surprise me as 1st always, but super cool inspirations"; "the skills had 10 different IMPORTANT claims which
+made the system very non-deterministic"; "unlimited mode is now finished".
+- `core/references/ENGINE.md`: the map (global / per product / variations). `core/references/golden-rules.md`: the one copy of the
+  rules every skill used to restate. `core/references/variations/`: vial-product, intimacy-tasteful, womens-palette, peptide-stack,
+  two-forms, compounded-glp1 (+ hardcore-men, ultra-premium already in core). `product.json` → `"variations"` on all 15 products.
+- `core/scripts/build_product_briefs.py`: every skill's `references/product-brief.md` (who / direction / variations / facts / hard
+  stops kept verbatim / its references); `image-batch.md` is a 5-line stub.
+- `core/references/world-deck/INSPIRATIONS.md`: direction seeds per product family; the image question = how many · **direction
+  (🎲 Surprise me first, then three product-tailored pitches)** · who's in them · form. `deal_worlds.py --prefer` follows the
+  chosen direction; reads variations (hardcore tag, intimacy filter incl. every bed world, vial ultra-premium bias, women's accents).
+- `core/scripts/strip_skill_banners.py`: all rule banners (4–7 per skill, 10 distinct) and the per-skill "Golden rules" lists
+  replaced by one Engine block; video steps untouched. Unlimited mode removed from 43 places. Lint: 0 errors, 4 warnings.
+
 ## 2026-11-05 — World Deck + golden image flow: every product skill rebuilt from the Restora-Z 2nd batch (branch `world-deck-golden-flow`, originals in `_originals/2026-11-05/image-skill-rebuild/`)
 Mitansh: the Restora-Z batches of 10-27/29 were the bar ("comic book, newspapers and what not"); every later skill got flatter.
 Cause found: the 92 per-product references were generalised into 13 shared layout folders on 10-28 ("layout only, never the

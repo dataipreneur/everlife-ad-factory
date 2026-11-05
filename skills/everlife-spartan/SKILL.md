@@ -5,17 +5,11 @@ description: EverlifeMD Spartan Stack ad factory (peptide recovery stack, compou
 
 # Spartan Stack Ad Factory
 
-> **💊 PEPTIDE LIST ON EVERY AD (bible 2026-11-03, mandatory for every stack):** every Spartan Stack ad shows **"BPC-157 / TB-500 / KPV"**, clearly and legibly: supporting copy, a subheadline or an ingredient callout. Statics: on the design, in 4:5 AND 9:16. Videos: on screen, at least on the end card (and in the header where it fits). Clean and premium: it never overwhelms the headline or the vial. "Spartan Stack" alone fails QA. (The names appear together, never one benefit per peptide.)
-
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
-
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the Spartan Stack creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded,
 compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool) so the user never has to know
@@ -23,25 +17,7 @@ the internals.
 
 **✅ Bible fixed (2026-11-02):** Justin un-swapped the Spartan / Wolverine pages; the bible now matches the vial label (Spartan Stack = BPC-157 / KPV / TB-500). This skill uses its own page (`references/product-bible.md`): benefits and CTAs ✅, headlines ⏳ (only with the user's OK, flagged for Jeremy), no offer yet.
 
-Golden rules, all non-negotiable:
-1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the quick-hit benefits
-   (✅ in the pre-screen), every Hard NO, and the pre-screen (❌/⛔ never; ⏳ Pending approval and ⚠ only after explicit approval,
-   flagged for Jeremy). **Headlines:** the ⚠ PROVISIONAL headlines in the pre-screen may be used (flagged for Jeremy); Tier A also = a ✅ benefit used as the
-   headline; a bible headline needs the user's explicit OK per line; fresh wording is Tier B (max 2 per batch, PROPOSED, Jeremy).
-2. **Product truths:** Spartan Stack is a **recovery-support peptide stack**: joints, ligaments, connective tissue, muscle recovery, mobility and gut lining. "Supports", never "heals / regenerates / reduces
-   inflammation / eases pain / boosts / builds". No disease or injury words. ONE form: the **compounded Rx vial**. Copy never states a
-   strength, dose, volume or count, and names the ingredients only as on the vial label, together (BPC-157 + KPV + TB-500 (three peptides)), never one benefit per ingredient. **Never show or
-   mention needles, syringes, pens, injecting or "needle-free": the vial is a still object.** Say "Spartan Stack" as the brand name in every asset
-   (bible creative direction).
-3. **Look (bible creative direction):** rugged, strong, unmistakably masculine: a serious gym-goer with a hardcore training feel
-   (`references/mens-direction.md`). Fighting imagery is fine **without blood or gore; no animal death** (product Hard NO). No body
-   comparison, no before/after, no body-composition words in copy.
-4. **Offer:** none: the sources disagree (39% / 46% / XX%); Ronnel to confirm. No F6, no "% off".
-5. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
-6. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown.
-7. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly.
-8. **Every script is new.** Check and append `~/Everlife-Creative/spartan-copy-log.md`; never repeat a header, end-card headline or CTA.
-9. Everything is a draft until creative review approves it and Jeremy signs off on compliance. Nothing is posted or uploaded anywhere.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 
