@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793912918-b19b) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793919328-c260) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -205,8 +205,12 @@ Every ad for a peptide stack must clearly show each peptide in that stack. The s
 - Every ad has a CTA — no ad goes out without one.
 - Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
 - Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
-- Show the lowest price or the price per day on 10% of all ads (e.g. “Starting at $95/month” or “Sermorelin for $3.00/day”), using the product’s price from its CTAs or Offers & conversion.
 - The Everlife logo appears on every ad.
+
+#### Pricing & CTA mix
+- Rule 1 · Daily pricing (10% of all creatives). 10% of all creatives use the headline format “[Product Name] for only $X.XX/day.” Use the product’s accurate daily price from its CTAs or Offers & conversion.
+- Rule 2 · Sermorelin monthly pricing (5% of Sermorelin creatives). 5% of Sermorelin creatives, Men and Women, use the headline “Starting at $95/month.” This applies only to Sermorelin.
+- Rule 3 · Remaining creatives. All other creatives use a varied mix of approved CTAs from that product’s CTA list. Rotate CTAs to keep variety and avoid repetitive messaging.
 
 #### Imagery
 - Warm, sun-lit and candid. Real people, calm moments.
@@ -297,7 +301,7 @@ More benefits & claims on page 8
 - Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
-- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+- Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix).
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -373,7 +377,7 @@ More benefits & claims on page 10
 - Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
-- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+- Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix).
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.

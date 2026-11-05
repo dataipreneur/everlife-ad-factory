@@ -1,8 +1,8 @@
-# Lovara — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Lovara — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793919328-c260 by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793912918-b19b)
+## Product copy (bible version 1793919328-c260)
 - **Offer:** Save Up to 45% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 45%
 - **CTAs (bible):** Explore Lovara · Support Your Spark · Save Up to 45% · Discover Lovara · Lovara for $1.75/day · Ships Free From Pharmacy
@@ -59,7 +59,7 @@
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 | Start Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-## Verbatim (bible section "Lovara", version 1793912918-b19b)
+## Verbatim (bible section "Lovara", version 1793919328-c260)
 ```text
 
 ### Who it's for
