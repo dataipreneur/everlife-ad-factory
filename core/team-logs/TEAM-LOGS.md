@@ -153,5 +153,20 @@ Priestley: "Are you sure claude will log every time into those artifacts?" Loggi
   (`teamlog.py posted`)**, after the 2026-11-04 audit found 150 logged-but-unsent generations and ~250 unposted ads. Local files only. The second time it lets the turn end and shows a warning, so a session
   can never get stuck.
 - New hooks load when Claude Code starts (or after opening `/hooks` once). `core/hooks/teamlog_hook.py`, stdlib only.
+- **Hooks-installed check (2026-11-04):** a third hook, SessionStart (`teamlog_hook.py start`), warns the user at the start of a session
+  when the capture or Stop hook is missing from `~/.claude/settings.json` or points at a script that no longer exists, and
+  `core/scripts/preflight.sh` (run at Step 0 of every product skill) fails with the fix when the hooks are not installed. A machine
+  that never ran the installer has no SessionStart hook either, so the preflight line is what catches it.
 - Still not covered: work done in Creatify / Higgsfield outside Claude; and an offline machine's records wait in the pending
   file until the pages answer.
+
+## 8. Pause switch (2026-11-04)
+Priestley: "can we switch off logging then? this sounds complex to me" (before a zip rollout to new teammates).
+- **One file:** `core/team-logs/PAUSED`. While it exists: the capture, Stop and SessionStart hooks exit silently (nothing is
+  captured, nobody is sent back to log, no warnings); `preflight.sh` prints "Team logging is PAUSED" instead of the hooks check;
+  `core/claude/everlife-team.md` tells Claude to skip every team-log step in every skill (no `teamlog.py`, no sends, no Ad Review posting).
+- **Resume:** delete the file (and ship a new zip). Nothing else changes; the hooks stay installed.
+- **What is lost while paused:** no new Prompt log, Copy Ledger, Activity log or Ad Review rows, and the unsent/unposted backlog
+  stays as it was. Copy-log files, claim screening and every gate still apply.
+- A person whose `~/.claude/CLAUDE.md` has the gates written by hand (no managed import block) does not get the `everlife-team.md`
+  line: add it by hand or re-run `install.sh`.

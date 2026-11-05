@@ -137,6 +137,21 @@ BIB="$HOME/.claude/everlife/creative-bible.md"
 BVER="$(grep -o -m1 'version [0-9a-f-]*' "$CORE/claude/creative-bible.md" 2>/dev/null)"   # versions are digits + hex (e.g. 1793642193-f927)
 if cmp -s "$BIB" "$CORE/claude/creative-bible.md"; then pass "Creative bible = this repo's copy (${BVER:-version unknown})"
 else fail "Creative bible at $BIB is missing or a separate (old) copy, not this repo's (${BVER:-version unknown})" "bash \"$(cd "$CORE" && pwd -P)/../install.sh\" (moves your copy to ~/.claude/everlife/_originals/ and links the repo's)"; fi
+# 6b2. Team-log hooks (TEAM-LOGS §7): paid generations are captured and checked at Stop only if the hooks are installed
+if [ -f "$(dirname "$0")/../team-logs/PAUSED" ]; then
+  pass "Team logging is PAUSED (core/team-logs/PAUSED): no logging steps, no log sends, hooks stay silent"
+elif python3 - "$HOME/.claude/settings.json" <<'PYEOF'
+import json, sys
+try:
+    h = json.load(open(sys.argv[1])).get("hooks", {})
+except (OSError, ValueError):
+    sys.exit(1)
+cmds = lambda ev: [x.get("command", "") for e in h.get(ev, []) for x in e.get("hooks", [])]
+sys.exit(0 if all(any("teamlog_hook.py" in c and c.rstrip().endswith(m) for c in cmds(ev)) for ev, m in (("PostToolUse", "capture"), ("Stop", "stop"))) else 1)
+PYEOF
+then pass "Team-log hooks installed (paid generations are captured and must be logged before Claude finishes)"
+else fail "Team-log hooks are NOT installed: generations would not be captured or checked" "run: bash <repo>/core/scripts/update.sh (or bash <repo>/install.sh), then restart Claude Code"; fi
+
 # 6c. Is Justin's live bible newer than the repo copy? Claude checks (read-only); an unsynced change warns, never blocks
 echo "🔎 Live bible check (Claude, do it now; read-only): read https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG with the"
 echo "   Artifact tool and compare the version it reports with ${BVER#version }. Same → say \"Bible: up to date\"."
