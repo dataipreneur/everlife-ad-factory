@@ -9,5 +9,5 @@ Products: BPC-157, Wolverine Stack, Spartan Stack, MOTS-c, Epithalon, GLP-1 (and
   walnut, glass, stone, leather book, gallery plinth, fluted glass, pharmacy counter) for vial products and writes the
   `core/references/ultra-premium.md` codes into those slots: the vial as an object on real material, one hard light, one long
   shadow, sentence-case headline, no bullets. Comic / print / surreal worlds still appear, just fewer (≤ 3 of 8).
-- Focal mix for no-pill products: 75% product / 25% person (Justin, 2026-11-03).
+- Focal mix for no-pill products: 75% product / 25% person (Justin, 2026-11-03; the bible's 40/30/30 is for pill products, Justin to confirm).
 - Label legibility: the vial is small, so it sits at ≥ 35% of canvas height when it is the hero, label to camera, in focus.

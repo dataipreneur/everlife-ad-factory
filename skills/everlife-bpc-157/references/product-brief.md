@@ -21,7 +21,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 ## Hard stops (this product)
 **Hard stops:**
 - Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
-- BPC-157 is RECOVERY support. No "heal", "repair" (except the approved "Supports Connective Tissue Repair"), "regenerate", "injury",
+- BPC-157 is RECOVERY support. No "heal", "repair" (except the approved "Aids Connective Tissue Repair"), "regenerate", "injury",
   "pain", "inflammation", "torn", "cure", "treat", "boost", "fast" as an outcome, no timing promises, no guarantees. "Supports", never "builds".
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. The vial stands or lies on a surface; a hand may hold it.
 - One product image: the Rx vial. Copy never states a strength, dose, mL or count. No capsules, pills or tablets anywhere (the

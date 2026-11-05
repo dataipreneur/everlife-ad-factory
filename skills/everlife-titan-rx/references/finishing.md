@@ -35,7 +35,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["TITAN-RX BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "3-IN-1 PERFORMANCE FORMULA",
- "ingredients": [["DAILY","Once-Daily, No Timing Required"],["CIRCULATION","Supports Circulation + Firmness"],["READINESS","Supports Everyday Readiness"]],
+ "ingredients": [["DAILY","Once-Daily, No Timing Required"],["CIRCULATION","Promotes Circulation + Firmness"],["READINESS","Supports Everyday Readiness"]],
  "cta": "<the session's CTA in caps>", "vocab": "Titan-Rx by Everlife. Tadalafil, Vardenafil, L-Arginine."}
 ```
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, renders, name casing,

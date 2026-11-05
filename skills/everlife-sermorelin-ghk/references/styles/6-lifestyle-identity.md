@@ -1,6 +1,6 @@
 # Category 6 — Lifestyle & Identity  (top fit for Sermorelin GHK)
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 Library folders: Hero Fitness Guy · Sports · Fighter UFC · Dad Bod · Female Glow Up · Life Cell (boards 2, 3, 5).
 What the library shows: gym heroes, runners, tennis, UFC cages, "kiss your dad-bod goodbye", glow-up portraits. Built for this product family, but full of today's banned framing.
@@ -14,7 +14,7 @@ Why it works: the bible frames Sermorelin GHK around **muscle, fitness and perfo
 ## 6A — Prime-time training (men)
 - **Looks like:** a fit, mature man 45–60, clothed in training gear, early-morning sun: a heavy farmer's carry, a sled push, a rowing sprint, a trail run. Real sweat, calm focus.
 - **Beats:** 0–2 a sound-led hook (a kettlebell set down hard, breath) → 2–5 the effort → 5–8.5 the tablet in his palm at the gym bag, bottle beside it → 8.5–11 he nods and goes again → 11–15 end card.
-- **Copy:** men headlines (e.g. *Age Hits Growth Hormone. Hit Back.* as reference); benefit *Supports Lean Muscle + Performance*; a Citrulline claim fits training (*Supports exercise endurance*).
+- **Copy:** men headlines (e.g. *Age Hits Growth Hormone. Hit Back.* as reference); benefit *Promotes Lean Muscle + Performance*; a Citrulline claim fits training (*Supports exercise endurance*).
 - **Finishing:** `house`.
 
 ## 6B — Still in the game (men)

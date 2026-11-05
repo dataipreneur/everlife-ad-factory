@@ -1,5 +1,8 @@
 # Spark — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Spontaneous Intimacy" → "Encourages Spontaneous Intimacy"; "Supports Desire + Physical Response" → "Promotes Desire + Physical Response".
+> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. **Never shirtless talent, male or female, on this product** (sexual-health product: bible 2026-11-04). **This product:** The CTA "Find Your Plan" was removed from the bible.
+
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 51%" (the Spark CTA list is still ⏳ Pending approval as a whole: this is the PROVISIONAL default, Jeremy to confirm). "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 51%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
 > **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Spark for $1.50/day" (the Spark CTA list is still ⏳ Pending approval: use it only with the user's OK, flagged for Jeremy). An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
@@ -33,9 +36,9 @@
 | Brain-Based Desire Support | benefits | ✅ | Approved quick-hit; never attribute it to PT-141 alone |
 | Non-Hormonal Desire Support | benefits | ✅ | |
 | On-Demand Desire Support | benefits | ✅ | |
-| Supports Spontaneous Intimacy | benefits | ✅ | |
+| Encourages Spontaneous Intimacy | benefits | ✅ | |
 | 3-in-1: PT-141 + Apomorphine + Tadalafil | benefits | ✅ | The combo line; keep all three together, this order |
-| Supports Desire + Physical Response | benefits | ✅ | Structure-function; never split it per ingredient |
+| Promotes Desire + Physical Response | benefits | ✅ | Structure-function; never split it per ingredient |
 | Desire Support for Men + Women | benefits | ✅ | |
 | Explore Spark | ctas | ⏳ | All CTAs Pending approval: explicit OK per session, flagged for Jeremy |
 | Ignite Your Spark | ctas | ⏳ | same |
@@ -76,9 +79,9 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - Brain-Based Desire Support
 - Non-Hormonal Desire Support
 - On-Demand Desire Support
-- Supports Spontaneous Intimacy
+- Encourages Spontaneous Intimacy
 - 3-in-1: PT-141 + Apomorphine + Tadalafil
-- Supports Desire + Physical Response
+- Promotes Desire + Physical Response
 - Desire Support for Men + Women
 
 ### CTAs [Pending approval]

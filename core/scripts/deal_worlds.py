@@ -4,8 +4,8 @@
     deal_worlds.py --product pt-141 --n 8 --audience both [--log] [--json] [--skip world1,world2]
 
 Each slot gets: world (from core/references/world-deck/worlds.json), type pairing, accent, placement, light,
-focal (pill / bottle / person per the bible 50/25/25; 75/25 for products without a pill), proof (trust / count / none,
-42/28/30 per standard_footer.SHARE), hand-held (max 20% of the batch), hardcore tag (40% of men's slots on hardcore products),
+focal (pill / bottle / person per the bible 40/30/30; 75/25 for products without a pill, Justin to confirm), proof (trust / count / none,
+42/28/30 per standard_footer.SHARE), hand-held (max 20% of the batch), hardcore tag (a cap of 30% of men's slots on hardcore products, bible 2026-11-04),
 persona (age band, look) and the ratio pair (always 9:16 + 4:5).
 
 Guarantees (code, not memory):
@@ -29,7 +29,7 @@ HARDCORE = {'sermorelin', 'sermorelin-ghk', 'bpc-157', 'wolverine', 'spartan'}
 METABOLIC = {'glp-1', 'nad', 'mots-c', 'epithalon'}
 SKIN = {'ghk-cream'}
 PROOF_SHARE = {'trust': 0.42, 'count': 0.28, 'none': 0.30}
-FOCAL_PILL = {'pill': 0.50, 'bottle': 0.25, 'person': 0.25}
+FOCAL_PILL = {'pill': 0.40, 'bottle': 0.30, 'person': 0.30}   # bible 2026-11-04 (was 50/25/25)
 FOCAL_NOPILL = {'bottle': 0.75, 'person': 0.25}
 
 CAST = {
@@ -189,7 +189,13 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
 
     # hardcore tags: 40% of men's slots on hardcore products
     men_slots = [i for i, f in enumerate(focal_seq) if f == 'person'] if audience != 'women' else []
-    hardcore_n = round(len(men_slots) * 0.4) if ('hardcore-men' in variations or pid in HARDCORE) else 0
+    hc_cfg = {}
+    try:
+        with open(os.path.join(CORE, 'references', 'hardcore-men.json')) as f: hc_cfg = json.load(f)
+    except Exception: pass
+    hc_share = float(hc_cfg.get('share', 0.3))
+    # bible 2026-11-04: shirtless talent on UP TO 30% of a product's creatives → a cap: floor(share × men's slots), never above
+    hardcore_n = int(hc_share * len(men_slots)) if ('hardcore-men' in variations or pid in hc_cfg.get('products', HARDCORE)) else 0
     hardcore_idx = set(rng.sample(men_slots, hardcore_n)) if hardcore_n else set()
 
     for i, w in enumerate(ordered):

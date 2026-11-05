@@ -1,6 +1,6 @@
 # Lessons already paid for (read every session)
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 No Sermorelin GHK ads have been made with this skill yet. These lessons come from the Restora-Z skill (2026-10-27) and
 apply to every product. Add Sermorelin-specific lessons at the bottom as they happen.
@@ -131,7 +131,7 @@ Compliance traps:
   → clean first time (W3, W5). Template updated (image-batch.md §3). Text blocks with 3 ingredient rows also run low (W1).
 - **Tablet size drifts small when a person shares the frame** (W4: 11% of the width). Say "at least 17% of the width" there.
 - **Justin's new lines render well:** "Supports Natural Growth Hormone Production", "Supports Workout Pumps + Endurance",
-  "Supports Exercise Recovery", "Supports Firmer, Glowing Skin From Within".
+  "Supports Exercise Recovery", "Promotes Firmer, Glowing Skin From Within".
 - **Women's bible reference headlines are nearly used up**: left unused: "Your GLP-1 Complement for Lean Muscle + Glow",
   "GLP-1 Complement: Lean. Strong. Radiant.", "The GLP-1 Complement for Muscle, Skin + Hair" (hair ⚠). Ask Justin for more.
 

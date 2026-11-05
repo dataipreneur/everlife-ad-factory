@@ -1,6 +1,6 @@
 # QA + finishing (zero manual editing)
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
@@ -89,7 +89,7 @@ Single-ingredient product, but the `tiktok` and `editorial` end cards **require*
 (`core/tools/styles.py`; `house` doesn't). Fill them with the three ✅ benefits, never a made-up ingredient claim:
 ```json
  "ingredients_label": "DOCTOR-PRESCRIBED SERMORELIN",
- "ingredients": [["ENERGY","Supports Energy + Stamina"],["STRENGTH","Supports Strength + Vitality"],
+ "ingredients": [["ENERGY","Supports Energy + Stamina"],["STRENGTH","Fuels Strength + Vitality"],
                  ["GROWTH HORMONE","Supports Natural Growth Hormone Activity"]]
 ```
 **`tiktok` look:** the third row collides at that length ("Growth Hormone" runs into its claim; seen in the 2026-10-28

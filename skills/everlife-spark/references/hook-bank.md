@@ -11,7 +11,7 @@ Fail". CTA "Get Started Now" is now banned (bible 2026-11-03): use "Save Up to 5
 
 1. SAME-FRAME FLIP · A chaotic weeknight kitchen (two laptops, timers, phones) → the same frame, laptops closed, a shared laugh, the product on the counter. Bridge: "Spontaneity, Back On".
 2. SOUND-FIRST · A vinyl record starts at 0.0 s; they dance in the living room, shoulder-up. Bridge: "Ignite Connection. Fuel Confidence."
-3. IMPACT · Car keys tossed and caught; a couple heads out for an unplanned walk at golden hour. Bridge: "Supports Spontaneous Intimacy".
+3. IMPACT · Car keys tossed and caught; a couple heads out for an unplanned walk at golden hour. Bridge: "Encourages Spontaneous Intimacy".
 4. ABSURD ESCALATION · Two phones buzzing more and more on the counter (no readable screens); one hand turns both face down. Bridge: "From Ready to Right Now" (never with a time).
 5. POV · From inside the coat closet as the door opens: two faces laughing, reaching for jackets. Bridge: "On-Demand Desire Support".
 6. INTERRUPTION · The front door swings open on a weekend afternoon; a whip-pan to the product on the entry table. Bridge: "Desire Support for Men + Women".

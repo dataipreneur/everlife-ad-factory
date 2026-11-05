@@ -1,6 +1,6 @@
 # QA + finishing (zero manual editing)
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 Tools: `T=${EVERLIFE_TOOLS:-$HOME/Everlife-Creative/tools}`; ffmpeg path = preflight's `FF=` line.
 
@@ -37,7 +37,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["WOLVERINE STACK BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "RECOVERY STACK",
- "ingredients": [["TENDONS", "Supports Tendons + Ligaments"], ["MOBILITY", "Supports Mobility"], ["GUT LINING", "Supports Gut Lining Health"]],
+ "ingredients": [["TENDONS", "Reinforces Tendons + Ligaments"], ["MOBILITY", "Maintains Mobility"], ["GUT LINING", "Supports Gut Lining Health"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "Wolverine Stack by Everlife."}
 ```
 `"product"` is required. The end card shows the vial alone, centred. Don't type the disclaimer into copy.json. The "ingredients"

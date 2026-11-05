@@ -68,6 +68,8 @@ BANNED = [
     (r"\bGH\b", "spell out \"growth hormone\", never \"GH\"", False),
     (r"ghk-cu|copper peptide", "creative says \"GHK\", never \"GHK-Cu\" / \"copper peptide\" (H2 product name only)", False),
     (r"\b(melt\w*|burn\w*|ripped|shred\w*)\b", "no melt / burn / ripped / shred", False),
+    (r"body[- ]?composition", "never the phrase \"body composition\" anywhere: rewrite it (\"supports lean muscle\"; bible 2026-11-04)", False),
+    (r"\b(fat|skinny)\b", "no \"fat\" or \"skinny\" claims anywhere (bible 2026-11-04)", False),
     (r"\barousal|aroused|arousing\b", "never \"arousal\" or any form of it", False),
     (r"\ball[- ]natural\b", "never \"all natural\" for a sublingual", False),
     (r"\bclinically (studied|backed|proven)\b", "\"clinically studied/backed\" only for a named ingredient", False),

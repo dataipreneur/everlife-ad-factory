@@ -32,7 +32,7 @@ decide those, differently for every slot, and the batch table shows the picks. A
 ```
 python3 core/scripts/deal_worlds.py --product <id> --n <N> --audience <men|women|both> [--prefer <world ids of the chosen direction>]
 ```
-The dealer reads the product's **variations** from `product.json` (`core/references/ENGINE.md`): `hardcore-men` tags 40% of men's
+The dealer reads the product's **variations** from `product.json` (`core/references/ENGINE.md`): `hardcore-men` tags up to 30% of men's
 slots, `intimacy-tasteful` drops bed / body worlds, `vial-product` leads with material / scene worlds and marks them
 `ultra_premium` (write the `core/references/ultra-premium.md` codes into those prompts), `womens-palette` trims the accents.
 It hands you N slots, each with a **world** (from `core/references/world-deck/worlds.json`: magazine cover, wanted poster,

@@ -31,7 +31,7 @@ product. Nothing else may override the global flow. Current set:
 
 | id | file | products | what changes |
 |---|---|---|---|
-| `hardcore-men` | `core/references/hardcore-men.md` | sermorelin, sermorelin-ghk, bpc-157, wolverine, spartan | men's slots lean shirtless / stringer, 40% of men's slots tagged HARDCORE by the dealer; "💪 Hardcore" offered first |
+| `hardcore-men` | `core/references/hardcore-men.md` | sermorelin, sermorelin-ghk, bpc-157, wolverine, spartan | men's slots lean shirtless / stringer; the dealer tags up to 30% of men's slots HARDCORE (bible 2026-11-04 cap, `hardcore-men.json`); "💪 Hardcore" offered first |
 | `vial-product` | `variations/vial-product.md` | bpc-157, wolverine, spartan, mots-c, epithalon, glp-1 | the vial is never thrown / smashed; no needles; **ultra-premium material worlds favoured** |
 | `ultra-premium` | `core/references/ultra-premium.md` | every product, as an option; default-on bias for `vial-product` | Hims/Ro object-on-material codes |
 | `intimacy-tasteful` | `variations/intimacy-tasteful.md` | pt-141, lovara, spark, titan-rx | no beds / bedrooms / body shots; clothed, shoulder-up; the dealer filters those worlds out |

@@ -1,9 +1,12 @@
 # Sermorelin GHK — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Lean Muscle + Performance" → "Promotes Lean Muscle + Performance"; "Supports Daily Energy + Healthy Blood Flow" → "Fuels Daily Energy + Healthy Blood Flow"; "Supports Firmer, Glowing Skin From Within" → "Promotes Firmer, Glowing Skin From Within". **This product:** A new Men benefit line was added: "Aids Exercise Recovery". NEW Women creative direction in the bible (NOT applied to this skill: ⚠ Jeremy first): talent by hair and eye colour and ethnicity ("blonde hair and blue eyes, with some Latina talent") and a wardrobe mix of workout gear and everyday clothes; casting rules below still govern.
+> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%. **This product:** The Sermorelin ingredient claim "Promotes lean muscle growth and fat loss" became **"Promotes lean muscle growth"** (fat loss removed): usable on the Sermorelin ingredient only. The benefit scope no longer lists visceral fat. The CTA "Start Your Plan" was removed from the bible.
+
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 47%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 47%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
 > **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Sermorelin GHK for $4.25/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > Source: ~/.claude/everlife/creative-bible.md (Part A, pages "Sermorelin GHK — Men / Women", headline banks, ingredient claims), copied 2026-10-28; **checked against the v3 master export on 2026-10-29: the Sermorelin GHK pages are identical to the "APPROVED UPDATE" section below** (v3 also adds the men's direction "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel." and drops the women's palette rule). Re-copy when the bible changes. **Updated 2026-10-29 with Justin Junior's approved Creative Messaging Reference** (Justin owns marketing for this product; approved per Priestley): the "APPROVED UPDATE" section below **wins over the older bible copy where they differ**. That section plus the older verbatim section are the ONLY approved copy for Sermorelin GHK. Global rules: `core/references/global-rules.md` (they win over anything here).
 
@@ -15,7 +18,7 @@
 - **Product name on creative:** "Sermorelin GHK" (or "Sermorelin + GHK"). Never "GHK-Cu", "-Cu" or "copper peptide". 
 - **Strengths (this skill covers both):** **500 mcg** (the landing page default: Sermorelin 500mcg + GHK Peptide 2mg + L-Citrulline 50mg) and **1000 mcg** (sold through the page's strength switch; label "SERMORELIN GHK 1000 · 1000 MCG"; full 1000 formula not confirmed). Same tablet. The bible has one Sermorelin GHK page for both and doesn't mention strengths. Default: copy never states a strength or dose; the bottle in the picture shows it. **Open for the creative lead: may copy say "500" / "1000 mcg"?** "Double strength" needs Jeremy (only approved on plain Sermorelin's page) and the confirmed 1000 formula. **User rule 2026-10-30 (Mitansh): every 1000 mcg ad shows "Double Strength" on screen, with the 1000 bottle in frame; Tier B, ⚠ PENDING JEREMY on every row until he approves it. Fact to confirm: the 1000 label doubles Sermorelin (500 → 1000 mcg); GHK and Citrulline amounts in the 1000 are not confirmed.**
 - **Ingredient list reads:** Sermorelin, GHK, Citrulline (ingredient-claim cards may say "L-Citrulline Malate", as the bible does).
-- **Form:** sublingual tablet → the **focal-point mix** (50% tablet / 25% bottle / 25% person; bible 2026-11-03). Say "easy sublingual delivery"; never mention needles or injections (not even "needle-free"). Never "all natural". Peptides *support the body's own production* — that is the limit.
+- **Form:** sublingual tablet → the **focal-point mix** (40% tablet / 30% bottle / 30% person; bible 2026-11-03). Say "easy sublingual delivery"; never mention needles or injections (not even "needle-free"). Never "all natural". Peptides *support the body's own production* — that is the limit.
 - **Always spell out "growth hormone"** (never "GH"; "HGH" appears only inside a bible ingredient claim that is ❌ below).
 - **Audiences (pick one per session):** **Men 35–60** (lean muscle, strength, growth hormone support; frame around muscle, fitness, performance, never the bedroom; rugged, hardcore training feel; HARDCORE slots shirtless per `core/references/hardcore-men.md`) · **Women 35–60** (tone, strength, skin glow; v3 has no palette limit for this product).
 - **Approved language (product Hard NO):** "toned" and "lean". Say "supports", never "builds".
@@ -116,9 +119,9 @@ Play Offense Not Defense — Weak headline
 Become a Force — Weak headline
 Quick-hit benefits
 Supports Natural Growth Hormone Production
-Supports Lean Muscle + Performance
+Promotes Lean Muscle + Performance
 Promotes Youthful-Looking Skin & Thicker Hair
-Supports Daily Energy + Healthy Blood Flow
+Fuels Daily Energy + Healthy Blood Flow
 3-in-1 Peptide Support
 Supports Visceral-Fat Metabolism & Body Tone — Hard NO conflict: no targeted fat loss or body-composition claims
 Supports Workout Pumps + Endurance
@@ -153,13 +156,13 @@ How Women Are Using… — Weak headline
 4 Reasons Why You Need… — Weak headline
 Quick-hit benefits
 Supports Natural Growth Hormone Production
-Supports Lean Muscle + Performance
+Promotes Lean Muscle + Performance
 Promotes Youthful-Looking Skin & Thicker Hair
-Supports Daily Energy + Healthy Blood Flow
+Fuels Daily Energy + Healthy Blood Flow
 3-in-1 Peptide Support
 Supports Visceral-Fat Metabolism & Body Tone — Hard NO conflict: no targeted fat loss or body-composition claims
 One Daily Tablet for Muscle, Skin + Hair
-Supports Firmer, Glowing Skin From Within
+Promotes Firmer, Glowing Skin From Within
 5. More approved benefits
 Source: Creative Messaging Reference, Men and Women headline banks (images)
 Supports Muscle Strength & Repair
@@ -249,9 +252,9 @@ Break Past Your Limits
 Forge a Stronger Physique
 More headlines on page 10
 Quick-hit benefits
-- —Supports Lean Muscle + Performance
+- —Promotes Lean Muscle + Performance
 - —Promotes Youthful-Looking Skin & Thicker Hair
-- —Supports Daily Energy + Healthy Blood Flow
+- —Fuels Daily Energy + Healthy Blood Flow
 - —3-in-1 Peptide Support
 - —Supports Visceral-Fat Metabolism & Body ToneHard NO conflictno targeted fat loss or body-composition claims
 CTAs
@@ -372,9 +375,9 @@ The GLP-1 Complement for Muscle, Skin + Hair
 Your GLP-1 Complement for Strength + Radiance
 More headlines on page 13
 Quick-hit benefits
-- —Supports Lean Muscle + Performance
+- —Promotes Lean Muscle + Performance
 - —Promotes Youthful-Looking Skin & Thicker Hair
-- —Supports Daily Energy + Healthy Blood Flow
+- —Fuels Daily Energy + Healthy Blood Flow
 - —3-in-1 Peptide Support
 - —Supports Visceral-Fat Metabolism & Body ToneHard NO conflictno targeted fat loss or body-composition claims
 CTAs

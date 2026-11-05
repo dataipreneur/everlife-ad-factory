@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793746711-6285) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793897447-019b) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -18,13 +18,16 @@ Applies to every product
 
 #### Claims
 - No “clinically studied” or “clinically backed” for a compound. Only a named ingredient can carry that claim.
-- Never attribute an outcome to the compound. Lead with the mechanism, then the downstream benefit — “raises testosterone, and healthy testosterone levels support body composition.”
-- No body-composition or “fat and skinny” claims on any product. They cause rejections.
+- Never attribute an outcome to the compound. Lead with the mechanism, then the downstream benefit — “raises testosterone, and healthy testosterone levels support lean muscle.”
+- Never use the phrase “body composition” anywhere. Rewrite it — e.g. “supports lean muscle.”
+- No “fat” or “skinny” claims anywhere — no fat loss, “melting fat,” “fat and skinny” or similar. They cause rejections.
 - No targeted fat loss, and never name a body area — FTC rules prohibit it. No “melting belly fat” style claims.
 - Avoid “melt,” “burn,” “ripped” and “shred.”
 - No unsupported medical-style claims.
 - No exaggerated transformation claims.
 - No claims outside a product’s approved benefit scope.
+- Benefits only ever come from the product’s Quick-hit benefits list, and must match that wording 100%. No paraphrasing, no new benefits.
+- “Dr. Prescribed” or “Doctor Prescribed” is never a benefit of any product.
 - Never call a sublingual all natural. Peptides support the body’s own production — that is the limit of the claim.
 - Say “supports,” never “builds.”
 - No “high circulation” — it doesn’t mean anything to the reader.
@@ -39,13 +42,12 @@ Applies to every product
 - No mention of needles, including “needle-free.” Say “easy sublingual delivery.”
 
 #### AI disclosure
-- Every AI-generated image or video carries: “ADVERTISEMENT: AI-generated depiction and simulated portrayal. Not an actual patient or medical provider.”
 - The wording is “AI depictions,” never “AI deceptions.”
 - Disclosure is not optional. Nothing AI-generated goes live without it.
 
 #### Proof & approval
 - Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
-- Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. “Over 100,000 happy customers” goes on 40%. See Standards 02 · 06.
+- Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 42% of graphics, not every one. “Over 100,000 happy customers” goes on 28%, with the Trustpilot bar. 30% show neither. See Standards 02 · 06.
 - Compliance questions route to Jeremy. Nothing goes live without his approval.
 
 Rules current as of 2 November 2026. Flag any rule that is later reversed or superseded.
@@ -60,6 +62,10 @@ Applies to every product unless a brief says otherwise
 - Product imagery feels intentional and premium, with the medication clearly visible.
 - The product is always in focus, in every static and video asset.
 - The product name stands out — never hidden or tiny. Exception: advertorial ads driving click-throughs may lead with the angle (e.g. “3-in-1 sleep prescription”).
+
+#### Talent — shirtless
+- Never show shirtless male or female talent on any sexual health product: Lovara, PT-141, Spark and Titan-rx.
+- Shirtless male talent is allowed on up to 30% of creatives (static and video) for Sermorelin, Sermorelin GHK, TRT, BPC-157, TB-500, Spartan Stack and Wolverine Stack.
 
 #### 02 · Proven creative approaches
 - Sexual health: macro shots of women’s lips with a pill, or an attractive woman looking into the camera, pushed to the foreground (neck-up is fine). Keep both as recurring directions.
@@ -77,7 +83,7 @@ Logo
 4:5
 Width
 40%
-31%
+29%
 Height
 3.5%
 3.5%
@@ -87,12 +93,13 @@ Area (bounding box)
 
 #### 04 · Disclaimers
 - Always at the bottom of the graphic.
+- Product-specific: each ad uses the disclaimer from that product’s page, not a shared global one.
 - Two lines maximum, 13 px minimum.
 - Clearly legible with strong contrast — never trade readability for aesthetics.
 
 #### 07 · Mobile-first typography
 - 95% of traffic is mobile — set all type for the phone first.
-- Minimum on-screen text: [mobile text min: __px — confirm w/ Justin]. Separate from the 13 px disclaimer minimum.
+- Minimum on-screen text: 24 px. Separate from the 13 px disclaimer minimum.
 
 #### 05 · Trustpilot branding
 - Use only the approved Trustpilot logo and assets.
@@ -103,15 +110,18 @@ Area (bounding box)
 - Doctor-prescribed medication
 - Free shipping from pharmacy
 
-60%
+42%
 Trust-focused
-Trustpilot, doctor-prescribed and/or free shipping — together or selectively.
-40%
-Minimalist
-Product- or headline-led, no trust callouts.
+Trustpilot bar, doctor-prescribed and/or ships free — together or selectively.
+28%
+Trustpilot + customer count
+Trustpilot bar plus “Over 100,000 happy customers.”
+30%
+None
+Neither element appears.
 
 #### Customer count
-- “Over 100,000 happy customers” runs on 40% of graphics only — set separately from the trust callouts above.
+- “Over 100,000 happy customers” runs on 28% of graphics, always alongside the Trustpilot bar (see the split above).
 
 #### 08 · Women’s color & typography
 - Pinks, tans, neutrals and warm tones have performed well — keep using them.
@@ -119,6 +129,22 @@ Product- or headline-led, no trust callouts.
 - These are preferred options, not limits. Explore current color and type trends that suit the product, imagery and concept.
 
 09 · Living reference — supplements, never overrides, the claims and compliance rules in this book.
+
+#### 09 · Discount accuracy & CTA selection
+Every ad features a product's highest available discount — even when a lower-discount variant is the one shown. Applies to all AI-generated static and video ads.
+- Always use the product's highest available discount, whichever variant or delivery method is pictured. Example: a PT-141 nasal-spray ad still features the sublingual 59%, not 23%.
+- Identify the product before choosing the discount; the variant shown never changes which discount to use.
+- Never apply one product's discount to a different product.
+- These are maximum discounts — always write "Save Up to X%," never a guaranteed fixed discount.
+- If the product can't be confidently identified, don't guess — flag the creative for review before applying a discount.
+
+#### Discount to feature, by product
+- PT-141: Save Up to 59% (highest variant; sublingual)
+- Sermorelin: Save Up to 65% (highest variant; sublingual)
+- NAD+: Save Up to 62%
+- GLP-1: Save Up to 83% (highest variant; semaglutide)
+
+Variant maximums for reference: PT-141 nasal spray 23% / sublingual 59%; Sermorelin injection 59% / sublingual 65%; NAD+ both 62%; GLP-1 semaglutide 83% / tirzepatide 70%. Always feature the product's highest, whichever variant is shown.
 Standards 03
 
 ## Creative & page standards
@@ -135,15 +161,22 @@ Applies to every product
 
 #### Focal-point mix
 Official split for all products. This replaces the earlier “pill is the hero, not the bottle” rule.
-50%
+40%
 Pill-focused
 The pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible.
-25%
+30%
 Bottle-focused
 The product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments.
-25%
+30%
 Person-focused
 A person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery.
+
+#### Product accuracy & realistic scale
+All product imagery must accurately represent the actual product, including its label orientation, proportions and physical appearance. Applies to all AI-generated static and video creative, including oversized product concepts.
+- Label orientation: product labels, logos and text always face the correct direction and stay readable. Never generate mirrored, reversed or incorrectly positioned labels.
+- Realistic scale: when a person interacts with, sits on, holds or stands beside an oversized product, the person and product keep realistic proportions relative to one another.
+- Product integrity: never distort, stretch, deform or alter the product’s shape, packaging or identifying details.
+- Final QA: before finalizing any creative, verify that product labels are correctly oriented and all human-to-product interactions look natural and physically believable.
 
 #### Peptide stacks — all peptides listed (mandatory)
 Every ad for a peptide stack must clearly show each peptide in that stack. The stack name alone is not enough — customers may not know what the branded name stands for.
@@ -169,8 +202,10 @@ Every ad for a peptide stack must clearly show each peptide in that stack. The s
 - Don’t over-bullet. A simpler layout often performs better.
 - Keep capitalization consistent across a set of copy. If two benefits are in Title Case, the third is too — never mix Title Case and sentence case in the same headline set, benefit list or CTA row.
 - Creative must hold up in square and vertical alike.
+- Every ad has a CTA — no ad goes out without one.
 - Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
 - Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
+- Show the lowest price or the price per day on 10% of all ads (e.g. “Starting at $95/month” or “Sermorelin for $3.00/day”), using the product’s price from its CTAs or Offers & conversion.
 - The Everlife logo appears on every ad.
 
 #### Imagery
@@ -236,10 +271,10 @@ More benefits & claims on page 8
 
 ### Quick-hit benefits
 - Supports Lean Muscle Definition
-- Supports Metabolism + Body Tone
+- Promotes Metabolism + Body Tone
 - Supports Energy + Stamina
 - Supports Natural Growth Hormone Activity
-- Supports Strength + Vitality
+- Fuels Strength + Vitality
 - 2x-Strength Growth Hormone Support
 
 ### CTAs
@@ -247,7 +282,6 @@ More benefits & claims on page 8
 - CTA: Explore Sermorelin
 - CTA: Save Up to 65%
 - CTA: Support Natural Growth Hormone
-- CTA: Build Your Plan
 - CTA: Sermorelin for $3.00/day
 - CTA: Starting at $95/month
 - CTA: Ships Free From Pharmacy
@@ -259,7 +293,8 @@ More benefits & claims on page 8
 - Available as sublingual tablets or injections
 
 ### Offers & conversion
-- Save up to 65%
+- Save up to 65% (sublingual)
+- Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
 - Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
@@ -291,6 +326,8 @@ Women 35–65+ pursuing lean muscle, energy and graceful aging.
 
 ### Creative direction
 - Frame around muscle, fitness and performance — not the bedroom.
+- Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.
+- Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing.
 - “High circulation” is not an approved benefit.
 - Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
 
@@ -310,10 +347,10 @@ More benefits & claims on page 10
 
 ### Quick-hit benefits
 - Supports Lean Muscle Definition
-- Supports Metabolism + Body Tone
+- Promotes Metabolism + Body Tone
 - Supports Energy + Stamina
 - Supports Natural Growth Hormone Activity
-- Supports Strength + Vitality
+- Fuels Strength + Vitality
 - Supports Toned Strength After 35
 
 ### CTAs
@@ -321,7 +358,6 @@ More benefits & claims on page 10
 - CTA: Explore Sermorelin
 - CTA: Save Up to 65%
 - CTA: Support Natural Growth Hormone
-- CTA: Build Your Plan
 - CTA: Sermorelin for $3.00/day
 - CTA: Starting at $95/month
 - CTA: Ships Free From Pharmacy
@@ -333,7 +369,8 @@ More benefits & claims on page 10
 - Available as sublingual tablets or injections
 
 ### Offers & conversion
-- Save up to 65%
+- Save up to 65% (sublingual)
+- Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
 - Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
@@ -361,7 +398,7 @@ Men 35–60 who want lean muscle, strength and growth hormone support from one f
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
-- Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
+- Benefit scope: skin, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 
 A 3-in-1 formula combining growth-hormone support, skin renewal, circulation, muscle, and metabolism benefit territories.
@@ -383,13 +420,13 @@ More headlines on page 12
 
 ### Quick-hit benefits
 - Supports Natural Growth Hormone Production
-- Supports Lean Muscle + Performance
+- Promotes Lean Muscle + Performance
 - Promotes Youthful-Looking Skin & Thicker Hair
-- Supports Daily Energy + Healthy Blood Flow
+- Fuels Daily Energy + Healthy Blood Flow
 - 3-in-1 Peptide Support
 - Supports Visceral-Fat Metabolism & Body Tone [Hard NO conflict]no targeted fat loss or body-composition claims
 - Supports Workout Pumps + Endurance
-- Supports Exercise Recovery
+- Aids Exercise Recovery
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -404,7 +441,6 @@ More headlines on page 12
 - CTA: Explore Sermorelin GHK
 - CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
-- CTA: Start Your Plan
 - CTA: Sermorelin GHK for $4.25/day
 - CTA: Ships Free From Pharmacy
 
@@ -462,7 +498,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Supports metabolism and lean muscle tone
 - Supports natural growth hormone production
 - Stimulates natural growth hormone and IGF-1 production
-- Promotes lean muscle growth and fat loss
+- Promotes lean muscle growth
 - Enhances sleep quality and cellular repair
 - A foundation for healthy aging, strength and vitality
 
@@ -495,9 +531,11 @@ Longevity + skin · Women
 Women 35–60 who want tone, strength and skin glow from one formula.
 
 ### Creative direction
-- Benefit scope: skin, visceral fat, lean muscle, growth hormone drive, hair thickening (male).
+- Benefit scope: skin, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 - Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
+- Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.
+- Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing.
 
 A 3-in-1 formula combining growth-hormone support, skin renewal, circulation, muscle, and metabolism benefit territories.
 
@@ -519,13 +557,13 @@ More headlines on page 15
 
 ### Quick-hit benefits
 - Supports Natural Growth Hormone Production
-- Supports Lean Muscle + Performance
+- Promotes Lean Muscle + Performance
 - Promotes Youthful-Looking Skin & Thicker Hair
-- Supports Daily Energy + Healthy Blood Flow
+- Fuels Daily Energy + Healthy Blood Flow
 - 3-in-1 Peptide Support
 - Supports Visceral-Fat Metabolism & Body Tone [Hard NO conflict]no targeted fat loss or body-composition claims
 - One Daily Tablet for Muscle, Skin + Hair
-- Supports Firmer, Glowing Skin From Within
+- Promotes Firmer, Glowing Skin From Within
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -540,7 +578,6 @@ More headlines on page 15
 - CTA: Explore Sermorelin GHK
 - CTA: Save Up to 47%
 - CTA: Support Strength + Vitality
-- CTA: Start Your Plan
 - CTA: Sermorelin GHK for $4.25/day
 - CTA: Ships Free From Pharmacy
 
@@ -587,7 +624,7 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Supports metabolism and lean muscle tone
 - Supports natural growth hormone production
 - Stimulates natural growth hormone and IGF-1 production
-- Promotes lean muscle growth and fat loss
+- Promotes lean muscle growth
 - Enhances sleep quality and cellular repair
 - A foundation for healthy aging, strength and vitality
 
@@ -641,12 +678,12 @@ More benefits & claims on page 18
 
 ### Quick-hit benefits
 - Supports Desire + Sensitivity
-- Supports Comfort + Responsiveness
+- Promotes Comfort + Responsiveness
 - Supports Intimate Readiness
-- Supports Healthy Circulation
+- Promotes Healthy Circulation
 - 3-in-1 Intimacy Support
 - Modern Intimacy Support
-- Supports Desire in Mind + Body
+- Encourages Desire in Mind + Body
 - Supports Pleasure + Sensitivity
 
 ### CTAs
@@ -654,7 +691,6 @@ More benefits & claims on page 18
 - CTA: Support Your Spark
 - CTA: Save Up to 45%
 - CTA: Discover Lovara
-- CTA: Start Your Plan
 - CTA: Lovara for $1.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -734,8 +770,8 @@ More headlines on page 20
 ### Quick-hit benefits
 - Supports Falling + Staying Asleep
 - Helps Reduce Nighttime Wake-Ups
-- Supports Restorative Sleep
-- Supports Nighttime Calm
+- Promotes Restorative Sleep
+- Encourages Nighttime Calm
 - 3-in-1 Sleep Formula
 - Supports Clear-Headed Mornings
 - Supports Longer, Deeper Sleep
@@ -894,17 +930,15 @@ More headlines on page 24
 
 ### Quick-hit benefits
 - Supports Brain-Based Desire
-- Supports On-Demand Desire
+- Promotes On-Demand Desire
 - Non-Hormonal Desire Support
-- Supports Intimate Readiness
+- Encourages Intimate Readiness
 - Supports Central Desire Pathways
 
 ### CTAs
-- CTA: Support Your Spark
 - CTA: Explore PT-141
-- CTA: Save Up to 23%
+- CTA: Save Up to 59%
 - CTA: Start Desire Support
-- CTA: Find Your Plan
 - CTA: PT-141 for $2.00/day
 - CTA: Ships Free From Pharmacy
 
@@ -916,7 +950,8 @@ More headlines on page 24
 - Transparent, all-in-one pricing
 
 ### Offers & conversion
-- Save up to 23%
+- Save up to 23% (nasal spray)
+- Save up to 59% (sublingual)
 
 ### Hard NOs
 - No beds or bedroom scenes.
@@ -976,16 +1011,15 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - Brain-Based Desire Support
 - Non-Hormonal Desire Support
 - On-Demand Desire Support
-- Supports Spontaneous Intimacy
+- Encourages Spontaneous Intimacy
 - 3-in-1: PT-141 + Apomorphine + Tadalafil
-- Supports Desire + Physical Response
+- Promotes Desire + Physical Response
 - Desire Support for Men + Women
 
 ### CTAs [Pending approval]
 - CTA: Explore Spark
 - CTA: Ignite Your Spark
 - CTA: Save Up to 51%
-- CTA: Find Your Plan
 - CTA: Spark for $1.50/day
 - CTA: Ships Free From Pharmacy
 
@@ -1014,23 +1048,36 @@ Women 30–55 who want a daily peptide step in their skincare routine.
 - Beauty and fitness positioning — lean and fit, never bodybuilding.
 - Core demo is the 40-year-old mom, same as GLP-1.
 - Palette: pinks, tans and beige. No oranges or greens.
+- Teach what a peptide skin cream actually does. GHK-Cu is a copper peptide that signals skin to support its own collagen and repair — say it plainly, never assume the viewer knows what “peptide” means.
+- Differentiate from ordinary moisturizers and serums: this works at the signal level (collagen, elastin, repair), not just surface hydration. Make the “why it’s different” explicit.
+- Pair each benefit with a quick reason-why for context (e.g. “copper peptides support the collagen skin makes less of with age”), not a bare claim.
 
 Topical peptide skin support focused on collagen, elastin, firmness, and the skin’s natural repair process.
 
 ### Headlines & hooks
-1. Firmer-Looking Skin Starts With Support
-2. Peptide-Powered Skin Support
-3. Glow Smarter With GHK Peptide Cream
-4. The Peptide Behind Skin Renewal
-5. Your Daily GHK Glow
-6. Healthy Skin Isn’t One Thing. It’s Everything. [Weak headline]
+1. Not a Moisturizer. A Skin-Repair Signal.
+2. The Copper Peptide Your Skin Has Been Missing.
+3. Collagen Fades With Age. GHK Helps Signal It Back.
+4. What Your Serum Misses, Copper Peptides Support.
+5. Skincare That Works at the Signal Level.
+6. One Peptide. Firmer, Smoother, Brighter-Looking Skin.
+7. Go Beyond Hydration — Support Real Renewal.
+8. Give Aging Skin a Reason to Bounce Back.
+9. The Peptide Behind Skin Renewal
+10. Why Copper Peptides Are Skincare’s Quiet Upgrade.
+11. Firmer-Looking Skin Starts With Support
+12. Glow Smarter With GHK Peptide Cream
+13. Peptide-Powered Skin Support
+14. The Difference a Copper Peptide Makes.
+15. Your Daily GHK Glow
+16. Healthy Skin Isn’t One Thing. It’s Everything.
 
 ### Quick-hit benefits
 - Supports Collagen + Elastin
 - Promotes Firmer, More Youthful-Looking Skin
-- Supports Skin’s Natural Repair Process
+- Promotes Skin’s Natural Repair Process
 - Supports Smoother-Looking Texture
-- Supports a Brighter, More Even-Looking Tone
+- Encourages a Brighter, More Even-Looking Tone
 
 ### CTAs
 - CTA: Upgrade Your Skin Routine
@@ -1038,7 +1085,7 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 - CTA: Save Up to 75%
 - CTA: Support Firmer Skin
 - CTA: Start Skin Renewal
-- CTA: GHK-Cu Cream for $1.50/day
+- CTA: GHK Peptide Cream for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Proof & value props
@@ -1086,12 +1133,12 @@ More headlines on page 28
 
 ### Quick-hit benefits
 - Supports Natural Testosterone
-- Supports Lean Muscle + Strength
+- Promotes Lean Muscle + Strength
 - Supports Energy + Stamina
-- Supports Drive + Motivation
+- Fuels Drive + Motivation
 - Supports Libido + Focus
 - Easy Oral Testosterone Support
-- Supports Confidence + Better Sleep
+- Encourages Confidence + Better Sleep
 
 ### CTAs
 - CTA: Explore Enclomiphene
@@ -1132,7 +1179,6 @@ Enclomiphene: https://everlifemd.com/enclomiphene/fb · Last verified: Needs LP 
 - Get Your Edge Back
 - Your Goals. Your Options. Your Protocols [Weak headline]
 - Less Guessing. More Answers. [Weak headline]
-- Raise Your Testosterone. Skip the Needles [Hard NO conflict]no needle mentions
 - More Drive Starts With Better Data [Weak headline]
 
 #### Enclomiphene
@@ -1182,20 +1228,19 @@ More headlines on page 30
 
 ### Quick-hit benefits
 - Supports Cellular Energy + Vitality
-- Supports Mental Clarity + Focus
-- Supports Recovery + Antioxidant Defense
+- Promotes Mental Clarity + Focus
+- Aids Recovery + Antioxidant Defense
 - Supports Healthy Aging
 - 3-in-1 Cellular Formula
 - Supports DNA Repair
 - NAD+, Glutathione + B12 in One Dose
-- Supports Steady Energy + Faster Recovery
+- Fuels Steady Energy + Faster Recovery
 
 ### CTAs
 - CTA: Recharge Your Cells
 - CTA: Explore Optima NAD+
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Support Cellular Energy
-- CTA: Start Your Plan
 - CTA: Optima-NAD+ for $2.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1273,14 +1318,12 @@ More headlines on page 32
 - Supports DNA Repair
 - Promotes Healthy Aging
 - Supports Cellular Longevity
-- Supports All-Day Energy + Focus
+- Fuels All-Day Energy + Focus
 - Supports Bounce-Back From Burnout
 
 ### CTAs
 - CTA: Explore NAD+
-- CTA: Choose Your Form
 - CTA: Save Up to 62%
-- CTA: Start Your Plan
 - CTA: Recharge Your Cells
 - CTA: NAD+ for $3.25/day
 - CTA: Ships Free From Pharmacy
@@ -1294,7 +1337,7 @@ More headlines on page 32
 
 ### Offers & conversion
 - Save up to 62% on injections
-- Save up to 56% on sublingual tablets
+- Save up to 62% on sublingual tablets
 - Starting at $119/month
 - 30-day money-back guarantee on your first order
 
@@ -1336,26 +1379,33 @@ Active adults 30–55 focused on mitochondrial support, energy and endurance.
 All audiences
 Metabolic peptide support focused on cellular energy, mitochondrial function, glucose metabolism and endurance.
 
-### Headlines & hooks [Pending approval]
-1. Metabolism Starts Inside the Cell
-2. Support the Engine Behind Energy
-3. Cellular Energy Meets Metabolic Health
-4. Give Metabolism More Cellular Support
-5. Train the Metabolism, Not the Hype
-
-Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
+### Headlines & hooks
+1. Energy That Lasts the Whole Day.
+2. Steady Energy Without the Crash.
+3. Go Longer. Recover Quicker.
+4. More Energy, Down to the Cellular Level.
+5. Train Longer. Fatigue Later.
+6. Fuel Your Mitochondria. Feel the Difference.
+7. Endurance for the Long Haul.
+8. Metabolism Starts Inside the Cell
+9. Power Your Cells. Power Your Day.
+10. Train the Metabolism, Not the Hype
+11. Cellular Energy Meets Metabolic Health
+12. Support the Engine Behind Energy
+13. Give Metabolism More Cellular Support
+14. Support Your Metabolism From the Inside Out.
+15. Metabolic Support, Backed by Your Mitochondria.
 
 ### Quick-hit benefits
 - Supports Mitochondrial Energy
-- Supports Healthy Metabolism
+- Promotes Healthy Metabolism
 - Supports Glucose Metabolism
-- Supports Endurance
+- Fuels Endurance
 
 ### CTAs
 - CTA: Explore MOTS-c
-- CTA: [PLACEHOLDER] Save Up to X%
+- CTA: Save Up to 40%
 - CTA: Fuel Cellular Energy
-- CTA: Support Your Metabolism
 - CTA: Start Metabolic Support
 - CTA: MOTS-c for $5.75/day
 - CTA: Ships Free From Pharmacy
@@ -1365,7 +1415,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] Current % savings / price
+- Save up to 40%
 - [PLACEHOLDER] Product-specific offer
 
 ### Hard NOs
@@ -1375,42 +1425,43 @@ Ad disclaimerAI-generated depictions and simulated portrayals used for illustrat
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Sexual performance
 
-## Titan-rx
+## Titan-Rx
 
 ### Who it's for
 Men 40–65+ who want daily performance support without planning around a pill.
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
+- Headlines and/or benefits must make clear, fast, who it’s for and what it does: Titan-Rx is daily sexual-performance / ED support for men. A viewer should grasp the category in under two seconds — never leave it as vague “performance.”
 
-Titan-RX
+Titan-Rx
 A once-daily 3-in-1 men’s performance formula focused on circulation, responsiveness, stamina, and consistent readiness.
 
 ### Headlines & hooks
-1. Confidence for Men With ED [Pending approval]
-2. Daily ED Support, Doctor Prescribed [Pending approval]
+1. Confidence for Men With ED
+2. Daily ED Support, Doctor Prescribed
 3. Be Ready When She Is Ready
 4. When It’s Go Time, Be Ready
-5. Erectile Health, Handled [Pending approval]
-6. 3-in-1 Daily ED Treatment [Pending approval]
+5. Erectile Health, Handled
+6. 3-in-1 Daily ED Treatment
 7. Your Key to a Long Lasting Night
-8. Real Men Take TitanRx
+8. Real Men Take Titan-Rx
 9. Good for You. Great for Her.
 10. An Upgrade She’ll Notice
-11. Confidence. Control. Titan Rx.
-12. Don’t Sit This One Out [Weak headline]
+11. Confidence. Control. Titan-Rx.
+12. Don’t Sit This One Out
 
 More headlines on page 35
 
 ### Quick-hit benefits
 - Supports Daily Performance
-- Supports Circulation + Firmness
+- Promotes Circulation + Firmness
 - Supports Stamina + Responsiveness
 - Supports Everyday Readiness
 - 3-in-1 Performance Formula
 - Helps Maintain Firmness During Intimacy
 - Once-Daily, No Timing Required
-- Supports Confidence + Control
+- Encourages Confidence + Control
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1419,15 +1470,14 @@ More headlines on page 35
 - Doctor-guided prescription
 
 ### Offers & conversion
-- Save up to 49% [VERIFY CURRENT]
+- Save up to 49%
 
 ### CTAs
 - CTA: Get Performance Support
 - CTA: Explore Titan-Rx
 - CTA: Save Up to 49%
 - CTA: Start Daily Support
-- CTA: Find Your Plan
-- CTA: Titan-rx for $1.50/day
+- CTA: Titan-Rx for $1.50/day
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -1470,18 +1520,18 @@ Tadalafil + Vardenafil + L-Arginine. Attribute each claim only to its own ingred
 #### L-Arginine
 - Boosts circulation and stamina
 
-Body composition
+Metabolic support
 
 ## Tesamorelin
 
 ### Who it's for
-Adults 40–60 focused on visceral fat, lean mass and metabolic performance.
+Adults 40–60 focused on lean mass and metabolic performance.
 
 ### Creative direction
 - The approved page template other products build from.
 
 All audiences
-Growth-hormone pathway support focused on visceral fat, lean muscle, metabolism, strength, and performance.
+Growth-hormone pathway support focused on lean muscle, metabolism, strength, and performance.
 
 ### Headlines & hooks [Pending approval]
 1. Support Lean Muscle as You Age
@@ -1493,9 +1543,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Visceral Fat Reduction [Hard NO conflict]no targeted fat loss or body-composition claims
-- Supports Lean Muscle Preservation
+- Promotes Lean Muscle Preservation
 - Supports Growth Hormone + IGF-1 Pathways
-- Supports Metabolism + Energy
+- Fuels Metabolism + Energy
 - Supports Strength + Performance
 - Supports Lean Mass After 40
 - Supports Peak Performance as You Age
@@ -1514,7 +1564,6 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Support Lean Muscle
 - CTA: Save Up to 40%
 - CTA: Start Growth Hormone Support
-- CTA: Build Your Plan
 - CTA: Ships Free From Pharmacy
 
 ### Hard NOs
@@ -1531,6 +1580,8 @@ Adults 30–60 managing weight who want predictable pricing and clinician guidan
 
 ### Creative direction
 - Label and pages must read “compounded semaglutide” / “compounded tirzepatide.”
+- Show both vials (semaglutide and tirzepatide) by default. If only one vial is shown, it must be tirzepatide.
+- Never show semaglutide on its own.
 - Use “GLP-1” as the umbrella term in headers and titles.
 - Every ad says “one price” or “no surprise price increases.”
 
@@ -1538,17 +1589,24 @@ All audiences
 Weight-management support focused on appetite regulation, reduced food noise, metabolic health, and predictable pricing.
 
 ### Headlines & hooks
-1. Stop Fighting Hunger All Day
-2. Quiet the Cravings. Take Back Control.
-3. Break Through Weight-Loss Plateaus.
-4. When Dieting Isn’t Enough
-5. Less Food Noise. More Control.
-6. Up to 20% Weight Loss
-7. Drop the Weight and Keep It Off
-8. Turn Down the Food Noise
-9. Make Hunger Feel Manageable Again
-10. Take Control of Your Appetite
-11. Ready to Make Progress Again?
+1. Why Willpower Was Never the Problem.
+2. Still Thinking About Your Next Meal?
+3. Hungry All the Time? There’s a Reason.
+4. What If Hunger Wasn’t Running the Show?
+5. Quiet the Cravings. Take Back Control.
+6. Stop Fighting Hunger All Day
+7. The Food Noise Stops Here.
+8. Less Food Noise. More Control.
+9. Tried Everything Else? Start Here.
+10. Your Appetite, Finally on Your Side.
+11. Turn Down the Food Noise
+12. Take Control of Your Appetite
+13. Imagine Not Fighting Cravings All Day.
+14. When Dieting Isn’t Enough
+15. Make Hunger Feel Manageable Again
+16. A Calmer Appetite Changes Everything.
+17. Drop the Weight and Keep It Off
+18. Break Through Weight-Loss Plateaus.
 
 More headlines on page 38
 
@@ -1556,16 +1614,15 @@ More headlines on page 38
 - Supports Appetite Regulation
 - Helps Reduce Food Noise
 - Supports Healthy Weight Management
-- Supports Healthy Metabolism
+- Promotes Healthy Metabolism
 - One Price, No Surprise Increases
 - Provider-Guided From Home
 
 ### CTAs
 - CTA: Start Weight Support
 - CTA: Explore GLP-1
-- CTA: Save Up to 59%
+- CTA: Save Up to 83%
 - CTA: Check Your Options
-- CTA: Build Your Plan
 - CTA: GLP-1 for $2.50/day
 - CTA: Ships Free From Pharmacy
 
@@ -1575,7 +1632,7 @@ More headlines on page 38
 - Provider-guided weight-loss treatment from home
 
 ### Offers & conversion
-- Up to 59% off
+- Up to 83% off (semaglutide); up to 70% off (tirzepatide)
 - One predictable price
 
 ### Hard NOs
@@ -1584,26 +1641,6 @@ More headlines on page 38
 
 Ad disclaimerAI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.
 Landing pagehttps://everlifemd.com/glp1/fb-v2Last verified Nov. 3, 2026
-
-### Headline bank
-GLP-1
-12 more headlines beyond the ones on the product page.
-
-### Headlines, Benefits & Claims
-
-### Headlines
-- Break the Plateau. Build Momentum.
-- How Many Weeks to Reach Your Goal?
-- Your Weight-Loss Reset Starts Here
-- Weight-Loss Support That Fits Your Life
-- A Smarter Path to Your Goal
-- Your Goal. Your Plan. Provider Guided.
-- Progress Without the Guesswork
-- One Simple Plan. One Clear Price.
-- Real Support for Your Weight-Loss Journey
-- Your Next Chapter Starts Lighter
-- Get Back in Control of Your Routine [Weak headline]
-- Built for Sustainable Progress [Weak headline]
 
 ### More approved benefits
 - Up to 20% Weight Loss
@@ -1625,29 +1662,33 @@ Active adults 30–65+ recovering from joint, tendon or gut issues.
 
 Peptide support focused on tissue repair, recovery, mobility, connective tissue, and gut health.
 
-### Headlines & hooks [Pending approval]
-1. Bounce Back From Tough Training
-2. Recover Faster. Move Better.
-3. Support for Joints, Tendons + Gut
-4. Get Back to Moving
-
-Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
+### Headlines & hooks
+1. Recover Faster. Move Better.
+2. Less Downtime. More Training Days.
+3. Train Hard. Recover Harder.
+4. Bounce Back Faster After Every Session.
+5. Support Joints, Tendons and Gut — in One.
+6. Recover Like You Trained for It.
+7. Bounce Back From Tough Training
+8. Nagging Tweak? Give Your Body Backup.
+9. For Joints, Tendons and the Day After Leg Day.
+10. The Recovery Peptide Built for Heavy Wear.
+11. Your Body Repairs. BPC-157 Backs It Up.
+12. Support for Joints, Tendons + Gut
 
 ### Quick-hit benefits
 - Supports Joints + Tendons
-- Supports Faster Recovery
-- Supports Connective Tissue Repair
+- Promotes Faster Recovery
+- Aids Connective Tissue Repair
 - Supports Mobility + Flexibility
 - Supports Gut Lining Health
-- Supports Faster Bounce-Back After Training
+- Encourages Faster Bounce-Back After Training
 - Supports Joints, Tendons + Gut Lining
 
 ### CTAs
 - CTA: Support Your Recovery
 - CTA: Explore BPC-157
-- CTA: [PLACEHOLDER] Save Up to X%
-- CTA: Build Your Recovery Plan
-- CTA: Get Back to Moving
+- CTA: Save Up to 40%
 - CTA: BPC-157 for $5.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1656,7 +1697,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] current % savings / price
+- Save up to 40%
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -1672,29 +1713,35 @@ Active adults 25–55 recovering from soft-tissue strain.
 [Approved by JL]
 Recovery peptide support focused on soft tissue, muscle, tendons, ligaments, mobility, and connective tissue repair.
 
-### Headlines & hooks [Pending approval]
-1. Stay in the Game Longer
-2. Keep Moving. Keep Training.
-3. Support Soft Tissue Recovery
-4. Recovery Support for Active Lives
-
-Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
+### Headlines & hooks
+1. Push Harder. Heal Smarter.
+2. When Recovery Can't Wait.
+3. Back to Training Before the Soreness Wins.
+4. Keep Moving. Keep Training.
+5. Don't Let Recovery Be the Bottleneck.
+6. Tough Workouts Deserve Real Recovery.
+7. Recovery That Keeps Up With You.
+8. Made for Bodies That Take a Beating.
+9. Built to Keep You in the Game.
+10. Stay in the Game Longer
+11. Keep the Streak Alive.
+12. For the Wear Training Leaves Behind.
+13. Support Soft Tissue Recovery
+14. Recovery Support for Active Lives
 
 ### Quick-hit benefits
 - Supports Soft Tissue Health
-- Supports Muscle Recovery
+- Promotes Muscle Recovery
 - Supports Tendons + Ligaments
-- Supports Healthy Range of Motion
+- Maintains Healthy Range of Motion
 - Supports Connective Tissue Repair
 - Supports Staying Active Longer
-- Supports Soft Tissue Recovery After Workouts
+- Aids Soft Tissue Recovery After Workouts
 
 ### CTAs
 - CTA: Support Your Recovery
 - CTA: Explore TB-500
-- CTA: [PLACEHOLDER] Save Up to X%
-- CTA: Build Your Recovery Plan
-- CTA: Get Back to Moving
+- CTA: Save Up to 40%
 - CTA: TB-500 for $5.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1703,7 +1750,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] current % savings / price
+- Save up to 40%
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -1729,12 +1776,12 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Everyday Comfort
-- Supports Healthy Inflammatory Response
-- Supports Rest + Recovery
+- Promotes Healthy Inflammatory Response
+- Aids Rest + Recovery
 - Supports Immune Balance
 - Supports Daily Vitality
 - Low-Dose, Once-Daily Support
-- Supports Whole-Body Balance
+- Encourages Whole-Body Balance
 
 ### CTAs
 - CTA: Explore LDN
@@ -1780,9 +1827,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Restorative Sleep
-- Supports Healthy Aging
+- Promotes Healthy Aging
 - Supports DNA + Cellular Health
-- Supports Oxidative Stress Defense
+- Aids Oxidative Stress Defense
 - Supports Healthy Sleep-Wake Cycles
 
 ### CTAs
@@ -1790,7 +1837,6 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - CTA: Support Healthy Aging
 - CTA: [PLACEHOLDER] Save Up to X%
 - CTA: Start Longevity Support
-- CTA: Build Your Plan
 - CTA: Epithalon for $6.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1807,15 +1853,15 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
-Body composition
+Metabolic support
 
 ## Tesamorelin/Ipamorelin [Approved by JL]
 
 ### Who it's for
-Adults 40–60 focused on visceral fat, lean muscle and metabolic support.
+Adults 40–60 focused on lean muscle and metabolic support.
 [Approved by JL]
 All audiences
-Growth-hormone peptide stack focused on visceral fat, lean muscle, natural Growth Hormone release, body composition, sleep, and recovery.
+Growth-hormone peptide stack focused on lean muscle, natural Growth Hormone release, sleep, and recovery.
 
 ### Headlines & hooks [Pending approval]
 1. Recover Better. Perform Stronger.
@@ -1827,12 +1873,12 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Visceral Fat Reduction [Hard NO conflict]no targeted fat loss or body-composition claims
-- Supports Lean Muscle
+- Promotes Lean Muscle
 - Supports Natural Growth Hormone Release
 - Supports Healthy Body Recomposition
-- Supports Sleep + Recovery
+- Aids Sleep + Recovery
 - Two-Peptide Growth Hormone Support
-- Supports Deeper Recovery Between Workouts
+- Encourages Deeper Recovery Between Workouts
 
 ### CTAs
 - CTA: Explore the Growth Hormone Stack
@@ -1878,9 +1924,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Joints + Ligaments
-- Supports Connective Tissue Repair
-- Supports Muscle Recovery
-- Supports Mobility + Range of Motion
+- Aids Connective Tissue Repair
+- Promotes Muscle Recovery
+- Maintains Mobility + Range of Motion
 - Supports Gut Lining Health
 - Three-Peptide Recovery Stack
 - Supports Training Harder, More Often
@@ -1950,13 +1996,13 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - 2-in-1 Recovery Support
-- Supports Tendons + Ligaments
+- Reinforces Tendons + Ligaments
 - Supports Gut Lining Health
-- Supports Mobility
+- Maintains Mobility
 - Supports Healthy Inflammatory Balance
-- Supports Tissue Repair
+- Aids Tissue Repair
 - Promotes Joint Comfort
-- Supports Muscle Recovery
+- Promotes Muscle Recovery
 - Promotes Mobility + Flexibility
 - 2-Peptide Whole-Body Recovery
 - Supports Joints, Gut + Mobility in One Stack
@@ -2011,9 +2057,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - 4-in-1 Recovery Support
-- Supports Tissue + Collagen Health
-- Supports Gut Integrity
-- Supports Skin Repair
+- Promotes Tissue + Collagen Health
+- Maintains Gut Integrity
+- Aids Skin Repair
 - Supports Healthy Inflammatory Balance
 - Supports Recovery Inside + Glow Outside
 - 4-Peptide Repair + Skin Support
@@ -2062,10 +2108,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Collagen + Skin Health
-- Supports Healthy Aging
-- Supports Restorative Sleep
+- Promotes Healthy Aging
+- Encourages Restorative Sleep
 - Supports DNA + Cellular Health
-- Supports Oxidative Stress Defense
+- Aids Oxidative Stress Defense
 - Supports Skin Today + Healthy Aging Tomorrow
 - Two-Peptide Skin + Longevity Support
 
@@ -2113,9 +2159,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Collagen + Firmness
-- Supports Smoother-Looking Texture
+- Promotes Smoother-Looking Texture
 - Supports Skin Barrier Health
-- Supports Tissue Renewal
+- Aids Tissue Renewal
 - Supports Gut + Skin Health
 
 ### CTAs

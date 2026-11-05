@@ -10,8 +10,11 @@ Applies to every product
 Creative messaging reference
 Claims
 - —No “clinically studied” or “clinically backed” for a compound. Only a named ingredient can carry that claim.
-- —Never attribute an outcome to the compound. Lead with the mechanism, then the downstream benefit — “raises testosterone, and healthy testosterone levels support body composition.”
-- —No body-composition or “fat and skinny” claims on any product. They cause rejections.
+- —Never attribute an outcome to the compound. Lead with the mechanism, then the downstream benefit — “raises testosterone, and healthy testosterone levels support lean muscle.”
+- —Never use the phrase “body composition” anywhere. Rewrite it — e.g. “supports lean muscle.”
+- —No “fat” or “skinny” claims anywhere — no fat loss, “melting fat,” “fat and skinny” or similar. They cause rejections.
+- —Benefits only ever come from the product’s Quick-hit benefits list, and must match that wording 100%. No paraphrasing, no new benefits.
+- —“Dr. Prescribed” or “Doctor Prescribed” is never a benefit of any product.
 - —No targeted fat loss, and never name a body area — FTC rules prohibit it. No “melting belly fat” style claims.
 - —Avoid “melt,” “burn,” “ripped” and “shred.”
 - —No unsupported medical-style claims.
@@ -29,12 +32,12 @@ Naming
 - —“Optima Nad+” — NAD+ listed first, B12 last.
 - —No mention of needles, including “needle-free.” Say “easy sublingual delivery.”
 AI disclosure
-- —Every AI-generated image or video carries: “ADVERTISEMENT: AI-generated depiction and simulated portrayal. Not an actual patient or medical provider.”
+- —(Removed from the bible on 2026-11-04: the global “ADVERTISEMENT: AI-generated depiction…” line.) Product-specific: each ad uses the disclaimer from that product’s page, not a shared global one.
 - —The wording is “AI depictions,” never “AI deceptions.”
 - —Disclosure is not optional. Nothing AI-generated goes live without it.
 Proof & approval
 - —Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
-- —Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 60% of graphics, not every one. "Over 100,000 happy customers" goes on 40%. (Bible Standards 01 + 02 · 06, 2026-11-02; replaces "every ad carries visible social proof". Applied as (Mitansh 2026-11-02): 30% of creatives no proof, 70% one footer proof (60% trust row / 40% Trustpilot badge + 100,000+), see `creative-system.md` §2.)
+- —Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 42% of graphics, not every one. “Over 100,000 happy customers” goes on 28%, with the Trustpilot bar. 30% show neither. See Standards 02 · 06. (Bible 2026-11-04; was 60/40. The same split Mitansh applied on 2026-11-02.)
 - —Compliance questions route to Jeremy. Nothing goes live without his approval.
 Rules current as of 11 September 2026. Flag any rule that is later reversed or superseded.
 
@@ -45,7 +48,7 @@ How the work should look and behave. Composition, format and landing-page rules 
 Applies to every product
 Creative messaging reference
 Composition
-- —**Focal-point mix** (official split for all products; replaces the earlier “pill is the hero, not the bottle” rule): 50% pill-focused (the pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible) · 25% bottle-focused (the product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments) · 25% person-focused (a person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery).
+- —**Focal-point mix** (official split for all products; replaces the earlier “pill is the hero, not the bottle” rule): 40% pill-focused (the pill is the primary visual focal point, prominently featured in the foreground, sharp, and clearly visible) · 30% bottle-focused (the product bottle is the primary focal point, using premium product photography, strong composition, and engaging visual treatments) · 30% person-focused (a person is the primary focal point, emphasizing lifestyle, emotion, relatability, or aspirational imagery).
 - —If a bottle appears, it is large, foreground and legible.
 - —Product and benefit must be identifiable in under two seconds.
 - —Product names run big. Make them memorable.
@@ -91,3 +94,14 @@ Landing pages & pricing
 - —Cap iterations at five per base concept. Variety wins.
 Reference top-performing, lowest-CPA creative before generating new iterations.
 
+
+## Added by the 2026-11-04 bible sync (version 1793832093-ced5)
+- Product accuracy & realistic scale (Standards 03): product labels, logos and text face the correct direction and stay readable (never mirrored or reversed); a person interacting with an oversized product keeps realistic proportions; never distort, stretch, deform or alter the product's shape, packaging or identifying details. Final QA: verify label orientation and that human-to-product interactions look physically believable.
+- Show the lowest price or the price per day on 10% of all ads (e.g. “Starting at $95/month” or “Sermorelin for $3.00/day”), using the product’s price from its CTAs or Offers & conversion.
+- Talent — shirtless (Standards 02): never show shirtless male or female talent on any sexual health product (Lovara, PT-141, Spark, Titan-rx). Shirtless male talent is allowed on up to 30% of creatives (static and video) for Sermorelin, Sermorelin GHK, TRT, BPC-157, TB-500, Spartan Stack and Wolverine Stack.
+- Every ad has a CTA (bible 2026-11-05): no ad goes out without one.
+- Logo (Standards 02 · 03): 9:16 width 40%, 4:5 width 29% (was 31%), height 3.5%. Minimum on-screen text: 24 px, separate from the 13 px disclaimer minimum. Disclaimer: product-specific, from that product’s page.
+- Discount to feature (bible 2026-11-05, Standards 02, replaces the 2026-11-04 per-variant rule): always feature the product's HIGHEST available discount, whichever variant or delivery method is pictured, written "Save Up to X%" (never a fixed discount). Featured: PT-141 59% (sublingual) · Sermorelin 65% (sublingual) · NAD+ 62% · GLP-1 83% (semaglutide); a PT-141 nasal-spray ad still says 59%, not 23%. Identify the product first; never apply one product's discount to another; product not confidently identified → flag for review, do not guess. Variant maximums, for reference only: PT-141 nasal 23% / sublingual 59% · Sermorelin injection 59% / sublingual 65% · NAD+ both 62% · GLP-1 semaglutide 83% / tirzepatide 70%.
+
+## Added by the 2026-11-05 bible sync (version 1793896982-b7dc)
+- **Quick-hit verbs (bible 2026-11-05):** a product's benefit lines are used word for word from its bible page, and the bible now words many of them with Promotes / Aids / Encourages / Maintains / Fuels / Reinforces instead of "Supports" (e.g. "Promotes Healthy Aging", "Fuels All-Day Energy + Focus", "Reinforces Tendons + Ligaments"). Use the bible's verb exactly; "Say supports, never builds" still governs every line that is NOT a bible benefit line. ⚠ The new verbs read stronger: Jeremy to confirm before anything goes live.

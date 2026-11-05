@@ -1,5 +1,8 @@
 # Lovara — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Comfort + Responsiveness" → "Promotes Comfort + Responsiveness"; "Supports Healthy Circulation" → "Promotes Healthy Circulation"; "Supports Desire in Mind + Body" → "Encourages Desire in Mind + Body".
+> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. **Never shirtless talent, male or female, on this product** (sexual-health product: bible 2026-11-04). **This product:** The CTA "Start Your Plan" was removed from the bible.
+
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 45%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 45%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
 > **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Lovara for $1.75/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
@@ -48,8 +51,8 @@
 | Intimacy to Intensity. Unlocked. | headline | ⚠ Jeremy | outcome promise |
 | Exclusive 3-in-1 Women's Desire Blend | headline | ⚠ Jeremy | "Exclusive" is an unsourced superiority claim (renamed from "…Arousal Blend", bible 2026-11-02) |
 | Modern Intimacy Support for Comfort, Sensitivity & Desire | headline | Weak headline (bible) | avoid unless asked |
-| Supports Desire + Sensitivity · Supports Comfort + Responsiveness · Supports Intimate Readiness · 3-in-1 Intimacy Support · Modern Intimacy Support · Supports Desire in Mind + Body · Supports Pleasure + Sensitivity | quick-hit | ✅ | "Supports…" structure-function lines: the default benefit pool |
-| Supports Healthy Circulation | quick-hit | ⚠ Jeremy | global: no "high circulation"; "healthy" is likely fine, confirm |
+| Supports Desire + Sensitivity · Promotes Comfort + Responsiveness · Supports Intimate Readiness · 3-in-1 Intimacy Support · Modern Intimacy Support · Encourages Desire in Mind + Body · Supports Pleasure + Sensitivity | quick-hit | ✅ | "Supports…" structure-function lines: the default benefit pool |
+| Promotes Healthy Circulation | quick-hit | ⚠ Jeremy | global: no "high circulation"; "healthy" is likely fine, confirm |
 | Feel More Connected | more benefits | ✅ | |
 | Enhances Sensitivity | more benefits | ⚠ Jeremy | attributes an outcome to the product; global rule = "supports" |
 | Supports Warmth + Comfort · Supports Emotional Readiness · Supports Intimate Wellness · Activates Desire Pathways | more benefits | Weak benefit (bible) | avoid unless asked |
@@ -104,12 +107,12 @@ More benefits & claims on page 18
 
 ### Quick-hit benefits
 - Supports Desire + Sensitivity
-- Supports Comfort + Responsiveness
+- Promotes Comfort + Responsiveness
 - Supports Intimate Readiness
-- Supports Healthy Circulation
+- Promotes Healthy Circulation
 - 3-in-1 Intimacy Support
 - Modern Intimacy Support
-- Supports Desire in Mind + Body
+- Encourages Desire in Mind + Body
 - Supports Pleasure + Sensitivity
 
 ### CTAs

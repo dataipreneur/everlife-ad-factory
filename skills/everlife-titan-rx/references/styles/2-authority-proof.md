@@ -4,7 +4,7 @@ Library folders: Clinical-Research · Trustpilot Reviews · Open Letter · Artic
 Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; men's performance is a category full of gas-station hype, so calm proof stands out.
 
 ## 2A — Clinician moment
-- **Looks like:** a calm clinician 40–60 in a bright consult room, shoulder-up, the product on the desk. Explains the bible's plain line ("Supports Circulation + Firmness", the formula named together; never one ingredient's action) and "Doctor prescribed, shipped free from the pharmacy".
+- **Looks like:** a calm clinician 40–60 in a bright consult room, shoulder-up, the product on the desk. Explains the bible's plain line ("Promotes Circulation + Firmness", the formula named together; never one ingredient's action) and "Doctor prescribed, shipped free from the pharmacy".
 - **Guardrails:** an AI clinician → the verbatim disclaimer covers it (AI depiction); no "clinically proven", no "treatment", no "ED".
 - **Finishing:** `editorial` (video) or `finish_image.py --layout letter/article` (static).
 

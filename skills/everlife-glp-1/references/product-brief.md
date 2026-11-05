@@ -29,7 +29,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
   guarantees; no disease words. "Supports / helps".
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. One vial or both side by side (the winners), a still object.
 - No "Are you/Do you…?" questions, no first person, no named competitors or drug brands, no "clinically" for the product.
-- Offer: "Up to 59% off" (percent, never $) and/or "One predictable price".
+- Offer (bible 2026-11-05): "Save Up to 83%" on every ad (the product's highest, even when only tirzepatide is shown) (percent, never $) and/or "One predictable price".
 - "GLP-1" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
 
 ## This product's references

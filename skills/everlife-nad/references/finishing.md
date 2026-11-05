@@ -35,7 +35,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["NAD+ BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "SUBLINGUAL TABLET OR INJECTION",
- "ingredients": [["FOCUS", "Supports All-Day Energy + Focus"], ["BURNOUT", "Supports Bounce-Back From Burnout"], ["AGING", "Promotes Healthy Aging"]],
+ "ingredients": [["FOCUS", "Fuels All-Day Energy + Focus"], ["BURNOUT", "Supports Bounce-Back From Burnout"], ["AGING", "Promotes Healthy Aging"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "NAD+ by Everlife. N-A-D plus."}
 ```
 `"product"` and `"form"` (sublingual | injection) are required; the end card shows that form (bottle + tablet, or the vial).

@@ -1,6 +1,10 @@
 # NAD+ — creative bible (verbatim extract)
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 62%" (the bible's CTA; injections). For a tablet-only ad use the tablet offer "Save up to 56%" from Offers & conversion. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 62%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports All-Day Energy + Focus" → "Fuels All-Day Energy + Focus". **This product:** Single-vial claim wording: "Fuels All-Day Energy + Focus".
+> **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** NAD+ discount stays **"Save Up to 62%"** (both forms). Every ad has a CTA.
+> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** Sublingual tablets are now **Save Up to 62%** (was 62%); injections stay 62%, so every NAD+ ad is 62%. The CTAs "Choose Your Form" and "Start Your Plan" were removed.
+
+> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 62%" (the bible's CTA; injections). For a tablet-only ad use the tablet offer "Save up to 62%" from Offers & conversion. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 62%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
 > **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "NAD+ for $3.25/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
 
 > Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## NAD+"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
@@ -11,7 +15,7 @@
 - **Who:** adults 30–65+ who want more energy, sharper focus and healthy-aging support ("All audiences").
 - **Bible creative direction:** lead with the choice (sublingual tablet or injection); voiceovers say "N-A-D plus".
 - **Hard NO:** the landing page says "needle free"; ads can't: say "easy sublingual delivery".
-- **Offers:** Save up to 62% on injections · Save up to 56% on sublingual tablets · Starting at $119/month · 30-day money-back
+- **Offers:** Save up to 62% on injections · Save up to 62% on sublingual tablets · Starting at $119/month · 30-day money-back
   guarantee on your first order. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · Sublingual or injection
   options · Same-day order approval · 24/7 Health Advisor access.
 - **Landing page:** https://everlifemd.com/nad/fb-v2 (verified Oct. 20, 2026). Ads take claims from the bible, never the LP.
@@ -50,18 +54,18 @@
 | Supports DNA Repair | benefits | ⚠ Jeremy | medical-style claim |
 | Promotes Healthy Aging | benefits | ✅ |  |
 | Supports Cellular Longevity | benefits | ✅ |  |
-| Supports All-Day Energy + Focus | benefits | ✅ |  |
+| Fuels All-Day Energy + Focus | benefits | ✅ |  |
 | Supports Bounce-Back From Burnout | benefits | ✅ |  |
 | Optimizes Metabolic Health | more_benefits | Weak (bible) | avoid unless asked |
 | Explore NAD+ | ctas | ✅ |  |
 | Choose Your Form | ctas | ✅ | fits "lead with the choice" |
 | Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
-| Save Up to 62% | ctas | ✅ | default CTA (bible 2026-11-03); tablet-only ads: "Save up to 56%" |
+| Save Up to 62% | ctas | ✅ | default CTA (bible 2026-11-03); tablet-only ads: "Save up to 62%" |
 | Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
 | Start Your Plan | ctas | ✅ |  |
 | Recharge Your Cells | ctas | ✅ |  |
 | Save up to 62% on injections | offer | ✅ | injection ads only |
-| Save up to 56% on sublingual tablets | offer | ✅ | tablet ads only |
+| Save up to 62% on sublingual tablets | offer | ✅ | tablet ads only |
 | Starting at $119/month | offer | ✅ (care) | bible-approved $ price; percent offers preferred |
 | 30-day money-back guarantee on your first order | offer | ✅ | an offer term, not an outcome guarantee |
 
@@ -105,7 +109,7 @@ More headlines on page 32
 - Supports DNA Repair
 - Promotes Healthy Aging
 - Supports Cellular Longevity
-- Supports All-Day Energy + Focus
+- Fuels All-Day Energy + Focus
 - Supports Bounce-Back From Burnout
 
 ### CTAs
@@ -126,7 +130,7 @@ More headlines on page 32
 
 ### Offers & conversion
 - Save up to 62% on injections
-- Save up to 56% on sublingual tablets
+- Save up to 62% on sublingual tablets
 - Starting at $119/month
 - 30-day money-back guarantee on your first order
 

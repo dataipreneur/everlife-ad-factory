@@ -8,7 +8,7 @@ a needle; never a bed, night or wake-up; no mirrors.
 - **Finishing:** `default` or `editorial`.
 
 ## 6B — Family afternoon
-- **Looks like:** a grandparent 55–65 on the patio with grandchildren, a ball, lemonade; the vial on the table. "Supports Healthy Aging."
+- **Looks like:** a grandparent 55–65 on the patio with grandchildren, a ball, lemonade; the vial on the table. "Promotes Healthy Aging."
 
 ## 6C — Market and kitchen
 - **Looks like:** a man or woman 45–60 choosing produce at a farmers' market, then the kitchen table in daylight; the vial beside the bowl.

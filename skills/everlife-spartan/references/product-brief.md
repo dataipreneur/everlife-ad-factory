@@ -25,7 +25,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 **Hard stops:**
 - Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - Spartan Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation", "torn", "cure", "treat", "boost",
-  "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Connective Tissue Repair"
+  "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Aids Connective Tissue Repair"
   only exactly as the bible writes it (where the pre-screen allows it).
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. The vial stands or lies on a surface; a hand may hold it.
 - One product image: the Rx vial. Copy never states a strength, dose, mL or count; ingredients only together as on the label (BPC-157 + KPV + TB-500 (three peptides)).

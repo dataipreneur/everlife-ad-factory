@@ -37,6 +37,73 @@ theme"), rules were stacked as banners on top of the creative text, and image se
   present. Result: 0 errors, 7 warnings (Epithalon, GHK Cream, Restora-Z, Titan-Rx have no winners/team-refs yet; BPC-157 still
   asks the expired Unlimited-mode question in its video steps).
 
+## 2026-11-05 — One patch for several versions (branch `patch-multibase`)
+Priestley: "add a multi version support" (1 of 8 teammates applied the first patch, 7 did not: two versions in use, and a patch only applied on one exact version).
+- `core/scripts/make_patch.py <sha1>,<sha2> [to]`: ONE patch that fits every listed version. Format 2: `from` is a list; each file records the new checksum and every old checksum it may replace (null = absent in that version). File name `everlife-patch_<a>+<b>_to_<c>.zip`.
+- `core/scripts/apply_patch.py`: accepts format 1 and 2; the copy's VERSION must be any listed version; a file is fine when it is an untouched old file, absent where the old version had none, or already the new file; a hand-edited file is still a conflict. Old single-version patches still apply (tested with the real `2800e8d_to_40233f6` patch).
+- Phrase "Build a patch" asks for EVERY version in use. A multi-version patch needs the current `apply_patch.py` (older copies cannot read format 2): send it with the patch.
+- `core/tests/patch_test.py` takes `a,b` as <from>: 21 checks on the real versions `2800e8d,40233f6 → main`: the patch applies on both, each ends identical to a fresh install of the new version, a hand-edited file is still refused on both, a version outside the list is refused.
+
+## 2026-11-05 — Bible sync to 1793896982-b7dc (branch `bible-sync-6466`; originals in `_originals/2026-11-05/bible-sync-6466/`)
+Priestley: "sync the bible first" (before the team's next patch). Justin moved the live bible from …215f to …6466; 25 product sections changed, the Standards did not. Restora-Z untouched (its sleep benefit lines changed to Promotes / Encourages: needs the owner's OK). All 15 product disclaimers still match.
+- **Quick-hit benefit verbs (~113 lines):** "Supports X" became Promotes / Aids / Encourages / Maintains / Fuels / Reinforces across the products. Every line carrying the old wording in the 14 skills was replaced word for word (bpc-157, epithalon, ghk-cream, glp-1, lovara, mots-c, nad, pt-141, sermorelin-ghk, sermorelin, spark, spartan, wolverine, titan-rx; 0 old lines left outside banners). ⚠ Jeremy to confirm the stronger verbs ("Fuels", "Reinforces Tendons + Ligaments").
+- **BPC-157:** 12 headlines now approved; offer and CTA "Save Up to 40%"; "Build Your Recovery Plan" / "Get Back to Moving" gone. **MOTS-c:** offer 40% now in the bible (CTA "Support Your Metabolism" gone). TB-500 (no skill) got the same 40%.
+- **GLP-1:** the headline pool was replaced (15 new, several pending). **GHK-Cu Cream:** 16 headlines (was 6) and new direction notes. **Sermorelin GHK Men:** new line "Aids Exercise Recovery".
+- **Titan-Rx:** heading renamed "Titan-rx" → "Titan-Rx" (`product.json` bible_section fixed); headlines 1, 2, 5, 6 no longer pending and 12 no longer weak; offer 49% no longer VERIFY CURRENT. ⚠ Four of those headlines name "ED": the gates' no-disease-claims rule still applies, Jeremy to confirm.
+- **…019b (last-minute):** the GLP-1 page's CTA is now "Save Up to 83%" and its offer "Up to 83% off (semaglutide); up to 70% off (tirzepatide)" (was 59%), which matches the highest-discount rule; the GLP-1 product-bible page was updated.
+- Banners "Bible sync 1793896982-b7dc" on the 14 product-bible pages. The headline tables on the BPC-157, GHK-Cream, GLP-1 and Titan-Rx pages are NOT rewritten: the banner says the bible copy wins.
+- Gates + global rules: Quick-hit verbs note; Known gaps updated.
+
+## 2026-11-05 — apply_patch.py: Windows (CRLF) copies (branch `patch-crlf`)
+Ron's Windows PC: the real patch `2800e8d → 978d9d0` refused with 21 false "conflicts" because the Windows zip installs text files as CRLF while the patch checksums are LF.
+- `core/scripts/apply_patch.py` compares text files line-ending neutral (binary files untouched), and when it replaces a file that uses CRLF it writes CRLF, so the next patch still matches. VERSION keeps its line endings too. The patch zip is unchanged; `make_patch.py` is unchanged.
+- `core/tests/patch_test.py`: 4 new checks (a CRLF copy applies with no false conflicts, equals a fresh install apart from line endings, patched files and VERSION keep CRLF). 17/17.
+
+## 2026-11-05 — Bible sync to 1793890033-215f (branch `bible-sync-215f`; originals in `_originals/2026-11-05/bible-sync-215f/`)
+Priestley: "There is a bible sync that we need to incorporate in the patch." Justin moved the live bible from …ced5 to …215f. Small sync (4 changes); Restora-Z untouched; all 15 product disclaimers still match.
+- **Discount rule reversed (Standards 02):** every ad features the product's HIGHEST discount, whichever variant is pictured: PT-141 59%, Sermorelin 65%, NAD+ 62%, GLP-1 83% (a PT-141 nasal-spray ad still says 59%). Replaces the 2026-11-04 per-variant rule in the gates, global rules, and the PT-141 / Sermorelin / GLP-1 skills (offer lines, CTA question, image-batch rows, video prompts). The bible dropped the CTAs "Save Up to 23%" (PT-141) and "Save Up to 59%" (Sermorelin), which settles the Sermorelin 59-vs-65 question: 65%.
+- **GLP-1 vials (new):** show both vials by default; one vial only if it is tirzepatide; never semaglutide alone. The skill's form question no longer offers "Compounded semaglutide" alone.
+- **Every ad has a CTA** (new global line, Standards 03).
+- **Titan-Rx:** headlines/benefits must make the category clear in under two seconds (daily sexual-performance support for men). ⚠ The bible's wording says "ED support": copy must not say "ED" or any disease word until Jeremy approves.
+- Banners "Bible sync 1793890033-215f" added to the pt-141, sermorelin, glp-1, nad and titan-rx product-bible pages (above the ced5 banner, which they supersede on discounts).
+
+## 2026-11-05 — Quick patches for zip installs (branch `patch-updates`)
+Priestley: Justin wants bible changes to reach the team fast; teammates have no GitHub, so every change waits for a zip.
+- `core/scripts/make_patch.py <from> [to]`: packs only the files that changed between the version the team has and the new one
+  (SHA-256 per file; refuses symlinks and files over 5 MB). `core/scripts/apply_patch.py <zip>`: zip installs only; checks the
+  VERSION matches, every checksum, no path escapes, no hand-edited files; backs up replaced files to `_originals/`; atomic; `--dry-run`, `--force`.
+- Phrases in `core/claude/everlife-team.md`: "Apply the patch" (teammates) and "Build a patch" (whoever has git). ONBOARDING-ZIP.md: "A quick patch".
+- Tested (`core/tests/patch_test.py`, 13 checks, on real history): patched copy identical to a fresh install of the new version; PR #52's whole
+  bible sync = 656 KB (vs 112 MB zip); e79c3f5 → 2800e8d = 88 KB; refusals: wrong version, hand-edited file, damaged patch, path traversal, git copy; re-apply is a no-op.
+- Teammates need one full zip that already contains these scripts before patches work for them.
+
+## 2026-11-05 — "Build the team zip" phrase (branch `team-zip-phrase`)
+Priestley: "add the build the team zip phrase" (a teammate with git pulls main and builds the zip for the others).
+- `core/claude/everlife-team.md`: saying "build the team zip" makes Claude check the repo is clean on `main`, pull, run
+  `core/scripts/make_zip.sh main ~/Desktop`, and verify the zip's `VERSION` sha and that it contains `core/team-logs/PAUSED`. Git copies only.
+
+## 2026-11-04 — Team-log hooks-installed check (branch `teamlog-session-check`)
+Priestley: "run the installer and add the check" (after asking how automatic the team logging really is).
+- `core/hooks/teamlog_hook.py`: new `start` mode (SessionStart) warns when the capture or Stop hook is missing or points at a missing script. Never blocks.
+- `install.sh`: also installs the SessionStart hook (same merge, backup and idempotent logic).
+- `core/scripts/preflight.sh`: new check 6b2, fails with the fix when the team-log hooks are not installed (covers machines that never ran the installer).
+- **Pause switch** (Priestley: "build the pause switch"): `core/team-logs/PAUSED` exists = hooks silent, preflight says PAUSED, `everlife-team.md` tells Claude to skip every team-log step. Delete the file to resume. TEAM-LOGS §8. Shipped ON for the 2026-11-05 zip rollout.
+- `core/team-logs/TEAM-LOGS.md` §7 updated. Tested: simulated settings (none / only Stop / missing script) give the right warnings; the real settings are silent; `bash -n preflight.sh` passes.
+
+## 2026-11-04 — Bible sync to 1793832093-ced5 (branch `bible-sync-ced5`; originals in `_originals/2026-11-04/bible-sync-ced5/`)
+Priestley: "Check for bible updates please" → "I think we can sync now". Justin moved the live bible three times in an hour
+(…a565, …8765, …ced5); this syncs straight to …ced5 (from …6285). Restora-Z's files are NOT touched (needs the owner's OK).
+- **Proof split 42 / 28 / 30** (trust row / Trustpilot bar + "Over 100,000" / none): the bible now states the split Mitansh applied on 2026-11-02 (was 60/40).
+- **Focal mix 40 / 30 / 30** (pill / bottle / person; was 50/25/25): gates, global rules, creative-system and every skill's text (batch of 8 = 3/3/2). The 75/25 rule for products without a pill stays until Justin says otherwise.
+- **Shirtless talent capped at 30%** for Sermorelin, Sermorelin GHK, TRT, BPC-157, TB-500, Spartan, Wolverine; never on Lovara, PT-141, Spark, Titan-Rx. The hardcore share was 40%: `hardcore-men.json` share 0.3 and `pick_styles.py` now rounds DOWN (5 ads → 1, 10 → 3), docs and 63 skill banners say "up to 30%".
+- **AI disclosure:** the bible removed the global "ADVERTISEMENT: AI-generated depiction…" line: "each ad uses the disclaimer from that product's page". Our footers already do; the open question is closed.
+- **Logo** 4:5 width 31% → 29% (9:16 stays 40%); **minimum on-screen text 24 px**; new **Product accuracy & realistic scale** standard; the price rule is "lowest price or price per day on 10% of ALL ads".
+- **New Hard NOs:** never the phrase "body composition" (rewrite: "supports lean muscle"); no "fat" or "skinny" claims anywhere; benefits only from the Quick-hit list word for word; "Dr. Prescribed" is never a benefit. `teamlog.py` refuses "body composition" and "fat"/"skinny" (2 smoke checks).
+- **New section 09, discount accuracy:** the featured product + form's own maximum, always "Save Up to X%": PT-141 nasal 23% / sublingual 59%, Sermorelin sublingual 65% / injection 59%, NAD+ 62% / 62% (sublingual was 56%), GLP-1 semaglutide 83% / tirzepatide 70% (was 59%). PT-141, GLP-1 and NAD+ skills updated.
+- **CTA changes:** "Start / Build / Find Your Plan" etc. removed from Epithalon, GLP-1, Lovara, NAD+, Spark, Titan-Rx, Sermorelin GHK; PT-141 CTA "Save Up to 59%"; Sermorelin gets "Save Up to 59%" (⚠ the injection maximum: tablet ads keep 65%); GHK cream CTA "GHK Peptide Cream for $1.50/day".
+- **Sermorelin GHK:** the ingredient claim lost "and fat loss" ("Promotes lean muscle growth"); "visceral fat" left the benefit scope. Tesamorelin pages (no skill) lost visceral fat / "Body composition".
+- **Open for Justin / Priestley** (also in the gates' known gaps): non-pill 75/25 vs the new 40/30/30; what "benefits only from the Quick-hit list" means for per-ingredient claims; the Sermorelin "Save Up to 59%" CTA vs its 65% tablet maximum; gate §7 (master before other sizes) vs both-sizes in #50/#51; the 9:16 logo (finisher default 29% vs 40%).
+
 ## 2026-11-04 — Lean team logging + send/post check (branch `teamlog-fixes`, originals in `_originals/2026-11-04/lean-logging/`)
 Priestley: "I want to be wary of token usage bcoz of this logging system" → "Yes" to the lean version with a posting check. The
 same day's audit found ~150 generations logged locally but never sent and ~250 finished ads not on Ad Review.

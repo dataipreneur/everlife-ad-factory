@@ -1,6 +1,6 @@
 # Lessons already paid for (read every session)
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > **Wolverine Stack (adapted 2026-10-30 from BPC-157):** audience is active men 25–55 only (ignore any women's notes), cast 25–55 (not only bodybuilders), fighting imagery fine without blood or gore, no animal death; "Wolverine Stack" is the brand name in every asset. Where this file says BPC-157 it describes the template product's history, not Wolverine Stack facts.
 
@@ -44,7 +44,7 @@ Wolverine Stack risks to watch (carried from BPC-157, an ingredient and the temp
 - **Any "peptide vial" prompt invites a syringe, needle, pen or droplets.** Every prompt says "the vial is a still object; no syringe,
   needle, pen, dropper, droplets or injecting anywhere" and QA checks every frame. One syringe = reject, no exceptions (global Hard NO).
 - **"Recovery" copy drifts to cure talk** ("heals", "repairs", "reduces inflammation", "pain"): only the lines in `product-bible.md`
-  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). there is no ✅ repair line ("Supports Tissue Repair" is ⚠ Jeremy;
+  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). there is no ✅ repair line ("Aids Tissue Repair" is ⚠ Jeremy;
   the page says "No direct claims"). "Supports Healthy Inflammatory Balance" is held (KPV's benefit; asked Justin).
 - **Men must look HARDCORE (Mitansh, 2026-10-29: "extremely masculine, gym, barbells, bodybuilders with tattoos")**: the Sermorelin
   "not bodybuilders" rule does not apply here. Use `mens-direction.md`; the only body rules left are no before/after, no body comparison,

@@ -1,6 +1,6 @@
 # Spartan Stack men's art direction (from BPC-157's, Mitansh 2026-10-29)
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
 
 > **Spartan Stack (adapted 2026-10-30 from BPC-157):** audience is active men 25–55 only (ignore any women's notes), cast 25–55 (not only bodybuilders), fighting imagery fine without blood or gore, no animal death; "Spartan Stack" is the brand name in every asset. Where this file says BPC-157 it describes the template product's history, not Spartan Stack facts.
 
@@ -52,7 +52,7 @@ man, the support is in the product.
 - Cable row from behind: back, traps and tattoos; the product on the machine's frame.
 
 ## Hard lines (compliance, unchanged)
-- Copy: only the seven "Supports…" quick-hit lines; no heal / repair (except the approved "Supports Connective Tissue Repair") / inflammation /
+- Copy: only the seven "Supports…" quick-hit lines; no heal / repair (except the approved "Aids Connective Tissue Repair") / inflammation /
   pain / injury / torn / boost / fast-as-outcome; no lean / ripped / shred / burn / fat; no "Wolverine"; no "clinically"; no $.
 - Image: no before/after, no body comparison, no competitor or celebrity look-alikes, no needles or injecting, no "No More Needles".
 - Proof: Trustpilot 4.9 Excellent · Doctor Prescribed · Ships Free From Pharmacy.

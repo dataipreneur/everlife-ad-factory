@@ -33,7 +33,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 - Form: copy may say "nasal spray" / "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count.
   Never show the tablet with the spray. No needles, syringes or vials; the spray is held, never sprayed on camera.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product.
-- Offer: only "Save up to 23%" (percent, never a $ price).
+- Offer: always the product's highest, "Save Up to 59%", whichever form is pictured (percent, never a $ price).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
 ## This product's references

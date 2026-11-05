@@ -18,9 +18,9 @@ Listed in `hardcore-men.json` (the picker reads it):
 - NOT these: Titan-Rx (men's intimate wellness, stays tasteful and product-led), MOTS-c, Epithalon, GHK-Cu Cream, Glow Stack,
   Lovara, PT-141, Spark, Restora-Z, NAD+, GLP-1. Women's slots on any product are never hardcore.
 
-## The 40% rule (random mode)
-In **🎲 Surprise me / Random**, **40% of the men's slots are HARDCORE** (exactly: floor(0.4 × N) plus a 40% chance of one more,
-so it averages 40% every batch; 5 ads → 2 or 3). `core/scripts/pick_styles.py --product <id> --n <N> --audience <men|women|both>`
+## The 30% rule (random mode; was 40% until the 2026-11-04 bible)
+In **🎲 Surprise me / Random**, **up to 30% of the men's slots are HARDCORE** (exactly: floor(0.3 × N), a cap that is never exceeded:
+3 ads → 0, 4 → 1, 5 → 1, 7 → 2, 10 → 3). **Bible 2026-11-04 (Standards 02, "Talent — shirtless"):** shirtless male talent is allowed on up to 30% of creatives (static and video) for Sermorelin, Sermorelin GHK, TRT, BPC-157, TB-500, Spartan and Wolverine; never shirtless talent, male or female, on Lovara, PT-141, Spark or Titan-Rx. `core/scripts/pick_styles.py --product <id> --n <N> --audience <men|women|both>`
 tags those slots `HARDCORE` in its output; write the slot as a HARDCORE slot. For "Both", only men's slots count. When the user
 picks moods or styles by hand, still **recommend** hardcore first for men's slots (option 1 or in the description), and offer a
 "💪 Hardcore shirtless" mood wherever the skill's mood question has room.
