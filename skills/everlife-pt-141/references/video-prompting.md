@@ -29,7 +29,7 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "P-
   want it", never "arousal" or any form of it (bible Hard NO, 2026-11-02).
 - No "ED", "erectile", "performance", "Viagra", "instant", "ignite", no timing promises, no guarantees.
 - No "I"/"my", no testimonials, no "Are you…?" (pronoun-free questions OK). No disease words, no "clinically" for the product,
-  no "all natural", no $ prices ("Save Up to 23%" nasal spray / "Save Up to 59%" sublingual are the only offers).
+  no "all natural", no $ prices ("Save Up to 59%" is the only offer, whichever form is shown).
 - **Settings:** kitchen at breakfast, hallway by the front door, terrace or garden, car before a dinner out, café, bathroom
   counter (no mirror reflections of bodies), a walk at golden hour. **Never a bed or bedroom**, no lingerie, no undressing.
 - **Framing:** people shoulder-up (head-and-shoulders), waist-up at most; clothed; 30–55; natural, well-rested, candid.

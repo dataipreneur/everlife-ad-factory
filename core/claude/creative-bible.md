@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793832093-ced5) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793890033-215f) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -131,25 +131,20 @@ Neither element appears.
 09 · Living reference — supplements, never overrides, the claims and compliance rules in this book.
 
 #### 09 · Discount accuracy & CTA selection
-Every advertised discount must reflect the specific product and delivery method shown in the creative. Applies to all AI-generated static and video ads.
-- Single product or delivery method shown: use its own discount.
-- Multiple products or delivery methods shown: use the highest available discount among them.
-- Identify which product and delivery method is featured before choosing the discount.
-- Never apply one formulation's discount to another unless both share the same approved offer.
+Every ad features a product's highest available discount — even when a lower-discount variant is the one shown. Applies to all AI-generated static and video ads.
+- Always use the product's highest available discount, whichever variant or delivery method is pictured. Example: a PT-141 nasal-spray ad still features the sublingual 59%, not 23%.
+- Identify the product before choosing the discount; the variant shown never changes which discount to use.
+- Never apply one product's discount to a different product.
 - These are maximum discounts — always write "Save Up to X%," never a guaranteed fixed discount.
-- If the product or formulation can't be confidently identified, don't guess — flag the creative for review before applying a discount.
+- If the product can't be confidently identified, don't guess — flag the creative for review before applying a discount.
 
-#### Approved discounts (maximum)
-- PT-141 — Nasal Spray: Save Up to 23%
-- PT-141 — Sublingual: Save Up to 59%
-- Sermorelin — Sublingual: Save Up to 65%
-- Sermorelin — Injection: Save Up to 59%
-- NAD+ — Sublingual: Save Up to 62%
-- NAD+ — Injection: Save Up to 62%
-- GLP-1 — Semaglutide: Save Up to 83%
-- GLP-1 — Tirzepatide: Save Up to 70%
+#### Discount to feature, by product
+- PT-141: Save Up to 59% (highest variant; sublingual)
+- Sermorelin: Save Up to 65% (highest variant; sublingual)
+- NAD+: Save Up to 62%
+- GLP-1: Save Up to 83% (highest variant; semaglutide)
 
-Example: a PT-141 creative showing both nasal spray and sublingual uses "Save Up to 59%." Nasal spray alone uses "Save Up to 23%."
+Variant maximums for reference: PT-141 nasal spray 23% / sublingual 59%; Sermorelin injection 59% / sublingual 65%; NAD+ both 62%; GLP-1 semaglutide 83% / tirzepatide 70%. Always feature the product's highest, whichever variant is shown.
 Standards 03
 
 ## Creative & page standards
@@ -207,6 +202,7 @@ Every ad for a peptide stack must clearly show each peptide in that stack. The s
 - Don’t over-bullet. A simpler layout often performs better.
 - Keep capitalization consistent across a set of copy. If two benefits are in Title Case, the third is too — never mix Title Case and sentence case in the same headline set, benefit list or CTA row.
 - Creative must hold up in square and vertical alike.
+- Every ad has a CTA — no ad goes out without one.
 - Never end on a passive frame. The last thing they see is benefits and a clear, specific CTA.
 - Never use “Get Started Now” as a CTA. Lead with the offer instead — “Save Up to 65%,” using the product’s current % from Offers & conversion.
 - Show the lowest price or the price per day on 10% of all ads (e.g. “Starting at $95/month” or “Sermorelin for $3.00/day”), using the product’s price from its CTAs or Offers & conversion.
@@ -285,7 +281,6 @@ More benefits & claims on page 8
 - CTA: Get Lean Today
 - CTA: Explore Sermorelin
 - CTA: Save Up to 65%
-- CTA: Save Up to 59%
 - CTA: Support Natural Growth Hormone
 - CTA: Sermorelin for $3.00/day
 - CTA: Starting at $95/month
@@ -360,7 +355,6 @@ More benefits & claims on page 10
 - CTA: Get Lean Today
 - CTA: Explore Sermorelin
 - CTA: Save Up to 65%
-- CTA: Save Up to 59%
 - CTA: Support Natural Growth Hormone
 - CTA: Sermorelin for $3.00/day
 - CTA: Starting at $95/month
@@ -939,7 +933,6 @@ More headlines on page 24
 
 ### CTAs
 - CTA: Explore PT-141
-- CTA: Save Up to 23%
 - CTA: Save Up to 59%
 - CTA: Start Desire Support
 - CTA: PT-141 for $2.00/day
@@ -1415,6 +1408,7 @@ Men 40–65+ who want daily performance support without planning around a pill.
 
 ### Creative direction
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
+- Headlines and/or benefits must make clear, fast, who it’s for and what it does: Titan-Rx is daily sexual-performance / ED support for men. A viewer should grasp the category in under two seconds — never leave it as vague “performance.”
 
 Titan-RX
 A once-daily 3-in-1 men’s performance formula focused on circulation, responsiveness, stamina, and consistent readiness.
@@ -1562,6 +1556,8 @@ Adults 30–60 managing weight who want predictable pricing and clinician guidan
 
 ### Creative direction
 - Label and pages must read “compounded semaglutide” / “compounded tirzepatide.”
+- Show both vials (semaglutide and tirzepatide) by default. If only one vial is shown, it must be tirzepatide.
+- Never show semaglutide on its own.
 - Use “GLP-1” as the umbrella term in headers and titles.
 - Every ad says “one price” or “no surprise price increases.”
 

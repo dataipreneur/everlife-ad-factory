@@ -44,7 +44,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 - Form: copy may say "nasal spray" / "sublingual tablet" / "easy sublingual delivery"; never a strength, dose or count.
   Never show the tablet with the spray. No needles, syringes or vials; the spray is held, never sprayed on camera.
 - No "Are you/Do you…?" questions, no first person, no named competitors, no "clinically studied" for the product.
-- Offer: only the featured form's maximum, "Save Up to 23%" (nasal spray) / "Save Up to 59%" (sublingual; also when both forms are shown) (percent, never a $ price).
+- Offer: always the product's highest, "Save Up to 59%", whichever form is pictured (percent, never a $ price).
 - Proof wording exact; disclaimer verbatim (the footer handles both).
 
 > ⚠ **PENDING CREATIVE-LEAD CONFIRMATION**: headline rule changed 2026-10-28 at Priestley's request (original in
@@ -68,7 +68,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a Notes page or calendar with one approved line per row ("Made for moments, not calendars" as the title); the bottle beside the phone |
 | F4 | Features & Benefits | 04_Features_and_Benefits | product hero + three rows of approved benefits with simple icons (brain · on-demand · non-hormonal) |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: no bodies, no "before" states for this product |
-| F6 | Offer | 06_Offer | "Save Up to 23%" (nasal) / "Save Up to 59%" (sublingual or both) + product + one approved benefit line |
+| F6 | Offer | 06_Offer | "Save Up to 59%" (every form) + product + one approved benefit line |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened PT-141 reviews |
 | F8 | Question | 08_Question | pronoun-free question from an approved territory ("Some nights aren't planned?" / "Desire on a schedule?") + answer line + product. "Low Libido?…" only with approval (⏳) |
 | F9 | Reasons Why | 09_Reasons_Why_Education | "3 things to know about desire support": three approved lines, numbered, product hero |

@@ -33,7 +33,7 @@ Golden rules, all non-negotiable:
 4. **Body rules (strictest category):** no before/after, no body comparison, no scales, tape measures, waistlines, bellies, "after"
    bodies or mirrors; no body areas; no melt / burn / shred / ripped; no timing promises ("in 4 weeks"); no guarantees; no disease
    words (diabetes, insulin resistance, obesity). "Supports / helps", never "makes you lose".
-5. **Two forms:** compounded semaglutide (navy vial) and compounded tirzepatide (green vial), one per ad **or both side by side**
+5. **Two forms:** compounded semaglutide (navy vial) and compounded tirzepatide (green vial). **Bible 2026-11-05: show both vials by default; one vial only if it is tirzepatide; never semaglutide on its own.**
    (every GLP-1 winner shows both; `references/winners/winners.md`). **Never show or mention
    needles, syringes, pens, injecting or "needle-free"**: the vial is a still object.
 6. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every
@@ -75,8 +75,8 @@ the product (not just "this"); "GLP-1 by Everlife" is on screen in the intro. Th
 or "by Everlife". Statics never say "by Everlife".
 
 ## Step 0 — Preflight
-1. **Renders gate:** `glp1_semaglutide_vial.png` and `glp1_tirzepatide_vial.png` (+ `_ref.jpg` on white) are on file. One form per
-   ad; never a syringe; never another product's vial.
+1. **Renders gate:** `glp1_semaglutide_vial.png` and `glp1_tirzepatide_vial.png` (+ `_ref.jpg` on white) are on file. Both vials by default, or tirzepatide alone;
+   never semaglutide alone; never a syringe; never another product's vial.
 2. Run `bash <skill-dir>/core/scripts/preflight.sh` and walk the user through anything not ✅ (as in the other skills).
 
 ## Step 1 — Setup (every question has a ✨ Recommended first option)
@@ -84,7 +84,7 @@ or "by Everlife". Statics never say "by Everlife".
 (default: product only; a person only when asked: clothed, everyday, never a body shot).
 
 **Round 1 — one AskUserQuestion, 4 questions:**
-1. **Form:** "Both vials side by side (Recommended: every winner)" / "Alternate per ad" / "Compounded semaglutide" / "Compounded tirzepatide".
+1. **Form:** "Both vials side by side (Recommended: every winner)" / "Alternate per ad (both vials, or tirzepatide alone)" / "Compounded tirzepatide alone". (No semaglutide-alone option: bible 2026-11-05.)
 2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
    - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
      over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
@@ -99,7 +99,7 @@ or "by Everlife". Statics never say "by Everlife".
 > **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
 **Round 2 (images) — one AskUserQuestion:** **Mood** "Warm and light: kitchen daylight, linen, stone (Recommended)" / "✨ Ultra premium,
 product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Clean clinical: white, pale blue, the navy or green of the vial" / "Surprise me" · **Copy density** "Headline + 3 pills (Recommended)" /
-"Headline + 1 line" · **CTA** "Save Up to 83% (semaglutide) / Save Up to 70% (tirzepatide), the featured drug's own maximum (Recommended)" / "Ships Free From Pharmacy" / "Start Weight Support" / "Explore GLP-1" ("Check Your Options", "Build Your Plan" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
+"Headline + 1 line" · **CTA** "Save Up to 83% (the product's highest, whichever vial is shown) (Recommended)" / "Ships Free From Pharmacy" / "Start Weight Support" / "Explore GLP-1" ("Check Your Options", "Build Your Plan" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body and never a named drug or

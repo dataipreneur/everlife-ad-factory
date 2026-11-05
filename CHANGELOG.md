@@ -2,6 +2,14 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793890033-215f (branch `bible-sync-215f`; originals in `_originals/2026-11-05/bible-sync-215f/`)
+Priestley: "There is a bible sync that we need to incorporate in the patch." Justin moved the live bible from …ced5 to …215f. Small sync (4 changes); Restora-Z untouched; all 15 product disclaimers still match.
+- **Discount rule reversed (Standards 02):** every ad features the product's HIGHEST discount, whichever variant is pictured: PT-141 59%, Sermorelin 65%, NAD+ 62%, GLP-1 83% (a PT-141 nasal-spray ad still says 59%). Replaces the 2026-11-04 per-variant rule in the gates, global rules, and the PT-141 / Sermorelin / GLP-1 skills (offer lines, CTA question, image-batch rows, video prompts). The bible dropped the CTAs "Save Up to 23%" (PT-141) and "Save Up to 59%" (Sermorelin), which settles the Sermorelin 59-vs-65 question: 65%.
+- **GLP-1 vials (new):** show both vials by default; one vial only if it is tirzepatide; never semaglutide alone. The skill's form question no longer offers "Compounded semaglutide" alone.
+- **Every ad has a CTA** (new global line, Standards 03).
+- **Titan-Rx:** headlines/benefits must make the category clear in under two seconds (daily sexual-performance support for men). ⚠ The bible's wording says "ED support": copy must not say "ED" or any disease word until Jeremy approves.
+- Banners "Bible sync 1793890033-215f" added to the pt-141, sermorelin, glp-1, nad and titan-rx product-bible pages (above the ced5 banner, which they supersede on discounts).
+
 ## 2026-11-05 — Quick patches for zip installs (branch `patch-updates`)
 Priestley: Justin wants bible changes to reach the team fast; teammates have no GitHub, so every change waits for a zip.
 - `core/scripts/make_patch.py <from> [to]`: packs only the files that changed between the version the team has and the new one

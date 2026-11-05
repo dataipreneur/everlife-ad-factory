@@ -52,7 +52,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   guarantees; no disease words. "Supports / helps".
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. One vial or both side by side (the winners), a still object.
 - No "Are you/Do you…?" questions, no first person, no named competitors or drug brands, no "clinically" for the product.
-- Offer (bible 2026-11-04): "Save Up to 83%" (semaglutide) / "Save Up to 70%" (tirzepatide), the featured drug's own maximum, both shown → 83% (percent, never $) and/or "One predictable price".
+- Offer (bible 2026-11-05): "Save Up to 83%" on every ad (the product's highest, even when only tirzepatide is shown) (percent, never $) and/or "One predictable price".
 - "GLP-1" big in every ad; never "by Everlife" on images. Proof exact; disclaimer verbatim (the footer handles both).
 
 **Headline tiers:** Tier A = a ✅ bible headline or benefit · ⚠ lines: explicit OK per line · Tier B (max 2): PROPOSED, Jeremy.
@@ -65,7 +65,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a provider message or a simple plan on a phone ("Your Goal. Your Plan. Provider Guided."); the vial beside it |
 | F4 | Features & Benefits | 04_Features_and_Benefits | vial hero + three ✅ rows with icons (appetite · food noise · one price) |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: never |
-| F6 | Offer | 06_Offer | "Save Up to 83%" / "Save Up to 70%" (per drug) + "One predictable price" + the vial + one ✅ line |
+| F6 | Offer | 06_Offer | "Save Up to 83%" + "One predictable price" + the vial + one ✅ line |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened GLP-1 reviews |
 | F8 | Question | 08_Question | pronoun-free question ("Ready to Make Progress Again?") + answer line + product |
 | F9 | Reasons Why | 09_Reasons_Why_Education | three ✅ lines numbered (appetite, cravings, one price), vial hero |
