@@ -97,7 +97,13 @@ no website, no disclaimer):
   <world-specific text, e.g. the ticket fields, the dictionary entry, the poll options>
 
 <STRICT LAYOUT block for this ratio, pasted from core/references/prompt-layout-zones.md>
+
+Reference only, never render: everlife slot=<n> ratio=<9:16|4:5> product=<id> job=<the batch folder, e.g. ~/Everlife-Creative/output/PT-141/2026-11-05_batch-1>
 ```
+The last line is the **batch reference**: the gate hook (`core/hooks/batch_hook.py`) refuses any Everlife image prompt without it or
+without the STRICT LAYOUT block for that ratio, counts every fired slot × ratio in `<job>/renders.jsonl`, and the Stop hook will not
+let the turn end until every slot has BOTH sizes finished (`batch_check.py <job>` shows what is owed). Save the deal first:
+`deal_worlds.py … --json > <job>/deal.json`.
 Attach: bottle render, tablet render (if any), Trustpilot badge is NOT attached (the finisher adds proof). Never attach a
 reference ad: only you look at references.
 
@@ -134,14 +140,14 @@ These are the steps the old per-skill files carried; they live here once now. Co
 | 1 | Preflight | `bash <skill>/core/scripts/preflight.sh` (connections, tools, bible version check) | script |
 | 2 | Read the product | `references/product-brief.md` (hard stops, variations) · `references/product-bible.md` · `references/lessons.md` · `references/winners/` | you |
 | 3 | Lean team reads | Copy Ledger + Ad Review flags saved to files (`ArtifactData` `out_dir` = `<job>/_team/ledger`, `<job>/_team/review`), then only the digest: `teamlog.py summary <job>/_team/ledger <job>/_team/review --product <id>` (used headlines, team styles/worlds → `--skip`, reviewer flags → explicit checks for this batch). Page unreachable → say so, carry on | TEAM-LOGS §2.2, AD-REVIEW §3 |
-| 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …]` → `<job>/deal.json`; proof per slot follows `finish_batch.py --proof-plan N` (42/28/30) | code |
+| 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …] --json > <job>/deal.json` (the MANIFEST: N slots × 2 ratios owed); proof per slot follows `finish_batch.py --proof-plan N` (42/28/30) | code |
 | 5 | Write | every ad: 9:16 prompt AND 4:5 prompt, each with its STRICT LAYOUT block (`prompt-layout-zones.md`), copy inside the Hard NOs; `prompts.md` | you + lint on the prompt (zones present) |
 | 6 | Approve | one AskUserQuestion with the cost: "Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" | gate: never spend without it |
-| 7 | Generate | all 9:16 raws, then all 4:5 raws (GPT Image 2.5 on Creatify, 4 in flight); never crop / pad / mirror one size into the other | rule; hooks capture every call |
+| 7 | Generate | all 9:16 raws, then all 4:5 raws (GPT Image 2.5 on Creatify, 4 in flight); never crop / pad / mirror one size into the other. Every prompt ends with the batch reference line; the gate hook refuses it otherwise and counts what was fired | **code: `batch_hook.py gate` + `fired`** |
 | 8 | Log generations | `teamlog.py gens <job> --wave W.json` per wave (exact prompt, model, cost, slot) | TEAM-LOGS §2 |
 | 9 | Finish | `finish_batch.py <raw> FINAL_<n>_<world>_<WxH>.png --ratio <r> --product <id> --proof <slot proof>` for EVERY raw of EVERY ad, both sizes: logo at the top, proof row inside the safe area (ends ≤ y 1385), verbatim disclaimer + AI disclosure from `product.json`; refuses a raw that runs under the footer → `free-fix` (0 cr) → else one re-make | code (`safezones.py`, `standard_footer.py`) |
 | 10 | QA | Read every final (text exact, legible, nothing covered, world recognisable, both sizes present); `teamlog.py qa <job> <doc_id…> --pass/--fail`; one automatic re-make per failed size inside the budget | you + TEAM-LOGS |
-| 11 | Proof audit | `finish_batch.py --proof-check <batch folder>` must pass (≈42/28/30 per ratio) before the sheet is shown | code |
+| 11 | Both-sizes + proof audit | `batch_check.py <job>` must print ✅ (every slot finished in 9:16 AND 4:5; the Stop hook blocks the turn otherwise) and `finish_batch.py --proof-check <batch folder>` must pass (≈42/28/30 per ratio) before the sheet is shown | **code: `batch_hook.py stop`, `batch_check.py`, `--proof-check`** |
 | 12 | Show | one contact sheet with both sizes per ad; open the output folder; plain words | you |
 | 13 | After the batch | `teamlog.py copy` per ad · `teamlog.py proof` per creative · `teamlog.py run` · **`teamlog.py close <job>` must print ✅ closed** · `teamlog.py sent <job> --all` (or `--queued`) · post every final to Ad Review (`entry` + preview; `teamlog.py posted <job> <ad_id…>`) · append headlines to `~/Everlife-Creative/<id>-copy-log.md` · `deal_worlds.py --product <id> --n N --log` | TEAM-LOGS §2, AD-REVIEW §4, Stop hook |
 | 14 | Hand-off | `~/Everlife-Creative/output/<Product>/<date>_SESSION.md`: one row per asset (path, world, headline, lines, CTA, proof, cost, issues, any Hard-NO doubt for Jeremy). Drafts only; delivery (Drive, Master Library, Asana) only after approval | you |
