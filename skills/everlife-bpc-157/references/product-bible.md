@@ -1,5 +1,6 @@
 # BPC-157 — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Faster Recovery" → "Promotes Faster Recovery"; "Supports Connective Tissue Repair" → "Aids Connective Tissue Repair"; "Supports Faster Bounce-Back After Training" → "Encourages Faster Bounce-Back After Training". **This product:** The 12 headlines are now APPROVED (no pending badge): Recover Faster. Move Better. · Less Downtime. More Training Days. · Train Hard. Recover Harder. · Bounce Back Faster After Every Session. · Support Joints, Tendons and Gut — in One. · Recover Like You Trained for It. · Bounce Back From Tough Training · Nagging Tweak? Give Your Body Backup. · For Joints, Tendons and the Day After Leg Day. · The Recovery Peptide Built for Heavy Wear. · Your Body Repairs. BPC-157 Backs It Up. · Support for Joints, Tendons + Gut (⚠ the bible keeps its own wording: check each against the Hard NOs before use). Offer and CTA: **Save Up to 40%** (the placeholder is gone); "Build Your Recovery Plan" and "Get Back to Moving" were removed. The headline tables below are the old pool: the bible copy (`core/claude/creative-bible.md`, BPC-157) wins.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none usable: the bible's CTA is "[PLACEHOLDER] Save Up to X%". The docx's "Take up to 40% Off" stays this skill's offer (Justin Junior, 2026-10-29) but differs from the bible: flag "Justin to fill the bible %" in SESSION.md. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -118,11 +119,11 @@ Get Back to Moving — Image – Pending approval
 ## 5. Quick-hit benefits
 Source: Creative Messaging Reference page (image)
 - Supports Joints + Tendons
-- Supports Faster Recovery
-- Supports Connective Tissue Repair
+- Promotes Faster Recovery
+- Aids Connective Tissue Repair
 - Supports Mobility + Flexibility
 - Supports Gut Lining Health
-- Supports Faster Bounce-Back After Training
+- Encourages Faster Bounce-Back After Training
 - Supports Joints, Tendons + Gut Lining
 
 ## 6. Approved benefits (Product Benefits Doc) — BLOCKED, see pre-screen

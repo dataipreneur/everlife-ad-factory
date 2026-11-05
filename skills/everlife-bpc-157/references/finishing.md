@@ -44,7 +44,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 ```json
 {"product": "bpc-157", "form": "vial", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["LINE 1", "LINE 2"], "sub": "subline (house only)",
- "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["Supports Joints + Tendons", "Supports Faster Recovery", "Supports Gut Lining Health"],
+ "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["Supports Joints + Tendons", "Promotes Faster Recovery", "Supports Gut Lining Health"],
  "ingredients_label": "RECOVERY SUPPORT",
  "ingredients": [["JOINTS + TENDONS","Supports connective tissue repair"],["MOBILITY","Supports mobility + flexibility"],["GUT LINING","Supports gut lining health"]],
  "cta": "<bible CTA in caps>", "vocab": "BPC-157."}

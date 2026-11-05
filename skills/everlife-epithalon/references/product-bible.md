@@ -1,5 +1,6 @@
 # Epithalon — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Healthy Aging" → "Promotes Healthy Aging"; "Supports Oxidative Stress Defense" → "Aids Oxidative Stress Defense".
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** The CTA "Build Your Plan" was removed from the bible.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none: "[PLACEHOLDER] Save Up to X%" in the bible, so no offer CTA until Justin fills it. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -41,9 +42,9 @@ line is ❌, and no sleep or night imagery is used (beds, pillows, night, waking
 | H3 | Support Healthy Aging at the Cellular Level | headline | ⏳ pending | Clean structure-function wording; only with explicit approval. |
 | H4 | Longevity Support, Made Simple | headline | ⏳ pending | Clean; only with explicit approval. |
 | B1 | Supports Restorative Sleep | benefit | ❌ | Product Hard NO "No sleep or overnight claims" + direction (DSIP's territory). Contradiction flagged to Justin. |
-| B2 | Supports Healthy Aging | benefit | ✅ | Structure-function, in scope. |
+| B2 | Promotes Healthy Aging | benefit | ✅ | Structure-function, in scope. |
 | B3 | Supports DNA + Cellular Health | benefit | ⚠ Jeremy | "Supports" form is fine, but a DNA claim reads medical-style ("No unsupported medical-style claims"). Only with the user's OK per line, flagged for Jeremy; never with repair / reverse / telomere wording. |
-| B4 | Supports Oxidative Stress Defense | benefit | ✅ | Structure-function, in scope. Never "fights / prevents". |
+| B4 | Aids Oxidative Stress Defense | benefit | ✅ | Structure-function, in scope. Never "fights / prevents". |
 | B5 | Supports Healthy Sleep-Wake Cycles | benefit | ❌ | Same as B1: sleep claim, product Hard NO. |
 | C1 | Explore Epithalon | CTA | ✅ | |
 | C2 | Support Healthy Aging | CTA | ✅ | |
@@ -59,7 +60,7 @@ line is ❌, and no sleep or night imagery is used (beds, pillows, night, waking
 
 **Counts (19 lines):** ✅ 9 · ⚠ Jeremy 1 (B3; H1 and H2 carry a ⚠ on top of ⏳) · ⏳ 4 (H1–H4) · ❌ 5 (B1, B5, O1, L1, A1).
 
-**✅ pool (usable today, verbatim):** Supports Healthy Aging · Supports Oxidative Stress Defense · Explore Epithalon · Support Healthy
+**✅ pool (usable today, verbatim):** Promotes Healthy Aging · Aids Oxidative Stress Defense · Explore Epithalon · Support Healthy
 Aging · Ships Free From Pharmacy · Start Longevity Support · Build Your Plan · Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
 
 **Headlines:** none approved. Until one is: the product name "Epithalon" big + a ✅ benefit as the headline (Tier A = ✅ benefit
@@ -94,9 +95,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Restorative Sleep
-- Supports Healthy Aging
+- Promotes Healthy Aging
 - Supports DNA + Cellular Health
-- Supports Oxidative Stress Defense
+- Aids Oxidative Stress Defense
 - Supports Healthy Sleep-Wake Cycles
 
 ### CTAs

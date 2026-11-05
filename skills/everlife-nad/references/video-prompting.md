@@ -21,7 +21,7 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "N-
 
 ## Copy rules
 - Headlines, benefits, CTAs: only `product-bible.md` (✅ lines; ⏳/⚠ only with the user's OK). Mechanism first, then benefit:
-  "Supports All-Day Energy + Focus" leads, then "Promotes Healthy Aging" (both ✅). Never "this cures your brain fog".
+  "Fuels All-Day Energy + Focus" leads, then "Promotes Healthy Aging" (both ✅). Never "this cures your brain fog".
 - No "boost", "reduces", "DNA repair", "anti-aging", "reverse" or longevity promises (⚠ lines only with an OK); no celebrity,
   CEO or athlete authority; no timing promises.
 - No "I"/"my", no testimonials, no "Are you…?". No disease words, no "clinically" for the product, the form's own offer only.

@@ -8,7 +8,7 @@ never a needle; no scales, tape measures, waistlines or mirrors.
 - **Finishing:** `default` or `tiktok`.
 
 ## 6B — Long ride
-- **Looks like:** a cyclist 30–55 clipping in on a quiet road, then coffee after; the vial on the café table. "Supports Endurance."
+- **Looks like:** a cyclist 30–55 clipping in on a quiet road, then coffee after; the vial on the café table. "Fuels Endurance."
 
 ## 6C — Pool lane / rower
 - **Looks like:** a swimmer at the wall catching breath, or a rower in morning light; shoulder-up; the vial on the bench.

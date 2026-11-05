@@ -14,5 +14,5 @@ Ever-life" (no pronunciation on file yet: check the unprimed transcript and ask 
 4. ABSURD ESCALATION · Blank to-do sticky notes multiply across the fridge; one swipe clears them; she sits down with tea. Bridge: "Supports Desire + Sensitivity".
 5. POV · From inside her handbag as it opens: the bottle in the side pocket, a hand reaching in. Bridge: "3-in-1 Female Sexual Wellness Blend".
 6. INTERRUPTION · Her phone buzzes on the sofa; she turns it face down and keeps laughing with a friend. Bridge: "Feel More Connected".
-7. MISDIRECTION · Cooking-show open ("today's secret ingredient…") swerves to the bottle on a sunny counter. Bridge: "Supports Comfort + Responsiveness".
+7. MISDIRECTION · Cooking-show open ("today's secret ingredient…") swerves to the bottle on a sunny counter. Bridge: "Promotes Comfort + Responsiveness".
 8. STREET · "What helps you feel connected?" Women answer pronoun-free, bible lines only. Bridge: "Supports Intimate Readiness".

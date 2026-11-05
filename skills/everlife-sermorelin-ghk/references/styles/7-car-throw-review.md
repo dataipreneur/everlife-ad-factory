@@ -11,8 +11,8 @@
 - "Sermorelin supports the body's own growth hormone, GHK's for younger-looking skin, and citrulline's for blood flow." (each claim on its own ingredient)
 - "Doctor prescribed, melts under the tongue... why isn't everyone on this yet?"
 - "Save up to 47%. Don't sit on this. Get started now!" (next time end on "Save up to 47%. Don't sit on this!": "Get Started Now" was banned in the bible sync the same day)
-End card: SAVE UP TO 47% · 3-in-1 Sermorelin GHK · Supports Natural Growth Hormone Production · Supports Lean Muscle + Performance ·
-Supports Daily Energy + Healthy Blood Flow · button **Save up to 47%** (final v6/v7; "Get Started Now" is banned). DOUBLE STRENGTH on screen only (1000 ads, ⚠ pending Jeremy).
+End card: SAVE UP TO 47% · 3-in-1 Sermorelin GHK · Supports Natural Growth Hormone Production · Promotes Lean Muscle + Performance ·
+Fuels Daily Energy + Healthy Blood Flow · button **Save up to 47%** (final v6/v7; "Get Started Now" is banned). DOUBLE STRENGTH on screen only (1000 ads, ⚠ pending Jeremy).
 
 ## SGHK-specific notes
 - Cast for this style: a normal, fit everyday man 45–50, grey hair, heather t-shirt, sunglasses on his head (NOT the hardcore

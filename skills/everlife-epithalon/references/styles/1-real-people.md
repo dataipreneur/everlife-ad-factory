@@ -6,7 +6,7 @@ Needs the product registered in Marketing Studio first (Priestley's OK; prefligh
 
 ## 1A — Creator to camera (daytime)
 - **Looks like:** a man or woman 45–65 at a sunny kitchen table or on a garden bench, phone propped, talking plainly. The vial sits
-  in frame, label to camera; never used. One ✅ line, e.g. "Supports Healthy Aging."
+  in frame, label to camera; never used. One ✅ line, e.g. "Promotes Healthy Aging."
 - **Lines:** ≤ 35 words, one angle, one quick-hit line, pronoun-free, no "I" (the creator talks about healthy aging, not about themselves).
 
 ## 1B — Two friends, one walk

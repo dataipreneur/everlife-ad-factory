@@ -123,7 +123,7 @@ approved static + 8 s of motion, Seedance; a follow-up question picks which)" / 
   claims, colours and banned settings still apply; the presenter follows the men's direction (active man 25–55, clothed); the vial is a still object in the B-roll, never a syringe.
 
 **Round 2 — ONE AskUserQuestion, 3 questions:**
-1. **Angle:** "Mix: a different angle per ad (Recommended)" / "Train hard, recover" ("Train Like a Spartan. Recover Like One." (⏳), "Supports Training Harder, More Often") / "Joints + connective tissue" ("Supports Joints + Ligaments", "Supports Connective Tissue Repair") / "Mobility" ("Supports Mobility + Range of Motion", "Supports Muscle Recovery").
+1. **Angle:** "Mix: a different angle per ad (Recommended)" / "Train hard, recover" ("Train Like a Spartan. Recover Like One." (⏳), "Supports Training Harder, More Often") / "Joints + connective tissue" ("Supports Joints + Ligaments", "Aids Connective Tissue Repair") / "Mobility" ("Maintains Mobility + Range of Motion", "Promotes Muscle Recovery").
 2. **How bold on copy:** "Safe: approved benefit lines as headlines (Recommended)" / "Use bible headlines (⏳, I OK each line)" /
    "Bold: one PROPOSED line". Every ⏳ or PROPOSED line needs the user's explicit OK and goes to Jeremy.
 3. **CTA:** "Ships Free From Pharmacy" / "Explore the Spartan Stack" / "Build Your Recovery Stack" / "Support Stronger Recovery" / "Start Your Protocol" (all ✅; first = Recommended). Never "Get Started Now" (bible, 2026-11-03).

@@ -33,7 +33,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["SPARK BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "3-IN-1: PT-141 + APOMORPHINE + TADALAFIL",
- "ingredients": [["SPONTANEOUS","Supports Spontaneous Intimacy"],["RESPONSE","Supports Desire + Physical Response"],["NON-HORMONAL","Non-Hormonal Desire Support"]],
+ "ingredients": [["SPONTANEOUS","Encourages Spontaneous Intimacy"],["RESPONSE","Promotes Desire + Physical Response"],["NON-HORMONAL","Non-Hormonal Desire Support"]],
  "cta": "<the session's approved ⏳ CTA in caps>", "vocab": "Spark by Everlife. PT-141, Apomorphine, Tadalafil."}
 ```
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, renders, name casing,

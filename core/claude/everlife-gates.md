@@ -24,6 +24,7 @@ Claims:
 - No unsupported medical-style claims, no exaggerated transformation claims, no claims outside the product's approved benefit scope.
 - Never call a sublingual "all natural". Peptides support the body's own production — that is the limit.
 - Say "supports", never "builds". No "high circulation". No vague inference phrasing ("one better night's sleep", not "one better night").
+- **Quick-hit verbs (bible 2026-11-05):** a product's benefit lines are used word for word from its bible page, and the bible now words many of them with Promotes / Aids / Encourages / Maintains / Fuels / Reinforces instead of "Supports" (e.g. "Promotes Healthy Aging", "Fuels All-Day Energy + Focus", "Reinforces Tendons + Ligaments"). Use the bible's verb exactly; "Say supports, never builds" still governs every line that is NOT a bible benefit line. ⚠ The new verbs read stronger: Jeremy to confirm before anything goes live.
 - **Benefits only ever come from the product's Quick-hit benefits list, matched word for word: no paraphrasing, no new benefits** (bible 2026-11-04). "Dr. Prescribed" / "Doctor Prescribed" is never a benefit (it is a trust callout). ⚠ Interpretation until Justin confirms: benefit lines (bullets, checklists, "Supports…" lines) are Quick-hit wording only; an approved per-ingredient claim may still sit on its own ingredient callout.
 - No named-competitor comparisons (Restora-Z vs Ambien is the only exception — use only the approved Ambien claims/phrasing on its bible page, with Ambien's actual pill). No guaranteed outcomes.
 - No first person ("I tried", "my results"). No second-person health questions with a pronoun ("Are you…?"); pronoun-free elliptical questions are OK.
@@ -109,6 +110,7 @@ Concept direction · approved benefits/subheaders · full section 2 pass · sect
 Higgsfield (Marketing Studio only) and Creatify (Seedance, stills, Boreal, music) both use shared Everlife team credits: run a cost estimate and get the user's OK before any paid generation.
 
 ## Known gaps (flag when touched)
+- Bible 1793896982-b7dc changed ~113 Quick-hit benefit lines from "Supports…" to Promotes / Aids / Encourages / Maintains / Fuels / Reinforces: Jeremy to confirm the verbs (they sit against "say supports, never builds"). Titan-Rx headlines 1, 2, 5, 6 now name "ED" without a pending badge: gates' no-disease-claims rule still applies, Jeremy to confirm. The bible's new Sermorelin / Sermorelin GHK Women direction casts by hair and eye colour and ethnicity (not applied: Jeremy first). The QA bible (rev 42) still says 28 px, the exact global AI-disclosure line, per-variant discounts and "Supports" wording.
 - NAD+ (non-Optima) product page not imported.
 - No ad disclaimers on file for Parts B/C products.
 - Gate §7 (master approved before other sizes) still says so, while PT-141 (PR #50) and every product (PR #51) now generate both sizes in one run: Priestley to confirm the override stands.

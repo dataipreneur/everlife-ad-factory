@@ -1,5 +1,6 @@
 # Spartan Stack — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Connective Tissue Repair" → "Aids Connective Tissue Repair"; "Supports Muscle Recovery" → "Promotes Muscle Recovery"; "Supports Mobility + Range of Motion" → "Maintains Mobility + Range of Motion".
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none: "[PLACEHOLDER] Save Up to X%" in the bible (Ronnel to confirm), so no offer CTA. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -37,9 +38,9 @@
 | Three Peptides. One Recovery Stack. | headlines | ⏳ | pending approval; matches the 3-peptide label |
 | One Dose. Three Peptides. No Weak Links. · Recovery, Fortified | headlines | ⚠ Tier B (PROPOSED) | team candidates (hand-off §4), not on the bible page; Jeremy |
 | Supports Joints + Ligaments | benefits | ✅ | |
-| Supports Connective Tissue Repair | benefits | ✅ (care) | exact wording only; never "repairs" or "heals" |
-| Supports Muscle Recovery | benefits | ✅ | |
-| Supports Mobility + Range of Motion | benefits | ✅ | |
+| Aids Connective Tissue Repair | benefits | ✅ (care) | exact wording only; never "repairs" or "heals" |
+| Promotes Muscle Recovery | benefits | ✅ | |
+| Maintains Mobility + Range of Motion | benefits | ✅ | |
 | Supports Gut Lining Health | benefits | ✅ | |
 | Three-Peptide Recovery Stack | benefits | ✅ | |
 | Supports Training Harder, More Often | benefits | ✅ (care) | never with a number or a timeline |
@@ -77,9 +78,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Joints + Ligaments
-- Supports Connective Tissue Repair
-- Supports Muscle Recovery
-- Supports Mobility + Range of Motion
+- Aids Connective Tissue Repair
+- Promotes Muscle Recovery
+- Maintains Mobility + Range of Motion
 - Supports Gut Lining Health
 - Three-Peptide Recovery Stack
 - Supports Training Harder, More Often

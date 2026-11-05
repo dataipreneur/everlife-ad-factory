@@ -12,7 +12,7 @@ younger", dermatologist claims, orange/green "clean beauty" palettes, droppers a
 |---|---|---|---|
 | **Firmness** — "Firmer-Looking Skin Starts With Support", "Support Firmer Skin" | F2 Bold Claim · F12 Brand Mood · F13 Portrait + line | 02: big-type, one-idea pins over calm space, product lower third; 12: beige/blush still lifes; 13 Premium DTC tiles | any face close-up comparison, "lifted" arrows |
 | **The peptide step** — "Peptide-Powered Skin Support", "Your Daily GHK Glow" | F4 Features & Benefits · F9 Reasons Why (advertorial on white) · F10 Sticky Note | 04: three-icon-row pins with ONE product and lots of air; 09: numbered "3 reasons"; 10: a note on a mirror or planner | 04's neon/3D pins; molecule diagrams |
-| **Glow** — "Glow Smarter With GHK Peptide Cream" (FB/GL/TK), "Supports a Brighter, More Even-Looking Tone" | F12 · F11 Visual Metaphor · F13 | 12: warm morning-light vanity still lifes; 11: single-object metaphor pins | glossy "glass skin" close-ups, orange golden-hour grades |
+| **Glow** — "Glow Smarter With GHK Peptide Cream" (FB/GL/TK), "Encourages a Brighter, More Even-Looking Tone" | F12 · F11 Visual Metaphor · F13 | 12: warm morning-light vanity still lifes; 11: single-object metaphor pins | glossy "glass skin" close-ups, orange golden-hour grades |
 | **Trust / offer** (doctor prescribed, pharmacy, 100,000+, Save up to 75%) | F6 Offer · F2 · F12 | 06 percent-off (never $); 12 pharmacy-feel still lifes | 07 until reviews exist |
 
 Rules of thumb:

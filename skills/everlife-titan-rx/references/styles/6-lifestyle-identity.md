@@ -13,7 +13,7 @@ Why it works: the 40–65 buyer sees himself: a strong man who still trains hard
 - **Guardrails:** the evening is dinner, a drive, a walk; it never arrives at a bedroom. Shoulder-up.
 
 ## 6C — Confidence + control
-- **Looks like:** a man 50–65 in a workshop or on a trail, calm and certain, mid-task; the product on a workbench. "Supports Confidence + Control."
+- **Looks like:** a man 50–65 in a workshop or on a trail, calm and certain, mid-task; the product on a workbench. "Encourages Confidence + Control."
 - **Guardrails:** identity, not transformation; no before/after, no body commentary, no timing numbers.
 
 ## 6D — Everyday ready

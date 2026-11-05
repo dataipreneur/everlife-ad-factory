@@ -134,7 +134,7 @@ daytime, sun-lit), placement (images at 4:5; 9:16 made from the approved masters
    Cream") are ⚠ Jeremy on H2 and are left out by default.
 3. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Firmness" ("Firmer-Looking Skin Starts With Support", "Support
    Firmer Skin") / "The peptide step" ("Peptide-Powered Skin Support", "Your Daily GHK Glow") / "Glow" ("Glow Smarter With GHK Peptide
-   Cream", "Supports a Brighter, More Even-Looking Tone"). ⚠ lines (pre-screen) only with the user's OK.
+   Cream", "Encourages a Brighter, More Even-Looking Tone"). ⚠ lines (pre-screen) only with the user's OK.
 4. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
 

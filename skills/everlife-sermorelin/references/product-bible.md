@@ -1,5 +1,6 @@
 # Sermorelin — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Metabolism + Body Tone" → "Promotes Metabolism + Body Tone"; "Supports Strength + Vitality" → "Fuels Strength + Vitality". **This product:** NEW Women creative direction in the bible (NOT applied to this skill: ⚠ Jeremy first): talent by hair and eye colour and ethnicity ("blonde hair and blue eyes, with some Latina talent") and a wardrobe mix of workout gear and everyday clothes; casting rules below still govern.
 > **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Always feature the HIGHEST discount whichever form is pictured: **"Save Up to 65%"** (sublingual) on every Sermorelin ad. The bible's CTA "Save Up to 59%" (injection) was removed, which settles the 59 vs 65 question. Every ad has a CTA.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%. **This product:** Offers by form: **sublingual tablet Save Up to 65%, injection Save Up to 59%**; this skill is the sublingual tablet, so its ads say 65% (a creative showing both forms uses the highest). ⚠ The bible's Sermorelin CTA list now reads "Save Up to 59%" (the injection maximum): for tablet ads keep 65% ("never apply one formulation's discount to another") and ask Justin.
 
@@ -69,7 +70,7 @@ global Hard NO or the no-needles rule, so treat them as listed until Jeremy rule
 | Starting at $95/month | offer (both) | ⚠ brief only | dollar price; default is percent-off |
 | Get Toned and Lean | headline (both) | ⚠ Jeremy | "toned/lean" is not an approved-language line on this page (it is on GHK's); reads as body composition |
 | Supports Lean Muscle Definition | quick-hit (both) | ⚠ Jeremy | "definition" drifts into body composition; never with a body shot |
-| Supports Metabolism + Body Tone | quick-hit (both) | ⚠ Jeremy | "body tone" = body-composition wording |
+| Promotes Metabolism + Body Tone | quick-hit (both) | ⚠ Jeremy | "body tone" = body-composition wording |
 | Get Lean Today | CTA (both) | ⚠ Jeremy | same body-composition drift; prefer another CTA |
 | Lean. Strong. Energized. | Women headline | ⚠ Jeremy | same |
 | Supports Toned Strength After 35 | Women quick-hit (new in v3) | ⚠ Jeremy | "toned" = body-composition wording, as above |
@@ -80,12 +81,12 @@ global Hard NO or the no-needles rule, so treat them as listed until Jeremy rule
 | Sublingual tablets with 2x the strength · Double Strength Sermorelin · 2x-Strength Growth Hormone Support (new in v3) | Men | ✅ with care | only with a confirmed double-strength bottle in frame (see facts) |
 | Supports Sleep Quality + Recovery | quick-hit (both) | ❌ removed | removed from the bible 2026-11-02 (Justin); never use |
 | Built for Men Who Still Want More | Men headline | ✅ | "built for" is not a "builds muscle" claim; never pair it with a body shot |
-| Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Supports Strength + Vitality | quick-hit (both) | ✅ | clean structure-function lines: the default benefit pool |
+| Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Fuels Strength + Vitality | quick-hit (both) | ✅ | clean structure-function lines: the default benefit pool |
 
 Clean pools after the screen (small; say so when they run low and ask for Tier B or new approved lines from Jeremy):
 - **Men headlines (Tier A):** Double Strength Sermorelin (with care) · Built for Men Who Still Want More · Strength for Today, Vitality for Life.
 - **Women headlines (Tier A):** Thrive After 35 · Rediscover Energy and Vitality · Stay Fit, Age Beautifully · Strength for Today, Vitality for Life.
-- **Benefits:** Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Supports Strength + Vitality ·
+- **Benefits:** Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Fuels Strength + Vitality ·
   (men, 1000 mcg only) 2x-Strength Growth Hormone Support.
 - **CTAs:** Save Up to 65% (default) · Ships Free From Pharmacy · Explore Sermorelin · Support Natural Growth Hormone · Build Your Plan.
 
@@ -136,11 +137,11 @@ Better Weak headline
 More benefits & claims on page 8
 QUICK-HIT  BENEFITS
 — Supports Lean Muscle Definition
-— Supports Metabolism + Body Tone
+— Promotes Metabolism + Body Tone
 — Supports Energy + Stamina
 — Supports Natural Growth
 Hormone Activity
-— Supports Strength + Vitality
+— Fuels Strength + Vitality
 — 2x-Strength Growth
 Hormone Support
 CTA S
@@ -214,11 +215,11 @@ Aging Weak headline
 More benefits & claims on page 10
 QUICK-HIT  BENEFITS
 — Supports Lean Muscle Definition
-— Supports Metabolism + Body Tone
+— Promotes Metabolism + Body Tone
 — Supports Energy + Stamina
 — Supports Natural Growth
 Hormone Activity
-— Supports Strength + Vitality
+— Fuels Strength + Vitality
 — Supports Toned Strength After 35
 CTA S
 Get Lean Today

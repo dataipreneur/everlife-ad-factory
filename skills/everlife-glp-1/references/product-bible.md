@@ -1,5 +1,6 @@
 # GLP1 — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Healthy Metabolism" → "Promotes Healthy Metabolism". **This product:** The headline pool was replaced: 16 new headlines, none marked Pending approval in this version (an earlier version had nine pending), and the old ones are gone: read the list in `core/claude/creative-bible.md` (GLP1); never use a headline from the old tables below that is not in it.
 > **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Always feature the HIGHEST discount: **"Save Up to 83%"** (semaglutide) on every GLP-1 ad, even when only tirzepatide is pictured. **New vial rule: show both vials (semaglutide + tirzepatide) by default; if only one vial is shown it must be tirzepatide; never show semaglutide on its own.** Every ad has a CTA.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** Offers by drug (Standards 03 · 09): **semaglutide Save Up to 83%, tirzepatide Save Up to 70%**; a creative showing both uses 83%; never one drug's % on the other. This replaces the page's older "Up to 59%"/"Save Up to 59%" lines. The CTA "Build Your Plan" was removed.
 
@@ -51,7 +52,7 @@
 | Supports Appetite Regulation | benefits | ✅ |  |
 | Helps Reduce Food Noise | benefits | ✅ |  |
 | Supports Healthy Weight Management | benefits | ✅ (care) | never with body imagery |
-| Supports Healthy Metabolism | benefits | ✅ |  |
+| Promotes Healthy Metabolism | benefits | ✅ |  |
 | One Price, No Surprise Increases | benefits | ✅ | the required price line |
 | Provider-Guided From Home | benefits | ✅ |  |
 | Up to 20% Weight Loss | more_benefits | ⚠ Jeremy | numeric outcome (Priestley: hold) |
@@ -107,7 +108,7 @@ More headlines on page 38
 - Supports Appetite Regulation
 - Helps Reduce Food Noise
 - Supports Healthy Weight Management
-- Supports Healthy Metabolism
+- Promotes Healthy Metabolism
 - One Price, No Surprise Increases
 - Provider-Guided From Home
 

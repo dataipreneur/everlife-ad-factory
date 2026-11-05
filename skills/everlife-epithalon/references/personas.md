@@ -17,7 +17,7 @@ What Maria punishes: before/after or mirror-face images; DNA-helix "science" gra
 product page says it isn't a sleep product); anything that feels like a cream ad or a diet product; stock-photo couples.
 
 ## The rubric (score each 1–5; anything under 4 gets fixed before approval)
-1. **Clear in 2 seconds:** what it is (one vial), who it's for, the one promise ("Supports Healthy Aging").
+1. **Clear in 2 seconds:** what it is (one vial), who it's for, the one promise ("Promotes Healthy Aging").
 2. **Plain English:** every claim word is explained by the scene or a bible line; no jargon stack.
 3. **Not scammy:** real product, real pharmacy proof, no cure or reversal words, no timing numbers, no needles.
 4. **Looks like me:** a real adult 40–65 in a calm, sun-lit daytime moment, not a model or a physique.

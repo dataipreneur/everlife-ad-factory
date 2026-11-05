@@ -88,7 +88,7 @@ everyday, an ordinary non-famous face).
      single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply; the presenter is an adult 30–65+, clothed, everyday; the chosen form (vial or sublingual tablet) is the hero in the B-roll; VO names "NAD+ by Everlife".
 3. **Angle:** "Mix (Recommended)" / "Clear head" ("Less Fog. More Focus.", "Clear Head. Full Day.", "Brain Fog, Who?") / "Energy that
-   lasts" ("Supports All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy
+   lasts" ("Fuels All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy
    aging" ("More Life in Your Years.", "Your 30s Called & Want You Back").
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one PROPOSED line".
 

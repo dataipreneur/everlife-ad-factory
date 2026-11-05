@@ -52,7 +52,7 @@ man, the support is in the product.
 - Cable row from behind: back, traps and tattoos; the product on the machine's frame.
 
 ## Hard lines (compliance, unchanged)
-- Copy: only the ✅ lines in `product-bible.md`; no heal / repair (no repair line is approved: "Supports Tissue Repair" is ⚠ Jeremy) / inflammation /
+- Copy: only the ✅ lines in `product-bible.md`; no heal / repair (no repair line is approved: "Aids Tissue Repair" is ⚠ Jeremy) / inflammation /
   pain / injury / torn / boost / fast-as-outcome; no lean / ripped / shred / burn / fat; no "Wolverine"; no "clinically"; no $.
 - Image: no before/after, no body comparison, no competitor or celebrity look-alikes, no needles or injecting, no "No More Needles".
 - Proof: Trustpilot 4.9 Excellent · Doctor Prescribed · Ships Free From Pharmacy.

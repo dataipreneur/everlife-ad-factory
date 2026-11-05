@@ -17,5 +17,5 @@ a competitor. Each ingredient claim only on its own ingredient (default: no ingr
 4. POV · From inside the gym locker as it opens: his face, towel over the shoulder, a nod; the bottle on the shelf. Bridge: "Supports Everyday Readiness".
 5. INTERRUPTION · A rope slam freezes mid-air (speed ramp); whip-pan to the capsule on a chalked plate. Bridge: "3-in-1 Performance Formula".
 6. CONTRAST SPLIT · Left: a calendar of crossed-out "plan around it" notes; right: the same man laughing at a terrace dinner, shoulder-up, clothed. Bridge: "Be Ready When She Is Ready".
-7. ABSURD ESCALATION · A stopwatch, a kitchen timer and a phone alarm ring louder and louder on a workbench (no readable screens); one calloused hand sweeps them into a drawer, leaving the bottle. Bridge: "Supports Confidence + Control".
+7. ABSURD ESCALATION · A stopwatch, a kitchen timer and a phone alarm ring louder and louder on a workbench (no readable screens); one calloused hand sweeps them into a drawer, leaving the bottle. Bridge: "Encourages Confidence + Control".
 8. STREET · At a gym door: "What does ready look like?" Pronoun-free answers, bible lines only. Bridge: "When It’s Go Time, Be Ready" (never with a time).

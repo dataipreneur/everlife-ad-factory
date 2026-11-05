@@ -7,7 +7,7 @@ Why it works: the buyer sees himself between sets. Men: hardcore (`../mens-direc
 
 ## 6A — Hardcore gym (men)
 - **Looks like:** a rugged, tattooed lifter 25–55, shirtless or in a stringer, chalked hands on a loaded bar under hard light; a slow
-  set, then the breath between sets; the vial on the plate or in his hand toward the lens. "Supports Mobility."
+  set, then the breath between sets; the vial on the plate or in his hand toward the lens. "Maintains Mobility."
 - **Guardrails:** the product is never used; no competition posing, no mirror selfie, no body comparison.
 - **Finishing:** `default` (house) or `tiktok`.
 

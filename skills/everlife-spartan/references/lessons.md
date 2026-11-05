@@ -44,7 +44,7 @@ Spartan Stack risks to watch (carried from BPC-157, an ingredient and the templa
 - **Any "peptide vial" prompt invites a syringe, needle, pen or droplets.** Every prompt says "the vial is a still object; no syringe,
   needle, pen, dropper, droplets or injecting anywhere" and QA checks every frame. One syringe = reject, no exceptions (global Hard NO).
 - **"Recovery" copy drifts to cure talk** ("heals", "repairs", "reduces inflammation", "pain"): only the lines in `product-bible.md`
-  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). "Supports Connective Tissue Repair" is the one repair line, exact wording only;
+  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). "Aids Connective Tissue Repair" is the one repair line, exact wording only;
   "Supports Healthy Inflammatory Balance" (KPV's benefit) is held: it sits on the Wolverine page (asked Justin).
 - **Men must look HARDCORE (Mitansh, 2026-10-29: "extremely masculine, gym, barbells, bodybuilders with tattoos")**: the Sermorelin
   "not bodybuilders" rule does not apply here. Use `mens-direction.md`; the only body rules left are no before/after, no body comparison,

@@ -4,7 +4,7 @@ Library folders: Clinical-Research · Trustpilot Reviews · Open Letter · Artic
 Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; desire support is a category where trust matters more than hype.
 
 ## 2A — Clinician moment
-- **Looks like:** a calm clinician 40–60 in a bright consult room, shoulder-up, the product on the desk. Explains ONE mechanism line (the bible's "Supports Desire + Physical Response", with the combo named together; never one ingredient's action) and "Doctor prescribed, shipped free from the pharmacy".
+- **Looks like:** a calm clinician 40–60 in a bright consult room, shoulder-up, the product on the desk. Explains ONE mechanism line (the bible's "Promotes Desire + Physical Response", with the combo named together; never one ingredient's action) and "Doctor prescribed, shipped free from the pharmacy".
 - **Guardrails:** an AI clinician → the verbatim disclaimer covers it (AI depiction); no "clinically proven", no "treatment for low libido".
 - **Finishing:** `editorial` (video) or `finish_image.py --layout letter/article` (static).
 

@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793896982-b7dc (branch `bible-sync-6466`; originals in `_originals/2026-11-05/bible-sync-6466/`)
+Priestley: "sync the bible first" (before the team's next patch). Justin moved the live bible from …215f to …6466; 25 product sections changed, the Standards did not. Restora-Z untouched (its sleep benefit lines changed to Promotes / Encourages: needs the owner's OK). All 15 product disclaimers still match.
+- **Quick-hit benefit verbs (~113 lines):** "Supports X" became Promotes / Aids / Encourages / Maintains / Fuels / Reinforces across the products. Every line carrying the old wording in the 14 skills was replaced word for word (bpc-157, epithalon, ghk-cream, glp-1, lovara, mots-c, nad, pt-141, sermorelin-ghk, sermorelin, spark, spartan, wolverine, titan-rx; 0 old lines left outside banners). ⚠ Jeremy to confirm the stronger verbs ("Fuels", "Reinforces Tendons + Ligaments").
+- **BPC-157:** 12 headlines now approved; offer and CTA "Save Up to 40%"; "Build Your Recovery Plan" / "Get Back to Moving" gone. **MOTS-c:** offer 40% now in the bible (CTA "Support Your Metabolism" gone). TB-500 (no skill) got the same 40%.
+- **GLP-1:** the headline pool was replaced (15 new, several pending). **GHK-Cu Cream:** 16 headlines (was 6) and new direction notes. **Sermorelin GHK Men:** new line "Aids Exercise Recovery".
+- **Titan-Rx:** heading renamed "Titan-rx" → "Titan-Rx" (`product.json` bible_section fixed); headlines 1, 2, 5, 6 no longer pending and 12 no longer weak; offer 49% no longer VERIFY CURRENT. ⚠ Four of those headlines name "ED": the gates' no-disease-claims rule still applies, Jeremy to confirm.
+- Banners "Bible sync 1793896982-b7dc" on the 14 product-bible pages. The headline tables on the BPC-157, GHK-Cream, GLP-1 and Titan-Rx pages are NOT rewritten: the banner says the bible copy wins.
+- Gates + global rules: Quick-hit verbs note; Known gaps updated.
+
 ## 2026-11-05 — apply_patch.py: Windows (CRLF) copies (branch `patch-crlf`)
 Ron's Windows PC: the real patch `2800e8d → 978d9d0` refused with 21 false "conflicts" because the Windows zip installs text files as CRLF while the patch checksums are LF.
 - `core/scripts/apply_patch.py` compares text files line-ending neutral (binary files untouched), and when it replaces a file that uses CRLF it writes CRLF, so the next patch still matches. VERSION keeps its line endings too. The patch zip is unchanged; `make_patch.py` is unchanged.

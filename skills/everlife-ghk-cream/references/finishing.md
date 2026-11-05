@@ -38,7 +38,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["GHK PEPTIDE CREAM BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "PEPTIDE SKIN SUPPORT",
- "ingredients": [["COLLAGEN","Supports Collagen + Elastin"],["TEXTURE","Supports Smoother-Looking Texture"],["TONE","Supports a Brighter, More Even-Looking Tone"]],
+ "ingredients": [["COLLAGEN","Supports Collagen + Elastin"],["TEXTURE","Supports Smoother-Looking Texture"],["TONE","Encourages a Brighter, More Even-Looking Tone"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "GHK Peptide Cream by Everlife."}
 ```
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, render, name casing,

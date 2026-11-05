@@ -17,7 +17,7 @@ No Epithalon winners or reference ads yet (2026-11-02). Hooks: `hook-bank.md`.
 2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free ("Epithalon by Everlife." + a ✅ line; no headline is
    approved yet, ⏳ H3/H4 only with the user's OK).
 3. **Visual element / reveal, 5–9 s:** the real vial, label to camera, as a still object on a surface or held by the vial body.
-4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line ("Supports Healthy Aging", "Supports Oxidative Stress Defense"),
+4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line ("Promotes Healthy Aging", "Aids Oxidative Stress Defense"),
    "Doctor prescribed", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear ✅ CTA. Spoken lines finish by ~12 s.
 
@@ -25,7 +25,7 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "Ep
 
 ## Copy rules
 - Headlines, benefits, CTAs: only `product-bible.md` (✅ lines; ⏳/⚠ only with the user's OK). Mechanism first, then benefit:
-  "Supports Oxidative Stress Defense" leads, then "Supports Healthy Aging" (both ✅). Never "this makes you younger".
+  "Aids Oxidative Stress Defense" leads, then "Promotes Healthy Aging" (both ✅). Never "this makes you younger".
 - **No sleep, rest, night, overnight, "restorative", "sleep-wake" words** (both sleep benefits are ❌). No "anti-aging", "reverse",
   "younger", "turn back the clock", "repair", "boost"; no DNA or telomere claims (B3 ⚠ only with an OK); no disease words; no timing promises.
 - No "I"/"my", no testimonials, no "Are you…?". No "clinically" for the product, no prices, **no offer** (bible: [PLACEHOLDER]).

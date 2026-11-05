@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793890033-215f) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793896982-b7dc) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -271,10 +271,10 @@ More benefits & claims on page 8
 
 ### Quick-hit benefits
 - Supports Lean Muscle Definition
-- Supports Metabolism + Body Tone
+- Promotes Metabolism + Body Tone
 - Supports Energy + Stamina
 - Supports Natural Growth Hormone Activity
-- Supports Strength + Vitality
+- Fuels Strength + Vitality
 - 2x-Strength Growth Hormone Support
 
 ### CTAs
@@ -326,6 +326,8 @@ Women 35–65+ pursuing lean muscle, energy and graceful aging.
 
 ### Creative direction
 - Frame around muscle, fitness and performance — not the bedroom.
+- Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.
+- Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing.
 - “High circulation” is not an approved benefit.
 - Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
 
@@ -345,10 +347,10 @@ More benefits & claims on page 10
 
 ### Quick-hit benefits
 - Supports Lean Muscle Definition
-- Supports Metabolism + Body Tone
+- Promotes Metabolism + Body Tone
 - Supports Energy + Stamina
 - Supports Natural Growth Hormone Activity
-- Supports Strength + Vitality
+- Fuels Strength + Vitality
 - Supports Toned Strength After 35
 
 ### CTAs
@@ -418,13 +420,13 @@ More headlines on page 12
 
 ### Quick-hit benefits
 - Supports Natural Growth Hormone Production
-- Supports Lean Muscle + Performance
+- Promotes Lean Muscle + Performance
 - Promotes Youthful-Looking Skin & Thicker Hair
-- Supports Daily Energy + Healthy Blood Flow
+- Fuels Daily Energy + Healthy Blood Flow
 - 3-in-1 Peptide Support
 - Supports Visceral-Fat Metabolism & Body Tone [Hard NO conflict]no targeted fat loss or body-composition claims
 - Supports Workout Pumps + Endurance
-- Supports Exercise Recovery
+- Aids Exercise Recovery
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -532,6 +534,8 @@ Women 35–60 who want tone, strength and skin glow from one formula.
 - Benefit scope: skin, lean muscle, growth hormone drive, hair thickening (male).
 - Ingredient list reads Sermorelin, GHK, Citrulline.
 - Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
+- Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.
+- Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing.
 
 A 3-in-1 formula combining growth-hormone support, skin renewal, circulation, muscle, and metabolism benefit territories.
 
@@ -553,13 +557,13 @@ More headlines on page 15
 
 ### Quick-hit benefits
 - Supports Natural Growth Hormone Production
-- Supports Lean Muscle + Performance
+- Promotes Lean Muscle + Performance
 - Promotes Youthful-Looking Skin & Thicker Hair
-- Supports Daily Energy + Healthy Blood Flow
+- Fuels Daily Energy + Healthy Blood Flow
 - 3-in-1 Peptide Support
 - Supports Visceral-Fat Metabolism & Body Tone [Hard NO conflict]no targeted fat loss or body-composition claims
 - One Daily Tablet for Muscle, Skin + Hair
-- Supports Firmer, Glowing Skin From Within
+- Promotes Firmer, Glowing Skin From Within
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -674,12 +678,12 @@ More benefits & claims on page 18
 
 ### Quick-hit benefits
 - Supports Desire + Sensitivity
-- Supports Comfort + Responsiveness
+- Promotes Comfort + Responsiveness
 - Supports Intimate Readiness
-- Supports Healthy Circulation
+- Promotes Healthy Circulation
 - 3-in-1 Intimacy Support
 - Modern Intimacy Support
-- Supports Desire in Mind + Body
+- Encourages Desire in Mind + Body
 - Supports Pleasure + Sensitivity
 
 ### CTAs
@@ -766,8 +770,8 @@ More headlines on page 20
 ### Quick-hit benefits
 - Supports Falling + Staying Asleep
 - Helps Reduce Nighttime Wake-Ups
-- Supports Restorative Sleep
-- Supports Nighttime Calm
+- Promotes Restorative Sleep
+- Encourages Nighttime Calm
 - 3-in-1 Sleep Formula
 - Supports Clear-Headed Mornings
 - Supports Longer, Deeper Sleep
@@ -926,9 +930,9 @@ More headlines on page 24
 
 ### Quick-hit benefits
 - Supports Brain-Based Desire
-- Supports On-Demand Desire
+- Promotes On-Demand Desire
 - Non-Hormonal Desire Support
-- Supports Intimate Readiness
+- Encourages Intimate Readiness
 - Supports Central Desire Pathways
 
 ### CTAs
@@ -1007,9 +1011,9 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - Brain-Based Desire Support
 - Non-Hormonal Desire Support
 - On-Demand Desire Support
-- Supports Spontaneous Intimacy
+- Encourages Spontaneous Intimacy
 - 3-in-1: PT-141 + Apomorphine + Tadalafil
-- Supports Desire + Physical Response
+- Promotes Desire + Physical Response
 - Desire Support for Men + Women
 
 ### CTAs [Pending approval]
@@ -1044,23 +1048,36 @@ Women 30–55 who want a daily peptide step in their skincare routine.
 - Beauty and fitness positioning — lean and fit, never bodybuilding.
 - Core demo is the 40-year-old mom, same as GLP-1.
 - Palette: pinks, tans and beige. No oranges or greens.
+- Teach what a peptide skin cream actually does. GHK-Cu is a copper peptide that signals skin to support its own collagen and repair — say it plainly, never assume the viewer knows what “peptide” means.
+- Differentiate from ordinary moisturizers and serums: this works at the signal level (collagen, elastin, repair), not just surface hydration. Make the “why it’s different” explicit.
+- Pair each benefit with a quick reason-why for context (e.g. “copper peptides support the collagen skin makes less of with age”), not a bare claim.
 
 Topical peptide skin support focused on collagen, elastin, firmness, and the skin’s natural repair process.
 
 ### Headlines & hooks
-1. Firmer-Looking Skin Starts With Support
-2. Peptide-Powered Skin Support
-3. Glow Smarter With GHK Peptide Cream
-4. The Peptide Behind Skin Renewal
-5. Your Daily GHK Glow
-6. Healthy Skin Isn’t One Thing. It’s Everything. [Weak headline]
+1. Not a Moisturizer. A Skin-Repair Signal.
+2. The Copper Peptide Your Skin Has Been Missing.
+3. Collagen Fades With Age. GHK Helps Signal It Back.
+4. What Your Serum Misses, Copper Peptides Support.
+5. Skincare That Works at the Signal Level.
+6. One Peptide. Firmer, Smoother, Brighter-Looking Skin.
+7. Go Beyond Hydration — Support Real Renewal.
+8. Give Aging Skin a Reason to Bounce Back.
+9. The Peptide Behind Skin Renewal
+10. Why Copper Peptides Are Skincare’s Quiet Upgrade.
+11. Firmer-Looking Skin Starts With Support
+12. Glow Smarter With GHK Peptide Cream
+13. Peptide-Powered Skin Support
+14. The Difference a Copper Peptide Makes.
+15. Your Daily GHK Glow
+16. Healthy Skin Isn’t One Thing. It’s Everything.
 
 ### Quick-hit benefits
 - Supports Collagen + Elastin
 - Promotes Firmer, More Youthful-Looking Skin
-- Supports Skin’s Natural Repair Process
+- Promotes Skin’s Natural Repair Process
 - Supports Smoother-Looking Texture
-- Supports a Brighter, More Even-Looking Tone
+- Encourages a Brighter, More Even-Looking Tone
 
 ### CTAs
 - CTA: Upgrade Your Skin Routine
@@ -1116,12 +1133,12 @@ More headlines on page 28
 
 ### Quick-hit benefits
 - Supports Natural Testosterone
-- Supports Lean Muscle + Strength
+- Promotes Lean Muscle + Strength
 - Supports Energy + Stamina
-- Supports Drive + Motivation
+- Fuels Drive + Motivation
 - Supports Libido + Focus
 - Easy Oral Testosterone Support
-- Supports Confidence + Better Sleep
+- Encourages Confidence + Better Sleep
 
 ### CTAs
 - CTA: Explore Enclomiphene
@@ -1211,13 +1228,13 @@ More headlines on page 30
 
 ### Quick-hit benefits
 - Supports Cellular Energy + Vitality
-- Supports Mental Clarity + Focus
-- Supports Recovery + Antioxidant Defense
+- Promotes Mental Clarity + Focus
+- Aids Recovery + Antioxidant Defense
 - Supports Healthy Aging
 - 3-in-1 Cellular Formula
 - Supports DNA Repair
 - NAD+, Glutathione + B12 in One Dose
-- Supports Steady Energy + Faster Recovery
+- Fuels Steady Energy + Faster Recovery
 
 ### CTAs
 - CTA: Recharge Your Cells
@@ -1301,7 +1318,7 @@ More headlines on page 32
 - Supports DNA Repair
 - Promotes Healthy Aging
 - Supports Cellular Longevity
-- Supports All-Day Energy + Focus
+- Fuels All-Day Energy + Focus
 - Supports Bounce-Back From Burnout
 
 ### CTAs
@@ -1362,26 +1379,33 @@ Active adults 30–55 focused on mitochondrial support, energy and endurance.
 All audiences
 Metabolic peptide support focused on cellular energy, mitochondrial function, glucose metabolism and endurance.
 
-### Headlines & hooks [Pending approval]
-1. Metabolism Starts Inside the Cell
-2. Support the Engine Behind Energy
-3. Cellular Energy Meets Metabolic Health
-4. Give Metabolism More Cellular Support
-5. Train the Metabolism, Not the Hype
-
-Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
+### Headlines & hooks
+1. Energy That Lasts the Whole Day.
+2. Steady Energy Without the Crash.
+3. Go Longer. Recover Quicker.
+4. More Energy, Down to the Cellular Level.
+5. Train Longer. Fatigue Later.
+6. Fuel Your Mitochondria. Feel the Difference.
+7. Endurance for the Long Haul.
+8. Metabolism Starts Inside the Cell
+9. Power Your Cells. Power Your Day.
+10. Train the Metabolism, Not the Hype
+11. Cellular Energy Meets Metabolic Health
+12. Support the Engine Behind Energy
+13. Give Metabolism More Cellular Support
+14. Support Your Metabolism From the Inside Out.
+15. Metabolic Support, Backed by Your Mitochondria.
 
 ### Quick-hit benefits
 - Supports Mitochondrial Energy
-- Supports Healthy Metabolism
+- Promotes Healthy Metabolism
 - Supports Glucose Metabolism
-- Supports Endurance
+- Fuels Endurance
 
 ### CTAs
 - CTA: Explore MOTS-c
-- CTA: [PLACEHOLDER] Save Up to X%
+- CTA: Save Up to 40%
 - CTA: Fuel Cellular Energy
-- CTA: Support Your Metabolism
 - CTA: Start Metabolic Support
 - CTA: MOTS-c for $5.75/day
 - CTA: Ships Free From Pharmacy
@@ -1391,7 +1415,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] Current % savings / price
+- Save up to 40%
 - [PLACEHOLDER] Product-specific offer
 
 ### Hard NOs
@@ -1401,7 +1425,7 @@ Ad disclaimerAI-generated depictions and simulated portrayals used for illustrat
 Landing pageCurrent LP: [PLACEHOLDER]Last verified [PLACEHOLDER]
 Sexual performance
 
-## Titan-rx
+## Titan-Rx
 
 ### Who it's for
 Men 40–65+ who want daily performance support without planning around a pill.
@@ -1410,34 +1434,34 @@ Men 40–65+ who want daily performance support without planning around a pill.
 - Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
 - Headlines and/or benefits must make clear, fast, who it’s for and what it does: Titan-Rx is daily sexual-performance / ED support for men. A viewer should grasp the category in under two seconds — never leave it as vague “performance.”
 
-Titan-RX
+Titan-Rx
 A once-daily 3-in-1 men’s performance formula focused on circulation, responsiveness, stamina, and consistent readiness.
 
 ### Headlines & hooks
-1. Confidence for Men With ED [Pending approval]
-2. Daily ED Support, Doctor Prescribed [Pending approval]
+1. Confidence for Men With ED
+2. Daily ED Support, Doctor Prescribed
 3. Be Ready When She Is Ready
 4. When It’s Go Time, Be Ready
-5. Erectile Health, Handled [Pending approval]
-6. 3-in-1 Daily ED Treatment [Pending approval]
+5. Erectile Health, Handled
+6. 3-in-1 Daily ED Treatment
 7. Your Key to a Long Lasting Night
-8. Real Men Take TitanRx
+8. Real Men Take Titan-Rx
 9. Good for You. Great for Her.
 10. An Upgrade She’ll Notice
-11. Confidence. Control. Titan Rx.
-12. Don’t Sit This One Out [Weak headline]
+11. Confidence. Control. Titan-Rx.
+12. Don’t Sit This One Out
 
 More headlines on page 35
 
 ### Quick-hit benefits
 - Supports Daily Performance
-- Supports Circulation + Firmness
+- Promotes Circulation + Firmness
 - Supports Stamina + Responsiveness
 - Supports Everyday Readiness
 - 3-in-1 Performance Formula
 - Helps Maintain Firmness During Intimacy
 - Once-Daily, No Timing Required
-- Supports Confidence + Control
+- Encourages Confidence + Control
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent
@@ -1446,7 +1470,7 @@ More headlines on page 35
 - Doctor-guided prescription
 
 ### Offers & conversion
-- Save up to 49% [VERIFY CURRENT]
+- Save up to 49%
 
 ### CTAs
 - CTA: Get Performance Support
@@ -1519,9 +1543,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Visceral Fat Reduction [Hard NO conflict]no targeted fat loss or body-composition claims
-- Supports Lean Muscle Preservation
+- Promotes Lean Muscle Preservation
 - Supports Growth Hormone + IGF-1 Pathways
-- Supports Metabolism + Energy
+- Fuels Metabolism + Energy
 - Supports Strength + Performance
 - Supports Lean Mass After 40
 - Supports Peak Performance as You Age
@@ -1565,17 +1589,24 @@ All audiences
 Weight-management support focused on appetite regulation, reduced food noise, metabolic health, and predictable pricing.
 
 ### Headlines & hooks
-1. Stop Fighting Hunger All Day
-2. Quiet the Cravings. Take Back Control.
-3. Break Through Weight-Loss Plateaus.
-4. When Dieting Isn’t Enough
-5. Less Food Noise. More Control.
-6. Up to 20% Weight Loss
-7. Drop the Weight and Keep It Off
-8. Turn Down the Food Noise
-9. Make Hunger Feel Manageable Again
-10. Take Control of Your Appetite
-11. Ready to Make Progress Again?
+1. Why Willpower Was Never the Problem.
+2. Still Thinking About Your Next Meal?
+3. Hungry All the Time? There’s a Reason.
+4. What If Hunger Wasn’t Running the Show?
+5. Quiet the Cravings. Take Back Control.
+6. Stop Fighting Hunger All Day
+7. The Food Noise Stops Here.
+8. Less Food Noise. More Control.
+9. Tried Everything Else? Start Here.
+10. Your Appetite, Finally on Your Side.
+11. Turn Down the Food Noise
+12. Take Control of Your Appetite
+13. Imagine Not Fighting Cravings All Day.
+14. When Dieting Isn’t Enough
+15. Make Hunger Feel Manageable Again
+16. A Calmer Appetite Changes Everything.
+17. Drop the Weight and Keep It Off
+18. Break Through Weight-Loss Plateaus.
 
 More headlines on page 38
 
@@ -1583,7 +1614,7 @@ More headlines on page 38
 - Supports Appetite Regulation
 - Helps Reduce Food Noise
 - Supports Healthy Weight Management
-- Supports Healthy Metabolism
+- Promotes Healthy Metabolism
 - One Price, No Surprise Increases
 - Provider-Guided From Home
 
@@ -1611,26 +1642,6 @@ More headlines on page 38
 Ad disclaimerAI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.
 Landing pagehttps://everlifemd.com/glp1/fb-v2Last verified Nov. 3, 2026
 
-### Headline bank
-GLP-1
-12 more headlines beyond the ones on the product page.
-
-### Headlines, Benefits & Claims
-
-### Headlines
-- Break the Plateau. Build Momentum.
-- How Many Weeks to Reach Your Goal?
-- Your Weight-Loss Reset Starts Here
-- Weight-Loss Support That Fits Your Life
-- A Smarter Path to Your Goal
-- Your Goal. Your Plan. Provider Guided.
-- Progress Without the Guesswork
-- One Simple Plan. One Clear Price.
-- Real Support for Your Weight-Loss Journey
-- Your Next Chapter Starts Lighter
-- Get Back in Control of Your Routine [Weak headline]
-- Built for Sustainable Progress [Weak headline]
-
 ### More approved benefits
 - Up to 20% Weight Loss
 - Helps Control Cravings
@@ -1651,29 +1662,33 @@ Active adults 30–65+ recovering from joint, tendon or gut issues.
 
 Peptide support focused on tissue repair, recovery, mobility, connective tissue, and gut health.
 
-### Headlines & hooks [Pending approval]
-1. Bounce Back From Tough Training
-2. Recover Faster. Move Better.
-3. Support for Joints, Tendons + Gut
-4. Get Back to Moving
-
-Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
+### Headlines & hooks
+1. Recover Faster. Move Better.
+2. Less Downtime. More Training Days.
+3. Train Hard. Recover Harder.
+4. Bounce Back Faster After Every Session.
+5. Support Joints, Tendons and Gut — in One.
+6. Recover Like You Trained for It.
+7. Bounce Back From Tough Training
+8. Nagging Tweak? Give Your Body Backup.
+9. For Joints, Tendons and the Day After Leg Day.
+10. The Recovery Peptide Built for Heavy Wear.
+11. Your Body Repairs. BPC-157 Backs It Up.
+12. Support for Joints, Tendons + Gut
 
 ### Quick-hit benefits
 - Supports Joints + Tendons
-- Supports Faster Recovery
-- Supports Connective Tissue Repair
+- Promotes Faster Recovery
+- Aids Connective Tissue Repair
 - Supports Mobility + Flexibility
 - Supports Gut Lining Health
-- Supports Faster Bounce-Back After Training
+- Encourages Faster Bounce-Back After Training
 - Supports Joints, Tendons + Gut Lining
 
 ### CTAs
 - CTA: Support Your Recovery
 - CTA: Explore BPC-157
-- CTA: [PLACEHOLDER] Save Up to X%
-- CTA: Build Your Recovery Plan
-- CTA: Get Back to Moving
+- CTA: Save Up to 40%
 - CTA: BPC-157 for $5.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1682,7 +1697,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] current % savings / price
+- Save up to 40%
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -1698,29 +1713,35 @@ Active adults 25–55 recovering from soft-tissue strain.
 [Approved by JL]
 Recovery peptide support focused on soft tissue, muscle, tendons, ligaments, mobility, and connective tissue repair.
 
-### Headlines & hooks [Pending approval]
-1. Stay in the Game Longer
-2. Keep Moving. Keep Training.
-3. Support Soft Tissue Recovery
-4. Recovery Support for Active Lives
-
-Proposed headlines written to this product’s positioning and Hard NOs. Replace with approved copy when available.
+### Headlines & hooks
+1. Push Harder. Heal Smarter.
+2. When Recovery Can't Wait.
+3. Back to Training Before the Soreness Wins.
+4. Keep Moving. Keep Training.
+5. Don't Let Recovery Be the Bottleneck.
+6. Tough Workouts Deserve Real Recovery.
+7. Recovery That Keeps Up With You.
+8. Made for Bodies That Take a Beating.
+9. Built to Keep You in the Game.
+10. Stay in the Game Longer
+11. Keep the Streak Alive.
+12. For the Wear Training Leaves Behind.
+13. Support Soft Tissue Recovery
+14. Recovery Support for Active Lives
 
 ### Quick-hit benefits
 - Supports Soft Tissue Health
-- Supports Muscle Recovery
+- Promotes Muscle Recovery
 - Supports Tendons + Ligaments
-- Supports Healthy Range of Motion
+- Maintains Healthy Range of Motion
 - Supports Connective Tissue Repair
 - Supports Staying Active Longer
-- Supports Soft Tissue Recovery After Workouts
+- Aids Soft Tissue Recovery After Workouts
 
 ### CTAs
 - CTA: Support Your Recovery
 - CTA: Explore TB-500
-- CTA: [PLACEHOLDER] Save Up to X%
-- CTA: Build Your Recovery Plan
-- CTA: Get Back to Moving
+- CTA: Save Up to 40%
 - CTA: TB-500 for $5.75/day
 - CTA: Ships Free From Pharmacy
 
@@ -1729,7 +1750,7 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 - Over 100,000 happy customers
 
 ### Offers & conversion
-- [PLACEHOLDER] current % savings / price
+- Save up to 40%
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -1755,12 +1776,12 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Everyday Comfort
-- Supports Healthy Inflammatory Response
-- Supports Rest + Recovery
+- Promotes Healthy Inflammatory Response
+- Aids Rest + Recovery
 - Supports Immune Balance
 - Supports Daily Vitality
 - Low-Dose, Once-Daily Support
-- Supports Whole-Body Balance
+- Encourages Whole-Body Balance
 
 ### CTAs
 - CTA: Explore LDN
@@ -1806,9 +1827,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Restorative Sleep
-- Supports Healthy Aging
+- Promotes Healthy Aging
 - Supports DNA + Cellular Health
-- Supports Oxidative Stress Defense
+- Aids Oxidative Stress Defense
 - Supports Healthy Sleep-Wake Cycles
 
 ### CTAs
@@ -1852,12 +1873,12 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Visceral Fat Reduction [Hard NO conflict]no targeted fat loss or body-composition claims
-- Supports Lean Muscle
+- Promotes Lean Muscle
 - Supports Natural Growth Hormone Release
 - Supports Healthy Body Recomposition
-- Supports Sleep + Recovery
+- Aids Sleep + Recovery
 - Two-Peptide Growth Hormone Support
-- Supports Deeper Recovery Between Workouts
+- Encourages Deeper Recovery Between Workouts
 
 ### CTAs
 - CTA: Explore the Growth Hormone Stack
@@ -1903,9 +1924,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Joints + Ligaments
-- Supports Connective Tissue Repair
-- Supports Muscle Recovery
-- Supports Mobility + Range of Motion
+- Aids Connective Tissue Repair
+- Promotes Muscle Recovery
+- Maintains Mobility + Range of Motion
 - Supports Gut Lining Health
 - Three-Peptide Recovery Stack
 - Supports Training Harder, More Often
@@ -1975,13 +1996,13 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - 2-in-1 Recovery Support
-- Supports Tendons + Ligaments
+- Reinforces Tendons + Ligaments
 - Supports Gut Lining Health
-- Supports Mobility
+- Maintains Mobility
 - Supports Healthy Inflammatory Balance
-- Supports Tissue Repair
+- Aids Tissue Repair
 - Promotes Joint Comfort
-- Supports Muscle Recovery
+- Promotes Muscle Recovery
 - Promotes Mobility + Flexibility
 - 2-Peptide Whole-Body Recovery
 - Supports Joints, Gut + Mobility in One Stack
@@ -2036,9 +2057,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - 4-in-1 Recovery Support
-- Supports Tissue + Collagen Health
-- Supports Gut Integrity
-- Supports Skin Repair
+- Promotes Tissue + Collagen Health
+- Maintains Gut Integrity
+- Aids Skin Repair
 - Supports Healthy Inflammatory Balance
 - Supports Recovery Inside + Glow Outside
 - 4-Peptide Repair + Skin Support
@@ -2087,10 +2108,10 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Collagen + Skin Health
-- Supports Healthy Aging
-- Supports Restorative Sleep
+- Promotes Healthy Aging
+- Encourages Restorative Sleep
 - Supports DNA + Cellular Health
-- Supports Oxidative Stress Defense
+- Aids Oxidative Stress Defense
 - Supports Skin Today + Healthy Aging Tomorrow
 - Two-Peptide Skin + Longevity Support
 
@@ -2138,9 +2159,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Collagen + Firmness
-- Supports Smoother-Looking Texture
+- Promotes Smoother-Looking Texture
 - Supports Skin Barrier Health
-- Supports Tissue Renewal
+- Aids Tissue Renewal
 - Supports Gut + Skin Health
 
 ### CTAs

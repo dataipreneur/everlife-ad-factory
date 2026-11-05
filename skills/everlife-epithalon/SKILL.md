@@ -28,7 +28,7 @@ compliant ads in a local folder. **You drive the session with questions** (the `
 
 Golden rules, all non-negotiable:
 1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the ✅ lines of the
-   pre-screen (today: "Supports Healthy Aging", "Supports Oxidative Stress Defense", the five CTAs, the proof), every Hard NO;
+   pre-screen (today: "Promotes Healthy Aging", "Aids Oxidative Stress Defense", the five CTAs, the proof), every Hard NO;
    ❌ never; ⏳ headlines and the ⚠ "Supports DNA + Cellular Health" only after the user's explicit OK per line, flagged for Jeremy.
    No headline is approved yet: the name "Epithalon" big + a ✅ benefit carries the design. Fresh wording is Tier B (max 2 per batch,
    PROPOSED, Jeremy).
@@ -97,7 +97,7 @@ intro. The transcript QA fails any raw without the name or "by Everlife". Static
 
 **Round 2 — ONE AskUserQuestion, 4 questions:**
 1. **Audience:** "Both (half each) (Recommended)" / "Men 40–65" / "Women 40–65".
-2. **Angle:** "Mix (Recommended)" / "Healthy aging, plainly" ("Supports Healthy Aging") / "Cellular defense" ("Supports Oxidative
+2. **Angle:** "Mix (Recommended)" / "Healthy aging, plainly" ("Promotes Healthy Aging") / "Cellular defense" ("Supports Oxidative
    Stress Defense") / "Longevity, simply" ("Start Longevity Support").
 3. **How bold on copy:** "✅ benefit lines as headlines (Recommended)" / "A pending headline (H3/H4; I OK each, flagged for Jeremy)" /
    "Bold: one ⚠ or PROPOSED line (I OK it)".

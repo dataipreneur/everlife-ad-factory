@@ -1,5 +1,6 @@
 # Titan-Rx — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Circulation + Firmness" → "Promotes Circulation + Firmness"; "Supports Confidence + Control" → "Encourages Confidence + Control". **This product:** The bible heading is now "Titan-Rx" (spelled the same everywhere). Headlines 1, 2, 5 and 6 are no longer marked Pending approval and headline 12 is no longer marked Weak; the offer "Save up to 49%" is no longer marked VERIFY CURRENT. ⚠ Those four headlines name ED ("Confidence for Men With ED", "Daily ED Support, Doctor Prescribed", "Erectile Health, Handled", "3-in-1 Daily ED Treatment"): the gates' no-disease-claims rule still applies, so Jeremy must confirm before any of them is used.
 > **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Headlines and/or benefits must make clear, fast, who it is for and what it does: Titan-Rx is daily sexual-performance support for men; a viewer should grasp the category in under two seconds, never a vague "performance". ⚠ The bible's own wording says "ED support": do not write "ED" or any disease word in ad copy until Jeremy approves it. Every ad has a CTA.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. **Never shirtless talent, male or female, on this product** (sexual-health product: bible 2026-11-04). **This product:** The CTA "Find Your Plan" was removed from the bible. (The 49% offer is still [VERIFY CURRENT].)
 
@@ -62,13 +63,13 @@
 | Don’t Sit This One Out | headlines | Weak (bible) | Avoid unless asked |
 | Keep the Momentum Going | headlines | Weak (bible) | Avoid unless asked |
 | Supports Daily Performance | benefits | ✅ | Structure-function, "supports" |
-| Supports Circulation + Firmness | benefits | ✅ | Mechanism (circulation) first, then the benefit |
+| Promotes Circulation + Firmness | benefits | ✅ | Mechanism (circulation) first, then the benefit |
 | Supports Stamina + Responsiveness | benefits | ✅ | |
 | Supports Everyday Readiness | benefits | ✅ | |
 | 3-in-1 Performance Formula | benefits | ✅ | The formula line; with the ingredients, all three, this order |
-| Helps Maintain Firmness During Intimacy | benefits | ✅ | Approved quick-hit; pair with a mechanism line ("Supports Circulation + Firmness") in the same ad when space allows |
+| Helps Maintain Firmness During Intimacy | benefits | ✅ | Approved quick-hit; pair with a mechanism line ("Promotes Circulation + Firmness") in the same ad when space allows |
 | Once-Daily, No Timing Required | benefits | ✅ | Dosing fact, not a timing promise; the product's main difference |
-| Supports Confidence + Control | benefits | ✅ | |
+| Encourages Confidence + Control | benefits | ✅ | |
 | Helps Sustain Intimate Performance | more_benefits | ✅ | |
 | Supports Blood Flow When It Counts | more_benefits | ✅ | The bible's reworded line; mechanism-led |
 | Helps Improve Consistency During Intimacy | more_benefits | ✅ | |
@@ -98,7 +99,7 @@
 **Clean pools (✅ only):**
 - Headlines (Tier A): Be Ready When She Is Ready · When It’s Go Time, Be Ready · Good for You. Great for Her. · An Upgrade She’ll
   Notice (+ the ✅ benefit lines below used as headlines).
-- Benefits: Supports Daily Performance · Supports Circulation + Firmness · Supports Stamina + Responsiveness · Supports Everyday
+- Benefits: Supports Daily Performance · Promotes Circulation + Firmness · Supports Stamina + Responsiveness · Supports Everyday
   Readiness · 3-in-1 Performance Formula · Helps Maintain Firmness During Intimacy · Once-Daily, No Timing Required · Supports
   Confidence + Control · Helps Sustain Intimate Performance · Supports Blood Flow When It Counts · Helps Improve Consistency During
   Intimacy · Helps Reduce Interruptions During Intimacy.
@@ -143,13 +144,13 @@ More headlines on page 35
 
 ### Quick-hit benefits
 - Supports Daily Performance
-- Supports Circulation + Firmness
+- Promotes Circulation + Firmness
 - Supports Stamina + Responsiveness
 - Supports Everyday Readiness
 - 3-in-1 Performance Formula
 - Helps Maintain Firmness During Intimacy
 - Once-Daily, No Timing Required
-- Supports Confidence + Control
+- Encourages Confidence + Control
 
 ### Proof & value props
 - Trustpilot rated 4.9 Excellent

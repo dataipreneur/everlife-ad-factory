@@ -1,5 +1,6 @@
 # PT-141 — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports On-Demand Desire" → "Promotes On-Demand Desire"; "Supports Intimate Readiness" → "Encourages Intimate Readiness".
 > **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Always feature the HIGHEST discount whichever form is pictured: **"Save Up to 59%"** on every PT-141 ad, a nasal-spray ad too (the per-form 23% / 59% rule from 2026-11-04 is gone). The CTA "Save Up to 23%" was removed from the bible. Every ad has a CTA.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. **Never shirtless talent, male or female, on this product** (sexual-health product: bible 2026-11-04). **This product:** CTA is now **"Save Up to 59%"**; "Support Your Spark" and "Find Your Plan" were removed. Offers by form: **nasal spray Save Up to 23%, sublingual Save Up to 59%**; a creative showing both forms uses 59%, nasal spray alone 23% (Standards 03 · 09).
 
@@ -94,9 +95,9 @@ Spark, on Your ScheduleWeak headline
 More headlines on page 22
 Quick-hit benefits
 - —Supports Brain-Based Desire
-- —Supports On-Demand Desire
+- —Promotes On-Demand Desire
 - —Non-Hormonal Desire Support
-- —Supports Intimate Readiness
+- —Encourages Intimate Readiness
 - —Supports Central Desire Pathways
 CTAs
 - Support Your Spark
