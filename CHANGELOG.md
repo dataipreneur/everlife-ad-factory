@@ -2,6 +2,22 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Price-CTA plan: the product's "$/day" line on 10% of ads, enforced by code
+Why: the next Serm F batch (Slack, 5 Nov) had no "Sermorelin for $3.00/day" ad. The bible asks for the price line on 10% of ALL ads, but it was only
+a prose rule: the old step files said "never a $ price" (removed by PR #61) and nothing planned, tracked or enforced the 10%. PR #61 allowed the
+price CTA; this makes it happen.
+- `core/scripts/price_plan.py` (new): the plan. A batch gets round(10% x (ads so far + this batch)) minus price ads already made, from
+  `~/Everlife-Creative/price-ledger.jsonl` (per computer, like the proof ledger): 10 ads → 1; batches of 4 → 0, 1, 0, … so small batches still average
+  10%. The line is each product's `cta_price` from its bible.json, never typed. HOLD: Titan-Rx (offer [VERIFY CURRENT]) and Spark (CTA list
+  pending, Priestley's OK); Spartan has none. Video: `price_plan.py --product <id> --n 1 --kind video [--log]`.
+- `core/scripts/deal_worlds.py`: every slot has `cta_kind` (price / offer) and `cta`; the batch table has a CTA column with 💲 on the price slots;
+  `--log` records the batch in the price ledger. A seeded deal is unchanged apart from the new fields.
+- `core/hooks/batch_hook.py`: the gate refuses the price line on a slot not dealt it, and refuses a price slot that carries any other CTA. A
+  deal.json from before this change (no `cta_kind`) is not blocked.
+- Docs: `image-flow.md` (CTA rule + Deal row), `golden-rules.md` item 11, `video-team-rules.md` (price CTA on 10% of videos).
+- Tests: `core/tests/price_plan_test.py` (23 checks); `bible_pipeline_test.py` now deals the price slot before sending the price CTA.
+- No skill files, no bible text and no credits touched. Team: new full zip needed after merge (as for #61); `install.sh` unchanged.
+
 ## 2026-11-05 — Bible sync to 1793905953-bc2f (automatic: `bible_pipeline.py sync`)
 Justin moved the live bible from 1793897447-019b to 1793905953-bc2f. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
 
