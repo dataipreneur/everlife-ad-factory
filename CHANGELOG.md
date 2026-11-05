@@ -8,6 +8,7 @@ Priestley: "sync the bible first" (before the team's next patch). Justin moved t
 - **BPC-157:** 12 headlines now approved; offer and CTA "Save Up to 40%"; "Build Your Recovery Plan" / "Get Back to Moving" gone. **MOTS-c:** offer 40% now in the bible (CTA "Support Your Metabolism" gone). TB-500 (no skill) got the same 40%.
 - **GLP-1:** the headline pool was replaced (15 new, several pending). **GHK-Cu Cream:** 16 headlines (was 6) and new direction notes. **Sermorelin GHK Men:** new line "Aids Exercise Recovery".
 - **Titan-Rx:** heading renamed "Titan-rx" → "Titan-Rx" (`product.json` bible_section fixed); headlines 1, 2, 5, 6 no longer pending and 12 no longer weak; offer 49% no longer VERIFY CURRENT. ⚠ Four of those headlines name "ED": the gates' no-disease-claims rule still applies, Jeremy to confirm.
+- **…019b (last-minute):** the GLP-1 page's CTA is now "Save Up to 83%" and its offer "Up to 83% off (semaglutide); up to 70% off (tirzepatide)" (was 59%), which matches the highest-discount rule; the GLP-1 product-bible page was updated.
 - Banners "Bible sync 1793896982-b7dc" on the 14 product-bible pages. The headline tables on the BPC-157, GHK-Cream, GLP-1 and Titan-Rx pages are NOT rewritten: the banner says the bible copy wins.
 - Gates + global rules: Quick-hit verbs note; Known gaps updated.
 

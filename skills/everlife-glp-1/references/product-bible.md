@@ -1,6 +1,6 @@
 # GLP1 — creative bible (verbatim extract)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Healthy Metabolism" → "Promotes Healthy Metabolism". **This product:** The headline pool was replaced: 16 new headlines, none marked Pending approval in this version (an earlier version had nine pending), and the old ones are gone: read the list in `core/claude/creative-bible.md` (GLP1); never use a headline from the old tables below that is not in it.
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Healthy Metabolism" → "Promotes Healthy Metabolism". **This product:** CTA and offer are now **Save Up to 83%** / "Up to 83% off (semaglutide); up to 70% off (tirzepatide)" in the bible itself (version …019b; it was 59%). The headline pool was replaced: 16 new headlines, none marked Pending approval in this version (an earlier version had nine pending), and the old ones are gone: read the list in `core/claude/creative-bible.md` (GLP1); never use a headline from the old tables below that is not in it.
 > **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Always feature the HIGHEST discount: **"Save Up to 83%"** (semaglutide) on every GLP-1 ad, even when only tirzepatide is pictured. **New vial rule: show both vials (semaglutide + tirzepatide) by default; if only one vial is shown it must be tirzepatide; never show semaglutide on its own.** Every ad has a CTA.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** Offers by drug (Standards 03 · 09): **semaglutide Save Up to 83%, tirzepatide Save Up to 70%**; a creative showing both uses 83%; never one drug's % on the other. This replaces the page's older "Up to 59%"/"Save Up to 59%" lines. The CTA "Build Your Plan" was removed.
 
@@ -15,7 +15,7 @@
 - **Who:** adults 30–60 managing weight who want predictable pricing and clinician guidance ("All audiences").
 - **Bible creative direction:** "compounded" before semaglutide/tirzepatide always; "GLP-1" as the umbrella in headers and titles;
   **every ad says "one price" or "no surprise price increases"**.
-- **Offer:** Up to 59% off · One predictable price. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers ·
+- **Offer (bible …019b):** Up to 83% off (semaglutide); up to 70% off (tirzepatide); always feature 83% · One predictable price. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers ·
   Provider-guided weight-loss treatment from home.
 - **Disclaimer:** GLP-1's own verbatim text (product.json), ending "Compounded medications are not FDA-approved."
 - **Weight-loss outcome lines:** ⚠ held for Jeremy (Priestley, 2026-10-30): the global rules ban body-composition, guaranteed-outcome
@@ -64,11 +64,11 @@
 | Start Weight Support | ctas | ✅ |  |
 | Explore GLP-1 | ctas | ✅ |  |
 | Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
-| Save Up to 59% | ctas | ✅ | default CTA (bible 2026-11-03) |
+| Save Up to 83% | ctas | ✅ | default CTA (bible …019b: was 59%) |
 | Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
 | Check Your Options | ctas | ✅ |  |
 | Build Your Plan | ctas | ✅ |  |
-| Up to 59% off | offer | ✅ | percent only |
+| Up to 83% off (semaglutide); up to 70% off (tirzepatide) | offer | ✅ | percent only; feature 83% |
 | One predictable price | offer | ✅ | the required price line |
 
 ---
@@ -115,7 +115,7 @@ More headlines on page 38
 ### CTAs
 - CTA: Start Weight Support
 - CTA: Explore GLP-1
-- CTA: Save Up to 59%
+- CTA: Save Up to 83%
 - CTA: Check Your Options
 - CTA: Build Your Plan
 - CTA: GLP-1 for $2.50/day
@@ -127,7 +127,7 @@ More headlines on page 38
 - Provider-guided weight-loss treatment from home
 
 ### Offers & conversion
-- Up to 59% off
+- Up to 83% off (semaglutide); up to 70% off (tirzepatide)
 - One predictable price
 
 ### Hard NOs

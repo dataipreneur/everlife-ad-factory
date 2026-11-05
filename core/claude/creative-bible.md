@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793896982-b7dc) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793897447-019b) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -1621,7 +1621,7 @@ More headlines on page 38
 ### CTAs
 - CTA: Start Weight Support
 - CTA: Explore GLP-1
-- CTA: Save Up to 59%
+- CTA: Save Up to 83%
 - CTA: Check Your Options
 - CTA: GLP-1 for $2.50/day
 - CTA: Ships Free From Pharmacy
@@ -1632,7 +1632,7 @@ More headlines on page 38
 - Provider-guided weight-loss treatment from home
 
 ### Offers & conversion
-- Up to 59% off
+- Up to 83% off (semaglutide); up to 70% off (tirzepatide)
 - One predictable price
 
 ### Hard NOs
