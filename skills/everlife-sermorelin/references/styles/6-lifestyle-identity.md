@@ -14,7 +14,7 @@ Why it still works: the bible frames Sermorelin around **muscle, fitness and per
 ## 6A — Prime-time training (men)
 - **Looks like:** a rugged 42–50 "fit silver fox" with a hardcore fitness-model build, in a fitted training tee or (HARDCORE) shirtless, early-morning sun: a heavy farmer's carry, a sled push, a rowing sprint, a boxing bag. Real sweat, hard-training intensity; a natural pump or flex is fine.
 - **Beats:** 0–2 a sound-led hook (a kettlebell set down hard, breath) → 2–6 the effort → 6–10 the tablet in his palm at the gym bag, bottle beside it → 10–12 he nods and goes again.
-- **Copy:** men Tier A (*Built for Men Who Still Want More*); benefit *Supports Strength + Vitality*.
+- **Copy:** men Tier A (*Built for Men Who Still Want More*); benefit *Fuels Strength + Vitality*.
 - **Finishing:** `house`.
 
 ## 6B — Still in the game (men)
@@ -30,6 +30,6 @@ Why it still works: the bible frames Sermorelin around **muscle, fitness and per
 
 ## 6D — Strength for today (both)
 - **Looks like:** everyday strength moments that matter at 50+: carrying a grandchild up the stairs, loading the kayak on the roof rack, a full day in the garden.
-- **Copy:** *Strength for Today, Vitality for Life* (both pages); benefit *Supports Strength + Vitality*.
+- **Copy:** *Strength for Today, Vitality for Life* (both pages); benefit *Fuels Strength + Vitality*.
 - **Guardrails:** no weight numbers, no scales, no before/after.
 - **Finishing:** `house` or `editorial`.

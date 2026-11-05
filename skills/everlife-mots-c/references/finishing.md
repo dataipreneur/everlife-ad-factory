@@ -35,7 +35,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["MOTS-C BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "CELLULAR ENERGY",
- "ingredients": [["ENERGY", "Supports Mitochondrial Energy"], ["ENDURANCE", "Supports Endurance"], ["METABOLISM", "Supports Healthy Metabolism"]],
+ "ingredients": [["ENERGY", "Supports Mitochondrial Energy"], ["ENDURANCE", "Fuels Endurance"], ["METABOLISM", "Promotes Healthy Metabolism"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "MOTS-c by Everlife."}
 ```
 `"product"` is required. The end card shows the vial alone, centred. The rows are ✅ benefit pillars.

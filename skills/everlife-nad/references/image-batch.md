@@ -60,7 +60,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 ## 1. Frameworks (reference ads in the SHARED library `core/references/static-refs/<folder>/`; overview `OVERVIEW.jpg`; which pin for which angle: `reference-guide.md`)
 | Code | Framework | Folder | NAD+ recipe |
 |---|---|---|---|
-| F1 | Old way vs New way | 01_Us_vs_Them | "Third coffee by 3 pm" vs "Supports All-Day Energy + Focus": ideas only, no brands |
+| F1 | Old way vs New way | 01_Us_vs_Them | "Third coffee by 3 pm" vs "Fuels All-Day Energy + Focus": ideas only, no brands |
 | F2 | Bold Claim | 02_Bold_Claim | "NAD+" huge + one ✅ headline ("Less Fog. More Focus.") + the product hero + three ✅ pills |
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a "loading…" bar or to-do list ("Mentally Stuck on Loading?"); the product beside the phone |
 | F4 | Features & Benefits | 04_Features_and_Benefits | **the choice:** bottle + tablet on one side, vial on the other, "Choose Your Form", one ✅ row each |

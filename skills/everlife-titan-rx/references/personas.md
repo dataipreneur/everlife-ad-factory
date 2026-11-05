@@ -32,7 +32,7 @@ doctors and pharmacies, distrusts influencers. Reads small type badly without gl
 
 What Ray punishes:
 - **Being talked down to or shamed.** "Real men…" style lines feel like a dig (that headline is ⚠). Prefer calm confidence:
-  "Supports Confidence + Control", "Supports Everyday Readiness".
+  "Encourages Confidence + Control", "Supports Everyday Readiness".
 - **Small or busy type.** Headline huge, three short lines max, legible at story size (50+ rule).
 - **A young model.** Talent 40–65 (grey, lines, real hands); a 30-year-old with abs loses him.
 - **Medical-sounding promises.** "Treatment", "cure", "ED" anything reads like a TV drug spot without the doctor: never.

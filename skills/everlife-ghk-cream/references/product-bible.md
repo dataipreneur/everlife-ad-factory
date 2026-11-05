@@ -1,5 +1,6 @@
 # GHK-Cu Cream — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Skin’s Natural Repair Process" → "Promotes Skin’s Natural Repair Process"; "Supports a Brighter, More Even-Looking Tone" → "Encourages a Brighter, More Even-Looking Tone". **This product:** The bible added direction: teach what a peptide skin cream actually does; differentiate from moisturizers and serums (works at the signal level: collagen, elastin, repair); pair each benefit with a quick reason-why. The headline pool grew from 6 to 16 (none flagged pending or weak): read it in `core/claude/creative-bible.md` (GHK-Cu Cream); the tables below are the old pool.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** The bible's CTA is now **"GHK Peptide Cream for $1.50/day"** (it read "GHK-Cu Cream for…"): the same wording this skill already uses on Meta/Google/TikTok.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 75%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 75%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -45,9 +46,9 @@
 | Healthy Skin Isn’t One Thing. It’s Everything. | headlines | Weak (bible) | avoid unless asked |
 | Supports Collagen + Elastin | benefits | ✅ (care) | structure-function "supports"; never "builds"/"boosts"/"restores" collagen |
 | Promotes Firmer, More Youthful-Looking Skin | benefits | ✅ (care) | keep "-looking"; never next to an age, "years younger", a face close-up comparison or before/after |
-| Supports Skin’s Natural Repair Process | benefits | ✅ (care) | never paired with a wound, scar, burn or any skin condition |
+| Promotes Skin’s Natural Repair Process | benefits | ✅ (care) | never paired with a wound, scar, burn or any skin condition |
 | Supports Smoother-Looking Texture | benefits | ✅ |  |
-| Supports a Brighter, More Even-Looking Tone | benefits | ✅ (care) | never "dark spots", "melasma" or "hyperpigmentation" |
+| Encourages a Brighter, More Even-Looking Tone | benefits | ✅ (care) | never "dark spots", "melasma" or "hyperpigmentation" |
 | Upgrade Your Skin Routine | ctas | ✅ |  |
 | Explore GHK Peptide Cream | ctas | ✅ (FB/GL/TK) | the FB/GL/TK name; ⚠ Jeremy before any H2 use |
 | Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
@@ -95,9 +96,9 @@ Topical peptide skin support focused on collagen, elastin, firmness, and the ski
 ### Quick-hit benefits
 - Supports Collagen + Elastin
 - Promotes Firmer, More Youthful-Looking Skin
-- Supports Skin’s Natural Repair Process
+- Promotes Skin’s Natural Repair Process
 - Supports Smoother-Looking Texture
-- Supports a Brighter, More Even-Looking Tone
+- Encourages a Brighter, More Even-Looking Tone
 
 ### CTAs
 - CTA: Upgrade Your Skin Routine

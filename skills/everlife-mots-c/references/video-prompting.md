@@ -16,8 +16,8 @@ No MOTS-c winners of its own yet; borrowed winners from NAD+, GLP-1 and GHK are 
    a swimmer touching the wall; a kettle switched on before a long day; a race bib pinned to a fridge). Never open on a logo; never a syringe.
 2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free ("Energy Starts Deeper." / "Not Just Energy.": ✅ headlines).
 3. **Visual element / reveal, 5–9 s:** the real product, label to camera, as a still object on a surface or held by the vial body.
-4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line ("Supports Mitochondrial Energy", "Supports Endurance",
-   "Supports Healthy Metabolism"), "Doctor prescribed", "Ships free from the pharmacy".
+4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line ("Supports Mitochondrial Energy", "Fuels Endurance",
+   "Promotes Healthy Metabolism"), "Doctor prescribed", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear CTA. Spoken lines finish by ~12 s.
 
 Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "MOTS-c" (say "mots-see").

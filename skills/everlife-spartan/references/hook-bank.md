@@ -13,8 +13,8 @@ comparison, no injury, never name a body area as damaged. "Spartan Stack" named 
 
 1. IMPACT · A plate dropped on the rubber floor at 0.0 s, chalk dust jumps; the vial standing on the bench. Bridge: "Three-Peptide Recovery Stack".
 2. SOUND-FIRST · Heavy-bag thud and chain rattle; he steadies the bag, breathing; the vial on the bench by the wraps. Bridge: "Supports Joints + Ligaments".
-3. SPEED · Freeze at the deadlift lockout (header in finishing), then the bar is set down cleanly. Bridge: "Supports Mobility + Range of Motion".
-4. POV · From inside the gym bag as it unzips: the vial in the side pocket, a chalked hand reaching past. Bridge: "Supports Muscle Recovery".
+3. SPEED · Freeze at the deadlift lockout (header in finishing), then the bar is set down cleanly. Bridge: "Maintains Mobility + Range of Motion".
+4. POV · From inside the gym bag as it unzips: the vial in the side pocket, a chalked hand reaching past. Bridge: "Promotes Muscle Recovery".
 5. SAME-FRAME FLIP · A wrecked garage gym (plates, bands, rope everywhere) → the same frame racked and tidy, the vial on the shelf. Bridge: "Supports Training Harder, More Often".
 6. INTERRUPTION · Coach's whistle at 0.0 s; the sled push starts. Bridge: "Supports Gut Lining Health".
 7. STREET · Gym-floor ambush: "What's in the stack?" Answers read the label (BPC-157, KPV, TB-500) and bible lines only; never one benefit per ingredient.

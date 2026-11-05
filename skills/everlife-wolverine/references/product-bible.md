@@ -1,5 +1,6 @@
 # Wolverine Stack — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Tendons + Ligaments" → "Reinforces Tendons + Ligaments"; "Supports Mobility" → "Maintains Mobility"; "Supports Tissue Repair" → "Aids Tissue Repair"; "Supports Muscle Recovery" → "Promotes Muscle Recovery". **This product:** New wording includes "Reinforces Tendons + Ligaments" (⚠ the strongest verb of the set: Jeremy first).
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 39%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 39%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -39,14 +40,14 @@
 | 2 Peptides. One Recovery Protocol. | headlines | ⏳ | pending approval; matches the 2-peptide label |
 | Two Peptides. One Mission. · Double Down on Recovery · Recovery, Reinforced · The Heavy-Duty Recovery Stack · Built for Heavy Wear · For Bodies Under Load · Heavy Output Needs Backup · The Next-Level Recovery Stack · Stacked for the Comeback · Built for Impact | Asana hook options | ⏳ | no approval mark on the page; "For Bodies Under Load" never next to a body shot |
 | Wolverine Stack. Built for the Grind. · Hardcore Training. Wolverine Stack Recovery. · Recover Like You Train: Wolverine Stack. · The Wolverine Stack Is Your Recovery Edge. · Built for Heavy Days. Backed by the Wolverine Stack. | new headline options | ⏳ | pending approval |
-| Supports Tendons + Ligaments | benefits | ✅ | |
+| Reinforces Tendons + Ligaments | benefits | ✅ | |
 | Supports Gut Lining Health | benefits | ✅ | |
-| Supports Mobility | benefits | ✅ | |
-| Supports Muscle Recovery | benefits | ✅ | |
+| Maintains Mobility | benefits | ✅ | |
+| Promotes Muscle Recovery | benefits | ✅ | |
 | Promotes Mobility + Flexibility | benefits | ✅ | |
 | 2-Peptide Whole-Body Recovery | benefits | ✅ | |
 | Supports Joints, Gut + Mobility in One Stack | benefits | ✅ | |
-| Supports Tissue Repair | benefits | ⚠ Jeremy | "repair" reads as healing; the page's own Hard NO says "No direct claims" |
+| Aids Tissue Repair | benefits | ⚠ Jeremy | "repair" reads as healing; the page's own Hard NO says "No direct claims" |
 | Promotes Joint Comfort | benefits | ⚠ Jeremy | "comfort" implies pain relief |
 | Supports Connective Tissue Health · Supports Digestive Resilience · Supports Whole-Body Recovery | benefits | ⏳ | pending approval (bible) |
 | Supports Healthy Inflammatory Balance | benefits | ⛔ held | KPV's benefit on a stack without KPV; asked Justin |
@@ -103,13 +104,13 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - 2-in-1 Recovery Support
-- Supports Tendons + Ligaments
+- Reinforces Tendons + Ligaments
 - Supports Gut Lining Health
-- Supports Mobility
+- Maintains Mobility
 - Supports Healthy Inflammatory Balance
-- Supports Tissue Repair
+- Aids Tissue Repair
 - Promotes Joint Comfort
-- Supports Muscle Recovery
+- Promotes Muscle Recovery
 - Promotes Mobility + Flexibility
 - 2-Peptide Whole-Body Recovery
 - Supports Joints, Gut + Mobility in One Stack

@@ -1,5 +1,6 @@
 # MOTS-c — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Healthy Metabolism" → "Promotes Healthy Metabolism"; "Supports Endurance" → "Fuels Endurance". **This product:** Offer and CTA are now in the bible: **Save Up to 40%** (placeholder removed); the CTA "Support Your Metabolism" was removed.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: the bible's CTA is "[PLACEHOLDER] Save Up to X%"; this skill's offer stays the Creative Messaging doc's "Save up to 40%" (rule 4), written as the CTA "Save Up to 40%". Flag "Justin to fill the bible %" in SESSION.md. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 40%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -82,7 +83,7 @@
 | Energy Starts Deeper | headlines | ✅ |  |
 | Fuel The Machine | headlines | ✅ |  |
 | Supports Mitochondrial Energy | benefits | ✅ |  |
-| Supports Healthy Metabolism | benefits | ✅ | care: never next to weight, fat, body or appetite words/imagery |
+| Promotes Healthy Metabolism | benefits | ✅ | care: never next to weight, fat, body or appetite words/imagery |
 | Supports Glucose Metabolism | benefits | ⚠ Jeremy | blood-sugar / diabetes territory; never with disease words |
 | Supports Cellular Resilience | benefits | ✅ |  |
 | Supports Mitochondrial Function | benefits | ✅ |  |
@@ -90,10 +91,10 @@
 | Supports Healthy Glucose Handling | benefits | ⚠ Jeremy | blood-sugar / diabetes territory |
 | Supports Everyday Physical Performance | benefits | ✅ |  |
 | Supports Energy Balance | benefits | ⚠ Jeremy | "energy balance" reads as calories in/out = weight territory |
-| Supports Endurance | benefits (older bible, not in the doc) | ✅ | kept: the doc does not remove it |
+| Fuels Endurance | benefits (older bible, not in the doc) | ✅ | kept: the doc does not remove it |
 | Explore MOTS-c | ctas | ✅ |  |
 | Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
-| Save Up to 40% | ctas | ✅ | default CTA (doc offer; the bible % is still a placeholder) |
+| Save Up to 40% | ctas | ✅ | default CTA (bible 2026-11-05: 40% is now in the bible) |
 | Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
 | Fuel Cellular Energy | ctas | ✅ |  |
 | Support Your Metabolism | ctas | ✅ |  |
@@ -166,7 +167,7 @@ Use “MOTS-c” capitalization consistently.
   Fuel The Machine
 4 | Quick Hit Benefits
 Supports Mitochondrial Energy
-Supports Healthy Metabolism
+Promotes Healthy Metabolism
 Supports Glucose Metabolism
 Supports Cellular Resilience
 Supports Mitochondrial Function
@@ -196,7 +197,7 @@ https://stagingapp.everlifemd.com/mots-c/h2
 - **Who:** active adults 30–55 focused on mitochondrial support, energy and endurance; "All audiences" (men and women).
 - **Focus (bible):** cellular energy, mitochondrial function, glucose metabolism, endurance.
 - **Category:** the bible files it under metabolic / weight / body composition → the global body-composition Hard NOs bite hardest here.
-- **Offer:** both [PLACEHOLDER] → none. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
+- **Offer (bible 2026-11-05):** Save up to 40%. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
 - **Headlines:** all five ⏳ Pending approval. **Creative direction:** none on the page (global rules only).
 
 ## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
@@ -209,9 +210,9 @@ https://stagingapp.everlifemd.com/mots-c/h2
 | Give Metabolism More Cellular Support | headlines | ⏳ | Pending approval |
 | Train the Metabolism, Not the Hype | headlines | ⏳ + ⚠ Jeremy | Pending; "train the metabolism" can read as a weight/body promise |
 | Supports Mitochondrial Energy | benefits | ✅ |  |
-| Supports Healthy Metabolism | benefits | ✅ (care) | Never next to weight, fat, body or appetite words or imagery (metabolic category) |
+| Promotes Healthy Metabolism | benefits | ✅ (care) | Never next to weight, fat, body or appetite words or imagery (metabolic category) |
 | Supports Glucose Metabolism | benefits | ⚠ Jeremy | Close to blood-sugar / diabetes territory; only with explicit approval, never with disease words |
-| Supports Endurance | benefits | ✅ |  |
+| Fuels Endurance | benefits | ✅ |  |
 | Explore MOTS-c | ctas | ✅ | |
 | Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
 | Fuel Cellular Energy | ctas | ✅ | |
@@ -243,9 +244,9 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 ### Quick-hit benefits
 - Supports Mitochondrial Energy
-- Supports Healthy Metabolism
+- Promotes Healthy Metabolism
 - Supports Glucose Metabolism
-- Supports Endurance
+- Fuels Endurance
 
 ### CTAs
 - CTA: Explore MOTS-c

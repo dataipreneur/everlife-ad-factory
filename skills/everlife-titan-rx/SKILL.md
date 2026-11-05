@@ -128,7 +128,7 @@ approved masters), frameworks (random mix; the user can say "use F2 and F8" in c
 2. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Daily, no timing" ("Once-Daily, No Timing Required", "Supports
    Everyday Readiness", "Supports Daily Performance") / "Ready for her" ("Be Ready When She Is Ready", "Good for You. Great for
    Her.", "An Upgrade She’ll Notice") / "Circulation + confidence" ("Supports Blood Flow When It Counts", "Supports Circulation +
-   Firmness", "Supports Confidence + Control", "When It’s Go Time, Be Ready"). The ⏳ ED headlines are never offered here; they
+   Firmness", "Encourages Confidence + Control", "When It’s Go Time, Be Ready"). The ⏳ ED headlines are never offered here; they
    are used only when the user asks by name AND Jeremy has approved them in writing.
 3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.

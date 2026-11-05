@@ -14,6 +14,6 @@ plus by Ever-life".
 3. SAME-FRAME FLIP · A fogged kitchen window is wiped clear with a sleeve: bright morning, the product on the sill. Bridge: "Less Fog. More Focus."
 4. INTERRUPTION · The alarm buzzes at 0.0 s; she's already dressed, coffee in hand, switching it off. Bridge: "Clear Head. Full Day."
 5. ABSURD ESCALATION · Blank sticky notes pile across a monitor faster and faster; one swipe clears them all. Bridge: "Brain Fog, Who?"
-6. POV · From inside the desk drawer: it opens, a focused face, a hand takes the green bottle. Bridge: "Supports All-Day Energy + Focus".
+6. POV · From inside the desk drawer: it opens, a focused face, a hand takes the green bottle. Bridge: "Fuels All-Day Energy + Focus".
 7. MISDIRECTION · Hushed nature-doc whisper ("the mid-afternoon slump, in its natural habitat") swerves to a bright desk and the product. Bridge: "Bounce Back From Burnout".
 8. STREET · Coffee-queue ambush: "What does a clear head look like?" Pronoun-free answers, bible lines only. Bridge: "Meet Your Daily NAD+."

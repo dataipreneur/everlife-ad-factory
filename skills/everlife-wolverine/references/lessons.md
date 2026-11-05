@@ -44,7 +44,7 @@ Wolverine Stack risks to watch (carried from BPC-157, an ingredient and the temp
 - **Any "peptide vial" prompt invites a syringe, needle, pen or droplets.** Every prompt says "the vial is a still object; no syringe,
   needle, pen, dropper, droplets or injecting anywhere" and QA checks every frame. One syringe = reject, no exceptions (global Hard NO).
 - **"Recovery" copy drifts to cure talk** ("heals", "repairs", "reduces inflammation", "pain"): only the lines in `product-bible.md`
-  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). there is no ✅ repair line ("Supports Tissue Repair" is ⚠ Jeremy;
+  (✅ benefits; ⏳ / ⚠ headlines with an OK, flagged for Jeremy). there is no ✅ repair line ("Aids Tissue Repair" is ⚠ Jeremy;
   the page says "No direct claims"). "Supports Healthy Inflammatory Balance" is held (KPV's benefit; asked Justin).
 - **Men must look HARDCORE (Mitansh, 2026-10-29: "extremely masculine, gym, barbells, bodybuilders with tattoos")**: the Sermorelin
   "not bodybuilders" rule does not apply here. Use `mens-direction.md`; the only body rules left are no before/after, no body comparison,

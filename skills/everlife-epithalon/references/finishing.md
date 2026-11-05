@@ -34,9 +34,9 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 ```json
 {"product": "epithalon", "style": "default|tiktok|editorial", "kicker": "optional label for editorial",
  "head": ["EPITHALON BY EVERLIFE"], "head_always": true,
- "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["Supports Healthy Aging", "Supports Oxidative Stress Defense", "Doctor Prescribed"],
+ "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["Promotes Healthy Aging", "Aids Oxidative Stress Defense", "Doctor Prescribed"],
  "ingredients_label": "HEALTHY AGING",
- "ingredients": [["AGING", "Supports Healthy Aging"], ["DEFENSE", "Supports Oxidative Stress Defense"], ["PHARMACY", "Doctor Prescribed"]],
+ "ingredients": [["AGING", "Promotes Healthy Aging"], ["DEFENSE", "Aids Oxidative Stress Defense"], ["PHARMACY", "Doctor Prescribed"]],
  "cta": "<✅ bible CTA in caps, e.g. START LONGEVITY SUPPORT>", "vocab": "Epithalon by Everlife."}
 ```
 `"product"` is required. The end card shows the vial alone, centred. The rows are the two ✅ benefits + "Doctor Prescribed" (a sourced

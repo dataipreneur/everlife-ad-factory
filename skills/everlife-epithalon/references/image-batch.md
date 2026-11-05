@@ -65,10 +65,10 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 ## 1. Frameworks (reference ads in the SHARED library `core/references/static-refs/<folder>/`; overview `OVERVIEW.jpg`; which pin for which angle: `reference-guide.md`)
 | Code | Framework | Folder | Epithalon recipe |
 |---|---|---|---|
-| F1 | Old way vs New way | 01_Us_vs_Them | "Ten supplements on the counter" vs one vial + "Supports Healthy Aging": methods only, no brands, no bodies, no faces compared |
+| F1 | Old way vs New way | 01_Us_vs_Them | "Ten supplements on the counter" vs one vial + "Promotes Healthy Aging": methods only, no brands, no bodies, no faces compared |
 | F2 | Bold Claim | 02_Bold_Claim | "Epithalon" huge + one Tier A line + the vial hero + the ✅ lines |
 | F3 | Phone UI | 03_iPhone_Notes_Phone_UI | a daytime longevity-habits note (walk, water, garden, "Start Longevity Support"); the vial beside the phone; never a bedtime routine |
-| F4 | Features & Benefits | 04_Features_and_Benefits | vial hero + "Supports Healthy Aging" · "Supports Oxidative Stress Defense" · "Doctor Prescribed" with simple icons (leaf · shield · pharmacy cross); no DNA helix |
+| F4 | Features & Benefits | 04_Features_and_Benefits | vial hero + "Promotes Healthy Aging" · "Aids Oxidative Stress Defense" · "Doctor Prescribed" with simple icons (leaf · shield · pharmacy cross); no DNA helix |
 | F5 | Before/After | 05_Before_and_After | ❌ **skip**: no before/after or younger-vs-older, never |
 | F6 | Offer | 06_Offer | ❌ **skip**: the bible's offer is [PLACEHOLDER] |
 | F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened Epithalon reviews |

@@ -37,7 +37,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["SPARTAN STACK BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "RECOVERY STACK",
- "ingredients": [["JOINTS", "Supports Joints + Ligaments"], ["MOBILITY", "Supports Mobility + Range of Motion"], ["RECOVERY", "Supports Muscle Recovery"]],
+ "ingredients": [["JOINTS", "Supports Joints + Ligaments"], ["MOBILITY", "Maintains Mobility + Range of Motion"], ["RECOVERY", "Promotes Muscle Recovery"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "Spartan Stack by Everlife."}
 ```
 `"product"` is required. The end card shows the vial alone, centred. Don't type the disclaimer into copy.json. The "ingredients"

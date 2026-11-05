@@ -1,5 +1,6 @@
 # Sermorelin GHK — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Lean Muscle + Performance" → "Promotes Lean Muscle + Performance"; "Supports Daily Energy + Healthy Blood Flow" → "Fuels Daily Energy + Healthy Blood Flow"; "Supports Firmer, Glowing Skin From Within" → "Promotes Firmer, Glowing Skin From Within". **This product:** A new Men benefit line was added: "Aids Exercise Recovery". NEW Women creative direction in the bible (NOT applied to this skill: ⚠ Jeremy first): talent by hair and eye colour and ethnicity ("blonde hair and blue eyes, with some Latina talent") and a wardrobe mix of workout gear and everyday clothes; casting rules below still govern.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%. **This product:** The Sermorelin ingredient claim "Promotes lean muscle growth and fat loss" became **"Promotes lean muscle growth"** (fat loss removed): usable on the Sermorelin ingredient only. The benefit scope no longer lists visceral fat. The CTA "Start Your Plan" was removed from the bible.
 
 > **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 47%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 47%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
@@ -118,9 +119,9 @@ Play Offense Not Defense — Weak headline
 Become a Force — Weak headline
 Quick-hit benefits
 Supports Natural Growth Hormone Production
-Supports Lean Muscle + Performance
+Promotes Lean Muscle + Performance
 Promotes Youthful-Looking Skin & Thicker Hair
-Supports Daily Energy + Healthy Blood Flow
+Fuels Daily Energy + Healthy Blood Flow
 3-in-1 Peptide Support
 Supports Visceral-Fat Metabolism & Body Tone — Hard NO conflict: no targeted fat loss or body-composition claims
 Supports Workout Pumps + Endurance
@@ -155,13 +156,13 @@ How Women Are Using… — Weak headline
 4 Reasons Why You Need… — Weak headline
 Quick-hit benefits
 Supports Natural Growth Hormone Production
-Supports Lean Muscle + Performance
+Promotes Lean Muscle + Performance
 Promotes Youthful-Looking Skin & Thicker Hair
-Supports Daily Energy + Healthy Blood Flow
+Fuels Daily Energy + Healthy Blood Flow
 3-in-1 Peptide Support
 Supports Visceral-Fat Metabolism & Body Tone — Hard NO conflict: no targeted fat loss or body-composition claims
 One Daily Tablet for Muscle, Skin + Hair
-Supports Firmer, Glowing Skin From Within
+Promotes Firmer, Glowing Skin From Within
 5. More approved benefits
 Source: Creative Messaging Reference, Men and Women headline banks (images)
 Supports Muscle Strength & Repair
@@ -251,9 +252,9 @@ Break Past Your Limits
 Forge a Stronger Physique
 More headlines on page 10
 Quick-hit benefits
-- —Supports Lean Muscle + Performance
+- —Promotes Lean Muscle + Performance
 - —Promotes Youthful-Looking Skin & Thicker Hair
-- —Supports Daily Energy + Healthy Blood Flow
+- —Fuels Daily Energy + Healthy Blood Flow
 - —3-in-1 Peptide Support
 - —Supports Visceral-Fat Metabolism & Body ToneHard NO conflictno targeted fat loss or body-composition claims
 CTAs
@@ -374,9 +375,9 @@ The GLP-1 Complement for Muscle, Skin + Hair
 Your GLP-1 Complement for Strength + Radiance
 More headlines on page 13
 Quick-hit benefits
-- —Supports Lean Muscle + Performance
+- —Promotes Lean Muscle + Performance
 - —Promotes Youthful-Looking Skin & Thicker Hair
-- —Supports Daily Energy + Healthy Blood Flow
+- —Fuels Daily Energy + Healthy Blood Flow
 - —3-in-1 Peptide Support
 - —Supports Visceral-Fat Metabolism & Body ToneHard NO conflictno targeted fat loss or body-composition claims
 CTAs

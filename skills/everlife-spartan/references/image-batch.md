@@ -55,7 +55,7 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
 - Claims: only the ✅ quick-hit benefits in `product-bible.md` (pre-screen). ❌/⛔ lines never; ⏳ headlines and ⚠ lines only with the
   user's explicit OK + flagged for Jeremy.
 - Spartan Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation", "torn", "cure", "treat", "boost",
-  "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Connective Tissue Repair"
+  "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Aids Connective Tissue Repair"
   only exactly as the bible writes it (where the pre-screen allows it).
 - **No needles, syringes, pens, injecting or "needle-free"** in words or pictures. The vial stands or lies on a surface; a hand may hold it.
 - One product image: the Rx vial. Copy never states a strength, dose, mL or count; ingredients only together as on the label (BPC-157 + KPV + TB-500 (three peptides)).

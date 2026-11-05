@@ -89,7 +89,7 @@ Single-ingredient product, but the `tiktok` and `editorial` end cards **require*
 (`core/tools/styles.py`; `house` doesn't). Fill them with the three ✅ benefits, never a made-up ingredient claim:
 ```json
  "ingredients_label": "DOCTOR-PRESCRIBED SERMORELIN",
- "ingredients": [["ENERGY","Supports Energy + Stamina"],["STRENGTH","Supports Strength + Vitality"],
+ "ingredients": [["ENERGY","Supports Energy + Stamina"],["STRENGTH","Fuels Strength + Vitality"],
                  ["GROWTH HORMONE","Supports Natural Growth Hormone Activity"]]
 ```
 **`tiktok` look:** the third row collides at that length ("Growth Hormone" runs into its claim; seen in the 2026-10-28

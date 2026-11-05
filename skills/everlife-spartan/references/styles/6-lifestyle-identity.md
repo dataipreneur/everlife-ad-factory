@@ -22,4 +22,4 @@ Why it works: the buyer sees himself between sets. Men: hardcore (`../mens-direc
 
 ## 6D — The comeback session
 - **Looks like:** the first session back: taping a bag, a slow warm-up, a quiet nod; the product on the kitchen counter afterwards.
-  Line: a ✅ benefit ("Supports Muscle Recovery"). Identity, not transformation; no before/after.
+  Line: a ✅ benefit ("Promotes Muscle Recovery"). Identity, not transformation; no before/after.

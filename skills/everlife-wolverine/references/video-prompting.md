@@ -17,9 +17,9 @@ pattern-interrupt object shot (Seedance).
 ## The 7-beat spine (creative gate §5), squeezed into 15 s
 1. **Hook, 0–2 s:** a VISUAL pattern interrupt before the first word (chalk clapped off hands in hard light; a foam roller set aside;
    a trail shoe laced at dawn; taped hands hitting a heavy bag; a water bottle set down on a rubber floor). Never open on a logo; never a syringe.
-2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free (the Wolverine page has no ✅ headline yet: say one ✅ benefit, e.g. "Supports Tendons + Ligaments").
+2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free (the Wolverine page has no ✅ headline yet: say one ✅ benefit, e.g. "Reinforces Tendons + Ligaments").
 3. **Visual element / reveal, 5–9 s:** the real product, label to camera, as a still object on a surface or held by the vial body.
-4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line (Supports Tendons + Ligaments, Supports Gut Lining Health, Supports Mobility, Supports Joints, Gut + Mobility in One Stack),
+4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line (Reinforces Tendons + Ligaments, Supports Gut Lining Health, Maintains Mobility, Supports Joints, Gut + Mobility in One Stack),
    "Doctor prescribed", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear CTA. Spoken lines finish by ~12 s.
 
@@ -27,7 +27,7 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "Wo
 
 ## Copy rules
 - Headlines, benefits, CTAs: only `product-bible.md` (✅ lines; ⏳/⚠ only with the user's OK). Mechanism first, then benefit:
-  "Supports Tendons + Ligaments" leads, then "Promotes Mobility + Flexibility" (both ✅). Never "this fixes your knee".
+  "Reinforces Tendons + Ligaments" leads, then "Promotes Mobility + Flexibility" (both ✅). Never "this fixes your knee".
 - No "heal", "repair", "injury", "pain", "inflammation", "torn", "boost", no timing promises.
 - No "I"/"my", no testimonials, no "Are you…?". No disease words, no "clinically" for the product, no prices; the only offer is "Save up to 39%" (⚠ PROVISIONAL, Jeremy), exactly.
 - **Settings (men):** hardcore gym (rack, loaded bar, chalk, rubber floor), boxing gym, garage at dawn, car park after a session,

@@ -36,7 +36,7 @@ Log the chosen style in the copy log row and in SESSION.md ("finish: <key>").
 {"product": "<id>", "audience": "men|women", "end": 11.0,
  "head": "SERMORELIN GHK", "sub": "DOUBLE STRENGTH",
  "end_label": "SERMORELIN GHK  ·  DOUBLE STRENGTH", "end_head": "Power Your Prime", "end_sub": "3-in-1 Sermorelin GHK",
- "benefits": ["Supports Natural Growth Hormone Production", "Supports Lean Muscle + Performance", "Supports Workout Pumps + Endurance"],
+ "benefits": ["Supports Natural Growth Hormone Production", "Promotes Lean Muscle + Performance", "Supports Workout Pumps + Endurance"],
  "cta": "EXPLORE SERMORELIN GHK", "bottle": "sghk1000_bottle.png"}
 ```
    Optional: `"pill"` (`""` = no pill, e.g. a spray form), `"audio"` (job-relative file, e.g. a re-voiced mix), `"head_display"`

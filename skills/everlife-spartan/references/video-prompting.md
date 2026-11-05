@@ -19,7 +19,7 @@ pattern-interrupt object shot (Seedance).
    a trail shoe laced at dawn; taped hands hitting a heavy bag; a water bottle set down on a rubber floor). Never open on a logo; never a syringe.
 2. **Authority + emotion, 2–5 s:** ONE angle, shown more than said, pronoun-free (the Spartan page has no ✅ headline yet: say one ✅ benefit, e.g. "Supports Joints + Ligaments").
 3. **Visual element / reveal, 5–9 s:** the real product, label to camera, as a still object on a surface or held by the vial body.
-4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line (Supports Joints + Ligaments, Supports Connective Tissue Repair, Supports Muscle Recovery, Supports Mobility + Range of Motion, Supports Gut Lining Health, Supports Training Harder, More Often),
+4. **Structure / connection, 9–12.5 s:** one ✅ quick-hit line (Supports Joints + Ligaments, Aids Connective Tissue Repair, Promotes Muscle Recovery, Maintains Mobility + Range of Motion, Supports Gut Lining Health, Supports Training Harder, More Often),
    "Doctor prescribed", "Ships free from the pharmacy".
 5. **Payoff, 12.8–15 s:** the end card (added in finishing): benefits + a clear CTA. Spoken lines finish by ~12 s.
 
@@ -27,7 +27,7 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "Sp
 
 ## Copy rules
 - Headlines, benefits, CTAs: only `product-bible.md` (✅ lines; ⏳/⚠ only with the user's OK). Mechanism first, then benefit:
-  "Supports Joints + Ligaments" leads, then "Supports Mobility + Range of Motion" (both ✅). Never "this fixes your knee".
+  "Supports Joints + Ligaments" leads, then "Maintains Mobility + Range of Motion" (both ✅). Never "this fixes your knee".
 - No "heal", "repair", "injury", "pain", "inflammation", "torn", "boost", no timing promises.
 - No "I"/"my", no testimonials, no "Are you…?". No disease words, no "clinically" for the product, no prices or offers (none settled: the sources disagree; Ronnel to confirm).
 - **Settings (men):** hardcore gym (rack, loaded bar, chalk, rubber floor), boxing gym, garage at dawn, car park after a session,

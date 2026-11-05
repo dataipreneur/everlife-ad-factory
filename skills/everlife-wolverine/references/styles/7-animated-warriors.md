@@ -24,8 +24,8 @@ Jeremy to confirm for mascots).
   near a needle. No pills or capsules.
 - Wall words = the pain point in plain, claim-free words (e.g. "HEAVY DAYS. / HEAVY WEAR. / SLOW BOUNCE-BACK."). Never injury, pain or
   body words. Change the words every ad (copy log).
-- Body worlds = one ✅ benefit each: gold cable fibres → "Supports Tendons + Ligaments"; soft pink-peach folds → "Supports Gut Lining
-  Health"; a big gold joint hinge → "Supports Mobility" / "Promotes Mobility + Flexibility"; glowing muscle-fibre bundles → "Supports
+- Body worlds = one ✅ benefit each: gold cable fibres → "Reinforces Tendons + Ligaments"; soft pink-peach folds → "Supports Gut Lining
+  Health"; a big gold joint hinge → "Maintains Mobility" / "Promotes Mobility + Flexibility"; glowing muscle-fibre bundles → "Supports
   Muscle Recovery". Pick 3 per ad and vary the world's look.
 - This is the user-approved exception to the Hook Engine's "no surreal 3D" line (§1.7), for this style only.
 

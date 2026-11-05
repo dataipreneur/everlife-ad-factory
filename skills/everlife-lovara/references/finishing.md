@@ -32,7 +32,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
  "head": ["LOVARA BY EVERLIFE"], "head_always": true,
  "end_head": ["END LINE 1", "END LINE 2"], "benefits": ["<✅ bible>", "<✅ bible>", "<✅ bible>"],
  "ingredients_label": "3-IN-1 INTIMACY SUPPORT",
- "ingredients": [["DESIRE","Supports Desire + Sensitivity"],["COMFORT","Supports Comfort + Responsiveness"],["READINESS","Supports Intimate Readiness"]],
+ "ingredients": [["DESIRE","Supports Desire + Sensitivity"],["COMFORT","Promotes Comfort + Responsiveness"],["READINESS","Supports Intimate Readiness"]],
  "cta": "<✅ bible CTA in caps>", "vocab": "Lovara by Everlife."}
 ```
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, renders, name casing,

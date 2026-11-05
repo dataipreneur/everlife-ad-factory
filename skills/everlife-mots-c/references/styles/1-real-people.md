@@ -5,7 +5,7 @@ Why it works: energy and stamina are a conversation people already have on the t
 
 ## 1A — Creator to camera (post-session)
 - **Looks like:** a man 30–45 or woman 30–55, still breathing from a session, phone propped on a bench, talking plainly. The product
-  sits in frame; never used. One ✅ line, e.g. "Supports Endurance."
+  sits in frame; never used. One ✅ line, e.g. "Fuels Endurance."
 - **Lines:** ≤ 35 words, one angle, one quick-hit line, pronoun-free, no "I" (the creator talks about energy and going the distance, not about themselves).
 
 ## 1B — Training-partner POV

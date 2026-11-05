@@ -12,4 +12,4 @@ Library folders: Clinical-Research · Article · Advertorial · Open Letter · T
 - **Looks like:** a letter or article panel built in finishing (`finish_image.py --layout letter|article`, kicker "CELLULAR ENERGY", the product.json default). Every sentence from the bible.
 
 ## 2E — Mechanism map
-- **Looks like:** mitochondria → energy → endurance as three plain tiles with one product hero: "Supports Mitochondrial Function" → "Supports Mitochondrial Energy" → "Supports Endurance" (all ✅). No anatomy, no medical labels, no outcome promises.
+- **Looks like:** mitochondria → energy → endurance as three plain tiles with one product hero: "Supports Mitochondrial Function" → "Supports Mitochondrial Energy" → "Fuels Endurance" (all ✅). No anatomy, no medical labels, no outcome promises.

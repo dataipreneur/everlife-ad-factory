@@ -131,7 +131,7 @@ Compliance traps:
   → clean first time (W3, W5). Template updated (image-batch.md §3). Text blocks with 3 ingredient rows also run low (W1).
 - **Tablet size drifts small when a person shares the frame** (W4: 11% of the width). Say "at least 17% of the width" there.
 - **Justin's new lines render well:** "Supports Natural Growth Hormone Production", "Supports Workout Pumps + Endurance",
-  "Supports Exercise Recovery", "Supports Firmer, Glowing Skin From Within".
+  "Supports Exercise Recovery", "Promotes Firmer, Glowing Skin From Within".
 - **Women's Tier A headlines are nearly used up**: left unused: "Your GLP-1 Complement for Lean Muscle + Glow",
   "GLP-1 Complement: Lean. Strong. Radiant.", "The GLP-1 Complement for Muscle, Skin + Hair" (hair ⚠). Ask Justin for more.
 

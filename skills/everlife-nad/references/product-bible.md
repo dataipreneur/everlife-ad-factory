@@ -1,5 +1,6 @@
 # NAD+ — creative bible (verbatim extract)
 
+> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports All-Day Energy + Focus" → "Fuels All-Day Energy + Focus". **This product:** Single-vial claim wording: "Fuels All-Day Energy + Focus".
 > **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** NAD+ discount stays **"Save Up to 62%"** (both forms). Every ad has a CTA.
 > **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** Sublingual tablets are now **Save Up to 62%** (was 62%); injections stay 62%, so every NAD+ ad is 62%. The CTAs "Choose Your Form" and "Start Your Plan" were removed.
 
@@ -53,7 +54,7 @@
 | Supports DNA Repair | benefits | ⚠ Jeremy | medical-style claim |
 | Promotes Healthy Aging | benefits | ✅ |  |
 | Supports Cellular Longevity | benefits | ✅ |  |
-| Supports All-Day Energy + Focus | benefits | ✅ |  |
+| Fuels All-Day Energy + Focus | benefits | ✅ |  |
 | Supports Bounce-Back From Burnout | benefits | ✅ |  |
 | Optimizes Metabolic Health | more_benefits | Weak (bible) | avoid unless asked |
 | Explore NAD+ | ctas | ✅ |  |
@@ -108,7 +109,7 @@ More headlines on page 32
 - Supports DNA Repair
 - Promotes Healthy Aging
 - Supports Cellular Longevity
-- Supports All-Day Energy + Focus
+- Fuels All-Day Energy + Focus
 - Supports Bounce-Back From Burnout
 
 ### CTAs

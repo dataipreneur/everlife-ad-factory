@@ -15,7 +15,7 @@ What Dave punishes (from his critique of the first PT-141 video, 2026-10-28; Spa
 - **Talking in circles.** "'Desire support' three times in five seconds. Did a robot write that? Sounds like gas-station hornet honey
   dodging FDA rules." → one approved claim per beat, each a different idea; never stack synonyms. Supporting lines must not repeat a noun.
 - **Jargon with no plain English.** "Why does it say 'Brain-Based' and 'Non-Hormonal'? How is that different from BlueChew or Cialis?"
-  → say what it means in the bible's own plain lines: "Non-Hormonal Desire Support" / "Supports Desire + Physical Response" / "3-in-1:
+  → say what it means in the bible's own plain lines: "Non-Hormonal Desire Support" / "Promotes Desire + Physical Response" / "3-in-1:
   PT-141 + Apomorphine + Tadalafil". Never name the competitors he's thinking of (Viagra, Cialis, BlueChew); never split the combo
   to explain it.
 - **A cartoon selling a prescription.** "Zero idea why a cartoon is selling me a real prescription drug, or what it costs." → the real

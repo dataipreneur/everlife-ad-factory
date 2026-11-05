@@ -123,8 +123,8 @@ user asks), placement (images are made at 4:5; 9:16 is made from the approved ma
      single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply; intimate wellness: shoulder-up, no bed, bedroom, couples or lingerie; the tablet is the hero in the B-roll; PT-141, Apomorphine and Tadalafil only ever together.
 2. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Spontaneity" ("Spontaneity, Back On", "From Ready to Right Now",
-   "Supports Spontaneous Intimacy") / "Connection + confidence" ("Ignite Connection. Fuel Confidence.", "Desire Support for Men +
-   Women") / "Three in one" ("3-in-1: PT-141 + Apomorphine + Tadalafil", "Supports Desire + Physical Response") / "ED support (⏳ needs
+   "Encourages Spontaneous Intimacy") / "Connection + confidence" ("Ignite Connection. Fuel Confidence.", "Desire Support for Men +
+   Women") / "Three in one" ("3-in-1: PT-141 + Apomorphine + Tadalafil", "Promotes Desire + Physical Response") / "ED support (⏳ needs
    approval)" ("On-Demand ED Support", "ED Support on Your Schedule", "A Smarter Approach to ED": only with the user's explicit OK, Jeremy).
 3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
