@@ -5,7 +5,7 @@ Why it works: tasteful by construction; the default for Lovara statics (Mitansh'
 `core/references/static-refs/13_Premium_DTC/`).
 
 ## 4A — Soft still life
-- **Looks like:** the bottle + one capsule on travertine or white linen, blush silk folds, soft daylight, a real shadow. Serif Tier A line.
+- **Looks like:** the bottle + one capsule on travertine or white linen, blush silk folds, soft daylight, a real shadow. Serif a bible reference line line.
 - Static: batch F12. Video: Seedance slow push-in, 480p is enough.
 
 ## 4B — Capsule macro

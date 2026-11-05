@@ -1,6 +1,6 @@
 # EverlifeMD Creative Gates — MANDATORY
 
-> **⛔ Proof row ALWAYS inside the Meta safe area (Mitansh, 2026-11-02, HARD, every product, every skill, image AND video):** the Trustpilot / Doctor Prescribed / Ships Free / 100,000+ proof row ends at or above y 1385 on 1080×1920 (`safezones.py`). Never move it lower or outside the safe area by any means (env `EVERLIFE_PROOF_AT`, copy.json `proof_at`, flags, manual edits); the tools refuse. If the product or text collides with the proof row: re-roll the raw (cost approved) or ask the user. Never move the footer. The disclaimer alone may sit at the very bottom.
+> **⛔ Proof row ALWAYS inside the Meta safe area (Mitansh, 2026-11-02, HARD, every product, every skill, image AND video):** the Trustpilot / Doctor Prescribed / Ships Free / 100,000+ proof row ends at or above y 1385 on 1080×1920 (`safezones.py`). Never move it by hand or by flag (env `EVERLIFE_PROOF_AT`, copy.json `proof_at`, manual edits); the tools refuse. **Approved exception (Justin, via Mitansh 2026-11-05): when a raw collides with the proof row, `finish_batch.py` itself drops the row by the minimum that clears the content, up to 20% of the height (384 px, so it ends by y 1769), and says so in its log; beyond 20% the raw is refused → re-roll (cost approved) or ask the user.** The disclaimer alone may sit at the very bottom. The disclaimer alone may sit at the very bottom.
 
 These gates apply to ALL creative work for EverlifeMD: scripts, prompts, images, videos, statics, landers, copy, on-screen text. A gate is pass/fail. If any gate fails, STOP, report which gate and why, and do not proceed, generate, upload or hand off. When a brief conflicts with a gate, follow the gate and flag the conflict.
 
@@ -10,8 +10,8 @@ These gates apply to ALL creative work for EverlifeMD: scripts, prompts, images,
 
 ## 1. Claims sources
 - No Asana brief is required to start work: never ask about one or stop for a missing one. The product skill's own flow decides what to make.
-- Benefits, headlines, CTAs, offers come ONLY from the brief's approved list or the product's bible page — and must also pass sections 2–3. Never invent new claims.
-- Headline status in the bible: lines marked **Hard NO conflict** → never use. **Pending approval** (and every "PROPOSED FOR APPROVAL" hook in Parts B/C) → only with explicit approval. **Weak headline / Weak benefit** → avoid unless the brief asks for it.
+- **Claims** (benefits, ingredient claims, offers, proof) come ONLY from the brief's approved list or the product's bible page, and must pass sections 2–3. Never invent new claims.
+- **Headline and CTA WORDING is free creative writing (Mitansh, 2026-11-05, every product, images and videos):** the bible's headlines, hooks and benefits are references and inspiration for what the product does, never a fence. Be bold and varied: diversity is mandatory. There are no Tier A / Tier B headlines and no per-line approval rounds. **The only fence is the Hard NOs** (section 2 + the product page's Hard NOs): nothing that breaks one, ever; everything else is allowed. Jeremy's compliance sign-off (gate 7) still comes before anything goes live. "Weak headline" / "Pending approval" marks are notes on the references, not bans on your wording.
 - Offers marked [PLACEHOLDER] are not usable — flag.
 
 ## 2. Compliance gate — global Hard NOs (every line, every image)

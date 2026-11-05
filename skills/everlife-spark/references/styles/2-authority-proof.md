@@ -16,7 +16,7 @@ Why it works: pharmacy and clinician framing is a deliberate trust cue for 45+; 
 - Static: `finish_image.py --layout letter`.
 
 ## 2D — Article
-- **Looks like:** an editorial page, kicker "INTIMATE WELLNESS", Tier A headline ("Spontaneity, Back On"), a candid daytime photo of a woman or man 30–65 (shoulder-up), product and proof. No fake byline, no fake site menu.
+- **Looks like:** an editorial page, kicker "INTIMATE WELLNESS", bible reference headlines ("Spontaneity, Back On"), a candid daytime photo of a woman or man 30–65 (shoulder-up), product and proof. No fake byline, no fake site menu.
 - Static: `finish_image.py --layout article`.
 
 ## 2E — Mechanism map

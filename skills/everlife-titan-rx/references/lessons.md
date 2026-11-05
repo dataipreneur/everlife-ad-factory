@@ -114,3 +114,9 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
   `default` and `tiktok`. `tiktok` title-cases headlines: "It's" / "She'll" are in `keep_case` so they don't become "It'S".
 - **Batch 1 (2026-11-02, 4 × 4:5, 4 credits, 0 re-rolls):** the numbered TOP-TO-BOTTOM order + "product is the LOWEST element, ends at 64%" + "bottom 34% plain" landed 4/4 above the footer. Capsule hero worked when it levitates/lies in front on its own (#1, #3); next to a standing bottle it came out bottle-sized (#2, #4): say "capsule at least 40% of the canvas width, in front of and overlapping the bottle's base".
 - Testimonial without screened reviews = a proof card (exact proof strings, no quote, no stars, no name). Garage plates print "45 LB": ask for "plain unmarked plates".
+- **Batch 2 (2026-11-05, 4 ads × 9:16 + 4:5, 8 credits, 0 re-rolls): "All were super duper awesome!" (Mitansh).** The recipe: dealt worlds
+  translated to Titan (giant brass "3" + "1" numerals on warm concrete · liquid-chrome TITAN-RX on black glass · a rugged man ~45 in a grey
+  hoodie at a rainy loft window after training · navy/mocha ink blooming around the bottle in a water tank). Capsule asked at "at least 40%
+  of the canvas width, in front of and overlapping the bottle's base" → came out larger than the bottle in both capsule ads. "TITAN-RX" huge
+  on its own line in every ad; one warm/light ad in the four; CTA "Save Up to 49%". 9:16s still landed low: #2 and #4 were free-fixed in
+  code, #1 used the ≤20% footer drop. Creatify project 03258cd8 (assets/creatify.json).

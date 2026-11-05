@@ -5,48 +5,17 @@ description: EverlifeMD GHK-Cu Cream ad factory (topical GHK peptide cream in an
 
 # GHK Peptide Cream Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE = `core/references/creative-system.md` §2b (Mitansh, 2026-11-04, every product, every image batch; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after, then finish and QA both sizes together on one sheet. Quote 2 credits per ad (GPT Image 2.5). Both sizes are drafts: creative review + Jeremy's sign-off still come first.
-
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the GHK Peptide Cream creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to
 finished, branded, compliant ads in a local folder. **You drive the session with questions** (`AskUserQuestion`) so the user never
 has to know the internals.
 
-Golden rules, all non-negotiable:
-1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the approved lines
-   (quick-hit benefits, ✅ headlines and CTAs), every Hard NO, the bible page's **compliance pre-screen** (❌ never; ⚠ only after the
-   user's explicit OK, flagged for Jeremy). **Headlines are Tier A by default** (bible wording); fresh wording is **Tier B**: max 2 per
-   batch, PROPOSED, approved line by line, flagged for Jeremy. The disclaimer is used verbatim from `product.json`.
-2. **The disclaimer** is the standard ad disclaimer, now on the bible page (sync 2026-11-03; word for word product.json's text). The
-   old "provisional disclaimer" flag is retired.
-3. **Naming (global rule):** on Meta (FB), Google (GL) and TikTok (TK) the product is **"GHK Peptide Cream"**. **"GHK-Cu Cream"** is
-   used only as the product name on the **H2** channel. Never "GHK-Cu" as a word, never "-Cu", never "copper peptide", anywhere
-   else (copy, VO, captions, prompts' TEXT strings, file names shown to the team). Inside a line the peptide is "GHK".
-4. **Product truths:** a doctor-prescribed **topical cream in an airless pump bottle** (navy label, champagne-gold cap and base; label
-   EVERLIFE / GHK / Peptide Cream / RX ONLY / 30G). **No tablet, no capsule:** the bottle is the hero, large, foreground, label legible.
-   Skin support only, "-looking" where the bible says it; never a strength or percentage (the label render has none), never a skin
-   condition, wrinkles, ages, "years younger", "builds/boosts collagen", "clinically", needles or droppers.
-5. **Women 30–55, beauty-and-fitness register:** candid, warm, sun-lit, real-looking women (core demo: the 40-year-old mom), lean
-   and fit, **never bodybuilding or "huge" physique imagery** (bible Hard NO), no body-shape or weight cues, **no before/after or
-   side-by-side skin comparison**, no close-ups of skin problems. An ordinary non-famous face, a different woman in every ad.
-6. **Palette: pinks, tans and beige; no oranges or greens** (bible; this product is one of the two the rule binds). The bottle's navy
-   and champagne gold are the one contrast; gold stays champagne, never orange. No green plants or leaves, no citrus, no terracotta.
-7. **Images never say "by Everlife"**: the name reads "GHK PEPTIDE CREAM" (or "GHK-CU CREAM" on H2), big (one of the two largest
-   texts). Videos say "GHK Peptide Cream by Everlife" in the header and the first spoken line.
-8. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
-9. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown (shared Everlife credits).
-10. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly; never call a weak take good.
-11. **Every script is new.** Check and append `~/Everlife-Creative/ghk-cream-copy-log.md`; never repeat a header, end-card headline or CTA.
-12. Everything is a draft until creative review approves it and Jeremy signs off on compliance. Nothing is posted or uploaded anywhere.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 
@@ -116,13 +85,17 @@ If everything is ✅, say so in one line and go straight to step 1.
 - Read all references in ONE Bash call (`cat` them together), once per session.
 - Start the generation, then do the copy log and job folder while it renders.
 
-## Step 1 — Setup (every question has a ✨ Recommended first option; two rounds, then the table)
-**Never asked:** audience (women 30–55, always), people in frame (default: **product-only**, the premium-DTC direction Mitansh
-approved, `lessons.md`; people only when the user asks, tested in 2–3 shots first: one candid woman 30–55, shoulder-up/waist-up,
-daytime, sun-lit), placement (images at 4:5; 9:16 made from the approved masters), frameworks (random mix; the user can name some).
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · **direction: 🎲 Surprise me first, then three
+  inspirations you pitch for this product from `core/references/world-deck/INSPIRATIONS.md`** · who's in them · form or strength, only if
+  the product has several), then `deal_worlds.py` deals the mix (following the chosen direction) and you write every ad from its slot.
+  Never ask for mood, palette, copy density, boldness, hook angle, placement or framework. This product's facts, hard stops and
+  references: `references/product-brief.md`.
+- **Video / Avatar** → the video setup below, unchanged.
 
+### Video setup (unchanged; images never use these questions)
 **Round 1 — one AskUserQuestion, 4 questions:**
-1. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
    - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed
      lower-left over the animated Boreal-H3 background built from the real render; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield;
      its own single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
@@ -134,19 +107,9 @@ daytime, sun-lit), placement (images at 4:5; 9:16 made from the approved masters
    Cream") are ⚠ Jeremy on H2 and are left out by default.
 3. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "Firmness" ("Firmer-Looking Skin Starts With Support", "Support
    Firmer Skin") / "The peptide step" ("Peptide-Powered Skin Support", "Your Daily GHK Glow") / "Glow" ("Glow Smarter With GHK Peptide
-   Cream", "Encourages a Brighter, More Even-Looking Tone"). ⚠ lines (pre-screen) only with the user's OK.
-4. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
-   lines". Safe = Tier A only. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit OK and goes to Jeremy.
-
-**Round 2 (images) — one AskUserQuestion, 4 questions:**
-> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
-5. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" /
-   "Soft blush: pink, rose, cream" / "Warm sand: tan, beige, travertine, golden morning light". Sets palette and light; §2b still
-   varies the type pairing per ad. Every mood stays pinks / tans / beige: no oranges or greens.
-6. **Copy density:** "Headline + 3 lines (Recommended)" / "Headline + 1 line" / "Headline only, the picture talks".
-7. **Image model:** see `core/references/image-models.md` (GPT Image 2.5 recommended).
-8. **How many:** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12".
-Then `references/image-batch.md` §2 step 2 onward (the table, the persona pass, the approval question).
+   Cream", "Supports a Brighter, More Even-Looking Tone"). ⚠ lines (pre-screen) only with the user's OK.
+4. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one fresh line in the batch" / "Bold: two fresh
+   lines". Safe = a bible reference line only. Balanced/Bold = fresh lines (Jeremy signs off on wording), each needs the user's explicit OK and goes to Jeremy.
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·
 **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md` · **Mood** (the options of 5,
@@ -165,7 +128,7 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
 2. Write **one** concept and show it compactly: Hook (0–2.5 s, speech from the first second) · Script / shot list with timestamps,
    every spoken line in quotes · On-screen copy: header "GHK PEPTIDE CREAM BY EVERLIFE", end-card headline, 3 benefits (✅ lines
    only), CTA, all from the bible · Compliance notes: the bible line behind each claim; any ⚠ line used (needs the user's explicit OK
-   now, Jeremy later); any Tier B line marked PROPOSED · the full generation prompt in a collapsed code block.
+   now, Jeremy later); any fresh line (Jeremy signs off on wording) · the full generation prompt in a collapsed code block.
 3. **Persona critique** (`references/personas.md`): read the concept as both personas; score the rubric; fix anything under 4; show
    the critique and the fixes under the concept.
 4. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style".

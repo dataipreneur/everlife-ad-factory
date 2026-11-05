@@ -53,8 +53,8 @@ Images come from the Creatify connector (`composer_edit_image`, GPT Image 2.5, 1
 - A comedic metaphor hook that runs through the whole ad as a throughline (winners: "Your brain just booked a meeting. For
   3 a.m." / "Counting sheep? Bad news. The sheep quit."). The hook pays off in the product beat. No benefit lists after a strong hook.
 - **"<Product> by Everlife" spoken by about 3 s** and the product named (not just "this"), with the pronunciation written in the prompt.
-- Claims come only from the bible (quick-hit benefits); new wording is Tier B and gets flagged for Jeremy. No I/me/my, no "Are you…?".
-- The table shown to the user has Time · Spoken line · B-roll. Then: claims → bible source, Tier B lines, cost. **"Approve & generate (≈N cr)"**.
+- Claims come only from the bible (quick-hit benefits); wording is free (the only fence is the Hard NOs); Jeremy signs off before anything goes live.
+- The table shown to the user has Time · Spoken line · B-roll. Then: claims → bible source.
 
 ## Step 3 · Stills (Creatify, ~1 cr each)
 1. **Presenter still** `gen/p01_presenter_green.png` (9:16): waist-up, centred, head at ~12–35% of the height, tiny wireless mic (MIC below) at

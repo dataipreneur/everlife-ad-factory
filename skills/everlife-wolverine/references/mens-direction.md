@@ -36,7 +36,7 @@ man, the support is in the product.
    bench beside wraps and a shaker, in a chalked hand pushed toward the lens (the winners' "hand thrusts the bottle at camera" move).
    The vial is ALWAYS a still object: no syringe, pen, needle, droplets or injecting, ever. No capsules or pills anywhere.
 5. **Type:** heavy condensed grotesque, all caps allowed for men ("WOLVERINE STACK"), product name huge; or a stencil / industrial
-   sans. Three-word power stacks work (e.g. "TRAIN. RECOVER. REPEAT.": Tier B, needs an OK; the Wolverine page has no ✅ headline yet). Red, chalk
+   sans. Three-word power stacks work (e.g. "TRAIN. RECOVER. REPEAT.": a fresh line, needs an OK; the Wolverine page has no ✅ headline yet). Red, chalk
    white or gold accent. Three benefit pills with simple icons when the brief wants bullets; one line when it wants less text.
 6. **Copy register:** plain, blunt, earned. No "bro" slang, no shouting about results. Hooks: only the Wolverine page's lines in
    `product-bible.md` (⏳ / ⚠ headlines with an OK; ✅ benefits). The BPC-157 Men list belongs to another product.

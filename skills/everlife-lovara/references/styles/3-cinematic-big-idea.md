@@ -6,11 +6,11 @@ Why it works: a gentle pattern interrupt for a product people don't expect to se
 
 ## 3A — Object metaphor
 - **Looks like:** two coffee cups set down together on a sunlit counter; a door opening onto morning light; a silk ribbon untied; a rose
-  opening in time-lapse. The bottle arrives in the final beat, label to camera. One Tier A line in finishing ("From Distant to Deeply Connected").
+  opening in time-lapse. The bottle arrives in the final beat, label to camera. One a bible reference line line in finishing ("From Distant to Deeply Connected").
 - **Guardrails:** the metaphor is about connection, never about bodies; nothing that reads as a bedroom.
 
 ## 3B — Gentle contrast
-- **Looks like:** two chairs apart at a table, then side by side; one Tier A line; the product on the table.
+- **Looks like:** two chairs apart at a table, then side by side; one a bible reference line line; the product on the table.
 - **Guardrails:** no couple shown; humour or warmth, never performance.
 
 ## 3C — Retro film

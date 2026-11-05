@@ -33,5 +33,9 @@
   "never": "a strength or percentage on the bottle; another product's bottle, tube or jar; tablets, capsules or pills; needles, syringes, droppers or vials; before/after or side-by-side skin comparison; close-ups of wrinkles, blemishes, scars or any skin condition; bodybuilding or 'huge' physique imagery; body-shape, waist or weight cues; beds or bedroom scenes; orange or green colours",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it. The pump is slim (about 1:4): upright it fills >= 20% of the width and >= 45% of the canvas height (it must fit between the 14% logo band and the 66% product line); laid on its side >= 35% of the width."
  },
- "_disclaimer_status": "In the bible (sync 1793728650-5a0d, 2026-11-03): the standard ad disclaimer, word for word."
+ "_disclaimer_status": "In the bible (sync 1793728650-5a0d, 2026-11-03): the standard ad disclaimer, word for word.",
+ "variations": [
+  "womens-palette"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

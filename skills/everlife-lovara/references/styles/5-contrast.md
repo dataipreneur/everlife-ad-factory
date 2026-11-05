@@ -6,6 +6,6 @@ Needles" breaks the no-needles rule. What is left:
 
 ## 5A — "Waiting for the mood" vs 3-in-1 support
 - A ❌ ❌ ✅ list on a kitchen counter: ❌ "Waiting for the mood" / ❌ "Hoping it comes back on its own", ✅ "Lovara: 3-in-1 intimacy support.
-  Doctor prescribed." (the ❌ lines are Tier B: PROPOSED, need the user's OK and Jeremy).
+  Doctor prescribed." (the ❌ lines are a fresh line: fresh, need the user's OK and Jeremy).
 - **Guardrails:** no brands, no product categories that imply a medical comparison, no "better/safer than", no "ED".
 - Static: `finish_image.py --layout checklist` or batch F1.

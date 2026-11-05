@@ -10,8 +10,8 @@ The bible limits what we CLAIM. It does not limit what we SHOW. Never start from
 4. Each idea must survive the visual gates: the real bottle and capsule (never altered); no before/after or body comparison; no fake doctors, needles, or competitor products; nothing in the safe-zone bans; warm, calm and legible for 50+.
 
 **Copy: two tiers, always labelled.**
-- **Tier A (default, ready):** bible headlines, benefits and claims, verbatim or lightly trimmed.
-- **Tier B ("PROPOSED FOR APPROVAL"):** creative lines that make no new claim: wordplay, scene-setting or a twist on a bible line (e.g. "Lights out. Mind too."). Allowed only as a draft once the user explicitly approves that exact line. Still bound by every global Hard NO: no new benefit, no disease word, no first person, no "Are you…?", no guarantee. Mark it in SESSION.md as "Tier B, needs Jeremy" and log it in the copy log. Every ad still carries the verbatim disclaimer, "Trustpilot rated 4.9 Excellent" and the 100,000+ proof, unchanged.
+- **a bible reference line (default, ready):** bible headlines, benefits and claims, verbatim or lightly trimmed.
+- **a fresh line ("pending in the bible"):** creative lines that make no new claim: wordplay, scene-setting or a twist on a bible line (e.g. "Lights out. Mind too."). Allowed only as a draft once the user explicitly approves that exact line. Still bound by every global Hard NO: no new benefit, no disease word, no first person, no "Are you…?", no guarantee. Mark it in SESSION.md as "fresh line" and log it in the copy log. Every ad still carries the verbatim disclaimer, "Trustpilot rated 4.9 Excellent" and the 100,000+ proof, unchanged.
 
 ## Art direction (the picture)
 - **One visual idea, not a scene.** Prefer a concept or visual pun over "a person in a bedroom".
@@ -88,5 +88,5 @@ Fallback ONLY if Creatify is unavailable AND the user explicitly says yes to spe
 | `split` | the middle 40% (two columns) | 2E, 5C |
 | `frame` | a plain blank frame/screen/billboard area in the scene | 4D |
 
-## Copy for the finished image (Tier A from the bible; Tier B only as approved proposals, see above)
+## Copy for the finished image (a bible reference line from the bible; a fresh line only as approved proposals, see above)
 Header (≤ 6 words, lead with "sleep" where natural), 3 benefits or 3 ingredient claims (each on its own ingredient), CTA, and optionally the pain-point kicker. Check and append to the copy log.

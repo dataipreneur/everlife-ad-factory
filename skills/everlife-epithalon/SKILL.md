@@ -5,17 +5,11 @@ description: EverlifeMD Epithalon ad factory (longevity peptide, compounded Rx v
 
 # Epithalon Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE = `core/references/creative-system.md` §2b (Mitansh, 2026-11-04, every product, every image batch; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after, then finish and QA both sizes together on one sheet. Quote 2 credits per ad (GPT Image 2.5). Both sizes are drafts: creative review + Jeremy's sign-off still come first.
-
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the Epithalon creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded,
 compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool).
@@ -26,23 +20,7 @@ compliant ads in a local folder. **You drive the session with questions** (the `
 (2) spelling: copy says "Epithalon" (bible), the vial label reads "EPITALON": never edit the label; (3) offer and landing page are
 [PLACEHOLDER]: no offer line; (4) all four headlines are ⏳ pending.
 
-Golden rules, all non-negotiable:
-1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the ✅ lines of the
-   pre-screen (today: "Promotes Healthy Aging", "Aids Oxidative Stress Defense", the five CTAs, the proof), every Hard NO;
-   ❌ never; ⏳ headlines and the ⚠ "Supports DNA + Cellular Health" only after the user's explicit OK per line, flagged for Jeremy.
-   No headline is approved yet: the name "Epithalon" big + a ✅ benefit carries the design. Fresh wording is Tier B (max 2 per batch,
-   PROPOSED, Jeremy).
-2. **Product truths:** Epithalon is **longevity peptide support**: healthy aging, cellular support, oxidative stress defense.
-   **No sleep or overnight claims or imagery** (product Hard NO; DSIP's territory), even though the page lists two sleep benefits.
-   Healthy aging, never age reversal ("anti-aging", "reverse", "younger", "turn back the clock" are out); no disease words; no
-   before/after or body/age comparison; no body-composition claims. "Supports", never "repairs / reverses / builds". ONE form: the
-   **compounded Rx vial**; never a strength, dose, volume or count in copy. **Never show or mention needles, syringes, pens, injecting
-   or "needle-free": the vial is a still object.**
-3. **Look:** adults 40–65, **men and women in balance**, real and ordinary, in calm, warm, sun-lit daytime moments (`references/direction.md`);
-   the vial's teal label as the accent; no palette limit. Always spell it "Epithalon" in copy; the label stays "EPITALON".
-4. **Offer:** none ([PLACEHOLDER] in the bible). No %, no $, no offer slot until Justin fills it.
-5. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every result**;
-   **every script is new** (`~/Everlife-Creative/epithalon-copy-log.md`); everything is a draft until creative review and Jeremy approve.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 
@@ -87,8 +65,16 @@ intro. The transcript QA fails any raw without the name or "by Everlife". Static
 3. Run `bash <skill-dir>/core/scripts/preflight.sh` and walk the user through anything not ✅ (as in the other skills). Marketing
    Studio registration (for UGC / AI Avatar) is a separate step that needs Priestley's OK; preflight prints the command.
 
-## Step 1 — Setup (every question has a ✨ Recommended first option)
-**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🎞️ Animated still" / "🧑‍💼 AI Avatar Video".
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · **direction: 🎲 Surprise me first, then three
+  inspirations you pitch for this product from `core/references/world-deck/INSPIRATIONS.md`** · who's in them · form or strength, only if
+  the product has several), then `deal_worlds.py` deals the mix (following the chosen direction) and you write every ad from its slot.
+  Never ask for mood, palette, copy density, boldness, hook angle, placement or framework. This product's facts, hard stops and
+  references: `references/product-brief.md`.
+- **Video / Avatar** → the video setup below, unchanged.
+
+### Video setup (unchanged; images never use these questions)
 - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
   over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
   single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
@@ -97,10 +83,10 @@ intro. The transcript QA fails any raw without the name or "by Everlife". Static
 
 **Round 2 — ONE AskUserQuestion, 4 questions:**
 1. **Audience:** "Both (half each) (Recommended)" / "Men 40–65" / "Women 40–65".
-2. **Angle:** "Mix (Recommended)" / "Healthy aging, plainly" ("Promotes Healthy Aging") / "Cellular defense" ("Supports Oxidative
+2. **Angle:** "Mix (Recommended)" / "Healthy aging, plainly" ("Supports Healthy Aging") / "Cellular defense" ("Supports Oxidative
    Stress Defense") / "Longevity, simply" ("Start Longevity Support").
 3. **How bold on copy:** "✅ benefit lines as headlines (Recommended)" / "A pending headline (H3/H4; I OK each, flagged for Jeremy)" /
-   "Bold: one ⚠ or PROPOSED line (I OK it)".
+   "Bold: one ⚠ or fresh line (I OK it)".
 4. **CTA:** "Ships Free From Pharmacy" / "Explore Epithalon" / "Support Healthy Aging" / "Start Longevity Support" (all ✅; first =
    Recommended; "Build Your Plan" via Other). Never "Get Started Now" (bible, 2026-11-03).
 

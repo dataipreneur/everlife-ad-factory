@@ -5,7 +5,7 @@ Why it works: the green bottle with one tablet, or the green vial, is a distinct
 
 ## 4A — Still life
 - **Looks like:** the product on a white stone counter or a desk by a window, hard side light, one long shadow; or on walnut for
-  the quiet variant. Sentence-case Tier A line. Static: batch F12 / F14. Video: Seedance slow push-in, 480p.
+  the quiet variant. Sentence-case a bible reference line line. Static: batch F12 / F14. Video: Seedance slow push-in, 480p.
 - **Guardrails:** one form per ad (both only for "lead with the choice"); exactly one tablet; the vial is a still object; no syringe,
   pen, dropper or droplets; no capsules.
 

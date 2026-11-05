@@ -5,30 +5,15 @@ description: EverlifeMD Restora-Z ad factory. Guides the user step by step (conn
 
 # Restora-Z Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE = `core/references/creative-system.md` §2b (Mitansh, 2026-11-04, every product, every image batch; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after, then finish and QA both sizes together on one sheet. Quote 2 credits per ad (GPT Image 2.5). Both sizes are drafts: creative review + Jeremy's sign-off still come first.
-
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🚗 CAR THROW REVIEW = `core/references/car-throw-review.md` (Mitansh, 2026-11-03: "This was amazing!!!"; every tablet / capsule product):** every VIDEO Style / Mood question in this skill ALWAYS includes the option **"🚗 Car Throw Review (everyday person catches the bottle thrown into their car, honest breakdown, urgent CTA; Seedance 2.5 on Creatify ≈47 Creatify, 0 Higgsfield)"**. When picked, follow that file end to end (20 s relaxed pace, sealed bottle, one held tablet/capsule, throw sped up 3× in post, header 0–5.5 s then logo). This skill's own claims, casting, form and tone rules still apply.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the Restora-Z creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded, compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool) so the user never has to know the internals.
 
-Golden rules, all non-negotiable:
-0. **MANDATORY in every video (Mitansh, 2026-10-30): the VO says "Restora-Z by Everlife"** in the first spoken lines (by ~3 s) and names the product (not just "this"); "RESTORA-Z by Everlife" on screen in the intro. Pronunciation in the prompt: "res-TOR-uh zee". QA fails any raw where the transcript lacks the name or "by Everlife". Statics: no "by Everlife". Details: `core/references/creative-system.md` §0.
-1. **Claims come only from `references/product-bible.md` + `references/global-rules.md`.** Hard stops: the approved pain points, the approved claims (benefits + per-ingredient claims) and every Hard NO. Never invent a claim. **Headlines are Tier A by default** (bible wording, verbatim or lightly trimmed); fresh wording or a non-bible winner headline is **Tier B**: max 2 per batch, marked PROPOSED, approved line by line and flagged for Jeremy (⚠ PENDING CREATIVE-LEAD CONFIRMATION, changed 2026-10-28; this replaces the 2026-10-27 "fresh wording is fine" rule; details in `references/image-batch.md` §0). The disclaimer is used verbatim.
-2. **One script at a time.** Write → user approves/edits → generate → write the next while it renders.
-3. **Never spend credits without an explicit approval** of that specific script, and the approval option must show the cost. (Images: approving the batch table, with its total cost shown, is that approval.)
-4. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly; never call a weak take good.
-5. **Every script is new.** Check and append `~/Everlife-Creative/restora-z-copy-log.md`; never repeat a line, header, end-card headline or CTA already logged.
-6. Everything is a draft until creative review approves it and Jeremy signs off on compliance. Nothing is posted or uploaded anywhere.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 
@@ -80,13 +65,20 @@ If everything is ✅, say so in one line and go straight to step 1 (no "start?" 
 - Write prompts by filling the template in `image-prompting.md`; don't redesign it each time. Keep chat output short.
 - Start the generation, then do the copy log and job folder while it renders.
 
-## 🖼️ IMAGE ADS → Batch Mode
-If the user wants images (or picks "Image ads" in step 1), follow **`references/image-batch.md`** end to end: one setup question, a batch table of ≥4 different frameworks to approve, parallel Creatify GPT Image 2.5 generations, strict QA, `finish_batch.py` footer, contact sheet. Skip steps 2–3 and the image notes in step 5. (Video steps are unchanged.)
+## 🖼️ Image ads
+Follow `core/references/image-flow.md` with this product's `references/image-batch.md`. Both sizes every run; finishing in code.
 
-## Step 1 — Setup (keep it simple; every question has a ✨ Recommended first option)
-**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · **direction: 🎲 Surprise me first, then three
+  inspirations you pitch for this product from `core/references/world-deck/INSPIRATIONS.md`** · who's in them · form or strength, only if
+  the product has several), then `deal_worlds.py` deals the mix (following the chosen direction) and you write every ad from its slot.
+  Never ask for mood, palette, copy density, boldness, hook angle, placement or framework. This product's facts, hard stops and
+  references: `references/product-brief.md`.
+- **Video / Avatar** → the video setup below, unchanged.
+
+### Video setup (unchanged; images never use these questions)
 - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply.
-- **Images** → go straight to `references/image-batch.md` (its own setup question; NEVER show video styles to an image run).
 - **Video** → ONE AskUserQuestion with 3 questions:
   1. **Placement:** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1".
   2. **Style:** "✨ Recommend for me (Recommended)" / and the 3 video categories that fit best (from `styles/INDEX.md`).
@@ -111,7 +103,7 @@ Style gates (check before offering):
    - **Hook (0–2s)** in one line
    - **Script / shot list** (timestamps), every spoken line in quotes
    - **On-screen copy**: header, end-card headline, 3 ingredient claims (each on its own ingredient), CTA, all from the bible
-   - **Compliance notes**: which bible lines each claim came from; any Tier B line marked PROPOSED FOR APPROVAL (needs the user's explicit OK now, Jeremy later); anything borderline
+   - **Compliance notes**: which bible lines each claim came from; any fresh line (Jeremy signs off on wording) FOR APPROVAL (needs the user's explicit OK now, Jeremy later); anything borderline
    - The full generation prompt in a collapsed code block
 3. AskUserQuestion: **"Approve & generate (≈N credits)"** / "Edit the script" / "New concept, same style" / "Change style". On edits, revise and ask again. Label each concept with its sub-style code (e.g. "1B · Partner POV") so the team learns the system.
 4. On approval: create the job folder `~/Everlife-Creative/output/Restora-Z/<YYYY-MM-DD>_<slug>/` with `prompt.txt`, `copy.json`, `source/` (copy `assets/` renders); run the cost check, submit the generation **in the background**, append the concept to the copy log.

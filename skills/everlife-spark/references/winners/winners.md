@@ -41,7 +41,7 @@
 | Code | Look | Results | Take | Don't copy |
 |---|---|---|---|---|
 | S04 · Base04 | woman's back in a teal gown holding the bottle, tablet front, three outlined pills | **best:** 17 (LH) + 9 (EVL) + 6 (EVR) purchases, $199–266 CPA | elegance, gown, gold type, pills | "More Than a Physical Response" is a bible **Weak** headline (ask first); "3-in-1 SUBLINGUAL" |
-| S08 · Base08 | cream, huge SPARK, a "WAITING → SPARK MOMENT" slider with the tablet as the knob | **23 purchases, $239 (EVR)**, the most proven | the slider metaphor; icon row; cream + orange | "A Different Approach to Desire" (not in the bible: Tier B) |
+| S08 · Base08 | cream, huge SPARK, a "WAITING → SPARK MOMENT" slider with the tablet as the knob | **23 purchases, $239 (EVR)**, the most proven | the slider metaphor; icon row; cream + orange | "A Different Approach to Desire" (not in the bible: a fresh line) |
 | S14 · Base14 | dressed couple on a night street, bottle + tablet front right | 19, $256 (EVR) | night glamour, black + gold | "3-IN-1 DESIRE SUPPORT" (bible: "3-in-1: PT-141 + Apomorphine + Tadalafil"); bible: no generic stock-style couples |
 | S13 · Base13 | blush + crystal light, giant tablet, three pink pills | 6, $233 (EVR); 2, $282 (LH) | giant tablet, soft blush | "NON-HORMONAL FORMULA", "ON-DEMAND SUPPORT" (use the bible's exact lines) |
 | S03 · Base03 | gold-amber, a palm under a floating tablet, callout lines | not in the export | glow, callout lines | — |
@@ -53,7 +53,7 @@
 | Code | Format | Results | Take | Don't copy |
 |---|---|---|---|---|
 | V02 · Base02 (12 s) | product-only luxury: bottle on roses / black marble, slow push-ins, tablet in, "Save up to 51%" end card | 4, $281 (LH) | the set, the slow push, the end card | "Things are looking up **tonight**" (timing); "Three pathways. One tablet." (not in the bible) |
-| V04 · Base04 (20 s) | 3D-animated couple on a sofa: bored → the tablet's glow → connection → dinner; benefit chips + offer badge | not in the export (Emily: winner) | the animated story arc; persistent chips | "Desire + **Blood flow** + Arousal" (ED-adjacent, not in the bible; "arousal" is a bible Hard NO since 2026-11-02); "The Overachiever" (Tier B) |
+| V04 · Base04 (20 s) | 3D-animated couple on a sofa: bored → the tablet's glow → connection → dinner; benefit chips + offer badge | not in the export (Emily: winner) | the animated story arc; persistent chips | "Desire + **Blood flow** + Arousal" (ED-adjacent, not in the bible; "arousal" is a bible Hard NO since 2026-11-02); "The Overachiever" (a fresh line) |
 | V06 · Base06 (19 s) | 3D-animated couple at a restaurant; a waiter serves the tablet on a cushion; light trails | not in the export (Emily: winner) | the serving reveal; warm restaurant | "The night is young. Act accordingly." (timing); "Blood flow"; "Three pathways. One tablet." |
 
 All the proof bars here say "Free and Discreet Delivery". The approved wording is **Ships Free From Pharmacy**; the footer art

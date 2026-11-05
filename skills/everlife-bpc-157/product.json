@@ -39,5 +39,10 @@
   "label": "wraps the curved glass, EVERLIFE / BPC-157 / 3MG/ML / RX ONLY / 5ML",
   "never": "syringe, needle, pen, dropper, droplets, capsules, pills, tablets, a second vial",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
- }
+ },
+ "variations": [
+  "hardcore-men",
+  "vial-product"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

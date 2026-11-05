@@ -2,23 +2,45 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim. Plain Sermorelin (sublingual tablet), NOT Sermorelin GHK.",
  "id": "sermorelin",
  "name": "Sermorelin",
- "renders": {"bottle": "sermorelin1000_bottle.png", "pill": "sermorelin_tablet.png"},
+ "renders": {
+  "bottle": "sermorelin1000_bottle.png",
+  "pill": "sermorelin_tablet.png"
+ },
  "strengths": {
   "_about": "Tablet assumed shared (confirm). renders.bottle is the default; a job showing the other strength sets \"bottle\" in copy.json.",
-  "1000": {"bottle": "sermorelin1000_bottle.png", "bottle_ref": "sermorelin1000_bottle_ref.jpg", "label": "SERMORELIN · 30 SUBLINGUAL TABS · 1000 MCG"},
-  "500": {"bottle": "sermorelin500_bottle.png", "bottle_ref": "sermorelin500_bottle_ref.jpg", "label": "SERMORELIN · 30 SUBLINGUAL TABS · 500 MCG"}
+  "1000": {
+   "bottle": "sermorelin1000_bottle.png",
+   "bottle_ref": "sermorelin1000_bottle_ref.jpg",
+   "label": "SERMORELIN · 30 SUBLINGUAL TABS · 1000 MCG"
+  },
+  "500": {
+   "bottle": "sermorelin500_bottle.png",
+   "bottle_ref": "sermorelin500_bottle_ref.jpg",
+   "label": "SERMORELIN · 30 SUBLINGUAL TABS · 500 MCG"
+  }
  },
  "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
  "disclaimer_at": "bottom",
  "end_card_safe_shift": true,
- "keep_case": ["Sermorelin by Everlife", "Sermorelin"],
+ "keep_case": [
+  "Sermorelin by Everlife",
+  "Sermorelin"
+ ],
  "review_highlight": "Sermorelin(?!\\s*\\+?\\s*GHK)",
  "reviews": "references/reviews.json",
  "kicker_default": "STRENGTH · LONGEVITY",
- "split_titles": ["THE STRUGGLE", "THE GOAL"],
+ "split_titles": [
+  "THE STRUGGLE",
+  "THE GOAL"
+ ],
  "notify_app": "Sermorelin",
  "notify_icon": "dot",
  "compare_allowed": false,
  "pill_end_scale": 0.62,
- "product_zones": null
+ "product_zones": null,
+ "variations": [
+  "hardcore-men",
+  "two-strengths"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

@@ -5,37 +5,16 @@ description: EverlifeMD NAD+ ad factory (prescription NAD+ as a sublingual table
 
 # NAD+ Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-62% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE = `core/references/creative-system.md` §2b (Mitansh, 2026-11-04, every product, every image batch; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after, then finish and QA both sizes together on one sheet. Quote 2 credits per ad (GPT Image 2.5). Both sizes are drafts: creative review + Jeremy's sign-off still come first.
-
-> **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
-
-> **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
-
-> **🚗 CAR THROW REVIEW = `core/references/car-throw-review.md` (Mitansh, 2026-11-03: "This was amazing!!!"; every tablet / capsule product):** every VIDEO Style / Mood question in this skill ALWAYS includes the option **"🚗 Car Throw Review (everyday person catches the bottle thrown into their car, honest breakdown, urgent CTA; Seedance 2.5 on Creatify ≈47 Creatify, 0 Higgsfield)"**. When picked, follow that file end to end (20 s relaxed pace, sealed bottle, one held tablet/capsule, throw sped up 3× in post, header 0–5.5 s then logo). This skill's own claims, casting, form and tone rules still apply.
-
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
-
-> **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
+> **Engine (2026-11-05):** this skill is a product brief on top of the shared Everlife engine; rules are never restated here.
+> Images: `core/references/image-flow.md` + `references/product-brief.md` (one question, worlds dealt, both sizes, finished in code).
+> Videos: `core/references/video-team-rules.md` · `video-winners.md` · `on-camera-speech.md` · `seedance-on-creatify.md` ·
+> `car-throw-review.md` (tablet / capsule products) · `hook-engine/`. Exceptions this product opts into: `product.json` →
+> `variations` (`core/references/ENGINE.md`). Golden rules: `core/references/golden-rules.md`. Compliance: the gates + `global-rules.md`.
 
 You are the NAD+ creative producer for EverlifeMD. You take a creative-team member from "nothing connected" to finished, branded,
 compliant ads in a local folder. **You drive the session with questions** (the `AskUserQuestion` tool).
 
-Golden rules, all non-negotiable:
-1. **Claims come only from `references/product-bible.md` + `core/references/global-rules.md`.** Hard stops: the ✅ pre-screen lines,
-   every Hard NO; ⚠ lines only after the user's explicit OK, flagged for Jeremy. **Held ⚠ (2026-10-30, same decision as GLP-1):**
-   "Boost(s)…" lines (global: "supports", never "boosts"), "Reduces Fatigue + Brain Fog" (treatment-like), "Supports DNA Repair"
-   (medical-style), "What Celebrities and CEOs Are Using…" and "Trusted by Entrepreneurs and Athletes" (unsourced authority).
-2. **Lead with the choice (bible):** sublingual tablet **or** injection. "Injection" may be named; **never show or mention needles,
-   syringes, pens or injecting, and never "needle free"** (bible Hard NO: say "easy sublingual delivery"). The vial is a still object.
-   One form per ad, or both shown side by side as "the choice" (bottle + tablet beside the vial, nothing else).
-3. **Focal-point mix** (bible Standards 03, 2026-11-03): tablet ads 40% tablet / 30% bottle / 30% person; injection ads 75% vial / 25% person (`image-batch.md`). Strengths (200 mg / 1000 mg) never
-   in copy. Voiceovers say **"N-A-D plus"**.
-4. No disease words; no "anti-aging" promises ("healthy aging" is the bible's wording); no celebrity look-alikes.
-5. **One script at a time** (video); **never spend credits without explicit approval** with the cost shown; **look at every
-   result**; **every script is new** (`~/Everlife-Creative/nad-copy-log.md`); everything is a draft until creative review and
-   Jeremy approve. Nothing is posted or uploaded anywhere.
+Golden rules: `core/references/golden-rules.md` (one copy for every product). Product facts and hard stops: `references/product-brief.md`.
 
 Read these when the step says so:
 
@@ -75,27 +54,27 @@ or "by Everlife". Statics never say "by Everlife".
    needed. Never a syringe; never another product's bottle, tablet or vial; never the NAD+ nasal spray (not a bible form).
 2. Run `bash <skill-dir>/core/scripts/preflight.sh` and walk the user through anything not ✅ (as in the other skills).
 
-## Step 1 — Setup (every question has a ✨ Recommended first option)
-**Never asked:** audience (all audiences, adults 30–65+), people (default: product only; a person only when asked: clothed, calm,
-everyday, an ordinary non-famous face).
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · **direction: 🎲 Surprise me first, then three
+  inspirations you pitch for this product from `core/references/world-deck/INSPIRATIONS.md`** · who's in them · form or strength, only if
+  the product has several), then `deal_worlds.py` deals the mix (following the chosen direction) and you write every ad from its slot.
+  Never ask for mood, palette, copy density, boldness, hook angle, placement or framework. This product's facts, hard stops and
+  references: `references/product-brief.md`.
+- **Video / Avatar** → the video setup below, unchanged.
 
+### Video setup (unchanged; images never use these questions)
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **Form:** "The choice: tablet and injection together (Recommended: the bible says lead with the choice)" / "Sublingual tablet" /
    "Injection".
-2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
    - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
      over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
      single setup question; no Higgsfield and no Marketing Studio registration needed). This skill's casting,
      claims, colours and banned settings still apply; the presenter is an adult 30–65+, clothed, everyday; the chosen form (vial or sublingual tablet) is the hero in the B-roll; VO names "NAD+ by Everlife".
 3. **Angle:** "Mix (Recommended)" / "Clear head" ("Less Fog. More Focus.", "Clear Head. Full Day.", "Brain Fog, Who?") / "Energy that
-   lasts" ("Fuels All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy
+   lasts" ("Supports All-Day Energy + Focus", "Wake Up Feeling Recharged Again") / "Burnout" ("Bounce Back From Burnout") / "Healthy
    aging" ("More Life in Your Years.", "Your 30s Called & Want You Back").
-4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one PROPOSED line".
-
-> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
-**Round 2 (images) — one AskUserQuestion:** **Mood** "Fresh and bright: morning light, white, green accents (Recommended)" / "✨ Ultra
-premium, product only (Hims/Ro codes + vial-refs: `core/references/ultra-premium.md`)" / "Warm and light: kitchen daylight, linen, stone" / "Dark and focused: charcoal, green glow" (the question shows 4; "Surprise me" via Other) · **Copy density** "Headline +
-3 pills (Recommended)" / "Headline + 1 line" · **CTA** "Save Up to 62% (Recommended; tablet-only ads: Save Up to 62%)" / "Ships Free From Pharmacy" / "Explore NAD+" / "Choose Your Form" ("Start Your Plan", "Recharge Your Cells" via Other; never "Get Started Now") · **How many** "4 (Recommended)" / "8".
+4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ line (I OK it, Jeremy reviews)" / "Bold: one fresh line".
 
 ## Steps 2–6
 As in the other product skills: style details (`styles/INDEX.md`; 2B gated; 5 Contrast never a body or a brand), one script at a time

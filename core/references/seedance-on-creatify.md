@@ -5,7 +5,7 @@
 
 Applies to **every Everlife video in every product skill** (all `everlife-*` skills, including new ones built by
 `everlife-new-product`). It **overrides** every older line that says `higgsfield generate create seedance_2_5 …`,
-`seedance_2_0 …`, "Seedance on Higgsfield", "Seedance ~45 / 67.5 cr", "Unlimited mode in Chrome", or that routes
+`seedance_2_0 …`, "Seedance on Higgsfield", "Seedance ~45 / 67.5 cr", or that routes
 any Seedance, image-to-video, animated-still or start-frame step through Higgsfield.
 
 ## The rule

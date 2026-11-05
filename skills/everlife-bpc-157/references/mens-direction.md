@@ -35,7 +35,7 @@ compounded Rx telehealth sells the vial as the main form. That is exactly why th
    bench beside wraps and a shaker, in a chalked hand pushed toward the lens (the winners' "hand thrusts the bottle at camera" move).
    The vial is ALWAYS a still object: no syringe, pen, needle, droplets or injecting, ever. No capsules or pills anywhere.
 5. **Type:** heavy condensed grotesque, all caps allowed for men ("BUILT TO BOUNCE BACK"), product name huge; or a stencil / industrial
-   sans. Three-word power stacks work ("TRAIN. RECOVER. REPEAT." is Tier B; "Train Hard. Recover Smarter." is Tier A). Red, chalk
+   sans. Three-word power stacks work ("TRAIN. RECOVER. REPEAT." is a fresh line; "Train Hard. Recover Smarter." is a bible reference line). Red, chalk
    white or slate accent. Three benefit pills with simple icons when the brief wants bullets; one line when it wants less text.
 6. **Copy register:** plain, blunt, earned. No "bro" slang, no shouting about results. Hooks from the Men list: "For Bodies That Take a
    Beating", "The Body Takes Hits. Recover Accordingly.", "Heavy Lifts. Smart Recovery.", "For Lifters Who Feel Every Rep", "No Days

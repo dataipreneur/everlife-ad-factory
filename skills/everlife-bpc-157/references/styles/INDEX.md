@@ -41,7 +41,7 @@ Show them for *look and layout* only.
 |---|---|---|
 | Realistic humans talking / acting | Higgsfield Marketing Studio UGC (720p) | ~75 / 15 s |
 | One locked slow shot, talking head, simple product hero | Boreal-style (Creatify Ad Agent) | see `composer_billing_state` |
-| Multi-scene, camera moves, fast motion, animation | Seedance (+ the form's render `--image`); Unlimited mode in Chrome when that memory is active | ~45 / 15 s (67.5 at 720p) or 0 |
+| Multi-scene, camera moves, fast motion, animation || ~45 / 15 s (67.5 at 720p) or 0 |
 | Statics | GPT Image 2.5 via Creatify, render attached | ~1 Creatify credit |
 | ALL words, numbers, logos, review text | finishing only (`finish_batch.py`, `full_layout.py`) | 0 |
 
