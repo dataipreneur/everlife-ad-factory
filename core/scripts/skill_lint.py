@@ -44,7 +44,7 @@ def main():
     CONTRACT = ['9:16 AND 4:5', 'finish_batch.py', '--proof-plan', '--proof-check', '--proof <slot proof>', 'teamlog.py gens', 'teamlog.py qa',
                 'teamlog.py copy', 'teamlog.py proof', 'teamlog.py run', 'teamlog.py close', 'teamlog.py sent', 'teamlog.py posted',
                 'teamlog.py summary', 'Ad Review', 'SESSION.md', 'lessons.md', 'STRICT LAYOUT', '1385', 'AI disclosure', 'copy-log',
-                'deal_worlds.py', 'preflight.sh', 'free-fix', 'contact sheet', 'includes one re-make', 'batch_check.py', 'never render: everlife slot=', 'deal.json']
+                'deal_worlds.py', 'preflight.sh', 'free-fix', 'contact sheet', 'includes one re-make', 'batch_check.py', 'never render: everlife slot=', 'deal.json', 'Strength']
     lost = [t for t in CONTRACT if t not in flow]
     if lost:
         print('❌ image-flow.md lost bare-minimum step(s): ' + ', '.join(lost)); sys.exit(1)

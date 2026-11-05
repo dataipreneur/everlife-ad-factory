@@ -39,6 +39,7 @@ product. Nothing else may override the global flow. Current set:
 | `peptide-stack` | `variations/peptide-stack.md` | wolverine, spartan | every peptide named legibly in every ad |
 | `two-forms` | `variations/two-forms.md` | pt-141, nad, glp-1 | one form per ad; the image question asks which |
 | `compounded-glp1` | `variations/compounded-glp1.md` | glp-1 | "compounded" with every drug name; the price line |
+| `two-strengths` | `variations/two-strengths.md` | sermorelin, sermorelin-ghk | one strength per ad; the image question asks (Either / 500 / 1000 mcg); that strength's bottle render; "Double Strength" only with the 1000 mcg bottle |
 
 Adding a variation = one file in `variations/` + its id in the products' `product.json` + a row here. Never a banner in a skill.
 

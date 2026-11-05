@@ -7,10 +7,12 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 
 ## Variations this product opts into
 - `hardcore-men` → `core/references/hardcore-men.md`
+- `two-strengths` → `core/references/variations/two-strengths.md`
 
 ## Product facts for the prompt
 - **About:** Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim. Plain Sermorelin (sublingual tablet), NOT Sermorelin GHK.
 - **Renders (assets/):** bottle: `sermorelin1000_bottle.png`, pill: `sermorelin_tablet.png`. Use them exactly; never describe the pill's shape or markings in text.
+- **Strengths (the image question asks; 'Either' = never mentioned, default bottle):** **1000 mcg** = bottle `sermorelin1000_bottle.png` (label: SERMORELIN · 30 SUBLINGUAL TABS · 1000 MCG); **500 mcg** = bottle `sermorelin500_bottle.png` (label: SERMORELIN · 30 SUBLINGUAL TABS · 500 MCG). "Double Strength" wording only with the 1000 mcg bottle in frame.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/sermorelin-copy-log.md`. **Output:** `~/Everlife-Creative/output/Sermorelin/`.
 
 ## Headlines: references, not limits

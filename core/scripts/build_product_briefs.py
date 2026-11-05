@@ -17,6 +17,7 @@ VARIATION_FILES = {
     'vial-product': 'core/references/variations/vial-product.md', 'intimacy-tasteful': 'core/references/variations/intimacy-tasteful.md',
     'womens-palette': 'core/references/variations/womens-palette.md', 'peptide-stack': 'core/references/variations/peptide-stack.md',
     'two-forms': 'core/references/variations/two-forms.md', 'compounded-glp1': 'core/references/variations/compounded-glp1.md',
+    'two-strengths': 'core/references/variations/two-strengths.md',
 }
 
 
@@ -85,6 +86,11 @@ def build(skill_dir, pid, prod):
     if renders: out.append("- **Renders (assets/):** " + ", ".join(f"{k}: `{v}`" for k, v in renders.items() if v) + ". Use them exactly; never describe the pill's shape or markings in text.")
     if forms and len(forms) > 1:
         out.append("- **Forms (one per ad):** " + "; ".join(f"**{k}** = {v.get('label', k)} (bottle `{v.get('bottle')}`{', pill `' + v['pill'] + '`' if v.get('pill') else ''})" for k, v in forms.items() if isinstance(v, dict)))
+    strengths = {k: v for k, v in (prod.get('strengths') or {}).items() if isinstance(v, dict)}
+    if len(strengths) > 1:
+        out.append("- **Strengths (the image question asks; 'Either' = never mentioned, default bottle):** " + "; ".join(
+            f"**{k} mcg** = bottle `{v.get('bottle')}` (label: {v.get('label', '')})" for k, v in sorted(strengths.items())) +
+            ". \"Double Strength\" wording only with the 1000 mcg bottle in frame.")
     if hero: out.append(f"- **Hero:** {hero.get('element', '')}; min width {hero.get('min_width', 0.35)} of canvas; never: {hero.get('never', 'covered, blurred, mirrored')}.")
     out.append(f"- **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/{pid}-copy-log.md`. **Output:** `~/Everlife-Creative/output/{name}/`.")
     hs = hard_stops(skill_dir)

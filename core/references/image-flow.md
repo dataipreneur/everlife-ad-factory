@@ -23,7 +23,10 @@ One `AskUserQuestion` with up to 4 questions, every first option ✨ Recommended
   Label `<Name> · <3–4 worlds>`; description = the idea in one sentence + the twist + "≈2 cr/ad, both sizes". A chosen direction
   becomes `deal_worlds.py --prefer <its world ids>`; the other slots stay random, so the batch is still a mix.
 - **Who's in them?** "Mix (Recommended): about a quarter with a real person, the rest product worlds" / "Product only" / "More people".
-- Product-specific only if `product.json` has more than one form (`two-forms` variation): **Form** "Pick per ad (Recommended)" / each form.
+- Product-specific only if `product.json` has more than one **form** (`two-forms`: PT-141, NAD+, GLP-1) or more than one **strength**
+  (`two-strengths`: Sermorelin GHK, Sermorelin): **Form** "Pick per ad (Recommended)" / each form · **Strength** "Either (Recommended):
+  never mentioned, default bottle" / "500 mcg" / "1000 mcg" ("Double Strength" wording only with the 1000 mcg bottle in frame). The prompt
+  attaches that form's / strength's own bottle render.
 Never ask for: mood, style, palette, copy density, boldness, hook angle, placement, framework, pain point. The dealer and you
 decide those, differently for every slot, and the batch table shows the picks. A designer can still type anything in chat
 ("all comic", "women only", "use the boarding pass world") and you honour it.

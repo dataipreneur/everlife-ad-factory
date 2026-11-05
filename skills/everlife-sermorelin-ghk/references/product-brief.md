@@ -13,10 +13,12 @@ Men 35–60 who want lean muscle, strength and growth hormone support from one f
 
 ## Variations this product opts into
 - `hardcore-men` → `core/references/hardcore-men.md`
+- `two-strengths` → `core/references/variations/two-strengths.md`
 
 ## Product facts for the prompt
 - **About:** Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim.
 - **Renders (assets/):** bottle: `sghk500_bottle.png`, pill: `sghk_tablet.png`. Use them exactly; never describe the pill's shape or markings in text.
+- **Strengths (the image question asks; 'Either' = never mentioned, default bottle):** **1000 mcg** = bottle `sghk1000_bottle.png` (label: SERMORELIN GHK 1000 · 1000 MCG); **500 mcg** = bottle `sghk500_bottle.png` (label: SERMORELIN GHK · 500 MCG). "Double Strength" wording only with the 1000 mcg bottle in frame.
 - **Hero:** the sublingual tablet (the bottle is secondary, large and legible when shown); min width 0.35 of canvas; never: needles, bedroom framing, body comparison.
 - **Disclaimer:** verbatim in `product.json` (the finisher lays it). **Copy log:** `~/Everlife-Creative/sermorelin-ghk-copy-log.md`. **Output:** `~/Everlife-Creative/output/Sermorelin GHK/`.
 

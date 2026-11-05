@@ -13,5 +13,6 @@ A variation is a short module that a product opts into via `product.json` → `"
 | peptide-stack | `peptide-stack.md` |
 | two-forms | `two-forms.md` |
 | compounded-glp1 | `compounded-glp1.md` |
+| two-strengths | `two-strengths.md` |
 
 Writing a new one: 10–20 lines, what changes and why (who asked, when), nothing that repeats a global rule.
