@@ -59,6 +59,7 @@ CONTENT_GAP = 20               # px of calm background wanted between the raw's 
 SIDE_REFUSE = float(os.environ.get("EVERLIFE_SIDE_REFUSE", "0.09"))   # above → refuse (exit 2)
 FOOTER_DROP_MAX = min(0.20, max(0.0, float(os.environ.get("EVERLIFE_FOOTER_DROP_MAX", "0.20"))))   # ≤ 20%: approved 2026-11-05, never more
 FOOTER_DROP_PX = int(1920 * FOOTER_DROP_MAX)
+FOOTER_BUSY_T = float(os.environ.get("EVERLIFE_FOOTER_BUSY_T", "26"))   # luminance std + edge score under the row; above = busy band
 SIDE_WARN = float(os.environ.get("EVERLIFE_SIDE_WARN", "0.05"))       # above → warn: look at the safezones overlay
 LOGO_BUSY_MAX = 0.12                                                   # the ad's own type/product under the logo → refuse
 
@@ -399,6 +400,25 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
                 foot_bottom = sz.FOOTER_BOTTOM + need
                 fy = foot_bottom - foot_probe.height
                 print(f"   footer: dropped {need}px (content to y {cb}; ≤ {int(FOOTER_DROP_MAX * 100)}% approved, now ends y {foot_bottom})")
+        # Second trigger (Justin's 20% rule, Mitansh 2026-11-05 on PT-141 b17 #3: the row sat on a chrome counter strip): if the band
+        # under the row is busy or high-contrast (texture, edges, a bright strip), slide the row down to the calmest band within the cap.
+        if foot_bottom == sz.FOOTER_BOTTOM and cb <= fy - 6:
+            def busy(fb):
+                y0 = max(0, fb - foot_probe.height - 10); y1 = min(H, fb + 10)
+                a_ = np.asarray(out.crop(((W - fw) // 2, y0, (W + fw) // 2, y1)).convert("L").resize((96, 12))).astype(np.float64)
+                return float(a_.std()) + float(np.abs(np.diff(a_, axis=0)).mean()) * 2
+            here = busy(sz.FOOTER_BOTTOM)
+            if here > FOOTER_BUSY_T:
+                best_fb, best = sz.FOOTER_BOTTOM, here
+                for d_ in range(16, FOOTER_DROP_PX + 1, 16):
+                    fb_ = sz.FOOTER_BOTTOM + d_
+                    if fb_ - foot_probe.height < cb + CONTENT_GAP: continue
+                    sc_ = busy(fb_)
+                    if sc_ < best: best_fb, best = fb_, sc_
+                    if sc_ < FOOTER_BUSY_T * 0.5: break
+                if best_fb != sz.FOOTER_BOTTOM and best < here * 0.7:
+                    foot_bottom = best_fb; fy = foot_bottom - foot_probe.height
+                    print(f"   footer: dropped {foot_bottom - sz.FOOTER_BOTTOM}px to a calmer band (busy {here:.0f} → {best:.0f}; ≤ {int(FOOTER_DROP_MAX * 100)}% approved, now ends y {foot_bottom})")
         if cb > fy - 6 and foot_bottom == sz.FOOTER_BOTTOM:
             if fit == "none":
                 print(f"❌ {(os.path.basename(gen_path) if isinstance(gen_path, str) else 'frame')}: content runs to y {cb} but the footer starts at y {fy} "
