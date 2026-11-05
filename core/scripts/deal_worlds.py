@@ -8,7 +8,7 @@ Mitansh 2026-11-05). A men's or women's product refuses the other gender (exit 2
 
 Each slot gets: world (from core/references/world-deck/worlds.json), type pairing, accent, placement, light,
 focal (pill / bottle / person per the bible 40/30/30; 75/25 for products without a pill, Justin to confirm), proof (trust / count / none,
-42/28/30 per standard_footer.SHARE), hand-held (max 20% of the batch), cta (offer / price: the price line on ~10% of ads, kept over batches by price_plan.py), hardcore tag (a cap of 30% of men's slots on hardcore products, bible 2026-11-04),
+42/28/30 per standard_footer.SHARE), hand-held (max 20% of the batch), headline_kind (daily / monthly / free: the bible's price headlines on 10% / 5% of ads, kept over batches by price_plan.py), hardcore tag (a cap of 30% of men's slots on hardcore products, bible 2026-11-04),
 persona (age band, look) and the ratio pair (always 9:16 + 4:5).
 
 Guarantees (code, not memory):
@@ -22,7 +22,7 @@ The dealer decides the MIX. Claude writes the prompt freely inside the slot.
 import argparse, json, os, random, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import price_plan  # the price-CTA share (bible: the product's $/day line on 10% of all ads)
+import price_plan  # the price-headline shares (bible Standards 03, Pricing & CTA mix: daily price 10%, Sermorelin monthly 5%)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CORE = os.path.dirname(HERE)
@@ -229,7 +229,8 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
     pplan = price_plan.plan(pid, n)
     default_cta = price_plan.bible(pid).get('cta_default') or None
     price_rng = random.Random(f'{seed}-price') if seed is not None else random.Random()   # own stream: the rest of a seeded deal is unchanged
-    price_idx = set(price_rng.sample(range(n), pplan['count'])) if pplan['count'] else set()
+    hkinds = price_plan.assign(pplan, price_rng)
+    hheads = {'daily': pplan['daily']['headline'], 'monthly': (pplan['monthly'] or {}).get('headline'), 'free': None}
 
     for i, w in enumerate(ordered):
         aud = gender[i]
@@ -249,13 +250,18 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
             'batch_audience': audience,
             'hardcore': hardcore,
             'persona': persona if focal_seq[i] == 'person' else None,
-            'cta_kind': 'price' if i in price_idx else 'offer',
-            'cta': pplan['cta'] if i in price_idx else default_cta,
+            'headline_kind': hkinds[i],                 # daily / monthly: the HEADLINE is exactly `headline`; free: the headline is yours
+            'headline': hheads[hkinds[i]],
+            'cta': default_cta,
             'ratios': ['9:16', '4:5'],
             'variations': sorted(variations),
             'ultra_premium': 'vial-product' in variations and w['family'] in ('MATERIAL', 'SCENE'),
         })
     return slots
+
+
+def pplan_head(slots, kind):
+    return next((s['headline'] for s in slots if s['headline_kind'] == kind), '')
 
 
 def main():
@@ -280,23 +286,27 @@ def main():
         with open(LEDGER, 'a') as f:
             f.write(json.dumps({'ts': time.strftime('%Y-%m-%dT%H:%M:%S'), 'product': a.product, 'n': a.n,
                                 'worlds': [s['world'] for s in slots]}) + '\n')
-        price_plan.log(a.product, a.n, sum(1 for s in slots if s['cta_kind'] == 'price'), 'image', 'deal')
+        price_plan.log(a.product, a.n, sum(1 for s in slots if s['headline_kind'] == 'daily'),
+                       sum(1 for s in slots if s['headline_kind'] == 'monthly'), 'image', 'deal')
     if a.json:
         print(json.dumps(slots, indent=1)); return
     print(f"# {a.product} · {a.n} slots · audience {slots[0]['batch_audience'] if slots else a.audience} · both sizes each")
-    print("| # | World | Family | Focal | Proof | CTA | Type | Accent | Placement | Light | Person |")
+    print("| # | World | Family | Focal | Proof | Price headline | Type | Accent | Placement | Light | Person |")
     print("|---|---|---|---|---|---|---|---|---|---|---|")
     for s in slots:
         who = (('💪 ' if s['hardcore'] else '') + (s['persona'] or '—'))
         print(f"| {s['slot']} | **{s['world_name']}** (`{s['world']}`) | {s['family']} | {s['focal']} | {s['proof']} | "
-              f"{('💲 ' + s['cta']) if s['cta_kind'] == 'price' else 'offer'} | {s['type_pairing'][0]} / {s['type_pairing'][1]} | {s['accent']} | {s['placement']} | {s['light']} | {who} |")
-    pp = price_plan.plan(a.product, a.n)
+              f"{('💲 ' + s['headline']) if s['headline_kind'] == 'daily' else ('📅 ' + s['headline']) if s['headline_kind'] == 'monthly' else '—'} | {s['type_pairing'][0]} / {s['type_pairing'][1]} | {s['accent']} | {s['placement']} | {s['light']} | {who} |")
     print()
-    if pp['cta']:
-        print(f"Price CTA plan: {sum(1 for s in slots if s['cta_kind'] == 'price')} of {a.n} slot(s) carry \"{pp['cta']}\" (💲); every other slot uses "
-              f"the default offer CTA. The gate refuses the price line anywhere else, and refuses a 💲 slot without it.")
+    nd, nm = sum(1 for s in slots if s['headline_kind'] == 'daily'), sum(1 for s in slots if s['headline_kind'] == 'monthly')
+    if nd or nm:
+        print(f"Price headline plan (bible Standards 03, Pricing & CTA mix): "
+              + (f"{nd} of {a.n} slot(s) 💲 carry \"{pplan_head(slots, 'daily')}\" as the HEADLINE" if nd else "no daily-price slot this batch")
+              + (f"; {nm} 📅 carry \"{pplan_head(slots, 'monthly')}\"" if nm else "") + ". Every other slot writes its own headline; "
+              "the gate refuses these headlines anywhere else, refuses a price slot with another headline, and a price slot never also carries a $ CTA.")
     else:
-        print(f"Price CTA plan: none for this product ({pp['why_not']}).")
+        _, why = price_plan.daily_headline(a.product)
+        print("Price headline plan: no price-headline slot in this batch" + (f" ({why})" if why else " (the bible's share is kept over batches: the next one carries it)") + ".")
     for s in slots:
         print(f"{s['slot']}. {s['world_name']}: {s['look']}  · product: {s['product_place']}"
               + (f"  · for this product: {s['translate']}" if s['translate'] else ''))

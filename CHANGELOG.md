@@ -2,6 +2,26 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Price plan follows the bible's new "Pricing & CTA mix": price HEADLINES (10% daily, Sermorelin 5% monthly)
+Why: bible 1793919328-c260 (PR #65) replaced the single "price on 10% of all ads" line with Standards 03 · Pricing & CTA mix: **daily pricing is a
+HEADLINE ("[Product Name] for only $X.XX/day") on 10% of all creatives; Sermorelin (Men and Women) gets the HEADLINE "Starting at $95/month" on 5%;
+every other creative uses a varied mix of its approved CTAs.** PR #62 planned the daily price as a CTA, so it no longer matched. This updates it.
+- `core/scripts/price_plan.py`: plans headlines, not CTAs. The shares (10% / 5%), the monthly product and its headline are READ FROM THE BIBLE TEXT
+  (`creative-bible.md`), so a change by Justin carries through on the next sync; the daily headline is built from each product's `cta_price`
+  ("Sermorelin for $3.00/day" → "Sermorelin for only $3.00/day"). Same carry-over ledger (`price-ledger.jsonl`, new `monthly` field; rows written by
+  #62's version count as daily-price ads). A batch of 10 for Sermorelin: 1 daily + 1 monthly. HOLD unchanged (Titan-Rx, Spark); Spartan none.
+- `core/scripts/deal_worlds.py`: slots carry `headline_kind` (daily / monthly / free) and the exact `headline` (replaces #62's `cta_kind`); every slot
+  keeps its offer CTA; the batch table's column is "Price headline" (💲 daily, 📅 monthly); `--log` records both counts.
+- `core/hooks/batch_hook.py`: the gate refuses a price slot whose Headline line is not its exact text (a trailing full stop is fine), a price headline
+  on any other slot, and a price slot that also carries a $ CTA (the price twice). A bible price CTA on an ordinary slot is allowed (rule 3). A
+  deal.json from before this change is not blocked.
+- `core/scripts/bible_pipeline.py`: `price_plan_test.py` joins the sync chain, so a future rewrite of the pricing rule fails the sync loudly instead of
+  being missed.
+- Docs: `global-rules.md` (pricing line replaced), `golden-rules.md` item 11, `image-flow.md` (headline rule + Deal row), `video-team-rules.md`.
+- Tests: `core/tests/price_plan_test.py` rewritten (38 checks); `bible_pipeline_test.py` back to its original price-CTA check.
+- Not done (open question for Justin): rule 3's "varied mix of CTAs, rotate them" is advice in the docs only; the dealer still gives every slot its
+  default offer CTA, because rotating CTAs could drop the "Save Up to N%" discount lead (Standards 02 · highest discount). No credits touched.
+
 ## 2026-11-05 — Bible sync to 1793919328-c260 (automatic: `bible_pipeline.py sync`)
 Justin moved the live bible from 1793912918-b19b to 1793919328-c260. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
 

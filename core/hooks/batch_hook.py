@@ -138,21 +138,33 @@ def copy_gate(product, txt):
     return None
 
 
+PRICE_HEAD = re.compile(r"\bfor only \$\d|^starting at \$\d+(\.\d\d)?/month\b", re.I)
+
+
 def price_gate(row, product, txt):
-    """→ a deny reason, or None. The product's "$/day" line runs on the slots deal_worlds.py dealt "price" (bible: 10% of all ads;
-    core/scripts/price_plan.py) and nowhere else; a price slot must carry it. A deal.json from before the plan has no cta_kind: skipped."""
-    if not row or "cta_kind" not in row: return None
-    b = bible_of(product) or {}
-    price = b.get("cta_price")
-    ctal = {bnorm(c) for c in CTA_LINE.findall(txt)}
-    if not price or not ctal: return None
-    has = bnorm(price) in ctal
-    if row["cta_kind"] == "price" and not has:
-        return (f'this slot was dealt the PRICE CTA (the bible\'s 10% price share): the CTA line must read "{price}". '
-                "The batch table marks it with 💲; do not swap it for the offer CTA.")
-    if row["cta_kind"] != "price" and has:
-        return (f'"{price}" is only for the slot(s) dealt the price CTA (10% of ads, price_plan.py); this slot uses '
-                f'"{row.get("cta") or b.get("cta_default")}". Another price ad would push the product past its 10% share.')
+    """→ a deny reason, or None. Bible Standards 03, Pricing & CTA mix: the daily-price headline ("<Product> for only $X.XX/day", 10% of ads)
+    and Sermorelin's "Starting at $95/month" (5%) run as the HEADLINE on the slots deal_worlds.py dealt them (core/scripts/price_plan.py) and
+    nowhere else; a price slot must carry its exact headline and never doubles it with a $ CTA. A deal.json from before the plan has no
+    headline_kind: skipped. No Headline line in the prompt: nothing to check."""
+    if not row or "headline_kind" not in row: return None
+    heads = [h.strip() for h in HEAD_LINE.findall(txt)]
+    if not heads: return None
+    kind, want = row["headline_kind"], row.get("headline")
+    norm = lambda t: bnorm(t).rstrip(".!")
+    if kind in ("daily", "monthly") and want:
+        if norm(want) not in {norm(h) for h in heads}:
+            label = "daily-price" if kind == "daily" else "monthly-price"
+            return (f'this slot was dealt the {label} HEADLINE (bible Standards 03, Pricing & CTA mix): its Headline line must read "{want}", '
+                    f'exactly. The batch table marks it ({"💲" if kind == "daily" else "📅"}); it does not carry a different headline.')
+        dollar = [c for c in CTA_LINE.findall(txt) if re.search(r"\$\d", c)]
+        if dollar:
+            return (f'this slot already carries a price in its HEADLINE ("{want}"): the CTA "{dollar[0]}" would say the price twice. '
+                    f'Use its offer CTA (default "{row.get("cta")}").')
+        return None
+    bad = [h for h in heads if PRICE_HEAD.search(h.strip().strip('"\u201c\u201d'))]
+    if bad:
+        return (f'"{bad[0]}" is a price headline: the bible gives it only to the slots dealt it (daily price on 10% of ads, Sermorelin monthly on 5%; '
+                'price_plan.py). This slot writes its own headline.')
     return None
 
 

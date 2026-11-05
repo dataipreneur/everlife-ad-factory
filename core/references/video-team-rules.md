@@ -12,9 +12,10 @@
 - The problem is said in the first ~1–2 s (a pronoun-free question works: "Training hard but still feeling flat?").
 - End on an urgent, specific spoken CTA that **leads with the approved offer** ("Save up to 47%. Don't sit on this!"). "Get Started
   Now" is banned (bible sync 2026-11-03); where the offer is a `[PLACEHOLDER]`, use "Ships Free From Pharmacy". No fake deadlines or scarcity.
-- **Price CTA on 10% of videos** (bible: the product's "$/day" line on 10% of all ads): before writing a script run
-  `python3 core/scripts/price_plan.py --product <id> --n 1 --kind video`; if it says "THIS VIDEO carries it", the spoken and end-card CTA is that
-  price line, exactly (e.g. "Sermorelin for $3.00/day"); otherwise the offer CTA. Add `--log --tag <video name>` once the video is approved.
+- **Price headline on 10% of videos** (bible Standards 03, Pricing & CTA mix: "<Product> for only $X.XX/day" as the headline; Sermorelin also
+  "Starting at $95/month" on 5%): before writing a script run `python3 core/scripts/price_plan.py --product <id> --n 1 --kind video`; if it says
+  "THIS VIDEO's header / end-card headline is …", that text is the video's header and end-card headline, word for word (spoken in the offer line too if
+  it fits); the CTA stays an offer CTA, never also a $ CTA. Otherwise the video uses its normal headline. Add `--log --tag <video name>` once approved.
 - **No specific ages or age numbers** in video scripts, spoken lines or captions ("45", "after 35", "forty-five").
   Say "with age" / "every birthday" if needed. (Priestley 2026-11-03: videos only; bible-approved image headlines with an age,
   e.g. "Thrive After 35", stay usable.)
