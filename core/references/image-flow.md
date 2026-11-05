@@ -62,7 +62,7 @@ For every slot, in order:
 7. **Persona pass** (if the skill has `references/personas.md`): one line of critique per ad, fix, move on.
 
 Show ONE compact table: # · world · focal · proof · headline (tier) · lines · persona · ≈2 credits. One AskUserQuestion:
-"Generate all N in both sizes (≈2N credits)" / "Swap some" / "Rewrite headlines". That click approves the batch and its Tier A
+"Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" / "Swap some" / "Rewrite headlines". That click approves the batch and its Tier A
 lines; each Tier B line needs its own explicit OK first.
 
 ## 4. Prompt template (fill everything; keep the quotes exact)
@@ -98,11 +98,16 @@ Download all raws, then `finish_batch.py <raw> <final> --ratio <r> --product <id
 finisher refuses a raw whose content runs under the proof row: fix with the free-fix skill (0 cr), else re-roll that size.
 Log each generation (`teamlog.py gens --wave`), one record per wave.
 
-## 6. QA by looking, then show
+## 6. QA by looking, fix inside the budget, then show (the heavy lifting is yours, not the designer's)
 Read every final. Text exactly the approved strings and spelled right · label legible · nothing covered · headline + lines
 readable at phone size · both sizes present for every ad · the world is recognisable in two seconds · no two ads alike.
-Build one contact sheet with both sizes per ad and show it. Offer: "Another 8 (new worlds)" / "Variations of #k" /
-"Re-roll #k". Append headlines to the product copy log, `deal_worlds.py --log`, post finals to Ad Review.
+- **A failed size gets ONE automatic re-make inside the approved budget** (the approval question says "≈2N credits, includes one
+  re-make per ad if needed"): same slot, the fix named in the prompt ("benefit lines at least 36 px tall", "product base at y 760").
+  Free fixes first (`free-fix` skill for footer collisions). Still failing → show it honestly with the cost of another try.
+- Build one contact sheet with both sizes per ad, **open the output folder on their screen** (`open <folder>`; Windows
+  `explorer.exe`), show the sheet, and say in one line what's in it and what's next: "Another 8 (new worlds)" / "Variations of #k" /
+  "Re-make #k". Plain words, no file lists, no technical reasons.
+- Append headlines to the product copy log, `deal_worlds.py --log`, post finals to Ad Review, `teamlog.py` records.
 
 ## 7. What made batch 2 great (keep doing this)
 - Every ad lives in a **different universe**: paper, screens, materials, places, people, type. Not a different palette on the same layout.
