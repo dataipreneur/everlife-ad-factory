@@ -39,6 +39,16 @@ def main():
     missing = [s for s in SHARED if not os.path.exists(os.path.join(REPO, s))]
     if missing:
         print('❌ shared files missing: ' + ', '.join(missing)); sys.exit(1)
+    # the run contract: the shared flow must keep every bare-minimum step (Mitansh 2026-11-05)
+    flow = open(os.path.join(REPO, 'core/references/image-flow.md')).read()
+    CONTRACT = ['9:16 AND 4:5', 'finish_batch.py', '--proof-plan', '--proof-check', '--proof <slot proof>', 'teamlog.py gens', 'teamlog.py qa',
+                'teamlog.py copy', 'teamlog.py proof', 'teamlog.py run', 'teamlog.py close', 'teamlog.py sent', 'teamlog.py posted',
+                'teamlog.py summary', 'Ad Review', 'SESSION.md', 'lessons.md', 'STRICT LAYOUT', '1385', 'AI disclosure', 'copy-log',
+                'deal_worlds.py', 'preflight.sh', 'free-fix', 'contact sheet', 'includes one re-make']
+    lost = [t for t in CONTRACT if t not in flow]
+    if lost:
+        print('❌ image-flow.md lost bare-minimum step(s): ' + ', '.join(lost)); sys.exit(1)
+    print('✅ image-flow.md run contract: all %d bare-minimum steps present' % len(CONTRACT))
     bad_total = warn_total = 0
     for d in sorted(os.listdir(SKILLS)):
         if not d.startswith('everlife-') or d in ('everlife-new-product', 'everlife-ads'): continue

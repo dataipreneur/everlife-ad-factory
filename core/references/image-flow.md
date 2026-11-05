@@ -123,3 +123,27 @@ readable at phone size · both sizes present for every ad · the world is recogn
 - Humour is welcome (a grumpy clock, a sheet ghost, a clay blob with coffee) as long as nobody is mocked and no claim is implied.
 - Real rooms, real light, real textures. The surreal ones are photoreal (a moon hammock you could touch).
 - Fonts and placements change every single ad. Two ads in a row with the same type is a fail.
+
+## 8. Bare minimums: the run contract (every image batch, in this order; `skill_lint.py` fails if this section loses a step)
+Mitansh 2026-11-05: "make sure we have the bare minimums: 4:5 AND 9:16 in one batch, post-editing by Claude, the logging workflow."
+These are the steps the old per-skill files carried; they live here once now. Code enforces what it can; the lint checks the text.
+
+| # | Step | Command / check | Enforced by |
+|---|---|---|---|
+| 1 | Preflight | `bash <skill>/core/scripts/preflight.sh` (connections, tools, bible version check) | script |
+| 2 | Read the product | `references/product-brief.md` (hard stops, variations) · `references/product-bible.md` · `references/lessons.md` · `references/winners/` | you |
+| 3 | Lean team reads | Copy Ledger + Ad Review flags saved to files (`ArtifactData` `out_dir` = `<job>/_team/ledger`, `<job>/_team/review`), then only the digest: `teamlog.py summary <job>/_team/ledger <job>/_team/review --product <id>` (used headlines, team styles/worlds → `--skip`, reviewer flags → explicit checks for this batch). Page unreachable → say so, carry on | TEAM-LOGS §2.2, AD-REVIEW §3 |
+| 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …]` → `<job>/deal.json`; proof per slot follows `finish_batch.py --proof-plan N` (42/28/30) | code |
+| 5 | Write | every ad: 9:16 prompt AND 4:5 prompt, each with its STRICT LAYOUT block (`prompt-layout-zones.md`), copy inside the Hard NOs; `prompts.md` | you + lint on the prompt (zones present) |
+| 6 | Approve | one AskUserQuestion with the cost: "Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" | gate: never spend without it |
+| 7 | Generate | all 9:16 raws, then all 4:5 raws (GPT Image 2.5 on Creatify, 4 in flight); never crop / pad / mirror one size into the other | rule; hooks capture every call |
+| 8 | Log generations | `teamlog.py gens <job> --wave W.json` per wave (exact prompt, model, cost, slot) | TEAM-LOGS §2 |
+| 9 | Finish | `finish_batch.py <raw> FINAL_<n>_<world>_<WxH>.png --ratio <r> --product <id> --proof <slot proof>` for EVERY raw of EVERY ad, both sizes: logo at the top, proof row inside the safe area (ends ≤ y 1385), verbatim disclaimer + AI disclosure from `product.json`; refuses a raw that runs under the footer → `free-fix` (0 cr) → else one re-make | code (`safezones.py`, `standard_footer.py`) |
+| 10 | QA | Read every final (text exact, legible, nothing covered, world recognisable, both sizes present); `teamlog.py qa <job> <doc_id…> --pass/--fail`; one automatic re-make per failed size inside the budget | you + TEAM-LOGS |
+| 11 | Proof audit | `finish_batch.py --proof-check <batch folder>` must pass (≈42/28/30 per ratio) before the sheet is shown | code |
+| 12 | Show | one contact sheet with both sizes per ad; open the output folder; plain words | you |
+| 13 | After the batch | `teamlog.py copy` per ad · `teamlog.py proof` per creative · `teamlog.py run` · **`teamlog.py close <job>` must print ✅ closed** · `teamlog.py sent <job> --all` (or `--queued`) · post every final to Ad Review (`entry` + preview; `teamlog.py posted <job> <ad_id…>`) · append headlines to `~/Everlife-Creative/<id>-copy-log.md` · `deal_worlds.py --product <id> --n N --log` | TEAM-LOGS §2, AD-REVIEW §4, Stop hook |
+| 14 | Hand-off | `~/Everlife-Creative/output/<Product>/<date>_SESSION.md`: one row per asset (path, world, headline, lines, CTA, proof, cost, issues, any Hard-NO doubt for Jeremy). Drafts only; delivery (Drive, Master Library, Asana) only after approval | you |
+
+The Stop hook (`core/hooks/teamlog_hook.py`, installed by `install.sh`) sends Claude back once when a job holds unsent records or
+unposted finals. If `~/.claude/settings.json` has no hooks, run `install.sh` (or `update.sh`) on that machine: preflight warns.
