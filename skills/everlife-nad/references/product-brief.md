@@ -20,8 +20,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only ✅ pre-screen lines; ⚠ lines ("boost(s)", "reduces fatigue", "DNA repair", celebrity/CEO/athlete authority) only with
-  the user's explicit OK + flagged for Jeremy. Weak lines: avoid.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - **Lead with the choice:** sublingual tablet or injection (one per ad, or both side by side). "Injection" may be named; **no needles,
   syringes, pens, injecting or "needle free"** in words or pictures ("easy sublingual delivery").
 - **The tablet is the hero** in sublingual ads: larger than the bottle in frame. Never a strength in copy.

@@ -21,8 +21,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 **✅ Disclaimer now in the bible (sync 1793728650-5a0d, 2026-11-03):** the bible's Epithalon page carries the standard ad disclaimer, word for word the text already in product.json (`bible_sync.py --check` ✅). The old "provisional disclaimer: Jeremy to confirm" flag is retired; Jeremy's usual sign-off before anything goes live still applies.
 
 **Hard stops:**
-- Claims: only the ✅ lines of the pre-screen (`product-bible.md`); ⏳ headlines H3/H4 and ⚠ "Supports DNA + Cellular Health" only
-  with the user's explicit OK per line + flagged for Jeremy; H1/H2 not without Jeremy; ❌ never (both sleep benefits, the offer).
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - Epithalon is LONGEVITY support: healthy aging, oxidative stress defense. **No sleep or overnight words or images** (product Hard
   NO: no beds, night, waking up, alarm clocks). **Healthy aging, never reversal:** no "anti-aging", "reverse", "younger", "turn back
   the clock"; no before/after, no younger-vs-older comparison, no mirrors. No body-composition claims, no disease words. "Supports",

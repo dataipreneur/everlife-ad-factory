@@ -19,8 +19,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only the ✅ lines in `product-bible.md` (quick-hit benefits, ✅ headlines and CTAs). Pre-screen ❌ never; ⚠ only with the
-  user's explicit OK + flagged for Jeremy. Weak headline → avoid.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - **Name:** "GHK PEPTIDE CREAM" on Meta / Google / TikTok; "GHK-CU CREAM" only on H2 (and then no line that says "GHK Peptide
   Cream"). Never "copper", never "-Cu" on its own, never "GHK-Cu" outside that H2 product name.
 - Skin support only, "-looking" where the bible says it. No wrinkles, fine lines, sagging, spots, acne, scars or any skin condition;

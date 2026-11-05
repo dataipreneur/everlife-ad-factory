@@ -20,8 +20,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only the ✅ lines in `product-bible.md` (quick-hit benefits, "Feel More Connected", ingredient claims on their OWN
-  ingredient). Pre-screen ❌ never; ⚠ only with the user's explicit OK + flagged for Jeremy. Weak headline / Weak benefit → avoid.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - Lovara is women's intimacy support (desire, sensitivity, comfort, responsiveness). No "ED", "erectile", "performance",
   "Viagra", "instant", no timing promises ("tonight", "in 30 min"), no guarantees, no explicit sexual wording, never "Spark".
 - Ingredient names appear only inside their own approved claim (F4/F9 rows), never as a product promise; the ingredient list is under

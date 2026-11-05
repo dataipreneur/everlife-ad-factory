@@ -23,8 +23,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 **✅ Bible fixed (2026-11-02):** Justin un-swapped the Spartan / Wolverine pages; the bible now matches the vial label (Spartan Stack = BPC-157 / KPV / TB-500). This skill uses its own page (`references/product-bible.md`): benefits and CTAs ✅, headlines ⏳ (only with the user's OK, flagged for Jeremy), no offer yet.
 
 **Hard stops:**
-- Claims: only the ✅ quick-hit benefits in `product-bible.md` (pre-screen). ❌/⛔ lines never; ⏳ headlines and ⚠ lines only with the
-  user's explicit OK + flagged for Jeremy.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - Spartan Stack is RECOVERY support. No "heal", "repairs", "regenerate", "injury", "pain", "inflammation", "torn", "cure", "treat", "boost",
   "fast"/"faster" as an outcome, no timing promises, no guarantees. "Supports", never "builds". "Supports Connective Tissue Repair"
   only exactly as the bible writes it (where the pre-screen allows it).

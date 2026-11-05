@@ -57,6 +57,9 @@ def hard_stops(skill_dir):
     sec = re.sub(r'^\*\*Headline tiers:?\*\*.*?(?=\n\n|\Z)', '', sec, flags=re.M | re.S)   # tiers are gone (Mitansh 2026-11-05)
     sec = re.sub(r'^> ⚠ \*\*PENDING CREATIVE-LEAD CONFIRMATION\*\*.*?(?=\n\n|\Z)', '', sec, flags=re.M | re.S)
     sec = '\n'.join(ln for ln in sec.splitlines() if not re.search(r'Tier [AB]|PROPOSED', ln))
+    # the old "Claims: only approved lines … ⚠ only with explicit OK" bullet was a fence; the only fence is the Hard NOs (Mitansh 2026-11-05)
+    sec = re.sub(r'^- \*{0,2}Claims:?\*{0,2}.*?(?=^- |\Z)', '', sec, flags=re.M | re.S)
+    sec = sec.replace('**Hard stops:**', '**Hard stops:**\n- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.', 1)
     return re.sub(r'\n{3,}', '\n\n', sec).strip()
 
 

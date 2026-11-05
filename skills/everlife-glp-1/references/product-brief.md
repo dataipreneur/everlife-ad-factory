@@ -22,7 +22,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only ✅ pre-screen lines; ⚠ lines (every weight-loss outcome line) only with the user's explicit OK + flagged for Jeremy.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - **Every ad carries the price line:** "One Price, No Surprise Increases" / "One predictable price" (as a line, a pill or the offer badge).
 - **"GLP-1" in headers; "compounded semaglutide" / "compounded tirzepatide" whenever a drug is named.**
 - No before/after, body comparison, body areas, scales, tape, waistlines; no melt / burn / shred; no timing promises; no

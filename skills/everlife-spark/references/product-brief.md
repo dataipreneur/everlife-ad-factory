@@ -19,8 +19,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only approved quick-hit benefits and more approved benefits from `product-bible.md`. Pre-screen ❌ lines never;
-  ⏳ Pending-approval and ⚠ lines only with the user's explicit OK + flagged for Jeremy. Weak headline / Weak benefit → avoid.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - Spark is on-demand intimacy support for men and women: PT-141 + Apomorphine + Tadalafil in one sublingual tablet.
   **Never tie a benefit to one ingredient**: name the three together as a combo, or not at all. "ED" only in the bible's ⏳ ED
   headlines with explicit approval; no "erectile", "Viagra", "Cialis", "instant", no timing promises ("tonight", "in minutes"),

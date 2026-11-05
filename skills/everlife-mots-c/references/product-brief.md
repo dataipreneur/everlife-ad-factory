@@ -21,8 +21,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 **✅ Disclaimer now in the bible (sync 1793728650-5a0d, 2026-11-03):** the bible's MOTS-c page carries the standard ad disclaimer, word for word the text already in product.json (`bible_sync.py --check` ✅). The old "provisional disclaimer: Jeremy to confirm" flag is retired; Jeremy's usual sign-off before anything goes live still applies.
 
 **Hard stops:**
-- Claims: only the ✅ lines of the pre-screen (`product-bible.md`, APPROVED UPDATE); ⚠ lines (the glucose lines, "Supports Energy
-  Balance", the "upgrade / activated / optimized" headlines) only with the user's explicit OK + flagged for Jeremy; ❌ never.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - MOTS-c is METABOLIC support for energy and endurance. **No weight, fat, body-composition, appetite or "fat and skinny" words or
   images; no body areas; no melt / burn / ripped / shred; no before/after.** No disease words (diabetes, blood sugar control,
   insulin). "Supports", never "boosts / burns / builds". No timing promises, no guarantees.

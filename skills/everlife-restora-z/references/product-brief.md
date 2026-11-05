@@ -24,8 +24,6 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 ## Hard stops (this product)
 **Hard stops (never cross):**
 - Pain points: ONLY the bible's 12 *Approved pain points*.
-- Claims: every claim must map to an *approved claim*: quick-hit benefits, more approved benefits, or a per-ingredient
-  claim (only on its own ingredient: Trazodone / Hydroxyzine / Doxepin).
 - Every Hard NO (product + global, see `global-rules.md`): no disease or cure words, no "clinically proven", no guarantees,
   no first person, no "Are you/Do you…?" questions, no before/after bodies or faces, no named competitor except Ambien
   (and Ambien only with its real pill photo, which we don't have yet, so **no Ambien in images for now**), no lines flagged

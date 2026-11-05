@@ -25,8 +25,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only approved quick-hit benefits and more approved benefits from `product-bible.md`. Pre-screen ❌ lines never;
-  ⏳ Pending-approval and ⚠ lines only with the user's explicit OK + flagged for Jeremy. Weak headline / Weak benefit → avoid.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - PT-141 is DESIRE support (brain-based, non-hormonal, on-demand). No "ED", "erectile", "performance", "Viagra", "instant",
   "ignite", no timing promises ("tonight", "in minutes"), no guarantees. Mechanism first; "supports", never "builds"/"boosts".
 - **No beds or bedroom scenes**, no lingerie, no body shots, no couples in bed, no before/after. A person is clothed, candid,

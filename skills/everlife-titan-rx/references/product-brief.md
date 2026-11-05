@@ -19,8 +19,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only ✅ quick-hit benefits and more approved benefits from `product-bible.md`. Pre-screen ❌ lines never;
-  ⏳ Pending-approval and ⚠ lines only with the user's explicit OK + flagged for Jeremy. Weak headline / Weak benefit → avoid.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - Titan-Rx is a once-daily 3-in-1 men's performance formula: Tadalafil + Vardenafil + L-Arginine in one oral capsule.
   **Each claim only on its own ingredient** (bible); default: no ingredient claims (all ⚠/❌), the three named together as a fact.
   **Never "arousal"** in any form. "ED" only in the bible's ⏳ ED headlines with Jeremy's written approval; "Erectile…" and "…ED

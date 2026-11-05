@@ -18,8 +18,7 @@ The bible's headlines, hooks and benefits in `references/product-bible.md` are i
 
 ## Hard stops (this product)
 **Hard stops:**
-- Claims: only the ✅ approved benefits in `product-bible.md` (clean pool). Pre-screen ❌ lines never; ⚠ lines only with
-  the user's explicit OK + flagged for Jeremy.
+- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.
 - No body composition, fat, "dad bod", "melt/burn/ripped/shred", no "physique transformation", no body before/after (shirtless
   heroes ARE allowed: 💪 hardcore-men.md), no age-reversal ("the new 40") unless Jeremy clears it.
 - "growth hormone" spelled out; never imply the tablet *is* growth hormone; "easy sublingual delivery"; no needles,
