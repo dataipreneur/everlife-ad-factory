@@ -47,5 +47,6 @@
   "hardcore-men",
   "vial-product"
  ],
+ "audience": "both",
  "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

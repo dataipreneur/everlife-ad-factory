@@ -18,7 +18,7 @@ core/  (GLOBAL: read by every product, edited in one place)
 └── tools/ .......................... finish_batch.py, safezones.py, standard_footer.py … (rules as code)
 
 skills/everlife-<product>/  (PER PRODUCT: a brief, not a rulebook)
-├── product.json .................... facts the tools read: name, renders, forms, hero, disclaimer, variations
+├── product.json .................... facts the tools read: name, renders, forms, hero, disclaimer, variations, audience
 ├── references/product-brief.md ..... GENERATED: who it's for, creative direction, hard stops, facts, its references
 ├── references/bible.json ........... GENERATED from the bible: offer, cta_default, ctas, benefits, headlines, retired (hook + lint read it)
 ├── references/product-bible.md ..... GENERATED: product copy, screening table, verbatim section (never edited)
@@ -29,6 +29,11 @@ skills/everlife-<product>/  (PER PRODUCT: a brief, not a rulebook)
 ├── references/winners|team-refs|lessons|personas ... this product's own learning
 └── SKILL.md ........................ thin: route to the engine for images; the video flow (untouched for now)
 ```
+
+## Audience (`product.json` → `"audience": "men" | "women" | "both"`)
+The dealer's default cast (Mitansh 2026-11-05). `men`: Titan-Rx, Spartan, Wolverine · `women`: Lovara, GHK Cream · `both`: the rest, including
+Sermorelin and Sermorelin GHK (Men + Women bible pages). Only `both` products get the men / women / mix choice inside the one image question;
+a single-audience product never asks, and `deal_worlds.py` refuses the other gender. Lint fails on a missing or unknown value.
 
 ## Variations (`product.json` → `"variations": [...]`)
 A variation is a short rule module in `core/references/variations/` (or an existing core file) that changes the default for a

@@ -1,8 +1,8 @@
-# Sermorelin — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Sermorelin — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** Save Up to 65% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 65%
 - **CTAs (bible):** Get Lean Today · Explore Sermorelin · Save Up to 65% · Support Natural Growth Hormone · Sermorelin for $3.00/day · Starting at $95/month · Ships Free From Pharmacy
@@ -65,7 +65,7 @@
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 | Supports Sleep Quality + Recovery | retired | ❌ retired | removed from the bible 2026-11-02 (Justin); never use |
 
-## Verbatim (bible section "Sermorelin — Men", version 1793905953-bc2f)
+## Verbatim (bible section "Sermorelin — Men", version 1793912918-b19b)
 ```text
 
 ### Who it's for
@@ -144,7 +144,7 @@ Additional benefits and claims for this product.
 - Boosts Metabolism and Targets Visceral Fat [Hard NO conflict]no targeted fat loss
 ```
 
-## Verbatim (bible section "Sermorelin — Women", version 1793905953-bc2f)
+## Verbatim (bible section "Sermorelin — Women", version 1793912918-b19b)
 ```text
 
 ### Who it's for

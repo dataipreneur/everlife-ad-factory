@@ -184,6 +184,7 @@ def main():
             if not pj.get('name'): errs.append('product.json: no name')
             if not any((pj.get('renders') or {}).values()): errs.append('product.json: no renders')
             if 'variations' not in pj: errs.append('product.json: no "variations" list (ENGINE.md)')
+            if pj.get('audience') not in ('men', 'women', 'both'): errs.append('product.json: "audience" must be men / women / both (the dealer\'s default; ENGINE.md)')
             for v in pj.get('variations', []):
                 if not os.path.exists(os.path.join(REPO, 'core', 'references', 'variations', v + '.md')) and not os.path.exists(os.path.join(REPO, 'core', 'references', v + '.md')):
                     errs.append(f'product.json: unknown variation "{v}"')

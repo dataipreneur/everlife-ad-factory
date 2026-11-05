@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Everlife World Dealer: hands every image batch N slots that are guaranteed different.
 
-    deal_worlds.py --product pt-141 --n 8 --audience both [--log] [--json] [--skip world1,world2]
+    deal_worlds.py --product pt-141 --n 8 [--audience men|women|both] [--log] [--json] [--skip world1,world2]
+
+--audience is the "Who's in them" answer; omitted = the product's own audience (product.json "audience": men / women / both,
+Mitansh 2026-11-05). A men's or women's product refuses the other gender (exit 2): Titan-Rx never deals a woman persona.
 
 Each slot gets: world (from core/references/world-deck/worlds.json), type pairing, accent, placement, light,
 focal (pill / bottle / person per the bible 40/30/30; 75/25 for products without a pill, Justin to confirm), proof (trust / count / none,
@@ -51,6 +54,19 @@ def product_family(pid, prod=None):
     return 'generic'
 
 
+AUDIENCES = ('men', 'women', 'both')
+
+
+def resolve_audience(pid, prod, asked=None):
+    """product.json "audience" is the default; a single-audience product refuses the other gender (code, not memory)."""
+    own = prod.get('audience') or 'both'
+    if own not in AUDIENCES: raise SystemExit(f'{pid}: product.json "audience" must be men / women / both (got {own!r})')
+    if asked in (None, '', own): return own
+    if own in ('men', 'women'):
+        raise SystemExit(f"{pid} is a {own}'s product (product.json audience): --audience {asked} refused. Omit --audience.")
+    return asked
+
+
 def load_product(pid):
     p = os.path.join(SKILLS, f'everlife-{pid}', 'product.json')
     if os.path.exists(p):
@@ -98,6 +114,7 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
     rng = random.Random(seed)
     with open(DECK) as f: deck = json.load(f)
     prod = load_product(pid)
+    audience = resolve_audience(pid, prod, audience)
     variations = set(prod.get('variations', []))
     fam = product_family(pid, prod)
     pill = has_pill(prod)
@@ -188,7 +205,14 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
         accents = [a for a in accents if a not in ('rose', 'blush')]  # men's muscle products: no pinks
 
     # hardcore tags: 40% of men's slots on hardcore products
-    men_slots = [i for i, f in enumerate(focal_seq) if f == 'person'] if audience != 'women' else []
+    # gender per slot first (a 'both' batch alternates over the PERSON slots), so the hardcore cap can only land on a man's slot
+    gender, rank = {}, 0
+    for i, f in enumerate(focal_seq):
+        if audience != 'both': gender[i] = audience
+        else:
+            gender[i] = 'men' if rank % 2 == 0 else 'women'
+            if f == 'person': rank += 1
+    men_slots = [i for i, f in enumerate(focal_seq) if f == 'person' and gender[i] == 'men']
     hc_cfg = {}
     try:
         with open(os.path.join(CORE, 'references', 'hardcore-men.json')) as f: hc_cfg = json.load(f)
@@ -200,7 +224,7 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
     hardcore_idx = set(rng.sample(men_slots, hardcore_n)) if hardcore_n else set()
 
     for i, w in enumerate(ordered):
-        aud = audience if audience != 'both' else ('men' if i % 2 == 0 else 'women')
+        aud = gender[i]
         hardcore = i in hardcore_idx
         persona = rng.choice(HARDCORE_CAST) if hardcore else rng.choice(CAST[aud])
         if fam == 'intimacy': persona += ', clothed, shoulder-up, daylight, never a bed'
@@ -214,6 +238,7 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
             'focal': focal_seq[i], 'proof': proof_final[i],
             'hand_held': 'hand-held' in w['flags'],
             'audience': aud if focal_seq[i] == 'person' else None,
+            'batch_audience': audience,
             'hardcore': hardcore,
             'persona': persona if focal_seq[i] == 'person' else None,
             'ratios': ['9:16', '4:5'],
@@ -227,7 +252,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--product', required=True)
     ap.add_argument('--n', type=int, default=8)
-    ap.add_argument('--audience', default='both', choices=['men', 'women', 'both'])
+    ap.add_argument('--audience', default=None, choices=['men', 'women', 'both'],
+                    help="the Who's-in-them answer; omitted = product.json audience; a men's / women's product refuses the other")
     ap.add_argument('--skip', default='', help='comma-separated world ids to avoid (e.g. from the team Copy Ledger)')
     ap.add_argument('--seed', type=int)
     ap.add_argument('--prefer', default='', help='comma-separated world ids from the chosen direction (guaranteed in the batch)')
@@ -246,7 +272,7 @@ def main():
                                 'worlds': [s['world'] for s in slots]}) + '\n')
     if a.json:
         print(json.dumps(slots, indent=1)); return
-    print(f"# {a.product} · {a.n} slots · audience {a.audience} · both sizes each")
+    print(f"# {a.product} · {a.n} slots · audience {slots[0]['batch_audience'] if slots else a.audience} · both sizes each")
     print("| # | World | Family | Focal | Proof | Type | Accent | Placement | Light | Person |")
     print("|---|---|---|---|---|---|---|---|---|---|")
     for s in slots:

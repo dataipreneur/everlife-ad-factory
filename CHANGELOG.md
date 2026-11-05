@@ -2,6 +2,36 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793912918-b19b (automatic: `bible_pipeline.py sync`)
+Justin moved the live bible from 1793905953-bc2f to 1793912918-b19b. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
+
+- ~ NAD+
+- + - Starting at $99/month
+- - - Starting at $119/month
+
+- **NAD+:** NEW lines to screen: ['starting at $99/month']
+
+## 2026-11-05 — Audience per product, in code (branch `bible-pipeline`, local)
+Mitansh: "Does it ask Male or Female?" → it didn't; nothing pinned a product's audience, so a men's product could deal a woman persona unless
+Claude remembered `--audience`. Now `product.json` → `"audience"` (men: Titan-Rx, Spartan, Wolverine · women: Lovara, GHK Cream · both: the
+rest incl. Sermorelin + Sermorelin GHK) is the dealer's default; a single-audience product refuses the other gender (exit 2); a `both` batch
+alternates men / women over the PERSON slots (was: over all slots, so a batch could show one gender only). The one image question's
+"Who's in them?" gains Men / Women only for `both` products (`image-flow.md` §1); briefs print the audience; lint fails on a missing value;
+`core/tests/dealer_audience_test.py`. Files: `deal_worlds.py`, `build_product_briefs.py`, `skill_lint.py`, `ENGINE.md`, `image-flow.md`,
+15 SKILL.md bullets, `everlife-ads`, `FOR-DESIGNERS.md`, `new_product.py`, every `product.json`.
+
+## 2026-11-05 — Solid trust-row art (ghosted / "blurry" Trustpilot rows over photos)
+Mitansh, after team complaints: the Trustpilot / Doctor Prescribed / Ships Free row came out washed-out and see-through on photo
+backgrounds ("blurry … not solid"); the reference rows are solid. Cause: `core/tools/make_footer_assets.py` keyed the three
+cut-outs (badge, doctor, ships) out of the reference screenshots with a soft colour-distance ramp (≤4 levels clear → ≥40 solid);
+the icon circles sit only 16–32 levels from the panel colour, so they were 35–75% transparent and the badge edges soft. On the
+solid reference panel that is invisible; over a photo the circles go see-through and the badge washes out.
+- `make_footer_assets.py cut()`: anything 12+ levels from the panel is fully opaque; only a 6-level band anti-aliases the edge.
+  Parts rebuilt (`core/tools/assets/footer/*_dark.png`, `*_light.png`: 99% of visible pixels opaque, was 66%). The composed rows
+  the video tools use (`assets/proof_row_clear.png`, `proof_row_clear_dark.png`) are now built from the solid parts at the
+  finisher's layout (`compose_row`), replacing the old 1180×105 cut-outs.
+- Installed into `~/Everlife-Creative/tools` on this machine; teammates get it with the next patch (assets are files, no install step).
+
 ## 2026-11-05 — Bible sync to 1793905953-bc2f (automatic: `bible_pipeline.py sync`)
 Justin moved the live bible from 1793897447-019b to 1793905953-bc2f. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
 

@@ -20,7 +20,8 @@ GLP-1, NAD+, MOTS-c, Epithalon, GHK Peptide Cream.
 
 ## 2. Hand over
 Invoke that product's skill (`everlife-<id>`) and let it run: it does the preflight, the single image question (how many ·
-direction with 🎲 Surprise me first and three inspirations · who's in them · form if the product has several), the deal, the
+direction with 🎲 Surprise me first and three inspirations · who's in them, with men / women / mix only for products made for both ·
+form or strength if the product has several), the deal, the
 prompts, both sizes, finishing, QA, the contact sheet, the logs. The designer's only other click is "Generate all N (≈ cost)".
 
 ## 3. Plain words, always
