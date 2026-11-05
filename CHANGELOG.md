@@ -7,6 +7,7 @@ Priestley: "run the installer and add the check" (after asking how automatic the
 - `core/hooks/teamlog_hook.py`: new `start` mode (SessionStart) warns when the capture or Stop hook is missing or points at a missing script. Never blocks.
 - `install.sh`: also installs the SessionStart hook (same merge, backup and idempotent logic).
 - `core/scripts/preflight.sh`: new check 6b2, fails with the fix when the team-log hooks are not installed (covers machines that never ran the installer).
+- **Pause switch** (Priestley: "build the pause switch"): `core/team-logs/PAUSED` exists = hooks silent, preflight says PAUSED, `everlife-team.md` tells Claude to skip every team-log step. Delete the file to resume. TEAM-LOGS §8. Shipped ON for the 2026-11-05 zip rollout.
 - `core/team-logs/TEAM-LOGS.md` §7 updated. Tested: simulated settings (none / only Stop / missing script) give the right warnings; the real settings are silent; `bash -n preflight.sh` passes.
 
 ## 2026-11-04 — Bible sync to 1793832093-ced5 (branch `bible-sync-ced5`; originals in `_originals/2026-11-04/bible-sync-ced5/`)

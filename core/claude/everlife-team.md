@@ -1,5 +1,9 @@
 # Everlife ad tools: team notes (installed by everlife-ad-factory/install.sh)
 
+- **Team logging pause:** if `<repo>/core/team-logs/PAUSED` exists (the preflight says "Team logging is PAUSED"), skip every
+  team-log step in every skill: no `teamlog.py` commands, no `ArtifactData` sends to the Prompt log / Copy Ledger /
+  Activity log, no Ad Review posting, and ignore any hook message about unlogged records. Everything else (claims, copy
+  checks, copy-log files, gates) is unchanged. Delete the file to resume (TEAM-LOGS §8).
 - **"Update my ad tools"** (or "update the Everlife skills"): run `bash <repo>/core/scripts/update.sh`, where `<repo>` is
   the folder the `everlife-*` links in `~/.claude/skills` point to (two levels up from a skill folder). Show the
   ✅ / ❌ lines and explain every ❌ in plain words.

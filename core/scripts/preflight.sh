@@ -138,7 +138,9 @@ BVER="$(grep -o -m1 'version [0-9a-f-]*' "$CORE/claude/creative-bible.md" 2>/dev
 if cmp -s "$BIB" "$CORE/claude/creative-bible.md"; then pass "Creative bible = this repo's copy (${BVER:-version unknown})"
 else fail "Creative bible at $BIB is missing or a separate (old) copy, not this repo's (${BVER:-version unknown})" "bash \"$(cd "$CORE" && pwd -P)/../install.sh\" (moves your copy to ~/.claude/everlife/_originals/ and links the repo's)"; fi
 # 6b2. Team-log hooks (TEAM-LOGS §7): paid generations are captured and checked at Stop only if the hooks are installed
-if python3 - "$HOME/.claude/settings.json" <<'PYEOF'
+if [ -f "$(dirname "$0")/../team-logs/PAUSED" ]; then
+  pass "Team logging is PAUSED (core/team-logs/PAUSED): no logging steps, no log sends, hooks stay silent"
+elif python3 - "$HOME/.claude/settings.json" <<'PYEOF'
 import json, sys
 try:
     h = json.load(open(sys.argv[1])).get("hooks", {})

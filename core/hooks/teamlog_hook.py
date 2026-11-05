@@ -13,6 +13,7 @@
   teamlog_hook.py start     SessionStart: warns the user (never blocks) when the capture or Stop hook is missing from
                             ~/.claude/settings.json or points at a script that no longer exists, so nobody works unprotected.
 
+While `core/team-logs/PAUSED` exists all three do nothing (TEAM-LOGS §8).
 All read the hook payload (JSON) on stdin and stay silent for every other tool and every non-Everlife session.
 """
 import datetime, glob, hashlib, json, os, re, sys
@@ -186,7 +187,12 @@ def start(p):
                           "Fix: bash <repo>/core/scripts/update.sh, then restart Claude Code."}))
 
 
+PAUSED = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "team-logs", "PAUSED"))
+
+
 def main():
+    if os.path.exists(PAUSED):   # team logging paused (TEAM-LOGS §8): capture, Stop and SessionStart all stay silent
+        return
     try:
         p = json.load(sys.stdin)
     except ValueError:

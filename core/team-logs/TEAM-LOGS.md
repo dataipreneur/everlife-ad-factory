@@ -159,3 +159,14 @@ Priestley: "Are you sure claude will log every time into those artifacts?" Loggi
   that never ran the installer has no SessionStart hook either, so the preflight line is what catches it.
 - Still not covered: work done in Creatify / Higgsfield outside Claude; and an offline machine's records wait in the pending
   file until the pages answer.
+
+## 8. Pause switch (2026-11-04)
+Priestley: "can we switch off logging then? this sounds complex to me" (before a zip rollout to new teammates).
+- **One file:** `core/team-logs/PAUSED`. While it exists: the capture, Stop and SessionStart hooks exit silently (nothing is
+  captured, nobody is sent back to log, no warnings); `preflight.sh` prints "Team logging is PAUSED" instead of the hooks check;
+  `core/claude/everlife-team.md` tells Claude to skip every team-log step in every skill (no `teamlog.py`, no sends, no Ad Review posting).
+- **Resume:** delete the file (and ship a new zip). Nothing else changes; the hooks stay installed.
+- **What is lost while paused:** no new Prompt log, Copy Ledger, Activity log or Ad Review rows, and the unsent/unposted backlog
+  stays as it was. Copy-log files, claim screening and every gate still apply.
+- A person whose `~/.claude/CLAUDE.md` has the gates written by hand (no managed import block) does not get the `everlife-team.md`
+  line: add it by hand or re-run `install.sh`.
