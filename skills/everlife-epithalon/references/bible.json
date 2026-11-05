@@ -1,0 +1,143 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "epithalon",
+ "name": "Epithalon",
+ "sections": [
+  "Epithalon"
+ ],
+ "category": "Longevity",
+ "who": "Adults 40–65 focused on sleep quality and cellular aging.",
+ "truth": "All audiences",
+ "direction": [
+  "No sleep or overnight messaging — that territory is DSIP’s."
+ ],
+ "offer": {
+  "pct": null,
+  "status": "placeholder",
+  "source": "",
+  "cta": "",
+  "lines": [
+   "current % savings / price"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Ships Free From Pharmacy",
+ "cta_price": "Epithalon for $6.75/day",
+ "ctas": [
+  "Explore Epithalon",
+  "Support Healthy Aging",
+  "Save Up to X%",
+  "Start Longevity Support",
+  "Epithalon for $6.75/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Restorative Sleep",
+  "Promotes Healthy Aging",
+  "Supports DNA + Cellular Health",
+  "Aids Oxidative Stress Defense",
+  "Supports Healthy Sleep-Wake Cycles"
+ ],
+ "benefits_more": [],
+ "headlines": [
+  {
+   "text": "Feel Your Age? Support Healthy Aging.",
+   "badges": [],
+   "page": "Epithalon"
+  },
+  {
+   "text": "Age on Your Own Terms",
+   "badges": [],
+   "page": "Epithalon"
+  },
+  {
+   "text": "Support Healthy Aging at the Cellular Level",
+   "badges": [],
+   "page": "Epithalon"
+  },
+  {
+   "text": "Longevity Support, Made Simple",
+   "badges": [],
+   "page": "Epithalon"
+  }
+ ],
+ "offer_lines": [
+  "current % savings / price"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers"
+ ],
+ "hard_nos": [
+  "No sleep or overnight claims.",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "Current LP: [PLACEHOLDER]",
+ "last_verified": "[PLACEHOLDER]",
+ "field_badges": {
+  "headlines": [
+   "Pending approval"
+  ]
+ },
+ "screen": {
+  "feel your age? support healthy aging.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "age on your own terms": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "support healthy aging at the cellular level": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "longevity support, made simple": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "save up to x%": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  },
+  "current % savings / price": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  }
+ },
+ "first_seen": {
+  "age on your own terms": "baseline",
+  "aids oxidative stress defense": "baseline",
+  "current % savings / price": "baseline",
+  "epithalon for $6.75/day": "baseline",
+  "explore epithalon": "baseline",
+  "feel your age? support healthy aging.": "baseline",
+  "longevity support, made simple": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes healthy aging": "baseline",
+  "save up to x%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "start longevity support": "baseline",
+  "support healthy aging": "baseline",
+  "support healthy aging at the cellular level": "baseline",
+  "supports dna + cellular health": "baseline",
+  "supports healthy sleep-wake cycles": "baseline",
+  "supports restorative sleep": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Build Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

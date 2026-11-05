@@ -4,9 +4,9 @@ references/image-batch.md to a stub. Re-run after a bible sync or a product.json
 
     build_product_briefs.py [--only pt-141,nad] [--dry]
 
-Brief = who it's for + creative direction (from the bible page extract) · variations (from product.json) · product facts
-(renders, forms, hero) · hard stops (the product §0 copy rules, kept from the rebuilt image-batch.md or the original) ·
-this product's own references. Everything else is global (core/references/ENGINE.md).
+Brief = who it's for + creative direction + what it is (references/bible.json, generated from the bible) · variations (product.json) ·
+product facts (renders, forms, hero) · hard stops (references/hard-stops.md, hand) + the bible facts block (offer, CTAs, benefits,
+retired lines from bible.json) · this product's own references. Everything else is global (core/references/ENGINE.md).
 """
 import argparse, json, os, re, shutil, time
 
@@ -31,58 +31,71 @@ def section(text, start_pat, end_pat=r'^## '):
     return '\n'.join(out).rstrip() + ('\n' if out else '')
 
 
-def bible_bits(bible):
-    """Who it's for + Creative direction lines from the bible page extract (best effort, verbatim lines)."""
-    who, direction = '', []
-    lines = bible.splitlines()
-    for i, ln in enumerate(lines):
-        if re.match(r"^Who it.s for\s*$", ln.strip()) and i + 1 < len(lines) and not who:
-            who = lines[i + 1].strip()
-        if re.match(r'^Creative direction\s*$', ln.strip()):
-            j = i + 1
-            while j < len(lines) and (lines[j].startswith('- ') or lines[j].startswith('—')):
-                direction.append(lines[j].strip().lstrip('-—').strip().lstrip('—').strip()); j += 1
-    return who, direction
+def bible_json(skill_dir):
+    """The product's generated copy (references/bible.json, written by build_product_bibles.py from the bible)."""
+    p = os.path.join(skill_dir, 'references', 'bible.json')
+    if not os.path.exists(p):
+        raise SystemExit(f"❌ {p} missing: run build_product_bibles.py first (bible_pipeline.py regen)")
+    return json.load(open(p, encoding='utf-8'))
 
 
 def hard_stops(skill_dir):
-    ib = os.path.join(skill_dir, 'references', 'image-batch.md')
-    txt = open(ib).read() if os.path.exists(ib) else ''
-    sec = section(txt, r'^## 0\. ')
-    if not sec:
-        for d in sorted(os.listdir(os.path.join(REPO, '_originals')), reverse=True):
-            p = os.path.join(REPO, '_originals', d, 'image-skill-rebuild', os.path.basename(skill_dir), 'references', 'image-batch.md')
-            if os.path.exists(p):
-                sec = section(open(p).read(), r'^## 0\. '); break
-    sec = re.sub(r'^## 0\. .*\n', '', sec)
-    sec = re.sub(r'^\*\*Headline tiers:?\*\*.*?(?=\n\n|\Z)', '', sec, flags=re.M | re.S)   # tiers are gone (Mitansh 2026-11-05)
-    sec = re.sub(r'^> ⚠ \*\*PENDING CREATIVE-LEAD CONFIRMATION\*\*.*?(?=\n\n|\Z)', '', sec, flags=re.M | re.S)
-    sec = '\n'.join(ln for ln in sec.splitlines() if not re.search(r'Tier [AB]|PROPOSED', ln))
-    # the old "Claims: only approved lines … ⚠ only with explicit OK" bullet was a fence; the only fence is the Hard NOs (Mitansh 2026-11-05)
-    sec = re.sub(r'^- \*{0,2}Claims:?\*{0,2}.*?(?=^- |\Z)', '', sec, flags=re.M | re.S)
-    sec = sec.replace('**Hard stops:**', '**Hard stops:**\n- Lines the bible pre-screen marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.', 1)
-    return re.sub(r'\n{3,}', '\n\n', sec).strip()
+    """references/hard-stops.md (hand: the product's own rules) + the bible facts block generated from bible.json."""
+    p = os.path.join(skill_dir, 'references', 'hard-stops.md')
+    if not os.path.exists(p):
+        raise SystemExit(f"❌ {p} missing: run migrate_bible_extracts.py once, then keep it by hand")
+    hand = '\n'.join(ln for ln in open(p, encoding='utf-8').read().splitlines() if not ln.startswith('# ')).strip()
+    return hand
+
+
+def bible_facts(bj):
+    o = bj.get('offer') or {}
+    out = [f"## Offer, CTAs and claims (from the bible, version {bj.get('version')}; generated, never edit)"]
+    if o.get('status') == 'ok':
+        out.append(f"- **Offer:** \"{o['cta']}\" is the product's highest discount (bible rule 09; source: {o.get('source')}). It is the default CTA. "
+                   "Always \"Save Up to N%\", never a fixed discount, never another product's %.")
+    else:
+        out.append(f"- **Offer: none usable** ({o.get('status')}: {', '.join(o.get('lines') or []) or 'no offer line in the bible'}). "
+                   "No %, no price, no \"Save Up to\" on this product until the bible carries a verified offer.")
+    out.append(f"- **Default CTA:** \"{bj.get('cta_default')}\". **All bible CTAs:** " + ' · '.join(f'"{c}"' for c in bj.get('ctas', [])) +
+               ". The gate refuses any other CTA string.")
+    if bj.get('cta_price'):
+        out.append(f"- **Price CTA (approved alternative; the only $ amount allowed):** \"{bj['cta_price']}\".")
+    if o.get('variants'):
+        out.append("- **Variant maximums (reference only, never shown as a lower %):** " + ', '.join(f"{k} {v}%" for k, v in o['variants'].items()) + '.')
+    out.append("- **Quick-hit benefits (word for word, the only benefit lines):** " + ' · '.join(bj.get('benefits_quick', [])) + '.')
+    more = [b['text'] for b in bj.get('benefits_more', []) if not b.get('badges')]
+    if more:
+        out.append("- **More approved benefits:** " + ' · '.join(more) + '.')
+    if bj.get('hard_nos'):
+        out.append("- **Product Hard NOs (bible):** " + ' · '.join(bj['hard_nos']))
+    ret = [r['line'] if isinstance(r, dict) else r for r in bj.get('retired', [])]
+    if ret:
+        out.append("- **Retired, never use (left the bible or banned):** " + ' · '.join(ret) + '.')
+    out.append("- **Disclaimer:** verbatim in `product.json` (= the bible's); the finisher lays it. Exact strings for pasting: `python3 core/scripts/product_copy.py <id>`.")
+    return '\n'.join(out)
 
 
 def build(skill_dir, pid, prod):
     name = prod.get('name', pid)
-    bible_p = os.path.join(skill_dir, 'references', 'product-bible.md')
-    bible = open(bible_p).read() if os.path.exists(bible_p) else ''
-    who, direction = bible_bits(bible)
+    bj = bible_json(skill_dir)
+    who, direction = bj.get('who', ''), bj.get('direction', [])
     variations = prod.get('variations', [])
     renders = prod.get('renders', {}) or {}; forms = prod.get('forms', {}) or {}; hero = prod.get('hero', {}) or {}
     about = (prod.get('_about') or '').strip()
 
-    out = [f"# {name}: product brief (generated by `core/scripts/build_product_briefs.py`; edit `product.json` / the bible extract, not this file)", "",
+    out = [f"# {name}: product brief (generated by `core/scripts/build_product_briefs.py` from `product.json`, `references/bible.json` "
+           f"(bible version {bj.get('version')}) and `references/hard-stops.md`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)", "",
            f"The image engine is global: `core/references/image-flow.md` (flow), `core/references/world-deck/` (variety), "
            f"`core/references/global-rules.md` + the gates (compliance), `core/tools/` (finishing). This brief is everything that is specific to {name}.", ""]
-    out += ["## Who it's for", who or "(see `references/product-bible.md`)", ""]
+    out += ["## Who it's for", who or "(the bible page has no 'Who it's for' line)", ""]
+    if bj.get('truth'): out += ["## What it is (bible, one line)", bj['truth'], ""]
     if direction:
         out += ["## Creative direction (bible)"] + [f"- {d}" for d in direction] + [""]
     out += ["## Variations this product opts into"]
     out += [f"- `{v}` → `{VARIATION_FILES.get(v, '?')}`" for v in variations] or ["- none (global defaults only)"]
     out += ["", "## Product facts for the prompt"]
-    if about: out.append(f"- **About:** {about[:400]}")
+    if about: out.append(f"- **Settings note:** {about[:400]}")
     if renders: out.append("- **Renders (assets/):** " + ", ".join(f"{k}: `{v}`" for k, v in renders.items() if v) + ". Use them exactly; never describe the pill's shape or markings in text.")
     if forms and len(forms) > 1:
         out.append("- **Forms (one per ad):** " + "; ".join(f"**{k}** = {v.get('label', k)} (bottle `{v.get('bottle')}`{', pill `' + v['pill'] + '`' if v.get('pill') else ''})" for k, v in forms.items() if isinstance(v, dict)))
@@ -97,9 +110,12 @@ def build(skill_dir, pid, prod):
     out += ["", "## Headlines: references, not limits",
             "The bible's headlines, hooks and benefits in `references/product-bible.md` are inspiration for what this product does and how the brand talks. "
             "Write bold, fresh lines in each world's own voice. **The only fence is the Hard NOs** (global section 2 + the product's, below); Jeremy signs off on wording before anything goes live. No tiers, no per-line approvals (Mitansh 2026-11-05).", "",
-            "## Hard stops (this product)", hs or "Claims only from `references/product-bible.md`; Hard NO conflict lines never.", ""]
+            "## Hard stops (this product)", "- Lines the screening table marks ❌ / Hard NO conflict: never. Everything that is not a Hard NO is wording, and wording is free.",
+            hs or "", "", bible_facts(bj), ""]
     refs = [(rel, why) for rel, why in [
-        ('references/product-bible.md', 'every claim, headline, CTA, offer, Hard NO'),
+        ('references/product-bible.md', 'the bible extract (generated): copy, screening table, verbatim section'),
+        ('references/bible.json', 'the same as data (offer, CTAs, benefits, retired); `product_copy.py <id>` prints it'),
+        ('references/product-notes.md', 'hand notes on the product'),
         ('references/winners/winners.md', 'reference level 1: our own winners, open first'),
         ('references/team-refs', "the team's approved statics for this product"),
         ('references/pinterest', 'category references (idea + layout only)'),

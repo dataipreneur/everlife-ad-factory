@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = PROVISIONAL standard ad disclaimer (verbatim from MOTS-c; see _disclaimer_status). Scaffolded 2026-11-02 by everlife-new-product from everlife-mots-c. Spelling: copy says \"Epithalon\" (bible); the vial label reads \"EPITALON\" (never edited; open question for Justin).",
  "id": "epithalon",
  "name": "Epithalon",
+ "bible_sections": [
+  "Epithalon"
+ ],
  "renders": {
   "bottle": "epithalon_bottle.png",
   "pill": null

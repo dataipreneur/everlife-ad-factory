@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's NAD+ ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
  "id": "nad",
  "name": "NAD+",
+ "bible_sections": [
+  "NAD+"
+ ],
  "renders": {
   "bottle": "nad_bottle.png",
   "pill": "nad_tablet.png"

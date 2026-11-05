@@ -73,7 +73,7 @@ or "by Everlife". Statics never say "by Everlife".
      claims, colours and banned settings still apply; the presenter is an everyday adult 30–60, clothed, shoulder-up, never a body shot; no scales, tape, mirrors or food refused; the vial(s) a still object in the B-roll; VO "G-L-P one by Ever-life", "compounded" before any drug name.
 3. **Angle:** "Mix (Recommended)" / "Quiet the food noise" ("Turn Down the Food Noise", "Less Food Noise. More Control.") /
    "Appetite + cravings" ("Stop Fighting Hunger All Day", "Take Control of Your Appetite") / "One price, provider-guided"
-   ("One Simple Plan. One Clear Price.", "Your Goal. Your Plan. Provider Guided.").
+   (the bible's current price / provider-guided headlines: `python3 core/scripts/product_copy.py glp-1`).
 4. **How bold on copy:** "Safe: ✅ lines only (Recommended)" / "Allow one ⚠ weight-loss line (I OK it, Jeremy reviews)" / "Bold:
    one fresh line".
 

@@ -1,0 +1,217 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "ghk-cream",
+ "name": "GHK Peptide Cream",
+ "sections": [
+  "GHK-Cu Cream"
+ ],
+ "category": "Topical skin",
+ "who": "Women 30–55 who want a daily peptide step in their skincare routine.",
+ "truth": "Topical peptide skin support focused on collagen, elastin, firmness, and the skin’s natural repair process.",
+ "direction": [
+  "Beauty and fitness positioning — lean and fit, never bodybuilding.",
+  "Core demo is the 40-year-old mom, same as GLP-1.",
+  "Palette: pinks, tans and beige. No oranges or greens.",
+  "Teach what a peptide skin cream actually does. GHK-Cu is a copper peptide that signals skin to support its own collagen and repair — say it plainly, never assume the viewer knows what “peptide” means.",
+  "Differentiate from ordinary moisturizers and serums: this works at the signal level (collagen, elastin, repair), not just surface hydration. Make the “why it’s different” explicit.",
+  "Pair each benefit with a quick reason-why for context (e.g. “copper peptides support the collagen skin makes less of with age”), not a bare claim."
+ ],
+ "offer": {
+  "pct": 75,
+  "status": "ok",
+  "source": "CTA",
+  "cta": "Save Up to 75%",
+  "lines": [
+   "Save up to 75%"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Save Up to 75%",
+ "cta_price": "GHK Peptide Cream for $1.50/day",
+ "ctas": [
+  "Upgrade Your Skin Routine",
+  "Explore GHK Peptide Cream",
+  "Save Up to 75%",
+  "Support Firmer Skin",
+  "Start Skin Renewal",
+  "GHK Peptide Cream for $1.50/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Collagen + Elastin",
+  "Promotes Firmer, More Youthful-Looking Skin",
+  "Promotes Skin’s Natural Repair Process",
+  "Supports Smoother-Looking Texture",
+  "Encourages a Brighter, More Even-Looking Tone"
+ ],
+ "benefits_more": [],
+ "headlines": [
+  {
+   "text": "Not a Moisturizer. A Skin-Repair Signal.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "The Copper Peptide Your Skin Has Been Missing.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Collagen Fades With Age. GHK Helps Signal It Back.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "What Your Serum Misses, Copper Peptides Support.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Skincare That Works at the Signal Level.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "One Peptide. Firmer, Smoother, Brighter-Looking Skin.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Go Beyond Hydration — Support Real Renewal.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Give Aging Skin a Reason to Bounce Back.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "The Peptide Behind Skin Renewal",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Why Copper Peptides Are Skincare’s Quiet Upgrade.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Firmer-Looking Skin Starts With Support",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Glow Smarter With GHK Peptide Cream",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Peptide-Powered Skin Support",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "The Difference a Copper Peptide Makes.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Your Daily GHK Glow",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  },
+  {
+   "text": "Healthy Skin Isn’t One Thing. It’s Everything.",
+   "badges": [],
+   "page": "GHK-Cu Cream"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 75%"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers"
+ ],
+ "hard_nos": [
+  "No bodybuilding or “huge” physique imagery.",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/ghk-peptide-cream/fb",
+ "last_verified": "Nov. 3, 2026",
+ "field_badges": {},
+ "screen": {
+  "the copper peptide your skin has been missing.": {
+   "status": "❌ auto",
+   "why": "creative says \"GHK\", never \"GHK-Cu\" / \"copper peptide\" (H2 product name only)"
+  },
+  "what your serum misses, copper peptides support.": {
+   "status": "❌ auto",
+   "why": "creative says \"GHK\", never \"GHK-Cu\" / \"copper peptide\" (H2 product name only)"
+  },
+  "the peptide behind skin renewal": {
+   "status": "⚠ Jeremy",
+   "why": "attributes an outcome (\"skin renewal\") to the compound (global: mechanism first); \"renewal\" reads medical-style"
+  },
+  "why copper peptides are skincare's quiet upgrade.": {
+   "status": "❌ auto",
+   "why": "creative says \"GHK\", never \"GHK-Cu\" / \"copper peptide\" (H2 product name only)"
+  },
+  "the difference a copper peptide makes.": {
+   "status": "❌ auto",
+   "why": "creative says \"GHK\", never \"GHK-Cu\" / \"copper peptide\" (H2 product name only)"
+  },
+  "start skin renewal": {
+   "status": "⚠ Jeremy",
+   "why": "same \"skin renewal\" outcome wording as the headline above"
+  }
+ },
+ "first_seen": {
+  "collagen fades with age. ghk helps signal it back.": "baseline",
+  "encourages a brighter, more even-looking tone": "baseline",
+  "explore ghk peptide cream": "baseline",
+  "firmer-looking skin starts with support": "baseline",
+  "ghk peptide cream for $1.50/day": "baseline",
+  "give aging skin a reason to bounce back.": "baseline",
+  "glow smarter with ghk peptide cream": "baseline",
+  "go beyond hydration - support real renewal.": "baseline",
+  "healthy skin isn't one thing. it's everything.": "baseline",
+  "not a moisturizer. a skin-repair signal.": "baseline",
+  "one peptide. firmer, smoother, brighter-looking skin.": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "peptide-powered skin support": "baseline",
+  "promotes firmer, more youthful-looking skin": "baseline",
+  "promotes skin's natural repair process": "baseline",
+  "save up to 75%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "skincare that works at the signal level.": "baseline",
+  "start skin renewal": "baseline",
+  "support firmer skin": "baseline",
+  "supports collagen + elastin": "baseline",
+  "supports smoother-looking texture": "baseline",
+  "the copper peptide your skin has been missing.": "baseline",
+  "the difference a copper peptide makes.": "baseline",
+  "the peptide behind skin renewal": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "upgrade your skin routine": "baseline",
+  "what your serum misses, copper peptides support.": "baseline",
+  "why copper peptides are skincare's quiet upgrade.": "baseline",
+  "your daily ghk glow": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "GHK-Cu Cream for $1.50/day",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

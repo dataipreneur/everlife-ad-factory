@@ -2,6 +2,95 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793905953-bc2f (automatic: `bible_pipeline.py sync`)
+Justin moved the live bible from 1793897447-019b to 1793905953-bc2f. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
+
+- ~ GLP1
+- + - Supports Insulin Sensitivity [Weak benefit]
+- + - Supports Steady Weight-Loss Progress [Weak benefit]
+- - - Supports Insulin SensitivityWeak benefit
+- - - Supports Steady Weight-Loss ProgressWeak benefit
+- ~ Global Hard NOs
+- + - Trustpilot always reads “Trustpilot logo, stars and "4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
+- - - Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
+- ~ Lovara
+- + - Supports Warmth + Comfort [Weak benefit]
+- + - Supports Emotional Readiness [Weak benefit]
+- + - Supports Intimate Wellness [Weak benefit]
+- + - Activates Desire Pathways [Weak benefit]
+- - - Supports Warmth + ComfortWeak benefit
+- - - Supports Emotional ReadinessWeak benefit
+- - - Supports Intimate WellnessWeak benefit
+- - - Activates Desire PathwaysWeak benefit
+- ~ NAD+
+- + - Optimizes Metabolic Health [Weak benefit]
+- - - Optimizes Metabolic HealthWeak benefit
+- ~ Optima-NAD+
+- + - Optimizes Metabolic Health [Weak benefit]
+- + - Supports Cellular Longevity [Weak benefit]
+- - - Optimizes Metabolic HealthWeak benefit
+- - - Supports Cellular LongevityWeak benefit
+- ~ PT-141
+- + - Activates Desire Signaling [Weak benefit]
+- + - Supports Libido Pathways [Weak benefit]
+- + - Supports Your Spark [Weak benefit]
+- + - Supports Body Responsiveness [Weak benefit]
+- + - Supports Romantic Readiness [Weak benefit]
+- + - Supports the Desire Response [Weak benefit]
+- + - Peptide-Powered Desire Support [Weak benefit]
+- + - Supports Desire From Within [Weak benefit]
+- + - Designed to Support Desire [Weak benefit]
+- - - Activates Desire SignalingWeak benefit
+- - - Supports Libido PathwaysWeak benefit
+- - - Supports Your SparkWeak benefit
+- - - Supports Body ResponsivenessWeak benefit
+- - - Supports Romantic ReadinessWeak benefit
+- - - Supports the Desire ResponseWeak benefit
+- - - Peptide-Powered Desire SupportWeak benefit
+- - - Supports Desire From WithinWeak benefit
+- - - Designed to Support DesireWeak benefit
+- ~ Restora-Z
+- + - Better Sleep, Better Days Ahead [Weak benefit]
+- - - Better Sleep, Better Days AheadWeak benefit
+- + NEW SECTION: Sermorelin GHK 1000 (48 lines)
+- ~ Titan-Rx
+- + - Supports Your Natural Physical Response [Weak benefit]
+- + - Helps Improve Physical Responsiveness [Weak benefit]
+- + - Supports Responsiveness in the Moment [Weak benefit]
+- + - Supports a Stronger Physical Response [Weak benefit]
+- - - Supports Your Natural Physical ResponseWeak benefit
+- - - Helps Improve Physical ResponsivenessWeak benefit
+- - - Supports Responsiveness in the MomentWeak benefit
+- - - Supports a Stronger Physical ResponseWeak benefit
+
+- No product copy changed (offers, CTAs, benefits, proof, hard NOs, disclaimers).
+
+## 2026-11-05 — The bible pipeline: one parser, generated extracts, the CTA gate (branch `bible-pipeline`, local)
+Mitansh: "Even a small update in the bible about a single product … that product's skill should have that updated and the next batch of ads
+should have it done. Very simple. Super robust." Survey before: all 15 hand extracts had drifted (stacked "Bible sync" banners, 7 skills still
+listing removed CTAs, briefs with stale offers: NAD 56% vs 62%, Titan-Rx "no offer" vs 49%, BPC-157 "Get Started Now").
+- `core/scripts/bible_model.py`: the ONE parser of `core/claude/creative-bible.md` (pages → who / truth / direction / headlines / quick-hits / more
+  benefits / CTAs / offers / proof / hard NOs / ingredient claims / disclaimer / landing page, badges split off; globals → discount table, variant
+  maximums, proof split, focal mix, logo widths, 24 px, shirtless cap). `core/scripts/hard_nos.py`: the mechanical Hard NOs, one copy (teamlog,
+  the generator and the hook import it).
+- `core/scripts/build_product_bibles.py`: GENERATES every skill's `references/bible.json` (offer by the highest-discount rule, `cta_default`,
+  ctas, benefits, headlines, proof, hard NOs, disclaimer, screening statuses, `retired`, product patterns) and `references/product-bible.md`
+  (product copy, screening table, verbatim section, hand notes), and rewrites `product.json` disclaimer from the bible. Idempotent; refuses a
+  bible with < 20 pages. First run = baseline (nothing NEW); later syncs flag "✅ NEW in <version>" lines for Jeremy (usable right away).
+- `core/scripts/build_product_briefs.py`: reads `bible.json` (who, truth, direction) + `references/hard-stops.md` (hand) and adds the generated
+  "Offer, CTAs and claims" block; the `_originals` fallback is gone.
+- `core/scripts/migrate_bible_extracts.py` (run once): hand pre-screen tables → `bible-screen.json` overrides / patterns / retired; hand prose →
+  `product-notes.md`; brief hard stops → `hard-stops.md`; `product.json` `bible_sections` (Men + Women for the Sermorelins); originals in
+  `_originals/2026-11-05/bible-pipeline/`. 13 prose lines that restated retired CTAs or wrong % were fixed by hand (lint found them).
+- `core/scripts/bible_sync.py`: mapping via `bible_sections`, guards (refuses a weak parse before writing), the diff via the shared parser,
+  glued badges bracketed, `--check` via the model. `core/scripts/bible_pipeline.py`: `sync` (convert → regenerate → lint → tests → report →
+  CHANGELOG; `--commit` / `--release` only on an explicit go), `regen`, `check`, `newest`. `core/scripts/product_copy.py <id>`: exact strings to paste.
+- `core/hooks/batch_hook.py` copy gate: an image prompt is refused when its CTA is not a bible CTA, when any Headline / Supporting / CTA line is
+  retired or breaks a Hard NO, when a "Save Up to N%" is not the featured discount, or when the skill's `bible.json` is behind the synced bible.
+- `core/scripts/skill_lint.py`: versions, banners, disclaimer, `bible_sections`, `bible-screen.json`, `hard-stops.md`, stale % / retired lines in
+  prose, gates' numbers vs the bible. `core/tests/bible_pipeline_test.py` (34 checks) + `batch_gate_test.py` (21).
+- Docs: `core/references/bible-sync.md` (rewritten), `everlife-team.md` phrase, `image-flow.md` §3 / §4 / §8, `ENGINE.md`, `golden-rules.md`, gates.
+
 ## 2026-11-05 — Next-batch questionnaire, enforced by code (branch `world-deck-golden-flow`)
 Mitansh: "Compulsory requestionnaire after 1 batch of images is done! For that same product! Shouldn't be a memory or something, do by code."
 - `core/hooks/batch_hook.py`: once every slot of a batch is finished in both sizes, the Stop hook blocks the turn until one AskUserQuestion

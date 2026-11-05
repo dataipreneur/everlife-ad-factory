@@ -1,0 +1,72 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {
+  "From Dad Bod to Man Bod": {
+   "status": "❌",
+   "why": "body-comparison / body-composition framing; \"Dad Bod\" is on the library's banned list"
+  },
+  "Available as sublingual tablets or injections": {
+   "status": "❌",
+   "why": "\"injections\" breaks the no-needles rule; say \"easy sublingual delivery\""
+  },
+  "Save 70% compared to HGH": {
+   "status": "⚠ Jeremy",
+   "why": "comparison/price claim against another therapy; \"HGH\""
+  },
+  "Starting at $95/month": {
+   "status": "⚠",
+   "why": "dollar price; default is percent-off"
+  },
+  "Get Toned and Lean": {
+   "status": "⚠ Jeremy",
+   "why": "\"toned/lean\" is not an approved-language line on this page (it is on GHK's); reads as body composition"
+  },
+  "Supports Lean Muscle Definition": {
+   "status": "⚠ Jeremy",
+   "why": "\"definition\" drifts into body composition; never with a body shot"
+  },
+  "Promotes Metabolism + Body Tone": {
+   "status": "⚠ Jeremy",
+   "why": "\"body tone\" = body-composition wording"
+  },
+  "Get Lean Today": {
+   "status": "⚠ Jeremy",
+   "why": "same body-composition drift; prefer another CTA"
+  },
+  "Lean. Strong. Energized.": {
+   "status": "⚠ Jeremy",
+   "why": "same"
+  },
+  "Supports Toned Strength After 35": {
+   "status": "⚠ Jeremy",
+   "why": "\"toned\" = body-composition wording, as above"
+  },
+  "60 Is the New 40": {
+   "status": "⚠ Jeremy",
+   "why": "age-reversal / exaggerated transformation reading"
+  },
+  "50 Is the New 30": {
+   "status": "⚠ Jeremy",
+   "why": "age-reversal / exaggerated transformation reading"
+  },
+  "Feel Younger Stay Stronger": {
+   "status": "⚠ Jeremy",
+   "why": "age-reversal reading; outcome not mechanism-led"
+  },
+  "The Power of Growth Hormone in a Tablet": {
+   "status": "⚠ Jeremy",
+   "why": "implies the tablet contains growth hormone; Sermorelin supports the body's own production"
+  },
+  "Ultimate Stack…With Your TRT": {
+   "status": "⚠ Jeremy",
+   "why": "implies combined-therapy use; another Rx named"
+  }
+ },
+ "patterns": [],
+ "retired": [
+  {
+   "line": "Supports Sleep Quality + Recovery",
+   "why": "removed from the bible 2026-11-02 (Justin); never use"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {},
+ "patterns": [
+  {
+   "re": "\\b(ed|erectile|performance|viagra|instant|ignite)\\b",
+   "status": "❌",
+   "why": "outside PT-141's approved scope (Spark's \"ED\" headlines are Pending there, not here)",
+   "_review": "regex built from the old row: check it"
+  },
+  {
+   "re": "\\b(hormone\\-free\\ fix|cure|treat\\ low\\ libido)\\b",
+   "status": "❌",
+   "why": "disease/treatment claim",
+   "_review": "regex built from the old row: check it"
+  },
+  {
+   "re": "\\b(arousal|aroused|arousing)\\b",
+   "status": "❌",
+   "why": "bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”).",
+   "_review": "regex built from the old row: check it"
+  }
+ ],
+ "retired": [
+  {
+   "line": "Gentle on the Vascular System",
+   "why": "removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate"
+  },
+  {
+   "line": "Helps Wake Up the Want",
+   "why": "removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms"
+  },
+  {
+   "line": "Sublingual or Nasal Spray Desire Support",
+   "why": "removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms"
+  },
+  {
+   "line": "Support Your Spark",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Find Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ]
+}

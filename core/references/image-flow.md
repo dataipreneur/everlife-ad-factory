@@ -65,7 +65,9 @@ For every slot, in order:
    2026-11-05: "be as bold and creative as you want; that is mandatory for diversity"). Write the line the WORLD would say: a wanted
    poster shouts, a dictionary defines, a memo is terse, a boarding pass prints. **The only fence is the Hard NOs** (section 2 + the product page's Hard NOs): no disease / cure / treat words, no outcome
    promises or guarantees, no body-composition, no pronoun questions, no first person, no competitor names, no "Get Started Now".
-   Everything else is yours. Never a line already in the product copy log. Never "Get Started Now". CTAs: lead with the offer or write one in the world's voice.
+   Everything else is yours. Never a line already in the product copy log. **CTA = one of the product's current bible CTAs, exactly**
+   (`references/bible.json` → `cta_default`, normally "Save Up to N%"; `python3 core/scripts/product_copy.py <id>` prints them); the gate hook
+   refuses any other CTA string, any retired line and any % that is not the product's featured discount (bible pipeline, 2026-11-05).
 4. **Supporting lines:** up to 3 short lines in the same voice, the bible's benefits as the reference for what to say; same fence. Peptide stacks name every peptide.
 5. **Type & colour:** the world's own type hint leads; the dealt pairing is the partner face. Accent from the dealt list
    (men's products skip rose / blush; women's and intimacy skip orange / green). Placement and light as dealt. Headline ≥ 9%
@@ -96,7 +98,7 @@ TEXT: render ONLY these strings, exactly as written, nothing else (no extra word
 no website, no disclaimer):
   Headline: "<headline>"   (accent on: "<phrase>")
   Supporting: "<line 1>" / "<line 2>" / "<line 3>"
-  CTA: "<offer CTA from the bible>"
+  CTA (in a button): "<cta_default from references/bible.json, or another of its ctas[]>"
   <world-specific text, e.g. the ticket fields, the dictionary entry, the poll options>
 
 <STRICT LAYOUT block for this ratio, pasted from core/references/prompt-layout-zones.md>
@@ -141,7 +143,7 @@ These are the steps the old per-skill files carried; they live here once now. Co
 | # | Step | Command / check | Enforced by |
 |---|---|---|---|
 | 1 | Preflight | `bash <skill>/core/scripts/preflight.sh` (connections, tools, bible version check) | script |
-| 2 | Read the product | `references/product-brief.md` (hard stops, variations) · `references/product-bible.md` · `references/lessons.md` · `references/winners/` | you |
+| 2 | Read the product | `references/product-brief.md` (hard stops, variations, the bible facts block) · `references/product-bible.md` (generated from the bible) · `references/lessons.md` · `references/winners/`; exact copy strings: `python3 core/scripts/product_copy.py <id>` (reads `references/bible.json`) | you |
 | 3 | Lean team reads | Copy Ledger + Ad Review flags saved to files (`ArtifactData` `out_dir` = `<job>/_team/ledger`, `<job>/_team/review`), then only the digest: `teamlog.py summary <job>/_team/ledger <job>/_team/review --product <id>` (used headlines, team styles/worlds → `--skip`, reviewer flags → explicit checks for this batch). Page unreachable → say so, carry on | TEAM-LOGS §2.2, AD-REVIEW §3 |
 | 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …] --json > <job>/deal.json` (the MANIFEST: N slots × 2 ratios owed); proof per slot follows `finish_batch.py --proof-plan N` (42/28/30) | code |
 | 5 | Write | every ad: 9:16 prompt AND 4:5 prompt, each with its STRICT LAYOUT block (`prompt-layout-zones.md`), copy inside the Hard NOs; `prompts.md` | you + lint on the prompt (zones present) |

@@ -2,7 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. Scaffolded 2026-11-02 by everlife-new-product from everlife-lovara. Bible page '## GHK-Cu Cream'. 'name' is the creative name on Meta / Google / TikTok ('GHK Peptide Cream', global naming rule); 'GHK-Cu Cream' is the H2 product name only. Render in assets/ (assets/RENDERS.md): a topical cream in an airless pump bottle, 30G; there is no tablet.",
  "id": "ghk-cream",
  "name": "GHK Peptide Cream",
- "bible_section": "GHK-Cu Cream",
+ "bible_sections": [
+  "GHK-Cu Cream"
+ ],
  "renders": {
   "bottle": "ghk-cream_bottle.png",
   "pill": null

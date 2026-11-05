@@ -1,0 +1,169 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "bpc-157",
+ "name": "BPC-157",
+ "sections": [
+  "BPC-157"
+ ],
+ "category": "Recovery",
+ "who": "Active adults 30–65+ recovering from joint, tendon or gut issues.",
+ "truth": "Peptide support focused on tissue repair, recovery, mobility, connective tissue, and gut health.",
+ "direction": [
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel."
+ ],
+ "offer": {
+  "pct": 40,
+  "status": "ok",
+  "source": "CTA",
+  "cta": "Save Up to 40%",
+  "lines": [
+   "Save up to 40%"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Save Up to 40%",
+ "cta_price": "BPC-157 for $5.75/day",
+ "ctas": [
+  "Support Your Recovery",
+  "Explore BPC-157",
+  "Save Up to 40%",
+  "BPC-157 for $5.75/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Joints + Tendons",
+  "Promotes Faster Recovery",
+  "Aids Connective Tissue Repair",
+  "Supports Mobility + Flexibility",
+  "Supports Gut Lining Health",
+  "Encourages Faster Bounce-Back After Training",
+  "Supports Joints, Tendons + Gut Lining"
+ ],
+ "benefits_more": [],
+ "headlines": [
+  {
+   "text": "Recover Faster. Move Better.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Less Downtime. More Training Days.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Train Hard. Recover Harder.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Bounce Back Faster After Every Session.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Support Joints, Tendons and Gut — in One.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Recover Like You Trained for It.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Bounce Back From Tough Training",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Nagging Tweak? Give Your Body Backup.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "For Joints, Tendons and the Day After Leg Day.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "The Recovery Peptide Built for Heavy Wear.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Your Body Repairs. BPC-157 Backs It Up.",
+   "badges": [],
+   "page": "BPC-157"
+  },
+  {
+   "text": "Support for Joints, Tendons + Gut",
+   "badges": [],
+   "page": "BPC-157"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 40%"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers"
+ ],
+ "hard_nos": [
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/bpc-157/fb",
+ "last_verified": "Nov. 3, 2026",
+ "field_badges": {},
+ "screen": {},
+ "first_seen": {
+  "aids connective tissue repair": "baseline",
+  "bounce back faster after every session.": "baseline",
+  "bounce back from tough training": "baseline",
+  "bpc-157 for $5.75/day": "baseline",
+  "encourages faster bounce-back after training": "baseline",
+  "explore bpc-157": "baseline",
+  "for joints, tendons and the day after leg day.": "baseline",
+  "less downtime. more training days.": "baseline",
+  "nagging tweak? give your body backup.": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes faster recovery": "baseline",
+  "recover faster. move better.": "baseline",
+  "recover like you trained for it.": "baseline",
+  "save up to 40%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "support for joints, tendons + gut": "baseline",
+  "support joints, tendons and gut - in one.": "baseline",
+  "support your recovery": "baseline",
+  "supports gut lining health": "baseline",
+  "supports joints + tendons": "baseline",
+  "supports joints, tendons + gut lining": "baseline",
+  "supports mobility + flexibility": "baseline",
+  "the recovery peptide built for heavy wear.": "baseline",
+  "train hard. recover harder.": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "your body repairs. bpc-157 backs it up.": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  }
+ ],
+ "patterns": [
+  {
+   "re": "\\b(heal|cure|treat|injury|pain|inflammation|torn|regenerate)\\b",
+   "status": "❌",
+   "why": "disease / treatment framing (global). The docx's \"Who it's for\" may mention recovering from joint, tendon or gut issues as context; ad copy says \"recovery\", \"support\", \"bounce back\""
+  },
+  {
+   "re": "\\b(needle\\-free)\\b",
+   "status": "❌",
+   "why": "global Hard NO; the vial is always a still object"
+  }
+ ],
+ "extra": {}
+}

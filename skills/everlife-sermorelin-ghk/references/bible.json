@@ -1,0 +1,677 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "sermorelin-ghk",
+ "name": "Sermorelin GHK",
+ "sections": [
+  "Sermorelin GHK — Men",
+  "Sermorelin GHK — Women"
+ ],
+ "category": "Longevity + skin · Men",
+ "who": "Men 35–60 who want lean muscle, strength and growth hormone support from one formula.",
+ "truth": "A 3-in-1 formula combining growth-hormone support, skin renewal, circulation, muscle, and metabolism benefit territories.",
+ "direction": [
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.",
+  "Benefit scope: skin, lean muscle, growth hormone drive, hair thickening (male).",
+  "Ingredient list reads Sermorelin, GHK, Citrulline.",
+  "Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.",
+  "Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.",
+  "Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing."
+ ],
+ "offer": {
+  "pct": 47,
+  "status": "ok",
+  "source": "CTA",
+  "cta": "Save Up to 47%",
+  "lines": [
+   "Save up to 47%"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Save Up to 47%",
+ "cta_price": "Sermorelin GHK for $4.25/day",
+ "ctas": [
+  "Unlock 3-in-1 Support",
+  "Explore Sermorelin GHK",
+  "Save Up to 47%",
+  "Support Strength + Vitality",
+  "Sermorelin GHK for $4.25/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Natural Growth Hormone Production",
+  "Promotes Lean Muscle + Performance",
+  "Promotes Youthful-Looking Skin & Thicker Hair",
+  "Fuels Daily Energy + Healthy Blood Flow",
+  "3-in-1 Peptide Support",
+  "Supports Visceral-Fat Metabolism & Body Toneno targeted fat loss or body-composition claims",
+  "Supports Workout Pumps + Endurance",
+  "Aids Exercise Recovery",
+  "One Daily Tablet for Muscle, Skin + Hair",
+  "Promotes Firmer, Glowing Skin From Within"
+ ],
+ "benefits_more": [
+  {
+   "text": "Supports Muscle Strength & Repair",
+   "badges": []
+  },
+  {
+   "text": "Supports Collagen + Radiant-Looking Skin",
+   "badges": []
+  },
+  {
+   "text": "Helps You Look Lean + Toned",
+   "badges": []
+  }
+ ],
+ "headlines": [
+  {
+   "text": "Age Hits Growth Hormone. Hit Back.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Low Growth Hormone Makes Lean Muscle Harder to Maintain",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Don’t Let Declining Growth Hormone Take Your Edge.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "The Edge You’ve Been Missing",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Increase Growth Hormone. Support Lean Muscle.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Power Your Prime With 3-in-1 Sermorelin GHK",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "2 Next-Gen Peptides + 1 Lean Muscle Powerhouse",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Growth Hormone Support. Built for More.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "The GLP-1 Complement for Lean + Strong",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Break Past Your Limits",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Forge a Stronger Physique",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Your Next Power Move",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Become Harder to Beat",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Command Your Strength",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Dominate Your Potential",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Lean. Powerful. Unstoppable.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Lean. Strong. Defined",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Lean Muscle Advantage",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Optimize Growth Hormone. Maximize Your Edge.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Power Up Growth Hormone. Power Up Performance.",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Complement Your GLP-1 With Muscle + Recovery Support",
+   "badges": [],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Don’t Settle for Average",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Built for Everyday Tough",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Toned & Lean",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Stay Ready for More",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Drive for More",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Lean Into Power",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Play Offense Not Defense",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Become a Force",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Men"
+  },
+  {
+   "text": "Tone, Tighten, Glow",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Muscle Support Meets Beauty Support.",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "2 Advanced Peptides + 1 Lean Muscle Booster",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "2 Advanced Peptides + 1 Glow Enhancer",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Your GLP-1 Complement for Lean Muscle + Glow",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Get Toned and Lean",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Lean. Strong. Radiant.",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Glow From Within",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Stronger. Leaner. Energized.",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Lean. Defined. Glowing.",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "The GLP-1 Complement for Muscle, Skin + Hair",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Your GLP-1 Complement for Strength + Radiance",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Your GLP-1 Complement for Body + Beauty Support",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "GLP-1 Complement: Lean. Strong. Radiant.",
+   "badges": [],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Reclaim What Time Took",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "Not Bouncing Back Like You Used to? This 3-in-1…",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "New Wellness Trend",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "How Women Are Using…",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Women"
+  },
+  {
+   "text": "4 Reasons Why You Need…",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin GHK — Women"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 47%"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "Exclusive 3-in-1 formula"
+ ],
+ "hard_nos": [
+  "Approved language: “toned” and “lean.”",
+  "“Safer long-term alternative to synthetic HGH” — high risk. Use “Supports natural growth hormone production.”",
+  "“Reduces inflammation, oxidative stress and signs of aging” — high risk. Use the skin + hair claim.",
+  "Say “exercise recovery,” not “muscle recovery.”",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {
+  "Sermorelin": [
+   "Supports metabolism and lean muscle tone",
+   "Supports natural growth hormone production",
+   "Stimulates natural growth hormone and IGF-1 production",
+   "Promotes lean muscle growth",
+   "Enhances sleep quality and cellular repair",
+   "A foundation for healthy aging, strength and vitality"
+  ],
+  "GHK": [
+   "Stimulates collagen, elastin, and glycosaminoglycan production",
+   "Supports skin tightening, wound healing, and hair regrowth",
+   "Promotes radiant, firmer, youthful-looking skin and fuller hair",
+   "Protects and repairs DNA and tissue damage at the cellular level",
+   "Enhances skin tone, firmness, and youthful appearance",
+   "Synergizes with growth hormone pathways to accelerate repair and regeneration"
+  ],
+  "L-Citrulline Malate": [
+   "Boosts stamina and muscle performance",
+   "Supports nitric oxide production",
+   "Promotes healthy blood flow",
+   "Supports muscle blood flow during exercise",
+   "Supports muscle pumps and vascularity",
+   "Supports exercise endurance",
+   "Supports nutrient delivery to working muscles",
+   "Supports lean muscle performance",
+   "Supports strength and training performance",
+   "Supports exercise recovery",
+   "Supports a lean, defined physique"
+  ]
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/sermorelin-ghk/f-fb",
+ "last_verified": "Aug. 28, 2026",
+ "field_badges": {},
+ "screen": {
+  "forge a stronger physique": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "lean. strong. defined": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "don't settle for average": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "built for everyday tough": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "toned & lean": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "stay ready for more": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "drive for more": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "lean into power": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "play offense not defense": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "become a force": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "lean. defined. glowing.": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "reclaim what time took": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "not bouncing back like you used to? this 3-in-1…": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "new wellness trend": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "how women are using…": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "4 reasons why you need…": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "supports visceral-fat metabolism & body toneno targeted fat loss or body-composition claims": {
+   "status": "❌ auto",
+   "why": "never the phrase \"body composition\" anywhere: rewrite it (\"supports lean muscle\"; bible 2026-11-04); no \"fat\" or \"skinny\" claims anywhere (bible 2026-11-04)"
+  },
+  "helps you look lean + toned": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "supports metabolism and lean muscle tone": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Sermorelin); never attributed to the product"
+  },
+  "supports natural growth hormone production": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Sermorelin); never attributed to the product"
+  },
+  "stimulates natural growth hormone and igf-1 production": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Sermorelin); never attributed to the product"
+  },
+  "promotes lean muscle growth": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Sermorelin); never attributed to the product"
+  },
+  "enhances sleep quality and cellular repair": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Sermorelin); never attributed to the product"
+  },
+  "a foundation for healthy aging, strength and vitality": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Sermorelin); never attributed to the product"
+  },
+  "stimulates collagen, elastin, and glycosaminoglycan production": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (GHK); never attributed to the product"
+  },
+  "supports skin tightening, wound healing, and hair regrowth": {
+   "status": "⚠ Jeremy",
+   "why": "\"wound healing\" / \"hair regrowth\" read as treatment claims"
+  },
+  "promotes radiant, firmer, youthful-looking skin and fuller hair": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (GHK); never attributed to the product"
+  },
+  "protects and repairs dna and tissue damage at the cellular level": {
+   "status": "❌",
+   "why": "unsupported medical-style claim"
+  },
+  "enhances skin tone, firmness, and youthful appearance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (GHK); never attributed to the product"
+  },
+  "synergizes with growth hormone pathways to accelerate repair and regeneration": {
+   "status": "⚠ Jeremy",
+   "why": "\"accelerate\" is an exaggerated outcome"
+  },
+  "boosts stamina and muscle performance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports nitric oxide production": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "promotes healthy blood flow": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports muscle blood flow during exercise": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports muscle pumps and vascularity": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports exercise endurance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports nutrient delivery to working muscles": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports lean muscle performance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports strength and training performance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports exercise recovery": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Citrulline Malate); never attributed to the product"
+  },
+  "supports a lean, defined physique": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  }
+ },
+ "first_seen": {
+  "2 advanced peptides + 1 glow enhancer": "baseline",
+  "2 advanced peptides + 1 lean muscle booster": "baseline",
+  "2 next-gen peptides + 1 lean muscle powerhouse": "baseline",
+  "3-in-1 peptide support": "baseline",
+  "4 reasons why you need…": "baseline",
+  "a foundation for healthy aging, strength and vitality": "baseline",
+  "age hits growth hormone. hit back.": "baseline",
+  "aids exercise recovery": "baseline",
+  "become a force": "baseline",
+  "become harder to beat": "baseline",
+  "boosts stamina and muscle performance": "baseline",
+  "break past your limits": "baseline",
+  "built for everyday tough": "baseline",
+  "command your strength": "baseline",
+  "complement your glp-1 with muscle + recovery support": "baseline",
+  "dominate your potential": "baseline",
+  "don't let declining growth hormone take your edge.": "baseline",
+  "don't settle for average": "baseline",
+  "drive for more": "baseline",
+  "enhances skin tone, firmness, and youthful appearance": "baseline",
+  "enhances sleep quality and cellular repair": "baseline",
+  "exclusive 3-in-1 formula": "baseline",
+  "explore sermorelin ghk": "baseline",
+  "forge a stronger physique": "baseline",
+  "fuels daily energy + healthy blood flow": "baseline",
+  "get toned and lean": "baseline",
+  "glow from within": "baseline",
+  "glp-1 complement: lean. strong. radiant.": "baseline",
+  "growth hormone support. built for more.": "baseline",
+  "helps you look lean + toned": "baseline",
+  "how women are using…": "baseline",
+  "increase growth hormone. support lean muscle.": "baseline",
+  "lean into power": "baseline",
+  "lean muscle advantage": "baseline",
+  "lean. defined. glowing.": "baseline",
+  "lean. powerful. unstoppable.": "baseline",
+  "lean. strong. defined": "baseline",
+  "lean. strong. radiant.": "baseline",
+  "low growth hormone makes lean muscle harder to maintain": "baseline",
+  "muscle support meets beauty support.": "baseline",
+  "new wellness trend": "baseline",
+  "not bouncing back like you used to? this 3-in-1…": "baseline",
+  "one daily tablet for muscle, skin + hair": "baseline",
+  "optimize growth hormone. maximize your edge.": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "play offense not defense": "baseline",
+  "power up growth hormone. power up performance.": "baseline",
+  "power your prime with 3-in-1 sermorelin ghk": "baseline",
+  "promotes firmer, glowing skin from within": "baseline",
+  "promotes healthy blood flow": "baseline",
+  "promotes lean muscle + performance": "baseline",
+  "promotes lean muscle growth": "baseline",
+  "promotes radiant, firmer, youthful-looking skin and fuller hair": "baseline",
+  "promotes youthful-looking skin & thicker hair": "baseline",
+  "protects and repairs dna and tissue damage at the cellular level": "baseline",
+  "reclaim what time took": "baseline",
+  "save up to 47%": "baseline",
+  "sermorelin ghk for $4.25/day": "baseline",
+  "ships free from pharmacy": "baseline",
+  "stay ready for more": "baseline",
+  "stimulates collagen, elastin, and glycosaminoglycan production": "baseline",
+  "stimulates natural growth hormone and igf-1 production": "baseline",
+  "stronger. leaner. energized.": "baseline",
+  "support strength + vitality": "baseline",
+  "supports a lean, defined physique": "baseline",
+  "supports collagen + radiant-looking skin": "baseline",
+  "supports exercise endurance": "baseline",
+  "supports exercise recovery": "baseline",
+  "supports lean muscle performance": "baseline",
+  "supports metabolism and lean muscle tone": "baseline",
+  "supports muscle blood flow during exercise": "baseline",
+  "supports muscle pumps and vascularity": "baseline",
+  "supports muscle strength & repair": "baseline",
+  "supports natural growth hormone production": "baseline",
+  "supports nitric oxide production": "baseline",
+  "supports nutrient delivery to working muscles": "baseline",
+  "supports skin tightening, wound healing, and hair regrowth": "baseline",
+  "supports strength and training performance": "baseline",
+  "supports visceral-fat metabolism & body toneno targeted fat loss or body-composition claims": "baseline",
+  "supports workout pumps + endurance": "baseline",
+  "synergizes with growth hormone pathways to accelerate repair and regeneration": "baseline",
+  "the edge you've been missing": "baseline",
+  "the glp-1 complement for lean + strong": "baseline",
+  "the glp-1 complement for muscle, skin + hair": "baseline",
+  "tone, tighten, glow": "baseline",
+  "toned & lean": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "unlock 3-in-1 support": "baseline",
+  "your glp-1 complement for body + beauty support": "baseline",
+  "your glp-1 complement for lean muscle + glow": "baseline",
+  "your glp-1 complement for strength + radiance": "baseline",
+  "your next power move": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "A safer long-term alternative to synthetic HGH",
+   "why": "**Justin: high risk, removed** (use \"Supports natural growth hormone production\")"
+  },
+  {
+   "line": "A growth hormone–releasing hormone analog",
+   "why": "removed from Justin's approved list (2026-10-29)"
+  },
+  {
+   "line": "Reduces inflammation, oxidative stress, and signs of aging",
+   "why": "**Justin: high risk, removed** (use the skin + hair claim)"
+  },
+  {
+   "line": "Start Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Promotes lean muscle growth and fat loss",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Promotes radiant, firmer, youthful-looking skin and hair",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

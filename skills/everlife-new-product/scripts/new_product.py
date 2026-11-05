@@ -13,7 +13,7 @@ Reads only local files: core/claude/creative-bible.md (sync it first with core/s
 Never spends credits, never pushes. `create` refuses a product with no ad disclaimer on file, unless --pending-disclaimer
 (then the skill is scaffolded blocked: empty disclaimer + _disclaimer_status, so every finisher refuses).
 """
-import argparse, glob, json, os, re, shutil, sys
+import subprocess, argparse, glob, json, os, re, shutil, sys
 
 HERE = os.path.dirname(os.path.realpath(__file__))
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(HERE)))
@@ -349,20 +349,25 @@ def cmd_create(a):
         f"# {name} product renders ({status})\n\n" + ("\n".join(f"- {n}" for n in notes) or "- none yet") +
         "\n\nLOOK at every render before use (right product, label, strength, clean background); check against the website. "
         "Never use another product's render.\n")
-    # the bible extract: verbatim section + a pre-screen to fill in
-    secs = open(BIBLE).read().split("\n")
-    s = secs.index(f"## {c['product']}")
-    e = next((i for i in range(s + 1, len(secs)) if secs[i].startswith("## ")), len(secs))
-    verb = "\n".join(secs[s:e]).rstrip()
-    rows = "\n".join(f"| {x} | {k} | {'⚠ Jeremy' if st == 'pending' else 'Weak (bible)' if st == 'weak' else '❌' if st == 'hard_no' else 'TODO screen'} | |"
-                     for k in ("headlines", "benefits", "more_benefits", "ctas", "offer") for x, st in c["data"][k])
-    open(os.path.join(dest, "references", "product-bible.md"), "w").write(
-        f"# {name} — creative bible (verbatim extract)\n\n> Source: the live creative bible, synced into `core/claude/creative-bible.md` "
-        f"(section \"## {c['product']}\"), copied {__import__('datetime').date.today()} by everlife-new-product. Re-copy when the bible changes. "
-        "Global rules: `core/references/global-rules.md` (they win).\n\n## Product facts for this skill\nTODO (see references/adapt-checklist.md §2).\n\n"
-        "## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)\n\n"
-        "| Line (bible) | Where | Status | Why |\n|---|---|---|---|\n" + rows +
-        "\n\n---\n\n# VERBATIM (do not edit; re-copy from the bible)\n\n```text\n" + verb + "\n```\n")
+    # the bible extract is GENERATED (bible pipeline, 2026-11-05): point product.json at the page, scaffold the three hand files, regenerate
+    tp["bible_sections"] = [c["product"]]
+    json.dump(tp, open(os.path.join(dest, "product.json"), "w"), indent=1, ensure_ascii=False)
+    refs = os.path.join(dest, "references")
+    open(os.path.join(refs, "bible-screen.json"), "w").write(json.dumps({
+        "_about": "Hand overrides only. lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; "
+                  "retired: lines gone from the bible that stay refused. Everything else is derived by build_product_bibles.py.",
+        "lines": {}, "patterns": [], "retired": []}, indent=1, ensure_ascii=False) + "\n")
+    open(os.path.join(refs, "hard-stops.md"), "w").write(
+        f"# {name}: product hard stops (hand; never an offer / CTA / price: those come from references/bible.json)\n\n"
+        "- TODO: casting, settings, form words and the product's own never-list, from the bible's Hard NOs and creative direction "
+        "(references/adapt-checklist.md §2).\n")
+    open(os.path.join(refs, "product-notes.md"), "w").write(f"# {name}: hand notes\n\nOffer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated); never restate them here.\n")
+    for f in (os.path.join(refs, "product-bible.md"), os.path.join(refs, "bible.json")):
+        if os.path.exists(f): os.remove(f)          # the template's generated files never carry over
+    for script in ("build_product_bibles.py", "build_product_briefs.py"):
+        r = subprocess.run([sys.executable, "-I", os.path.join(REPO, "core", "scripts", script), "--only", pid], capture_output=True, text=True)
+        if r.returncode != 0:
+            print(f"⚠ {script} failed for {pid}:\n{r.stdout[-800:]}{r.stderr[-800:]}")
     leftovers = {}
     old = json.load(open(os.path.join(tpl, "product.json"))).get("name", "")
     for dp, _, fs in os.walk(dest):                 # os.walk doesn't follow the core -> ../../core link

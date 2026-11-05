@@ -39,8 +39,8 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, renders, name casing,
 review highlight) and refuse a job without it. Don't type the disclaimer into copy.json. **The "ingredients" rows are ✅ benefit
 pillars, never one benefit per ingredient** (bible Hard NO): the three ingredients appear together only in the label line. Videos
-keep "Spark by Everlife"; images never say "by Everlife". The `tiktok` CTA button fits ≈ 20 characters ("EXPLORE SPARK", "GET
-STARTED NOW", "FIND YOUR PLAN", "IGNITE YOUR SPARK" all fit).
+keep "Spark by Everlife"; images never say "by Everlife". The `tiktok` CTA button fits ≈ 20 characters ("EXPLORE SPARK", "SAVE UP
+TO 51%", "IGNITE YOUR SPARK" all fit; the CTA is one of `references/bible.json` ctas).
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`
 

@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim.",
  "id": "restora-z",
  "name": "Restora-Z",
+ "bible_sections": [
+  "Restora-Z"
+ ],
  "renders": {
   "bottle": "rz_bottle.png",
   "pill": "rz_capsule.png"

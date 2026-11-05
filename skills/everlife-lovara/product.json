@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's Lovara ad disclaimer, verbatim. Renders in assets/ (assets/RENDERS.md): an oral capsule, 30 per bottle (asset library, 2026-10-30).",
  "id": "lovara",
  "name": "Lovara",
+ "bible_sections": [
+  "Lovara"
+ ],
  "renders": {
   "bottle": "lovara_bottle.png",
   "pill": "lovara_capsule.png"

@@ -43,12 +43,16 @@
   compare its version with `bible_sync.py --repo-version`. Same → "Bible: up to date". Different → "⚠ Justin updated
   the bible since the last sync; using this skill's current approved lines", carry on (never block the work), and
   suggest a sync. Read-only: never write any file for this check.
-- **"Sync the bible"** (needs edit access to the artifact: the full page is only returned to editors; viewers see a
-  summary and can only do the version check). Never on `main` (`--write` refuses there): make a branch, run
-  `bible_sync.py <saved html> --check`, then `--write`; for every skill the report lists, re-copy its VERBATIM block,
-  mark new lines "NEW, not screened", screen them (✅ / ⚠ / ❌ against the global rules), update `product.json`'s
-  disclaimer if it changed, log it in CHANGELOG.md, open a PR (claims, disclaimers or approvals need Jeremy's
-  sign-off). Never edit `creative-bible.md` by hand.
+- **"Sync the bible"** (git copy; the live page is only returned in full to editors): read the live bible with the Artifact
+  tool (it saves `artifact-<id>-<version>.html`), then `python3 core/scripts/bible_pipeline.py sync` on a branch (never `main`).
+  One command does the rest, nothing by hand: writes `core/claude/creative-bible.md`, REGENERATES every product skill from it
+  (`references/bible.json`, `product-bible.md`, `product-brief.md`, the `product.json` disclaimer), runs the lint and the tests,
+  writes the CHANGELOG entry and prints what changed per product plus the NEW lines for Jeremy. It commits, merges or builds a
+  patch only with `--commit` / `--release`, and only on Mitansh's explicit go (show him the report and the diff first).
+  Hand files per skill (small, kept): `references/bible-screen.json` (❌/⚠ overrides, product patterns, retired lines),
+  `references/hard-stops.md`, `references/product-notes.md`. After editing one: `bible_pipeline.py regen`. Never edit
+  `creative-bible.md`, `bible.json`, `product-bible.md` or `product-brief.md` by hand: the lint fails and the gate refuses prompts
+  from a skill whose copy is out of date. Full process: `core/references/bible-sync.md`.
 - The people using these skills are often not technical: do the steps yourself, keep questions few and in plain words,
   and never ask them to edit files or code.
 - Never spend credits (Creatify, Higgsfield) without an explicit approval that shows the cost. Shared Everlife team credits.

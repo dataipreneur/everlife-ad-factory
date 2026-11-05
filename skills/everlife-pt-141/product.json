@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim. PT-141 comes in TWO forms (nasal spray, sublingual tablet): 'forms' lists each; 'renders' is the default pair the video end card uses when copy.json doesn't name a form.",
  "id": "pt-141",
  "name": "PT-141",
+ "bible_sections": [
+  "PT-141"
+ ],
  "renders": {
   "bottle": "pt141_spray.png",
   "pill": "pt141_tablet.png"

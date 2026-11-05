@@ -1,26 +1,110 @@
-# BPC-157 — creative bible (verbatim extract)
+# BPC-157 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Faster Recovery" → "Promotes Faster Recovery"; "Supports Connective Tissue Repair" → "Aids Connective Tissue Repair"; "Supports Faster Bounce-Back After Training" → "Encourages Faster Bounce-Back After Training". **This product:** The 12 headlines are now APPROVED (no pending badge): Recover Faster. Move Better. · Less Downtime. More Training Days. · Train Hard. Recover Harder. · Bounce Back Faster After Every Session. · Support Joints, Tendons and Gut — in One. · Recover Like You Trained for It. · Bounce Back From Tough Training · Nagging Tweak? Give Your Body Backup. · For Joints, Tendons and the Day After Leg Day. · The Recovery Peptide Built for Heavy Wear. · Your Body Repairs. BPC-157 Backs It Up. · Support for Joints, Tendons + Gut (⚠ the bible keeps its own wording: check each against the Hard NOs before use). Offer and CTA: **Save Up to 40%** (the placeholder is gone); "Build Your Recovery Plan" and "Get Back to Moving" were removed. The headline tables below are the old pool: the bible copy (`core/claude/creative-bible.md`, BPC-157) wins.
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%.
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: none usable: the bible's CTA is "[PLACEHOLDER] Save Up to X%". The docx's "Take up to 40% Off" stays this skill's offer (Justin Junior, 2026-10-29) but differs from the bible: flag "Justin to fill the bible %" in SESSION.md. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Ships Free From Pharmacy".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "BPC-157 for $5.75/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 40% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 40%
+- **CTAs (bible):** Support Your Recovery · Explore BPC-157 · Save Up to 40% · BPC-157 for $5.75/day · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** BPC-157 for $5.75/day
+- **Quick-hit benefits (word for word):** Supports Joints + Tendons · Promotes Faster Recovery · Aids Connective Tissue Repair · Supports Mobility + Flexibility · Supports Gut Lining Health · Encourages Faster Bounce-Back After Training · Supports Joints, Tendons + Gut Lining
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers
+- **Product Hard NOs:** Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/bpc-157/fb (last verified Nov. 3, 2026)
+- **Retired, never use:** Get Started Now
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
+| Line (bible) | Where | Status | Why |
+|---|---|---|---|
+| Recover Faster. Move Better. | headlines | ✅ |  |
+| Less Downtime. More Training Days. | headlines | ✅ |  |
+| Train Hard. Recover Harder. | headlines | ✅ |  |
+| Bounce Back Faster After Every Session. | headlines | ✅ |  |
+| Support Joints, Tendons and Gut — in One. | headlines | ✅ |  |
+| Recover Like You Trained for It. | headlines | ✅ |  |
+| Bounce Back From Tough Training | headlines | ✅ |  |
+| Nagging Tweak? Give Your Body Backup. | headlines | ✅ |  |
+| For Joints, Tendons and the Day After Leg Day. | headlines | ✅ |  |
+| The Recovery Peptide Built for Heavy Wear. | headlines | ✅ |  |
+| Your Body Repairs. BPC-157 Backs It Up. | headlines | ✅ |  |
+| Support for Joints, Tendons + Gut | headlines | ✅ |  |
+| Supports Joints + Tendons | quick-hit benefits | ✅ |  |
+| Promotes Faster Recovery | quick-hit benefits | ✅ |  |
+| Aids Connective Tissue Repair | quick-hit benefits | ✅ |  |
+| Supports Mobility + Flexibility | quick-hit benefits | ✅ |  |
+| Supports Gut Lining Health | quick-hit benefits | ✅ |  |
+| Encourages Faster Bounce-Back After Training | quick-hit benefits | ✅ |  |
+| Supports Joints, Tendons + Gut Lining | quick-hit benefits | ✅ |  |
+| Support Your Recovery | CTAs | ✅ |  |
+| Explore BPC-157 | CTAs | ✅ |  |
+| Save Up to 40% | CTAs | ✅ |  |
+| BPC-157 for $5.75/day | CTAs | ✅ |  |
+| Ships Free From Pharmacy | CTAs | ✅ |  |
+| Save up to 40% | offers | ✅ |  |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 
-> Source: `bpc157-creative-messaging-reference.docx` (Mitansh, 2026-10-29), which consolidates the Creative Messaging Reference page
-> (image), the Asana task "BPC-157 Male" (approved brief), the NEW Product Benefits Doc and Justin Junior's offer/Hard-NO notes
-> (confirmed Oct 29, 2026). The older creative bible (Part B, `~/.claude/everlife/creative-bible.md` "## BPC-157") carries only
-> PROPOSED headlines and placeholders; this docx supersedes it. Global rules: `core/references/global-rules.md` (they win).
+## Verbatim (bible section "BPC-157", version 1793905953-bc2f)
+```text
 
-> **How to use this page:**
-> - **HARD STOPS:** the approved claims (quick-hit benefits); every Hard NO (product + global); the proof wording; the pre-screen ❌ list.
->   Never invent a claim. Section 6 of the docx ("Approved benefits") is BLOCKED in full (see pre-screen): it is direct-claim wording.
-> - **Headlines:** Tier A = a hook from the lists below without a flag, verbatim or lightly trimmed. "Image – Pending approval"
->   lines only with explicit approval (ask the user, flag for Jeremy). Tier B (fresh wording) max 2 per batch, PROPOSED, approved
->   line by line (⚠ PENDING CREATIVE-LEAD CONFIRMATION, 2026-10-28 rule).
-> - **Disclaimer:** the bible's BPC-157 page now carries it (sync 2026-11-03), the same PT-141 wording Mitansh confirmed (2026-10-29). Stored verbatim in
->   `product.json`; flag "Jeremy to sign off" in every SESSION.md.
+### Who it's for
+Active adults 30–65+ recovering from joint, tendon or gut issues.
+
+### Creative direction
+- Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
+
+Peptide support focused on tissue repair, recovery, mobility, connective tissue, and gut health.
+
+### Headlines & hooks
+1. Recover Faster. Move Better.
+2. Less Downtime. More Training Days.
+3. Train Hard. Recover Harder.
+4. Bounce Back Faster After Every Session.
+5. Support Joints, Tendons and Gut — in One.
+6. Recover Like You Trained for It.
+7. Bounce Back From Tough Training
+8. Nagging Tweak? Give Your Body Backup.
+9. For Joints, Tendons and the Day After Leg Day.
+10. The Recovery Peptide Built for Heavy Wear.
+11. Your Body Repairs. BPC-157 Backs It Up.
+12. Support for Joints, Tendons + Gut
+
+### Quick-hit benefits
+- Supports Joints + Tendons
+- Promotes Faster Recovery
+- Aids Connective Tissue Repair
+- Supports Mobility + Flexibility
+- Supports Gut Lining Health
+- Encourages Faster Bounce-Back After Training
+- Supports Joints, Tendons + Gut Lining
+
+### CTAs
+- CTA: Support Your Recovery
+- CTA: Explore BPC-157
+- CTA: Save Up to 40%
+- CTA: BPC-157 for $5.75/day
+- CTA: Ships Free From Pharmacy
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+
+### Offers & conversion
+- Save up to 40%
+
+### Hard NOs
+- Plus all global Hard NOs on page 3.
+
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/bpc-157/fbLast verified Nov. 3, 2026
+```
+
+## Notes (hand, `references/product-notes.md`)
+# BPC-157: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
 
 ## Product facts for this skill
 - **Product name on creative:** "BPC-157". Category: Recovery. Line: Men's and Women's Health, Fitness, and Recovery.
@@ -35,7 +119,7 @@
   hardcore gym, barbells, bodybuilders, tattoos, hard light (`mens-direction.md`); a combination of models and product-only; some ads
   with hooks + bullets, some with less text. The hook list also has a women's set (Pilates, barre, lifting, "soft life"): women →
   pinks, tans, beige (global: never orange or green). Everyone: no body-comparison or before/after imagery; no body-composition words.
-- **Offer:** "Take up to 40% Off" (CTA list). Price "as low as $180/mo" is NOT for ads (global: percent-off, never $).
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
 - **Landing page:** https://everlifemd.com/bpc-157/fb (bible, verified Nov. 3, 2026). H2 page in Claude Design (`/bpc-157/h2`, status Ready For Jeremy). Approved statics (Canva link in the docx).
 
 ## The angle (agreed with Mitansh, 2026-10-29: "Mix: a different angle per ad"; 4th angle added the same day)
@@ -53,95 +137,3 @@ Rotate four angles across every batch; each ad gets one:
    "Your Recovery Stack Is Missing Something", "There's More to Recovery Than Sleep", "Don't Let Recovery Lag Behind" (women))
 Men's register: plain, earned, no hype, and the picture is HARDCORE (bodybuilders, tattoos, loaded bars; `mens-direction.md`).
 Women's register: strong and soft at once; "glow" only as mood, never as a skin promise.
-
-## Compliance pre-screen (Claude's reading of the docx against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
-| Line / section | Where | Status | Why |
-|---|---|---|---|
-| Section 6 "Approved benefits" in full: Heals joints, tendons, and ligaments · Faster recovery after injury or strain · Supports gut lining and digestion · Boosts cellular repair and resilience · Reduces inflammation at the source · Improves mobility and flexibility fast · Regenerates torn tendons · Repairs intestinal lining · Accelerates ligament reattachment · Upregulates growth hormone receptors · Heals joints and tendons · Repairs gut lining · Speeds injury recovery · Reduces chronic inflammation · Restores range of motion · Repairs connective tissue · Soothes gut irritation · Helps nagging injuries heal · Eases muscle and joint pain · Supports tissue repair | Product Benefits Doc | ❌ BLOCKED (except "Supports tissue repair", ✅) | "heals / repairs / regenerates / reduces inflammation / eases pain / speeds injury recovery" are disease and treatment claims; "boosts" and "improves … fast" are outcome claims; "upregulates growth hormone receptors" is a medical mechanism claim. Justin's own note: "No direct claims." |
-| Recover Faster. Move Better. · Support for Joints, Tendons + Gut · Get Back to Moving | hooks, "Image – Pending approval" | ⏳ Pending approval | only with explicit approval; flag for Jeremy |
-| Your Routine Is Strong. Is Your Recovery? | women's hooks | ❌ | second-person question with a pronoun (global) |
-| Support Your Skin, Gut, and Recovery Routine · Your Body's Beauty Sleep Backup · Recovery Is the New Glow · Support the Glow-Up From Within · The Recovery Glow-Up · From Worn Down to Glowing · Because Feeling Good Is the Glow · Glow Starts With Recovery | women's hooks | ⚠ Jeremy | skin, sleep and "glow" are outside BPC-157's approved benefit scope (joints, tendons, connective tissue, mobility, recovery, gut lining); use only as mood words, never as the promise |
-| Wellness That Works Below the Surface | women's hooks | Weak (vague inference) | avoid unless the brief asks |
-| Don't Supplement Guess. Get Guided Care. | hooks | ✅ | fine; pairs with the pharmacy proof row |
-| Built for Lifters, Runners, and High-Output Humans · For the Girlies Who Go Hard · Your Body's Comeback Era · Support Your Soft Life + Strong Body | hooks | ✅ | slang is fine; keep the imagery clothed, fit-not-bodybuilder, no body comparison |
-| Any "heal", "cure", "treat", "injury", "pain", "inflammation", "torn", "regenerate" in OUR copy | — | ❌ | disease / treatment framing (global). The docx's "Who it's for" may mention recovering from joint, tendon or gut issues as context; ad copy says "recovery", "support", "bounce back" |
-| "Clinically studied / backed" for BPC-157 | — | ❌ | product Hard NO (only a named ingredient may carry it; BPC-157 is the compound) |
-| Any needle / injection / "needle-free" wording or imagery | — | ❌ | global Hard NO; the vial is always a still object |
-| "$180/mo" or any $ price | — | ❌ | percent-off only ("Take up to 40% Off") |
-
-Everything else in the verbatim section is usable under its own label.
-
----
-
-# VERBATIM (do not edit; re-copy from the docx)
-
-## 1. Product overview
-Source: Creative Messaging Reference page (image)
-Category: Recovery
-Line: Men's and Women's Health, Fitness, and Recovery
-Description: Peptide support focused on tissue repair, recovery, mobility, connective tissue, and gut health.
-Who it's for: Active adults 30–65+ recovering from joint, tendon or gut issues.
-Path: /bpc-157/h2 · Status: Ready For Jeremy
-
-## 2. Offer & pricing
-Source: Justin Junior, confirmed Oct 29, 2026
-BPC-157 2.5mg/ml - 6 ML Vial - As low as price $180/mo (40% off)
-[Strength/volume superseded 2026-10-29 (Mitansh): the shipping vial is 3 mg/mL · 5 mL. The 40% offer stands.]
-
-## 3. Approved creative brief (Asana)
-Source: Asana task "BPC-157 Male," Creative Team project · Review Status: Approved · Tags: Facebook Ad, Male
-Format: Capsules and injection (main focus is injections)
-Direction: Think fit, rugged, hardcore man 30-45 years old. Combination of models and just the product. I would like some with hooks + bullets and some with less text.
-Approved statics: https://canva.link/1kluawd0jbkicyw (revision applied by Berna Elmedulan; approved by Justin Junior on Jul 16, 2026)
-
-## 4. Headlines & hooks
-Source: Asana task description (hooks) and image (proposed headlines). Grouped by audience. Repeated hooks listed once. The ticket notes hooks "can also pull options from previous capsule ads."
-
-### Men
-Built to Bounce Back · Recovery Has Entered the Chat · Your Comeback Compound · For Bodies That Take a Beating · Train Hard. Recover Smarter. · The Recovery Peptide · The Comeback Starts Here · Support the Rebuild · For Lifters Who Feel Every Rep · Your Recovery Should Match Your Effort · No Days Off Needs Smarter Recovery · The Body Takes Hits. Recover Accordingly.
-Heavy Lifts. Smart Recovery. · Recover Between the Sets · Train Harder on the Recovery Side · The Missing Piece in Recovery · Your Split Needs Recovery · Recovery Starts Before You're Sidelined · Less Downtime. More Momentum. · Keep the Momentum Moving · Support the Body You're Building · Your Training Deserves Better Recovery · Don't Let Recovery Be the Bottleneck · Built for Lifters, Runners, and High-Output Humans · The Recovery Stack Starts Here
-Gut Support Meets Recovery · Recovery Starts Deeper · Support From the Inside Out · A Smarter Recovery Signal · For More Than Muscle · The Body-Wide Recovery Play · Internal Support for External Output · Recovery Beyond the Gym · Support the System That Supports You
-Recovery, But Make It Elevated · Your Body's Comeback Era · Glow Starts With Recovery (⚠) · Strong Looks Good on You · Move Better. Feel Better. · Recovery That Keeps Up · Support Your Soft Life + Strong Body · Because Your Body Deserves Backup · The Recovery Reset · For the Girlies Who Go Hard · Pilates, Weights, Recovery · Your Body Is Asking for Support · Recover Like You Care · The Comeback Looks Good on You · Don't Just Rest. Rebuild. · Your Recovery Era Starts Here · Feel Good in Motion · Less Setback. More Comeback.
-Your Foam Roller Isn't Enough · Ice Baths Have Limits · Protein Isn't a Recovery Plan · Stretching Only Goes So Far · Stop Treating Recovery Like an Afterthought · Recovery Needs More Than Rest Days · There's More to Recovery Than Sleep · Your Recovery Stack Is Missing Something · Don't Supplement Guess. Get Guided Care. · Not Your Average Recovery Hack
-
-### Women
-Built to Bounce Back · Recovery Has Entered the Chat · Your Comeback Compound · For Bodies That Take a Beating · Train Hard. Recover Smarter. · The Recovery Peptide · The Comeback Starts Here · Support the Rebuild
-For Women Who Train Hard · Lift. Lengthen. Recover. · Pilates Body. Recovery Mindset. · Strong Body, Smarter Recovery · Your Recovery Needs a Routine · Train Hard. Bounce Back Better. · Support Your Strength Era · Recovery for Your Strong Girl Era · Your Workouts Need Backup · Don't Let Recovery Lag Behind · Built for Barre, Pilates, and Heavy Lifts · For the Body That Does It All · Your Routine Is Strong. Is Your Recovery? (❌) · Stay in Your Momentum
-Recovery Is the New Glow (⚠) · Support the Glow-Up From Within (⚠) · The Inside-Out Recovery Ritual · Your Wellness Reset · Soft Life. Strong Recovery. · The Recovery Glow-Up (⚠) · Rebuild Your Ritual · From Worn Down to Glowing (⚠) · Your Body's Beauty Sleep Backup (⚠) · Wellness That Works Below the Surface (Weak) · Support Your Skin, Gut, and Recovery Routine (⚠) · Because Feeling Good Is the Glow (⚠)
-(+ the "Gut Support Meets Recovery…", "Recovery, But Make It Elevated…" and "Your Foam Roller Isn't Enough…" groups as listed under Men)
-
-### Unisex
-Built to Bounce Back · Recovery Has Entered the Chat · Your Comeback Compound · The Recovery Peptide · The Comeback Starts Here · Support the Rebuild · Your Recovery Should Match Your Effort · The Missing Piece in Recovery · Recovery Starts Before You're Sidelined · Less Downtime. More Momentum. · Keep the Momentum Moving · Support the Body You're Building · Don't Let Recovery Be the Bottleneck · Built for Lifters, Runners, and High-Output Humans · The Recovery Stack Starts Here · Gut Support Meets Recovery · Recovery Starts Deeper · Support From the Inside Out · A Smarter Recovery Signal · For More Than Muscle · The Body-Wide Recovery Play · Internal Support for External Output · Recovery Beyond the Gym · Support the System That Supports You · Move Better. Feel Better. · Recovery That Keeps Up · Because Your Body Deserves Backup · The Recovery Reset · Your Body Is Asking for Support · Recover Like You Care · Don't Just Rest. Rebuild. · Feel Good in Motion · Less Setback. More Comeback. · Your Foam Roller Isn't Enough · Ice Baths Have Limits · Stretching Only Goes So Far · Stop Treating Recovery Like an Afterthought · Recovery Needs More Than Rest Days · There's More to Recovery Than Sleep · Your Recovery Stack Is Missing Something · Don't Supplement Guess. Get Guided Care. · Not Your Average Recovery Hack
-Recover Faster. Move Better. — Image – Pending approval
-Support for Joints, Tendons + Gut — Image – Pending approval
-Get Back to Moving — Image – Pending approval
-
-## 5. Quick-hit benefits
-Source: Creative Messaging Reference page (image)
-- Supports Joints + Tendons
-- Promotes Faster Recovery
-- Aids Connective Tissue Repair
-- Supports Mobility + Flexibility
-- Supports Gut Lining Health
-- Encourages Faster Bounce-Back After Training
-- Supports Joints, Tendons + Gut Lining
-
-## 6. Approved benefits (Product Benefits Doc) — BLOCKED, see pre-screen
-Source: NEW Product Benefits Doc, Peptides › BPC-157 › Approved Benefits. (Listed in the pre-screen table; only "Supports tissue repair" is usable.)
-
-## 7. CTAs
-Source: Creative Messaging Reference page (image)
-Explore BPC-157 · Get Started Now · Build Your Recovery Plan · Take up to 40% Off · Ships Free from Pharmacy
-
-## 8. Proof & value props
-Source: Creative Messaging Reference page (image)
-Trustpilot rated 4.9 Excellent · Over 100,000 happy customers
-
-## 9. Hard NOs
-Source: Justin Junior; NEW Product Benefits Doc, global NEVER SAY list
-Justin: "No direct claims."
-Clinically studied (unless it is ONE of the ingredients in the compound) · Clinically backed · Any mention of needle (including needle free) · When talking about GHK-Cu, do not use "-Cu" (getting flagged in ad account)
-Plus all global Hard NOs (`core/references/global-rules.md`).
-
-## Ad disclaimer (Mitansh-confirmed 2026-10-29, same as PT-141; Jeremy to sign off)
-AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.

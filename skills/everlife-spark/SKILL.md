@@ -104,7 +104,7 @@ If everything is ✅, say so in one line and go straight to step 1.
 3. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one fresh line in the batch" / "Bold: two fresh
    lines". Safe = a bible reference line only. Balanced/Bold = fresh lines (Jeremy signs off on wording), each needs the user's explicit OK and goes to Jeremy.
 4. **CTA:** "Save Up to 51% (Recommended: provisional default, Jeremy to confirm)" / "Ships Free From Pharmacy (⏳)" / "Explore Spark (⏳)" /
-   "Find Your Plan (⏳)" ("Ignite Your Spark (⏳)" via Other). A ⏳ pick is the explicit OK for this session; log the CTA in SESSION.md for Jeremy either way.
+   "Spark for $1.50/day (⏳)" ("Ignite Your Spark (⏳)" via Other). The list is `references/bible.json` ctas (regenerated from the bible). A ⏳ pick is the explicit OK for this session; log the CTA in SESSION.md for Jeremy either way.
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·
 **Style** "✨ Recommend for me (Recommended)" / "3D-animated couple story (our V04/V06 winners)" / "Product-only luxury (our V02

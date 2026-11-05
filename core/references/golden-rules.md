@@ -7,7 +7,9 @@ These were restated, in different words, at the top of every skill. They live he
    brand talks; there are no tiers and no per-line approval rounds. **The only fence is the Hard NOs** (section 2 + the product page's Hard NOs). Jeremy
    signs off on wording before anything goes live. Never a line already in the copy log.
 2. **The product's facts and hard stops are in `references/product-brief.md`**; its exceptions are its `variations` in
-   `product.json` (`core/references/ENGINE.md`). Nothing else overrides the engine.
+   `product.json` (`core/references/ENGINE.md`). Nothing else overrides the engine. **Offer, CTAs, benefits, headlines and the
+   disclaimer are generated from the bible** (`references/bible.json`, "sync the bible"): the CTA in every image prompt is one of
+   them, exactly, and the gate refuses anything else or any retired line.
 3. **Disclaimer verbatim** from `product.json`; the finisher lays it with the logo and the planned proof. AI disclosure on every ad.
 4. **Never spend credits without an explicit approval that shows the cost.** Shared team credits (Creatify, Higgsfield).
    No paid re-take or re-roll without a "go"; free fix first.

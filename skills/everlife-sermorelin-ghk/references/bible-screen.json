@@ -1,0 +1,64 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {
+  "Protects and repairs DNA and tissue damage at the cellular level": {
+   "status": "❌",
+   "why": "unsupported medical-style claim"
+  },
+  "Supports skin tightening, wound healing, and hair regrowth": {
+   "status": "⚠ Jeremy",
+   "why": "\"wound healing\" / \"hair regrowth\" read as treatment claims"
+  },
+  "Synergizes with growth hormone pathways to accelerate repair and regeneration": {
+   "status": "⚠ Jeremy",
+   "why": "\"accelerate\" is an exaggerated outcome"
+  },
+  "Supports a lean, defined physique": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "Helps You Look Lean + Toned": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "Forge a Stronger Physique": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "Lean. Defined. Glowing.": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  },
+  "Lean. Strong. Defined": {
+   "status": "⚠ Jeremy",
+   "why": "\"lean/toned\" are approved words, but \"physique\"/\"defined\" drift into body composition — use sparingly, never with a body shot"
+  }
+ },
+ "patterns": [],
+ "retired": [
+  {
+   "line": "A safer long-term alternative to synthetic HGH",
+   "why": "**Justin: high risk, removed** (use \"Supports natural growth hormone production\")"
+  },
+  {
+   "line": "A growth hormone–releasing hormone analog",
+   "why": "removed from Justin's approved list (2026-10-29)"
+  },
+  {
+   "line": "Reduces inflammation, oxidative stress, and signs of aging",
+   "why": "**Justin: high risk, removed** (use the skin + hair claim)"
+  },
+  {
+   "line": "Start Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Promotes lean muscle growth and fat loss",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Promotes radiant, firmer, youthful-looking skin and hair",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ]
+}

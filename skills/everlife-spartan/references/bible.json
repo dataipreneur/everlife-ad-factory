@@ -1,0 +1,145 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "spartan",
+ "name": "Spartan Stack",
+ "sections": [
+  "Spartan Stack (BPC-157/KPV/TB500)"
+ ],
+ "category": "Recovery stack",
+ "who": "Active men 25–55 training hard and recovering between sessions.",
+ "truth": "3-peptide recovery stack focused on joints, ligaments, connective tissue, muscle repair, mobility, and gut support.",
+ "direction": [
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.",
+  "Include “Spartan Stack” and “BPC-157 / TB-500 / KPV” on every design.",
+  "No animal death. Fighting imagery is fine without blood or gore."
+ ],
+ "offer": {
+  "pct": null,
+  "status": "placeholder",
+  "source": "",
+  "cta": "",
+  "lines": [
+   "current % savings / price"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Ships Free From Pharmacy",
+ "cta_price": "",
+ "ctas": [
+  "Explore the Spartan Stack",
+  "Build Your Recovery Stack",
+  "Save Up to X%",
+  "Support Stronger Recovery",
+  "Start Your Protocol",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Joints + Ligaments",
+  "Aids Connective Tissue Repair",
+  "Promotes Muscle Recovery",
+  "Maintains Mobility + Range of Motion",
+  "Supports Gut Lining Health",
+  "Three-Peptide Recovery Stack",
+  "Supports Training Harder, More Often"
+ ],
+ "benefits_more": [],
+ "headlines": [
+  {
+   "text": "Recover Faster Between Workouts",
+   "badges": [],
+   "page": "Spartan Stack (BPC-157/KPV/TB500)"
+  },
+  {
+   "text": "Train Like a Spartan. Recover Like One.",
+   "badges": [],
+   "page": "Spartan Stack (BPC-157/KPV/TB500)"
+  },
+  {
+   "text": "The Spartan Stack for Serious Recovery",
+   "badges": [],
+   "page": "Spartan Stack (BPC-157/KPV/TB500)"
+  },
+  {
+   "text": "Three Peptides. One Recovery Stack.",
+   "badges": [],
+   "page": "Spartan Stack (BPC-157/KPV/TB500)"
+  }
+ ],
+ "offer_lines": [
+  "current % savings / price"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers"
+ ],
+ "hard_nos": [
+  "No animal death, blood or gore.",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "Current LP: [PLACEHOLDER]",
+ "last_verified": "[PLACEHOLDER]",
+ "field_badges": {
+  "headlines": [
+   "Pending approval"
+  ]
+ },
+ "screen": {
+  "recover faster between workouts": {
+   "status": "⚠ Jeremy",
+   "why": "pending; \"faster\" is a speed/outcome promise"
+  },
+  "train like a spartan. recover like one.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "the spartan stack for serious recovery": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "three peptides. one recovery stack.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "save up to x%": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  },
+  "current % savings / price": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  }
+ },
+ "first_seen": {
+  "aids connective tissue repair": "baseline",
+  "build your recovery stack": "baseline",
+  "current % savings / price": "baseline",
+  "explore the spartan stack": "baseline",
+  "maintains mobility + range of motion": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes muscle recovery": "baseline",
+  "recover faster between workouts": "baseline",
+  "save up to x%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "start your protocol": "baseline",
+  "support stronger recovery": "baseline",
+  "supports gut lining health": "baseline",
+  "supports joints + ligaments": "baseline",
+  "supports training harder, more often": "baseline",
+  "the spartan stack for serious recovery": "baseline",
+  "three peptides. one recovery stack.": "baseline",
+  "three-peptide recovery stack": "baseline",
+  "train like a spartan. recover like one.": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

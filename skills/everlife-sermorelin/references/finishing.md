@@ -94,7 +94,7 @@ Single-ingredient product, but the `tiktok` and `editorial` end cards **require*
 ```
 **`tiktok` look:** the third row collides at that length ("Growth Hormone" runs into its claim; seen in the 2026-10-28
 smoke test), so use `["DELIVERY","Easy sublingual delivery"]` as the third row and carry growth hormone in the VO or
-the header. Its CTA button fits ≈ 20 characters: "EXPLORE SERMORELIN", "GET STARTED NOW", "BUILD YOUR PLAN" fit;
+the header. Its CTA button fits ≈ 20 characters: "EXPLORE SERMORELIN", "SAVE UP TO 65%" fit;
 "SUPPORT NATURAL GROWTH HORMONE" overflows (use it in `house`/`editorial` only, and check the frame). Check the end card renders without "3-in-1" wording and nothing overlaps.
 The round tablet is drawn at `pill_end_scale` (product.json, 0.62) of the default end-card pill size so it doesn't cover
 the label line or dwarf the bottle.

@@ -1,0 +1,5 @@
+{
+ "_about": "VERSION shas the team's zip / patch installs run on (read by bible_pipeline.py --release and 'build a patch'). Ask each teammate 'which version of the ad tools do I have?' and keep this list current.",
+ "in_use": [],
+ "history": []
+}

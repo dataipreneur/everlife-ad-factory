@@ -7,6 +7,10 @@ These gates apply to ALL creative work for EverlifeMD: scripts, prompts, images,
 **Precedence:** (1) Creative bible global rules (section 2–3 below; full text in `~/.claude/everlife/creative-bible.md`, Part A) → (2) the product's bible page → (3) the Asana brief → (4) everything else. Compliance questions route to **Jeremy**; nothing goes live without his approval.
 
 **Before any product work, read that product's section of `~/.claude/everlife/creative-bible.md`.** It holds the approved positioning, headlines, benefits, ingredient claims, CTAs, proof, offers, product Hard NOs and the verbatim ad disclaimer.
+**The product's current copy is generated from it** (`skills/everlife-<p>/references/bible.json`, `product-bible.md`, `product-brief.md`;
+"sync the bible", `core/references/bible-sync.md`): offer, default CTA, CTAs, benefits, headlines, retired lines. The image prompt's CTA is one
+of those CTAs exactly; the gate hook refuses anything else, any retired line and any % that is not the product's featured discount. The
+numbers restated in this file (discount table, proof split, focal mix, logo, 24 px, shirtless cap) are checked against the bible by `skill_lint.py`.
 
 ## 1. Claims sources
 - No Asana brief is required to start work: never ask about one or stop for a missing one. The product skill's own flow decides what to make.

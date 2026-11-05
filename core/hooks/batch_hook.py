@@ -23,6 +23,13 @@ Independent of the team-log pause (a paused log never means half a batch). Local
 import datetime, glob, json, os, re, sys
 
 HOME = os.path.expanduser(os.environ.get("EVERLIFE_CREATIVE", "~/Everlife-Creative"))
+REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+SKILLS_DIRS = [os.path.expanduser(os.environ.get("EVERLIFE_SKILLS_DIR", "")), os.path.join(REPO, "skills"), os.path.expanduser("~/.claude/skills")]
+sys.path.insert(0, os.path.join(REPO, "core", "scripts"))
+try:
+    import hard_nos                     # the mechanical Hard NOs (one copy for the hook, teamlog and the generator)
+except Exception:                        # a half-installed copy: the copy gate then checks only the bible lists
+    hard_nos = None
 OUT = os.path.join(HOME, "output")
 REF = re.compile(r"Reference only, never render: everlife slot=(\d+) ratio=(9:16|4:5|1:1) product=([a-z0-9-]+) job=(\S+)")
 IMAGE_TOOL = re.compile(r"model_playground_generate|edit_image|gpt[-_]image|image_generate|generate_image", re.I)
@@ -60,6 +67,77 @@ def deny(reason):
                                              "permissionDecisionReason": reason}}))
 
 
+# ---- the copy gate (bible → prompt; Mitansh 2026-11-05: "the next batch of ads should have it done") ----
+CTA_LINE = re.compile(r'^\s*CTA[^:\n"]*:\s*"([^"\n]+)"', re.M)
+HEAD_LINE = re.compile(r'^\s*Headline:\s*"([^"\n]+)"', re.M)
+SUPP_LINE = re.compile(r'^\s*Supporting[^:\n]*:\s*(.+)$', re.M)
+SAVE_PCT = re.compile(r"save\s+up\s+to\s+(\d+)\s*%", re.I)
+
+
+def bnorm(t):
+    t = t.replace("\u2019", "'").replace("\u2018", "'").replace("\u201c", '"').replace("\u201d", '"')
+    return re.sub(r"\s+", " ", t.replace("\u2014", "-").replace("\u2013", "-")).strip().lower()
+
+
+def bible_of(product):
+    for root in SKILLS_DIRS:
+        if not root: continue
+        bp = os.path.join(root, f"everlife-{product}", "references", "bible.json")
+        if os.path.exists(bp):
+            try: return json.load(open(bp, encoding="utf-8"))
+            except Exception: return None
+    return None
+
+
+def repo_bible_version():
+    for root in (REPO, os.path.join(os.path.expanduser("~/.claude/skills/everlife-ads"), "core", "..")):
+        md = os.path.join(root, "core", "claude", "creative-bible.md")
+        if os.path.exists(md):
+            m = re.search(r"\(version ([^)]+)\)", open(md, encoding="utf-8").readline())
+            if m: return m.group(1)
+    return None
+
+
+def copy_gate(product, txt):
+    """→ a deny reason, or None. Checks only the TEXT block lines the template names (Headline / Supporting / CTA) plus any 'Save Up to N%'."""
+    b = bible_of(product)
+    if not b: return None                                   # no generated copy on this machine: lint/preflight report it, the gate never blocks
+    name, ver = b.get("name", product), b.get("version", "?")
+    rv = repo_bible_version()
+    if rv and rv != ver:
+        return (f"{name}'s skill copy is from bible version {ver} but the synced bible is {rv}: run `python3 core/scripts/bible_pipeline.py regen` "
+                "(or update the tools) before generating, so the ad carries the current offer / CTAs.")
+    ctas = {bnorm(c) for c in b.get("ctas", [])}
+    retired = {bnorm(r["line"] if isinstance(r, dict) else r): (r.get("why", "") if isinstance(r, dict) else "") for r in b.get("retired", [])}
+    offer = b.get("offer") or {}
+    hint = f"Current {name} copy: `python3 core/scripts/product_copy.py {product}` (default CTA \"{b.get('cta_default')}\")."
+    heads = HEAD_LINE.findall(txt); ctal = CTA_LINE.findall(txt)
+    supp = [q for line in SUPP_LINE.findall(txt) for q in re.findall(r'"([^"\n]+)"', line)]
+    if heads and not ctal:
+        return f"No CTA line in the TEXT block: every ad has a CTA (bible Standards 03). Add `CTA (in a button): \"{b.get('cta_default')}\"`. {hint}"
+    for c in ctal:
+        n = bnorm(c)
+        if n in retired:
+            return f'CTA "{c}" was removed from the bible ({retired[n] or "retired"}). {hint}'
+        if n not in ctas:
+            return f'CTA "{c}" is not a {name} bible CTA (version {ver}): {" · ".join(b.get("ctas", []))}. {hint}'
+    for n_ in SAVE_PCT.findall(txt):
+        if offer.get("status") != "ok":
+            return f"{name} has no verified offer in the bible ({offer.get('status', 'none')}): no \"Save Up to\" and no price on this product; use \"{b.get('cta_default')}\". {hint}"
+        if int(n_) != int(offer.get("pct") or -1):
+            return f"\"Save Up to {n_}%\" is not {name}'s featured discount: the bible says Save Up to {offer['pct']}% (rule 09: always the product's highest). {hint}"
+    extra = [(pat.get("re", ""), pat.get("why", "")) for pat in b.get("patterns", []) if "❌" in pat.get("status", "❌")]
+    for line in heads + supp + ctal:
+        n = bnorm(line)
+        if n in retired:
+            return f'"{line}" was removed from the bible ({retired[n] or "retired"}): never use it. {hint}'
+        if hard_nos:
+            hits = hard_nos.check(line, extra=extra)
+            if hits:
+                return f'"{line}" breaks a Hard NO: {hits[0][1]}. Rewrite that line; the rest of the prompt is fine.'
+    return None
+
+
 def gate(p):
     tool, tin = p.get("tool_name", ""), p.get("tool_input", {}) or {}
     if not is_everlife_image(tool, tin): return
@@ -83,6 +161,9 @@ def gate(p):
         slots = set()
     if slots and slot not in slots:
         return deny(f"Slot {slot} is not in {deal} (slots {', '.join(sorted(slots, key=int))}). Re-roll an existing slot; never add a size-less extra.")
+    why = copy_gate(product, txt)
+    if why:
+        return deny(f"Slot {slot} {ratio}: {why}")
 
 
 def fired(p):

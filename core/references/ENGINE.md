@@ -11,6 +11,7 @@ core/  (GLOBAL: read by every product, edited in one place)
 ├── references/world-deck/ .......... 132 worlds (the diversity engine) + WORLDS.md
 ├── references/prompt-layout-zones.md  STRICT LAYOUT blocks (9:16, 4:5)
 ├── references/variations/ .......... named exceptions a product opts into (below)
+├── claude/creative-bible.md ........ the synced bible (bible_sync.py); bible_model.py parses it; bible_pipeline.py runs the chain
 ├── scripts/deal_worlds.py .......... the dealer (mix + variety, reads the product's variations)
 ├── scripts/build_product_briefs.py . regenerates every skill's product-brief.md
 ├── scripts/skill_lint.py ........... proves every skill has the same shape
@@ -19,7 +20,11 @@ core/  (GLOBAL: read by every product, edited in one place)
 skills/everlife-<product>/  (PER PRODUCT: a brief, not a rulebook)
 ├── product.json .................... facts the tools read: name, renders, forms, hero, disclaimer, variations
 ├── references/product-brief.md ..... GENERATED: who it's for, creative direction, hard stops, facts, its references
-├── references/product-bible.md ..... the bible page extract (claims, headlines, CTAs, offers, Hard NOs, disclaimer)
+├── references/bible.json ........... GENERATED from the bible: offer, cta_default, ctas, benefits, headlines, retired (hook + lint read it)
+├── references/product-bible.md ..... GENERATED: product copy, screening table, verbatim section (never edited)
+├── references/bible-screen.json .... hand: ❌/⚠ overrides, product patterns, retired lines (small)
+├── references/hard-stops.md ........ hand: the product's own hard stops (never an offer / CTA: those are bible facts)
+├── references/product-notes.md ..... hand: notes, appended to the generated page
 ├── assets/ ......................... renders
 ├── references/winners|team-refs|lessons|personas ... this product's own learning
 └── SKILL.md ........................ thin: route to the engine for images; the video flow (untouched for now)
@@ -44,8 +49,8 @@ product. Nothing else may override the global flow. Current set:
 Adding a variation = one file in `variations/` + its id in the products' `product.json` + a row here. Never a banner in a skill.
 
 ## How a new bible rule is routed (never into a skill)
-- a number (size, zone, split, px) → the tools / `rules` constants; - a claim, CTA, banned word → `global-rules.md` or the
-  product's bible extract; - a product-only exception → a variation; - a judgement call → one line in `image-flow.md` §7.
+- a number (size, zone, split, px) → the tools / `rules` constants; - a claim, CTA, banned word → Justin edits the live bible and "sync the bible" regenerates the
+  product's extract (`global-rules.md` for the global text); - a product-only exception → a variation; - a judgement call → one line in `image-flow.md` §7.
 `skill_lint.py` fails when a skill carries a rule banner, a stale number or an expired route.
 
 ## What stays per product, on purpose

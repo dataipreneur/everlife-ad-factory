@@ -2,6 +2,10 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim.",
  "id": "sermorelin-ghk",
  "name": "Sermorelin GHK",
+ "bible_sections": [
+  "Sermorelin GHK — Men",
+  "Sermorelin GHK — Women"
+ ],
  "renders": {
   "bottle": "sghk500_bottle.png",
   "pill": "sghk_tablet.png"

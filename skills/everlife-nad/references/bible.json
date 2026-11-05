@@ -1,0 +1,359 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "nad",
+ "name": "NAD+",
+ "sections": [
+  "NAD+"
+ ],
+ "category": "Cellular wellness",
+ "who": "Adults 30–65+ who want more energy, sharper focus and healthy-aging support.",
+ "truth": "All audiences",
+ "direction": [
+  "Lead with the choice: sublingual tablet or injection.",
+  "Voiceovers say “N-A-D plus.”"
+ ],
+ "offer": {
+  "pct": 62,
+  "status": "ok",
+  "source": "Discount to feature, by product",
+  "cta": "Save Up to 62%",
+  "lines": [
+   "Save up to 62% on injections",
+   "Save up to 62% on sublingual tablets",
+   "Starting at $119/month",
+   "30-day money-back guarantee on your first order"
+  ],
+  "variants": {
+   "both": 62
+  }
+ },
+ "cta_default": "Save Up to 62%",
+ "cta_price": "NAD+ for $3.25/day",
+ "ctas": [
+  "Explore NAD+",
+  "Save Up to 62%",
+  "Recharge Your Cells",
+  "NAD+ for $3.25/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Boosts Cellular Energy",
+  "Reduces Fatigue + Brain Fog",
+  "Elevates Mental Clarity",
+  "Supports DNA Repair",
+  "Promotes Healthy Aging",
+  "Supports Cellular Longevity",
+  "Fuels All-Day Energy + Focus",
+  "Supports Bounce-Back From Burnout"
+ ],
+ "benefits_more": [
+  {
+   "text": "Optimizes Metabolic Health",
+   "badges": [
+    "Weak benefit"
+   ]
+  }
+ ],
+ "headlines": [
+  {
+   "text": "Brain Fog, Who?",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Mentally Stuck on Loading?",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Bounce Back From Burnout",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Your 30s Called & Want You Back",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Boost Energy, Focus & Mental Clarity",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Wake Up Feeling Recharged Again",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Less Fog. More Focus.",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Clear Head. Full Day.",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Ready to Think Clearly?",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "What Celebrities and CEOs Are Using to Out Perform",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Trusted by Entrepreneurs and Athletes",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Meet Your Daily NAD+.",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "NAD+ Without the Nonsense.",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Stop Scrolling. Meet NAD+.",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "More Life in Your Years.",
+   "badges": [],
+   "page": "NAD+"
+  },
+  {
+   "text": "Your Cells Know NAD+.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "NAD+ Made Stupid Simple.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "Energy Care",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "NAD+. Know the Basics.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "Small Molecule. Big Conversation.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "What’s Your NAD+ IQ?",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "Play the Long Game.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "Think Beyond Today.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  },
+  {
+   "text": "Your Future Deserves Attention.",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "NAD+"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 62% on injections",
+  "Save up to 62% on sublingual tablets",
+  "Starting at $119/month",
+  "30-day money-back guarantee on your first order"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "Sublingual or injection options",
+  "Same-day order approval",
+  "24/7 Health Advisor access"
+ ],
+ "hard_nos": [
+  "The landing page says “needle free.” Ads can’t — say “easy sublingual delivery.”",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/nad/fb-v2",
+ "last_verified": "Oct. 20, 2026",
+ "field_badges": {},
+ "screen": {
+  "bounce back from burnout": {
+   "status": "❌ auto",
+   "why": "no melt / burn / ripped / shred"
+  },
+  "boost energy, focus & mental clarity": {
+   "status": "⚠ Jeremy",
+   "why": "\"boost\" (global: supports, never boosts)"
+  },
+  "what celebrities and ceos are using to out perform": {
+   "status": "⚠ Jeremy",
+   "why": "unsourced authority / celebrity"
+  },
+  "trusted by entrepreneurs and athletes": {
+   "status": "⚠ Jeremy",
+   "why": "unsourced authority"
+  },
+  "your cells know nad+.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "nad+ made stupid simple.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "energy care": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "nad+. know the basics.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "small molecule. big conversation.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "what's your nad+ iq?": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "play the long game.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "think beyond today.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "your future deserves attention.": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "boosts cellular energy": {
+   "status": "⚠ Jeremy",
+   "why": "\"boosts\" (global: supports)"
+  },
+  "reduces fatigue + brain fog": {
+   "status": "⚠ Jeremy",
+   "why": "treatment-like (\"reduces\")"
+  },
+  "supports dna repair": {
+   "status": "⚠ Jeremy",
+   "why": "medical-style claim"
+  },
+  "supports bounce-back from burnout": {
+   "status": "❌ auto",
+   "why": "no melt / burn / ripped / shred"
+  },
+  "optimizes metabolic health": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  }
+ },
+ "first_seen": {
+  "24/7 health advisor access": "baseline",
+  "30-day money-back guarantee on your first order": "baseline",
+  "boost energy, focus & mental clarity": "baseline",
+  "boosts cellular energy": "baseline",
+  "bounce back from burnout": "baseline",
+  "brain fog, who?": "baseline",
+  "clear head. full day.": "baseline",
+  "elevates mental clarity": "baseline",
+  "energy care": "baseline",
+  "explore nad+": "baseline",
+  "fuels all-day energy + focus": "baseline",
+  "less fog. more focus.": "baseline",
+  "meet your daily nad+.": "baseline",
+  "mentally stuck on loading?": "baseline",
+  "more life in your years.": "baseline",
+  "nad+ for $3.25/day": "baseline",
+  "nad+ made stupid simple.": "baseline",
+  "nad+ without the nonsense.": "baseline",
+  "nad+. know the basics.": "baseline",
+  "optimizes metabolic health": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "play the long game.": "baseline",
+  "promotes healthy aging": "baseline",
+  "ready to think clearly?": "baseline",
+  "recharge your cells": "baseline",
+  "reduces fatigue + brain fog": "baseline",
+  "same-day order approval": "baseline",
+  "save up to 62%": "baseline",
+  "save up to 62% on injections": "baseline",
+  "save up to 62% on sublingual tablets": "baseline",
+  "ships free from pharmacy": "baseline",
+  "small molecule. big conversation.": "baseline",
+  "starting at $119/month": "baseline",
+  "stop scrolling. meet nad+.": "baseline",
+  "sublingual or injection options": "baseline",
+  "supports bounce-back from burnout": "baseline",
+  "supports cellular longevity": "baseline",
+  "supports dna repair": "baseline",
+  "think beyond today.": "baseline",
+  "trusted by entrepreneurs and athletes": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "wake up feeling recharged again": "baseline",
+  "what celebrities and ceos are using to out perform": "baseline",
+  "what's your nad+ iq?": "baseline",
+  "your 30s called & want you back": "baseline",
+  "your cells know nad+.": "baseline",
+  "your future deserves attention.": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Choose Your Form",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Start Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

@@ -1,0 +1,57 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {
+  "Confidence for Men With ED": {
+   "status": "⚠ Jeremy",
+   "why": "Pending approval in the bible; \"ED\" names a condition (reads close to a disease claim). Not offered in setup"
+  },
+  "Daily ED Support, Doctor Prescribed": {
+   "status": "⚠ Jeremy",
+   "why": "same"
+  },
+  "Erectile Health, Handled": {
+   "status": "❌",
+   "why": "\"Erectile\" is out by default (global brief: no ED / erectile wording); pending in the bible. Only if Jeremy approves in writing"
+  },
+  "3-in-1 Daily ED Treatment": {
+   "status": "❌",
+   "why": "\"Treatment\" of a condition = disease claim (global Hard NO: no cure/treat/prevent), on top of \"ED\""
+  },
+  "Your Key to a Long Lasting Night": {
+   "status": "⚠ Jeremy",
+   "why": "Approved in the bible, but \"long lasting\" reads as a duration/outcome promise and \"night\" pulls the scene to a bedroom"
+  },
+  "Exclusive 3-in-1 daily formula": {
+   "status": "⚠ Jeremy",
+   "why": "\"Exclusive\" is an unsourced superiority word"
+  }
+ },
+ "patterns": [
+  {
+   "re": "\\b(arousal|aroused|arousing)\\b",
+   "status": "❌",
+   "why": "bible Hard NO (2026-11-02)",
+   "_review": "regex built from the old row: check it"
+  },
+  {
+   "re": "\\b(ed|erectile)\\b",
+   "status": "❌",
+   "why": "global; \"ED\" only inside a ⏳ headline Jeremy approves",
+   "_review": "regex built from the old row: check it"
+  }
+ ],
+ "retired": [
+  {
+   "line": "Real Men Take TitanRx",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Confidence. Control. Titan Rx.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Find Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ]
+}

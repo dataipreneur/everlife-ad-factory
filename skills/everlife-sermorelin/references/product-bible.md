@@ -1,28 +1,225 @@
-# Sermorelin — creative bible (verbatim extract)
+# Sermorelin — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Metabolism + Body Tone" → "Promotes Metabolism + Body Tone"; "Supports Strength + Vitality" → "Fuels Strength + Vitality". **This product:** NEW Women creative direction in the bible (NOT applied to this skill: ⚠ Jeremy first): talent by hair and eye colour and ethnicity ("blonde hair and blue eyes, with some Latina talent") and a wardrobe mix of workout gear and everyday clothes; casting rules below still govern.
-> **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Always feature the HIGHEST discount whichever form is pictured: **"Save Up to 65%"** (sublingual) on every Sermorelin ad. The bible's CTA "Save Up to 59%" (injection) was removed, which settles the 59 vs 65 question. Every ad has a CTA.
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%. **This product:** Offers by form: **sublingual tablet Save Up to 65%, injection Save Up to 59%**; this skill is the sublingual tablet, so its ads say 65% (a creative showing both forms uses the highest). ⚠ The bible's Sermorelin CTA list now reads "Save Up to 59%" (the injection maximum): for tablet ads keep 65% ("never apply one formulation's discount to another") and ask Justin.
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 65%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 65%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Sermorelin for $3.00/day"; and **"Starting at $95/month" on 10% of Sermorelin creatives** (bible: "Use 'Starting at $95/month' as the CTA on 10% of Sermorelin creatives"): plan it in the batch table like the proof split (1 in 10). An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 65% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 65%
+- **CTAs (bible):** Get Lean Today · Explore Sermorelin · Save Up to 65% · Support Natural Growth Hormone · Sermorelin for $3.00/day · Starting at $95/month · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** Sermorelin for $3.00/day
+- **Variant maximums (reference only, never shown as a lower %):** injection 59%, sublingual 65%
+- **Quick-hit benefits (word for word):** Supports Lean Muscle Definition · Promotes Metabolism + Body Tone · Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Fuels Strength + Vitality · 2x-Strength Growth Hormone Support · Supports Toned Strength After 35
+- **More approved benefits:** Boosts Metabolism and Targets Visceral Fatno targeted fat loss [Hard NO conflict]
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · 24/7 access to doctor support · Available as sublingual tablets or injections
+- **Product Hard NOs:** Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/sermorelin/v1L_v2f (last verified Aug. 28, 2026)
+- **Retired, never use:** Get Started Now · Supports Sleep Quality + Recovery
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
+| Line (bible) | Where | Status | Why |
+|---|---|---|---|
+| From Dad Bod to Man Bod | headlines | ❌ | body-comparison / body-composition framing; "Dad Bod" is on the library's banned list |
+| Get Toned and Lean | headlines | ⚠ Jeremy | "toned/lean" is not an approved-language line on this page (it is on GHK's); reads as body composition |
+| The Power of Growth Hormone in a Tablet | headlines | ⚠ Jeremy | implies the tablet contains growth hormone; Sermorelin supports the body's own production |
+| Double Strength Sermorelin | headlines | ✅ |  |
+| 60 Is the New 40 | headlines | ⚠ Jeremy | age-reversal / exaggerated transformation reading |
+| 50 Is the New 30 | headlines | ⚠ Jeremy | age-reversal / exaggerated transformation reading |
+| Built for Men Who Still Want More | headlines | ✅ |  |
+| Ultimate Stack…With Your TRT | headlines | ⚠ Jeremy | implies combined-therapy use; another Rx named |
+| Strength for Today, Vitality for Life | headlines | ✅ |  |
+| Hit Your Goals Faster | headlines | Weak (bible) | bible badge [Weak headline] |
+| Stronger, Sharper, Better | headlines | Weak (bible) | bible badge [Weak headline] |
+| Boost Longevity | headlines | Weak (bible) | bible badge [Weak headline] |
+| Slow Down Aging | headlines | Weak (bible) | bible badge [Weak headline] |
+| Thrive After 35 | headlines | ✅ |  |
+| Rediscover Energy and Vitality | headlines | ✅ |  |
+| Feel Younger Stay Stronger | headlines | ⚠ Jeremy | age-reversal reading; outcome not mechanism-led |
+| Stay Fit, Age Beautifully | headlines | ✅ |  |
+| Lean. Strong. Energized. | headlines | ⚠ Jeremy | same |
+| Your Key to Graceful Aging | headlines | Weak (bible) | bible badge [Weak headline] |
+| Supports Lean Muscle Definition | quick-hit benefits | ⚠ Jeremy | "definition" drifts into body composition; never with a body shot |
+| Promotes Metabolism + Body Tone | quick-hit benefits | ⚠ Jeremy | "body tone" = body-composition wording |
+| Supports Energy + Stamina | quick-hit benefits | ✅ |  |
+| Supports Natural Growth Hormone Activity | quick-hit benefits | ✅ |  |
+| Fuels Strength + Vitality | quick-hit benefits | ✅ |  |
+| 2x-Strength Growth Hormone Support | quick-hit benefits | ✅ |  |
+| Supports Toned Strength After 35 | quick-hit benefits | ⚠ Jeremy | "toned" = body-composition wording, as above |
+| Boosts Metabolism and Targets Visceral Fatno targeted fat loss | more approved benefits | ❌ auto | no "fat" or "skinny" claims anywhere (bible 2026-11-04) |
+| Get Lean Today | CTAs | ⚠ Jeremy | same body-composition drift; prefer another CTA |
+| Explore Sermorelin | CTAs | ✅ |  |
+| Save Up to 65% | CTAs | ✅ |  |
+| Support Natural Growth Hormone | CTAs | ✅ |  |
+| Sermorelin for $3.00/day | CTAs | ✅ |  |
+| Starting at $95/month | CTAs | ⚠ | dollar price; default is percent-off |
+| Ships Free From Pharmacy | CTAs | ✅ |  |
+| Save up to 65% (sublingual) | offers | ✅ |  |
+| Save up to 59% (injection) | offers | ✅ |  |
+| Starting at $95/month | offers | ⚠ | dollar price; default is percent-off |
+| Save 70% compared to HGH | offers | ⚠ Jeremy | comparison/price claim against another therapy; "HGH" |
+| Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives. | offers | ✅ |  |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| 24/7 access to doctor support | proof | ✅ |  |
+| Available as sublingual tablets or injections | proof | ❌ | "injections" breaks the no-needles rule; say "easy sublingual delivery" |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
+| Supports Sleep Quality + Recovery | retired | ❌ retired | removed from the bible 2026-11-02 (Justin); never use |
 
-> Source: ~/.claude/everlife/creative-bible.md (bible **v3**, imported 2026-10-29: pages 7 "Sermorelin — Men", 8 "more
-> claims", 9 "Sermorelin — Women", 10 "more claims"), re-copied 2026-10-29 (first copy 2026-10-28 from the older
-> import). Re-copy when the bible changes. The verbatim section below is the ONLY approved copy
-> for plain Sermorelin. Global rules: `core/references/global-rules.md` (they win over anything here).
+## Verbatim (bible section "Sermorelin — Men", version 1793905953-bc2f)
+```text
 
-> **This is plain Sermorelin, NOT Sermorelin GHK.** Different product, different bible page, different tablet, bottle,
-> offer and landing page. Never borrow a line, claim, offer, render or winner from the Sermorelin GHK skill
-> (`skills/everlife-sermorelin-ghk/`), and never mention GHK, Citrulline or "3-in-1" here.
+### Who it's for
+Men 35–65+ pursuing lean muscle, energy and healthy aging.
 
-> **How to use this page (same rules as the other product skills):**
-> - **HARD STOPS (never cross):** the approved benefits; every Hard NO (product + global); the verbatim disclaimer; the
->   proof wording; the pre-screen ❌ list below.
-> - **Headlines:** Tier A = a bible headline from the chosen audience page, word for word or lightly trimmed, that is not
->   ❌/⚠ below and not a "Weak headline". Anything else is Tier B (see `image-batch.md` §0).
+### Creative direction
+- Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.
+- Frame around muscle, fitness and performance — not the bedroom.
+- “High circulation” is not an approved benefit.
+
+Growth-hormone support focused on lean muscle, metabolism, energy, stamina, strength, and healthy aging.
+
+### Headlines & hooks
+1. From Dad Bod to Man Bod
+2. Get Toned and Lean
+3. The Power of Growth Hormone in a Tablet
+4. Double Strength Sermorelin
+5. 60 Is the New 40
+6. 50 Is the New 30
+7. Built for Men Who Still Want More
+8. Ultimate Stack…With Your TRT
+9. Strength for Today, Vitality for Life
+10. Hit Your Goals Faster [Weak headline]
+11. Stronger, Sharper, Better [Weak headline]
+12. Boost Longevity [Weak headline]
+13. Slow Down Aging [Weak headline]
+
+More benefits & claims on page 8
+
+### Quick-hit benefits
+- Supports Lean Muscle Definition
+- Promotes Metabolism + Body Tone
+- Supports Energy + Stamina
+- Supports Natural Growth Hormone Activity
+- Fuels Strength + Vitality
+- 2x-Strength Growth Hormone Support
+
+### CTAs
+- CTA: Get Lean Today
+- CTA: Explore Sermorelin
+- CTA: Save Up to 65%
+- CTA: Support Natural Growth Hormone
+- CTA: Sermorelin for $3.00/day
+- CTA: Starting at $95/month
+- CTA: Ships Free From Pharmacy
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+- 24/7 access to doctor support
+- Available as sublingual tablets or injections
+
+### Offers & conversion
+- Save up to 65% (sublingual)
+- Save up to 59% (injection)
+- Starting at $95/month
+- Save 70% compared to HGH
+- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+
+### Hard NOs
+- Plus all global Hard NOs on page 3.
+
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/sermorelin/v1L_v2fLast verified Aug. 28, 2026
+
+### More claims
+Additional benefits and claims for this product.
+
+### Benefits & Claims
+
+### Double-strength value points
+- Sublingual tablets with 2x the strength
+- Injections with 50% more potency
+
+### More approved benefits
+- Boosts Metabolism and Targets Visceral Fat [Hard NO conflict]no targeted fat loss
+```
+
+## Verbatim (bible section "Sermorelin — Women", version 1793905953-bc2f)
+```text
+
+### Who it's for
+Women 35–65+ pursuing lean muscle, energy and graceful aging.
+
+### Creative direction
+- Frame around muscle, fitness and performance — not the bedroom.
+- Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.
+- Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing.
+- “High circulation” is not an approved benefit.
+- Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4.
+
+Growth-hormone support focused on lean muscle, metabolism, energy, stamina, strength, and healthy aging.
+
+### Headlines & hooks
+1. Get Toned and Lean
+2. Thrive After 35
+3. Rediscover Energy and Vitality
+4. Feel Younger Stay Stronger
+5. Stay Fit, Age Beautifully
+6. Lean. Strong. Energized.
+7. Strength for Today, Vitality for Life
+8. Your Key to Graceful Aging [Weak headline]
+
+More benefits & claims on page 10
+
+### Quick-hit benefits
+- Supports Lean Muscle Definition
+- Promotes Metabolism + Body Tone
+- Supports Energy + Stamina
+- Supports Natural Growth Hormone Activity
+- Fuels Strength + Vitality
+- Supports Toned Strength After 35
+
+### CTAs
+- CTA: Get Lean Today
+- CTA: Explore Sermorelin
+- CTA: Save Up to 65%
+- CTA: Support Natural Growth Hormone
+- CTA: Sermorelin for $3.00/day
+- CTA: Starting at $95/month
+- CTA: Ships Free From Pharmacy
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+- 24/7 access to doctor support
+- Available as sublingual tablets or injections
+
+### Offers & conversion
+- Save up to 65% (sublingual)
+- Save up to 59% (injection)
+- Starting at $95/month
+- Save 70% compared to HGH
+- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+
+### Hard NOs
+- Plus all global Hard NOs on page 3.
+
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/sermorelin/v1L_v2fLast verified Aug. 28, 2026
+
+### More claims
+Additional benefits and claims for this product.
+
+### Benefits & Claims
+
+### More approved benefits
+- Boosts Metabolism and Targets Visceral Fat [Hard NO conflict]no targeted fat loss
+```
+
+## Notes (hand, `references/product-notes.md`)
+# Sermorelin: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
 
 ## Product facts for this skill
 - **Product name on creative:** "Sermorelin". Never "Sermorelin GHK", never "GH" ("growth hormone" spelled out), never "HGH"
@@ -49,216 +246,8 @@
   for statics; the Everlife logo is on every ad). Videos KEEP it (Priestley, 2026-10-29): "Sermorelin by Everlife" in the header and first spoken line
   (bible v3 page 4, "Product first, then
   brand").
-- **Offer:** "Save up to 65%" (percent-off, usable). No $ prices by default (creative standard: percent-off unless a price
-  point is being tested); "Starting at $95/month" only when a brief asks for a price test.
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
 - **Proof:** "Trustpilot rated 4.9 Excellent" · "Over 100,000 happy customers" · "24/7 access to doctor support".
 - **Disclaimer (verbatim, both audiences):** `AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.`
 - **Landing page:** https://everlifemd.com/sermorelin/v1L_v2f (last verified Aug. 28, 2026). Facts only; offers and
   claims come from this page, never from the landing page.
-
-## Compliance pre-screen (Claude's reading of the bible against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
-The plain Sermorelin pages were annotated for "Weak headline" and one "Hard NO conflict" only. These lines collide with a
-global Hard NO or the no-needles rule, so treat them as listed until Jeremy rules:
-
-| Line (bible) | Where | Status | Why |
-|---|---|---|---|
-| Boosts Metabolism and Targets Visceral Fat | more claims (both) | ❌ | already flagged in the bible: no targeted fat loss |
-| From Dad Bod to Man Bod | Men headline | ❌ | body-comparison / body-composition framing; "Dad Bod" is on the library's banned list |
-| Available as sublingual tablets or injections | proof (both) | ❌ in creative | "injections" breaks the no-needles rule; say "easy sublingual delivery" |
-| Injections with 50% more potency | Men more claims | ❌ | injections + needles rule |
-| Save 70% compared to HGH | offer (both) | ⚠ Jeremy | comparison/price claim against another therapy; "HGH" |
-| Starting at $95/month | offer (both) | ⚠ brief only | dollar price; default is percent-off |
-| Get Toned and Lean | headline (both) | ⚠ Jeremy | "toned/lean" is not an approved-language line on this page (it is on GHK's); reads as body composition |
-| Supports Lean Muscle Definition | quick-hit (both) | ⚠ Jeremy | "definition" drifts into body composition; never with a body shot |
-| Promotes Metabolism + Body Tone | quick-hit (both) | ⚠ Jeremy | "body tone" = body-composition wording |
-| Get Lean Today | CTA (both) | ⚠ Jeremy | same body-composition drift; prefer another CTA |
-| Lean. Strong. Energized. | Women headline | ⚠ Jeremy | same |
-| Supports Toned Strength After 35 | Women quick-hit (new in v3) | ⚠ Jeremy | "toned" = body-composition wording, as above |
-| 60 Is the New 40 · 50 Is the New 30 | Men headline | ⚠ Jeremy | age-reversal / exaggerated transformation reading |
-| Feel Younger Stay Stronger | Women headline | ⚠ Jeremy | age-reversal reading; outcome not mechanism-led |
-| The Power of Growth Hormone in a Tablet | Men headline | ⚠ Jeremy | implies the tablet contains growth hormone; Sermorelin supports the body's own production |
-| Ultimate Stack…With Your TRT | Men headline | ⚠ Jeremy | implies combined-therapy use; another Rx named |
-| Sublingual tablets with 2x the strength · Double Strength Sermorelin · 2x-Strength Growth Hormone Support (new in v3) | Men | ✅ with care | only with a confirmed double-strength bottle in frame (see facts) |
-| Supports Sleep Quality + Recovery | quick-hit (both) | ❌ removed | removed from the bible 2026-11-02 (Justin); never use |
-| Built for Men Who Still Want More | Men headline | ✅ | "built for" is not a "builds muscle" claim; never pair it with a body shot |
-| Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Fuels Strength + Vitality | quick-hit (both) | ✅ | clean structure-function lines: the default benefit pool |
-
-Clean pools after the screen (small; say so when they run low and ask for Tier B or new approved lines from Jeremy):
-- **Men headlines (Tier A):** Double Strength Sermorelin (with care) · Built for Men Who Still Want More · Strength for Today, Vitality for Life.
-- **Women headlines (Tier A):** Thrive After 35 · Rediscover Energy and Vitality · Stay Fit, Age Beautifully · Strength for Today, Vitality for Life.
-- **Benefits:** Supports Energy + Stamina · Supports Natural Growth Hormone Activity · Fuels Strength + Vitality ·
-  (men, 1000 mcg only) 2x-Strength Growth Hormone Support.
-- **CTAs:** Save Up to 65% (default) · Ships Free From Pharmacy · Explore Sermorelin · Support Natural Growth Hormone · Build Your Plan.
-
-Everything else in the verbatim section is usable under its own label (Weak headline → avoid unless the brief asks).
-
----
-
-# VERBATIM (do not edit; re-copy from the bible)
-
-Bible v3 pages 7–10, exactly as imported (`~/.claude/everlife/creative-bible.md` lines 282–438; PDF line breaks kept;
-"Weak headline" / "Hard NO conflict" tags sit right after the line they flag; the disclaimer's line break is joined
-in product.json).
-
-```text
-## Page 7
-
-WHO  IT'S  FOR
-Men 35–65+ pursuing lean muscle, energy
-and healthy aging.
-CREATIVE  DIRECTION
-— Talent: rugged, strong and unmistakably masculine — a serious
-gym-goer with a hardcore training feel.
-— Frame around muscle, fitness and performance — not
-the bedroom.
-— “High circulation” is not an approved benefit.
-MEN’S  HEALTH
-LONGEVITY  ·  MENCREATIVE  MESSAGING  REFERENCE
-Sermorelin
-Growth-hormone support focused on lean muscle, metabolism, energy, stamina, strength, and healthy aging.
-HEADLINES  &  HOOKS
-1 From Dad Bod to Man Bod
-2 Get Toned and Lean
-3 The Power of Growth Hormone
-in a Tablet
-4 Double Strength Sermorelin
-5 60 Is the New 40
-6 50 Is the New 30
-7 Built for Men Who Still
-Want More
-8 Ultimate Stack…With Your TRT
-9 Strength for Today, Vitality
-for Life
-10 Hit Your Goals Faster Weak headline
-11 Stronger, Sharper,
-Better Weak headline
-12 Boost Longevity Weak headline
-13 Slow Down Aging Weak headline
-More benefits & claims on page 8
-QUICK-HIT  BENEFITS
-— Supports Lean Muscle Definition
-— Promotes Metabolism + Body Tone
-— Supports Energy + Stamina
-— Supports Natural Growth
-Hormone Activity
-— Fuels Strength + Vitality
-— 2x-Strength Growth
-Hormone Support
-CTA S
-Get Lean Today
-Explore Sermorelin
-Save Up to 65%
-Support Natural Growth Hormone
-Build Your Plan
-Sermorelin for $3.00/day
-Starting at $95/month
-Ships Free From Pharmacy
-PROOF  &  VALUE  PROPS
-— Trustpilot rated 4.9 Excellent
-— Over 100,000 happy customers
-— 24/7 access to doctor support
-— Available as sublingual tablets
-or injections
-OFFERS  &  CONVERSION
-— Save up to 65%
-— Starting at $95/month
-— Save 70% compared to HGH
-HARD  NOS
-— Plus all global Hard NOs on page 3.
-AD DISCL AIMER AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary.
-Doctor-prescribed compounded prescription.
-https://everlifemd.com/sermorelin/v1L_v2f  ·  Last verified: Aug. 28, 2026 7
-
-
----
-## Page 8
-
-MORE  CLAIMS
-Sermorelin for Men
-Additional benefits and claims for this product.
-LONGEVITY  ·  MENCREATIVE  MESSAGING  REFERENCE
-Benefits & Claims
-DOUBLE-STRENGTH  VALUE  POINTS
-— Sublingual tablets with 2x the strength
-— Injections with 50% more potency
-MORE  APPROVED  BENEFITS
-— Boosts Metabolism and Targets Visceral Fat
-Hard NO conflict no targeted fat loss
-Sermorelin — Men — more claims 8
-
-
----
-## Page 9
-
-WHO  IT'S  FOR
-Women 35–65+ pursuing lean muscle,
-energy and graceful aging.
-CREATIVE  DIRECTION
-— Frame around muscle, fitness and performance — not
-the bedroom.
-— “High circulation” is not an approved benefit.
-WOMEN’S  HEALTH
-LONGEVITY  ·  WOMENCREATIVE  MESSAGING  REFERENCE
-Sermorelin
-Growth-hormone support focused on lean muscle, metabolism, energy, stamina, strength, and healthy aging.
-HEADLINES  &  HOOKS
-1 Get Toned and Lean
-2 Thrive After 35
-3 Rediscover Energy and Vitality
-4 Feel Younger Stay Stronger
-5 Stay Fit, Age Beautifully
-6 Lean. Strong. Energized.
-7 Strength for Today, Vitality
-for Life
-8 Your Key to Graceful
-Aging Weak headline
-More benefits & claims on page 10
-QUICK-HIT  BENEFITS
-— Supports Lean Muscle Definition
-— Promotes Metabolism + Body Tone
-— Supports Energy + Stamina
-— Supports Natural Growth
-Hormone Activity
-— Fuels Strength + Vitality
-— Supports Toned Strength After 35
-CTA S
-Get Lean Today
-Explore Sermorelin
-Save Up to 65%
-Support Natural Growth Hormone
-Build Your Plan
-Sermorelin for $3.00/day
-Starting at $95/month
-Ships Free From Pharmacy
-PROOF  &  VALUE  PROPS
-— Trustpilot rated 4.9 Excellent
-— Over 100,000 happy customers
-— 24/7 access to doctor support
-— Available as sublingual tablets
-or injections
-OFFERS  &  CONVERSION
-— Save up to 65%
-— Starting at $95/month
-— Save 70% compared to HGH
-HARD  NOS
-— Plus all global Hard NOs on page 3.
-AD DISCL AIMER AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary.
-Doctor-prescribed compounded prescription.
-https://everlifemd.com/sermorelin/v1L_v2f  ·  Last verified: Aug. 28, 2026 9
-Drop Sermorelin womenʼs product image
-or browse files
-
-
----
-## Page 10
-
-MORE  CLAIMS
-Sermorelin for Women
-Additional benefits and claims for this product.
-LONGEVITY  ·  WOMENCREATIVE  MESSAGING  REFERENCE
-Benefits & Claims
-MORE  APPROVED  BENEFITS
-— Boosts Metabolism and Targets Visceral Fat
-Hard NO conflict no targeted fat loss
-Sermorelin — Women — more claims 10
-```

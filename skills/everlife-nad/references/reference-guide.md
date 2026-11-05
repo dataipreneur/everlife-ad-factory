@@ -8,7 +8,7 @@ look at it, and borrow only its structure. NAD+ winner files are not on hand yet
 |---|---|---|---|
 | **Clear head** — "Less Fog. More Focus.", "Brain Fog, Who?" | F2 · F8 Question · F11 | 08: huge one-line question pins; 11: single-object metaphor pins | neon "energy drink" pins |
 | **Energy that lasts** — "Fuels All-Day Energy + Focus", "Wake Up Feeling Recharged Again" | F1 · F3 Phone UI · F12 | 03: loading/battery UI pins; 12: bright morning still lifes | caffeine-hype pins |
-| **The choice** — "Choose Your Form" | F4 · F6 Offer | 04: two-product comparison layouts with lots of air; 06: clean percent-off pins | anything showing an injection being given |
+| **The choice** — the two forms | F4 · F6 Offer | 04: two-product comparison layouts with lots of air; 06: clean percent-off pins | anything showing an injection being given |
 | **Healthy aging** — "More Life in Your Years.", "Promotes Healthy Aging" | F14 · F12 | 13: Hims/Ro codes; calm, premium | age-reversal / before-after pins |
 
 **People:** read `direction.md` first.

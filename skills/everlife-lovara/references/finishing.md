@@ -38,7 +38,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, renders, name casing,
 review highlight) and refuse a job without it. Don't type the disclaimer into copy.json. The "ingredients" rows are ✅ benefit
 pillars, not ingredient claims, while the ingredient list is under review (Justin). The `tiktok` CTA button fits ≈ 20 characters
-("EXPLORE LOVARA", "DISCOVER LOVARA", "GET STARTED NOW", "START YOUR PLAN" all fit).
+("EXPLORE LOVARA", "DISCOVER LOVARA", "SAVE UP TO 45%" all fit; the CTA is one of `references/bible.json` ctas).
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw_vo.mp4 <Tag> --end 11 [--mirror-until <s>] [--zoom 1.2]`
 

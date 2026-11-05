@@ -1,68 +1,69 @@
-# Wolverine Stack — creative bible (verbatim extract)
+# Wolverine Stack — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Tendons + Ligaments" → "Reinforces Tendons + Ligaments"; "Supports Mobility" → "Maintains Mobility"; "Supports Tissue Repair" → "Aids Tissue Repair"; "Supports Muscle Recovery" → "Promotes Muscle Recovery". **This product:** New wording includes "Reinforces Tendons + Ligaments" (⚠ the strongest verb of the set: Jeremy first).
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless male talent: up to **30%** of creatives (static and video) for this product; the hardcore picker now caps at 30%.
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 39%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 39%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Wolverine Stack for $6.50/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 39% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 39%
+- **CTAs (bible):** Explore the Wolverine Stack · Build Your Recovery Protocol · Save Up to 39% · Support Whole-Body Recovery · Start Your Stack · Wolverine Stack for $6.50/day · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** Wolverine Stack for $6.50/day
+- **Quick-hit benefits (word for word):** 2-in-1 Recovery Support · Reinforces Tendons + Ligaments · Supports Gut Lining Health · Maintains Mobility · Supports Healthy Inflammatory Balance · Aids Tissue Repair · Promotes Joint Comfort · Promotes Muscle Recovery · Promotes Mobility + Flexibility · 2-Peptide Whole-Body Recovery · Supports Joints, Gut + Mobility in One Stack · Supports Connective Tissue Health · Supports Digestive Resilience · Supports Whole-Body Recovery
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers
+- **Product Hard NOs:** No animal death, blood or gore. · No direct claims. · Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/wolverine/fb (last verified Nov. 3, 2026)
+- **Retired, never use:** Get Started Now
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: up to 30% of men's slots are HARDCORE (bible 2026-11-04 caps shirtless male talent at 30%) (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
-
-> Source: the live creative bible (Justin), synced into `core/claude/creative-bible.md` (section "## Wolverine Stack (BPC-157/TB500)"), re-synced
-> 2026-11-02 from version 1793642193-f927, the version that un-swapped the Spartan / Wolverine pages. Re-copy when the bible
-> changes (`core/references/bible-sync.md`). Global rules: `core/references/global-rules.md` (they win).
-
-## Product facts for this skill
-- **What it is:** a compounded Rx peptide recovery stack in one vial (bible listing: BPC-157 3 mg / TB-500 3 mg, 5 mL; never a
-  strength or volume in copy). Doctor-prescribed.
-- **Who:** active men 25–55 with tissue, mobility and gut recovery goals (bible).
-- **Ingredients:** BPC-157 + TB-500 (two peptides). The vial label and the bible agree since 2026-11-02 (Justin fixed the swap).
-  Name the two together only; never tie a benefit to one ingredient.
-- **Focus (bible):** connective tissue, inflammation support, gut lining, mobility and soft-tissue recovery.
-- **Creative direction (bible, Justin 2026-11-02):** talent = fit, rugged men 30–45 with a masculine, performance-driven look;
-  strong gym talent, intense training, refined execution. **Every design includes "Wolverine Stack" and "BPC-157 / TB-500".**
-  Fighting imagery fine without blood or gore; no animal death.
-- **Hard NOs (bible):** no animal death, blood or gore; **"No direct claims."** (read as: benefits only as the bible's
-  "Supports… / Promotes…" lines, never a direct outcome claim; ask Justin if it means more).
-- **Offer:** "Save up to 39%" (bible). **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
-- **Headlines:** every bible headline and hook option is ⏳ Pending approval (the "Asana hook options" carry no approval mark):
-  use one only with the user's OK, flagged for Jeremy. Benefits and CTAs below are usable.
-- **Landing page:** https://everlifemd.com/wolverine/fb (bible, verified Nov. 3, 2026).
-- **Held (asked Justin 2026-11-02):** "Supports Healthy Inflammatory Balance" is KPV's benefit, and Wolverine has no KPV. Not used.
-
-## Compliance pre-screen (2026-11-02, against Justin's un-swapped page; Claude's reading of the GLOBAL rules — confirm with Jeremy)
-
-| Line | Where | Status | Why |
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
+| Line (bible) | Where | Status | Why |
 |---|---|---|---|
-| Bounce Back Stronger | headlines | ⏳ | pending approval |
-| Recover Like Wolverine | headlines | ❌ until Jeremy | evokes the Marvel character (trademark) and a healing factor |
-| The Wolverine Stack for Whole-Body Recovery | headlines | ⏳ | pending approval |
-| 2 Peptides. One Recovery Protocol. | headlines | ⏳ | pending approval; matches the 2-peptide label |
-| Two Peptides. One Mission. · Double Down on Recovery · Recovery, Reinforced · The Heavy-Duty Recovery Stack · Built for Heavy Wear · For Bodies Under Load · Heavy Output Needs Backup · The Next-Level Recovery Stack · Stacked for the Comeback · Built for Impact | Asana hook options | ⏳ | no approval mark on the page; "For Bodies Under Load" never next to a body shot |
-| Wolverine Stack. Built for the Grind. · Hardcore Training. Wolverine Stack Recovery. · Recover Like You Train: Wolverine Stack. · The Wolverine Stack Is Your Recovery Edge. · Built for Heavy Days. Backed by the Wolverine Stack. | new headline options | ⏳ | pending approval |
-| Reinforces Tendons + Ligaments | benefits | ✅ | |
-| Supports Gut Lining Health | benefits | ✅ | |
-| Maintains Mobility | benefits | ✅ | |
-| Promotes Muscle Recovery | benefits | ✅ | |
-| Promotes Mobility + Flexibility | benefits | ✅ | |
-| 2-Peptide Whole-Body Recovery | benefits | ✅ | |
-| Supports Joints, Gut + Mobility in One Stack | benefits | ✅ | |
-| Aids Tissue Repair | benefits | ⚠ Jeremy | "repair" reads as healing; the page's own Hard NO says "No direct claims" |
-| Promotes Joint Comfort | benefits | ⚠ Jeremy | "comfort" implies pain relief |
-| Supports Connective Tissue Health · Supports Digestive Resilience · Supports Whole-Body Recovery | benefits | ⏳ | pending approval (bible) |
-| Supports Healthy Inflammatory Balance | benefits | ⛔ held | KPV's benefit on a stack without KPV; asked Justin |
-| Save Up to 39% · Ships Free From Pharmacy · Explore the Wolverine Stack · Build Your Recovery Protocol · Support Whole-Body Recovery · Start Your Stack | ctas | ✅ | Save Up to 39% = default (bible 2026-11-03) |
-| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
-| Save up to 39% | offer | ✅ | percent only, never a $ price |
+| Bounce Back Stronger | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Recover Like Wolverine | headlines | ❌ | evokes the Marvel character (trademark) and a healing factor |
+| The Wolverine Stack for Whole-Body Recovery | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| 2 Peptides. One Recovery Protocol. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Two Peptides. One Mission. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Double Down on Recovery | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Recovery, Reinforced | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| The Heavy-Duty Recovery Stack | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Built for Heavy Wear | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| For Bodies Under Load | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Heavy Output Needs Backup | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| The Next-Level Recovery Stack | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Stacked for the Comeback | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Built for Impact | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Wolverine Stack. Built for the Grind. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Hardcore Training. Wolverine Stack Recovery. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Recover Like You Train: Wolverine Stack. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| The Wolverine Stack Is Your Recovery Edge. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Built for Heavy Days. Backed by the Wolverine Stack. | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| 2-in-1 Recovery Support | quick-hit benefits | ✅ |  |
+| Reinforces Tendons + Ligaments | quick-hit benefits | ✅ |  |
+| Supports Gut Lining Health | quick-hit benefits | ✅ |  |
+| Maintains Mobility | quick-hit benefits | ✅ |  |
+| Supports Healthy Inflammatory Balance | quick-hit benefits | ✅ |  |
+| Aids Tissue Repair | quick-hit benefits | ⚠ Jeremy | "repair" reads as healing; the page's own Hard NO says "No direct claims" |
+| Promotes Joint Comfort | quick-hit benefits | ⚠ Jeremy | "comfort" implies pain relief |
+| Promotes Muscle Recovery | quick-hit benefits | ✅ |  |
+| Promotes Mobility + Flexibility | quick-hit benefits | ✅ |  |
+| 2-Peptide Whole-Body Recovery | quick-hit benefits | ✅ |  |
+| Supports Joints, Gut + Mobility in One Stack | quick-hit benefits | ✅ |  |
+| Supports Connective Tissue Health | quick-hit benefits | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Supports Digestive Resilience | quick-hit benefits | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Supports Whole-Body Recovery | quick-hit benefits | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Explore the Wolverine Stack | CTAs | ✅ |  |
+| Build Your Recovery Protocol | CTAs | ✅ |  |
+| Save Up to 39% | CTAs | ✅ |  |
+| Support Whole-Body Recovery | CTAs | ✅ |  |
+| Start Your Stack | CTAs | ✅ |  |
+| Wolverine Stack for $6.50/day | CTAs | ✅ |  |
+| Ships Free From Pharmacy | CTAs | ✅ |  |
+| Save up to 39% | offers | ✅ |  |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 
-The VERBATIM block below is the bible page as written; the table above is what the skill uses.
-
----
-
-# VERBATIM (do not edit; re-copy from the bible)
-
+## Verbatim (bible section "Wolverine Stack (BPC-157/TB500)", version 1793905953-bc2f)
 ```text
-## Wolverine Stack (BPC-157/TB500)
 
 ### Who it's for
 Active men 25–55 with tissue, mobility and gut recovery goals.
@@ -141,5 +142,27 @@ Proposed headlines written to this product’s positioning and Hard NOs. Replace
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pagehttps://everlifemd.com/wolverine/fbLast verified Nov. 3, 2026
-Recovery stack
 ```
+
+## Notes (hand, `references/product-notes.md`)
+# Wolverine Stack: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
+
+## Product facts for this skill
+- **What it is:** a compounded Rx peptide recovery stack in one vial (bible listing: BPC-157 3 mg / TB-500 3 mg, 5 mL; never a
+  strength or volume in copy). Doctor-prescribed.
+- **Who:** active men 25–55 with tissue, mobility and gut recovery goals (bible).
+- **Ingredients:** BPC-157 + TB-500 (two peptides). The vial label and the bible agree since 2026-11-02 (Justin fixed the swap).
+  Name the two together only; never tie a benefit to one ingredient.
+- **Focus (bible):** connective tissue, inflammation support, gut lining, mobility and soft-tissue recovery.
+- **Creative direction (bible, Justin 2026-11-02):** talent = fit, rugged men 30–45 with a masculine, performance-driven look;
+  strong gym talent, intense training, refined execution. **Every design includes "Wolverine Stack" and "BPC-157 / TB-500".**
+  Fighting imagery fine without blood or gore; no animal death.
+- **Hard NOs (bible):** no animal death, blood or gore; **"No direct claims."** (read as: benefits only as the bible's
+  "Supports… / Promotes…" lines, never a direct outcome claim; ask Justin if it means more).
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
+- **Headlines:** every bible headline and hook option is ⏳ Pending approval (the "Asana hook options" carry no approval mark):
+  use one only with the user's OK, flagged for Jeremy. Benefits and CTAs below are usable.
+- **Landing page:** https://everlifemd.com/wolverine/fb (bible, verified Nov. 3, 2026).
+- **Held (asked Justin 2026-11-02):** "Supports Healthy Inflammatory Balance" is KPV's benefit, and Wolverine has no KPV. Not used.

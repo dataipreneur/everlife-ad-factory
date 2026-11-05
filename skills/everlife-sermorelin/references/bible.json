@@ -1,0 +1,341 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "sermorelin",
+ "name": "Sermorelin",
+ "sections": [
+  "Sermorelin — Men",
+  "Sermorelin — Women"
+ ],
+ "category": "Longevity · Men",
+ "who": "Men 35–65+ pursuing lean muscle, energy and healthy aging.",
+ "truth": "Growth-hormone support focused on lean muscle, metabolism, energy, stamina, strength, and healthy aging.",
+ "direction": [
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.",
+  "Frame around muscle, fitness and performance — not the bedroom.",
+  "“High circulation” is not an approved benefit.",
+  "Talent: women around 40, attractive, fit and athletic. Skew toward blonde hair and blue eyes, with some Latina talent in the mix — fit, attractive women throughout.",
+  "Mix wardrobe between workout gear (yoga pants, athletic wear) and everyday lifestyle clothing.",
+  "Color: pinks, tans and warm neutrals, plus more white and teal — white backgrounds for advertorials. See page 4."
+ ],
+ "offer": {
+  "pct": 65,
+  "status": "ok",
+  "source": "Discount to feature, by product",
+  "cta": "Save Up to 65%",
+  "lines": [
+   "Save up to 65% (sublingual)",
+   "Save up to 59% (injection)",
+   "Starting at $95/month",
+   "Save 70% compared to HGH",
+   "Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives."
+  ],
+  "variants": {
+   "injection": 59,
+   "sublingual": 65
+  }
+ },
+ "cta_default": "Save Up to 65%",
+ "cta_price": "Sermorelin for $3.00/day",
+ "ctas": [
+  "Get Lean Today",
+  "Explore Sermorelin",
+  "Save Up to 65%",
+  "Support Natural Growth Hormone",
+  "Sermorelin for $3.00/day",
+  "Starting at $95/month",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Lean Muscle Definition",
+  "Promotes Metabolism + Body Tone",
+  "Supports Energy + Stamina",
+  "Supports Natural Growth Hormone Activity",
+  "Fuels Strength + Vitality",
+  "2x-Strength Growth Hormone Support",
+  "Supports Toned Strength After 35"
+ ],
+ "benefits_more": [
+  {
+   "text": "Boosts Metabolism and Targets Visceral Fatno targeted fat loss",
+   "badges": [
+    "Hard NO conflict"
+   ]
+  }
+ ],
+ "headlines": [
+  {
+   "text": "From Dad Bod to Man Bod",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Get Toned and Lean",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "The Power of Growth Hormone in a Tablet",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Double Strength Sermorelin",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "60 Is the New 40",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "50 Is the New 30",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Built for Men Who Still Want More",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Ultimate Stack…With Your TRT",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Strength for Today, Vitality for Life",
+   "badges": [],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Hit Your Goals Faster",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Stronger, Sharper, Better",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Boost Longevity",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Slow Down Aging",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin — Men"
+  },
+  {
+   "text": "Thrive After 35",
+   "badges": [],
+   "page": "Sermorelin — Women"
+  },
+  {
+   "text": "Rediscover Energy and Vitality",
+   "badges": [],
+   "page": "Sermorelin — Women"
+  },
+  {
+   "text": "Feel Younger Stay Stronger",
+   "badges": [],
+   "page": "Sermorelin — Women"
+  },
+  {
+   "text": "Stay Fit, Age Beautifully",
+   "badges": [],
+   "page": "Sermorelin — Women"
+  },
+  {
+   "text": "Lean. Strong. Energized.",
+   "badges": [],
+   "page": "Sermorelin — Women"
+  },
+  {
+   "text": "Your Key to Graceful Aging",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Sermorelin — Women"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 65% (sublingual)",
+  "Save up to 59% (injection)",
+  "Starting at $95/month",
+  "Save 70% compared to HGH",
+  "Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives."
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "24/7 access to doctor support",
+  "Available as sublingual tablets or injections"
+ ],
+ "hard_nos": [
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/sermorelin/v1L_v2f",
+ "last_verified": "Aug. 28, 2026",
+ "field_badges": {},
+ "screen": {
+  "from dad bod to man bod": {
+   "status": "❌",
+   "why": "body-comparison / body-composition framing; \"Dad Bod\" is on the library's banned list"
+  },
+  "get toned and lean": {
+   "status": "⚠ Jeremy",
+   "why": "\"toned/lean\" is not an approved-language line on this page (it is on GHK's); reads as body composition"
+  },
+  "the power of growth hormone in a tablet": {
+   "status": "⚠ Jeremy",
+   "why": "implies the tablet contains growth hormone; Sermorelin supports the body's own production"
+  },
+  "60 is the new 40": {
+   "status": "⚠ Jeremy",
+   "why": "age-reversal / exaggerated transformation reading"
+  },
+  "50 is the new 30": {
+   "status": "⚠ Jeremy",
+   "why": "age-reversal / exaggerated transformation reading"
+  },
+  "ultimate stack…with your trt": {
+   "status": "⚠ Jeremy",
+   "why": "implies combined-therapy use; another Rx named"
+  },
+  "hit your goals faster": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "stronger, sharper, better": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "boost longevity": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "slow down aging": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "feel younger stay stronger": {
+   "status": "⚠ Jeremy",
+   "why": "age-reversal reading; outcome not mechanism-led"
+  },
+  "lean. strong. energized.": {
+   "status": "⚠ Jeremy",
+   "why": "same"
+  },
+  "your key to graceful aging": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "supports lean muscle definition": {
+   "status": "⚠ Jeremy",
+   "why": "\"definition\" drifts into body composition; never with a body shot"
+  },
+  "promotes metabolism + body tone": {
+   "status": "⚠ Jeremy",
+   "why": "\"body tone\" = body-composition wording"
+  },
+  "supports toned strength after 35": {
+   "status": "⚠ Jeremy",
+   "why": "\"toned\" = body-composition wording, as above"
+  },
+  "boosts metabolism and targets visceral fatno targeted fat loss": {
+   "status": "❌ auto",
+   "why": "no \"fat\" or \"skinny\" claims anywhere (bible 2026-11-04)"
+  },
+  "get lean today": {
+   "status": "⚠ Jeremy",
+   "why": "same body-composition drift; prefer another CTA"
+  },
+  "starting at $95/month": {
+   "status": "⚠",
+   "why": "dollar price; default is percent-off"
+  },
+  "save 70% compared to hgh": {
+   "status": "⚠ Jeremy",
+   "why": "comparison/price claim against another therapy; \"HGH\""
+  },
+  "available as sublingual tablets or injections": {
+   "status": "❌",
+   "why": "\"injections\" breaks the no-needles rule; say \"easy sublingual delivery\""
+  }
+ },
+ "first_seen": {
+  "24/7 access to doctor support": "baseline",
+  "2x-strength growth hormone support": "baseline",
+  "50 is the new 30": "baseline",
+  "60 is the new 40": "baseline",
+  "available as sublingual tablets or injections": "baseline",
+  "boost longevity": "baseline",
+  "boosts metabolism and targets visceral fatno targeted fat loss": "baseline",
+  "built for men who still want more": "baseline",
+  "double strength sermorelin": "baseline",
+  "explore sermorelin": "baseline",
+  "feel younger stay stronger": "baseline",
+  "from dad bod to man bod": "baseline",
+  "fuels strength + vitality": "baseline",
+  "get lean today": "baseline",
+  "get toned and lean": "baseline",
+  "hit your goals faster": "baseline",
+  "lean. strong. energized.": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes metabolism + body tone": "baseline",
+  "rediscover energy and vitality": "baseline",
+  "save 70% compared to hgh": "baseline",
+  "save up to 59% (injection)": "baseline",
+  "save up to 65%": "baseline",
+  "save up to 65% (sublingual)": "baseline",
+  "sermorelin for $3.00/day": "baseline",
+  "ships free from pharmacy": "baseline",
+  "slow down aging": "baseline",
+  "starting at $95/month": "baseline",
+  "stay fit, age beautifully": "baseline",
+  "strength for today, vitality for life": "baseline",
+  "stronger, sharper, better": "baseline",
+  "support natural growth hormone": "baseline",
+  "supports energy + stamina": "baseline",
+  "supports lean muscle definition": "baseline",
+  "supports natural growth hormone activity": "baseline",
+  "supports toned strength after 35": "baseline",
+  "the power of growth hormone in a tablet": "baseline",
+  "thrive after 35": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "ultimate stack…with your trt": "baseline",
+  "use \"starting at $95/month\" as the cta on 10% of sermorelin creatives.": "baseline",
+  "your key to graceful aging": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Supports Sleep Quality + Recovery",
+   "why": "removed from the bible 2026-11-02 (Justin); never use"
+  }
+ ],
+ "patterns": [],
+ "extra": {
+  "Double-strength value points": [
+   "- Sublingual tablets with 2x the strength",
+   "- Injections with 50% more potency"
+  ]
+ }
+}
