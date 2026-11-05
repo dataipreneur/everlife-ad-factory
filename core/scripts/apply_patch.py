@@ -4,7 +4,7 @@
   python3 core/scripts/apply_patch.py <patch.zip> [--dry-run] [--force] [--repo DIR]
 
 Checks first, changes nothing unless every check passes:
-  - the copy's VERSION must be the patch's `from` version (same version already applied → nothing to do);
+  - the copy's VERSION must be one of the patch's `from` versions (the new version already applied → nothing to do);
   - every file in the patch matches its SHA-256 and sits inside the folder (no absolute paths, no "..", nothing through a symlink);
   - every file it replaces is still the original (a file you edited by hand is a conflict; --force overwrites it).
 Replaced or deleted files are first copied to _originals/<date>/patch-<to>/. A git copy is refused: use `git pull` / update.sh.
@@ -76,14 +76,16 @@ def main():
         m = json.loads(z.read("PATCH.json"))
     except (OSError, KeyError, ValueError, zipfile.BadZipFile) as e:
         die(f"❌ {a.patch} is not a valid Everlife patch ({e}).")
-    if m.get("format") != 1:
+    if m.get("format") not in (1, 2):
         die("❌ This patch was made by a newer tool: ask for a full zip.")
     have = current(repo)
     if same(have, m["to"]):
         print(f"✅ Already applied: this copy is at {m['to']}. Nothing to do.")
         return
-    if not same(have, m["from"]):
-        die(f"❌ Wrong patch for this copy. The patch goes from {m['from']} to {m['to']}, but this copy is "
+    froms = m["from"] if isinstance(m["from"], list) else [m["from"]]
+    fromtxt = " or ".join(froms)
+    if not any(same(have, x) for x in froms):
+        die(f"❌ Wrong patch for this copy. The patch goes from {fromtxt} to {m['to']}, but this copy is "
             f"{have or 'unknown (no VERSION file)'}. Ask for a patch built from {have or 'your version'}, or a full zip.")
     names, plan, bad, conflicts = set(z.namelist()), [], [], []
     for f in m["files"]:
@@ -102,12 +104,12 @@ def main():
                 bad.append(f"{rel}: checksum mismatch (the patch is damaged or was changed)")
                 continue
         now = sha(norm(open(target, "rb").read())) if os.path.isfile(target) else None
-        if f["action"] == "add":
-            ok = now is None or now == f["sha256"]
-        elif f["action"] == "modify":
-            ok = now in (f["base_sha256"], f["sha256"])
+        bases = f.get("base_sha256")            # format 1: one checksum (or none for an add); format 2: a list, null = absent
+        bases = bases if isinstance(bases, list) else [bases]
+        if f["action"] == "delete":
+            ok = now is None or now in bases
         else:
-            ok = now in (None, f["base_sha256"])
+            ok = now == f["sha256"] or now in bases   # untouched old file, absent where the old version had none, or already the new file
         if not ok:
             conflicts.append(rel)
         plan.append((f, target, data, now))
@@ -117,7 +119,7 @@ def main():
         die("❌ Patch refused, nothing changed: these files were edited on this copy (or are not the version the patch expects):\n   "
             + "\n   ".join(conflicts) + "\n   Ask for a full zip, or re-run with --force to overwrite them (originals are kept).")
     todo = [p for p in plan if not (p[0]["action"] != "delete" and p[3] == p[0]["sha256"]) and not (p[0]["action"] == "delete" and p[3] is None)]
-    print(f"Patch {m['from']} → {m['to']} ({m['date']}): {m['subject']}")
+    print(f"Patch {fromtxt} → {m['to']} ({m['date']}): {m['subject']}")
     print(f"  {len(todo)} file(s) to write or remove, {len(plan) - len(todo)} already in place" + (f", {len(conflicts)} overwritten by --force" if conflicts else ""))
     for f, _, _, _ in todo[:25]:
         print(f"   {f['action']:7} {f['path']}")

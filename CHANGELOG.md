@@ -2,6 +2,13 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — One patch for several versions (branch `patch-multibase`)
+Priestley: "add a multi version support" (1 of 8 teammates applied the first patch, 7 did not: two versions in use, and a patch only applied on one exact version).
+- `core/scripts/make_patch.py <sha1>,<sha2> [to]`: ONE patch that fits every listed version. Format 2: `from` is a list; each file records the new checksum and every old checksum it may replace (null = absent in that version). File name `everlife-patch_<a>+<b>_to_<c>.zip`.
+- `core/scripts/apply_patch.py`: accepts format 1 and 2; the copy's VERSION must be any listed version; a file is fine when it is an untouched old file, absent where the old version had none, or already the new file; a hand-edited file is still a conflict. Old single-version patches still apply (tested with the real `2800e8d_to_40233f6` patch).
+- Phrase "Build a patch" asks for EVERY version in use. A multi-version patch needs the current `apply_patch.py` (older copies cannot read format 2): send it with the patch.
+- `core/tests/patch_test.py` takes `a,b` as <from>: 21 checks on the real versions `2800e8d,40233f6 → main`: the patch applies on both, each ends identical to a fresh install of the new version, a hand-edited file is still refused on both, a version outside the list is refused.
+
 ## 2026-11-05 — Bible sync to 1793896982-b7dc (branch `bible-sync-6466`; originals in `_originals/2026-11-05/bible-sync-6466/`)
 Priestley: "sync the bible first" (before the team's next patch). Justin moved the live bible from …215f to …6466; 25 product sections changed, the Standards did not. Restora-Z untouched (its sleep benefit lines changed to Promotes / Encourages: needs the owner's OK). All 15 product disclaimers still match.
 - **Quick-hit benefit verbs (~113 lines):** "Supports X" became Promotes / Aids / Encourages / Maintains / Fuels / Reinforces across the products. Every line carrying the old wording in the 14 skills was replaced word for word (bpc-157, epithalon, ghk-cream, glp-1, lovara, mots-c, nad, pt-141, sermorelin-ghk, sermorelin, spark, spartan, wolverine, titan-rx; 0 old lines left outside banners). ⚠ Jeremy to confirm the stronger verbs ("Fuels", "Reinforces Tendons + Ligaments").

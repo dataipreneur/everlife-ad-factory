@@ -12,7 +12,8 @@ import hashlib, json, os, shutil, subprocess, sys, zipfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.normpath(os.path.join(HERE, "..", ".."))
 WORK = os.path.abspath(sys.argv[1])
-FROM = sys.argv[2] if len(sys.argv) > 2 else "56338a6"
+FROMS = (sys.argv[2] if len(sys.argv) > 2 else "56338a6").split(",")   # one version, or several: ONE patch must fit them all
+FROM = FROMS[0]
 TO = sys.argv[3] if len(sys.argv) > 3 else "e79c3f5"
 results = []
 
@@ -60,7 +61,7 @@ def tree(d):
 shutil.rmtree(WORK, ignore_errors=True)
 os.makedirs(WORK)
 base, want = install_of(FROM, "base"), install_of(TO, "want")
-rc, out = run(sys.executable, os.path.join(REPO, "core/scripts/make_patch.py"), FROM, TO, "--out", WORK)
+rc, out = run(sys.executable, os.path.join(REPO, "core/scripts/make_patch.py"), ",".join(FROMS), TO, "--out", WORK)
 print(out.strip())
 patch = [os.path.join(WORK, f) for f in os.listdir(WORK) if f.startswith("everlife-patch_")]
 check("make_patch builds a patch", rc == 0 and len(patch) == 1, out)
@@ -151,6 +152,25 @@ patched_md = os.path.join(win, victim)
 b = open(patched_md, "rb").read()
 check("patched files keep CRLF (the next patch still matches)", b.count(b"\r\n") == b.count(b"\n") and b"\r\n" in b)
 check("VERSION keeps CRLF", b"\r\n" in open(os.path.join(win, "VERSION"), "rb").read())
+
+# every other version the patch was built for applies too, and ends identical to a fresh install of the new version
+for other in FROMS[1:]:
+    cp = install_of(other, "other_" + other)
+    rc, out = run(sys.executable, apply, patch, "--repo", cp)
+    check(f"the same patch applies on {other}", rc == 0, out)
+    check(f"{other} ends identical to a fresh install of the new version", tree(cp) == wt, str(sorted(set(tree(cp)) ^ set(wt))[:6]))
+    again = install_of(other, "other_edit_" + other)
+    mf = [f for f in manifest["files"] if f["action"] == "modify"]
+    if mf:
+        open(os.path.join(again, mf[-1]["path"]), "a").write("\nlocal edit\n")
+        rc, out = run(sys.executable, apply, patch, "--repo", again)
+        check(f"a hand-edited file is still a conflict on {other}", rc != 0 and mf[-1]["path"] in out, out)
+
+# a version that is not in the list is refused
+if len(FROMS) > 1:
+    outsider = install_of(git("rev-parse", FROM + "~1"), "outsider")
+    rc, out = run(sys.executable, apply, patch, "--repo", outsider)
+    check("a version outside the list is refused", rc != 0 and "Wrong patch" in out and FROMS[0] in out and FROMS[1] in out, out)
 
 # git copy
 os.makedirs(os.path.join(fresh, ".git"))
