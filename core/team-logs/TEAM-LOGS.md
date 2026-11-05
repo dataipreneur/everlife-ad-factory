@@ -153,5 +153,9 @@ Priestley: "Are you sure claude will log every time into those artifacts?" Loggi
   (`teamlog.py posted`)**, after the 2026-11-04 audit found 150 logged-but-unsent generations and ~250 unposted ads. Local files only. The second time it lets the turn end and shows a warning, so a session
   can never get stuck.
 - New hooks load when Claude Code starts (or after opening `/hooks` once). `core/hooks/teamlog_hook.py`, stdlib only.
+- **Hooks-installed check (2026-11-04):** a third hook, SessionStart (`teamlog_hook.py start`), warns the user at the start of a session
+  when the capture or Stop hook is missing from `~/.claude/settings.json` or points at a script that no longer exists, and
+  `core/scripts/preflight.sh` (run at Step 0 of every product skill) fails with the fix when the hooks are not installed. A machine
+  that never ran the installer has no SessionStart hook either, so the preflight line is what catches it.
 - Still not covered: work done in Creatify / Higgsfield outside Claude; and an offline machine's records wait in the pending
   file until the pages answer.

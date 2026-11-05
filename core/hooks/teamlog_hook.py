@@ -10,7 +10,10 @@
                             (decision "block"). The second time it lets the turn end and warns the user, so a session can never
                             get stuck. Local files only: no network, no tokens unless something is missing.
 
-Both read the hook payload (JSON) on stdin and stay silent for every other tool and every non-Everlife session.
+  teamlog_hook.py start     SessionStart: warns the user (never blocks) when the capture or Stop hook is missing from
+                            ~/.claude/settings.json or points at a script that no longer exists, so nobody works unprotected.
+
+All read the hook payload (JSON) on stdin and stay silent for every other tool and every non-Everlife session.
 """
 import datetime, glob, hashlib, json, os, re, sys
 
@@ -163,13 +166,33 @@ def backlog(jobs):
     return unsent, unposted
 
 
+def start(p):
+    settings = os.path.expanduser("~/.claude/settings.json")
+    try:
+        hooks = json.load(open(settings)).get("hooks", {})
+    except (OSError, ValueError):
+        hooks = {}
+    problems = []
+    for ev, mode in (("PostToolUse", "capture"), ("Stop", "stop")):
+        cmds = [x.get("command", "") for e in hooks.get(ev, []) for x in e.get("hooks", []) if "teamlog_hook.py" in x.get("command", "")]
+        if not any(c.rstrip().endswith(mode) for c in cmds):
+            problems.append(f"the {mode} hook is not installed")
+        for c in cmds:
+            m = re.search(r'"([^"]*teamlog_hook\.py)"', c)
+            if m and not os.path.exists(m.group(1)):
+                problems.append(f"the {mode} hook points at a missing script ({m.group(1)})")
+    if problems:
+        print(json.dumps({"systemMessage": "⚠ Team logs: " + "; ".join(sorted(set(problems))) + ". Paid generations will not be captured. "
+                          "Fix: bash <repo>/core/scripts/update.sh, then restart Claude Code."}))
+
+
 def main():
     try:
         p = json.load(sys.stdin)
     except ValueError:
         return
     try:
-        {"capture": capture, "stop": stop}[sys.argv[1]](p)
+        {"capture": capture, "stop": stop, "start": start}[sys.argv[1]](p)
     except Exception as e:   # a logging hook must never break the session
         print(json.dumps({"systemMessage": f"team-log hook skipped: {e}"}))
 

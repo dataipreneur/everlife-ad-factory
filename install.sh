@@ -116,6 +116,7 @@ ours = lambda e: any("core/hooks/teamlog_hook.py" in h.get("command", "") for h 
 want = {
     "PostToolUse": {"matcher": "mcp__.*|Bash", "hooks": [{"type": "command", "command": f'python3 "{script}" capture', "timeout": 10}]},
     "Stop": {"hooks": [{"type": "command", "command": f'python3 "{script}" stop', "timeout": 10}]},
+    "SessionStart": {"hooks": [{"type": "command", "command": f'python3 "{script}" start', "timeout": 10}]},
 }
 hooks = d.setdefault("hooks", {})
 before = json.dumps(hooks, sort_keys=True)
