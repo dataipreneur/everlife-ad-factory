@@ -42,7 +42,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 review highlight) and refuse a job without it. Don't type the disclaimer into copy.json. **The "ingredients" rows are ✅ benefit
 pillars, never one benefit per ingredient**: the bible allows ingredient claims only on their own ingredient, and all three are ⚠/❌
 in the pre-screen, so none are used. No offer row ("Save up to 49%" unverified). Videos keep "Titan-Rx by Everlife"; images never
-say "by Everlife". The `tiktok` CTA button fits ≈ 20 characters ("GET STARTED NOW", "FIND YOUR PLAN", "EXPLORE TITAN-RX",
+say "by Everlife". The `tiktok` CTA button fits ≈ 20 characters ("SAVE UP TO 49%", "EXPLORE TITAN-RX",
 "START DAILY SUPPORT" fit; "GET PERFORMANCE SUPPORT" is 23: use `default`/`editorial` for it).
 
 Run: `cd $T && venv/bin/python -I full_layout.py <job> <job>/out/raw.mp4 <Tag> --end 12.8 [--mirror-until <s>] [--zoom 1.2]`

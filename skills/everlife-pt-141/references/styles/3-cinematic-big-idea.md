@@ -4,7 +4,7 @@ Library folders: Movie-Peg · Wild-Creative/Surreal · Retro · New Year · Bill
 Why it works: pattern interrupts for a product people don't expect to see advertised; keep it witty and tasteful, never suggestive.
 
 ## 3A — Switch / match / spark metaphor
-- **Looks like:** a Seedance macro: a vintage light switch flipped on in a sunlit hallway; a match striking in slow motion; a compass needle swinging to a point. The product arrives in the final beat, label to camera. One Tier A line in finishing ("Awaken the Desire Response.").
+- **Looks like:** a Seedance macro: a vintage light switch flipped on in a sunlit hallway; a match striking in slow motion; a compass needle swinging to a point. The product arrives in the final beat, label to camera. One a bible reference line line in finishing ("Awaken the Desire Response.").
 - **Guardrails:** the metaphor is about desire *signaling*, never about bodies; no flames near people.
 - **Finishing:** `default` (house look) or `editorial`.
 

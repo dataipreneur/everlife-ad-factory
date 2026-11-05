@@ -1,0 +1,80 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {
+  "Break Through Weight-Loss Plateaus.": {
+   "status": "⚠ Jeremy",
+   "why": "weight-loss outcome"
+  },
+  "Up to 20% Weight Loss": {
+   "status": "⚠ Jeremy",
+   "why": "numeric outcome (Priestley: hold)"
+  },
+  "Drop the Weight and Keep It Off": {
+   "status": "⚠ Jeremy",
+   "why": "outcome + implied guarantee (Priestley: hold)"
+  },
+  "Supports Insulin Sensitivity": {
+   "status": "⚠",
+   "why": "weak in the bible and disease-adjacent: never"
+  }
+ },
+ "patterns": [],
+ "retired": [
+  {
+   "line": "Ready to Make Progress Again?",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Build Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Break the Plateau. Build Momentum.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "How Many Weeks to Reach Your Goal?",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Your Weight-Loss Reset Starts Here",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Weight-Loss Support That Fits Your Life",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "A Smarter Path to Your Goal",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Your Goal. Your Plan. Provider Guided.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Progress Without the Guesswork",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "One Simple Plan. One Clear Price.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Real Support for Your Weight-Loss Journey",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Your Next Chapter Starts Lighter",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Get Back in Control of Your Routine",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Built for Sustainable Progress",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ]
+}

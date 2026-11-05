@@ -4,7 +4,7 @@ Library folders: Product-as-Hero · Product Highlight · Pill-Product Focused ·
 Why it works: the bible's creative direction is product-led and tasteful; the spray's cyan label and the navy sublingual bottle are distinctive on their own.
 
 ## 4A — Marble still life (the bible image)
-- **Looks like:** the spray (or the navy bottle + one tablet) on a white marble ledge, baby's breath, pale blue shadow play, soft daylight. Serif Tier A line.
+- **Looks like:** the spray (or the navy bottle + one tablet) on a white marble ledge, baby's breath, pale blue shadow play, soft daylight. Serif a bible reference line line.
 - Static: batch F12. Video: Seedance slow push-in, 480p is enough.
 
 ## 4B — Spray / tablet macro

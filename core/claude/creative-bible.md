@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793897447-019b) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793905953-bc2f) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -46,7 +46,7 @@ Applies to every product
 - Disclosure is not optional. Nothing AI-generated goes live without it.
 
 #### Proof & approval
-- Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
+- Trustpilot always reads “Trustpilot logo, stars and "4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
 - Trust callouts (Trustpilot, doctor-prescribed, free shipping from pharmacy) go on 42% of graphics, not every one. “Over 100,000 happy customers” goes on 28%, with the Trustpilot bar. 30% show neither. See Standards 02 · 06.
 - Compliance questions route to Jeremy. Nothing goes live without his approval.
 
@@ -649,6 +649,67 @@ Sermorelin + GHK + L-Citrulline Malate. Attribute each claim only to its own ing
 - Supports exercise recovery
 - Supports a lean, defined physique
 
+Longevity + skin · Men · Double strength
+
+## Sermorelin GHK 1000
+
+### Who it's for
+Men who want the same 3-in-1 Sermorelin GHK formula at double strength — 1000mcg instead of the standard dose. Advertised to men only.
+
+### Creative direction
+- Lead with the differentiator: put “Double Strength” and “1000mcg” in the headline or a clear callout on every design — this is what sets it apart from standard Sermorelin GHK.
+- Talent: big, burly gym-rat men — meaty, beefy, serious lifters. Advertised to men only; no female talent. Benefit scope and ingredient list mirror standard Sermorelin GHK (Men).
+- Ingredient list reads Sermorelin, GHK, Citrulline.
+- Color: skew dark and dramatic. 70% darker, dramatic, intense; 30% lighter, dramatic, intense.
+
+Same 3-in-1 formula — growth-hormone support, skin renewal, circulation, muscle and metabolism — at double the peptide dose.
+
+### Headlines & hooks
+1. Double the Strength. One Daily Formula. [Pending approval]
+2. When Standard Isn’t Enough, Go Double Strength. [Pending approval]
+3. Twice the Peptide Dose. Same 3-in-1 Formula. [Pending approval]
+4. Now at 1000mcg — Double-Strength Sermorelin GHK. [Pending approval]
+5. The 1000mcg Upgrade to Sermorelin GHK. [Pending approval]
+6. Double-Strength Support for Growth Hormone + Lean Muscle. [Pending approval]
+7. Ready for More? Meet Double Strength. [Pending approval]
+8. Step Up to 1000mcg. [Pending approval]
+9. More Peptide. More Support. 1000mcg. [Pending approval]
+10. Serious Support, Doubled. [Pending approval]
+
+### Quick-hit benefits
+- Double-Strength Growth Hormone Support (1000mcg)
+- Promotes Lean Muscle + Performance
+- Promotes Youthful-Looking Skin & Thicker Hair
+- Fuels Daily Energy + Healthy Blood Flow
+- 3-in-1 Peptide Support at Double Strength
+- Supports Workout Pumps + Endurance
+- Aids Exercise Recovery
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+- Double-strength 1000mcg formula
+- Exclusive 3-in-1 formula
+
+### Offers & conversion
+- Save up to 47%
+
+### CTAs
+- CTA: Go Double Strength
+- CTA: Explore Sermorelin GHK 1000
+- CTA: Save Up to 47%
+- CTA: Ships Free From Pharmacy
+
+### Hard NOs
+- “Double strength” and “1000mcg” describe the dose only — never imply double the results, faster results or guaranteed outcomes.
+- Approved language: “toned” and “lean.”
+- “Safer long-term alternative to synthetic HGH” — high risk. Use “Supports natural growth hormone production.”
+- “Reduces inflammation, oxidative stress and signs of aging” — high risk. Use the skin + hair claim.
+- Say “exercise recovery,” not “muscle recovery.”
+- Plus all global Hard NOs on page 3.
+
+Approved ingredient claims: same as Sermorelin GHK (Sermorelin + GHK + L-Citrulline Malate). Attribute each claim only to its own ingredient.
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Intimate wellness
 
 ## Lovara
@@ -716,10 +777,10 @@ Additional benefits and claims for this product.
 ### More approved benefits
 - Feel More Connected
 - Enhances Sensitivity
-- Supports Warmth + ComfortWeak benefit
-- Supports Emotional ReadinessWeak benefit
-- Supports Intimate WellnessWeak benefit
-- Activates Desire PathwaysWeak benefit
+- Supports Warmth + Comfort [Weak benefit]
+- Supports Emotional Readiness [Weak benefit]
+- Supports Intimate Wellness [Weak benefit]
+- Activates Desire Pathways [Weak benefit]
 
 ### 3-in-1 formula
 
@@ -844,7 +905,7 @@ Headline bank (2 of 2)
 
 #### More approved benefits (continued)
 - Helps You Relax, Ease Stress + Lift Mood
-- Better Sleep, Better Days AheadWeak benefit
+- Better Sleep, Better Days Ahead [Weak benefit]
 
 ### 3-in-1 formula
 
@@ -976,15 +1037,15 @@ Landing pagehttps://everlifemd.com/pt141/fbLast verified Aug. 28, 2026
 - Desire Starts in the Brain
 - Helps Awaken Desire
 - Supports Sexual Motivation
-- Activates Desire SignalingWeak benefit
-- Supports Libido PathwaysWeak benefit
-- Supports Your SparkWeak benefit
-- Supports Body ResponsivenessWeak benefit
-- Supports Romantic ReadinessWeak benefit
-- Supports the Desire ResponseWeak benefit
-- Peptide-Powered Desire SupportWeak benefit
-- Supports Desire From WithinWeak benefit
-- Designed to Support DesireWeak benefit
+- Activates Desire Signaling [Weak benefit]
+- Supports Libido Pathways [Weak benefit]
+- Supports Your Spark [Weak benefit]
+- Supports Body Responsiveness [Weak benefit]
+- Supports Romantic Readiness [Weak benefit]
+- Supports the Desire Response [Weak benefit]
+- Peptide-Powered Desire Support [Weak benefit]
+- Supports Desire From Within [Weak benefit]
+- Designed to Support Desire [Weak benefit]
 
 Intimate wellness
 
@@ -1278,8 +1339,8 @@ Landing pagehttps://everlifemd.com/optima-nad/fb2-f-v3-ecxLast verified Needs LP
 
 ### More approved benefits
 - Reduces Fatigue and Brain Fog
-- Optimizes Metabolic HealthWeak benefit
-- Supports Cellular LongevityWeak benefit
+- Optimizes Metabolic Health [Weak benefit]
+- Supports Cellular Longevity [Weak benefit]
 
 Cellular wellness
 
@@ -1368,7 +1429,7 @@ Landing pagehttps://everlifemd.com/nad/fb-v2Last verified Oct. 20, 2026
 - Your Future Deserves Attention. [Weak headline]
 
 ### More approved benefits
-- Optimizes Metabolic HealthWeak benefit
+- Optimizes Metabolic Health [Weak benefit]
 
 Metabolic
 
@@ -1501,10 +1562,10 @@ Titan-Rx
 - Supports Blood Flow When It Counts
 - Helps Improve Consistency During Intimacy
 - Helps Reduce Interruptions During Intimacy
-- Supports Your Natural Physical ResponseWeak benefit
-- Helps Improve Physical ResponsivenessWeak benefit
-- Supports Responsiveness in the MomentWeak benefit
-- Supports a Stronger Physical ResponseWeak benefit
+- Supports Your Natural Physical Response [Weak benefit]
+- Helps Improve Physical Responsiveness [Weak benefit]
+- Supports Responsiveness in the Moment [Weak benefit]
+- Supports a Stronger Physical Response [Weak benefit]
 
 ### 3-in-1 formula
 
@@ -1647,8 +1708,8 @@ Landing pagehttps://everlifemd.com/glp1/fb-v2Last verified Nov. 3, 2026
 - Helps Control Cravings
 - Supports Longer-Lasting Fullness
 - Helps Reduce Snacking Urges
-- Supports Insulin SensitivityWeak benefit
-- Supports Steady Weight-Loss ProgressWeak benefit
+- Supports Insulin Sensitivity [Weak benefit]
+- Supports Steady Weight-Loss Progress [Weak benefit]
 
 Recovery
 

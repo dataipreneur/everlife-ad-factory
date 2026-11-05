@@ -60,32 +60,9 @@ LINE_KINDS = {"headline", "hook", "vo", "caption", "benefit", "end_head", "cta",
 SPOKEN = {"hook", "vo", "caption"}
 NO_REFS_OK = re.compile(r"lyria|music|voice|tts|animate_code", re.I)
 
-# Global Hard NOs a line can be checked for mechanically (CLAUDE.md gates §2-3; bible 2026-11-03). (pattern, why, video_only)
-BANNED = [
-    (r"\bget started now\b", "\"Get Started Now\" is banned as a CTA (bible 2026-11-03): lead with the offer", False),
-    (r"\b(i|i'm|i've|i'd|i'll|me|my|mine|myself)\b", "first person is a Hard NO (\"I tried\", \"my results\")", False),
-    (r"\bneedles?\b|needle-free", "never mention needles, including \"needle-free\"", False),
-    (r"\bGH\b", "spell out \"growth hormone\", never \"GH\"", False),
-    (r"ghk-cu|copper peptide", "creative says \"GHK\", never \"GHK-Cu\" / \"copper peptide\" (H2 product name only)", False),
-    (r"\b(melt\w*|burn\w*|ripped|shred\w*)\b", "no melt / burn / ripped / shred", False),
-    (r"body[- ]?composition", "never the phrase \"body composition\" anywhere: rewrite it (\"supports lean muscle\"; bible 2026-11-04)", False),
-    (r"\b(fat|skinny)\b", "no \"fat\" or \"skinny\" claims anywhere (bible 2026-11-04)", False),
-    (r"\barousal|aroused|arousing\b", "never \"arousal\" or any form of it", False),
-    (r"\ball[- ]natural\b", "never \"all natural\" for a sublingual", False),
-    (r"\bclinically (studied|backed|proven)\b", "\"clinically studied/backed\" only for a named ingredient", False),
-    (r"\b(cure|cures|treats?|prevents?)\b", "no disease claims (cure / treat / prevent)", False),
-    (r"trustpilot rating", "Trustpilot reads exactly \"Trustpilot rated 4.9 Excellent\"", False),
-    (r"\bbreaking news\b", "no \"Breaking News\" framing", False),
-    (r"\bsave\s+\d+\s*%(?!\s+compared)", "the offer reads \"Save Up to N%\" (with \"Up to\"; the product's % from its bible page)", False),
-    (r"\b(after|over|past|at|turning|under)\s+\d{2}\b|\b\d{2}\s*(\+|plus|years?|yrs?)\b|\b(twenty|thirty|forty|fifty|sixty|seventy)(-\w+)?\b",
-     "no specific ages in video scripts or captions (team video rules, 2026-11-03)", True),
-]
-WARN = [
-    (r"\bare you\b", "second-person health question with a pronoun? (pronoun-free questions are fine)"),
-    (r"\bbuilds\b", "say \"supports\", never \"builds\""),
-    (r"\bboosts?\b", "\"boost\" reads as an outcome claim: prefer \"supports\""),
-    (r"\bguarantee", "no guaranteed outcomes"),
-]
+# Global Hard NOs a line can be checked for mechanically: one copy in core/scripts/hard_nos.py (shared with the hook and the generator)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from hard_nos import BANNED, WARN  # noqa: E402
 
 
 def now():

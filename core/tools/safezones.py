@@ -29,7 +29,8 @@ FEED_MARGIN = 60
 #   ⛔ HARD LOCK (Mitansh, 2026-11-02: "you should never move the proof row outside of meta safe zone for any products
 #   across all skills, image or videos! Make it a strong requirement!"). "bottom" is REMOVED: every finisher imports this
 #   module, so any attempt to move the proof row (env EVERLIFE_PROOF_AT, copy.json "proof_at") stops the run. A product
-#   that collides with the proof row = re-roll the raw, never move the footer. The disclaimer may still sit alone at the
+#   that collides with the proof row = finish_batch.py may drop the proof row by the minimum needed, up to 20% of the height
+#   (Mitansh 2026-11-05, approved); beyond that re-roll the raw. The disclaimer may still sit alone at the
 #   very bottom (EVERLIFE_DISC_AT / product.json "disclaimer_at", 2026-10-29 rule): it is not the proof row.
 _req = os.environ.get("EVERLIFE_PROOF_AT", "safe").strip().lower() or "safe"
 if _req != "safe":

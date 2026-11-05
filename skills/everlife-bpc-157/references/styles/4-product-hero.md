@@ -5,7 +5,7 @@ Why it works: the slate vial is a distinctive object; the Premium DTC codes (`13
 
 ## 4A — Bench still life
 - **Looks like:** the vial on a chalk-dusted steel bench or a concrete block, hard side light, one long shadow; or on walnut for
-  the quiet variant. Sentence-case Tier A line. Static: batch F12 / F14. Video: Seedance slow push-in, 480p.
+  the quiet variant. Sentence-case a bible reference line line. Static: batch F12 / F14. Video: Seedance slow push-in, 480p.
 - **Guardrails:** the vial is a still object; no syringe, pen, dropper or droplets; no capsules.
 
 ## 4B — Vial / bottle macro

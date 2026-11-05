@@ -4,7 +4,7 @@ Library folders: Product-as-Hero · Product Highlight · Pill-Product Focused ·
 Why it works: the intimate-wellness gate is product-led; the matte black + chrome Titan-Rx bottle and the mirror-chrome capsule are distinctive on their own.
 
 ## 4A — Forged still life
-- **Looks like:** one capsule (hero, in front) and the bottle on black stone, gunmetal or brushed steel, one hard light, the red chevron the only colour. Bold sans Tier A line.
+- **Looks like:** one capsule (hero, in front) and the bottle on black stone, gunmetal or brushed steel, one hard light, the red chevron the only colour. Bold sans a bible reference line line.
 - Static: batch F12. Video: Seedance slow push-in, 480p is enough.
 
 ## 4B — Capsule macro

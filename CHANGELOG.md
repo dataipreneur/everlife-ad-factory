@@ -2,6 +2,140 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793905953-bc2f (automatic: `bible_pipeline.py sync`)
+Justin moved the live bible from 1793897447-019b to 1793905953-bc2f. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
+
+- ~ GLP1
+- + - Supports Insulin Sensitivity [Weak benefit]
+- + - Supports Steady Weight-Loss Progress [Weak benefit]
+- - - Supports Insulin SensitivityWeak benefit
+- - - Supports Steady Weight-Loss ProgressWeak benefit
+- ~ Global Hard NOs
+- + - Trustpilot always reads “Trustpilot logo, stars and "4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
+- - - Trustpilot always reads “Trustpilot rated 4.9 Excellent” — the same on every product. Never “Trustpilot rating” alone.
+- ~ Lovara
+- + - Supports Warmth + Comfort [Weak benefit]
+- + - Supports Emotional Readiness [Weak benefit]
+- + - Supports Intimate Wellness [Weak benefit]
+- + - Activates Desire Pathways [Weak benefit]
+- - - Supports Warmth + ComfortWeak benefit
+- - - Supports Emotional ReadinessWeak benefit
+- - - Supports Intimate WellnessWeak benefit
+- - - Activates Desire PathwaysWeak benefit
+- ~ NAD+
+- + - Optimizes Metabolic Health [Weak benefit]
+- - - Optimizes Metabolic HealthWeak benefit
+- ~ Optima-NAD+
+- + - Optimizes Metabolic Health [Weak benefit]
+- + - Supports Cellular Longevity [Weak benefit]
+- - - Optimizes Metabolic HealthWeak benefit
+- - - Supports Cellular LongevityWeak benefit
+- ~ PT-141
+- + - Activates Desire Signaling [Weak benefit]
+- + - Supports Libido Pathways [Weak benefit]
+- + - Supports Your Spark [Weak benefit]
+- + - Supports Body Responsiveness [Weak benefit]
+- + - Supports Romantic Readiness [Weak benefit]
+- + - Supports the Desire Response [Weak benefit]
+- + - Peptide-Powered Desire Support [Weak benefit]
+- + - Supports Desire From Within [Weak benefit]
+- + - Designed to Support Desire [Weak benefit]
+- - - Activates Desire SignalingWeak benefit
+- - - Supports Libido PathwaysWeak benefit
+- - - Supports Your SparkWeak benefit
+- - - Supports Body ResponsivenessWeak benefit
+- - - Supports Romantic ReadinessWeak benefit
+- - - Supports the Desire ResponseWeak benefit
+- - - Peptide-Powered Desire SupportWeak benefit
+- - - Supports Desire From WithinWeak benefit
+- - - Designed to Support DesireWeak benefit
+- ~ Restora-Z
+- + - Better Sleep, Better Days Ahead [Weak benefit]
+- - - Better Sleep, Better Days AheadWeak benefit
+- + NEW SECTION: Sermorelin GHK 1000 (48 lines)
+- ~ Titan-Rx
+- + - Supports Your Natural Physical Response [Weak benefit]
+- + - Helps Improve Physical Responsiveness [Weak benefit]
+- + - Supports Responsiveness in the Moment [Weak benefit]
+- + - Supports a Stronger Physical Response [Weak benefit]
+- - - Supports Your Natural Physical ResponseWeak benefit
+- - - Helps Improve Physical ResponsivenessWeak benefit
+- - - Supports Responsiveness in the MomentWeak benefit
+- - - Supports a Stronger Physical ResponseWeak benefit
+
+- No product copy changed (offers, CTAs, benefits, proof, hard NOs, disclaimers).
+
+## 2026-11-05 — The bible pipeline: one parser, generated extracts, the CTA gate (branch `bible-pipeline`, local)
+Mitansh: "Even a small update in the bible about a single product … that product's skill should have that updated and the next batch of ads
+should have it done. Very simple. Super robust." Survey before: all 15 hand extracts had drifted (stacked "Bible sync" banners, 7 skills still
+listing removed CTAs, briefs with stale offers: NAD 56% vs 62%, Titan-Rx "no offer" vs 49%, BPC-157 "Get Started Now").
+- `core/scripts/bible_model.py`: the ONE parser of `core/claude/creative-bible.md` (pages → who / truth / direction / headlines / quick-hits / more
+  benefits / CTAs / offers / proof / hard NOs / ingredient claims / disclaimer / landing page, badges split off; globals → discount table, variant
+  maximums, proof split, focal mix, logo widths, 24 px, shirtless cap). `core/scripts/hard_nos.py`: the mechanical Hard NOs, one copy (teamlog,
+  the generator and the hook import it).
+- `core/scripts/build_product_bibles.py`: GENERATES every skill's `references/bible.json` (offer by the highest-discount rule, `cta_default`,
+  ctas, benefits, headlines, proof, hard NOs, disclaimer, screening statuses, `retired`, product patterns) and `references/product-bible.md`
+  (product copy, screening table, verbatim section, hand notes), and rewrites `product.json` disclaimer from the bible. Idempotent; refuses a
+  bible with < 20 pages. First run = baseline (nothing NEW); later syncs flag "✅ NEW in <version>" lines for Jeremy (usable right away).
+- `core/scripts/build_product_briefs.py`: reads `bible.json` (who, truth, direction) + `references/hard-stops.md` (hand) and adds the generated
+  "Offer, CTAs and claims" block; the `_originals` fallback is gone.
+- `core/scripts/migrate_bible_extracts.py` (run once): hand pre-screen tables → `bible-screen.json` overrides / patterns / retired; hand prose →
+  `product-notes.md`; brief hard stops → `hard-stops.md`; `product.json` `bible_sections` (Men + Women for the Sermorelins); originals in
+  `_originals/2026-11-05/bible-pipeline/`. 13 prose lines that restated retired CTAs or wrong % were fixed by hand (lint found them).
+- `core/scripts/bible_sync.py`: mapping via `bible_sections`, guards (refuses a weak parse before writing), the diff via the shared parser,
+  glued badges bracketed, `--check` via the model. `core/scripts/bible_pipeline.py`: `sync` (convert → regenerate → lint → tests → report →
+  CHANGELOG; `--commit` / `--release` only on an explicit go), `regen`, `check`, `newest`. `core/scripts/product_copy.py <id>`: exact strings to paste.
+- `core/hooks/batch_hook.py` copy gate: an image prompt is refused when its CTA is not a bible CTA, when any Headline / Supporting / CTA line is
+  retired or breaks a Hard NO, when a "Save Up to N%" is not the featured discount, or when the skill's `bible.json` is behind the synced bible.
+- `core/scripts/skill_lint.py`: versions, banners, disclaimer, `bible_sections`, `bible-screen.json`, `hard-stops.md`, stale % / retired lines in
+  prose, gates' numbers vs the bible. `core/tests/bible_pipeline_test.py` (34 checks) + `batch_gate_test.py` (21).
+- Docs: `core/references/bible-sync.md` (rewritten), `everlife-team.md` phrase, `image-flow.md` §3 / §4 / §8, `ENGINE.md`, `golden-rules.md`, gates.
+
+## 2026-11-05 — Next-batch questionnaire, enforced by code (branch `world-deck-golden-flow`)
+Mitansh: "Compulsory requestionnaire after 1 batch of images is done! For that same product! Shouldn't be a memory or something, do by code."
+- `core/hooks/batch_hook.py`: once every slot of a batch is finished in both sizes, the Stop hook blocks the turn until one AskUserQuestion
+  headed `Next batch` has been asked for that product (the PostToolUse hook, now also on `AskUserQuestion`, records it in `<job>/next_asked.json`);
+  it blocks twice per session, then warns. Only the session that fired the batch's renders is asked (`renders.jsonl` now carries the session id):
+  another session's or teammate's batch on the same machine never blocks. `batch_check.py` prints whether the questionnaire is owed; a released batch owes nothing.
+- `core/references/image-flow.md` §9 + run-contract row 15; `skill_lint.py` contract tokens; `install.sh` PostToolUse matcher `mcp__.*|AskUserQuestion`;
+  `core/tests/batch_gate_test.py` 21/21 (questionnaire, session scoping, release).
+- Titan-Rx: Creatify project 03258cd8 created with its own renders (`assets/creatify.json`); batch 2 lessons. Lovara: render URLs saved.
+
+## 2026-11-05 — The Engine: global core, product briefs, variations, inspiration directions, banners gone (branch `world-deck-golden-flow`, local only)
+Mitansh: "make everything global and in core … with some exceptional variations like shirtless mode in bodybuilding products and
+ultra premium for vials … the skills should only load up the product briefs"; "Claude should recommend based on the product what
+styles to make, with Surprise me as 1st always, but super cool inspirations"; "the skills had 10 different IMPORTANT claims which
+made the system very non-deterministic"; "unlimited mode is now finished".
+- `core/references/ENGINE.md`: the map (global / per product / variations). `core/references/golden-rules.md`: the one copy of the
+  rules every skill used to restate. `core/references/variations/`: vial-product, intimacy-tasteful, womens-palette, peptide-stack,
+  two-forms, compounded-glp1 (+ hardcore-men, ultra-premium already in core). `product.json` → `"variations"` on all 15 products.
+- `core/scripts/build_product_briefs.py`: every skill's `references/product-brief.md` (who / direction / variations / facts / hard
+  stops kept verbatim / its references); `image-batch.md` is a 5-line stub.
+- `core/references/world-deck/INSPIRATIONS.md`: direction seeds per product family; the image question = how many · **direction
+  (🎲 Surprise me first, then three product-tailored pitches)** · who's in them · form. `deal_worlds.py --prefer` follows the
+  chosen direction; reads variations (hardcore tag, intimacy filter incl. every bed world, vial ultra-premium bias, women's accents).
+- `core/scripts/strip_skill_banners.py`: all rule banners (4–7 per skill, 10 distinct) and the per-skill "Golden rules" lists
+  replaced by one Engine block; video steps untouched. Unlimited mode removed from 43 places. Lint: 0 errors, 4 warnings.
+
+## 2026-11-05 — World Deck + golden image flow: every product skill rebuilt from the Restora-Z 2nd batch (branch `world-deck-golden-flow`, originals in `_originals/2026-11-05/image-skill-rebuild/`)
+Mitansh: the Restora-Z batches of 10-27/29 were the bar ("comic book, newspapers and what not"); every later skill got flatter.
+Cause found: the 92 per-product references were generalised into 13 shared layout folders on 10-28 ("layout only, never the
+theme"), rules were stacked as banners on top of the creative text, and image setups grew to 8 questions in two rounds.
+- **World Deck:** `core/references/world-deck/worlds.json` + `WORLDS.md`: 132 worlds in 10 families extracted from the 235
+  batch-2 ads (local copy `~/Everlife-Creative/references/restora-z-2nd-batch-2026-10-29/`, downloaded from Figma), each with a
+  look, type hint, product placement, per-family translation and compliance flags.
+- **Dealer:** `core/scripts/deal_worlds.py --product X --n N --audience A`: N slots, no world repeated in the batch or the
+  product's last 3 batches (`~/Everlife-Creative/world-ledger.jsonl`), ≤2 per family, distinct type/accent/placement, focal
+  50/25/25 (75/25 no-pill), proof 42/28/30, hand-held ≤20%, hardcore 40% of men's slots, personas, both ratios.
+- **Golden flow:** `core/references/image-flow.md`: one question → deal → write from the slot → 9:16 AND 4:5 in one run →
+  finish in code → QA → show. Bare minimums kept (both sizes, Claude-run finishing). Rules stay in the gates + code.
+- **15 skills rebuilt** (`core/scripts/rebuild_image_skills.py`): `references/image-batch.md` = pointer + product §0 copy rules
+  (kept verbatim) + product facts + its references (~55 lines, was 150–290); SKILL.md image banners removed, Step 1 = one
+  question for images, video setup kept verbatim (videos untouched). PT-141 §0 lost two example lines cloned from Sermorelin.
+- **Lint:** `core/scripts/skill_lint.py`: same flow in every skill, no stale numbers / banned tools / expired routes, disclaimer
+  present. Result: 0 errors, 7 warnings (Epithalon, GHK Cream, Restora-Z, Titan-Rx have no winners/team-refs yet; BPC-157 still
+  asks the expired Unlimited-mode question in its video steps).
+
 ## 2026-11-05 — One patch for several versions (branch `patch-multibase`)
 Priestley: "add a multi version support" (1 of 8 teammates applied the first patch, 7 did not: two versions in use, and a patch only applied on one exact version).
 - `core/scripts/make_patch.py <sha1>,<sha2> [to]`: ONE patch that fits every listed version. Format 2: `from` is a list; each file records the new checksum and every old checksum it may replace (null = absent in that version). File name `everlife-patch_<a>+<b>_to_<c>.zip`.

@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Wolverine Stack ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
  "id": "wolverine",
  "name": "Wolverine Stack",
+ "bible_sections": [
+  "Wolverine Stack (BPC-157/TB500)"
+ ],
  "renders": {
   "bottle": "wolverine_bottle.png",
   "pill": null
@@ -34,6 +37,11 @@
  },
  "disclaimer_at": "bottom",
  "end_card_safe_shift": true,
- "bible_section": "Wolverine Stack (BPC-157/TB500)",
- "_bible_status": "Bible un-swapped 2026-11-02 (version 1793642193-f927): this skill uses its own page."
+ "_bible_status": "Bible un-swapped 2026-11-02 (version 1793642193-f927): this skill uses its own page.",
+ "variations": [
+  "hardcore-men",
+  "vial-product",
+  "peptide-stack"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

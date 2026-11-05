@@ -15,5 +15,5 @@ no snack-shaming, no "bad" food. No drug-brand look-alikes (Ozempic / Wegovy / M
 4. ABSURD ESCALATION · Blank price tags multiply on the fridge (no readable numbers), one swipe leaves a single clean card. Bridge: "One Price, No Surprise Increases".
 5. POV · From inside the fridge: the door opens, a calm face, a hand takes a water bottle, the door closes. Bridge: "Supports Appetite Regulation".
 6. INTERRUPTION · A kitchen timer rings at 0.0 s mid-afternoon; she switches it off and keeps working, unbothered. Bridge: "Stop Fighting Hunger All Day".
-7. MISDIRECTION · Cooking-show open ("Today's recipe…") swerves into a calm plan on the fridge and the vial on the counter. Bridge: "One Simple Plan. One Clear Price."
-8. STREET · Daylight ambush: "What's the plan?" Pronoun-free answers, bible lines only ("Provider-guided from home", "One price"). Bridge: "Your Goal. Your Plan. Provider Guided."
+7. MISDIRECTION · Cooking-show open ("Today's recipe…") swerves into a calm plan on the fridge and the vial on the counter. Bridge: a current "one price" bible headline (`product_copy.py glp-1`).
+8. STREET · Daylight ambush: "What's the plan?" Pronoun-free answers, bible lines only ("Provider-guided from home", "One price"). Bridge: a current "provider-guided" bible headline (`product_copy.py glp-1`).

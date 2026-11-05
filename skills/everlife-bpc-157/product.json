@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. BPC-157 has ONE image on file (Mitansh, 2026-10-29): the compounded Rx vial render (label 3MG/ML, 5ML). The capsule form has no approved image and is out of scope until one exists. DISCLAIMER: the PT-141 wording, confirmed by Mitansh 2026-10-29 for BPC-157 (not in the docx or the bible); Jeremy to sign off.",
  "id": "bpc-157",
  "name": "BPC-157",
+ "bible_sections": [
+  "BPC-157"
+ ],
  "renders": {
   "bottle": "bpc157_vial.png",
   "pill": null
@@ -39,5 +42,10 @@
   "label": "wraps the curved glass, EVERLIFE / BPC-157 / 3MG/ML / RX ONLY / 5ML",
   "never": "syringe, needle, pen, dropper, droplets, capsules, pills, tablets, a second vial",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
- }
+ },
+ "variations": [
+  "hardcore-men",
+  "vial-product"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

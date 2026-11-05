@@ -1,0 +1,374 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "pt-141",
+ "name": "PT-141",
+ "sections": [
+  "PT-141"
+ ],
+ "category": "Intimate wellness",
+ "who": "Adults 30–55 who want non-hormonal, on-demand desire support.",
+ "truth": "Brain-based, non-hormonal desire support designed around desire signaling and on-demand intimate readiness.",
+ "direction": [
+  "Keep it tasteful — product imagery led, no bedroom scenes.",
+  "Video framing stays shoulder-up."
+ ],
+ "offer": {
+  "pct": 59,
+  "status": "ok",
+  "source": "Discount to feature, by product",
+  "cta": "Save Up to 59%",
+  "lines": [
+   "Save up to 23% (nasal spray)",
+   "Save up to 59% (sublingual)"
+  ],
+  "variants": {
+   "nasal spray": 23,
+   "sublingual": 59
+  }
+ },
+ "cta_default": "Save Up to 59%",
+ "cta_price": "PT-141 for $2.00/day",
+ "ctas": [
+  "Explore PT-141",
+  "Save Up to 59%",
+  "Start Desire Support",
+  "PT-141 for $2.00/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Brain-Based Desire",
+  "Promotes On-Demand Desire",
+  "Non-Hormonal Desire Support",
+  "Encourages Intimate Readiness",
+  "Supports Central Desire Pathways"
+ ],
+ "benefits_more": [
+  {
+   "text": "Desire Support on Your Schedule",
+   "badges": []
+  },
+  {
+   "text": "Supports Mind-Body Responsiveness",
+   "badges": []
+  },
+  {
+   "text": "Desire Starts in the Brain",
+   "badges": []
+  },
+  {
+   "text": "Helps Awaken Desire",
+   "badges": []
+  },
+  {
+   "text": "Supports Sexual Motivation",
+   "badges": []
+  },
+  {
+   "text": "Activates Desire Signaling",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Libido Pathways",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Your Spark",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Body Responsiveness",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Romantic Readiness",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports the Desire Response",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Peptide-Powered Desire Support",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Desire From Within",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Designed to Support Desire",
+   "badges": [
+    "Weak benefit"
+   ]
+  }
+ ],
+ "headlines": [
+  {
+   "text": "Low Desire Isn’t in Your Head. It’s in Your Chemistry.",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "Your Body Changed. Your Desire Doesn’t Have to Disappear.",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "Low Libido? Support Desire Where It Starts",
+   "badges": [
+    "Pending approval"
+   ],
+   "page": "PT-141"
+  },
+  {
+   "text": "It Was Never Just Physical",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "More Than Blood Flow",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "Brain-Based Sexual Health Support",
+   "badges": [
+    "Pending approval"
+   ],
+   "page": "PT-141"
+  },
+  {
+   "text": "Sexual Wellness Starts in the Brain",
+   "badges": [
+    "Pending approval"
+   ],
+   "page": "PT-141"
+  },
+  {
+   "text": "Some Nights Aren’t Planned.",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "Made for Moments, Not Calendars",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "Awaken the Desire Response.",
+   "badges": [],
+   "page": "PT-141"
+  },
+  {
+   "text": "Spark, on Your Schedule",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "PT-141"
+  },
+  {
+   "text": "Spark, on Your Terms",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "PT-141"
+  },
+  {
+   "text": "A Different Pathway Entirely",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "PT-141"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 23% (nasal spray)",
+  "Save up to 59% (sublingual)"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "Clinician-guided care",
+  "Personalized treatment",
+  "Transparent, all-in-one pricing"
+ ],
+ "hard_nos": [
+  "No beds or bedroom scenes.",
+  "Never use “arousal” or any form of it (“aroused,” “arousing”).",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/pt141/fb",
+ "last_verified": "Aug. 28, 2026",
+ "field_badges": {},
+ "screen": {
+  "low libido? support desire where it starts": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "brain-based sexual health support": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "sexual wellness starts in the brain": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "spark, on your schedule": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "spark, on your terms": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "a different pathway entirely": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "activates desire signaling": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports libido pathways": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports your spark": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports body responsiveness": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports romantic readiness": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports the desire response": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "peptide-powered desire support": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports desire from within": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "designed to support desire": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  }
+ },
+ "first_seen": {
+  "a different pathway entirely": "baseline",
+  "activates desire signaling": "baseline",
+  "awaken the desire response.": "baseline",
+  "brain-based sexual health support": "baseline",
+  "clinician-guided care": "baseline",
+  "designed to support desire": "baseline",
+  "desire starts in the brain": "baseline",
+  "desire support on your schedule": "baseline",
+  "encourages intimate readiness": "baseline",
+  "explore pt-141": "baseline",
+  "helps awaken desire": "baseline",
+  "it was never just physical": "baseline",
+  "low desire isn't in your head. it's in your chemistry.": "baseline",
+  "low libido? support desire where it starts": "baseline",
+  "made for moments, not calendars": "baseline",
+  "more than blood flow": "baseline",
+  "non-hormonal desire support": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "peptide-powered desire support": "baseline",
+  "personalized treatment": "baseline",
+  "promotes on-demand desire": "baseline",
+  "pt-141 for $2.00/day": "baseline",
+  "save up to 23% (nasal spray)": "baseline",
+  "save up to 59%": "baseline",
+  "save up to 59% (sublingual)": "baseline",
+  "sexual wellness starts in the brain": "baseline",
+  "ships free from pharmacy": "baseline",
+  "some nights aren't planned.": "baseline",
+  "spark, on your schedule": "baseline",
+  "spark, on your terms": "baseline",
+  "start desire support": "baseline",
+  "supports body responsiveness": "baseline",
+  "supports brain-based desire": "baseline",
+  "supports central desire pathways": "baseline",
+  "supports desire from within": "baseline",
+  "supports libido pathways": "baseline",
+  "supports mind-body responsiveness": "baseline",
+  "supports romantic readiness": "baseline",
+  "supports sexual motivation": "baseline",
+  "supports the desire response": "baseline",
+  "supports your spark": "baseline",
+  "transparent, all-in-one pricing": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "your body changed. your desire doesn't have to disappear.": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Gentle on the Vascular System",
+   "why": "removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate"
+  },
+  {
+   "line": "Helps Wake Up the Want",
+   "why": "removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms"
+  },
+  {
+   "line": "Sublingual or Nasal Spray Desire Support",
+   "why": "removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms"
+  },
+  {
+   "line": "Support Your Spark",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Find Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [
+  {
+   "re": "\\b(ed|erectile|performance|viagra|instant|ignite)\\b",
+   "status": "❌",
+   "why": "outside PT-141's approved scope (Spark's \"ED\" headlines are Pending there, not here)"
+  },
+  {
+   "re": "\\b(hormone\\-free\\ fix|cure|treat\\ low\\ libido)\\b",
+   "status": "❌",
+   "why": "disease/treatment claim"
+  },
+  {
+   "re": "\\b(arousal|aroused|arousing)\\b",
+   "status": "❌",
+   "why": "bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”)."
+  }
+ ],
+ "extra": {}
+}

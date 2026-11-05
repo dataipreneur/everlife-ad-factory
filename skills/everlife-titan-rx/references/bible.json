@@ -1,0 +1,318 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "titan-rx",
+ "name": "Titan-Rx",
+ "sections": [
+  "Titan-Rx"
+ ],
+ "category": "Sexual performance",
+ "who": "Men 40–65+ who want daily performance support without planning around a pill.",
+ "truth": "Titan-Rx",
+ "direction": [
+  "Talent: rugged, strong and unmistakably masculine — a serious gym-goer with a hardcore training feel.",
+  "Headlines and/or benefits must make clear, fast, who it’s for and what it does: Titan-Rx is daily sexual-performance / ED support for men. A viewer should grasp the category in under two seconds — never leave it as vague “performance.”"
+ ],
+ "offer": {
+  "pct": 49,
+  "status": "ok",
+  "source": "CTA",
+  "cta": "Save Up to 49%",
+  "lines": [
+   "Save up to 49%"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Save Up to 49%",
+ "cta_price": "Titan-Rx for $1.50/day",
+ "ctas": [
+  "Get Performance Support",
+  "Explore Titan-Rx",
+  "Save Up to 49%",
+  "Start Daily Support",
+  "Titan-Rx for $1.50/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Daily Performance",
+  "Promotes Circulation + Firmness",
+  "Supports Stamina + Responsiveness",
+  "Supports Everyday Readiness",
+  "3-in-1 Performance Formula",
+  "Helps Maintain Firmness During Intimacy",
+  "Once-Daily, No Timing Required",
+  "Encourages Confidence + Control"
+ ],
+ "benefits_more": [
+  {
+   "text": "Helps Sustain Intimate Performance",
+   "badges": []
+  },
+  {
+   "text": "Supports Blood Flow When It Counts",
+   "badges": []
+  },
+  {
+   "text": "Helps Improve Consistency During Intimacy",
+   "badges": []
+  },
+  {
+   "text": "Helps Reduce Interruptions During Intimacy",
+   "badges": []
+  },
+  {
+   "text": "Supports Your Natural Physical Response",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Helps Improve Physical Responsiveness",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Responsiveness in the Moment",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports a Stronger Physical Response",
+   "badges": [
+    "Weak benefit"
+   ]
+  }
+ ],
+ "headlines": [
+  {
+   "text": "Confidence for Men With ED",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Daily ED Support, Doctor Prescribed",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Be Ready When She Is Ready",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "When It’s Go Time, Be Ready",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Erectile Health, Handled",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "3-in-1 Daily ED Treatment",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Your Key to a Long Lasting Night",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Real Men Take Titan-Rx",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Good for You. Great for Her.",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "An Upgrade She’ll Notice",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Confidence. Control. Titan-Rx.",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Don’t Sit This One Out",
+   "badges": [],
+   "page": "Titan-Rx"
+  },
+  {
+   "text": "Keep the Momentum Going",
+   "badges": [
+    "Weak headline"
+   ],
+   "page": "Titan-Rx"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 49%"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "Exclusive 3-in-1 daily formula",
+  "Doctor-guided prescription"
+ ],
+ "hard_nos": [
+  "Never use “arousal” or any form of it (“aroused,” “arousing”).",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {
+  "Tadalafil": [
+   "Supports stronger blood flow and all-day readiness"
+  ],
+  "Vardenafil": [
+   "Enhances firmness and performance"
+  ],
+  "L-Arginine": [
+   "Boosts circulation and stamina"
+  ]
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/titan-rx/fb-m",
+ "last_verified": "Page content crawled; seasonal offer needs re-check",
+ "field_badges": {},
+ "screen": {
+  "confidence for men with ed": {
+   "status": "⚠ Jeremy",
+   "why": "Pending approval in the bible; \"ED\" names a condition (reads close to a disease claim). Not offered in setup"
+  },
+  "daily ed support, doctor prescribed": {
+   "status": "⚠ Jeremy",
+   "why": "same"
+  },
+  "erectile health, handled": {
+   "status": "❌",
+   "why": "\"Erectile\" is out by default (global brief: no ED / erectile wording); pending in the bible. Only if Jeremy approves in writing"
+  },
+  "3-in-1 daily ed treatment": {
+   "status": "❌",
+   "why": "\"Treatment\" of a condition = disease claim (global Hard NO: no cure/treat/prevent), on top of \"ED\""
+  },
+  "your key to a long lasting night": {
+   "status": "⚠ Jeremy",
+   "why": "Approved in the bible, but \"long lasting\" reads as a duration/outcome promise and \"night\" pulls the scene to a bedroom"
+  },
+  "keep the momentum going": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak headline]"
+  },
+  "supports your natural physical response": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "helps improve physical responsiveness": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports responsiveness in the moment": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "supports a stronger physical response": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "exclusive 3-in-1 daily formula": {
+   "status": "⚠ Jeremy",
+   "why": "\"Exclusive\" is an unsourced superiority word"
+  },
+  "supports stronger blood flow and all-day readiness": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Tadalafil); never attributed to the product"
+  },
+  "enhances firmness and performance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Vardenafil); never attributed to the product"
+  },
+  "boosts circulation and stamina": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (L-Arginine); never attributed to the product"
+  }
+ },
+ "first_seen": {
+  "3-in-1 daily ed treatment": "baseline",
+  "3-in-1 performance formula": "baseline",
+  "an upgrade she'll notice": "baseline",
+  "be ready when she is ready": "baseline",
+  "boosts circulation and stamina": "baseline",
+  "confidence for men with ed": "baseline",
+  "confidence. control. titan-rx.": "baseline",
+  "daily ed support, doctor prescribed": "baseline",
+  "doctor-guided prescription": "baseline",
+  "don't sit this one out": "baseline",
+  "encourages confidence + control": "baseline",
+  "enhances firmness and performance": "baseline",
+  "erectile health, handled": "baseline",
+  "exclusive 3-in-1 daily formula": "baseline",
+  "explore titan-rx": "baseline",
+  "get performance support": "baseline",
+  "good for you. great for her.": "baseline",
+  "helps improve consistency during intimacy": "baseline",
+  "helps improve physical responsiveness": "baseline",
+  "helps maintain firmness during intimacy": "baseline",
+  "helps reduce interruptions during intimacy": "baseline",
+  "helps sustain intimate performance": "baseline",
+  "keep the momentum going": "baseline",
+  "once-daily, no timing required": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes circulation + firmness": "baseline",
+  "real men take titan-rx": "baseline",
+  "save up to 49%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "start daily support": "baseline",
+  "supports a stronger physical response": "baseline",
+  "supports blood flow when it counts": "baseline",
+  "supports daily performance": "baseline",
+  "supports everyday readiness": "baseline",
+  "supports responsiveness in the moment": "baseline",
+  "supports stamina + responsiveness": "baseline",
+  "supports stronger blood flow and all-day readiness": "baseline",
+  "supports your natural physical response": "baseline",
+  "titan-rx for $1.50/day": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "when it's go time, be ready": "baseline",
+  "your key to a long lasting night": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Real Men Take TitanRx",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Confidence. Control. Titan Rx.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Find Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [
+  {
+   "re": "\\b(arousal|aroused|arousing)\\b",
+   "status": "❌",
+   "why": "bible Hard NO (2026-11-02)"
+  },
+  {
+   "re": "\\b(ed|erectile)\\b",
+   "status": "❌",
+   "why": "global; \"ED\" only inside a ⏳ headline Jeremy approves"
+  }
+ ],
+ "extra": {}
+}

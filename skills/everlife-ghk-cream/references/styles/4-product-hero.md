@@ -6,7 +6,7 @@ Why it works: premium by construction; the default for GHK cream statics (Mitans
 
 ## 4A — Vanity still life
 - **Looks like:** the bottle upright on travertine or a beige linen runner, blush silk folds, soft morning daylight, one real shadow.
-  Serif Tier A line.
+  Serif a bible reference line line.
 - Static: batch F12. Video: Seedance slow push-in, 480p is enough.
 
 ## 4B — Pump macro

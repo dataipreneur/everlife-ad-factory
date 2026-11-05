@@ -18,7 +18,7 @@ What Dave punishes (from his critique of the first PT-141 video, 2026-10-28):
   → say what it means in the bible's own plain lines: "Desire starts in the brain." / "More than blood flow." / "Not a hormone." Never name
   the competitors he's thinking of; answer the comparison with the mechanism line.
 - **A cartoon selling a prescription.** "Zero idea why a cartoon is selling me a real prescription drug, or what it costs." → the real
-  product render, the real pharmacy framing (Doctor Prescribed, Ships Free From Pharmacy), "Save up to 23%". Animation only as a
+  product render, the real pharmacy framing (Doctor Prescribed, Ships Free From Pharmacy), the offer CTA from `references/bible.json`. Animation only as a
   10-second pattern interrupt that lands on the real bottle.
 - **Vague timing words.** "I have zero idea how fast 'on your timing' means." → "on demand" is the bible's word; show the moment
   (an unplanned Tuesday) rather than promise a speed. Never a number of minutes.
@@ -42,6 +42,6 @@ What Maya punishes:
 2. **Plain English:** every claim word is explained by the scene or a bible line; no jargon stack.
 3. **Not scammy:** real product, real pharmacy proof, no hype words, no timing numbers, nothing that sounds like a loophole.
 4. **Couch-safe:** nothing Dave hides from his wife, nothing Maya hides from a colleague.
-5. **Worth a click:** the end card or last line answers "what do I do now" (a bible CTA) and "what's it cost" (Save up to 23%).
+5. **Worth a click:** the end card or last line answers "what do I do now" (a bible CTA) and "what's it cost" (the offer CTA from `references/bible.json`).
 
 Write the critique honestly. If Dave wouldn't click, say so and fix the concept before showing it.

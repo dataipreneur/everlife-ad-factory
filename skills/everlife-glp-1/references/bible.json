@@ -1,0 +1,320 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "glp-1",
+ "name": "GLP-1",
+ "sections": [
+  "GLP1"
+ ],
+ "category": "Weight management",
+ "who": "Adults 30–60 managing weight who want predictable pricing and clinician guidance.",
+ "truth": "All audiences",
+ "direction": [
+  "Label and pages must read “compounded semaglutide” / “compounded tirzepatide.”",
+  "Show both vials (semaglutide and tirzepatide) by default. If only one vial is shown, it must be tirzepatide.",
+  "Never show semaglutide on its own.",
+  "Use “GLP-1” as the umbrella term in headers and titles.",
+  "Every ad says “one price” or “no surprise price increases.”"
+ ],
+ "offer": {
+  "pct": 83,
+  "status": "ok",
+  "source": "Discount to feature, by product",
+  "cta": "Save Up to 83%",
+  "lines": [
+   "Up to 83% off (semaglutide); up to 70% off (tirzepatide)",
+   "One predictable price"
+  ],
+  "variants": {
+   "semaglutide": 83,
+   "tirzepatide": 70
+  }
+ },
+ "cta_default": "Save Up to 83%",
+ "cta_price": "GLP-1 for $2.50/day",
+ "ctas": [
+  "Start Weight Support",
+  "Explore GLP-1",
+  "Save Up to 83%",
+  "Check Your Options",
+  "GLP-1 for $2.50/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Appetite Regulation",
+  "Helps Reduce Food Noise",
+  "Supports Healthy Weight Management",
+  "Promotes Healthy Metabolism",
+  "One Price, No Surprise Increases",
+  "Provider-Guided From Home"
+ ],
+ "benefits_more": [
+  {
+   "text": "Up to 20% Weight Loss",
+   "badges": []
+  },
+  {
+   "text": "Helps Control Cravings",
+   "badges": []
+  },
+  {
+   "text": "Supports Longer-Lasting Fullness",
+   "badges": []
+  },
+  {
+   "text": "Helps Reduce Snacking Urges",
+   "badges": []
+  },
+  {
+   "text": "Supports Insulin Sensitivity",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Supports Steady Weight-Loss Progress",
+   "badges": [
+    "Weak benefit"
+   ]
+  }
+ ],
+ "headlines": [
+  {
+   "text": "Why Willpower Was Never the Problem.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Still Thinking About Your Next Meal?",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Hungry All the Time? There’s a Reason.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "What If Hunger Wasn’t Running the Show?",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Quiet the Cravings. Take Back Control.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Stop Fighting Hunger All Day",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "The Food Noise Stops Here.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Less Food Noise. More Control.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Tried Everything Else? Start Here.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Your Appetite, Finally on Your Side.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Turn Down the Food Noise",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Take Control of Your Appetite",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Imagine Not Fighting Cravings All Day.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "When Dieting Isn’t Enough",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Make Hunger Feel Manageable Again",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "A Calmer Appetite Changes Everything.",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Drop the Weight and Keep It Off",
+   "badges": [],
+   "page": "GLP1"
+  },
+  {
+   "text": "Break Through Weight-Loss Plateaus.",
+   "badges": [],
+   "page": "GLP1"
+  }
+ ],
+ "offer_lines": [
+  "Up to 83% off (semaglutide); up to 70% off (tirzepatide)",
+  "One predictable price"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "Provider-guided weight-loss treatment from home"
+ ],
+ "hard_nos": [
+  "Never say semaglutide or tirzepatide without “compounded.”",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions for illustrative advertising purposes. Not actual patients or providers. Individual results may vary. Doctor-prescribed compounded medication. Compounded medications are not FDA-approved.",
+ "landing_page": "https://everlifemd.com/glp1/fb-v2",
+ "last_verified": "Nov. 3, 2026",
+ "field_badges": {},
+ "screen": {
+  "drop the weight and keep it off": {
+   "status": "⚠ Jeremy",
+   "why": "outcome + implied guarantee (Priestley: hold)"
+  },
+  "break through weight-loss plateaus.": {
+   "status": "⚠ Jeremy",
+   "why": "weight-loss outcome"
+  },
+  "up to 20% weight loss": {
+   "status": "⚠ Jeremy",
+   "why": "numeric outcome (Priestley: hold)"
+  },
+  "supports insulin sensitivity": {
+   "status": "⚠",
+   "why": "weak in the bible and disease-adjacent: never"
+  },
+  "supports steady weight-loss progress": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  }
+ },
+ "first_seen": {
+  "a calmer appetite changes everything.": "baseline",
+  "break through weight-loss plateaus.": "baseline",
+  "check your options": "baseline",
+  "drop the weight and keep it off": "baseline",
+  "explore glp-1": "baseline",
+  "glp-1 for $2.50/day": "baseline",
+  "helps control cravings": "baseline",
+  "helps reduce food noise": "baseline",
+  "helps reduce snacking urges": "baseline",
+  "hungry all the time? there's a reason.": "baseline",
+  "imagine not fighting cravings all day.": "baseline",
+  "less food noise. more control.": "baseline",
+  "make hunger feel manageable again": "baseline",
+  "one predictable price": "baseline",
+  "one price, no surprise increases": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes healthy metabolism": "baseline",
+  "provider-guided from home": "baseline",
+  "provider-guided weight-loss treatment from home": "baseline",
+  "quiet the cravings. take back control.": "baseline",
+  "save up to 83%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "start weight support": "baseline",
+  "still thinking about your next meal?": "baseline",
+  "stop fighting hunger all day": "baseline",
+  "supports appetite regulation": "baseline",
+  "supports healthy weight management": "baseline",
+  "supports insulin sensitivity": "baseline",
+  "supports longer-lasting fullness": "baseline",
+  "supports steady weight-loss progress": "baseline",
+  "take control of your appetite": "baseline",
+  "the food noise stops here.": "baseline",
+  "tried everything else? start here.": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "turn down the food noise": "baseline",
+  "up to 20% weight loss": "baseline",
+  "up to 83% off (semaglutide); up to 70% off (tirzepatide)": "baseline",
+  "what if hunger wasn't running the show?": "baseline",
+  "when dieting isn't enough": "baseline",
+  "why willpower was never the problem.": "baseline",
+  "your appetite, finally on your side.": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Ready to Make Progress Again?",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Build Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Break the Plateau. Build Momentum.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "How Many Weeks to Reach Your Goal?",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Your Weight-Loss Reset Starts Here",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Weight-Loss Support That Fits Your Life",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "A Smarter Path to Your Goal",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Your Goal. Your Plan. Provider Guided.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Progress Without the Guesswork",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "One Simple Plan. One Clear Price.",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Real Support for Your Weight-Loss Journey",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Your Next Chapter Starts Lighter",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Get Back in Control of Your Routine",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  },
+  {
+   "line": "Built for Sustainable Progress",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

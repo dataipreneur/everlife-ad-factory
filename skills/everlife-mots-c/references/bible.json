@@ -1,0 +1,190 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "mots-c",
+ "name": "MOTS-c",
+ "sections": [
+  "MOTS-c"
+ ],
+ "category": "Metabolic",
+ "who": "Active adults 30–55 focused on mitochondrial support, energy and endurance.",
+ "truth": "",
+ "direction": [],
+ "offer": {
+  "pct": 40,
+  "status": "placeholder",
+  "source": "CTA",
+  "cta": "",
+  "lines": [
+   "Save up to 40%",
+   "Product-specific offer"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Ships Free From Pharmacy",
+ "cta_price": "MOTS-c for $5.75/day",
+ "ctas": [
+  "Explore MOTS-c",
+  "Save Up to 40%",
+  "Fuel Cellular Energy",
+  "Start Metabolic Support",
+  "MOTS-c for $5.75/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Mitochondrial Energy",
+  "Promotes Healthy Metabolism",
+  "Supports Glucose Metabolism",
+  "Fuels Endurance"
+ ],
+ "benefits_more": [],
+ "headlines": [
+  {
+   "text": "Energy That Lasts the Whole Day.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Steady Energy Without the Crash.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Go Longer. Recover Quicker.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "More Energy, Down to the Cellular Level.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Train Longer. Fatigue Later.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Fuel Your Mitochondria. Feel the Difference.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Endurance for the Long Haul.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Metabolism Starts Inside the Cell",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Power Your Cells. Power Your Day.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Train the Metabolism, Not the Hype",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Cellular Energy Meets Metabolic Health",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Support the Engine Behind Energy",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Give Metabolism More Cellular Support",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Support Your Metabolism From the Inside Out.",
+   "badges": [],
+   "page": "MOTS-c"
+  },
+  {
+   "text": "Metabolic Support, Backed by Your Mitochondria.",
+   "badges": [],
+   "page": "MOTS-c"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 40%",
+  "Product-specific offer"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers"
+ ],
+ "hard_nos": [
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "Current LP: [PLACEHOLDER]",
+ "last_verified": "[PLACEHOLDER]",
+ "field_badges": {},
+ "screen": {
+  "train the metabolism, not the hype": {
+   "status": "⚠ Jeremy",
+   "why": "Pending; \"train the metabolism\" can read as a weight/body promise"
+  },
+  "supports glucose metabolism": {
+   "status": "⚠ Jeremy",
+   "why": "Close to blood-sugar / diabetes territory; only with explicit approval, never with disease words"
+  },
+  "product-specific offer": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  }
+ },
+ "first_seen": {
+  "cellular energy meets metabolic health": "baseline",
+  "endurance for the long haul.": "baseline",
+  "energy that lasts the whole day.": "baseline",
+  "explore mots-c": "baseline",
+  "fuel cellular energy": "baseline",
+  "fuel your mitochondria. feel the difference.": "baseline",
+  "fuels endurance": "baseline",
+  "give metabolism more cellular support": "baseline",
+  "go longer. recover quicker.": "baseline",
+  "metabolic support, backed by your mitochondria.": "baseline",
+  "metabolism starts inside the cell": "baseline",
+  "more energy, down to the cellular level.": "baseline",
+  "mots-c for $5.75/day": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "power your cells. power your day.": "baseline",
+  "product-specific offer": "baseline",
+  "promotes healthy metabolism": "baseline",
+  "save up to 40%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "start metabolic support": "baseline",
+  "steady energy without the crash.": "baseline",
+  "support the engine behind energy": "baseline",
+  "support your metabolism from the inside out.": "baseline",
+  "supports glucose metabolism": "baseline",
+  "supports mitochondrial energy": "baseline",
+  "train longer. fatigue later.": "baseline",
+  "train the metabolism, not the hype": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  },
+  {
+   "line": "Support Your Metabolism",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

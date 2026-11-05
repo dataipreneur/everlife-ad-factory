@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only: change values here, never in tool code. disclaimer = the bible's ad disclaimer, verbatim.",
  "id": "restora-z",
  "name": "Restora-Z",
+ "bible_sections": [
+  "Restora-Z"
+ ],
  "renders": {
   "bottle": "rz_bottle.png",
   "pill": "rz_capsule.png"
@@ -48,5 +51,7 @@
   "label": "wraps the curved bottle in perspective",
   "never": "glass orbs or icons instead of the real tablets, a broken product name",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
- }
+ },
+ "variations": [],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

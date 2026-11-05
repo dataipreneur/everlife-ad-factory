@@ -2,7 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Titan-rx ad disclaimer, verbatim. Scaffolded 2026-11-02 by everlife-new-product from everlife-spark. Renders in assets/ (assets/RENDERS.md): one oral capsule (chrome, printed TITAN-RX), 30 per bottle. Name on creative 'Titan-Rx' (the bible's CTA spelling; the label reads TITAN-RX); bible_section = the bible heading 'Titan-Rx' (renamed from 'Titan-rx' 2026-11-05).",
  "id": "titan-rx",
  "name": "Titan-Rx",
- "bible_section": "Titan-Rx",
+ "bible_sections": [
+  "Titan-Rx"
+ ],
  "renders": {
   "bottle": "titan-rx_bottle.png",
   "pill": "titan-rx_capsule.png"
@@ -39,5 +41,9 @@
   "label": "wraps the curved bottle in perspective",
   "never": "beds or bedroom scenes, lingerie, body shots, shirtless or flexing torsos, couples in bed, lips macro, needles, syringes or vials, a benefit tied to the wrong ingredient, another product's bottle or pill, more than one capsule",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
- }
+ },
+ "variations": [
+  "intimacy-tasteful"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

@@ -19,7 +19,7 @@ doctor-prescribed cream from a pharmacy stands out. Advertorials sit on **white*
 - **Looks like:** "Dear Everlife community," letter card beside the bottle; every sentence assembled from ✅ bible lines; signed "The Everlife team".
 
 ## 2D — Article (on white)
-- **Looks like:** an editorial page, kicker "PEPTIDE SKIN SUPPORT", Tier A headline ("Firmer-Looking Skin Starts With Support"), a
+- **Looks like:** an editorial page, kicker "PEPTIDE SKIN SUPPORT", bible reference headlines ("Firmer-Looking Skin Starts With Support"), a
   calm product still life (or, when people are approved, a candid woman shoulder-up), proof. No fake byline, no fake site menu.
 
 ## 2E — The peptide step, explained

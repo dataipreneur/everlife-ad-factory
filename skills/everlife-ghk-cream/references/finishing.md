@@ -44,7 +44,7 @@ Write `<job>/copy.json` fresh each time (all copy from the bible, new against th
 `"product"` is required: the tools take everything product-specific from `product.json` (verbatim disclaimer, render, name casing,
 review highlight) and refuse a job without it. Don't type the disclaimer into copy.json. The "ingredients" rows are ✅ benefit
 pillars (GHK is the only named ingredient; no other ingredient is on the bible page). `kicker` defaults to "PEPTIDE SKIN SUPPORT"
-(`product.json` `kicker_default`). The `tiktok` CTA button fits ≈ 20 characters ("GET STARTED NOW", "SUPPORT FIRMER SKIN" fit;
+(`product.json` `kicker_default`). The `tiktok` CTA button fits ≈ 20 characters ("SUPPORT FIRMER SKIN", "SAVE UP TO 75%" fit;
 "UPGRADE YOUR SKIN ROUTINE" and "EXPLORE GHK PEPTIDE CREAM" need `default`/`editorial`). H2 jobs: head "GHK-CU CREAM BY EVERLIFE",
 vocab "GHK-Cu Cream by Everlife.", and no line that says "GHK Peptide Cream". The end card has no tablet: the bottle stands alone.
 

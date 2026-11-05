@@ -1,62 +1,52 @@
-# Spark — creative bible (verbatim extract)
+# Spark — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Spontaneous Intimacy" → "Encourages Spontaneous Intimacy"; "Supports Desire + Physical Response" → "Promotes Desire + Physical Response".
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. **Never shirtless talent, male or female, on this product** (sexual-health product: bible 2026-11-04). **This product:** The CTA "Find Your Plan" was removed from the bible.
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 51%" (the Spark CTA list is still ⏳ Pending approval as a whole: this is the PROVISIONAL default, Jeremy to confirm). "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 51%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "Spark for $1.50/day" (the Spark CTA list is still ⏳ Pending approval: use it only with the user's OK, flagged for Jeremy). An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 51% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 51%
+- **CTAs (bible):** Explore Spark · Ignite Your Spark · Save Up to 51% · Spark for $1.50/day · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** Spark for $1.50/day
+- **Quick-hit benefits (word for word):** Brain-Based Desire Support · Non-Hormonal Desire Support · On-Demand Desire Support · Encourages Spontaneous Intimacy · 3-in-1: PT-141 + Apomorphine + Tadalafil · Promotes Desire + Physical Response · Desire Support for Men + Women
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers
+- **Product Hard NOs:** Don’t tie a benefit to any single ingredient — list PT-141, Apomorphine and Tadalafil together as a combo. · Never use “arousal” or any form of it (“aroused,” “arousing”). · Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/spark/fb (last verified Nov. 2, 2026)
+- **Retired, never use:** Get Started Now · Find Your Plan
 
-> Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## Spark"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
-
-## Product facts for this skill
-- **What it is:** PT-141 + Apomorphine + Tadalafil combined in one sublingual tablet that dissolves under the tongue.
-  Doctor-prescribed, compounded. On-demand. 8 sublingual tablets per bottle (label; never put a count in copy).
-- **Who:** adults 30–65+, men and women (the bottle says "FOR MEN & WOMEN"). Default audience: both together.
-- **Bottle (render, `assets/RENDERS.md`):** matte black bottle and cap, rose-gold rings; "SPARK" in rose-gold with a star in the A.
-- **Ingredient rule (bible Hard NO):** the three are always named together as a combo. No benefit is ever attached to one ingredient.
-- **Not in the bible, so not in copy:** strengths, dose, onset time, how long it lasts, "brain-based" attributed to PT-141 alone.
-- **Approved offer:** Save up to 51% (percent only). **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers.
-- **Creative direction:** none on the bible page → global rules + the intimate-wellness gate (tasteful, product-led, no beds).
-- **Landing page:** https://everlifemd.com/spark/fb (bible, verified Nov. 2, 2026).
-
-## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
-
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
 | Line (bible) | Where | Status | Why |
 |---|---|---|---|
-| On-Demand ED Support | headlines | ⏳ + ⚠ Jeremy | Pending approval in the bible; "ED" names a condition, so it reads close to a treatment claim |
-| ED Support on Your Schedule | headlines | ⏳ + ⚠ Jeremy | same |
-| From Ready to Right Now | headlines | ✅ | Approved. Never pair it with a timing number or "instant" |
-| A Smarter Approach to ED | headlines | ⏳ + ⚠ Jeremy | Pending; "smarter" invites an implied comparison with other ED drugs |
-| Spontaneity, Back On | headlines | ✅ | Approved |
-| Men’s Sexual Health, Reimagined | headlines | ⏳ | Pending approval; men-only framing (the product is for men and women) |
-| Ignite Connection. Fuel Confidence. | headlines | ✅ | Approved |
-| More Than a Physical Response | headlines | Weak (bible) | Avoid unless asked |
-| Turn the Signal Back On | headlines | Weak (bible) | Avoid unless asked |
-| Supports Desire Where It Starts | headlines | Weak (bible) | Avoid unless asked |
-| Brain-Based Desire Support | benefits | ✅ | Approved quick-hit; never attribute it to PT-141 alone |
-| Non-Hormonal Desire Support | benefits | ✅ | |
-| On-Demand Desire Support | benefits | ✅ | |
-| Encourages Spontaneous Intimacy | benefits | ✅ | |
-| 3-in-1: PT-141 + Apomorphine + Tadalafil | benefits | ✅ | The combo line; keep all three together, this order |
-| Promotes Desire + Physical Response | benefits | ✅ | Structure-function; never split it per ingredient |
-| Desire Support for Men + Women | benefits | ✅ | |
-| Explore Spark | ctas | ⏳ | All CTAs Pending approval: explicit OK per session, flagged for Jeremy |
-| Ignite Your Spark | ctas | ⏳ | same |
-| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03) |
-| Save Up to 51% | ctas | ⚠ PROVISIONAL default | bible CTA (list still Pending approval); leads with the offer per the 2026-11-03 standard; Jeremy to confirm |
-| Ships Free From Pharmacy | ctas | ⏳ | bible CTA, list Pending approval |
-| Find Your Plan | ctas | ⏳ | same |
-| Save up to 51% | offer | ✅ | Percent only, never a $ price |
-| Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
+| On-Demand ED Support | headlines | ⚠ Jeremy | Pending approval in the bible; "ED" names a condition, so it reads close to a treatment claim |
+| ED Support on Your Schedule | headlines | ⚠ Jeremy | same |
+| From Ready to Right Now | headlines | ✅ |  |
+| A Smarter Approach to ED | headlines | ⚠ Jeremy | Pending; "smarter" invites an implied comparison with other ED drugs |
+| Spontaneity, Back On | headlines | ✅ |  |
+| Men’s Sexual Health, Reimagined | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Ignite Connection. Fuel Confidence. | headlines | ✅ |  |
+| More Than a Physical Response | headlines | Weak (bible) | bible badge [Weak headline] |
+| Turn the Signal Back On | headlines | Weak (bible) | bible badge [Weak headline] |
+| Supports Desire Where It Starts | headlines | Weak (bible) | bible badge [Weak headline] |
+| Brain-Based Desire Support | quick-hit benefits | ✅ |  |
+| Non-Hormonal Desire Support | quick-hit benefits | ✅ |  |
+| On-Demand Desire Support | quick-hit benefits | ✅ |  |
+| Encourages Spontaneous Intimacy | quick-hit benefits | ✅ |  |
+| 3-in-1: PT-141 + Apomorphine + Tadalafil | quick-hit benefits | ✅ |  |
+| Promotes Desire + Physical Response | quick-hit benefits | ✅ |  |
+| Desire Support for Men + Women | quick-hit benefits | ✅ |  |
+| Explore Spark | CTAs | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Ignite Your Spark | CTAs | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Save Up to 51% | CTAs | ⚠ | bible CTA (list still Pending approval); leads with the offer per the 2026-11-03 standard; Jeremy to confirm |
+| Spark for $1.50/day | CTAs | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Ships Free From Pharmacy | CTAs | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Save up to 51% | offers | ⚠ | bible CTA (list still Pending approval); leads with the offer per the 2026-11-03 standard; Jeremy to confirm |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
+| Find Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-Note: the line "Topical skin" at the end of the verbatim block is the next bible section's category label, not Spark text.
-
----
-
-# VERBATIM (do not edit; re-copy from the bible)
-
+## Verbatim (bible section "Spark", version 1793905953-bc2f)
 ```text
-## Spark
 
 ### Who it's for
 Adults 30–65+, men and women, who want on-demand desire support.
@@ -88,7 +78,6 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 - CTA: Explore Spark
 - CTA: Ignite Your Spark
 - CTA: Save Up to 51%
-- CTA: Find Your Plan
 - CTA: Spark for $1.50/day
 - CTA: Ships Free From Pharmacy
 
@@ -106,5 +95,20 @@ Brain-based, non-hormonal, on-demand desire support for men and women. PT-141, A
 
 Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 Landing pagehttps://everlifemd.com/spark/fbLast verified Nov. 2, 2026
-Topical skin
 ```
+
+## Notes (hand, `references/product-notes.md`)
+# Spark: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
+
+## Product facts for this skill
+- **What it is:** PT-141 + Apomorphine + Tadalafil combined in one sublingual tablet that dissolves under the tongue.
+  Doctor-prescribed, compounded. On-demand. 8 sublingual tablets per bottle (label; never put a count in copy).
+- **Who:** adults 30–65+, men and women (the bottle says "FOR MEN & WOMEN"). Default audience: both together.
+- **Bottle (render, `assets/RENDERS.md`):** matte black bottle and cap, rose-gold rings; "SPARK" in rose-gold with a star in the A.
+- **Ingredient rule (bible Hard NO):** the three are always named together as a combo. No benefit is ever attached to one ingredient.
+- **Not in the bible, so not in copy:** strengths, dose, onset time, how long it lasts, "brain-based" attributed to PT-141 alone.
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
+- **Creative direction:** none on the bible page → global rules + the intimate-wellness gate (tasteful, product-led, no beds).
+- **Landing page:** https://everlifemd.com/spark/fb (bible, verified Nov. 2, 2026).

@@ -4,7 +4,7 @@ Library folders: Movie-Peg · Wild-Creative/Surreal · Retro · New Year · Bill
 Why it works: pattern interrupts for a product people don't expect to see advertised; keep it strong and tasteful, never suggestive.
 
 ## 3A — Forged metaphor
-- **Looks like:** a Seedance macro: chalk bursting off a barbell in slow motion; a steel garage door rolling up on dawn light; a rope slam frozen mid-air. The product arrives in the final beat, label to camera. One Tier A line in finishing ("When It’s Go Time, Be Ready").
+- **Looks like:** a Seedance macro: chalk bursting off a barbell in slow motion; a steel garage door rolling up on dawn light; a rope slam frozen mid-air. The product arrives in the final beat, label to camera. One a bible reference line line in finishing ("When It’s Go Time, Be Ready").
 - **Guardrails:** the metaphor is about daily readiness and strength, never about bodies or body parts; no fire, no lightning, no innuendo objects.
 - **Finishing:** `default` (house look) or `editorial`.
 

@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's Spark ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-pt-141.",
  "id": "spark",
  "name": "Spark",
+ "bible_sections": [
+  "Spark"
+ ],
  "renders": {
   "bottle": "spark_bottle.png",
   "pill": "spark_tablet.png"
@@ -33,5 +36,9 @@
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
  },
  "disclaimer_at": "bottom",
- "end_card_safe_shift": true
+ "end_card_safe_shift": true,
+ "variations": [
+  "intimacy-tasteful"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

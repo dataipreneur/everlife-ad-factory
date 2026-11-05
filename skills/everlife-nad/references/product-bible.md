@@ -1,80 +1,77 @@
-# NAD+ — creative bible (verbatim extract)
+# NAD+ — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports All-Day Energy + Focus" → "Fuels All-Day Energy + Focus". **This product:** Single-vial claim wording: "Fuels All-Day Energy + Focus".
-> **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** NAD+ discount stays **"Save Up to 62%"** (both forms). Every ad has a CTA.
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** Sublingual tablets are now **Save Up to 62%** (was 62%); injections stay 62%, so every NAD+ ad is 62%. The CTAs "Choose Your Form" and "Start Your Plan" were removed.
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 62%" (the bible's CTA; injections). For a tablet-only ad use the tablet offer "Save up to 62%" from Offers & conversion. "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 62%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "NAD+ for $3.25/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 62% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 62%
+- **CTAs (bible):** Explore NAD+ · Save Up to 62% · Recharge Your Cells · NAD+ for $3.25/day · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** NAD+ for $3.25/day
+- **Variant maximums (reference only, never shown as a lower %):** both 62%
+- **Quick-hit benefits (word for word):** Boosts Cellular Energy · Reduces Fatigue + Brain Fog · Elevates Mental Clarity · Supports DNA Repair · Promotes Healthy Aging · Supports Cellular Longevity · Fuels All-Day Energy + Focus · Supports Bounce-Back From Burnout
+- **More approved benefits:** Optimizes Metabolic Health [Weak benefit]
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · Sublingual or injection options · Same-day order approval · 24/7 Health Advisor access
+- **Product Hard NOs:** The landing page says “needle free.” Ads can’t — say “easy sublingual delivery.” · Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/nad/fb-v2 (last verified Oct. 20, 2026)
+- **Retired, never use:** Get Started Now · Choose Your Form · Start Your Plan
 
-> Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## NAD+"), copied 2026-10-30 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
-
-## Product facts for this skill
-- **What it is:** prescription NAD+ for cellular energy, mental clarity and metabolism: a 200 mg **sublingual tablet** or a 1000 mg
-  **injection** (strengths never in copy).
-- **Who:** adults 30–65+ who want more energy, sharper focus and healthy-aging support ("All audiences").
-- **Bible creative direction:** lead with the choice (sublingual tablet or injection); voiceovers say "N-A-D plus".
-- **Hard NO:** the landing page says "needle free"; ads can't: say "easy sublingual delivery".
-- **Offers:** Save up to 62% on injections · Save up to 62% on sublingual tablets · Starting at $119/month · 30-day money-back
-  guarantee on your first order. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · Sublingual or injection
-  options · Same-day order approval · 24/7 Health Advisor access.
-- **Landing page:** https://everlifemd.com/nad/fb-v2 (verified Oct. 20, 2026). Ads take claims from the bible, never the LP.
-
-## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
-
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
 | Line (bible) | Where | Status | Why |
 |---|---|---|---|
 | Brain Fog, Who? | headlines | ✅ |  |
-| Mentally Stuck on Loading? | headlines | ✅ | pronoun-free question |
-| Bounce Back From Burnout | headlines | ✅ |  |
-| Your 30s Called & Want You Back | headlines | ✅ (care) | never next to a body or an age-reversal promise |
+| Mentally Stuck on Loading? | headlines | ✅ |  |
+| Bounce Back From Burnout | headlines | ❌ auto | no melt / burn / ripped / shred |
+| Your 30s Called & Want You Back | headlines | ✅ |  |
 | Boost Energy, Focus & Mental Clarity | headlines | ⚠ Jeremy | "boost" (global: supports, never boosts) |
 | Wake Up Feeling Recharged Again | headlines | ✅ |  |
 | Less Fog. More Focus. | headlines | ✅ |  |
 | Clear Head. Full Day. | headlines | ✅ |  |
-| Ready to Think Clearly? | headlines | ✅ | pronoun-free question |
+| Ready to Think Clearly? | headlines | ✅ |  |
 | What Celebrities and CEOs Are Using to Out Perform | headlines | ⚠ Jeremy | unsourced authority / celebrity |
 | Trusted by Entrepreneurs and Athletes | headlines | ⚠ Jeremy | unsourced authority |
 | Meet Your Daily NAD+. | headlines | ✅ |  |
 | NAD+ Without the Nonsense. | headlines | ✅ |  |
 | Stop Scrolling. Meet NAD+. | headlines | ✅ |  |
-| More Life in Your Years. | headlines | ✅ (care) | healthy aging, never longevity promises |
-| Your Cells Know NAD+. | headlines | Weak (bible) | avoid unless asked |
-| NAD+ Made Stupid Simple. | headlines | Weak (bible) | avoid unless asked |
-| Energy Care | headlines | Weak (bible) | avoid unless asked |
-| NAD+. Know the Basics. | headlines | Weak (bible) | avoid unless asked |
-| Small Molecule. Big Conversation. | headlines | Weak (bible) | avoid unless asked |
-| What’s Your NAD+ IQ? | headlines | Weak (bible) | avoid unless asked |
-| Play the Long Game. | headlines | Weak (bible) | avoid unless asked |
-| Think Beyond Today. | headlines | Weak (bible) | avoid unless asked |
-| Your Future Deserves Attention. | headlines | Weak (bible) | avoid unless asked |
-| Boosts Cellular Energy | benefits | ⚠ Jeremy | "boosts" (global: supports) |
-| Reduces Fatigue + Brain Fog | benefits | ⚠ Jeremy | treatment-like ("reduces") |
-| Elevates Mental Clarity | benefits | ✅ (care) | outcome verb; pair with "supports" lines |
-| Supports DNA Repair | benefits | ⚠ Jeremy | medical-style claim |
-| Promotes Healthy Aging | benefits | ✅ |  |
-| Supports Cellular Longevity | benefits | ✅ |  |
-| Fuels All-Day Energy + Focus | benefits | ✅ |  |
-| Supports Bounce-Back From Burnout | benefits | ✅ |  |
-| Optimizes Metabolic Health | more_benefits | Weak (bible) | avoid unless asked |
-| Explore NAD+ | ctas | ✅ |  |
-| Choose Your Form | ctas | ✅ | fits "lead with the choice" |
-| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
-| Save Up to 62% | ctas | ✅ | default CTA (bible 2026-11-03); tablet-only ads: "Save up to 62%" |
-| Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
-| Start Your Plan | ctas | ✅ |  |
-| Recharge Your Cells | ctas | ✅ |  |
-| Save up to 62% on injections | offer | ✅ | injection ads only |
-| Save up to 62% on sublingual tablets | offer | ✅ | tablet ads only |
-| Starting at $119/month | offer | ✅ (care) | bible-approved $ price; percent offers preferred |
-| 30-day money-back guarantee on your first order | offer | ✅ | an offer term, not an outcome guarantee |
+| More Life in Your Years. | headlines | ✅ |  |
+| Your Cells Know NAD+. | headlines | Weak (bible) | bible badge [Weak headline] |
+| NAD+ Made Stupid Simple. | headlines | Weak (bible) | bible badge [Weak headline] |
+| Energy Care | headlines | Weak (bible) | bible badge [Weak headline] |
+| NAD+. Know the Basics. | headlines | Weak (bible) | bible badge [Weak headline] |
+| Small Molecule. Big Conversation. | headlines | Weak (bible) | bible badge [Weak headline] |
+| What’s Your NAD+ IQ? | headlines | Weak (bible) | bible badge [Weak headline] |
+| Play the Long Game. | headlines | Weak (bible) | bible badge [Weak headline] |
+| Think Beyond Today. | headlines | Weak (bible) | bible badge [Weak headline] |
+| Your Future Deserves Attention. | headlines | Weak (bible) | bible badge [Weak headline] |
+| Boosts Cellular Energy | quick-hit benefits | ⚠ Jeremy | "boosts" (global: supports) |
+| Reduces Fatigue + Brain Fog | quick-hit benefits | ⚠ Jeremy | treatment-like ("reduces") |
+| Elevates Mental Clarity | quick-hit benefits | ✅ |  |
+| Supports DNA Repair | quick-hit benefits | ⚠ Jeremy | medical-style claim |
+| Promotes Healthy Aging | quick-hit benefits | ✅ |  |
+| Supports Cellular Longevity | quick-hit benefits | ✅ |  |
+| Fuels All-Day Energy + Focus | quick-hit benefits | ✅ |  |
+| Supports Bounce-Back From Burnout | quick-hit benefits | ❌ auto | no melt / burn / ripped / shred |
+| Optimizes Metabolic Health | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Explore NAD+ | CTAs | ✅ |  |
+| Save Up to 62% | CTAs | ✅ |  |
+| Recharge Your Cells | CTAs | ✅ |  |
+| NAD+ for $3.25/day | CTAs | ✅ |  |
+| Ships Free From Pharmacy | CTAs | ✅ |  |
+| Save up to 62% on injections | offers | ✅ |  |
+| Save up to 62% on sublingual tablets | offers | ✅ |  |
+| Starting at $119/month | offers | ✅ |  |
+| 30-day money-back guarantee on your first order | offers | ✅ |  |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| Sublingual or injection options | proof | ✅ |  |
+| Same-day order approval | proof | ✅ |  |
+| 24/7 Health Advisor access | proof | ✅ |  |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
+| Choose Your Form | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
+| Start Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
----
-
-# VERBATIM (do not edit; re-copy from the bible)
-
+## Verbatim (bible section "NAD+", version 1793905953-bc2f)
 ```text
-## NAD+
 
 ### Who it's for
 Adults 30–65+ who want more energy, sharper focus and healthy-aging support.
@@ -114,9 +111,7 @@ More headlines on page 32
 
 ### CTAs
 - CTA: Explore NAD+
-- CTA: Choose Your Form
 - CTA: Save Up to 62%
-- CTA: Start Your Plan
 - CTA: Recharge Your Cells
 - CTA: NAD+ for $3.25/day
 - CTA: Ships Free From Pharmacy
@@ -161,7 +156,21 @@ Landing pagehttps://everlifemd.com/nad/fb-v2Last verified Oct. 20, 2026
 - Your Future Deserves Attention. [Weak headline]
 
 ### More approved benefits
-- Optimizes Metabolic HealthWeak benefit
-
-Metabolic
+- Optimizes Metabolic Health [Weak benefit]
 ```
+
+## Notes (hand, `references/product-notes.md`)
+# NAD+: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
+
+## Product facts for this skill
+- **What it is:** prescription NAD+ for cellular energy, mental clarity and metabolism: a 200 mg **sublingual tablet** or a 1000 mg
+  **injection** (strengths never in copy).
+- **Who:** adults 30–65+ who want more energy, sharper focus and healthy-aging support ("All audiences").
+- **Bible creative direction:** lead with the choice (sublingual tablet or injection); voiceovers say "N-A-D plus".
+- **Hard NO:** the landing page says "needle free"; ads can't: say "easy sublingual delivery".
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
+  guarantee on your first order. **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · Sublingual or injection
+  options · Same-day order approval · 24/7 Health Advisor access.
+- **Landing page:** https://everlifemd.com/nad/fb-v2 (verified Oct. 20, 2026). Ads take claims from the bible, never the LP.

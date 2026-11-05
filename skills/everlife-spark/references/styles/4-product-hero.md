@@ -4,7 +4,7 @@ Library folders: Product-as-Hero · Product Highlight · Pill-Product Focused ·
 Why it works: the bible's creative direction is product-led and tasteful; the black + rose-gold Spark bottle is distinctive on its own.
 
 ## 4A — Marble still life (the bible image)
-- **Looks like:** the Spark bottle + one tablet on dark stone or a white marble ledge, warm low light or soft daylight. Serif Tier A line.
+- **Looks like:** the Spark bottle + one tablet on dark stone or a white marble ledge, warm low light or soft daylight. Serif a bible reference line line.
 - Static: batch F12. Video: Seedance slow push-in, 480p is enough.
 
 ## 4B — Tablet macro

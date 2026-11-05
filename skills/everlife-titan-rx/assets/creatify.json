@@ -1,0 +1,10 @@
+{
+ "project_id": "03258cd8-4725-4b2f-be41-7f3a8234ee0d",
+ "bottle": "assets/041f1597_titan_rx_bottle_ref.jpg",
+ "capsule": "assets/db6c2223_titan_rx_capsule_ref.jpg",
+ "render_urls": {
+  "titan-rx_bottle_ref.jpg": "https://cdn.creatify.ai/api_uploads/48429c90-8d9e-4691-a9ad-630252f41d21/a8c294738c924ac1bde92e5132931c1b/titan-rx_bottle_ref.jpg",
+  "titan-rx_capsule_ref.jpg": "https://cdn.creatify.ai/api_uploads/48429c90-8d9e-4691-a9ad-630252f41d21/ea4e216604d44f85a579a8c4d0e5cd32/titan-rx_capsule_ref.jpg"
+ },
+ "note": "Created 2026-11-05 by mitansh@everlifemd.com (9:16, 1080p) with only Titan-Rx assets (white-flattened bottle + capsule refs). Reuse this project for every Titan-Rx image."
+}

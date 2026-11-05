@@ -1,0 +1,323 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "wolverine",
+ "name": "Wolverine Stack",
+ "sections": [
+  "Wolverine Stack (BPC-157/TB500)"
+ ],
+ "category": "Recovery stack",
+ "who": "Active men 25–55 with tissue, mobility and gut recovery goals.",
+ "truth": "Dual-peptide recovery stack focused on connective tissue, inflammation support, gut lining, mobility, and soft-tissue recovery.",
+ "direction": [
+  "Talent: fit, rugged men 30–45 with a masculine, performance-driven look. Strong gym talent, intense training, refined execution.",
+  "Include “Wolverine Stack” and “BPC-157 / TB-500” on every design.",
+  "No animal death. Fighting imagery is fine without blood or gore."
+ ],
+ "offer": {
+  "pct": 39,
+  "status": "ok",
+  "source": "CTA",
+  "cta": "Save Up to 39%",
+  "lines": [
+   "Save up to 39%"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Save Up to 39%",
+ "cta_price": "Wolverine Stack for $6.50/day",
+ "ctas": [
+  "Explore the Wolverine Stack",
+  "Build Your Recovery Protocol",
+  "Save Up to 39%",
+  "Support Whole-Body Recovery",
+  "Start Your Stack",
+  "Wolverine Stack for $6.50/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "2-in-1 Recovery Support",
+  "Reinforces Tendons + Ligaments",
+  "Supports Gut Lining Health",
+  "Maintains Mobility",
+  "Supports Healthy Inflammatory Balance",
+  "Aids Tissue Repair",
+  "Promotes Joint Comfort",
+  "Promotes Muscle Recovery",
+  "Promotes Mobility + Flexibility",
+  "2-Peptide Whole-Body Recovery",
+  "Supports Joints, Gut + Mobility in One Stack",
+  "Supports Connective Tissue Health",
+  "Supports Digestive Resilience",
+  "Supports Whole-Body Recovery"
+ ],
+ "benefits_more": [],
+ "headlines": [
+  {
+   "text": "Bounce Back Stronger",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Recover Like Wolverine",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "The Wolverine Stack for Whole-Body Recovery",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "2 Peptides. One Recovery Protocol.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Two Peptides. One Mission.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Double Down on Recovery",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Recovery, Reinforced",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "The Heavy-Duty Recovery Stack",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Built for Heavy Wear",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "For Bodies Under Load",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Heavy Output Needs Backup",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "The Next-Level Recovery Stack",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Stacked for the Comeback",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Built for Impact",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Wolverine Stack. Built for the Grind.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Hardcore Training. Wolverine Stack Recovery.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Recover Like You Train: Wolverine Stack.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "The Wolverine Stack Is Your Recovery Edge.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  },
+  {
+   "text": "Built for Heavy Days. Backed by the Wolverine Stack.",
+   "badges": [],
+   "page": "Wolverine Stack (BPC-157/TB500)"
+  }
+ ],
+ "offer_lines": [
+  "Save up to 39%"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers"
+ ],
+ "hard_nos": [
+  "No animal death, blood or gore.",
+  "No direct claims.",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {},
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.",
+ "landing_page": "https://everlifemd.com/wolverine/fb",
+ "last_verified": "Nov. 3, 2026",
+ "field_badges": {
+  "headlines": [
+   "Pending approval"
+  ]
+ },
+ "screen": {
+  "bounce back stronger": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "recover like wolverine": {
+   "status": "❌",
+   "why": "evokes the Marvel character (trademark) and a healing factor"
+  },
+  "the wolverine stack for whole-body recovery": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "2 peptides. one recovery protocol.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "two peptides. one mission.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "double down on recovery": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "recovery, reinforced": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "the heavy-duty recovery stack": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "built for heavy wear": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "for bodies under load": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "heavy output needs backup": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "the next-level recovery stack": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "stacked for the comeback": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "built for impact": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "wolverine stack. built for the grind.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "hardcore training. wolverine stack recovery.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "recover like you train: wolverine stack.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "the wolverine stack is your recovery edge.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "built for heavy days. backed by the wolverine stack.": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "aids tissue repair": {
+   "status": "⚠ Jeremy",
+   "why": "\"repair\" reads as healing; the page's own Hard NO says \"No direct claims\""
+  },
+  "promotes joint comfort": {
+   "status": "⚠ Jeremy",
+   "why": "\"comfort\" implies pain relief"
+  },
+  "supports connective tissue health": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "supports digestive resilience": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  },
+  "supports whole-body recovery": {
+   "status": "⏳ Pending approval (bible)",
+   "why": "bible badge [Pending approval]"
+  }
+ },
+ "first_seen": {
+  "2 peptides. one recovery protocol.": "baseline",
+  "2-in-1 recovery support": "baseline",
+  "2-peptide whole-body recovery": "baseline",
+  "aids tissue repair": "baseline",
+  "bounce back stronger": "baseline",
+  "build your recovery protocol": "baseline",
+  "built for heavy days. backed by the wolverine stack.": "baseline",
+  "built for heavy wear": "baseline",
+  "built for impact": "baseline",
+  "double down on recovery": "baseline",
+  "explore the wolverine stack": "baseline",
+  "for bodies under load": "baseline",
+  "hardcore training. wolverine stack recovery.": "baseline",
+  "heavy output needs backup": "baseline",
+  "maintains mobility": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes joint comfort": "baseline",
+  "promotes mobility + flexibility": "baseline",
+  "promotes muscle recovery": "baseline",
+  "recover like wolverine": "baseline",
+  "recover like you train: wolverine stack.": "baseline",
+  "recovery, reinforced": "baseline",
+  "reinforces tendons + ligaments": "baseline",
+  "save up to 39%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "stacked for the comeback": "baseline",
+  "start your stack": "baseline",
+  "support whole-body recovery": "baseline",
+  "supports connective tissue health": "baseline",
+  "supports digestive resilience": "baseline",
+  "supports gut lining health": "baseline",
+  "supports healthy inflammatory balance": "baseline",
+  "supports joints, gut + mobility in one stack": "baseline",
+  "supports whole-body recovery": "baseline",
+  "the heavy-duty recovery stack": "baseline",
+  "the next-level recovery stack": "baseline",
+  "the wolverine stack for whole-body recovery": "baseline",
+  "the wolverine stack is your recovery edge.": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "two peptides. one mission.": "baseline",
+  "wolverine stack for $6.50/day": "baseline",
+  "wolverine stack. built for the grind.": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  }
+ ],
+ "patterns": [],
+ "extra": {}
+}

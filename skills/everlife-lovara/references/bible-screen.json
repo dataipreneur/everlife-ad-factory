@@ -1,0 +1,51 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {
+  "Desire Up. Sensitivity Ignited.": {
+   "status": "⚠ Jeremy",
+   "why": "outcome stated as a result (\"up\", \"ignited\"), not \"supports\""
+  },
+  "Feel Pleasure. Crave Desire.": {
+   "status": "⚠ Jeremy",
+   "why": "outcome promise; explicit register for a tasteful brand"
+  },
+  "Intimacy That Hits Deeper": {
+   "status": "⚠ Jeremy",
+   "why": "innuendo; check against \"tasteful\""
+  },
+  "Intimacy to Intensity. Unlocked.": {
+   "status": "⚠ Jeremy",
+   "why": "outcome promise"
+  },
+  "Exclusive 3-in-1 Women's Desire Blend": {
+   "status": "⚠ Jeremy",
+   "why": "\"Exclusive\" is an unsourced superiority claim (renamed from \"…Arousal Blend\", bible 2026-11-02)"
+  },
+  "Promotes Healthy Circulation": {
+   "status": "⚠ Jeremy",
+   "why": "global: no \"high circulation\"; \"healthy\" is likely fine, confirm"
+  },
+  "Enhances Sensitivity": {
+   "status": "⚠ Jeremy",
+   "why": "attributes an outcome to the product; global rule = \"supports\""
+  },
+  "Support Your Spark": {
+   "status": "❌",
+   "why": "names another product (Spark); likely a copy error"
+  }
+ },
+ "patterns": [
+  {
+   "re": "\\b(arousal|aroused|arousing)\\b",
+   "status": "❌",
+   "why": "bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”).",
+   "_review": "regex built from the old row: check it"
+  }
+ ],
+ "retired": [
+  {
+   "line": "Start Your Plan",
+   "why": "was in the skill's old verbatim copy, no longer in the bible"
+  }
+ ]
+}

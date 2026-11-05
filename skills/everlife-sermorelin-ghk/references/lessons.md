@@ -45,7 +45,7 @@ Compliance traps:
 - **Type specimen is Restora's** ("Sleep deeper, wake clear", purple accent). Saying "ONLY a lettering style guide; ignore its
   words, its purple colour and its layout" kept every ad clean. A Sermorelin-specific specimen would be safer (to do).
 - Tablet piles render a slightly deeper green than the reference; single tablets stay true. Acceptable; mention in QA.
-- What worked first time: real 500 bottle label (incl. "500 MCG"), the green "S" tablet, exact Tier A strings, clothed
+- What worked first time: real 500 bottle label (incl. "500 MCG"), the green "S" tablet, exact a bible reference line strings, clothed
   mature talent, text-only 3-in-1 tiles (no made-up ingredient pills), "Save up to 47%" badge.
 
 ## Video discipline (creative lead, 2026-10-27; from the Restora-Z lessons, applies to every product)
@@ -132,7 +132,7 @@ Compliance traps:
 - **Tablet size drifts small when a person shares the frame** (W4: 11% of the width). Say "at least 17% of the width" there.
 - **Justin's new lines render well:** "Supports Natural Growth Hormone Production", "Supports Workout Pumps + Endurance",
   "Supports Exercise Recovery", "Promotes Firmer, Glowing Skin From Within".
-- **Women's Tier A headlines are nearly used up**: left unused: "Your GLP-1 Complement for Lean Muscle + Glow",
+- **Women's bible reference headlines are nearly used up**: left unused: "Your GLP-1 Complement for Lean Muscle + Glow",
   "GLP-1 Complement: Lean. Strong. Radiant.", "The GLP-1 Complement for Muscle, Skin + Hair" (hair ⚠). Ask Justin for more.
 
 ## Review feedback on batch 4 (2026-10-29)
@@ -239,7 +239,7 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
 ### Checklist before ANY Sermorelin GHK video script is shown
 - [ ] winners.md read; the concept names the winner it rebuilds (M1/M5/F4 for video) and why
 - [ ] HOOK-ENGINE §5 run: 3 scored options, frame-0 visual + 0.0 s sound, hook by 1.5 s
-- [ ] Tier A copy only (bible), each claim mapped; "SERMORELIN GHK" on screen at frame 0
+- [ ] a bible reference line copy only (bible), each claim mapped; "SERMORELIN GHK" on screen at frame 0
 - [ ] "Sermorelin GHK by Everlife" spoken by 3 s, pronunciation plan + unprimed QA + fix before showing
 - [ ] tablet held (thumb + index / open palm) on screen; real label never covered by any overlay
 - [ ] casting per CAST (fit silver fox 40s–50s or as briefed), fully clothed, tiny mic, solid key
@@ -273,7 +273,7 @@ logo/label composited, footer unfade, 9:16 built from the approved 4:5). Read it
   y 360" (image-batch.md STRICT LAYOUT). Product still drifts ~+15%: ask base at y 950.
 
 ## Hardcore style batches 1–3 (2026-11-02, men 1000, 12 statics, 12 credits, 0 re-rolls)
-- **Problem → solution wins:** the S05 problem/solution cards ("Growth Hormone Drops. The Work Doesn't.") was the only Winner; pure-attitude lines (bible "Dominate Your Potential") and the 3-problems list were rated weak. Lead Tier B options with problem → solution (memory + Mitansh: "write problem solution angles!").
+- **Problem → solution wins:** the S05 problem/solution cards ("Growth Hormone Drops. The Work Doesn't.") was the only Winner; pure-attitude lines (bible "Dominate Your Potential") and the 3-problems list were rated weak. Lead a fresh line options with problem → solution (memory + Mitansh: "write problem solution angles!").
 - **Product still lands ~25–30% lower than asked**, even at "ends above y 1000": the 9:16 proof row (raw y ~1325–1477) then covers the CTA/label on most ads. Free fix used 5×: `--proof none` + `unfade_cta.py --rows <CTA rows>`. Next time ask every product element to end above **y 900** and the CTA above y 1050, or plan proof=none for person-led layouts. Billboards are the exception: the trust row sits on the catwalk cleanly.
 - Skylight/beam tops trip the finisher's logo busy-check; keep Zone A a plain wall/sky.
 - Never stop after a batch: draft the next one straight away (core/references/creative-system.md top rule).

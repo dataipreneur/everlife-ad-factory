@@ -1,22 +1,165 @@
-# PT-141 — creative bible (verbatim extract)
+# PT-141 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports On-Demand Desire" → "Promotes On-Demand Desire"; "Supports Intimate Readiness" → "Encourages Intimate Readiness".
-> **Bible sync 1793890033-215f (2026-11-05; wins over every line below, including the ced5 banner's discount lines):** Always feature the HIGHEST discount whichever form is pictured: **"Save Up to 59%"** on every PT-141 ad, a nasal-spray ad too (the per-form 23% / 59% rule from 2026-11-04 is gone). The CTA "Save Up to 23%" was removed from the bible. Every ad has a CTA.
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. **Never shirtless talent, male or female, on this product** (sexual-health product: bible 2026-11-04). **This product:** CTA is now **"Save Up to 59%"**; "Support Your Spark" and "Find Your Plan" were removed. Offers by form: **nasal spray Save Up to 23%, sublingual Save Up to 59%**; a creative showing both forms uses 59%, nasal spray alone 23% (Standards 03 · 09).
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 23%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 23%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "PT-141 for $2.00/day". An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 59% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 59%
+- **CTAs (bible):** Explore PT-141 · Save Up to 59% · Start Desire Support · PT-141 for $2.00/day · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** PT-141 for $2.00/day
+- **Variant maximums (reference only, never shown as a lower %):** nasal spray 23%, sublingual 59%
+- **Quick-hit benefits (word for word):** Supports Brain-Based Desire · Promotes On-Demand Desire · Non-Hormonal Desire Support · Encourages Intimate Readiness · Supports Central Desire Pathways
+- **More approved benefits:** Desire Support on Your Schedule · Supports Mind-Body Responsiveness · Desire Starts in the Brain · Helps Awaken Desire · Supports Sexual Motivation · Activates Desire Signaling [Weak benefit] · Supports Libido Pathways [Weak benefit] · Supports Your Spark [Weak benefit] · Supports Body Responsiveness [Weak benefit] · Supports Romantic Readiness [Weak benefit] · Supports the Desire Response [Weak benefit] · Peptide-Powered Desire Support [Weak benefit] · Supports Desire From Within [Weak benefit] · Designed to Support Desire [Weak benefit]
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers · Clinician-guided care · Personalized treatment · Transparent, all-in-one pricing
+- **Product Hard NOs:** No beds or bedroom scenes. · Never use “arousal” or any form of it (“aroused,” “arousing”). · Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/pt141/fb (last verified Aug. 28, 2026)
+- **Retired, never use:** Get Started Now · Gentle on the Vascular System · Helps Wake Up the Want · Sublingual or Nasal Spray Desire Support · Support Your Spark · Find Your Plan
 
-> Source: Claude Design project 8cc4e3fe-5189-436d-aaba-6eb2320f14c6, page "PT-141" (p. 21) and "PT-141 · headline bank" (p. 22), from the
-> 26 Oct 2026 export (`Creative Messaging Reference.dc.html`), re-checked 2026-10-28. Two quick-hit benefits that appear on the LIVE page
-> (Mitansh's screenshot, 2026-10-28) but not in the export are added and labelled. Global rules: `core/references/global-rules.md` (they win).
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
+| Line (bible) | Where | Status | Why |
+|---|---|---|---|
+| Low Desire Isn’t in Your Head. It’s in Your Chemistry. | headlines | ✅ |  |
+| Your Body Changed. Your Desire Doesn’t Have to Disappear. | headlines | ✅ |  |
+| Low Libido? Support Desire Where It Starts | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| It Was Never Just Physical | headlines | ✅ |  |
+| More Than Blood Flow | headlines | ✅ |  |
+| Brain-Based Sexual Health Support | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Sexual Wellness Starts in the Brain | headlines | ⏳ Pending approval (bible) | bible badge [Pending approval] |
+| Some Nights Aren’t Planned. | headlines | ✅ |  |
+| Made for Moments, Not Calendars | headlines | ✅ |  |
+| Awaken the Desire Response. | headlines | ✅ |  |
+| Spark, on Your Schedule | headlines | Weak (bible) | bible badge [Weak headline] |
+| Spark, on Your Terms | headlines | Weak (bible) | bible badge [Weak headline] |
+| A Different Pathway Entirely | headlines | Weak (bible) | bible badge [Weak headline] |
+| Supports Brain-Based Desire | quick-hit benefits | ✅ |  |
+| Promotes On-Demand Desire | quick-hit benefits | ✅ |  |
+| Non-Hormonal Desire Support | quick-hit benefits | ✅ |  |
+| Encourages Intimate Readiness | quick-hit benefits | ✅ |  |
+| Supports Central Desire Pathways | quick-hit benefits | ✅ |  |
+| Desire Support on Your Schedule | more approved benefits | ✅ |  |
+| Supports Mind-Body Responsiveness | more approved benefits | ✅ |  |
+| Desire Starts in the Brain | more approved benefits | ✅ |  |
+| Helps Awaken Desire | more approved benefits | ✅ |  |
+| Supports Sexual Motivation | more approved benefits | ✅ |  |
+| Activates Desire Signaling | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Supports Libido Pathways | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Supports Your Spark | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Supports Body Responsiveness | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Supports Romantic Readiness | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Supports the Desire Response | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Peptide-Powered Desire Support | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Supports Desire From Within | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Designed to Support Desire | more approved benefits | Weak (bible) | bible badge [Weak benefit] |
+| Explore PT-141 | CTAs | ✅ |  |
+| Save Up to 59% | CTAs | ✅ |  |
+| Start Desire Support | CTAs | ✅ |  |
+| PT-141 for $2.00/day | CTAs | ✅ |  |
+| Ships Free From Pharmacy | CTAs | ✅ |  |
+| Save up to 23% (nasal spray) | offers | ✅ |  |
+| Save up to 59% (sublingual) | offers | ✅ |  |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| Clinician-guided care | proof | ✅ |  |
+| Personalized treatment | proof | ✅ |  |
+| Transparent, all-in-one pricing | proof | ✅ |  |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
+| Gentle on the Vascular System | retired | ❌ retired | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate |
+| Helps Wake Up the Want | retired | ❌ retired | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms |
+| Sublingual or Nasal Spray Desire Support | retired | ❌ retired | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms |
+| Support Your Spark | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
+| Find Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-> **How to use this page (same rules as Restora-Z / Sermorelin GHK):**
-> - **HARD STOPS:** the approved claims (quick-hit benefits, more approved benefits); every Hard NO (product + global); the verbatim disclaimer;
->   the proof wording; the pre-screen ❌ list below. Never invent a claim.
-> - **Headlines:** Tier A = a line below without a flag, verbatim or lightly trimmed. "Pending approval" lines only with explicit approval
->   (ask the user, flag for Jeremy). "Weak headline" / "Weak benefit" → avoid unless the brief asks. Tier B (fresh wording) max 2 per batch,
->   PROPOSED, approved line by line (⚠ PENDING CREATIVE-LEAD CONFIRMATION, 2026-10-28).
+## Verbatim (bible section "PT-141", version 1793905953-bc2f)
+```text
+
+### Who it's for
+Adults 30–55 who want non-hormonal, on-demand desire support.
+
+### Creative direction
+- Keep it tasteful — product imagery led, no bedroom scenes.
+- Video framing stays shoulder-up.
+
+Brain-based, non-hormonal desire support designed around desire signaling and on-demand intimate readiness.
+
+### Headlines & hooks
+1. Low Desire Isn’t in Your Head. It’s in Your Chemistry.
+2. Your Body Changed. Your Desire Doesn’t Have to Disappear.
+3. Low Libido? Support Desire Where It Starts [Pending approval]
+4. It Was Never Just Physical
+5. More Than Blood Flow
+6. Brain-Based Sexual Health Support [Pending approval]
+7. Sexual Wellness Starts in the Brain [Pending approval]
+8. Some Nights Aren’t Planned.
+9. Made for Moments, Not Calendars
+10. Awaken the Desire Response.
+11. Spark, on Your Schedule [Weak headline]
+
+More headlines on page 24
+
+### Quick-hit benefits
+- Supports Brain-Based Desire
+- Promotes On-Demand Desire
+- Non-Hormonal Desire Support
+- Encourages Intimate Readiness
+- Supports Central Desire Pathways
+
+### CTAs
+- CTA: Explore PT-141
+- CTA: Save Up to 59%
+- CTA: Start Desire Support
+- CTA: PT-141 for $2.00/day
+- CTA: Ships Free From Pharmacy
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+- Clinician-guided care
+- Personalized treatment
+- Transparent, all-in-one pricing
+
+### Offers & conversion
+- Save up to 23% (nasal spray)
+- Save up to 59% (sublingual)
+
+### Hard NOs
+- No beds or bedroom scenes.
+- Never use “arousal” or any form of it (“aroused,” “arousing”).
+- Plus all global Hard NOs on page 3.
+
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/pt141/fbLast verified Aug. 28, 2026
+
+### Headline bank
+2 more headlines beyond the ones on the product page.
+
+### Headlines, Benefits & Claims
+
+### Headlines
+- Spark, on Your Terms [Weak headline]
+- A Different Pathway Entirely [Weak headline]
+
+### More approved benefits
+- Desire Support on Your Schedule
+- Supports Mind-Body Responsiveness
+- Desire Starts in the Brain
+- Helps Awaken Desire
+- Supports Sexual Motivation
+- Activates Desire Signaling [Weak benefit]
+- Supports Libido Pathways [Weak benefit]
+- Supports Your Spark [Weak benefit]
+- Supports Body Responsiveness [Weak benefit]
+- Supports Romantic Readiness [Weak benefit]
+- Supports the Desire Response [Weak benefit]
+- Peptide-Powered Desire Support [Weak benefit]
+- Supports Desire From Within [Weak benefit]
+- Designed to Support Desire [Weak benefit]
+```
+
+## Notes (hand, `references/product-notes.md`)
+# PT-141: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
 
 ## Product facts for this skill
 - **Product name on creative:** "PT-141". (The sublingual label prints "PT 141"; copy still writes "PT-141".) Ingredient: PT-141 (bremelanotide)
@@ -33,7 +176,7 @@
   live landing page (which says "Generic Viagra", "ignite", "hard-hitting", "instant": never copy). PT-141 is **desire** support: brain-based,
   non-hormonal, on-demand. "Supports", never "builds"/"boosts"; mechanism first ("Supports Central Desire Pathways" leads, then the benefit
   it serves). Never "arousal" or any form of it (bible Hard NO, 2026-11-02).
-- **Offer (bible 2026-11-05):** always the highest, "Save Up to 59%" (sublingual), whichever form is pictured; the nasal-spray 23% is a reference number only. No $ prices.
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
 - **Disclaimer (verbatim):** `AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.`
 - **Landing page:** https://everlifemd.com/pt141/fb (last verified Aug. 28, 2026).
 
@@ -45,107 +188,3 @@ Tier A lines ("It Was Never Just Physical", "Some Nights Aren't Planned.", "Your
 Disappear.", "More Than Blood Flow", "Made for Moments, Not Calendars"), not the weak "Spark…" lines the old ads leaned on.
 Tier B examples in the agreed register (PROPOSED, need approval): "The spark was never the problem. The signal was." ·
 "Wanting is a brain thing." · "No plan. No problem." · "Still you. Still wanting."
-
-## Compliance pre-screen (Claude's reading of the bible against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
-| Line (bible) | Where | Status | Why |
-|---|---|---|---|
-| Low Libido? Support Desire Where It Starts | headlines | ⏳ Pending approval (bible flag) | only with explicit approval; pronoun-free question is otherwise fine |
-| Brain-Based Sexual Health Support | headlines | ⏳ Pending approval (bible flag) | "sexual health" edges toward a health/medical frame |
-| Sexual Wellness Starts in the Brain | headlines | ⏳ Pending approval (bible flag) | same |
-| Spark, on Your Schedule · Spark, on Your Terms · A Different Pathway Entirely | headlines | Weak headline (bible flag) | avoid unless the brief asks |
-| Gentle on the Vascular System | quick-hit | ❌ removed | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate |
-| Activates Desire Signaling … Designed to Support Desire (9 lines) | headline bank | Weak benefit (bible flag) | avoid unless the brief asks |
-| Helps Wake Up the Want · Sublingual or Nasal Spray Desire Support | quick-hit | ❌ removed | removed from the bible 2026-11-02 (version 1793642193-f927); Justin to confirm it was deliberate; the spray / tablet line was the page's only mention of the two forms |
-| Any "ED", "erectile", "performance", "Viagra", "instant", "ignite" | not on this page | ❌ | outside PT-141's approved scope (Spark's "ED" headlines are Pending there, not here) |
-| Any "hormone-free fix", "cure", "treat low libido" | — | ❌ | disease/treatment claim |
-
-| Supports Central Desire Pathways · Supports Mind-Body Responsiveness | quick-hit / headline bank | ✅ (screened 2026-11-02) | NEW on the bible 2026-11-02, replacing the "arousal" lines; plain structure-function |
-| Supports Desire From Within | headline bank | Weak benefit (bible flag) | NEW 2026-11-02 (was "…Arousal From Within"); avoid unless asked |
-| Any "arousal", "aroused", "arousing" | anywhere | ❌ | bible Hard NO (2026-11-02): Never use “arousal” or any form of it (“aroused,” “arousing”). |
-
-Everything else in the verbatim section is usable under its own label.
-
----
-
-# VERBATIM (do not edit; re-copy from the bible)
-
-## PT-141
-Who it's for
-Adults 30–55 who want non-hormonal, on-demand desire support.
-Creative direction
-- —Keep it tasteful — product imagery led, no bedroom scenes.
-- —Video framing stays shoulder-up.
-Women's health
-Intimate wellness
-Creative messaging reference
-PT-141
-Brain-based, non-hormonal desire support designed around desire signaling and on-demand intimate readiness.
-Headlines & hooks
-Low Desire Isn’t in Your Head. It’s in Your Chemistry.
-Your Body Changed. Your Desire Doesn’t Have to Disappear.
-Low Libido? Support Desire Where It StartsPending approval
-It Was Never Just Physical
-More Than Blood Flow
-Brain-Based Sexual Health SupportPending approval
-Sexual Wellness Starts in the BrainPending approval
-Some Nights Aren’t Planned.
-Made for Moments, Not Calendars
-Awaken the Desire Response.
-Spark, on Your ScheduleWeak headline
-More headlines on page 22
-Quick-hit benefits
-- —Supports Brain-Based Desire
-- —Promotes On-Demand Desire
-- —Non-Hormonal Desire Support
-- —Encourages Intimate Readiness
-- —Supports Central Desire Pathways
-CTAs
-- Support Your Spark
-- Explore PT-141
-- CTA: Save Up to 59%
-- Start Desire Support
-- Find Your Plan
-- PT-141 for $2.00/day
-- Ships Free From Pharmacy
-Proof & value props
-- —Trustpilot rated 4.9 Excellent
-- —Over 100,000 happy customers
-- —Clinician-guided care
-- —Personalized treatment
-- —Transparent, all-in-one pricing
-Offers & conversion
-- —Save up to 23% (nasal spray)
-- —Save up to 59% (sublingual)
-Hard NOs
-- —No beds or bedroom scenes.
-- —Never use “arousal” or any form of it (“aroused,” “arousing”).
-- —Plus all global Hard NOs on page 3.
-Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
-https://everlifemd.com/pt141/fb  ·  Last verified: Aug. 28, 2026
-
-## PT-141 · headline bank
-Headline bank
-PT-141
-2 more headlines beyond the ones on the product page.
-Intimate wellness
-Creative messaging reference
-Headlines, Benefits & Claims
-Headlines
-—Spark, on Your TermsWeak headline
-—A Different Pathway EntirelyWeak headline
-More approved benefits
-—Desire Support on Your Schedule
-—Supports Mind-Body Responsiveness
-—Desire Starts in the Brain
-—Helps Awaken Desire
-—Supports Sexual Motivation
-—Activates Desire SignalingWeak benefit
-—Supports Libido PathwaysWeak benefit
-—Supports Your SparkWeak benefit
-—Supports Body ResponsivenessWeak benefit
-—Supports Romantic ReadinessWeak benefit
-—Supports the Desire ResponseWeak benefit
-—Peptide-Powered Desire SupportWeak benefit
-—Supports Desire From WithinWeak benefit
-—Designed to Support DesireWeak benefit
-PT-141 — headline bank

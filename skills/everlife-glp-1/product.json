@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's GLP1 ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
  "id": "glp-1",
  "name": "GLP-1",
+ "bible_sections": [
+  "GLP1"
+ ],
  "renders": {
   "bottle": "glp1_semaglutide_vial.png",
   "pill": null
@@ -32,7 +35,6 @@
  },
  "disclaimer_at": "bottom",
  "end_card_safe_shift": true,
- "bible_section": "GLP1",
  "forms": {
   "semaglutide": {
    "label": "compounded semaglutide",
@@ -46,5 +48,11 @@
    "pill": null,
    "bottle_wording": "a green-tinted glass vial with a green flip-off cap over a green crimp; a green label with a small white outlined box reading 'Compounded', 'TIRZEPATIDE' large in white, a thin white rule, 'RX ONLY'"
   }
- }
+ },
+ "variations": [
+  "vial-product",
+  "two-forms",
+  "compounded-glp1"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

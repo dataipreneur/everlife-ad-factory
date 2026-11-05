@@ -1,0 +1,474 @@
+{
+ "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
+ "version": "1793905953-bc2f",
+ "id": "restora-z",
+ "name": "Restora-Z",
+ "sections": [
+  "Restora-Z"
+ ],
+ "category": "Sleep",
+ "who": "Adults 45–65+ who wake through the night or dislike next-day grogginess.",
+ "truth": "All audiences",
+ "direction": [
+  "Lead every header with “sleep,” bolded.",
+  "Comparisons run one direction: switching from Ambien to Restora."
+ ],
+ "offer": {
+  "pct": null,
+  "status": "placeholder",
+  "source": "",
+  "cta": "",
+  "lines": [
+   "current % savings / price"
+  ],
+  "variants": {}
+ },
+ "cta_default": "Ships Free From Pharmacy",
+ "cta_price": "Restora-Z for $2.25/day",
+ "ctas": [
+  "Explore Restora-Z",
+  "Support Better Sleep",
+  "Save Up to X%",
+  "Start Your Sleep Plan",
+  "Build a Better Night",
+  "Restora-Z for $2.25/day",
+  "Ships Free From Pharmacy"
+ ],
+ "benefits_quick": [
+  "Supports Falling + Staying Asleep",
+  "Helps Reduce Nighttime Wake-Ups",
+  "Promotes Restorative Sleep",
+  "Encourages Nighttime Calm",
+  "3-in-1 Sleep Formula",
+  "Supports Clear-Headed Mornings",
+  "Supports Longer, Deeper Sleep"
+ ],
+ "benefits_more": [
+  {
+   "text": "Sleep 8 Hours Nightly",
+   "badges": []
+  },
+  {
+   "text": "Wake Up Energized Without Grogginess",
+   "badges": []
+  },
+  {
+   "text": "Calms Anxiety + Quiets Racing Thoughts",
+   "badges": []
+  },
+  {
+   "text": "Helps End Restless, Disrupted Nights",
+   "badges": []
+  },
+  {
+   "text": "Non-Addictive, Safe Long-Termunsupported medical-style claim",
+   "badges": [
+    "Hard NO conflict"
+   ]
+  },
+  {
+   "text": "Helps You Relax, Ease Stress + Lift Mood",
+   "badges": []
+  },
+  {
+   "text": "Better Sleep, Better Days Ahead",
+   "badges": [
+    "Weak benefit"
+   ]
+  },
+  {
+   "text": "Warns of next-day impairment",
+   "badges": []
+  },
+  {
+   "text": "Next-day drowsiness reported",
+   "badges": []
+  },
+  {
+   "text": "Morning grogginess",
+   "badges": []
+  },
+  {
+   "text": "Risk of complex sleep behaviors",
+   "badges": []
+  }
+ ],
+ "headlines": [
+  {
+   "text": "Ambien Not Working Like It Used To?",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Still Groggy After Ambien? Meet Restora",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Fall Asleep Fast, Stay Asleep",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Sleep 8 Hours Nightly",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "A Non-Narcotic Alternative to Ambien",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Ambien Feeling Less Effective? Explore Restora.",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Non-Addictive. No Grogginess.",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Wake Up Refreshed",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Ready for an Alternative to Ambien?",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Why Settle for Less Sleep, When You Can Get More?",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "3-in-1 Sleep Support. No Narcotics.",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Beyond Ambien: A 3-in-1 Sleep Formula",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Get 30 Nights of Better Sleep",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Get Your 3-in-1 Sleep Solution",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "3-in-1 Formula: Trazodone + Hydroxyzine + Doxepin",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Discover the New 3-in-1 Sleep Compound",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Unlock Deep, Restorative Sleep Every Night",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Sleep Easier, Sleep Longer",
+   "badges": [],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "The Last Sleep Medication You’ll Ever Needunsupported medical-style claim",
+   "badges": [
+    "Hard NO conflict"
+   ],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Insomnia Solvedunsupported medical-style claim",
+   "badges": [
+    "Hard NO conflict"
+   ],
+   "page": "Restora-Z"
+  },
+  {
+   "text": "Knock Out Insomniaunsupported medical-style claim",
+   "badges": [
+    "Hard NO conflict"
+   ],
+   "page": "Restora-Z"
+  }
+ ],
+ "offer_lines": [
+  "current % savings / price"
+ ],
+ "proof": [
+  "Trustpilot rated 4.9 Excellent",
+  "Over 100,000 happy customers",
+  "Trazodone, Hydroxyzine and Doxepin in one dose"
+ ],
+ "hard_nos": [
+  "Only describe Ambien using the approved claims on page 22.",
+  "Plus all global Hard NOs on page 3."
+ ],
+ "ingredient_claims": {
+  "Trazodone": [
+   "Aids in falling asleep",
+   "Enhances sleep quality",
+   "Supports longer sleep duration",
+   "Reduces sleep interruptions",
+   "Improves sleep consistency",
+   "Promotes restful slumber"
+  ],
+  "Hydroxyzine": [
+   "Eases stress-related insomnia",
+   "Promotes restful sleep",
+   "Supports deep relaxation",
+   "Reduces anxiety before sleep",
+   "Calms the nervous system",
+   "Enhances sleep quality",
+   "Non-habit-forming sleep aid"
+  ],
+  "Doxepin": [
+   "Improves sleep maintenance",
+   "Reduces early awakenings",
+   "Enhances sleep duration",
+   "Non-addictive sleep aid",
+   "Promotes deep sleep",
+   "Supports restful nights",
+   "Decreases nighttime wakefulness",
+   "Boosts sleep quality"
+  ]
+ },
+ "disclaimer": "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded sleep medication.",
+ "landing_page": "Current LP: [PLACEHOLDER]",
+ "last_verified": "[PLACEHOLDER]",
+ "field_badges": {},
+ "screen": {
+  "the last sleep medication you'll ever needunsupported medical-style claim": {
+   "status": "❌ (bible: Hard NO conflict)",
+   "why": "bible badge [Hard NO conflict]"
+  },
+  "insomnia solvedunsupported medical-style claim": {
+   "status": "❌ (bible: Hard NO conflict)",
+   "why": "bible badge [Hard NO conflict]"
+  },
+  "knock out insomniaunsupported medical-style claim": {
+   "status": "❌ (bible: Hard NO conflict)",
+   "why": "bible badge [Hard NO conflict]"
+  },
+  "non-addictive, safe long-termunsupported medical-style claim": {
+   "status": "❌ (bible: Hard NO conflict)",
+   "why": "bible badge [Hard NO conflict]"
+  },
+  "better sleep, better days ahead": {
+   "status": "Weak (bible)",
+   "why": "bible badge [Weak benefit]"
+  },
+  "save up to x%": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  },
+  "current % savings / price": {
+   "status": "❌ placeholder (bible)",
+   "why": "bible badge [PLACEHOLDER]"
+  },
+  "aids in falling asleep": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Trazodone); never attributed to the product"
+  },
+  "enhances sleep quality": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "supports longer sleep duration": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Trazodone); never attributed to the product"
+  },
+  "reduces sleep interruptions": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Trazodone); never attributed to the product"
+  },
+  "improves sleep consistency": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Trazodone); never attributed to the product"
+  },
+  "promotes restful slumber": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Trazodone); never attributed to the product"
+  },
+  "eases stress-related insomnia": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "promotes restful sleep": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "supports deep relaxation": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "reduces anxiety before sleep": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "calms the nervous system": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "non-habit-forming sleep aid": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Hydroxyzine); never attributed to the product"
+  },
+  "improves sleep maintenance": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "reduces early awakenings": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "enhances sleep duration": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "non-addictive sleep aid": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "promotes deep sleep": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "supports restful nights": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "decreases nighttime wakefulness": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  },
+  "boosts sleep quality": {
+   "status": "⚠ ingredient claim",
+   "why": "only on its own ingredient (Doxepin); never attributed to the product"
+  }
+ },
+ "first_seen": {
+  "3-in-1 formula: trazodone + hydroxyzine + doxepin": "baseline",
+  "3-in-1 sleep formula": "baseline",
+  "3-in-1 sleep support. no narcotics.": "baseline",
+  "a non-narcotic alternative to ambien": "baseline",
+  "aids in falling asleep": "baseline",
+  "ambien feeling less effective? explore restora.": "baseline",
+  "ambien not working like it used to?": "baseline",
+  "better sleep, better days ahead": "baseline",
+  "beyond ambien: a 3-in-1 sleep formula": "baseline",
+  "boosts sleep quality": "baseline",
+  "build a better night": "baseline",
+  "calms anxiety + quiets racing thoughts": "baseline",
+  "calms the nervous system": "baseline",
+  "current % savings / price": "baseline",
+  "decreases nighttime wakefulness": "baseline",
+  "discover the new 3-in-1 sleep compound": "baseline",
+  "eases stress-related insomnia": "baseline",
+  "encourages nighttime calm": "baseline",
+  "enhances sleep duration": "baseline",
+  "enhances sleep quality": "baseline",
+  "explore restora-z": "baseline",
+  "fall asleep fast, stay asleep": "baseline",
+  "get 30 nights of better sleep": "baseline",
+  "get your 3-in-1 sleep solution": "baseline",
+  "helps end restless, disrupted nights": "baseline",
+  "helps reduce nighttime wake-ups": "baseline",
+  "helps you relax, ease stress + lift mood": "baseline",
+  "improves sleep consistency": "baseline",
+  "improves sleep maintenance": "baseline",
+  "insomnia solvedunsupported medical-style claim": "baseline",
+  "knock out insomniaunsupported medical-style claim": "baseline",
+  "morning grogginess": "baseline",
+  "next-day drowsiness reported": "baseline",
+  "non-addictive sleep aid": "baseline",
+  "non-addictive, safe long-termunsupported medical-style claim": "baseline",
+  "non-addictive. no grogginess.": "baseline",
+  "non-habit-forming sleep aid": "baseline",
+  "over 100,000 happy customers": "baseline",
+  "promotes deep sleep": "baseline",
+  "promotes restful sleep": "baseline",
+  "promotes restful slumber": "baseline",
+  "promotes restorative sleep": "baseline",
+  "ready for an alternative to ambien?": "baseline",
+  "reduces anxiety before sleep": "baseline",
+  "reduces early awakenings": "baseline",
+  "reduces sleep interruptions": "baseline",
+  "restora-z for $2.25/day": "baseline",
+  "risk of complex sleep behaviors": "baseline",
+  "save up to x%": "baseline",
+  "ships free from pharmacy": "baseline",
+  "sleep 8 hours nightly": "baseline",
+  "sleep easier, sleep longer": "baseline",
+  "start your sleep plan": "baseline",
+  "still groggy after ambien? meet restora": "baseline",
+  "support better sleep": "baseline",
+  "supports clear-headed mornings": "baseline",
+  "supports deep relaxation": "baseline",
+  "supports falling + staying asleep": "baseline",
+  "supports longer sleep duration": "baseline",
+  "supports longer, deeper sleep": "baseline",
+  "supports restful nights": "baseline",
+  "the last sleep medication you'll ever needunsupported medical-style claim": "baseline",
+  "trazodone, hydroxyzine and doxepin in one dose": "baseline",
+  "trustpilot rated 4.9 excellent": "baseline",
+  "unlock deep, restorative sleep every night": "baseline",
+  "wake up energized without grogginess": "baseline",
+  "wake up refreshed": "baseline",
+  "warns of next-day impairment": "baseline",
+  "why settle for less sleep, when you can get more?": "baseline"
+ },
+ "retired": [
+  {
+   "line": "Get Started Now",
+   "why": "banned CTA (bible 2026-11-03): lead with the offer"
+  }
+ ],
+ "patterns": [],
+ "extra": {
+  "Approved pain points": [
+   "- Chronic insomnia",
+   "- Always exhausted",
+   "- Zero energy all day",
+   "- Irritable and cranky",
+   "- Brain fog and trouble focusing",
+   "- Feeling down and hopeless",
+   "- Restless tossing and turning",
+   "- Frequent nighttime wake-ups",
+   "- Anxiety keeps you up",
+   "- Can’t fall or stay asleep",
+   "- Drained, even after sleep",
+   "- Struggling to relax at night"
+  ],
+  "Ambien comparison & approved phrasing": [
+   "How to compare against Ambien, the claims we can make, and approved alternate phrasing. Global Hard NOs on page 3 still apply.",
+   "How we’re allowed to compare"
+  ],
+  "Rules": [
+   "- Must use Ambien’s actual pill."
+  ],
+  "Approved alternates — reviewed and cleared": [
+   "- “Tired of the morning fog often left behind by Ambien? In testimonials, Restora members reported a clean transition from sleep to wakefulness.”",
+   "- “Ambien is known for next-day grogginess. Restora is engineered differently — designed to help you sleep soundly and wake up with a clear head.”",
+   "- “Tired of the morning fog often associated with Ambien? Restora-Z offers a non-narcotic, non-addictive choice for a clean bedtime routine.”",
+   "- “While Ambien is known for next-day grogginess, Restora-Z is formulated differently. Discover a non-addictive option designed to support natural sleep and a clear morning.”",
+   "- “For those seeking an alternative to next-day Ambien grogginess, Restora-Z provides a non-narcotic formula to refresh your nightly habits.”",
+   "- “Ambien is a common choice for sleep, but its label warns of next-day impairment. Restora-Z members are discovering a non-narcotic, non-addictive path to a restful night.”",
+   "- “Skip the heavy grogginess tied to traditional options like Ambien. Restora-Z delivers a non-narcotic alternative that helps you relax before bed so you can wake up refreshed.”"
+  ]
+ }
+}

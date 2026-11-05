@@ -57,6 +57,9 @@ CONTENT_GAP = 20               # px of calm background wanted between the raw's 
 # name under the logo passed the old bottom-only check). Edge density of the side bands, calibrated on 4 Spark + 23 Sermorelin raws:
 # type in a band scores 0.11–0.17, calm or textured bands under 0.05.
 SIDE_REFUSE = float(os.environ.get("EVERLIFE_SIDE_REFUSE", "0.09"))   # above → refuse (exit 2)
+FOOTER_DROP_MAX = min(0.20, max(0.0, float(os.environ.get("EVERLIFE_FOOTER_DROP_MAX", "0.20"))))   # ≤ 20%: approved 2026-11-05, never more
+FOOTER_DROP_PX = int(1920 * FOOTER_DROP_MAX)
+FOOTER_BUSY_T = float(os.environ.get("EVERLIFE_FOOTER_BUSY_T", "26"))   # luminance std + edge score under the row; above = busy band
 SIDE_WARN = float(os.environ.get("EVERLIFE_SIDE_WARN", "0.05"))       # above → warn: look at the safezones overlay
 LOGO_BUSY_MAX = 0.12                                                   # the ad's own type/product under the logo → refuse
 
@@ -383,19 +386,48 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     elif shift < 0:
         out = extend_bottom(out.crop((0, -shift, W, H)), W, H)
     # footer: 9:16 → ends at the bottom of the Meta safe area; feed (and the retired bottom mode) → bottom of the frame
+    foot_bottom = sz.FOOTER_BOTTOM
     if story:
         foot_probe = build_footer(W, "dark", disclaimer, fw, wd)
         fy = sz.FOOTER_BOTTOM - foot_probe.height
         cb = content_bottom(out)
         if cb > fy - 6:            # the auto shift aims for CONTENT_GAP above the footer; allow the detector's 4 px steps
+            # Approved rule (Justin, via Mitansh 2026-11-05: "you have freedom to adjust the footer placement by 20% … if it fixes the problem"):
+            # drop the proof row by the MINIMUM that clears the content, never more than FOOTER_DROP_MAX of the height (20% = 384 px,
+            # so it ends by y 1769); the disclaimer stays at the very bottom. Beyond that the raw is still refused → re-roll.
+            need = cb + CONTENT_GAP - fy
+            if 0 < need <= FOOTER_DROP_PX:
+                foot_bottom = sz.FOOTER_BOTTOM + need
+                fy = foot_bottom - foot_probe.height
+                print(f"   footer: dropped {need}px (content to y {cb}; ≤ {int(FOOTER_DROP_MAX * 100)}% approved, now ends y {foot_bottom})")
+        # Second trigger (Justin's 20% rule, Mitansh 2026-11-05 on PT-141 b17 #3: the row sat on a chrome counter strip): if the band
+        # under the row is busy or high-contrast (texture, edges, a bright strip), slide the row down to the calmest band within the cap.
+        if foot_bottom == sz.FOOTER_BOTTOM and cb <= fy - 6:
+            def busy(fb):
+                y0 = max(0, fb - foot_probe.height - 10); y1 = min(H, fb + 10)
+                a_ = np.asarray(out.crop(((W - fw) // 2, y0, (W + fw) // 2, y1)).convert("L").resize((96, 12))).astype(np.float64)
+                return float(a_.std()) + float(np.abs(np.diff(a_, axis=0)).mean()) * 2
+            here = busy(sz.FOOTER_BOTTOM)
+            if here > FOOTER_BUSY_T:
+                best_fb, best = sz.FOOTER_BOTTOM, here
+                for d_ in range(16, FOOTER_DROP_PX + 1, 16):
+                    fb_ = sz.FOOTER_BOTTOM + d_
+                    if fb_ - foot_probe.height < cb + CONTENT_GAP: continue
+                    sc_ = busy(fb_)
+                    if sc_ < best: best_fb, best = fb_, sc_
+                    if sc_ < FOOTER_BUSY_T * 0.5: break
+                if best_fb != sz.FOOTER_BOTTOM and best < here * 0.7:
+                    foot_bottom = best_fb; fy = foot_bottom - foot_probe.height
+                    print(f"   footer: dropped {foot_bottom - sz.FOOTER_BOTTOM}px to a calmer band (busy {here:.0f} → {best:.0f}; ≤ {int(FOOTER_DROP_MAX * 100)}% approved, now ends y {foot_bottom})")
+        if cb > fy - 6 and foot_bottom == sz.FOOTER_BOTTOM:
             if fit == "none":
                 print(f"❌ {(os.path.basename(gen_path) if isinstance(gen_path, str) else 'frame')}: content runs to y {cb} but the footer starts at y {fy} "
-                      f"(Meta 9:16 safe area ends at y {sz.FOOTER_BOTTOM}). Re-roll the raw with the 9:16 LAYOUT block "
+                      f"(Meta 9:16 safe area ends at y {sz.FOOTER_BOTTOM}; the approved ≤{int(FOOTER_DROP_MAX * 100)}% footer drop, {FOOTER_DROP_PX}px, is not enough). Re-roll the raw with the 9:16 LAYOUT block "
                       f"(everything in the top ~52%, bottom ~45% calm; it was already shifted up {-shift}px) or fix it with "
                       f"one reposition edit; "
                       f"--fit force lays the footer over it for a QA preview only.")
                 raise SystemExit(2)
-        band = np.asarray(out.crop((0, fy - 60, W, sz.FOOTER_BOTTOM + 60)).resize((64, 16))).reshape(-1, 3).astype(np.float64)
+        band = np.asarray(out.crop((0, fy - 60, W, min(H, foot_bottom + 60))).resize((64, 16))).reshape(-1, 3).astype(np.float64)
     else:
         band = np.asarray(out.crop((0, int(H * 0.85), W, H)).resize((64, 16))).reshape(-1, 3).astype(np.float64)
     tone = tone_opt if tone_opt != "auto" else ("dark" if lum(band).mean() < TEXT_T else "light")
@@ -404,7 +436,7 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     foot = build_footer(W, tone, disclaimer, fw, wd)
     o = out.convert("RGBA")
     if story:
-        fy = sz.FOOTER_BOTTOM - foot.height
+        fy = foot_bottom - foot.height
         if PROOF != "none":   # no proof row → nothing to read there: no dark band across the art (Mitansh 2026-11-02: "Why do you have this shadow??")
             sc_layer = scrim(W, foot.height, tone, top_fade=120, bottom_fade=160)
             o.alpha_composite(sc_layer, (0, fy - 120))
@@ -453,7 +485,8 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     o.alpha_composite(lg, (lx, ly))
     # safe-zone check (9:16): the footer column and the logo must sit inside the Meta safe area
     if story:
-        probs = sz.violations(((W - fw) // 2, fy, (W + fw) // 2, fy + foot.height), W, H, "footer")
+        drop = foot_bottom - sz.FOOTER_BOTTOM          # approved ≤20% footer drop (Justin via Mitansh, 2026-11-05): audit against the dropped line
+        probs = sz.violations(((W - fw) // 2, fy - drop, (W + fw) // 2, fy + foot.height - drop), W, H, "footer")
         probs += sz.violations((lx, ly, lx + lg.width, ly + lg.height), W, H, "logo")
         if probs:
             print("❌ " + "; ".join(probs)); raise SystemExit(2)
@@ -518,7 +551,7 @@ def main():
     ly = LOGO_TOP[a.ratio]; foot_h = info['foot_h']
     out.save(a.out, quality=95)
     _log_proof(a.out, a.ratio, PROOF)
-    where = f"y {fy}–{fy + foot_h} (safe area)" if story else "bottom"
+    where = (f"y {fy}–{fy + foot_h} (safe area)" if fy + foot_h <= sz.FOOTER_BOTTOM else f"y {fy}–{fy + foot_h} (dropped {fy + foot_h - sz.FOOTER_BOTTOM}px, ≤20% approved)") if story else "bottom"
     disc_where = "bottom of frame" if (story and DISC_AT == "bottom") else "in footer"
     print(f"done {a.out}  tone={tone}  logo=top@{ly}px({top_tone}) shift={shift}px  "
           f"footer={foot_h}px @ {where}  disclaimer={disc_where}  proof={PROOF}")

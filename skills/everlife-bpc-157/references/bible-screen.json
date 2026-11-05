@@ -1,0 +1,19 @@
+{
+ "_about": "Hand overrides only (migrated 2026-11-05 from the old pre-screen table). lines: {bible line: {status ❌|⚠ …, why}}; patterns: product regexes [{re, status, why}]; retired: lines gone from the bible that stay refused. Everything else is derived from the bible's badges and core/scripts/hard_nos.py by build_product_bibles.py.",
+ "lines": {},
+ "patterns": [
+  {
+   "re": "\\b(heal|cure|treat|injury|pain|inflammation|torn|regenerate)\\b",
+   "status": "❌",
+   "why": "disease / treatment framing (global). The docx's \"Who it's for\" may mention recovering from joint, tendon or gut issues as context; ad copy says \"recovery\", \"support\", \"bounce back\"",
+   "_review": "regex built from the old row: check it"
+  },
+  {
+   "re": "\\b(needle\\-free)\\b",
+   "status": "❌",
+   "why": "global Hard NO; the vial is always a still object",
+   "_review": "regex built from the old row: check it"
+  }
+ ],
+ "retired": []
+}

@@ -1,12 +1,125 @@
-# GHK-Cu Cream — creative bible (verbatim extract)
+# GHK Peptide Cream — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
-> **Bible sync 1793896982-b7dc (2026-11-05; wins over every line below, including the earlier sync banners):** Quick-hit benefit wording changed (word for word is mandatory): the bible now uses Promotes / Aids / Encourages / Maintains / Fuels / Reinforces where it used to say "Supports"; every line in this skill that carried the old wording was updated. ⚠ These verbs read stronger than "Supports": use them exactly as the bible words them, and Jeremy must confirm them before anything goes live. Changed here: "Supports Skin’s Natural Repair Process" → "Promotes Skin’s Natural Repair Process"; "Supports a Brighter, More Even-Looking Tone" → "Encourages a Brighter, More Even-Looking Tone". **This product:** The bible added direction: teach what a peptide skin cream actually does; differentiate from moisturizers and serums (works at the signal level: collagen, elastin, repair); pair each benefit with a quick reason-why. The headline pool grew from 6 to 16 (none flagged pending or weak): read it in `core/claude/creative-bible.md` (GHK-Cu Cream); the tables below are the old pool.
-> **Bible sync 1793832093-ced5 (2026-11-04; wins over every line below):** Global changes (full text: `core/references/global-rules.md`, end of file, and `core/claude/everlife-gates.md`): focal mix is now **40% pill / 30% bottle / 30% person** (was 50/25/25); proof split **42% trust row / 28% Trustpilot bar + "Over 100,000 happy customers" / 30% none**; each ad uses THIS product's own disclaimer (the global "ADVERTISEMENT: …" line was removed from the bible); logo 40% wide on 9:16, 29% on 4:5; minimum on-screen text 24 px; never the phrase "body composition", never "fat" or "skinny" claims; benefit lines come from this product's Quick-hit list **word for word** (NEW, not screened: ask Justin whether a per-ingredient claim counts); "Dr. Prescribed" is never a benefit; new Product accuracy & realistic scale rule (label orientation, scale, no distortion); the lowest price or price/day on 10% of all ads. Shirtless talent is not on the bible's allowed list for this product: none. **This product:** The bible's CTA is now **"GHK Peptide Cream for $1.50/day"** (it read "GHK-Cu Cream for…"): the same wording this skill already uses on Meta/Google/TikTok.
+> Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-> **CTA update (bible sync 1793728650-5a0d, 2026-11-03; wins over every CTA list below):** "Get Started Now" is banned (bible Creative & page standards, synced 2026-11-03: "Never use “Get Started Now” as a CTA. Lead with the offer instead"). Offer CTA: "Save Up to 75%". "Ships Free From Pharmacy" is a bible CTA on every product page. **Default CTA: "Save Up to 75%".** Keep capitalization consistent across a headline set, benefit list or CTA row (new standard). Nothing (incl. a footer gradient) may cover the product, the CTA or text.
-> **Price CTA (bible sync 1793746711-6285, 2026-11-03):** "GHK-Cu Cream for $1.50/day" in the bible; on Meta / Google / TikTok write it "GHK Peptide Cream for $1.50/day" (the channel naming rule). An approved ALTERNATIVE CTA, written exactly as in the bible; the offer CTA above stays the default. It is the only $ amount allowed in this product's ads and it overrides any "never a $ price" line below for this one CTA; no other prices, no per-month maths, no "cheap" framing.
+## Product copy (bible version 1793905953-bc2f)
+- **Offer:** Save Up to 75% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
+- **Default CTA:** Save Up to 75%
+- **CTAs (bible):** Upgrade Your Skin Routine · Explore GHK Peptide Cream · Save Up to 75% · Support Firmer Skin · Start Skin Renewal · GHK Peptide Cream for $1.50/day · Ships Free From Pharmacy
+- **Price CTA (approved alternative, the only $ amount allowed):** GHK Peptide Cream for $1.50/day
+- **Quick-hit benefits (word for word):** Supports Collagen + Elastin · Promotes Firmer, More Youthful-Looking Skin · Promotes Skin’s Natural Repair Process · Supports Smoother-Looking Texture · Encourages a Brighter, More Even-Looking Tone
+- **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers
+- **Product Hard NOs:** No bodybuilding or “huge” physique imagery. · Plus all global Hard NOs on page 3.
+- **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+- **Landing page:** https://everlifemd.com/ghk-peptide-cream/fb (last verified Nov. 3, 2026)
+- **Retired, never use:** Get Started Now · GHK-Cu Cream for $1.50/day
 
-> Source: the live creative bible, synced into `core/claude/creative-bible.md` (section "## GHK-Cu Cream"), copied 2026-11-02 by everlife-new-product. Re-copy when the bible changes. Global rules: `core/references/global-rules.md` (they win).
+## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
+| Line (bible) | Where | Status | Why |
+|---|---|---|---|
+| Not a Moisturizer. A Skin-Repair Signal. | headlines | ✅ |  |
+| The Copper Peptide Your Skin Has Been Missing. | headlines | ❌ auto | creative says "GHK", never "GHK-Cu" / "copper peptide" (H2 product name only) |
+| Collagen Fades With Age. GHK Helps Signal It Back. | headlines | ✅ |  |
+| What Your Serum Misses, Copper Peptides Support. | headlines | ❌ auto | creative says "GHK", never "GHK-Cu" / "copper peptide" (H2 product name only) |
+| Skincare That Works at the Signal Level. | headlines | ✅ |  |
+| One Peptide. Firmer, Smoother, Brighter-Looking Skin. | headlines | ✅ |  |
+| Go Beyond Hydration — Support Real Renewal. | headlines | ✅ |  |
+| Give Aging Skin a Reason to Bounce Back. | headlines | ✅ |  |
+| The Peptide Behind Skin Renewal | headlines | ⚠ Jeremy | attributes an outcome ("skin renewal") to the compound (global: mechanism first); "renewal" reads medical-style |
+| Why Copper Peptides Are Skincare’s Quiet Upgrade. | headlines | ❌ auto | creative says "GHK", never "GHK-Cu" / "copper peptide" (H2 product name only) |
+| Firmer-Looking Skin Starts With Support | headlines | ✅ |  |
+| Glow Smarter With GHK Peptide Cream | headlines | ✅ |  |
+| Peptide-Powered Skin Support | headlines | ✅ |  |
+| The Difference a Copper Peptide Makes. | headlines | ❌ auto | creative says "GHK", never "GHK-Cu" / "copper peptide" (H2 product name only) |
+| Your Daily GHK Glow | headlines | ✅ |  |
+| Healthy Skin Isn’t One Thing. It’s Everything. | headlines | ✅ |  |
+| Supports Collagen + Elastin | quick-hit benefits | ✅ |  |
+| Promotes Firmer, More Youthful-Looking Skin | quick-hit benefits | ✅ |  |
+| Promotes Skin’s Natural Repair Process | quick-hit benefits | ✅ |  |
+| Supports Smoother-Looking Texture | quick-hit benefits | ✅ |  |
+| Encourages a Brighter, More Even-Looking Tone | quick-hit benefits | ✅ |  |
+| Upgrade Your Skin Routine | CTAs | ✅ |  |
+| Explore GHK Peptide Cream | CTAs | ✅ |  |
+| Save Up to 75% | CTAs | ✅ |  |
+| Support Firmer Skin | CTAs | ✅ |  |
+| Start Skin Renewal | CTAs | ⚠ Jeremy | same "skin renewal" outcome wording as the headline above |
+| GHK Peptide Cream for $1.50/day | CTAs | ✅ |  |
+| Ships Free From Pharmacy | CTAs | ✅ |  |
+| Save up to 75% | offers | ✅ |  |
+| Trustpilot rated 4.9 Excellent | proof | ✅ |  |
+| Over 100,000 happy customers | proof | ✅ |  |
+| Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
+| GHK-Cu Cream for $1.50/day | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
+
+## Verbatim (bible section "GHK-Cu Cream", version 1793905953-bc2f)
+```text
+
+### Who it's for
+Women 30–55 who want a daily peptide step in their skincare routine.
+
+### Creative direction
+- Beauty and fitness positioning — lean and fit, never bodybuilding.
+- Core demo is the 40-year-old mom, same as GLP-1.
+- Palette: pinks, tans and beige. No oranges or greens.
+- Teach what a peptide skin cream actually does. GHK-Cu is a copper peptide that signals skin to support its own collagen and repair — say it plainly, never assume the viewer knows what “peptide” means.
+- Differentiate from ordinary moisturizers and serums: this works at the signal level (collagen, elastin, repair), not just surface hydration. Make the “why it’s different” explicit.
+- Pair each benefit with a quick reason-why for context (e.g. “copper peptides support the collagen skin makes less of with age”), not a bare claim.
+
+Topical peptide skin support focused on collagen, elastin, firmness, and the skin’s natural repair process.
+
+### Headlines & hooks
+1. Not a Moisturizer. A Skin-Repair Signal.
+2. The Copper Peptide Your Skin Has Been Missing.
+3. Collagen Fades With Age. GHK Helps Signal It Back.
+4. What Your Serum Misses, Copper Peptides Support.
+5. Skincare That Works at the Signal Level.
+6. One Peptide. Firmer, Smoother, Brighter-Looking Skin.
+7. Go Beyond Hydration — Support Real Renewal.
+8. Give Aging Skin a Reason to Bounce Back.
+9. The Peptide Behind Skin Renewal
+10. Why Copper Peptides Are Skincare’s Quiet Upgrade.
+11. Firmer-Looking Skin Starts With Support
+12. Glow Smarter With GHK Peptide Cream
+13. Peptide-Powered Skin Support
+14. The Difference a Copper Peptide Makes.
+15. Your Daily GHK Glow
+16. Healthy Skin Isn’t One Thing. It’s Everything.
+
+### Quick-hit benefits
+- Supports Collagen + Elastin
+- Promotes Firmer, More Youthful-Looking Skin
+- Promotes Skin’s Natural Repair Process
+- Supports Smoother-Looking Texture
+- Encourages a Brighter, More Even-Looking Tone
+
+### CTAs
+- CTA: Upgrade Your Skin Routine
+- CTA: Explore GHK Peptide Cream
+- CTA: Save Up to 75%
+- CTA: Support Firmer Skin
+- CTA: Start Skin Renewal
+- CTA: GHK Peptide Cream for $1.50/day
+- CTA: Ships Free From Pharmacy
+
+### Proof & value props
+- Trustpilot rated 4.9 Excellent
+- Over 100,000 happy customers
+
+### Offers & conversion
+- Save up to 75%
+
+### Hard NOs
+- No bodybuilding or “huge” physique imagery.
+- Plus all global Hard NOs on page 3.
+
+Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
+Landing pagehttps://everlifemd.com/ghk-peptide-cream/fbLast verified Nov. 3, 2026
+```
+
+## Notes (hand, `references/product-notes.md`)
+# GHK Peptide Cream: hand notes (kept by hand; appended to the generated product-bible.md)
+
+Offer, CTAs, benefits, headlines and the disclaimer come from `references/bible.json` (generated from the bible); never restate them here.
 
 ## Product facts for this skill
 - **Name on creative (global naming rule):** **"GHK Peptide Cream"** on Meta (FB), Google (GL) and TikTok (TK): every image, video,
@@ -27,100 +140,9 @@
   "melasma", "dark spots", "hyperpigmentation", "eczema" or any skin condition (disease/medical-style); "clinically proven/studied";
   "builds"/"boosts" collagen; "copper"; "Botox", "filler", "retinol" or any named competitor or treatment; ages or "years younger";
   "results in N days"; body areas.
-- **Offer:** Save up to 75% (percent only, never a $ price).
+- (offer / CTA / price facts: see `references/bible.json`, regenerated from the bible on every sync)
 - **Proof:** Trustpilot rated 4.9 Excellent · Over 100,000 happy customers (the finisher's footer adds the approved art).
 - **Disclaimer (bible, synced 2026-11-03):** the standard ad disclaimer, verbatim in `product.json`:
   "AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical
   providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription."
 - **Landing page:** https://everlifemd.com/ghk-peptide-cream/fb (bible, verified Nov. 3, 2026). Ads take claims from the bible, never a landing page.
-
-## Compliance pre-screen (Claude's reading against the GLOBAL Hard NOs — NOT bible text; confirm with Jeremy)
-
-| Line (bible) | Where | Status | Why |
-|---|---|---|---|
-| Firmer-Looking Skin Starts With Support | headlines | ✅ | cosmetic "-looking", "support" |
-| Peptide-Powered Skin Support | headlines | ✅ |  |
-| Glow Smarter With GHK Peptide Cream | headlines | ✅ (FB/GL/TK) | names the product with the FB/GL/TK name; on H2 it would mismatch "GHK-Cu Cream": ⚠ Jeremy before any H2 use |
-| The Peptide Behind Skin Renewal | headlines | ⚠ Jeremy | attributes an outcome ("skin renewal") to the compound (global: mechanism first); "renewal" reads medical-style |
-| Your Daily GHK Glow | headlines | ✅ |  |
-| Healthy Skin Isn’t One Thing. It’s Everything. | headlines | Weak (bible) | avoid unless asked |
-| Supports Collagen + Elastin | benefits | ✅ (care) | structure-function "supports"; never "builds"/"boosts"/"restores" collagen |
-| Promotes Firmer, More Youthful-Looking Skin | benefits | ✅ (care) | keep "-looking"; never next to an age, "years younger", a face close-up comparison or before/after |
-| Promotes Skin’s Natural Repair Process | benefits | ✅ (care) | never paired with a wound, scar, burn or any skin condition |
-| Supports Smoother-Looking Texture | benefits | ✅ |  |
-| Encourages a Brighter, More Even-Looking Tone | benefits | ✅ (care) | never "dark spots", "melasma" or "hyperpigmentation" |
-| Upgrade Your Skin Routine | ctas | ✅ |  |
-| Explore GHK Peptide Cream | ctas | ✅ (FB/GL/TK) | the FB/GL/TK name; ⚠ Jeremy before any H2 use |
-| Get Started Now | ctas | ❌ | banned by the bible (2026-11-03): lead with the offer |
-| Save Up to 75% | ctas | ✅ | default CTA (bible 2026-11-03) |
-| Ships Free From Pharmacy | ctas | ✅ | bible 2026-11-03 |
-| Support Firmer Skin | ctas | ✅ |  |
-| Start Skin Renewal | ctas | ⚠ Jeremy | same "skin renewal" outcome wording as the headline above |
-| Save up to 75% | offer | ✅ | percent, not $ |
-
-**Clean pools (✅ only):**
-- Headlines (Tier A): Firmer-Looking Skin Starts With Support · Peptide-Powered Skin Support · Glow Smarter With GHK Peptide Cream
-  (FB/GL/TK) · Your Daily GHK Glow. **Four lines: say so up front** (headline rule in `image-batch.md` §0).
-- Benefits: all five quick-hit benefits (care notes above).
-- CTAs: Save Up to 75% (default) · Ships Free From Pharmacy · Upgrade Your Skin Routine · Explore GHK Peptide Cream (FB/GL/TK) · Support Firmer Skin.
-- Offer: Save up to 75%.
-
-**For Jeremy / Justin:** the disclaimer (provisional), "The Peptide Behind Skin Renewal" and "Start Skin Renewal" (⚠), whether the
-two "GHK Peptide Cream" lines may run on H2, and the landing page ([PLACEHOLDER]).
-
----
-
-# VERBATIM (do not edit; re-copy from the bible)
-
-```text
-## GHK-Cu Cream
-
-### Who it's for
-Women 30–55 who want a daily peptide step in their skincare routine.
-
-### Creative direction
-- Beauty and fitness positioning — lean and fit, never bodybuilding.
-- Core demo is the 40-year-old mom, same as GLP-1.
-- Palette: pinks, tans and beige. No oranges or greens.
-
-Topical peptide skin support focused on collagen, elastin, firmness, and the skin’s natural repair process.
-
-### Headlines & hooks
-1. Firmer-Looking Skin Starts With Support
-2. Peptide-Powered Skin Support
-3. Glow Smarter With GHK Peptide Cream
-4. The Peptide Behind Skin Renewal
-5. Your Daily GHK Glow
-6. Healthy Skin Isn’t One Thing. It’s Everything. [Weak headline]
-
-### Quick-hit benefits
-- Supports Collagen + Elastin
-- Promotes Firmer, More Youthful-Looking Skin
-- Promotes Skin’s Natural Repair Process
-- Supports Smoother-Looking Texture
-- Encourages a Brighter, More Even-Looking Tone
-
-### CTAs
-- CTA: Upgrade Your Skin Routine
-- CTA: Explore GHK Peptide Cream
-- CTA: Save Up to 75%
-- CTA: Support Firmer Skin
-- CTA: Start Skin Renewal
-- CTA: GHK-Cu Cream for $1.50/day
-- CTA: Ships Free From Pharmacy
-
-### Proof & value props
-- Trustpilot rated 4.9 Excellent
-- Over 100,000 happy customers
-
-### Offers & conversion
-- Save up to 75%
-
-### Hard NOs
-- No bodybuilding or “huge” physique imagery.
-- Plus all global Hard NOs on page 3.
-
-Ad disclaimerAI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
-Landing pagehttps://everlifemd.com/ghk-peptide-cream/fbLast verified Nov. 3, 2026
-Hormone support
-```

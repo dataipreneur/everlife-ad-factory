@@ -131,6 +131,37 @@ json.dump(d, open(p, "w"), indent=2)
 print("✅ team-log hooks installed (paid generations are captured and must be logged before Claude finishes)")
 EOF
 
+
+# Both-sizes gate (core/hooks/batch_hook.py, 2026-11-05): an Everlife image prompt is refused without its STRICT LAYOUT block and
+# batch reference line; every fired (slot, ratio) is counted; Claude cannot end a turn while a batch is owed a size or a FINAL.
+python3 - "$HOME/.claude/settings.json" "$STAMP" "$REPO/core/hooks/batch_hook.py" <<'PYEOF'
+import json, os, shutil, sys
+p, stamp, script = sys.argv[1:]
+d = {}
+if os.path.exists(p):
+    try:
+        d = json.load(open(p))
+    except ValueError:
+        print(f"… {p} is not valid JSON: batch hooks not added"); sys.exit(0)
+ours = lambda e: any("core/hooks/batch_hook.py" in h.get("command", "") for h in e.get("hooks", []))
+want = {
+    "PreToolUse": {"matcher": "mcp__.*", "hooks": [{"type": "command", "command": f'python3 "{script}" gate', "timeout": 10}]},
+    "PostToolUse": {"matcher": "mcp__.*|AskUserQuestion", "hooks": [{"type": "command", "command": f'python3 "{script}" fired', "timeout": 10}]},
+    "Stop": {"hooks": [{"type": "command", "command": f'python3 "{script}" stop', "timeout": 10}]},
+}
+hooks = d.setdefault("hooks", {})
+before = json.dumps(hooks, sort_keys=True)
+for ev, entry in want.items():
+    hooks[ev] = [e for e in hooks.get(ev, []) if not ours(e)] + [entry]
+if json.dumps(hooks, sort_keys=True) == before:
+    print("✅ both-sizes gate hooks already installed"); sys.exit(0)
+if os.path.exists(p):
+    shutil.copy(p, f"{p}.backup-{stamp}")
+os.makedirs(os.path.dirname(p), exist_ok=True)
+json.dump(d, open(p, "w"), indent=2)
+print("✅ both-sizes gate installed (image prompts need the layout block + batch reference; a batch must finish both sizes)")
+PYEOF
+
 echo
 echo "Next: install the shared finishing toolkit once (or run core/scripts/update.sh, which does everything):"
 echo "  bash ~/.claude/skills/everlife-restora-z/core/scripts/preflight.sh --install"

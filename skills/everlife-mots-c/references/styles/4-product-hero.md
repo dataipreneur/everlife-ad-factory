@@ -5,7 +5,7 @@ Why it works: the vial, with its lemon-yellow label, is a distinctive object; th
 
 ## 4A — Still life
 - **Looks like:** the vial on a stone ledge at dawn or a café table after a ride, hard side light, one long shadow; or on walnut for
-  the quiet variant. Sentence-case Tier A line. Static: batch F12 / F14. Video: Seedance slow push-in, 480p.
+  the quiet variant. Sentence-case a bible reference line line. Static: batch F12 / F14. Video: Seedance slow push-in, 480p.
 - **Guardrails:** the vial is a still object; no syringe, pen, dropper or droplets; no capsules.
 
 ## 4B — Vial / bottle macro

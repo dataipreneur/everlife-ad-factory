@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's NAD+ ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
  "id": "nad",
  "name": "NAD+",
+ "bible_sections": [
+  "NAD+"
+ ],
  "renders": {
   "bottle": "nad_bottle.png",
   "pill": "nad_tablet.png"
@@ -43,5 +46,9 @@
    "pill": null,
    "bottle_wording": "a clear glass vial with a green flip-off cap over a brushed-silver crimp; a bright green label with the white EVERLIFE wordmark, 'NAD+' in white, 'RX ONLY', '5ML'"
   }
- }
+ },
+ "variations": [
+  "two-forms"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

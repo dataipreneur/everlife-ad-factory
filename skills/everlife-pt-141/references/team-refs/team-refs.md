@@ -12,7 +12,7 @@ Schedule" / "A Different Pathway Entirely"; a swimsuit body shot (Base159); a li
 | T3_168_body-changed-portrait | 168 F | shoulder-up portrait, tablet at the cheek, bright window; headline left, three pills | 4.8 |
 | T4_115_couple-sunset | 115 U | clothed couple on a garden step at golden hour; product + three tiles under them; 23% badge | the weak headline |
 | T5_118_spray-in-box | 118 U | spray in an open box on lavender, product-hero, tasteful | the weak headline |
-| T6_178_science-of-spark | 178 U | dark wet-blue product hero, giant tablet, three benefits left | "The Science of Spark" is Tier B (needs approval); 4.8 |
+| T6_178_science-of-spark | 178 U | dark wet-blue product hero, giant tablet, three benefits left | "The Science of Spark" is a fresh line (needs approval); 4.8 |
 | T7_100_pink-floral | 100 F | women's palette (pink/rose), spray hero, "Low Desire Isn't In Your Head…", three tiles | 4.8 |
 | T8_095_tile-template | 95 F | the team's tile template: huge PT-141, serif sub-line, three outlined tiles, spray right, 23% badge | 4.8; the green and orange variants of this template break the women's palette |
 | T9_190_evening-couple | 190 U | clothed couple on a sofa with city lights; products front; three icon benefits | the weak headline; keep evenings on a sofa/terrace, never a bed |

@@ -2,6 +2,9 @@
  "_about": "Product settings read by the shared tools (core/tools/product.py). Data only. disclaimer = the bible's MOTS-c ad disclaimer, verbatim. Scaffolded 2026-10-30 by everlife-new-product from everlife-bpc-157.",
  "id": "mots-c",
  "name": "MOTS-c",
+ "bible_sections": [
+  "MOTS-c"
+ ],
  "renders": {
   "bottle": "mots-c_bottle.png",
   "pill": null
@@ -30,5 +33,9 @@
  },
  "disclaimer_at": "bottom",
  "end_card_safe_shift": true,
- "_disclaimer_status": "In the bible (sync 1793728650-5a0d, 2026-11-03): the standard ad disclaimer, word for word."
+ "_disclaimer_status": "In the bible (sync 1793728650-5a0d, 2026-11-03): the standard ad disclaimer, word for word.",
+ "variations": [
+  "vial-product"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }
