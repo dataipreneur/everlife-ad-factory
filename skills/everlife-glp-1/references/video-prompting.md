@@ -53,7 +53,6 @@ Spoken budget: **≤ 35 words**. Spoken product name at most twice: write it "G-
 - Realistic humans talking: Marketing Studio UGC `higgsfield generate create marketing_studio_video --prompt "$(cat prompt.txt)"
   --product_ids @<skill>/assets/product_ids.json --mode ugc --duration 15 --resolution 720p --aspect_ratio 9:16 --generate-audio true --wait --json` (~75 cr).
 - Single locked slow shot / product hero: Boreal-style (Creatify Ad Agent) or Seedance at 480p.
-- Multi-scene, camera moves, fast motion: Seedance `--image <vial render>` (~45 cr; 67.5 at 720p). If the Unlimited-mode memory is
-  active, offer the Chrome route (0 credits) before the approval question.
+- Multi-scene, camera moves, fast motion: Seedance `--image <vial render>` (~45 cr; 67.5 at 720p).
 - Always `higgsfield generate cost …` first and show the number in the approval question.
 - Stephen's rule: show a 1-credit still of the character and scene first; benefit frames hold ≥ 2.5 s; fades, not hard cuts.

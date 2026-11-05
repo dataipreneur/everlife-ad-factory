@@ -1,4 +1,4 @@
-# Category 3 — Cinematic Big Idea (Seedance, ~45 cr / 15 s; 0 in Unlimited mode)
+# Category 3 — Cinematic Big Idea
 
 Library folders: Movie-Peg · Wild-Creative/Surreal · Cause & Effect · Retro · New Year (boards 1, 2, 3, 5, 6).
 

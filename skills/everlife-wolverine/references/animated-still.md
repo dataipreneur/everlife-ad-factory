@@ -21,7 +21,7 @@ approved static, 8 seconds, one slow move, the brand layers crisp on top.
    no captions, no logo. Natural, premium, calm. No audio.
    ```
    Pick a different environment move per ad in a batch. Never "the vial opens / fills / is drawn from".
-3. **Generate** (Seedance, image-to-video, 8 s, 9:16, 720p, audio off). Two routes, same prompt:
+3. **Generate** (Seedance, image-to-video, 8 s, 9:16, 720p, audio off). On the Creatify Model Playground (`core/references/seedance-on-creatify.md`); quote the cost first:
    - **Creatify only** (`core/references/seedance-on-creatify.md`, HARD 2026-11-03): upload the raw, then
      `model_playground_generate("bytedance/seedance-2.5/image-to-video", {image_url: <raw cdn_url>, prompt, duration: "8",
      resolution: "720p", generate_audio: false})` (quote the Creatify cost first; ≈ 1 cr/s at 480p, more at 720p). Never Higgsfield.

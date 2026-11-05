@@ -9,7 +9,7 @@ description: EverlifeMD BPC-157 ad factory (recovery peptide, compounded Rx vial
 
 > **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
 
-> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost and "Unlimited mode in Chrome" line in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
+> **🎬 SEEDANCE = CREATIFY, HIGGSFIELD = MARKETING STUDIO ONLY = `core/references/seedance-on-creatify.md` (Mitansh, 2026-11-03, HARD, every video; OVERRIDES every `higgsfield generate create seedance_*` command, "Seedance on Higgsfield", Higgsfield Seedance cost in this skill):** every Seedance video, animated still, hook still and start frame runs on the Creatify Model Playground (`bytedance/seedance-2.5/reference-to-video` or `/image-to-video`, `gpt-image-2.5-sunburst/edit`); Higgsfield credits are spent ONLY on Marketing Studio (`marketing_studio_video`). Quote Creatify credits before generating.
 
 > **🗣️ HUMANS SPEAK ON CAMERA = `core/references/on-camera-speech.md` (Mitansh, 2026-11-03, HARD, every video with a person; OVERRIDES every "off-screen narrator / voiceover / he never speaks / re-voice over the hands-only shot" line in this skill):** if a human is in the video, that human speaks every line on camera with natural lip sync. No background voiceover over a person. Short product cutaways only as J-cuts inside the speaker's own line. Voiceover is allowed only in videos with no person at all.
 
@@ -36,8 +36,7 @@ Golden rules, all non-negotiable:
 3. **Disclaimer:** the PT-141 wording, confirmed by Mitansh (2026-10-29) for BPC-157 and stored verbatim in `product.json`; the footer
    lays it. Flag "disclaimer wording: Mitansh-confirmed, Jeremy to sign off" in every SESSION.md until Jeremy confirms.
 4. **One script at a time** (video). Write → user approves/edits → generate → write the next while it renders.
-5. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown. Before every VIDEO
-   approval, ask the Unlimited-mode question if that memory is active.
+5. **Never spend credits without an explicit approval** of that specific script or batch, with the cost shown.
 6. **Look at every result before showing it** (contact sheet + transcript). Fix or flag defects honestly.
 7. **Every script is new.** Check and append `~/Everlife-Creative/bpc-157-copy-log.md`; never repeat a header, end-card headline or CTA.
 8. Everything is a draft until creative review approves it and Jeremy signs off on compliance. Nothing is posted or uploaded anywhere.
@@ -115,8 +114,7 @@ Follow `core/references/image-flow.md` with this product's `references/image-bat
 ### Video setup (unchanged; images never use these questions)
 approved static + 8 s of motion, Seedance; a follow-up question picks which)" / "🔁 Remake one of ours". (AskUserQuestion takes at most 4 options.)
 - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply; the vial is the hero in the product B-roll.
-- **Animated still** → `references/animated-still.md`: pick the approved static, write the one-line motion prompt, ask the
-  Unlimited-mode A/B question (0 credits in Chrome, else quote Seedance), generate 8 s from the RAW, `animate_still.py`, QA, save.
+- **Animated still** → `references/animated-still.md`: pick the approved static, write the one-line motion prompt, quote the Creatify Seedance cost, generate 8 s from the RAW, `animate_still.py`, QA, save.
 
 **Round 2 — ONE AskUserQuestion, 3 questions (images and video alike):**
 1. **Audience:** "Men 30–45 (Recommended: the approved Asana brief)" / "Women 30–55" / "Both (half each)". Men → hardcore gym,
@@ -150,7 +148,7 @@ Read `references/styles/INDEX.md` and follow its "How to ask". Put the engine an
    generation prompt in a collapsed code block.
 3. **Persona critique** (`references/personas.md`): read it as Lifter Marcus, then as Pilates Dana; score the 5-point rubric; fix
    anything under 4; show the critique and the fixes under the concept.
-4. If the Unlimited-mode memory is active, ask its A/B question. Then AskUserQuestion: **"Approve & generate (≈N credits)"** /
+4. AskUserQuestion: **"Approve & generate (≈N credits)"** /
    "Edit the script" / "New concept, same style" / "Change style".
 5. On approval: job folder `~/Everlife-Creative/output/BPC-157/<YYYY-MM-DD>_<slug>/` with `prompt.txt`, `copy.json` (with
    `"product": "bpc-157"` and `"form": "vial"`), `source/` (copy the vial render); run the cost check, submit **in the

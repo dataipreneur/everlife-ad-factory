@@ -65,7 +65,7 @@ def main():
                     ctx = txt.splitlines()[line - 1]
                     if re.search(r'never|banned|not |no |OVERRIDES', ctx, flags=re.I) and pat in (r'reposition_916', r'Unlimited[- ]mode', r'GHK-Cu(?![ -]Cream)', r'Provider-Guided From Home'):
                         continue  # a line that forbids it is fine
-                    (warns if name == 'SKILL.md' and pat in (r'Unlimited[- ]mode',) else errs).append(f'{name}:{line} {why}: "{ctx.strip()[:70]}"')
+                    errs.append(f'{name}:{line} {why}: "{ctx.strip()[:70]}"')
         if not os.path.exists(pj_p): errs.append('no product.json')
         else:
             pj = json.load(open(pj_p))
