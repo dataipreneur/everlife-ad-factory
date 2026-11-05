@@ -10,6 +10,16 @@ Priestley: "There is a bible sync that we need to incorporate in the patch." Jus
 - **Titan-Rx:** headlines/benefits must make the category clear in under two seconds (daily sexual-performance support for men). ⚠ The bible's wording says "ED support": copy must not say "ED" or any disease word until Jeremy approves.
 - Banners "Bible sync 1793890033-215f" added to the pt-141, sermorelin, glp-1, nad and titan-rx product-bible pages (above the ced5 banner, which they supersede on discounts).
 
+## 2026-11-05 — Quick patches for zip installs (branch `patch-updates`)
+Priestley: Justin wants bible changes to reach the team fast; teammates have no GitHub, so every change waits for a zip.
+- `core/scripts/make_patch.py <from> [to]`: packs only the files that changed between the version the team has and the new one
+  (SHA-256 per file; refuses symlinks and files over 5 MB). `core/scripts/apply_patch.py <zip>`: zip installs only; checks the
+  VERSION matches, every checksum, no path escapes, no hand-edited files; backs up replaced files to `_originals/`; atomic; `--dry-run`, `--force`.
+- Phrases in `core/claude/everlife-team.md`: "Apply the patch" (teammates) and "Build a patch" (whoever has git). ONBOARDING-ZIP.md: "A quick patch".
+- Tested (`core/tests/patch_test.py`, 13 checks, on real history): patched copy identical to a fresh install of the new version; PR #52's whole
+  bible sync = 656 KB (vs 112 MB zip); e79c3f5 → 2800e8d = 88 KB; refusals: wrong version, hand-edited file, damaged patch, path traversal, git copy; re-apply is a no-op.
+- Teammates need one full zip that already contains these scripts before patches work for them.
+
 ## 2026-11-05 — "Build the team zip" phrase (branch `team-zip-phrase`)
 Priestley: "add the build the team zip phrase" (a teammate with git pulls main and builds the zip for the others).
 - `core/claude/everlife-team.md`: saying "build the team zip" makes Claude check the repo is clean on `main`, pull, run
