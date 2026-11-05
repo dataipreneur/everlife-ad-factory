@@ -195,7 +195,8 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
     except Exception: pass
     hc_share = float(hc_cfg.get('share', 0.3))
     # bible 2026-11-04: shirtless talent on UP TO 30% of a product's creatives → a cap: floor(share × men's slots), never above
-    hardcore_n = int(hc_share * len(men_slots)) if ('hardcore-men' in variations or pid in hc_cfg.get('products', HARDCORE)) else 0
+    # cap = floor(share × the whole batch), like pick_styles.py; it lands on men's person slots (hardcore = a shirtless person)
+    hardcore_n = min(len(men_slots), int(hc_share * n)) if ('hardcore-men' in variations or pid in hc_cfg.get('products', HARDCORE)) else 0
     hardcore_idx = set(rng.sample(men_slots, hardcore_n)) if hardcore_n else set()
 
     for i, w in enumerate(ordered):
