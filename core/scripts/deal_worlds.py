@@ -8,7 +8,7 @@ Mitansh 2026-11-05). A men's or women's product refuses the other gender (exit 2
 
 Each slot gets: world (from core/references/world-deck/worlds.json), type pairing, accent, placement, light,
 focal (pill / bottle / person per the bible 40/30/30; 75/25 for products without a pill, Justin to confirm), proof (trust / count / none,
-42/28/30 per standard_footer.SHARE), hand-held (max 20% of the batch), hardcore tag (a cap of 30% of men's slots on hardcore products, bible 2026-11-04),
+42/28/30 per standard_footer.SHARE), hand-held (max 20% of the batch), cta (offer / price: the price line on ~10% of ads, kept over batches by price_plan.py), hardcore tag (a cap of 30% of men's slots on hardcore products, bible 2026-11-04),
 persona (age band, look) and the ratio pair (always 9:16 + 4:5).
 
 Guarantees (code, not memory):
@@ -20,6 +20,9 @@ Guarantees (code, not memory):
 The dealer decides the MIX. Claude writes the prompt freely inside the slot.
 """
 import argparse, json, os, random, sys, time
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import price_plan  # the price-CTA share (bible: the product's $/day line on 10% of all ads)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CORE = os.path.dirname(HERE)
@@ -223,6 +226,11 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
     hardcore_n = min(len(men_slots), int(hc_share * n)) if ('hardcore-men' in variations or pid in hc_cfg.get('products', HARDCORE)) else 0
     hardcore_idx = set(rng.sample(men_slots, hardcore_n)) if hardcore_n else set()
 
+    pplan = price_plan.plan(pid, n)
+    default_cta = price_plan.bible(pid).get('cta_default') or None
+    price_rng = random.Random(f'{seed}-price') if seed is not None else random.Random()   # own stream: the rest of a seeded deal is unchanged
+    price_idx = set(price_rng.sample(range(n), pplan['count'])) if pplan['count'] else set()
+
     for i, w in enumerate(ordered):
         aud = gender[i]
         hardcore = i in hardcore_idx
@@ -241,6 +249,8 @@ def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
             'batch_audience': audience,
             'hardcore': hardcore,
             'persona': persona if focal_seq[i] == 'person' else None,
+            'cta_kind': 'price' if i in price_idx else 'offer',
+            'cta': pplan['cta'] if i in price_idx else default_cta,
             'ratios': ['9:16', '4:5'],
             'variations': sorted(variations),
             'ultra_premium': 'vial-product' in variations and w['family'] in ('MATERIAL', 'SCENE'),
@@ -270,16 +280,23 @@ def main():
         with open(LEDGER, 'a') as f:
             f.write(json.dumps({'ts': time.strftime('%Y-%m-%dT%H:%M:%S'), 'product': a.product, 'n': a.n,
                                 'worlds': [s['world'] for s in slots]}) + '\n')
+        price_plan.log(a.product, a.n, sum(1 for s in slots if s['cta_kind'] == 'price'), 'image', 'deal')
     if a.json:
         print(json.dumps(slots, indent=1)); return
     print(f"# {a.product} · {a.n} slots · audience {slots[0]['batch_audience'] if slots else a.audience} · both sizes each")
-    print("| # | World | Family | Focal | Proof | Type | Accent | Placement | Light | Person |")
-    print("|---|---|---|---|---|---|---|---|---|---|")
+    print("| # | World | Family | Focal | Proof | CTA | Type | Accent | Placement | Light | Person |")
+    print("|---|---|---|---|---|---|---|---|---|---|---|")
     for s in slots:
         who = (('💪 ' if s['hardcore'] else '') + (s['persona'] or '—'))
         print(f"| {s['slot']} | **{s['world_name']}** (`{s['world']}`) | {s['family']} | {s['focal']} | {s['proof']} | "
-              f"{s['type_pairing'][0]} / {s['type_pairing'][1]} | {s['accent']} | {s['placement']} | {s['light']} | {who} |")
+              f"{('💲 ' + s['cta']) if s['cta_kind'] == 'price' else 'offer'} | {s['type_pairing'][0]} / {s['type_pairing'][1]} | {s['accent']} | {s['placement']} | {s['light']} | {who} |")
+    pp = price_plan.plan(a.product, a.n)
     print()
+    if pp['cta']:
+        print(f"Price CTA plan: {sum(1 for s in slots if s['cta_kind'] == 'price')} of {a.n} slot(s) carry \"{pp['cta']}\" (💲); every other slot uses "
+              f"the default offer CTA. The gate refuses the price line anywhere else, and refuses a 💲 slot without it.")
+    else:
+        print(f"Price CTA plan: none for this product ({pp['why_not']}).")
     for s in slots:
         print(f"{s['slot']}. {s['world_name']}: {s['look']}  · product: {s['product_place']}"
               + (f"  · for this product: {s['translate']}" if s['translate'] else ''))
