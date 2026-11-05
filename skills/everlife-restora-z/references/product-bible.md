@@ -1,8 +1,8 @@
-# Restora-Z — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Restora-Z — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** none usable (placeholder: current % savings / price). No % and no price in ads until the bible carries a verified offer.
 - **Default CTA:** Ships Free From Pharmacy
 - **CTAs (bible):** Explore Restora-Z · Support Better Sleep · Save Up to X% · Start Your Sleep Plan · Build a Better Night · Restora-Z for $2.25/day · Ships Free From Pharmacy
@@ -91,7 +91,7 @@
 | Doxepin: Boosts sleep quality | ingredient claims | ⚠ ingredient claim | only on its own ingredient (Doxepin); never attributed to the product |
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 
-## Verbatim (bible section "Restora-Z", version 1793905953-bc2f)
+## Verbatim (bible section "Restora-Z", version 1793912918-b19b)
 ```text
 
 ### Who it's for

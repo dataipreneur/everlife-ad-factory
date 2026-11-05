@@ -1,4 +1,4 @@
-<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793905953-bc2f) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
+<!-- Synced from the live creative bible https://claude.ai/artifact/PB9jBD5zHk1sueXcNTXuKG (version 1793912918-b19b) by core/scripts/bible_sync.py. Do not edit by hand: update the live bible, then re-sync. -->
 
 Creative Bible
 Creative Bible v3
@@ -1399,7 +1399,7 @@ More headlines on page 32
 ### Offers & conversion
 - Save up to 62% on injections
 - Save up to 62% on sublingual tablets
-- Starting at $119/month
+- Starting at $99/month
 - 30-day money-back guarantee on your first order
 
 ### Hard NOs

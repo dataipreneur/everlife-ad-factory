@@ -1,8 +1,8 @@
-# NAD+ — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# NAD+ — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** Save Up to 62% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 62%
 - **CTAs (bible):** Explore NAD+ · Save Up to 62% · Recharge Your Cells · NAD+ for $3.25/day · Ships Free From Pharmacy
@@ -14,7 +14,7 @@
 - **Product Hard NOs:** The landing page says “needle free.” Ads can’t — say “easy sublingual delivery.” · Plus all global Hard NOs on page 3.
 - **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 - **Landing page:** https://everlifemd.com/nad/fb-v2 (last verified Oct. 20, 2026)
-- **Retired, never use:** Get Started Now · Choose Your Form · Start Your Plan
+- **Retired, never use:** Get Started Now · Choose Your Form · Start Your Plan · Starting at $119/month
 
 ## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
 | Line (bible) | Where | Status | Why |
@@ -59,7 +59,7 @@
 | Ships Free From Pharmacy | CTAs | ✅ |  |
 | Save up to 62% on injections | offers | ✅ |  |
 | Save up to 62% on sublingual tablets | offers | ✅ |  |
-| Starting at $119/month | offers | ✅ |  |
+| Starting at $99/month | offers | ✅ NEW in 1793912918-b19b | new or reworded in this sync: not yet reviewed by Jeremy |
 | 30-day money-back guarantee on your first order | offers | ✅ |  |
 | Trustpilot rated 4.9 Excellent | proof | ✅ |  |
 | Over 100,000 happy customers | proof | ✅ |  |
@@ -69,8 +69,9 @@
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 | Choose Your Form | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 | Start Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
+| Starting at $119/month | retired | ❌ retired | left the bible in 1793912918-b19b |
 
-## Verbatim (bible section "NAD+", version 1793905953-bc2f)
+## Verbatim (bible section "NAD+", version 1793912918-b19b)
 ```text
 
 ### Who it's for
@@ -126,7 +127,7 @@ More headlines on page 32
 ### Offers & conversion
 - Save up to 62% on injections
 - Save up to 62% on sublingual tablets
-- Starting at $119/month
+- Starting at $99/month
 - 30-day money-back guarantee on your first order
 
 ### Hard NOs

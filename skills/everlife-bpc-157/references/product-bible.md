@@ -1,8 +1,8 @@
-# BPC-157 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# BPC-157 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** Save Up to 40% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 40%
 - **CTAs (bible):** Support Your Recovery · Explore BPC-157 · Save Up to 40% · BPC-157 for $5.75/day · Ships Free From Pharmacy
@@ -46,7 +46,7 @@
 | Over 100,000 happy customers | proof | ✅ |  |
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 
-## Verbatim (bible section "BPC-157", version 1793905953-bc2f)
+## Verbatim (bible section "BPC-157", version 1793912918-b19b)
 ```text
 
 ### Who it's for

@@ -1,8 +1,8 @@
-# Spartan Stack — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793905953-bc2f by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Spartan Stack — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793905953-bc2f)
+## Product copy (bible version 1793912918-b19b)
 - **Offer:** none usable (placeholder: current % savings / price). No % and no price in ads until the bible carries a verified offer.
 - **Default CTA:** Ships Free From Pharmacy
 - **CTAs (bible):** Explore the Spartan Stack · Build Your Recovery Stack · Save Up to X% · Support Stronger Recovery · Start Your Protocol · Ships Free From Pharmacy
@@ -38,7 +38,7 @@
 | Over 100,000 happy customers | proof | ✅ |  |
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 
-## Verbatim (bible section "Spartan Stack (BPC-157/KPV/TB500)", version 1793905953-bc2f)
+## Verbatim (bible section "Spartan Stack (BPC-157/KPV/TB500)", version 1793912918-b19b)
 ```text
 
 ### Who it's for

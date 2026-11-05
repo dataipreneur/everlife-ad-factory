@@ -2,6 +2,15 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793912918-b19b (automatic: `bible_pipeline.py sync`)
+Justin moved the live bible from 1793905953-bc2f to 1793912918-b19b. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
+
+- ~ NAD+
+- + - Starting at $99/month
+- - - Starting at $119/month
+
+- **NAD+:** NEW lines to screen: ['starting at $99/month']
+
 ## 2026-11-05 — Price-CTA plan: the product's "$/day" line on 10% of ads, enforced by code
 Why: the next Serm F batch (Slack, 5 Nov) had no "Sermorelin for $3.00/day" ad. The bible asks for the price line on 10% of ALL ads, but it was only
 a prose rule: the old step files said "never a $ price" (removed by PR #61) and nothing planned, tracked or enforced the 10%. PR #61 allowed the
