@@ -86,7 +86,8 @@ exactly: same shape, colours and label, label facing camera, sharp, never mirror
 
 TYPOGRAPHY & COLOUR: headline in <world type hint; else dealt pairing[0]>, with ONE phrase picked out in <accent>; supporting
 text in <pairing[1]>. Headline placement: <dealt placement>. For readers aged 50+: headline at least 9% of canvas height per
-line; every other line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines.
+line; every other line at least 3.5%; strong contrast; no thin grey text; no shadows or outlines on type; max 3 supporting
+lines. Texture and depth behind the product, never flat colour; nothing covers the product, the CTA or any text.
 
 TEXT: render ONLY these strings, exactly as written, nothing else (no extra words, no logos, no stars, no badges, no prices,
 no website, no disclaimer):
