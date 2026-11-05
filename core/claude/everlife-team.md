@@ -14,6 +14,18 @@
   `core/team-logs/PAUSED` while logging is meant to be paused (TEAM-LOGS §8; if it is missing, say so, don't hide it).
   Report the zip path, size, version line and both check results in plain words. Reminder to give: send it only to Everlife
   teammates; they follow ONBOARDING-ZIP.md ("Getting a new version"). Spends no credits.
+- **"Apply the patch"** (zip installs only; a git copy → say "use update.sh" and stop): the patch is a small
+  `everlife-patch_<from>_to_<to>.zip` the team sent (ask where it is; or look for the newest in ~/Downloads and ~/Desktop).
+  Run `python3 <repo>/core/scripts/apply_patch.py <patch> --dry-run`, show the plain-words summary (from → to, how many files,
+  any scripts), and only after the user says yes run it without `--dry-run`. Never use `--force` unless the user agrees after
+  you list the hand-edited files it would overwrite. If it prints "Wrong patch", tell them which version they have and ask
+  for a patch built from it (or a full zip). If it says to run install.sh, run `bash <repo>/install.sh` (no credits). End
+  with: quit Claude Code and open it again. Spends no credits.
+- **"Build a patch"** (git copy only): `git status --short` empty on `main`, `git pull --ff-only`, ask which version the team has
+  (the short sha on the VERSION line of the last zip or patch they received), run
+  `python3 core/scripts/make_patch.py <that sha> main --out ~/Desktop`, and report the file, size, what it
+  carries and its warnings. If it refuses (symlink or a file over 5 MB), say a full zip is needed ("build the team zip").
+  Send it only to Everlife teammates. Spends no credits.
 - **"Check my Everlife ad setup"**: run `bash ~/.claude/skills/<skill>/core/scripts/preflight.sh` for every
   `everlife-*` skill in `~/.claude/skills` (check only, never `--install` unless they agree) and explain every ❌.
 - **Zip installs** (no `.git` folder in the repo): a new version comes as a new zip that replaces the whole folder

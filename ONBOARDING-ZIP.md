@@ -150,6 +150,18 @@ When Mitansh sends a new zip:
 4. Open Claude Code and type `update my ad tools`. It re-links everything and runs the checks.
 5. Quit Claude Code and open it again.
 
+### A quick patch (small update, same day)
+
+Sometimes you get a small file instead of a whole zip: `everlife-patch_<from>_to_<to>.zip` (under 1 MB). Don't unzip it.
+
+1. Save it anywhere (Downloads is fine).
+2. Open Claude Code and type `apply the patch`. Claude shows what will change, asks, applies it, and tells you the new version.
+3. Quit Claude Code and open it again.
+
+If Claude says "Wrong patch", your version is different from the one the patch is for: tell Mitansh the version you have
+(`which version of the ad tools do I have?`) and you'll get a patch for it, or a full zip. Files you edited yourself are never
+overwritten without asking.
+
 To see which version you have, type `which version of the ad tools do I have?` (it reads the VERSION file).
 
 ---
