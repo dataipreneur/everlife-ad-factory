@@ -29,6 +29,7 @@ STALE = {
 }
 IMAGE_BANNERS = ('PROMPT LAYOUT ZONES', 'BOTH SIZES AT ONCE', 'NEVER `reposition_916', 'SHOW FIRST, THEN RE-ROLL', 'MOOD =', 'FOCAL-POINT MIX')
 SHARED = ['core/references/image-flow.md', 'core/references/world-deck/worlds.json', 'core/scripts/deal_worlds.py',
+          'core/references/world-deck/INSPIRATIONS.md', 'core/references/ENGINE.md', 'core/references/variations/README.md',
           'core/references/prompt-layout-zones.md', 'core/references/global-rules.md']
 
 
@@ -72,6 +73,12 @@ def main():
             if not pj.get('disclaimer') or len(pj['disclaimer']) < 40: errs.append('product.json: no verbatim disclaimer')
             if not pj.get('name'): errs.append('product.json: no name')
             if not any((pj.get('renders') or {}).values()): errs.append('product.json: no renders')
+            if 'variations' not in pj: errs.append('product.json: no "variations" list (ENGINE.md)')
+            for v in pj.get('variations', []):
+                if not os.path.exists(os.path.join(REPO, 'core', 'references', 'variations', v + '.md')) and not os.path.exists(os.path.join(REPO, 'core', 'references', v + '.md')):
+                    errs.append(f'product.json: unknown variation "{v}"')
+        if not os.path.exists(os.path.join(sd, 'references', 'product-brief.md')): errs.append('no references/product-brief.md (run build_product_briefs.py)')
+        if 'INSPIRATIONS.md' not in sk: errs.append('SKILL.md Step 1 does not offer the inspiration directions')
         for rel in ['references/product-bible.md']:
             if not os.path.exists(os.path.join(sd, rel)): errs.append(f'missing {rel}')
         if not os.path.isdir(os.path.join(sd, 'references', 'winners')) and not os.path.isdir(os.path.join(sd, 'references', 'team-refs')):

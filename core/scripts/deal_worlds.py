@@ -42,11 +42,12 @@ HARDCORE_CAST = ['shirtless bodybuilder 40–45, flawless condition, hard gym li
                  'shirtless man 40–45, tattoos, cable-crossover station, sweat sheen']
 
 
-def product_family(pid):
-    if pid in INTIMACY: return 'intimacy'
-    if pid in HARDCORE: return 'men'
+def product_family(pid, prod=None):
+    v = set((prod or {}).get('variations', []))
+    if 'intimacy-tasteful' in v or pid in INTIMACY: return 'intimacy'
+    if 'hardcore-men' in v or pid in HARDCORE: return 'men'
     if pid in METABOLIC: return 'metabolic'
-    if pid in SKIN: return 'skin'
+    if 'womens-palette' in v and pid in SKIN or pid in SKIN: return 'skin'
     return 'generic'
 
 
@@ -93,13 +94,14 @@ def spread(n, share, rng):
     return seq
 
 
-def deal(pid, n, audience, skip=(), seed=None):
+def deal(pid, n, audience, skip=(), seed=None, prefer=(), families=()):
     rng = random.Random(seed)
     with open(DECK) as f: deck = json.load(f)
     prod = load_product(pid)
-    fam = product_family(pid)
+    variations = set(prod.get('variations', []))
+    fam = product_family(pid, prod)
     pill = has_pill(prod)
-    banned = set(skip) | set(recent_worlds(pid))
+    banned = (set(skip) | set(recent_worlds(pid))) - set(prefer)
 
     pool = []
     for w in deck['worlds']:
@@ -110,8 +112,17 @@ def deal(pid, n, audience, skip=(), seed=None):
         if 'pill-products-only' in fl and not pill: continue
         if 'needs-review' in fl or 'seasonal' in fl or 'byline-pending' in fl: continue
         if fam == 'intimacy' and w['id'] in {'drop-the-day', 'lamp-reader'}: continue  # beds / reclining
+        if families and w['family'] not in families and w['id'] not in prefer: continue
         pool.append(w)
     rng.shuffle(pool)
+    # a chosen direction: its worlds come first and are guaranteed
+    pref = [w for w in pool if w['id'] in prefer]; rest = [w for w in pool if w['id'] not in prefer]
+    # ultra-premium bias for vial products (variation vial-product): material / scene worlds lead; comic/print/surreal ≤ 3 of the batch
+    if 'vial-product' in variations:
+        premium = [w for w in rest if w['family'] in ('MATERIAL', 'SCENE', 'INFOGRAPHIC', 'TYPE')]
+        other = [w for w in rest if w['family'] not in ('MATERIAL', 'SCENE', 'INFOGRAPHIC', 'TYPE')]
+        rest = premium + other
+    pool = pref + rest
 
     focal_seq = spread(n, FOCAL_PILL if pill else FOCAL_NOPILL, rng)
     proof_seq = spread(n, PROOF_SHARE, rng)
@@ -119,6 +130,9 @@ def deal(pid, n, audience, skip=(), seed=None):
     person_target = focal_seq.count('person')
 
     slots, fam_count, used_pair, used_acc, used_place, used_light = [], {}, set(), set(), set(), []
+    cap = {f: 2 for f in deck['families']}
+    if 'vial-product' in variations:
+        cap.update({'COMIC': 1, 'PRINT': 1, 'SURREAL': 1})
     # pass 1: person-led worlds for the person slots, then everything else
     person_worlds = [w for w in pool if 'person' in w.get('flags', [])]
     other_worlds = [w for w in pool if 'person' not in w.get('flags', [])]
@@ -126,13 +140,13 @@ def deal(pid, n, audience, skip=(), seed=None):
     chosen = []
     for w in person_worlds:
         if len(chosen) >= person_target: break
-        if fam_count.get(w['family'], 0) >= 2: continue
+        if fam_count.get(w['family'], 0) >= cap.get(w['family'], 2) and w['id'] not in prefer: continue
         if 'hand-held' in w['flags'] and hands >= hand_max: continue
         chosen.append(w); fam_count[w['family']] = fam_count.get(w['family'], 0) + 1
         hands += 'hand-held' in w['flags']
     for w in other_worlds:
         if len(chosen) >= n: break
-        if fam_count.get(w['family'], 0) >= 2: continue
+        if fam_count.get(w['family'], 0) >= cap.get(w['family'], 2) and w['id'] not in prefer: continue
         if 'hand-held' in w['flags'] and hands >= hand_max: continue
         chosen.append(w); fam_count[w['family']] = fam_count.get(w['family'], 0) + 1
         hands += 'hand-held' in w['flags']
@@ -175,7 +189,7 @@ def deal(pid, n, audience, skip=(), seed=None):
 
     # hardcore tags: 40% of men's slots on hardcore products
     men_slots = [i for i, f in enumerate(focal_seq) if f == 'person'] if audience != 'women' else []
-    hardcore_n = round(len(men_slots) * 0.4) if pid in HARDCORE else 0
+    hardcore_n = round(len(men_slots) * 0.4) if ('hardcore-men' in variations or pid in HARDCORE) else 0
     hardcore_idx = set(rng.sample(men_slots, hardcore_n)) if hardcore_n else set()
 
     for i, w in enumerate(ordered):
@@ -196,6 +210,8 @@ def deal(pid, n, audience, skip=(), seed=None):
             'hardcore': hardcore,
             'persona': persona if focal_seq[i] == 'person' else None,
             'ratios': ['9:16', '4:5'],
+            'variations': sorted(variations),
+            'ultra_premium': 'vial-product' in variations and w['family'] in ('MATERIAL', 'SCENE'),
         })
     return slots
 
@@ -207,11 +223,15 @@ def main():
     ap.add_argument('--audience', default='both', choices=['men', 'women', 'both'])
     ap.add_argument('--skip', default='', help='comma-separated world ids to avoid (e.g. from the team Copy Ledger)')
     ap.add_argument('--seed', type=int)
+    ap.add_argument('--prefer', default='', help='comma-separated world ids from the chosen direction (guaranteed in the batch)')
+    ap.add_argument('--families', default='', help='restrict to these families (comma-separated), e.g. PRINT,COMIC')
     ap.add_argument('--log', action='store_true', help='append this deal to the ledger (do it once the batch is approved)')
     ap.add_argument('--json', action='store_true')
     a = ap.parse_args()
     skip = [s.strip() for s in a.skip.split(',') if s.strip()]
-    slots = deal(a.product, a.n, a.audience, skip, a.seed)
+    prefer = [s.strip() for s in a.prefer.split(',') if s.strip()]
+    families = [s.strip().upper() for s in a.families.split(',') if s.strip()]
+    slots = deal(a.product, a.n, a.audience, skip, a.seed, prefer, families)
     if a.log:
         os.makedirs(os.path.dirname(LEDGER), exist_ok=True)
         with open(LEDGER, 'a') as f:

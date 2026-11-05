@@ -108,10 +108,11 @@ If everything is ✅, say so in one line and go straight to step 1.
 
 ## Step 1 — Setup (one question for images; video setup unchanged below)
 **Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
-- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · who's in them · form, only if the product has
-  several), then `deal_worlds.py` picks the mix and you write every ad from its slot. Never ask for mood, style, palette, copy
-  density, boldness, hook angle, placement or framework: the dealer varies them per slot and the batch table shows the picks.
-  Product-specific copy rules: `references/image-batch.md` §0.
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · **direction: 🎲 Surprise me first, then three
+  inspirations you pitch for this product from `core/references/world-deck/INSPIRATIONS.md`** · who's in them · form, only if the
+  product has several), then `deal_worlds.py` deals the mix (following the chosen direction) and you write every ad from its slot.
+  Never ask for mood, palette, copy density, boldness, hook angle, placement or framework. This product's facts, hard stops and
+  references: `references/product-brief.md`.
 - **Video / Avatar** → the video setup below, unchanged.
 
 ### Video setup (unchanged; images never use these questions)

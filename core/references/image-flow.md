@@ -15,18 +15,26 @@ about making the ads GOOD.
 3. Claims only from the product bible; the STRICT LAYOUT block from `prompt-layout-zones.md` in every prompt.
 
 ## 1. One question, then go
-One `AskUserQuestion` with up to 3 questions, every first option ✨ Recommended, so one Enter per question gives a great batch:
+One `AskUserQuestion` with up to 4 questions, every first option ✨ Recommended, so one Enter per question gives a great batch:
 - **How many?** "8 (Recommended)" / "4" / "12".
+- **Direction** (Mitansh 2026-11-05: "Surprise me first, but give super cool inspirations"): "🎲 Surprise me (Recommended): a different
+  world every ad" first, then **three directions you pitch for this product and this batch** from
+  `core/references/world-deck/INSPIRATIONS.md` (mutate the seeds, never the same three twice in a row, invent one when you can).
+  Label `<Name> · <3–4 worlds>`; description = the idea in one sentence + the twist + "≈2 cr/ad, both sizes". A chosen direction
+  becomes `deal_worlds.py --prefer <its world ids>`; the other slots stay random, so the batch is still a mix.
 - **Who's in them?** "Mix (Recommended): about a quarter with a real person, the rest product worlds" / "Product only" / "More people".
-- Product-specific only if `product.json` has more than one form: **Form** "Pick per ad (Recommended)" / each form.
+- Product-specific only if `product.json` has more than one form (`two-forms` variation): **Form** "Pick per ad (Recommended)" / each form.
 Never ask for: mood, style, palette, copy density, boldness, hook angle, placement, framework, pain point. The dealer and you
 decide those, differently for every slot, and the batch table shows the picks. A designer can still type anything in chat
 ("all comic", "women only", "use the boarding pass world") and you honour it.
 
 ## 2. Deal the worlds (code decides the MIX, you decide the AD)
 ```
-python3 core/scripts/deal_worlds.py --product <id> --n <N> --audience <men|women|both>
+python3 core/scripts/deal_worlds.py --product <id> --n <N> --audience <men|women|both> [--prefer <world ids of the chosen direction>]
 ```
+The dealer reads the product's **variations** from `product.json` (`core/references/ENGINE.md`): `hardcore-men` tags 40% of men's
+slots, `intimacy-tasteful` drops bed / body worlds, `vial-product` leads with material / scene worlds and marks them
+`ultra_premium` (write the `core/references/ultra-premium.md` codes into those prompts), `womens-palette` trims the accents.
 It hands you N slots, each with a **world** (from `core/references/world-deck/worlds.json`: magazine cover, wanted poster,
 boarding pass, claymation, blueprint, fluted glass, neon sign, search bar, hold-out, brutalist type… 130 worlds in 10 families),
 a type pairing, an accent, a headline placement, a light, the focal (pill / bottle / person), the proof (trust / count / none),

@@ -39,5 +39,9 @@
   "label": "wraps the curved bottle in perspective",
   "never": "beds or bedroom scenes, lingerie, body shots, shirtless or flexing torsos, couples in bed, lips macro, needles, syringes or vials, a benefit tied to the wrong ingredient, another product's bottle or pill, more than one capsule",
   "_about": "creative-system §3: the form's hero element, its minimum canvas width, how its label renders, and what never appears with it"
- }
+ },
+ "variations": [
+  "intimacy-tasteful"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

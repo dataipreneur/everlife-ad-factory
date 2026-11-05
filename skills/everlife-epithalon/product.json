@@ -31,5 +31,9 @@
  },
  "disclaimer_at": "bottom",
  "end_card_safe_shift": true,
- "_disclaimer_status": "In the bible (sync 1793728650-5a0d, 2026-11-03): the standard ad disclaimer, word for word."
+ "_disclaimer_status": "In the bible (sync 1793728650-5a0d, 2026-11-03): the standard ad disclaimer, word for word.",
+ "variations": [
+  "vial-product"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }

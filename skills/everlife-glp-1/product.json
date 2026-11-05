@@ -46,5 +46,11 @@
    "pill": null,
    "bottle_wording": "a green-tinted glass vial with a green flip-off cap over a green crimp; a green label with a small white outlined box reading 'Compounded', 'TIRZEPATIDE' large in white, a thin white rule, 'RX ONLY'"
   }
- }
+ },
+ "variations": [
+  "vial-product",
+  "two-forms",
+  "compounded-glp1"
+ ],
+ "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }
