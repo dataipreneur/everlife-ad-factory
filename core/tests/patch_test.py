@@ -122,6 +122,36 @@ with zipfile.ZipFile(evil, "w") as z:
 rc, out = run(sys.executable, apply, evil, "--repo", fresh)
 check("path traversal is refused", rc != 0 and "not allowed" in out and not os.path.exists(os.path.join(WORK, "outside.txt")), out)
 
+# Windows copy: every text file (and VERSION) has CRLF line endings
+win = install_of(FROM, "win")
+for root, _, fs in os.walk(win):
+    for f in fs:
+        p = os.path.join(root, f)
+        if os.path.islink(p) or "_originals" in p:
+            continue
+        b = open(p, "rb").read()
+        if b"\0" not in b and b"\r\n" not in b:
+            open(p, "wb").write(b.replace(b"\n", b"\r\n"))
+rc, out = run(sys.executable, apply, patch, "--repo", win)
+check("a CRLF (Windows) copy applies with no false conflicts", rc == 0 and "refused" not in out, out)
+
+
+def tree_norm(d):
+    t = {}
+    for k, v in tree(d).items():
+        if v[0] == "file":
+            b = open(os.path.join(d, k), "rb").read()
+            v = ("file", hashlib.sha256(b if b"\0" in b else b.replace(b"\r\n", b"\n")).hexdigest(), v[2])
+        t[k] = v
+    return t
+
+
+check("CRLF copy equals a fresh install apart from line endings", tree_norm(win) == tree_norm(want))
+patched_md = os.path.join(win, victim)
+b = open(patched_md, "rb").read()
+check("patched files keep CRLF (the next patch still matches)", b.count(b"\r\n") == b.count(b"\n") and b"\r\n" in b)
+check("VERSION keeps CRLF", b"\r\n" in open(os.path.join(win, "VERSION"), "rb").read())
+
 # git copy
 os.makedirs(os.path.join(fresh, ".git"))
 rc, out = run(sys.executable, apply, patch, "--repo", fresh)
