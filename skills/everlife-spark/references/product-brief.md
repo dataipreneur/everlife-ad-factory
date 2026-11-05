@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Adults 30–65+, men and women, who want on-demand desire support.
 
+**Audience (`product.json`, the dealer's default):** men and women: the image question asks Mix of men and women (Recommended) / Men / Women / Product only; Mix alternates over the person slots.
+
 ## Variations this product opts into
 - `intimacy-tasteful` → `core/references/variations/intimacy-tasteful.md`
 

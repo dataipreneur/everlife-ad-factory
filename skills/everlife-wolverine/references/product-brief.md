@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Active men 25–55 with tissue, mobility and gut recovery goals.
 
+**Audience (`product.json`, the dealer's default):** men only: the image question never asks men or women; the dealer casts men and refuses `--audience women`.
+
 ## What it is (bible, one line)
 Dual-peptide recovery stack focused on connective tissue, inflammation support, gut lining, mobility, and soft-tissue recovery.
 

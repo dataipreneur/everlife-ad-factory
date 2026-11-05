@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Women 30–55 noticing changes in desire, sensitivity or comfort.
 
+**Audience (`product.json`, the dealer's default):** women only: the image question never asks men or women; the dealer casts women and refuses `--audience men`.
+
 ## What it is (bible, one line)
 Modern women’s intimacy support focused on desire, sensitivity, comfort, and responsiveness.
 

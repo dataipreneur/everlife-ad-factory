@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Men 40–65+ who want daily performance support without planning around a pill.
 
+**Audience (`product.json`, the dealer's default):** men only: the image question never asks men or women; the dealer casts men and refuses `--audience women`.
+
 ## What it is (bible, one line)
 Titan-Rx
 

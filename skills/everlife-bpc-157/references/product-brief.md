@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Active adults 30–65+ recovering from joint, tendon or gut issues.
 
+**Audience (`product.json`, the dealer's default):** men and women: the image question asks Mix of men and women (Recommended) / Men / Women / Product only; Mix alternates over the person slots.
+
 ## What it is (bible, one line)
 Peptide support focused on tissue repair, recovery, mobility, connective tissue, and gut health.
 

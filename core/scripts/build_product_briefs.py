@@ -76,6 +76,13 @@ def bible_facts(bj):
     return '\n'.join(out)
 
 
+AUD_TEXT = {
+    'men': "men only: the image question never asks men or women; the dealer casts men and refuses `--audience women`",
+    'women': "women only: the image question never asks men or women; the dealer casts women and refuses `--audience men`",
+    'both': "men and women: the image question asks Mix of men and women (Recommended) / Men / Women / Product only; Mix alternates over the person slots",
+}
+
+
 def build(skill_dir, pid, prod):
     name = prod.get('name', pid)
     bj = bible_json(skill_dir)
@@ -88,7 +95,9 @@ def build(skill_dir, pid, prod):
            f"(bible version {bj.get('version')}) and `references/hard-stops.md`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)", "",
            f"The image engine is global: `core/references/image-flow.md` (flow), `core/references/world-deck/` (variety), "
            f"`core/references/global-rules.md` + the gates (compliance), `core/tools/` (finishing). This brief is everything that is specific to {name}.", ""]
-    out += ["## Who it's for", who or "(the bible page has no 'Who it's for' line)", ""]
+    aud = prod.get('audience') or 'both'
+    out += ["## Who it's for", who or "(the bible page has no 'Who it's for' line)", "",
+            f"**Audience (`product.json`, the dealer's default):** {AUD_TEXT.get(aud, aud)}.", ""]
     if bj.get('truth'): out += ["## What it is (bible, one line)", bj['truth'], ""]
     if direction:
         out += ["## Creative direction (bible)"] + [f"- {d}" for d in direction] + [""]

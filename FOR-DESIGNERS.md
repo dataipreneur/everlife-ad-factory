@@ -10,7 +10,9 @@ Any of these, in your own words:
 1. **How many** (8 is the normal batch).
 2. **Direction**: **🎲 Surprise me** (a different world for every ad) or one of three ideas Claude pitches for that product that
    day, for example *"Paper trail of spontaneity: a boarding pass, a dinner ticket, a memo"*. Pick one or press Enter for Surprise me.
-3. **Who's in them**: a mix of product worlds and real people (normal), product only, or more people.
+3. **Who's in them**: a mix of product worlds and real people (normal), product only, or more people. For products made for both
+   men and women (PT-141, Sermorelin, Sermorelin GHK, NAD+, …) this is also where you pick men, women or a mix. Men's products
+   (Titan-Rx, Spartan, Wolverine) and women's (Lovara, GHK Cream) never ask: the tool only casts that audience.
 4. Only for products with two forms (PT-141, NAD+, GLP-1): which form, or let Claude alternate.
 
 Then you see a table of the 8 ads (world, headline, lines) and one button: **Generate all 8 in both sizes (≈16 credits)**.

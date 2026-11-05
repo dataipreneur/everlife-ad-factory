@@ -351,6 +351,7 @@ def cmd_create(a):
         "Never use another product's render.\n")
     # the bible extract is GENERATED (bible pipeline, 2026-11-05): point product.json at the page, scaffold the three hand files, regenerate
     tp["bible_sections"] = [c["product"]]
+    tp["audience"] = c.get("audience") or "both"          # men / women / both: the dealer's default (ENGINE.md "Audience")
     json.dump(tp, open(os.path.join(dest, "product.json"), "w"), indent=1, ensure_ascii=False)
     refs = os.path.join(dest, "references")
     open(os.path.join(refs, "bible-screen.json"), "w").write(json.dumps({

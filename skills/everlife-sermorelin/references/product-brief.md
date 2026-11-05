@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Men 35–65+ pursuing lean muscle, energy and healthy aging.
 
+**Audience (`product.json`, the dealer's default):** men and women: the image question asks Mix of men and women (Recommended) / Men / Women / Product only; Mix alternates over the person slots.
+
 ## What it is (bible, one line)
 Growth-hormone support focused on lean muscle, metabolism, energy, stamina, strength, and healthy aging.
 

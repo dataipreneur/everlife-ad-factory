@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Adults 45–65+ who wake through the night or dislike next-day grogginess.
 
+**Audience (`product.json`, the dealer's default):** men and women: the image question asks Mix of men and women (Recommended) / Men / Women / Product only; Mix alternates over the person slots.
+
 ## What it is (bible, one line)
 All audiences
 

@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Active adults 30–55 focused on mitochondrial support, energy and endurance.
 
+**Audience (`product.json`, the dealer's default):** men and women: the image question asks Mix of men and women (Recommended) / Men / Women / Product only; Mix alternates over the person slots.
+
 ## Variations this product opts into
 - `vial-product` → `core/references/variations/vial-product.md`
 

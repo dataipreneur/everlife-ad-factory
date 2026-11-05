@@ -5,6 +5,8 @@ The image engine is global: `core/references/image-flow.md` (flow), `core/refere
 ## Who it's for
 Women 30–55 who want a daily peptide step in their skincare routine.
 
+**Audience (`product.json`, the dealer's default):** women only: the image question never asks men or women; the dealer casts women and refuses `--audience men`.
+
 ## What it is (bible, one line)
 Topical peptide skin support focused on collagen, elastin, firmness, and the skin’s natural repair process.
 

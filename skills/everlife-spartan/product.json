@@ -43,5 +43,6 @@
   "vial-product",
   "peptide-stack"
  ],
+ "audience": "men",
  "_variations_about": "Named exceptions this product opts into; defined in core/references/variations/ (see core/references/ENGINE.md). Everything else is global."
 }
