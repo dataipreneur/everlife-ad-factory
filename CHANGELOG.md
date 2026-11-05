@@ -2,6 +2,24 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Bible sync to 1793919328-c260 (automatic: `bible_pipeline.py sync`)
+Justin moved the live bible from 1793912918-b19b to 1793919328-c260. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
+
+- ~ Creative & page standards
+- + #### Pricing & CTA mix
+- + - Rule 1 · Daily pricing (10% of all creatives). 10% of all creatives use the headline format “[Product Name] for only $X.XX/day.” Use the product’s accurate daily price from its CTAs or Offers & conversion.
+- + - Rule 2 · Sermorelin monthly pricing (5% of Sermorelin creatives). 5% of Sermorelin creatives, Men and Women, use the headline “Starting at $95/month.” This applies only to Sermorelin.
+- + - Rule 3 · Remaining creatives. All other creatives use a varied mix of approved CTAs from that product’s CTA list. Rotate CTAs to keep variety and avoid repetitive messaging.
+- - - Show the lowest price or the price per day on 10% of all ads (e.g. “Starting at $95/month” or “Sermorelin for $3.00/day”), using the product’s price from its CTAs or Offers & conversion.
+- ~ Sermorelin — Men
+- + - Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix).
+- - - Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+- ~ Sermorelin — Women
+- + - Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix).
+- - - Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+
+- **Sermorelin:** NEW lines to screen: ['use "starting at $95/month" as the headline on 5% of sermorelin creatives (see standards 03 · pricing & cta mix).']
+
 ## 2026-11-05 — Bible sync to 1793912918-b19b (automatic: `bible_pipeline.py sync`)
 Justin moved the live bible from 1793905953-bc2f to 1793912918-b19b. Every product skill was regenerated from it (references/bible.json, product-bible.md, product-brief.md, product.json disclaimer); nothing by hand.
 

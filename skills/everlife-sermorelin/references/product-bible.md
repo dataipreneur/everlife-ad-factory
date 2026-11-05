@@ -1,8 +1,8 @@
-# Sermorelin — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Sermorelin — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793919328-c260 by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793912918-b19b)
+## Product copy (bible version 1793919328-c260)
 - **Offer:** Save Up to 65% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 65%
 - **CTAs (bible):** Get Lean Today · Explore Sermorelin · Save Up to 65% · Support Natural Growth Hormone · Sermorelin for $3.00/day · Starting at $95/month · Ships Free From Pharmacy
@@ -14,7 +14,7 @@
 - **Product Hard NOs:** Plus all global Hard NOs on page 3.
 - **Disclaimer (verbatim, in product.json):** AI-generated depictions and simulated portrayals used for illustrative advertising purposes. Not actual patients or medical providers. Disclaimer: Individual results may vary. Doctor-prescribed compounded prescription.
 - **Landing page:** https://everlifemd.com/sermorelin/v1L_v2f (last verified Aug. 28, 2026)
-- **Retired, never use:** Get Started Now · Supports Sleep Quality + Recovery
+- **Retired, never use:** Get Started Now · Supports Sleep Quality + Recovery · Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
 
 ## Screening (auto pre-screen + overrides; ✅ usable · ⏳ pending in the bible · ⚠ ask · ❌ never; NEW = first seen this sync)
 | Line (bible) | Where | Status | Why |
@@ -57,15 +57,16 @@
 | Save up to 59% (injection) | offers | ✅ |  |
 | Starting at $95/month | offers | ⚠ | dollar price; default is percent-off |
 | Save 70% compared to HGH | offers | ⚠ Jeremy | comparison/price claim against another therapy; "HGH" |
-| Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives. | offers | ✅ |  |
+| Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix). | offers | ✅ NEW in 1793919328-c260 | new or reworded in this sync: not yet reviewed by Jeremy |
 | Trustpilot rated 4.9 Excellent | proof | ✅ |  |
 | Over 100,000 happy customers | proof | ✅ |  |
 | 24/7 access to doctor support | proof | ✅ |  |
 | Available as sublingual tablets or injections | proof | ❌ | "injections" breaks the no-needles rule; say "easy sublingual delivery" |
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 | Supports Sleep Quality + Recovery | retired | ❌ retired | removed from the bible 2026-11-02 (Justin); never use |
+| Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives. | retired | ❌ retired | left the bible in 1793919328-c260 |
 
-## Verbatim (bible section "Sermorelin — Men", version 1793912918-b19b)
+## Verbatim (bible section "Sermorelin — Men", version 1793919328-c260)
 ```text
 
 ### Who it's for
@@ -123,7 +124,7 @@ More benefits & claims on page 8
 - Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
-- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+- Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix).
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.
@@ -144,7 +145,7 @@ Additional benefits and claims for this product.
 - Boosts Metabolism and Targets Visceral Fat [Hard NO conflict]no targeted fat loss
 ```
 
-## Verbatim (bible section "Sermorelin — Women", version 1793912918-b19b)
+## Verbatim (bible section "Sermorelin — Women", version 1793919328-c260)
 ```text
 
 ### Who it's for
@@ -199,7 +200,7 @@ More benefits & claims on page 10
 - Save up to 59% (injection)
 - Starting at $95/month
 - Save 70% compared to HGH
-- Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.
+- Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix).
 
 ### Hard NOs
 - Plus all global Hard NOs on page 3.

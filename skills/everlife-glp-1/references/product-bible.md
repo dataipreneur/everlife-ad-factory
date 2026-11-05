@@ -1,8 +1,8 @@
-# GLP-1 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# GLP-1 — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793919328-c260 by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793912918-b19b)
+## Product copy (bible version 1793919328-c260)
 - **Offer:** Save Up to 83% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 83%
 - **CTAs (bible):** Start Weight Support · Explore GLP-1 · Save Up to 83% · Check Your Options · GLP-1 for $2.50/day · Ships Free From Pharmacy
@@ -76,7 +76,7 @@
 | Get Back in Control of Your Routine | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 | Built for Sustainable Progress | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-## Verbatim (bible section "GLP1", version 1793912918-b19b)
+## Verbatim (bible section "GLP1", version 1793919328-c260)
 ```text
 
 ### Who it's for

@@ -1,6 +1,6 @@
 {
  "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
- "version": "1793912918-b19b",
+ "version": "1793919328-c260",
  "id": "nad",
  "name": "NAD+",
  "sections": [
@@ -289,10 +289,6 @@
   "optimizes metabolic health": {
    "status": "Weak (bible)",
    "why": "bible badge [Weak benefit]"
-  },
-  "starting at $99/month": {
-   "status": "✅ NEW in 1793912918-b19b",
-   "why": "new or reworded in this sync: not yet reviewed by Jeremy"
   }
  },
  "first_seen": {

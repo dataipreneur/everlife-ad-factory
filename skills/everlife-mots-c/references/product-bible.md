@@ -1,8 +1,8 @@
-# MOTS-c — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# MOTS-c — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793919328-c260 by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793912918-b19b)
+## Product copy (bible version 1793919328-c260)
 - **Offer:** none usable (placeholder: Save up to 40%, Product-specific offer). No % and no price in ads until the bible carries a verified offer.
 - **Default CTA:** Ships Free From Pharmacy
 - **CTAs (bible):** Explore MOTS-c · Save Up to 40% · Fuel Cellular Energy · Start Metabolic Support · MOTS-c for $5.75/day · Ships Free From Pharmacy
@@ -49,7 +49,7 @@
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 | Support Your Metabolism | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 
-## Verbatim (bible section "MOTS-c", version 1793912918-b19b)
+## Verbatim (bible section "MOTS-c", version 1793919328-c260)
 ```text
 
 ### Who it's for

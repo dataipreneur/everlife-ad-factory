@@ -1,6 +1,6 @@
 {
  "_generated": "core/scripts/build_product_bibles.py from core/claude/creative-bible.md; never edit, run `python3 core/scripts/bible_pipeline.py regen`",
- "version": "1793912918-b19b",
+ "version": "1793919328-c260",
  "id": "sermorelin",
  "name": "Sermorelin",
  "sections": [
@@ -28,7 +28,7 @@
    "Save up to 59% (injection)",
    "Starting at $95/month",
    "Save 70% compared to HGH",
-   "Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives."
+   "Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix)."
   ],
   "variants": {
    "injection": 59,
@@ -175,7 +175,7 @@
   "Save up to 59% (injection)",
   "Starting at $95/month",
   "Save 70% compared to HGH",
-  "Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives."
+  "Use “Starting at $95/month” as the headline on 5% of Sermorelin creatives (see Standards 03 · Pricing & CTA mix)."
  ],
  "proof": [
   "Trustpilot rated 4.9 Excellent",
@@ -272,6 +272,10 @@
    "status": "⚠ Jeremy",
    "why": "comparison/price claim against another therapy; \"HGH\""
   },
+  "use \"starting at $95/month\" as the headline on 5% of sermorelin creatives (see standards 03 · pricing & cta mix).": {
+   "status": "✅ NEW in 1793919328-c260",
+   "why": "new or reworded in this sync: not yet reviewed by Jeremy"
+  },
   "available as sublingual tablets or injections": {
    "status": "❌",
    "why": "\"injections\" breaks the no-needles rule; say \"easy sublingual delivery\""
@@ -318,8 +322,8 @@
   "thrive after 35": "baseline",
   "trustpilot rated 4.9 excellent": "baseline",
   "ultimate stack…with your trt": "baseline",
-  "use \"starting at $95/month\" as the cta on 10% of sermorelin creatives.": "baseline",
-  "your key to graceful aging": "baseline"
+  "your key to graceful aging": "baseline",
+  "use \"starting at $95/month\" as the headline on 5% of sermorelin creatives (see standards 03 · pricing & cta mix).": "1793919328-c260"
  },
  "retired": [
   {
@@ -329,6 +333,10 @@
   {
    "line": "Supports Sleep Quality + Recovery",
    "why": "removed from the bible 2026-11-02 (Justin); never use"
+  },
+  {
+   "line": "Use “Starting at $95/month” as the CTA on 10% of Sermorelin creatives.",
+   "why": "left the bible in 1793919328-c260"
   }
  ],
  "patterns": [],

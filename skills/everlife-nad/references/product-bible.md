@@ -1,8 +1,8 @@
-# NAD+ — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# NAD+ — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793919328-c260 by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793912918-b19b)
+## Product copy (bible version 1793919328-c260)
 - **Offer:** Save Up to 62% (the product's highest; source: Discount to feature, by product). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 62%
 - **CTAs (bible):** Explore NAD+ · Save Up to 62% · Recharge Your Cells · NAD+ for $3.25/day · Ships Free From Pharmacy
@@ -59,7 +59,7 @@
 | Ships Free From Pharmacy | CTAs | ✅ |  |
 | Save up to 62% on injections | offers | ✅ |  |
 | Save up to 62% on sublingual tablets | offers | ✅ |  |
-| Starting at $99/month | offers | ✅ NEW in 1793912918-b19b | new or reworded in this sync: not yet reviewed by Jeremy |
+| Starting at $99/month | offers | ✅ |  |
 | 30-day money-back guarantee on your first order | offers | ✅ |  |
 | Trustpilot rated 4.9 Excellent | proof | ✅ |  |
 | Over 100,000 happy customers | proof | ✅ |  |
@@ -71,7 +71,7 @@
 | Start Your Plan | retired | ❌ retired | was in the skill's old verbatim copy, no longer in the bible |
 | Starting at $119/month | retired | ❌ retired | left the bible in 1793912918-b19b |
 
-## Verbatim (bible section "NAD+", version 1793912918-b19b)
+## Verbatim (bible section "NAD+", version 1793919328-c260)
 ```text
 
 ### Who it's for

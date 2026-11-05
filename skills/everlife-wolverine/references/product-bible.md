@@ -1,8 +1,8 @@
-# Wolverine Stack — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793912918-b19b by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
+# Wolverine Stack — creative bible extract (GENERATED from `core/claude/creative-bible.md` version 1793919328-c260 by `core/scripts/build_product_bibles.py`; never edit this file: run `python3 core/scripts/bible_pipeline.py regen`)
 
 > Hand inputs: `references/product-notes.md` (notes), `references/bible-screen.json` (screening overrides), `references/hard-stops.md` (product hard stops). Rules: the gates + `core/references/global-rules.md`. Headlines are references, the only fence is the Hard NOs; Jeremy signs off before anything goes live.
 
-## Product copy (bible version 1793912918-b19b)
+## Product copy (bible version 1793919328-c260)
 - **Offer:** Save Up to 39% (the product's highest; source: CTA). Always "Save Up to N%", never a fixed discount.
 - **Default CTA:** Save Up to 39%
 - **CTAs (bible):** Explore the Wolverine Stack · Build Your Recovery Protocol · Save Up to 39% · Support Whole-Body Recovery · Start Your Stack · Wolverine Stack for $6.50/day · Ships Free From Pharmacy
@@ -62,7 +62,7 @@
 | Over 100,000 happy customers | proof | ✅ |  |
 | Get Started Now | retired | ❌ retired | banned CTA (bible 2026-11-03): lead with the offer |
 
-## Verbatim (bible section "Wolverine Stack (BPC-157/TB500)", version 1793912918-b19b)
+## Verbatim (bible section "Wolverine Stack (BPC-157/TB500)", version 1793919328-c260)
 ```text
 
 ### Who it's for
