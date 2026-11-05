@@ -7,6 +7,13 @@
 - **"Update my ad tools"** (or "update the Everlife skills"): run `bash <repo>/core/scripts/update.sh`, where `<repo>` is
   the folder the `everlife-*` links in `~/.claude/skills` point to (two levels up from a skill folder). Show the
   ✅ / ❌ lines and explain every ❌ in plain words.
+- **"Build the team zip"** (only on a git copy, never on a zip install: no `.git` folder → say so and stop): in `<repo>`,
+  1) `git status --short` must be empty and the branch `main` (else say what is in the way and stop; never stash or discard);
+  2) `git pull --ff-only`; 3) `bash core/scripts/make_zip.sh main ~/Desktop`; 4) check the new zip: `unzip -p <zip>
+  everlife-ad-factory/VERSION` must show `git rev-parse --short main`, and `unzip -l <zip>` must list
+  `core/team-logs/PAUSED` while logging is meant to be paused (TEAM-LOGS §8; if it is missing, say so, don't hide it).
+  Report the zip path, size, version line and both check results in plain words. Reminder to give: send it only to Everlife
+  teammates; they follow ONBOARDING-ZIP.md ("Getting a new version"). Spends no credits.
 - **"Check my Everlife ad setup"**: run `bash ~/.claude/skills/<skill>/core/scripts/preflight.sh` for every
   `everlife-*` skill in `~/.claude/skills` (check only, never `--install` unless they agree) and explain every ❌.
 - **Zip installs** (no `.git` folder in the repo): a new version comes as a new zip that replaces the whole folder
