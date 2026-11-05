@@ -24,3 +24,8 @@ These were restated, in different words, at the top of every skill. They live he
 9. **Log every run** (`teamlog.py`: generations at submit, copy / proof / run after) per `core/team-logs/TEAM-LOGS.md`.
 10. **Drive with questions, not instructions**: `AskUserQuestion`, every first option ✨ Recommended, as few questions as the flow says
     (images: one). The people using the skills are not technical; never ask them to edit files or code.
+11. **The product's price line ("<product> for $N/day") runs on 10% of ALL ads** (bible Standards: "Show the lowest price or the price per day
+    on 10% of all ads"), images and videos, kept over time so small batches still average 10%. Images: the dealer marks the 💲 slots
+    (`deal_worlds.py`, batch table CTA column) and the gate enforces it. Videos: `python3 core/scripts/price_plan.py --product <id> --n 1
+    --kind video` says whether the next video carries it (add `--log` once it is approved). The only $ amount allowed in an ad; the text comes
+    from the bible, never typed. Titan-Rx and Spark are held (`price_plan.py` HOLD) until their offers are cleared; Spartan has none.

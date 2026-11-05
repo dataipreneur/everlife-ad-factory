@@ -138,6 +138,24 @@ def copy_gate(product, txt):
     return None
 
 
+def price_gate(row, product, txt):
+    """→ a deny reason, or None. The product's "$/day" line runs on the slots deal_worlds.py dealt "price" (bible: 10% of all ads;
+    core/scripts/price_plan.py) and nowhere else; a price slot must carry it. A deal.json from before the plan has no cta_kind: skipped."""
+    if not row or "cta_kind" not in row: return None
+    b = bible_of(product) or {}
+    price = b.get("cta_price")
+    ctal = {bnorm(c) for c in CTA_LINE.findall(txt)}
+    if not price or not ctal: return None
+    has = bnorm(price) in ctal
+    if row["cta_kind"] == "price" and not has:
+        return (f'this slot was dealt the PRICE CTA (the bible\'s 10% price share): the CTA line must read "{price}". '
+                "The batch table marks it with 💲; do not swap it for the offer CTA.")
+    if row["cta_kind"] != "price" and has:
+        return (f'"{price}" is only for the slot(s) dealt the price CTA (10% of ads, price_plan.py); this slot uses '
+                f'"{row.get("cta") or b.get("cta_default")}". Another price ad would push the product past its 10% share.')
+    return None
+
+
 def gate(p):
     tool, tin = p.get("tool_name", ""), p.get("tool_input", {}) or {}
     if not is_everlife_image(tool, tin): return
@@ -156,12 +174,13 @@ def gate(p):
     if not os.path.exists(deal):
         return deny(f"No deal.json in {job}. Run core/scripts/deal_worlds.py --product {product} --n N … --json > {deal} first; the batch is owed from that manifest.")
     try:
-        slots = {str(s["slot"]) for s in json.load(open(deal))}
+        rows = {str(s["slot"]): s for s in json.load(open(deal))}
     except Exception:
-        slots = set()
+        rows = {}
+    slots = set(rows)
     if slots and slot not in slots:
         return deny(f"Slot {slot} is not in {deal} (slots {', '.join(sorted(slots, key=int))}). Re-roll an existing slot; never add a size-less extra.")
-    why = copy_gate(product, txt)
+    why = copy_gate(product, txt) or price_gate(rows.get(slot), product, txt)
     if why:
         return deny(f"Slot {slot} {ratio}: {why}")
 

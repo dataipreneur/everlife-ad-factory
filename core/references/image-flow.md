@@ -68,6 +68,9 @@ For every slot, in order:
    Everything else is yours. Never a line already in the product copy log. **CTA = one of the product's current bible CTAs, exactly**
    (`references/bible.json` → `cta_default`, normally "Save Up to N%"; `python3 core/scripts/product_copy.py <id>` prints them); the gate hook
    refuses any other CTA string, any retired line and any % that is not the product's featured discount (bible pipeline, 2026-11-05).
+   **Price CTA = the dealt slot's `cta`, exactly** (bible: the product's "$/day" line on 10% of all ads): the batch table's CTA column marks the
+   💲 slots (`deal_worlds.py` → `price_plan.py`); a 💲 slot's CTA line is the price line, every other slot's is the default offer CTA, and the gate
+   refuses the price line anywhere else. Never swap them by hand; the share is kept over batches so small batches still average 10%.
 4. **Supporting lines:** up to 3 short lines in the same voice, the bible's benefits as the reference for what to say; same fence. Peptide stacks name every peptide.
 5. **Type & colour:** the world's own type hint leads; the dealt pairing is the partner face. Accent from the dealt list
    (men's products skip rose / blush; women's and intimacy skip orange / green). Placement and light as dealt. Headline ≥ 9%
@@ -145,7 +148,7 @@ These are the steps the old per-skill files carried; they live here once now. Co
 | 1 | Preflight | `bash <skill>/core/scripts/preflight.sh` (connections, tools, bible version check) | script |
 | 2 | Read the product | `references/product-brief.md` (hard stops, variations, the bible facts block) · `references/product-bible.md` (generated from the bible) · `references/lessons.md` · `references/winners/`; exact copy strings: `python3 core/scripts/product_copy.py <id>` (reads `references/bible.json`) | you |
 | 3 | Lean team reads | Copy Ledger + Ad Review flags saved to files (`ArtifactData` `out_dir` = `<job>/_team/ledger`, `<job>/_team/review`), then only the digest: `teamlog.py summary <job>/_team/ledger <job>/_team/review --product <id>` (used headlines, team styles/worlds → `--skip`, reviewer flags → explicit checks for this batch). Page unreachable → say so, carry on | TEAM-LOGS §2.2, AD-REVIEW §3 |
-| 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …] --json > <job>/deal.json` (the MANIFEST: N slots × 2 ratios owed); proof per slot follows `finish_batch.py --proof-plan N` (42/28/30) | code |
+| 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …] --json > <job>/deal.json` (the MANIFEST: N slots × 2 ratios owed); proof per slot follows `finish_batch.py --proof-plan N` (42/28/30); CTA per slot: the price line on ~10% of ads (`price_plan.py`, kept in `~/Everlife-Creative/price-ledger.jsonl`; `--log` records the batch) | code |
 | 5 | Write | every ad: 9:16 prompt AND 4:5 prompt, each with its STRICT LAYOUT block (`prompt-layout-zones.md`), copy inside the Hard NOs; `prompts.md` | you + lint on the prompt (zones present) |
 | 6 | Approve | one AskUserQuestion with the cost: "Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" | gate: never spend without it |
 | 7 | Generate | all 9:16 raws, then all 4:5 raws (GPT Image 2.5 on Creatify, 4 in flight); never crop / pad / mirror one size into the other. Every prompt ends with the batch reference line; the gate hook refuses it otherwise and counts what was fired | **code: `batch_hook.py gate` + `fired`** |
