@@ -154,6 +154,25 @@ These are the steps the old per-skill files carried; they live here once now. Co
 | 12 | Show | one contact sheet with both sizes per ad; open the output folder; plain words | you |
 | 13 | After the batch | `teamlog.py copy` per ad · `teamlog.py proof` per creative · `teamlog.py run` · **`teamlog.py close <job>` must print ✅ closed** · `teamlog.py sent <job> --all` (or `--queued`) · post every final to Ad Review (`entry` + preview; `teamlog.py posted <job> <ad_id…>`) · append headlines to `~/Everlife-Creative/<id>-copy-log.md` · `deal_worlds.py --product <id> --n N --log` | TEAM-LOGS §2, AD-REVIEW §4, Stop hook |
 | 14 | Hand-off | `~/Everlife-Creative/output/<Product>/<date>_SESSION.md`: one row per asset (path, world, headline, lines, CTA, proof, cost, issues, any Hard-NO doubt for Jeremy). Drafts only; delivery (Drive, Master Library, Asana) only after approval | you |
+| 15 | **Next-batch questionnaire** (compulsory) | after the sheet is shown: ONE AskUserQuestion for the SAME product, first question headed `Next batch` (§9) → `<job>/next_asked.json` | **code: `batch_hook.py stop` blocks the turn until it is asked; `batch_check.py` shows it** |
 
 The Stop hook (`core/hooks/teamlog_hook.py`, installed by `install.sh`) sends Claude back once when a job holds unsent records or
 unposted finals. If `~/.claude/settings.json` has no hooks, run `install.sh` (or `update.sh`) on that machine: preflight warns.
+
+## 9. The next-batch questionnaire (compulsory, enforced by code)
+Mitansh 2026-11-05: "Compulsory requestionnaire after 1 batch of images is done! For that same product! Shouldn't be a memory or
+something, do by code." Once every slot of a batch is finished in both sizes (`batch_check.py` ✅), the Stop hook
+(`core/hooks/batch_hook.py`) will not let the turn end until this question has been asked; asking it writes
+`<job>/next_asked.json` (questions + answers). It runs whatever happened in the batch (good, re-rolled, free-fixed), right after
+the contact sheet is shown. A batch the user stopped on purpose is released with `batch_check.py <job> --release "<their words>"`.
+
+One AskUserQuestion, the SAME product, every first option ✨ Recommended:
+1. **header `Next batch`** (exactly; the hook matches it), "Next batch of <Product> images?": "Another 8, new worlds (Recommended)" /
+   "Another 4" / "Variations of one ad" / "Done for now".
+2. **Direction:** "🎲 Surprise me (Recommended)" + three NEW pitches from `world-deck/INSPIRATIONS.md` (never the last batch's three;
+   fold in what the user said about the batch, e.g. "more comic").
+3. **Who's in them?** as in §1.
+4. **Form / Strength**, only if the product has them (§1).
+"Done for now" is a valid answer: the file is still written and the session can end. Any other answer starts §2 for the same product
+with the last batch's worlds skipped; the spend gate still holds (nothing is generated before the batch table is approved).
+

@@ -7,7 +7,8 @@ Proves, with fake prompts in a temp batch folder:
   gate   refuses an Everlife image prompt without the reference line · refuses a ratio mismatch · refuses a slot not in deal.json
          · allows a correct prompt · ignores a video / non-Everlife prompt
   fired  counts (slot, ratio) once per call
-  stop   blocks while a size or a FINAL is owed, names exactly what is owed, stays silent once both sizes of every slot are finished
+  stop   blocks while a size or a FINAL is owed, names exactly what is owed; once both sizes are finished it blocks until the
+         next-batch questionnaire (an AskUserQuestion headed "Next batch") is asked, then stays silent; released batches owe nothing
 """
 import json, os, shutil, subprocess, sys, tempfile
 
@@ -29,11 +30,11 @@ def hook(cmd, payload, env):
     return json.loads(r.stdout) if r.stdout.strip() else {}
 
 
-def prompt(slot, ratio, job, ref=True, layout_ratio=None):
+def prompt(slot, ratio, job, ref=True, layout_ratio=None, sid='sess-T'):
     lr = layout_ratio or ratio
     body = f"Design a finished, premium static social ad for PT-141 by Everlife … STRICT LAYOUT ({lr}, 1152x2048), follow exactly: …"
     if ref: body += f"\n\nReference only, never render: everlife slot={slot} ratio={ratio} product=pt-141 job={job}"
-    return {'tool_name': TOOL, 'tool_input': {'prompt': body}}
+    return {'tool_name': TOOL, 'tool_input': {'prompt': body}, 'session_id': sid}
 
 
 def main():
@@ -70,7 +71,32 @@ def main():
         open(os.path.join(job, f'FINAL_{n}_world_{wh}.png'), 'w').close()
     chk = subprocess.run([sys.executable, CHECK, job], capture_output=True, text=True, env=env)
     ok('batch_check ✅ once both sizes of both slots are finished', chk.returncode == 0 and '2 ads × 2 sizes = 4' in chk.stdout)
-    ok('stop hook silent when nothing is owed', hook('stop', {'session_id': 'sess-B'}, env) == {})
+    ok('batch_check flags the next-batch questionnaire as owed', '❗ next-batch questionnaire owed' in chk.stdout)
+    ok('another session is never asked about this batch', hook('stop', {'session_id': 'sess-OTHER'}, env) == {})
+    d = hook('stop', {'session_id': 'sess-T'}, env)
+    ok('stop hook BLOCKS a finished batch until the next-batch questionnaire is asked',
+       d.get('decision') == 'block' and "'Next batch'" in d.get('reason', '') and 'PT-141' in d.get('reason', ''))
+    hook('fired', {'tool_name': 'AskUserQuestion', 'session_id': 'sess-T', 'tool_input': {'questions': [{'header': 'Mood', 'question': 'x?'}]}}, env)
+    ok('an unrelated AskUserQuestion does not count', not os.path.exists(os.path.join(job, 'next_asked.json')))
+    ask = {'tool_name': 'AskUserQuestion', 'session_id': 'sess-T', 'tool_input': {'questions': [
+        {'header': 'Next batch', 'question': 'Next batch of PT-141 images?'}, {'header': 'Direction', 'question': 'Direction?'}]},
+        'tool_response': {'answers': {'Next batch of PT-141 images?': 'Another 4'}}}
+    hook('fired', ask, env)
+    ap = os.path.join(job, 'next_asked.json')
+    ok('asking it writes next_asked.json with the answers', os.path.exists(ap) and 'Another 4' in open(ap).read())
+    ok('stop hook silent once the questionnaire is asked', hook('stop', {'session_id': 'sess-T'}, env) == {})
+
+    job2 = os.path.join(home, 'output', 'PT-141', 'test_batch-2'); os.makedirs(job2)
+    open(os.path.join(job2, 'deal.json'), 'w').write(deal)
+    for n, wh in [(1, '1080x1920'), (1, '1080x1350'), (2, '1080x1920'), (2, '1080x1350')]:
+        open(os.path.join(job2, f'FINAL_{n}_world_{wh}.png'), 'w').close()
+    for s_, r_ in [(1, '9:16'), (1, '4:5'), (2, '9:16'), (2, '4:5')]:
+        hook('fired', prompt(s_, r_, job2, sid='sess-D'), env)
+    ok('second batch: blocks once', hook('stop', {'session_id': 'sess-D'}, env).get('decision') == 'block')
+    ok('second batch: blocks twice', hook('stop', {'session_id': 'sess-D'}, env).get('decision') == 'block')
+    ok('second batch: then warns instead of looping', 'systemMessage' in hook('stop', {'session_id': 'sess-D'}, env))
+    subprocess.run([sys.executable, CHECK, job2, '--release', 'user stopped'], capture_output=True, text=True, env=env)
+    ok('a released batch owes no questionnaire', hook('stop', {'session_id': 'sess-E'}, env) == {})
 
     shutil.rmtree(home)
     print(f"\n{len(fails)} failures" if fails else "\nall checks passed")

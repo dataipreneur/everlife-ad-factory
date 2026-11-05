@@ -146,7 +146,7 @@ if os.path.exists(p):
 ours = lambda e: any("core/hooks/batch_hook.py" in h.get("command", "") for h in e.get("hooks", []))
 want = {
     "PreToolUse": {"matcher": "mcp__.*", "hooks": [{"type": "command", "command": f'python3 "{script}" gate', "timeout": 10}]},
-    "PostToolUse": {"matcher": "mcp__.*", "hooks": [{"type": "command", "command": f'python3 "{script}" fired', "timeout": 10}]},
+    "PostToolUse": {"matcher": "mcp__.*|AskUserQuestion", "hooks": [{"type": "command", "command": f'python3 "{script}" fired', "timeout": 10}]},
     "Stop": {"hooks": [{"type": "command", "command": f'python3 "{script}" stop', "timeout": 10}]},
 }
 hooks = d.setdefault("hooks", {})

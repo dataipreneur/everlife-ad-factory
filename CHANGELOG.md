@@ -2,6 +2,16 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — Next-batch questionnaire, enforced by code (branch `world-deck-golden-flow`)
+Mitansh: "Compulsory requestionnaire after 1 batch of images is done! For that same product! Shouldn't be a memory or something, do by code."
+- `core/hooks/batch_hook.py`: once every slot of a batch is finished in both sizes, the Stop hook blocks the turn until one AskUserQuestion
+  headed `Next batch` has been asked for that product (the PostToolUse hook, now also on `AskUserQuestion`, records it in `<job>/next_asked.json`);
+  it blocks twice per session, then warns. Only the session that fired the batch's renders is asked (`renders.jsonl` now carries the session id):
+  another session's or teammate's batch on the same machine never blocks. `batch_check.py` prints whether the questionnaire is owed; a released batch owes nothing.
+- `core/references/image-flow.md` §9 + run-contract row 15; `skill_lint.py` contract tokens; `install.sh` PostToolUse matcher `mcp__.*|AskUserQuestion`;
+  `core/tests/batch_gate_test.py` 21/21 (questionnaire, session scoping, release).
+- Titan-Rx: Creatify project 03258cd8 created with its own renders (`assets/creatify.json`); batch 2 lessons. Lovara: render URLs saved.
+
 ## 2026-11-05 — The Engine: global core, product briefs, variations, inspiration directions, banners gone (branch `world-deck-golden-flow`, local only)
 Mitansh: "make everything global and in core … with some exceptional variations like shirtless mode in bodybuilding products and
 ultra premium for vials … the skills should only load up the product briefs"; "Claude should recommend based on the product what
