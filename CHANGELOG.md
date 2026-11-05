@@ -2,6 +2,11 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 — apply_patch.py: Windows (CRLF) copies (branch `patch-crlf`)
+Ron's Windows PC: the real patch `2800e8d → 978d9d0` refused with 21 false "conflicts" because the Windows zip installs text files as CRLF while the patch checksums are LF.
+- `core/scripts/apply_patch.py` compares text files line-ending neutral (binary files untouched), and when it replaces a file that uses CRLF it writes CRLF, so the next patch still matches. VERSION keeps its line endings too. The patch zip is unchanged; `make_patch.py` is unchanged.
+- `core/tests/patch_test.py`: 4 new checks (a CRLF copy applies with no false conflicts, equals a fresh install apart from line endings, patched files and VERSION keep CRLF). 17/17.
+
 ## 2026-11-05 — Bible sync to 1793890033-215f (branch `bible-sync-215f`; originals in `_originals/2026-11-05/bible-sync-215f/`)
 Priestley: "There is a bible sync that we need to incorporate in the patch." Justin moved the live bible from …ced5 to …215f. Small sync (4 changes); Restora-Z untouched; all 15 product disclaimers still match.
 - **Discount rule reversed (Standards 02):** every ad features the product's HIGHEST discount, whichever variant is pictured: PT-141 59%, Sermorelin 65%, NAD+ 62%, GLP-1 83% (a PT-141 nasal-spray ad still says 59%). Replaces the 2026-11-04 per-variant rule in the gates, global rules, and the PT-141 / Sermorelin / GLP-1 skills (offer lines, CTA question, image-batch rows, video prompts). The bible dropped the CTAs "Save Up to 23%" (PT-141) and "Save Up to 59%" (Sermorelin), which settles the Sermorelin 59-vs-65 question: 65%.

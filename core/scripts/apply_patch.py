@@ -18,6 +18,19 @@ def sha(b):
     return hashlib.sha256(b).hexdigest()
 
 
+def norm(b):
+    """Text compares line-ending neutral (a Windows unzip turns LF into CRLF); binary files compare as they are."""
+    return b if b"\0" in b else b.replace(b"\r\n", b"\n")
+
+
+def uses_crlf(path):
+    try:
+        b = open(path, "rb").read()
+    except OSError:
+        return False
+    return b"\0" not in b and b"\r\n" in b
+
+
 def same(a, b):
     return bool(a and b) and (a.startswith(b) or b.startswith(a))
 
@@ -88,7 +101,7 @@ def main():
             if sha(data) != f["sha256"]:
                 bad.append(f"{rel}: checksum mismatch (the patch is damaged or was changed)")
                 continue
-        now = sha(open(target, "rb").read()) if os.path.isfile(target) else None
+        now = sha(norm(open(target, "rb").read())) if os.path.isfile(target) else None
         if f["action"] == "add":
             ok = now is None or now == f["sha256"]
         elif f["action"] == "modify":
@@ -130,10 +143,13 @@ def main():
         else:
             os.makedirs(os.path.dirname(target), exist_ok=True)
             tmp = target + ".patch-tmp"
+            if uses_crlf(target) and b"\0" not in data and b"\r\n" not in data:
+                data = data.replace(b"\n", b"\r\n")   # keep this copy's line endings, so the next patch still matches
             open(tmp, "wb").write(data)
             os.chmod(tmp, 0o755 if f["mode"] == "755" else 0o644)
             os.replace(tmp, target)
-    open(os.path.join(repo, "VERSION"), "w", encoding="utf-8").write(m["version_line"] + "\n")
+    vf = os.path.join(repo, "VERSION")
+    open(vf, "w", encoding="utf-8", newline="\r\n" if uses_crlf(vf) else "\n").write(m["version_line"] + "\n")
     print(f"✅ Patched to {m['version_line']}")
     if todo and any(p[3] is not None for p in todo):
         print(f"   Replaced files were saved in {bk}")
