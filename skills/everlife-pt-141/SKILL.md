@@ -5,10 +5,6 @@ description: EverlifeMD PT-141 ad factory (intimate wellness, two forms: nasal s
 
 # PT-141 Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE (Mitansh, 2026-11-04: "you did this crazy fast… always do such thing, both sizes simultaneously"; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after (Creatify queues them; don't wait between), then download, finish and QA both sizes together and show them on one sheet. Recipe: `references/image-batch.md` §2d. Cost = 2 credits per ad (GPT Image 2.5), quote it that way. Both sizes are drafts: creative review + Jeremy's sign-off still come before anything is delivered or goes live.
-
 > **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
 
 > **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
@@ -98,16 +94,18 @@ If everything is ✅, say so in one line and go straight to step 1.
 - Read all references in ONE Bash call (`cat` them together), once per session.
 - Start the generation, then do the copy log and job folder while it renders.
 
-## Step 1 — Setup (every question has a ✨ Recommended first option; two rounds, four questions each, then the table)
-**Never asked:** audience (men and women together unless the user types "women only"/"men only"), people in frame (default: a mix,
-about half the batch with a clothed, candid person 30–55, shoulder-up/waist-up, daytime, never a bed; the rest product only),
-placement (images are always made in 9:16 AND 4:5 together, see "Both sizes at once" at the top), frameworks (random mix; the user can
-say "use F2 and F8" in chat).
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · who's in them · form, only if the product has
+  several), then `deal_worlds.py` picks the mix and you write every ad from its slot. Never ask for mood, style, palette, copy
+  density, boldness, hook angle, placement or framework: the dealer varies them per slot and the batch table shows the picks.
+  Product-specific copy rules: `references/image-batch.md` §0.
+- **Video / Avatar** → the video setup below, unchanged.
 
+### Video setup (unchanged; images never use these questions)
 **Round 1 — one AskUserQuestion, 4 questions:**
 1. **Form:** "Either: pick per ad (Recommended)" / "Nasal spray" / "Sublingual tablet". Decides the bottle in the picture; "either"
    alternates across a batch. Copy may name the form; never the strength, dose or count. One form per ad (Dave's rule).
-2. **What are we making?** "🖼️ Image ads (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
 - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply; PT-141: the presenter is framed shoulder-up, and the B-roll has NO beds or bedrooms, product-led and tasteful.
 3. **Hook angle:** "Mix: a different angle per ad (Recommended)" / "The wanting, not the ability" ("It Was Never Just Physical", "More
    Than Blood Flow", "Desire Starts in the Brain") / "Unplanned nights" ("Some Nights Aren't Planned.", "Made for Moments, Not
@@ -116,18 +114,6 @@ say "use F2 and F8" in chat).
 4. **How bold on copy:** "Safe: bible wording only (Recommended)" / "Balanced: one PROPOSED line in the batch" / "Bold: two PROPOSED
    lines". Safe = Tier A only, no Jeremy round needed. Balanced/Bold = Tier B lines marked PROPOSED, each needs the user's explicit
    OK and goes to Jeremy.
-
-**Round 2 (images) — one AskUserQuestion, 4 questions:**
-> **🎨 MOOD = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; overrides the IMAGE Mood options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker) · 3–4 = this skill's first two non-random moods listed below (the rest via Other). Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
-5. **Mood:** "Surprise me: different each ad (Recommended)" / "✨ Ultra premium, product only (Hims/Ro codes: `core/references/ultra-premium.md`)" / "Clean clinical: white, marble, pale blue, cyan" / "Warm: golden hour,
-   linen, sand" / "Dark and moody: navy, charcoal, brass" / "Soft blush: pink, tan, cream". Sets palette and light; §2b still varies
-   the type pairing per ad.
-6. **Copy density:** "Headline + 3 lines (Recommended)" / "Headline + 1 line" / "Headline only, the picture talks".
-7. **Start from a winner?** "Fresh concepts (Recommended)" / "Spin one of ours". If "Spin": ask in chat for the ad (a file path, a Drive
-   link, or a `team-refs/` code like T1), look at it, and build the batch as 5 variations of its hook mechanics across 5 different
-   frameworks, in the agreed register (never its old words, rating or faults).
-8. **How many:** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12". Each ad comes in both sizes, so quote 2 credits per ad (4 ads ≈ 8 credits).
-Then `references/image-batch.md` §2 step 2 onward (the table, the persona pass, the approval question).
 
 **Round 2 (video) — one AskUserQuestion, 3 questions:** **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1" ·
 **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md` · **Mood** (same options as 5).

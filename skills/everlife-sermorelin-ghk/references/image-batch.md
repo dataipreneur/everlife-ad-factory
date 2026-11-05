@@ -1,44 +1,12 @@
-> **💪 MEN = "💪 Hardcore shirtless (Recommended)" is ALWAYS option 1 of the style/mood question** (Mitansh 2026-11-02; `core/references/style-library/MOOD-QUESTION.md`). Never hide it in another option's description.
+# Sermorelin GHK IMAGE ads
 
-# Sermorelin GHK IMAGE ads: Batch Mode (the default for every image request)
+**Follow `core/references/image-flow.md`** (the shared golden flow, from the Restora-Z 2nd batch): one question → deal the
+worlds (`core/scripts/deal_worlds.py --product sermorelin-ghk`) → write every ad from its slot → generate **9:16 AND 4:5 in one run** →
+`finish_batch.py` (logo, proof per slot, verbatim disclaimer) → QA by looking → show one sheet → log. Rules (claims, zones,
+proof split, safe area, disclaimer) live in the gates + `core/references/global-rules.md` + the code; this file holds only
+what is specific to Sermorelin GHK.
 
-> **💪 HARDCORE MEN = `core/references/hardcore-men.md` (Jeremy via Mitansh, 2026-11-02; OVERRIDES every "fully clothed / no bare torso / never shirtless / no flexing / not a bodybuilder / natural build" line and every winner's "Don't copy: shirtless" note in this skill):** men's ads lean intense: shirtless or stringer, 40–45, flawless muscular condition, hard gym light. 🎲 Surprise me / random: 40% of men's slots are HARDCORE (`core/scripts/pick_styles.py --product <id> --n <N> --audience men|women|both` tags them). Whenever recommending a cast, mood or style for men, recommend hardcore first ("💪 Hardcore shirtless" as a mood). Copy still never ties the body to the product: no before/after, body comparison, body-composition claims or "ripped/shred".
-
-> **🖼️ HARDCORE REFERENCES H3–H11 (Mitansh, 2026-11-02: "Add all of these are Hardcore Images, references for Serm Ghk and Serm. The new ones should be inspired by these!"):** every HARDCORE slot starts from one of `core/references/hardcore-men-refs/H3…H11` (Read `REFS.md` + LOOK at the file; a different one per slot; put it in the Source column). Take format, type treatment, cast and light; rebuild with the tablet + bottle and this bible (never BPC claims, the vial or "40% Off"). Their recipe: product name as the giant headline, ONE benefit line, ONE pill CTA, lots of air.
-> **⛔ NEVER `reposition_916.py`, edge-stretch, blur or padding colour on a raw (Mitansh, 2026-11-02: "why the hell are these things blurry on the edges! Who told you to do that!").** This overrides every older line in this skill that calls `reposition_916.py` "the fix". Finish the raw AS IS: `finish_batch.py <raw> <out> --ratio 9:16 --product <id> --fit trusted --shift 0`. **If its text or product runs into the footer, ALWAYS fix it in code first (Mitansh, 2026-11-02: "make sure to do it always"):** `$T/venv/bin/python -I $T/mirror_fit_916.py <raw> repo/rN.png --top <content top> --bottom <content bottom>` (0 credits: uniform scale into the band 0.115–0.635, margins filled by mirror-tiling a thin text-free edge strip), then the finisher as above on `repo/rN.png`. LOOK at the result. Re-roll (cost approved) ONLY when a person, text or the product touches a side edge of the raw (the mirror would copy it) or the tool refuses (scale < 0.65). Never ship a smeared edge.
-> **👀 SHOW FIRST, THEN RE-ROLL (Mitansh, 2026-11-02: "show me first!"):** after a batch, finish what can be finished (as-is or `mirror_fit_916.py`), open the contact sheet and SHOW the user every result (finished + the raws that failed QA, with why). Never start a re-roll on your own QA call, not even the "one automatic re-roll" older lines mention: the user decides which ads to re-roll, with the cost shown.
-
-Same machine as the Restora-Z batch (creative lead, 2026-10-27: "speed, Creatify, batches of at least 5 different types,
-mobile friendly, easy to read for older people"). GPT Image 2.5 on Creatify designs the **whole ad** with the real bottle
-and tablet; `finish_batch.py` adds the Everlife logo at the TOP and the approved proof footer (Trustpilot 4.9 / Doctor
-Prescribed / Ships Free art, verbatim disclaimer) as a compact transparent strip inside the Meta 9:16 safe area (feed: over the calm bottom ~18%).
-
-**🎯 FOCAL-POINT MIX (bible Standards 03, synced 2026-11-03; REPLACES "the pill is the hero, not the bottle" everywhere in this skill):** plan it in the batch table's **Focal** column before writing prompts, like the proof split: **50% pill-focused** (the tablet/capsule is the primary focal point: foreground, sharp, clearly visible; the old "tablet is the hero" wording below applies to THESE slots only) · **25% bottle-focused** (the bottle is the primary focal point: premium product photography, strong composition; the pill may appear smaller or not at all) · **25% person-focused** (a person is the primary focal point: lifestyle, emotion, relatability; product still in focus and identifiable). Batch of 4 = 2 / 1 / 1; batch of 8 = 4 / 2 / 2; odd counts round the pill share up. **Videos use the same split** (Justin, 2026-11-03: "Videos and statics should really be the same in the sense of how we’re presenting products"). Every ad, whatever its focus: product and benefit identifiable in under 2 s, product in focus, nothing covering it (`core/references/creative-system.md` §1).
-
-**Proof split (Mitansh 2026-11-02, from bible Standards 02 · 06):** 30% of ads carry NO proof element; 70% carry a footer proof: of those, 60% the trust row and 40% the Trustpilot 4.9 badge + "Over 100,000 happy customers" (overall ~42% trust / ~28% count / ~30% none; logo + verbatim disclaimer on every ad). Run `finish_batch.py --proof-plan N`, add a **Proof** column to the batch table, and pass it on every finish (`--proof trust` / `--proof count` / `--proof none`, same value on the ad's 4:5 and 9:16), e.g. `finish_batch.py raw.png FINAL.png --ratio 4:5 --product sermorelin-ghk --proof count`. Rule: `core/references/creative-system.md` §2. **PROOF SPLIT IS HARD (Mitansh 2026-11-02, no conflicts):** ~42/28/30 per batch and per ratio; proof slots get a clean shelf in the LAYOUT (9:16: product, CTA, sticker, faces end above y 1150 of 1920); never swap a planned proof to "none" yourself (re-roll with cost or ask); `finish_batch.py --proof-check <batch folder>` must pass before showing.
-
-**Superseded 2026-10-29 (creative-system §5): never buy a reposition edit. A raw whose text or product dips into the footer is fixed for free with `reposition_916.py` (full-bleed, edge-stretch slivers, no blur), then `finish_batch.py … --fit trusted`. The paragraph below is kept for history only.**
-
-**FINISHING RULE (Mitansh, 2026-10-29, all products): the raw is finished AS IS with `finish_batch.py --ratio 9:16 --product <id> --fit trusted --shift 0`. No repositioning, no scaling, no padding, no blur, no auto-shift: "0 blurring, the raw ones look better". Bake the layout into the prompt and QA it; a colliding raw is re-rolled or accepted.**
-
-**Disclaimer position (Mitansh, 2026-10-29, all products):** on 9:16 the proof row (Trustpilot 4.9 / Doctor Prescribed / Ships Free) stays in the safe area ending at y 1385; the row is ~32% bigger and ~1000 px wide (crosses the Reels side bands, accepted by Mitansh 2026-10-29); the verbatim disclaimer is laid separately at the very bottom of the frame (36 px margin) by `finish_batch.py` (default `EVERLIFE_DISC_AT=bottom`; `footer` = the old under-the-row placement). Feed ratios are unchanged (row + disclaimer at the bottom).
-
-**Footer position (2026-10-29):** on 9:16 the footer ends at y 1385, the bottom of the Reels safe area (the reference ad's band sits at ~63–72% of the frame; the footer may cross the lower-left profile notch, Mitansh 2026-10-29) (`core/tools/safezones.py`,
-team Safe zones page), because the bottom ~535 px of a Reel sits under Meta's "Learn more" button and caption
-(`core/references/safe-zones/reels_placement_2026-10-29.jpg`). So a 9:16 raw must keep everything in its top ~52%
-(LAYOUT block below); `finish_batch.py` refuses (exit 2) when a raw's content runs under the footer. Fix = ONE reposition
-edit on the raw (Creatify `composer_edit_image`, 1 credit): "Keep everything identical (headline, type, colours, product,
-scene, light). Scale the product and the text block down together (about 35%) and move them up so the lowest element ends
-at 50% of the canvas height. Fill the bottom half with calm, plain continuation of the same background: no text, no
-product, no hands." Then re-run `finish_batch.py`. Feed ratios (4:5, 1:1) are unchanged: footer over the calm bottom ~18%.
-
-
-**Blocked until the renders exist** (`assets/MISSING_RENDERS.md`) and `assets/creatify.json` has a project.
-
-**Batch size (Mitansh, 2026-10-29): default 4, not 5.** Creatify runs 4 image tasks per project at once, so a batch of 4 finishes
-in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
-
-## 0. Copy rules: hard stops vs references
+## 0. Copy rules (product-specific; kept from the original skill)
 **Hard stops:**
 - Claims: only approved quick-hit benefits, more approved benefits, or a per-ingredient claim on its OWN ingredient
   (Sermorelin / GHK / L-Citrulline Malate). Pre-screen ❌ lines never; ⚠ lines only with the user's explicit OK + flagged for Jeremy.
@@ -64,226 +32,28 @@ in one wave; 8 and 12 run in waves of 4. Compare models with two batches of 4.
   before. New lines only as Tier B (max 2, approved line by line). Ask Justin for fresh headlines when the pool feels stale.
 - Facts: Citrulline is NOT a peptide ("2 peptides + 1", never "3 peptides").
 
-## 1. Frameworks (reference ads in `core/references/static-refs/<folder>/`, overview `OVERVIEW.jpg`)
-| Code | Framework | Folder | Sermorelin GHK recipe |
-|---|---|---|---|
-| F1 | Old way vs New way | 01_Us_vs_Them | "Old routine" (more reps, more coffee, more serums) vs "3-in-1 peptide support". Categories only, no brands, no bodies compared |
-| F2 | Bold Claim | 02_Bold_Claim | one huge approved headline + tablet hero + 3 callouts to approved benefits |
-| F3 | Phone UI | 03_iPhone_Notes_Phone_UI | Notes checklist ("Training plan / Skin routine / Energy") of approved benefits; bottle beside the phone |
-| F4 | Features & Benefits | 04_Features_and_Benefits | "3-in-1" tablet hero, three rows: each ingredient + ONE of its own ✅ claims |
-| F5 | Before/After | 05_Before_and_After | ❌ **skip**: body before/after is banned; a "routine" contrast belongs in F1 |
-| F6 | Offer | 06_Offer | "Save up to 47%" + tablet + bottle, one approved benefit line |
-| F7 | Review card | 07_Testimonial_Social_Proof | ❌ blocked until `reviews.md` has screened Sermorelin GHK reviews |
-| F8 | Question | 08_Question | pronoun-free question from an approved territory ("Lost a step at the gym?", "Skin looking tired?") + answer line + product |
-| F9 | Reasons Why | 09_Reasons_Why_Education | "3 reasons it's 3-in-1": one ✅ claim per ingredient, numbered, tablet hero |
-| F10 | Sticky Note | 10_Sticky_Notes_To_Do | sticky note on a gym bag / bathroom mirror ("Tomorrow: 6 a.m. lift") next to the bottle |
-| F11 | Visual Metaphor | 11_EXTRA_Visual_Metaphor | one object idea: the tablet on a barbell collar, three tablets as a podium "1-2-3", a dumbbell rack with the bottle in it |
-| F12 | Brand Mood | 12_EXTRA_Brand_Mood_Product_Hero | premium still life (warm stone, chalk, linen), one colour mood, short serif line |
+## 1. Product facts for the prompt
+- **Product:** Sermorelin GHK (`sermorelin-ghk`). Product truth for the prompt's first line: `product.json` → `_about` / `hero.element`.
+- **Renders to attach (assets/):** bottle: `sghk500_bottle.png`, pill: `sghk_tablet.png`. Use them exactly; never describe the pill's shape or markings in text.
+- **Hero:** the sublingual tablet (the bottle is secondary, large and legible when shown); min width 0.35 of canvas; never: needles, bedroom framing, body comparison.
+- **Cast & mood:** men's slots follow `core/references/hardcore-men.md` (the dealer tags 40% HARDCORE); women's slots pinks, tans, beige. Copy never ties the body to the product.
+- **World translation family for the dealer:** `men` (each world card's `translate.men` line, else `translate.generic`).
 
-**Random (recommended):** N different frameworks (skip F5, F7), mixing text-heavy (F1, F3, F4, F9) and visual (F2, F8,
-F10, F11, F12). Weight towards F2, F4, F11, F6.
-
-## 1b. Creative-system pass (shared, `core/references/creative-system.md`, adopted 2026-10-29)
-**Team logs (every batch, `core/team-logs/TEAM-LOGS.md`):** before writing copy, read this product's Copy Ledger rows the lean way (saved to files, then only the `teamlog.py summary` digest; TEAM-LOGS §2.2) (never reuse a logged headline, hook or CTA), the team's recent styles (`pick_styles.py --skip`) and proof split; log each generation to the Prompt & Outcome Log (inputs, exact prompt, refs, QA result); after the batch, log copy, styles, proofs and the run's spend. Unreachable → the pending file, never block. Build every record with `core/scripts/teamlog.py` (it saves the exact prompt and checks the record; TEAM-LOGS §6) and send what `teamlog.py pending <job>` lists, one batch per page, then `teamlog.py sent` (TEAM-LOGS §2.5; a wave is one `teamlog.py gens` call). `teamlog.py close <job>` must print ✅ before SESSION.md.
-
-**Ad Review: read the flags first (`core/ad-review/AD-REVIEW.md` §3):** before the batch table, read this product's flagged ads (losers) and their reasons (saved to files; the same `teamlog.py summary` digest). Never repeat a flagged recipe (hook / headline + style + scene); a compliance flag bans anything close. Turn the top reasons into explicit checks for this batch, name them under the table, check them in QA. Unreachable → "no flags read", carry on.
-
-Before the batch table, check every slot against the shared system: a different **structure** per slot (split, stacked panels,
-timeline, poster, billboard, calendar, type-only, article), at least one **article-style** slot per 5, a different **product angle**,
-a **named typeface**, an **own palette**, a rotating **product-name treatment** and **headline placement**; the form's hero
-(`product.json → hero`) at **≥ 35% of the canvas width**, real and label-wrapped, with `hero.never` written into the prompt; the CTA
-and every line as exact strings in TEXT (then QA'd); "NO logo or wordmark anywhere" (or an empty masthead box for `logo_in_box.py`).
-Finishing: `reposition_916.py` (free, local) when anything dips into the footer; `unfade_cta.py` when a CTA sits just above it;
-`finish_batch.py --logo-w 40%` for the large real logo; 9:16 only via `compose916.py` from the approved 4:5. Checklist at the end of
-that file.
-
-## 2. Flow (1 question, then generate)
-> **🎨 STYLES = `core/references/style-library/MOOD-QUESTION.md` (Mitansh 2026-11-02; replaces the Frameworks options below):** 1 "🎲 Surprise me (Recommended)" = a random style per ad from the 15 Drive styles, different every batch (`core/scripts/pick_styles.py`) · 2 "📚 Pick from the 15 styles" (the follow-up picker). The F-framework table stays as a fallback. Each slot Reads its style board (`core/references/style-library/STYLES.md`): layout only, this skill's claims, palette and product rules win.
-1. **One AskUserQuestion** (audience is already set in SKILL.md step 1): **How many?** "4 (Recommended: one wave, Creatify runs 4 at a time)" / "8" / "12" ·
-   **Placement:** "4:5 Feed (Recommended)" / "9:16" / "4:5 + 9:16" / "1:1" · **Frameworks:** "🎲 Random mix (Recommended)" / "Pick frameworks" · **Look:** "Standard: winners + frameworks (Recommended)" / "✨ Ultra premium, product only" (Hims/Ro codes on every slot:
-   `core/references/ultra-premium.md`; overrides winners-first and people, tablet stays the hero).
-2. Read the bible + copy log + `winners/winners.md` (one cat). **Winners first, then frameworks** (Priestley, 2026-10-29):
-   - **At least 3 of every 5 slots (6 of 10, 9 of 15) start from a winner for this audience**: pick the winner first, take
-     its framework, look at its card + preview image (M8/M2 bold claim, M3 offer + callouts, M4 features & benefits,
-     M9 identity post, M10 tablet in hand, F2 brand mood, F1 article, F3 letter, F5 animated). Use a different winner per
-     slot; if the audience has fewer usable winners than that, use them all and say so in the table.
-   - "Both" audiences: count per audience (men's slots from M winners, women's from F winners).
-   - Only the remaining slots pick a framework first (for variety, or a framework no winner covers) and **look at 1
-     reference ad** for it: a matching winner if one is left; else a Meta ref
-   (`core/references/meta-refs/<framework folder>/`, if any); else a Pinterest ref: this skill's `references/pinterest/<framework folder>/`
-   first (read its `SOURCES.md` row: what to take, what not to copy), then `core/references/static-refs/<framework folder>/`. Rule: `core/references/REFERENCE-PRIORITY.md`. Follow the card's "Don't copy" list. Write concept
-   (1 line), headline (Tier A by default, see §0 ⚠ pending), ≤ 3 supporting lines (approved claims, exact), prompt. Show
-   ONE table: # · source (winner ID / Meta / Pinterest file) · framework · **scene · light · composition** · territory ·
-   headline · tier (A / B PROPOSED) · supporting lines · ≈1 credit, with a count line above it ("3 winners · 2 Pinterest")
-   and a variety line under it ("scenes 5/5 different · 2 bright · 0 repeats"). Fill it from §2c before writing prompts.
-   AskUserQuestion: "Generate all N (≈N credits)" / "Swap some" / "Rewrite headlines". **That click approves the batch and
-   its Tier A lines; each Tier B line needs its own explicit OK first** (ask before the generate question).
-3. Generate: `composer_edit_image(project_id, prompt, images=[bottle, tablet]  (add type_specimen only for the house look, see §2b), out='gen/b<date>_<n>.png',
-   aspect_ratio=<final ratio>)` for the default model; Nano Banana → §2c (Model Playground tools) from `assets/creatify.json`. Max 4 in flight.
-   **Always attach the bottle AND the tablet** (Priestley, 2026-10-28): our winners show both, and without the bottle the ad
-   doesn't say what's for sale. The tan tablets inside the bottle render are a known issue (`assets/MISSING_RENDERS.md`):
-   keep using the render until design or the pharmacy confirms a corrected one; never drop the bottle to avoid it, and
-   flag it in the session sheet.
-   **✋ Tablet in a hand: max 30% of the batch** (Mitansh, 2026-11-02, overrides bible v3 "tablet held": 4 ads → max 1,
-   8 → 2, 12 → 3). When held: between thumb and index toward the camera, or in an open palm, sharp, foreground, beside the
-   bottle (never covering its label); never the same hold twice. **Every other ad: NO hand on the tablet**; the real tablet
-   sits big and sharp in the foreground on a surface (bench, weight plate, chalked barbell, towel, stone plinth, counter)
-   beside the bottle, levitates, or fills a macro; say "no hand touching the tablet" in those prompts. People may still be
-   in the scene (training, resting, gripping a bar): they just don't hold the pill. Batch table: a **Hold** column.
-   **No two ads in a batch share a framework or an accent colour.**
-4. QA every result (Read it), strictly: text EXACTLY the approved strings; the bottle label matches the render (not garbled,
-   not mirrored) and the **tablet is identical to the tablet render** (no invented pill); every line big enough for 50+;
-   people look 40s–50s (men: hardcore fitness-model build, fitted top; HARDCORE slots shirtless 40–45 per hardcore-men.md); "SERMORELIN GHK" present in type (without "by Everlife"); tablet held in no more than 30% of the batch (✋ rule), unheld ads have no hand on the tablet; women's batch: at most one pink-led ad, at least one teal ad, advertorials on white, no more than 2 of 5 "explore" colours (Justin, 2026-10-29); nothing breaks a Hard NO;
-   the tablet is the real tablet, never replaced by glowing orbs, glass spheres or icons, and at least ~15% of the canvas
-   width; the bottle label follows the bottle's curve and angle (not pasted flat); "Sermorelin" and "GHK" never split
-   across lines or syllables; a benefits block has exactly 3 points; no Everlife logo or wordmark drawn by the model
-   (finishing adds the real one);
-   **the bottle is in shot, large, with "SERMORELIN GHK" legible** (product identifiable in under 2 seconds).
-   Fail → one automatic re-roll naming the fix. Still bad → flag, don't ship.
-5. Finish: `$T/venv/bin/python -I $T/finish_batch.py gen.png FINAL_<n>_<framework>.png --ratio 4:5 --product sermorelin-ghk`
-   **9:16 statics:** no extra flag: the footer sits in Meta's safe area by default and ends at y 1385 (Mitansh, see
-   "Footer position" at the top); the finisher refuses a raw whose content runs under the footer, so plan one reposition
-   edit per 9:16 image (≈1 credit; the model places the product low) keeping everything in the top ~52%. `--fit force`
-   only for QA previews.
-   (the verbatim disclaimer comes from product.json).
-6. Save to `~/Everlife-Creative/output/Sermorelin-GHK/<date>_batch-<n>/` (FINALs + `prompts.md` + `contact_sheet.jpg`),
-   open the contact sheet, log the headlines, offer "Another batch?" / "Variations of #k" / "9:16 of the winners".
-
-## 2c. Variety plan: no two ads may read as the same picture (Priestley, 2026-10-29)
-Fonts and colours alone don't make a batch varied (batch 9: five dark-gym ads with the same "name on top, hand left,
-bottle right" picture). Before writing prompts, give every ad its own row in each rotation; no value twice in one batch:
-- **Scene:** gym / outdoor (sunrise trail, track, beach, park) / home (kitchen counter, morning coffee, bathroom shelf) /
-  clean studio product shot (seamless backdrop, plinth) / pharmacy or doctor trust cue (bible: pharmacy framing for 45+) /
-  everyday life (workshop, office desk, car, travel bag). **Men: at most 2 gym scenes per batch, not counting HARDCORE slots (those are always a hardcore gym)**; the "rugged, hardcore
-  training" direction is about the MAN (casting), not the setting: he can be on a trail or in a kitchen.
-  Women: studio / home / outdoor / article page / pharmacy; not two linen-and-stone still lifes.
-- **Light:** at least 2 of every 5 ads bright (daylight, white or pale studio, sunrise); the rest moody, golden hour,
-  overcast soft. Never 4 dark ads.
-- **Composition:** person-led photo / macro product close-up (tablet fills the frame, bottle behind) / text-led article or
-  letter / split screen / still life on a surface / product held toward the lens. Tablet in a hand in at most 30% of ads (✋ rule).
-- **Name placement:** "SERMORELIN GHK" at the top, directly under the headline, on a lower-third band, in the text panel
-  of a split layout, or as part of the headline: not the same spot twice in a row. Never "beside" an object (batch 9: it
-  landed on a coffee mug and read as a mug print); props stay plain, and the name is always big.
-- **Winners give layout and structure only.** Their scene, haze and colour are NOT copied (all men's winners are dark
-  gyms); pick the scene from the rotation above.
-- **After generating,** look at the contact sheet: two ads that read as the same picture → re-roll one before showing.
-
-## 2b. Type & colour: be different every time (creative lead, 2026-10-28)
-Fonts and colours are **not** house-locked. Every ad in a batch gets its own pairing and its own accent; never two alike
-in one batch, never the same look two batches in a row, and never default to the old "serif + purple accent" specimen.
-Pick per ad and write it into the prompt's TYPOGRAPHY & COLOUR block (legibility rules still apply: 50+ readers, no
-shadows or outlines on type, product name big).
-
-| Headline face (pick one) | Partner for supporting text |
+## 2. This product's references
+| File | Read for |
 |---|---|
-| Heavy condensed grotesque, all caps (the winners' look) | light humanist sans |
-| Elegant high-contrast serif, roman | clean geometric sans |
-| Serif with ONE italic word | small-caps sans |
-| Wide extended sans, bold | regular sans |
-| Slab serif, bold | light sans |
-| Chunky rounded sans | mono-spaced labels |
-| Brush / handwritten accent word inside a sans headline | regular sans |
-| Thin editorial sans, tracked out, all caps | serif body |
+| `references/product-bible.md` | every claim, headline, CTA, offer |
+| `references/winners/winners.md` | reference level 1: our own winners, open first |
+| `references/pinterest` | category references (layout + idea only) |
+| `references/lessons.md` | paid-for mistakes; read before writing |
+| `references/reviews.md` | any review world (verbatim ✅ reviews only) |
 
-**Men's ads (reviewer, 2026-10-29: "men shouldn't use that font", about an elegant serif with a gold italic word):** never
-the elegant high-contrast serif, the serif with an italic word, or the brush/handwritten accent for a men's headline. Men
-pick from: heavy condensed grotesque (the winners' look), wide extended bold sans, bold slab serif, chunky/bold sans;
-keep "SERMORELIN GHK" big in type (bible: "Product names run big"). The serif rows stay available for women.
+Shared: the World Deck `core/references/world-deck/WORLDS.md`, batch-2 contact sheets
+`~/Everlife-Creative/references/restora-z-2nd-batch-2026-10-29/_sheets/`, layout zones `core/references/prompt-layout-zones.md`.
 
-Accent colour: take it from the scene or the product, never from habit. Options: the label red, brass/gold, deep navy,
-charcoal on cream, cream on charcoal, ink on sand, forest, teal, sky, slate, mocha, rose, blush, burgundy, warm white.
-Product rules win. **Bible v3 (29 Oct) dropped the women's "pinks, tans and beige; no oranges or greens" rule** for every
-product except GHK-Cu Cream and Glow Stack, so Sermorelin GHK women's ads may use any warm palette.
-**Women: Justin's colour & typography direction (2026-10-29)**, "preferred options, not strict limitations":
-- **No colour is banned.** Preferred (they have performed): pinks, tans, neutrals, warm tones, **white** and **teal**.
-  Most ads in a women's batch lead with one of these.
-- **Explore:** up to 2 of every 5 women's ads use a current colour or type trend that suits the concept and imagery.
-- **Advertorial / article ads sit on a white background.**
-- **At least one teal-led or teal-accent ad per women's batch.** Teal harmonises with the green-teal tablet; keep it soft
-  or pale so it doesn't fight the bottle's deep red label.
-- Still: at most one pink-led ad per batch, no two women's ads with the same lead colour, pink fine as an accent, varied
-  fonts (§2b menu; serif rows allowed for women).
-Restora-Z moods navy / lavender / blush / cream / pale sky. Vary the headline placement too (top-left, centred, bottom-
-third above the footer band, split either side of the product) and the light (morning, golden hour, overcast soft, studio).
-
-The type specimen (`assets/type_specimen.png`) is no longer attached by default. Attach it only when the brief asks for
-the house editorial look, and then say "match image 3".
-
-## 2c. Image model (one more question in the setup round; shared rules in `core/references/image-models.md`)
-**Image model:** "GPT Image 2.5 via the connector (Recommended)" / "Nano Banana 2.1" / "Nano Banana Pro" (these three only,
-Mitansh 2026-10-29). One model per batch. Default = `composer_edit_image` as before. Nano Banana = the Creatify MCP server's
-Model Playground (`model_playground_get_model_schema` → `model_playground_generate(model_name="nano-banana-2.1/edit" |
-"nano-banana-pro/edit", input_params={prompt, image_urls:[<render cdn_url>], aspect_ratio:"9:16", resolution:"1K"})` →
-`model_playground_get` → curl the output into `gen/`). Needs the `creatify` MCP signed in (`/mcp`) and the render's `cdn_url` in
-`assets/creatify.json` (one-time, see the shared file). Same workspace credits: GPT Image 2.5 = 1 / image; Nano Banana 2.1 = 1 at
-1K (1.5 at 2K); Nano Banana Pro = 1.5. Same prompt, same QA, same finishing. Write the model into `prompts.md` and SESSION.md.
-If the `creatify` MCP tools are not in this session, say so (new session + `/mcp`) and offer GPT Image 2.5 for this batch.
-
-## 3. Prompt template (fill everything; keep the quotes exact)
-```
-Design a finished, premium static social ad for "Sermorelin GHK", a doctor-prescribed 3-in-1 sublingual peptide tablet,
-in the style of a modern DTC wellness brand. Framework: <name>: <layout from the reference ad you viewed>.
-
-PRODUCT: image 1 is the real bottle and image 2 the real tablet. Use the attached tablet reference exactly; do not
-invent, alter, or substitute a different pill. Use the attached bottle reference exactly: same shape, colours and label,
-label facing camera, sharp, never mirrored, never redesigned; the label wraps around the bottle and follows its angle and
-perspective. The TABLET is the hero (large, in focus, foreground, at least 15% of the canvas width), shown as the real
-tablet only: never as glowing orbs, glass spheres, icons or abstract shapes. The bottle is in every ad, large and
-legible. ARRANGEMENT for this ad: <this ad's own product arrangement, different from every other ad in the batch>.
-
-TYPOGRAPHY & COLOUR (this ad's own look, different from every other ad in the batch): headline in <pairing from the
-menu, e.g. "a heavy condensed grotesque in all caps">, with ONE phrase picked out in <accent colour from the palette>;
-supporting text in <its partner face>. For readers aged 50+: headline at least 9% of canvas height per line; every other
-line at least 3.5%; strong contrast; no thin grey text; max 3 supporting lines (a benefits block has exactly 3). Never
-split "Sermorelin" or "GHK" across two lines or hyphenate them.
-
-TEXT: render ONLY these strings, exactly, nothing else (no extra words, no Everlife or other logos or wordmarks, stars,
-badges, prices, website, disclaimer):
-  Name: "SERMORELIN GHK"   (big, every ad; NO "by Everlife" on statics: the logo is at the top; Priestley, 2026-10-29)
-  Headline: "<headline>"   (accent on: "<phrase>", in the accent colour named above)
-  Supporting: "<line 1>" / "<line 2>" / "<line 3>"
-
-SCENE & STYLE: <scene>, real texture and depth (never a flat colour), warm sun-lit light, calm and premium.
-<MEN: scene and light from this ad's row in §2c (not always a dark gym); any person a man 42–50, a fit silver fox with a hardcore fitness-model
-physique (visibly muscular, lean, athletic; tattoos optional), rugged and confident, in a fitted training
-tee or long sleeve. HARDCORE slot (💪 40% of random batches): instead the EXACT prompt line from `core/references/hardcore-men.md` ("a rugged, EXTREMELY JACKED man aged 40–45 … veins popping …"): never soften it to "fit" or "athletic"; QA rejects any HARDCORE raw where he isn't massive and vascular>
-<WOMEN: lead colour <this ad's own lead per §2b (Justin): preferred pinks / tans / neutrals / warm tones / white / teal (soft
-or pale teal), or an "explore" trend colour for up to 2 of 5 ads; white background for advertorial ads; pink-led at most
-once per batch>; any person a woman 40–60, natural, candid, glowing
-skin, clothed.> No bedroom, no before/after, no needles or syringes, no mirrors showing bodies.
-
-STRICT LAYOUT (9:16, ✅ PROVEN 2026-11-02 hardcore-v3: 4/4 finished first try, logo band clean on all 4; Mitansh: "You already have the
-instructions on where the logo and footer go: write the prompt that way") - paste with real pixel numbers, GPT Image 2.5 = 1152 x 2048:
-- ZONE A, y 0-330 px (top 16%): EMPTY HEADROOM, plain background only (name the surface: dark wall, sky, concrete). NO text,
-  product or head. "The very first line of text starts BELOW y 340." Also put "(first line, starting at y 360)" on the Name string.
-- ZONE B, y 340-1180 px: ALL text + bottle + tablet. Ask the product base at about y 950 (asking 1100 landed at ~1400 on 2/4:
-  the tablet then sat under the trust row). Give the man's HEAD a y-range inside Zone B (e.g. "head at y 450-650").
-- ZONE C, y 1180-2048 px: ONLY the man's body / floor / scene. NO text, product or hand.
-- All text inside x 170-980 px. Nothing important touches the side edges.
-Then finish AS IS (`--fit trusted --shift 0`). If the tablet still dips under the trust row, finish that ad with `--proof none`
-(disclaimer only) and note the proof-split deviation; never mirror-fit a raw whose top edge is text.
-(Older block below kept for reference.)
-LAYOUT (9:16, Sermorelin GHK, 2026-10-29: "use as much of the artboard as possible around the safe zones"): the TOP 12%
-is calm continuation of the background (the Everlife logo is laid there). ALL TEXT (headline, name, lines, badges) stays
-inside the central column (15% in from the left and right edges). PICTURES are full-bleed: the product, hands, person and
-scene may use the whole width and come down to 56% of the canvas height (the model lands ~8% lower; the Trustpilot row
-sits at ~67–72%). Below that, the scene simply continues (floor, surface, fabric) with no text, product or hands: Meta's
-UI and the bottom disclaimer sit there.
-LAYOUT (4:5 / 1:1): 5% margin; TOP 10% calm for the logo; BOTTOM 18% calm for the proof footer; product base above that line.
-```
-> GPT Image 2.5 lands the product 8–15% LOWER than the LAYOUT block asks (batch-4 PT-141, 2026-10-29: "base at 48%" came back at
-> 58–65%). Ask for the lowest element at **40%** (cap/nozzle tip at 13%) to get ~50%. `finish_batch.py` then shifts the image up by
-> whatever headroom is left under the logo band (max 320 px) before it refuses; a refusal means one reposition edit (1 credit).
-```
-> Sermorelin batch 4 (2026-10-29, main): asking high works ("ends above 72%" gave 0 reposition edits in 3 vs 6 in 7 for a loose
-> range). With the safe-area footer, say "the lowest element ends at 40%" with the same firmness.
-```
-Bottle wording for the PRODUCT block, per strength (both: "amber glass jar with a black ribbed cap; deep red label with
-the vertical white EVERLIFE wordmark, a white 'RX' box top right, small text 'PRESCRIPTION', '30 TABLETS'"), plus:
-- **1000 mcg** (checked against `assets/sghk1000_bottle_ref.jpg`, 2026-10-28): white band 'SERMORELIN GHK 1000', '1000 MCG'.
-- **500 mcg** (checked against `assets/sghk500_bottle.png`, 2026-10-28): white band 'SERMORELIN GHK', '500 MCG'.
-- **Either:** use the bottle on file and its wording.
-QA that the label shows the session's strength (1000 vs 500), not the other one. Never describe the tablet in words.
-
-## 4. After the batch
-- **Post every finished ad (Ad Review, `core/ad-review/AD-REVIEW.md` §4):** after finishing, write each finished creative as an `entry` with its preview (no rating, no question to the operator), then `teamlog.py posted <job> <ad_id…>`. Reviewers flag the losers later; winners come from the data.
+## 3. Finishing
+`$T/finish_batch.py <raw> FINAL_<n>_<world>_<WxH>.png --ratio <9:16|4:5> --product sermorelin-ghk --proof <slot proof>` for every raw of
+every ad, both sizes. Collisions with the proof row → the `free-fix` skill (0 cr) first; else re-roll that size (cost shown).
+Output: `~/Everlife-Creative/output/Sermorelin GHK/<date>_batch-<n>/` with `prompts.md`, `deal.json`, both contact sheets. Post finals to
+Ad Review; log waves with `teamlog.py gens --wave`; append headlines to `~/Everlife-Creative/sermorelin-ghk-copy-log.md`;
+`deal_worlds.py --product sermorelin-ghk --n <N> --log` once approved.

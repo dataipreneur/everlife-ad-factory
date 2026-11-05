@@ -7,6 +7,7 @@ claims or disclaimers still needs Jeremy.
 
 | Date | Asked by (via) | Request | What changed | Branch / PR |
 |---|---|---|---|---|
+| 2026-11-05 | Mitansh | "make all of my skills, all 16, highly creative, diverse" like the Restora-Z 2nd batch; "bare minimums": 4:5 AND 9:16 in one batch, post-editing by Claude; "Dont touch the videos"; fix the image questions; clean the skills | World Deck (132 worlds from batch 2) + dealer + shared `image-flow.md`; 15 skills' image side rebuilt to one question + product facts; lint | `world-deck-golden-flow` |
 | 2026-11-04 | Priestley | "I want to be wary of token usage bcoz of this logging system" → "Yes" (lean version + posting check in PR #49) | teamlog.py summary / gens / light / pending / sent / posted, one-line output, run_id + offer-wording + Titan-Rx checks; Stop hook checks unsent records and unposted ads; 14 skills' log lines (Restora-Z not edited) | `teamlog-fixes` (PR #49) |
 | 2026-11-04 | Priestley | "Fix first 2" (start times typed after the end; proof records on the wrong page) | teamlog.py: start from the first generation, page printed per record; 8 runs + 30 proofs corrected on the pages | `teamlog-fixes` |
 | 2026-11-03 | Team (via Priestley) | "we need to be able to basically flag and report losers but not winners. winners will be identified by the data"; flags "ingest[ed] back into the system"; reviewers Justin / Sarah / lead / Jeremy | Ad Review page + protocol replace the Winners Board; skills read flags before batches and post every finished ad | `ad-review` |

@@ -5,10 +5,6 @@ description: EverlifeMD plain Sermorelin ad factory (the single-peptide sublingu
 
 # Sermorelin Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE = `core/references/creative-system.md` §2b (Mitansh, 2026-11-04, every product, every image batch; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after, then finish and QA both sizes together on one sheet. Quote 2 credits per ad (GPT Image 2.5). Both sizes are drafts: creative review + Jeremy's sign-off still come first.
-
 > **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
 
 > **📋 TEAM VIDEO RULES = `core/references/video-team-rules.md` (Mitansh, 2026-11-03, HARD, every video; for every teammate):** scripts are a clear mini-story (problem → why → product → what it does → offer → urgent CTA), never cryptic fragments, problem said in the first ~1–2 s, no specific ages; show scripts as plain chat text and end the turn (no popup over them); no paid re-take without an explicit "go" (free fix first, never speed up talking); men's music = trap-metal or walk-out, never taiko; winners to reuse: ⚔️ Animated Warriors, 🚗 Car Throw Review.
@@ -82,13 +78,19 @@ If everything is ✅, say so in one line and go straight to step 1.
 - Read all references in ONE Bash call (`cat` them together), once per session.
 - Start the generation, then do the copy log and job folder while it renders.
 
-## Step 1 — Setup (every question has a ✨ Recommended first option)
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · who's in them · form, only if the product has
+  several), then `deal_worlds.py` picks the mix and you write every ad from its slot. Never ask for mood, style, palette, copy
+  density, boldness, hook angle, placement or framework: the dealer varies them per slot and the batch table shows the picks.
+  Product-specific copy rules: `references/image-batch.md` §0.
+- **Video / Avatar** → the video setup below, unchanged.
+
+### Video setup (unchanged; images never use these questions)
 **One AskUserQuestion, 2–3 questions:**
 1. **Audience:** "Men 35–65 (Recommended)" / "Women 35–65" / "Both (5 each)". This picks the bible page (headlines, benefits). Bible v3 sets no colour limit for Sermorelin; women's colours follow Justin's direction in `image-batch.md` §2b (preferred pinks, tans, neutrals, warm tones, white, teal).
 2. **Strength:** "1000 mcg · Double Strength (Recommended for men)" / "1000 mcg, strength not mentioned (Recommended for women)" / "500 mcg". It decides which bottle the ad shows (QA checks the label). "Double Strength Sermorelin" is a men's bible headline and the hook of 4 of 5 men's winners: only with the 1000 mcg bottle in frame. Never state a dose in mcg.
-3. **What are we making?** "🖼️ Image ads: batch of 5 (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video".
 - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left over animated B-roll stills; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own single setup question). This skill's casting, claims, colours and banned settings still apply; one B-roll shot shows the tablet held between thumb and index; men's presenter = fit silver fox, fully clothed.
-- **Images** → `references/image-batch.md` (its own setup question; never show video styles to an image run).
 - **Video** → ONE AskUserQuestion with: **Placement** "9:16 Reels/Stories (Recommended)" / "4:5 Feed" / "1:1"; **Style** "✨ Recommend for me (Recommended)" + the 3 best-fitting categories from `styles/INDEX.md`; **Angle** "✨ Auto (Recommended)" / 3 approved territories (energy + stamina · strength + vitality · natural growth hormone support · healthy aging).
 
 ## Step 2 — Style details (only when the user wants to choose or see examples)

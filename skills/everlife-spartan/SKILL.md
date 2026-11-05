@@ -5,10 +5,6 @@ description: EverlifeMD Spartan Stack ad factory (peptide recovery stack, compou
 
 # Spartan Stack Ad Factory
 
-> **⛔ PROMPT LAYOUT ZONES = `core/references/prompt-layout-zones.md` (Mitansh, 2026-11-04, HARD, every image prompt for every product; OVERRIDES every LAYOUT line, top %, width %, margin or "base at" number in this skill and its references):** every 9:16 and 4:5 image prompt (new ads, resizes, re-rolls, edits, Seedance start frames, any model) carries that file's STRICT LAYOUT block with its numbers: 9:16 = ZONE A y 0-330 of 2048 (top 16%) empty, ZONE B 16-56% all text + product (product base ~39%, CTA above 46%), ZONE C 56-100% plain calm surface, everything inside x 190-960 of 1152 (central 67%); 4:5 = top 14% empty, top-to-bottom order headline → lines → CTA → product LAST and lowest (base ~63%), bottom 33% plain. Assign proof rows only to layouts with a natural shelf (product-low or person-led layouts = no proof), name the surfaces, never draw logos/stars/small print, check the prompt before sending, QA every raw against the zones; the finisher auto-lifts every ad so the headline starts right under the logo (free, sharp; see the zones file 7b); a miss after that = re-roll; never the finisher shift, pad, blur or haze.
-
-> **📐 BOTH SIZES AT ONCE = `core/references/creative-system.md` §2b (Mitansh, 2026-11-04, every product, every image batch; overrides every "images are made at 9:16; the other ratio comes from the approved masters" / "9:16 of the winners" / `compose916.py` line in this skill for IMAGES):** every image ad is generated in **9:16 AND 4:5 in the same run**, each as its own fresh render (never crop, pad, stretch or paste one size into the other). Write both prompts per ad before the first submit, fire all 9:16s, then all 4:5s straight after, then finish and QA both sizes together on one sheet. Quote 2 credits per ad (GPT Image 2.5). Both sizes are drafts: creative review + Jeremy's sign-off still come first.
-
 > **💊 PEPTIDE LIST ON EVERY AD (bible 2026-11-03, mandatory for every stack):** every Spartan Stack ad shows **"BPC-157 / TB-500 / KPV"**, clearly and legibly: supporting copy, a subheadline or an ingredient callout. Statics: on the design, in 4:5 AND 9:16. Videos: on screen, at least on the end card (and in the header where it fits). Clean and premium: it never overwhelms the headline or the vial. "Spartan Stack" alone fails QA. (The names appear together, never one benefit per peptide.)
 
 > **🏆 VIDEO WINNERS = `core/references/video-winners.md` (Mitansh, 2026-11-03: "These videos should be refered! BY all video making skills"):** before writing ANY video concept (every format), open that file and the closest winner's frame sheet in `core/references/video-winners/`, name the winner the concept is modelled on, and keep its structure (frame-0 action, problem in the first 1–2 s, clear mini-story, offer-first CTA). Reuse the format, never the lines.
@@ -112,10 +108,15 @@ If everything is ✅, say so in one line and go straight to step 1.
 - **Never read tool source code.** Copy keys, layouts and commands are in the reference files.
 - Read all references in ONE Bash call (`cat` them together), once per session.
 
-## Step 1 — Setup (every question has a ✨ Recommended first option)
-**Never asked:** audience (active men 25–55, the bible's audience).
+## Step 1 — Setup (one question for images; video setup unchanged below)
+**Question A, alone:** "What are we making?" → "🖼️ Image ads: 8 in both sizes (Recommended)" / "🎬 Video ad" / "🧑‍💼 AI Avatar Video" / "🔁 Remake one of ours".
+- **Images** → `core/references/image-flow.md` §1: ONE AskUserQuestion (how many · who's in them · form, only if the product has
+  several), then `deal_worlds.py` picks the mix and you write every ad from its slot. Never ask for mood, style, palette, copy
+  density, boldness, hook angle, placement or framework: the dealer varies them per slot and the batch table shows the picks.
+  Product-specific copy rules: `references/image-batch.md` §0.
+- **Video / Avatar** → the video setup below, unchanged.
 
-**Question A, alone:** "What are we making?" → "🖼️ Image ads: batch of 4 (Recommended)" / "🧑‍💼 AI Avatar Video" / "🎬 Video ad or 🎞️ animated still (an
+### Video setup (unchanged; images never use these questions)
 approved static + 8 s of motion, Seedance; a follow-up question picks which)" / "🔁 Spin a borrowed winner (`references/winners/winners.md`)". (AskUserQuestion takes at most 4 options.)
 - **🧑‍💼 AI Avatar Video** → follow `core/references/ai-avatar-video.md` end to end — **⛔ ALL on Creatify, 0 Higgsfield, ever (Mitansh 2026-11-02): Creatify Seedance 2.5 presenter + Boreal-H3 background + Lyria music** (presenter on green with a tiny wireless mic, keyed lower-left
   over the animated Boreal-H3 background built from the real renders; 15 s ≈ 22 / 10 s ≈ 17 Creatify credits, 0 Higgsfield; its own
