@@ -4,7 +4,7 @@
     bible_pipeline.py sync <saved.html> [--commit] [--release]
         1 guard + convert the saved live page → core/claude/creative-bible.md (bible_sync.py --write, refuses a weak parse)
         2 regenerate every product skill: references/bible.json, product-bible.md, product-brief.md, product.json disclaimer
-        3 skill_lint.py (strict) + core/tests/bible_pipeline_test.py + core/tests/batch_gate_test.py + core/tests/dealer_audience_test.py
+        3 skill_lint.py (strict) + core/tests/bible_pipeline_test.py + core/tests/batch_gate_test.py + core/tests/dealer_audience_test.py + core/tests/price_plan_test.py
         4 report: version, sections changed → skills, NEW lines for Jeremy, retired lines, offers/CTAs that changed; CHANGELOG entry
         --commit   also commit on the current branch (never main)            ← only on Mitansh's go
         --release  also merge into main, push, and build the team patch         ← only on Mitansh's go
@@ -55,7 +55,7 @@ def lint(strict=True):
 
 
 def tests():
-    for t in ("bible_pipeline_test.py", "batch_gate_test.py", "dealer_audience_test.py"):
+    for t in ("bible_pipeline_test.py", "batch_gate_test.py", "dealer_audience_test.py", "price_plan_test.py"):
         p = os.path.join(REPO, "core", "tests", t)
         if not os.path.exists(p): continue
         r = run([PY, "-I", p], check=False)

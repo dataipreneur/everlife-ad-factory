@@ -102,10 +102,7 @@ def main():
     deal = subprocess.run([sys.executable, os.path.join(SCRIPTS, "deal_worlds.py"), "--product", "pt-141", "--n", "1", "--seed", "3", "--json"], capture_output=True, text=True, env=env).stdout
     open(os.path.join(job, "deal.json"), "w").write(deal)
     ok("gate passes a correct prompt (bible CTA, quick-hit line)", hook("gate", prompt(job, "Plans are optional.", "Save Up to 59%"), env) == {})
-    rows = json.loads(deal); rows[0]["cta_kind"], rows[0]["cta"] = "price", "PT-141 for $2.00/day"   # the price CTA runs on the slot dealt it (price_plan.py)
-    open(os.path.join(job, "deal.json"), "w").write(json.dumps(rows))
     ok("gate passes the price CTA", hook("gate", prompt(job, "Plans are optional.", "PT-141 for $2.00/day"), env) == {})
-    open(os.path.join(job, "deal.json"), "w").write(deal)
     d = hook("gate", prompt(job, "Plans are optional.", "Get Started Now"), env)
     ok("gate refuses a retired CTA", "removed from the bible" in deny_reason(d), deny_reason(d)[:120])
     d = hook("gate", prompt(job, "Plans are optional.", "Find Your Plan"), env)
