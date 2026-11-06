@@ -63,7 +63,7 @@ if "pill" not in C:
 C["keep_case"] = PR["keep_case"]
 # Footer / disclaimer haze strength (0 = none). OFF by default (Mitansh 2026-11-04: the creative director flagged "the blurry
 # area behind the Trustpilot footer" all day). EVERLIFE_SCRIM=1 brings the old dark band back.
-SCRIM = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+SCRIM = float(os.environ.get("EVERLIFE_SCRIM", "1"))
 VTONE = sf.video_tone(a.clip, FF)   # no haze any more: footer text colour follows the footage behind it
 PROOF = sf.proof_of(C)   # trust row or customer-count line, one per video (bible 2026-11-02, ~60/40)
 C.setdefault("pill_scale", PR.get("pill_end_scale", 1))  # end-card pill size vs the default (round tablets < 1)

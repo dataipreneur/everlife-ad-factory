@@ -101,7 +101,7 @@ spill. All dialogue is third-person or pronoun-free; nobody says I, me or my." T
 the product (attached reference, exact) is still and label-readable for 0.6 s inside the central safe column. No slow fade-in,
 no establishing shot, no static opening frame."
 **Start frame (mandatory for physical hooks, learned 2026-10-30):** text-only Seedance ignores "frame 0 mid-action" (it opened on a
-still glass). First make a ~1 Creatify cr still of the exact hook moment (`gpt-image-2.5-sunburst/edit` on Creatify, 9:16, the product references attached, faces below
+still glass). First make a ~1 Creatify cr still of the exact hook moment (`composer_edit_image` on the Ad Agent connector, 1.0 cr flat, never the Playground; 9:16, the product references attached, faces below
 the top 25%), show it to the user, then pass it as the video's START image. Put the 0.0 s sound in the HOOK block AND as the first
 AUDIO item. Write dialogue to end by ~11 s ("all dialogue ends by 11 seconds"). Prefer non-alcoholic props near an Rx product.
 

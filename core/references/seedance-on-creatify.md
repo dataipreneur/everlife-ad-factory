@@ -21,7 +21,7 @@ any Seedance, image-to-video, animated-still or start-frame step through Higgsfi
 ## How (proven 2026-11-03 on Wolverine V3 "Breakthrough" and V4 "Run-Through")
 1. Upload each reference (the product render, the hook still): `creatify.upload_file(filename, content_type)` → PUT the bytes to
    `upload_url` with `curl -X PUT -H "Content-Type: …" --data-binary @file` → use `cdn_url`.
-2. Start still (~1 cr): `model_playground_generate("gpt-image-2.5-sunburst/edit", {image_urls:[render cdn_url], image_size:
+2. Start still (1.0 cr flat, Ad Agent connector `composer_edit_image`, never the Playground for images; Mitansh 2026-11-05). Old Playground form, do not use: `model_playground_generate("gpt-image-2.5-sunburst/edit", {image_urls:[render cdn_url], image_size:
    "portrait_16_9", quality:"high", prompt})`. Download the output, LOOK at it, show it.
 3. Video: `model_playground_generate("bytedance/seedance-2.5/reference-to-video", {image_urls:[start still, product render],
    duration:"15", aspect_ratio:"9:16", resolution:"720p", generate_audio:true, prompt})`. Refer to the images in the prompt as

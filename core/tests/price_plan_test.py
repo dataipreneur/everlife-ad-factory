@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.join(REPO, 'core', 'scripts'))
 HOOK = os.path.join(REPO, 'core', 'hooks', 'batch_hook.py')
 DEAL = os.path.join(REPO, 'core', 'scripts', 'deal_worlds.py')
 PLAN = os.path.join(REPO, 'core', 'scripts', 'price_plan.py')
-TOOL = 'mcp__creatify__model_playground_generate'
+TOOL = 'mcp__plugin_creatify-ad-agent_creatify-ad-agent__composer_edit_image'
 fails = []
 
 

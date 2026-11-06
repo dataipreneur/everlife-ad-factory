@@ -129,7 +129,7 @@ class Ad:
         probe = Image.open(f"{T}/assets/proof_row_clear.png")
         top = H - (int(probe.height * rw / probe.width) + 18 + 24 * len(dl) + 26)
         # no haze behind the footer by default (Mitansh 2026-11-04); text colour follows the art behind it
-        k = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+        k = float(os.environ.get("EVERLIFE_SCRIM", "1"))
         if k:
             fade(self.img, top - int(300 * self.k), H, 0, int(228 * k))
         tone = "dark" if k else sf.tone_of(self.img, top, H)

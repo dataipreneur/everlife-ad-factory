@@ -202,7 +202,7 @@ class Modern:
 
     # ---------------- layout: footer size, headline size, photo placement
     def art(self, name, scale):
-        im = Image.open(f"{FOOT}/{name}_{self.tone}.png").convert("RGBA")
+        im = sf.badge_art(self.tone) if name == "badge" else sf.open_footer_art(f"{FOOT}/{name}_{self.tone}.png")   # badge = the ONE master
         return im.resize((max(1, int(im.width * scale)), max(1, int(im.height * scale))), Image.LANCZOS)
 
     def art_scale(self):
@@ -365,7 +365,7 @@ class Modern:
 
     def footer(self):
         """Feed footer without the panel fade (default since 2026-11-04): its art/text tone follows the photo behind it."""
-        if self.card or float(os.environ.get("EVERLIFE_SCRIM", "0")):
+        if self.card or float(os.environ.get("EVERLIFE_SCRIM", "1")):
             return self._footer()
         keep = self.tone
         self.tone = sf.tone_of(self.img, self.footer_top, self.H)
@@ -388,7 +388,7 @@ class Modern:
             cd = Image.new("RGBA", (W, H), (0, 0, 0, 0))
             ImageDraw.Draw(cd).rounded_rectangle([cx0, top, cx1, self.bottom], 30, fill=self.panel + (240,))
             self.img.alpha_composite(cd)
-        elif float(os.environ.get("EVERLIFE_SCRIM", "0")):   # old full-width panel fade, OFF by default (Mitansh 2026-11-04)
+        elif float(os.environ.get("EVERLIFE_SCRIM", "1")):   # old full-width panel fade, OFF by default (Mitansh 2026-11-04)
             fade = 130
             band = Image.new("RGBA", (W, H - top + fade))
             bd = ImageDraw.Draw(band)

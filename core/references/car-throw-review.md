@@ -30,7 +30,7 @@ breakdown to camera, ending on an urgent spoken CTA. It's simple UGC, and it doe
 - ~40–45 spoken words over **20 s at a relaxed pace** (15 s came out too fast to follow).
 
 ## Recipe (Creatify only, 0 Higgsfield; ≈ 47 Creatify)
-1. **Start still** (≈ 1 cr, `gpt-image-2.5-sunburst/edit`, refs = the bottle render): dashboard-phone view of the person in the
+1. **Start still** (1.0 cr, `composer_edit_image` on the Ad Agent connector, never the Playground, refs = the bottle render): dashboard-phone view of the person in the
    driver's seat; the sealed bottle **clearly mid-air near the open passenger window, cap ON**, a friend's blurred arm outside;
    the person's **hands still down**, head turning toward it. (The first attempt showed the catch already happening, and the
    video then opened with the bottle already in hand: the throw was lost.) Face 20–42% of the height, bottom 37% steering wheel.

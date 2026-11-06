@@ -33,6 +33,7 @@ except Exception:                        # a half-installed copy: the copy gate 
 OUT = os.path.join(HOME, "output")
 REF = re.compile(r"Reference only, never render: everlife slot=(\d+) ratio=(9:16|4:5|1:1) product=([a-z0-9-]+) job=(\S+)")
 IMAGE_TOOL = re.compile(r"model_playground_generate|edit_image|gpt[-_]image|image_generate|generate_image", re.I)
+VIDEO_MODEL = re.compile(r"video|seedance|boreal|wan|kling|veo|aurora|lip|avatar", re.I)   # Playground video models pass the connector-only rule
 SIZES = {"9:16": "1080x1920", "4:5": "1080x1350", "1:1": "1080x1080"}
 ASK_HEADER = "next batch"          # the questionnaire's first question carries this header (AskUserQuestion, max 12 chars)
 ASKED = "next_asked.json"          # written into the job folder once the questionnaire has been asked
@@ -171,6 +172,11 @@ def price_gate(row, product, txt):
 def gate(p):
     tool, tin = p.get("tool_name", ""), p.get("tool_input", {}) or {}
     if not is_everlife_image(tool, tin): return
+    if "model_playground_generate" in tool and not VIDEO_MODEL.search(str(tin.get("model_name", ""))):   # Mitansh 2026-11-05: "always use the agent connector which costs 1 per image! always!"
+        return deny("Everlife images go through the Ad Agent connector, never the Model Playground: "
+                    "`composer_edit_image` (GPT Image 2.5, 2K, 1.0 credit flat per image). The Playground's GPT Image 2.5 bills "
+                    "by quality and defaults to 2.5 credits (it cost 2.5 on 2026-11-05). Same prompt, same references "
+                    "(composer_import_asset the render once), aspect_ratio 9:16 / 4:5 (core/references/image-models.md).")
     ref = find_ref(tin)
     txt = "\n".join(strings(tin))
     if not ref:
