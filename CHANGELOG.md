@@ -2,6 +2,38 @@
 
 Originals of every edited file are kept in `_originals/<date>/` (same relative path).
 
+## 2026-11-05 · Images = Ad Agent connector only (1 credit flat)
+- Mitansh: "always use the agent connector which costs 1 per image! always!" A MOTS-c test image went through the Model Playground (GPT Image 2.5 at the default quality `max` = 2.5 credits) because image-flow.md §5 said `model_playground_generate`.
+- `core/hooks/batch_hook.py gate` now REFUSES any Everlife image on the Model Playground (video models pass) and points to `composer_edit_image`; test added (`core/tests/batch_gate_test.py`).
+- image-flow.md, image-models.md, resizing SKILL.md, seedance-on-creatify.md, car-throw-review.md, HOOK-ENGINE.md: every image/start still → `composer_edit_image`, 1.0 cr.
+
+## 2026-11-05 — Ghosted Trustpilot rows: cause found, badge rebuilt, solid-art gate (Mitansh: "fix them for once and for all")
+Mitansh showed five NAD+ 4:5 ads whose Trustpilot stars, "4.9" and "EXCELLENT" were see-through (wood / marble showing through, grey stars).
+- **Cause:** `core/tools/assets/footer/badge_light.png` was cut on 2026-10-27 by keying the reference panel's light background out, and the
+  badge's own white pixels went with it (~80% of them at ~20% opacity; measured). The dark badge was keyed against a dark panel and is fine.
+  Nobody saw it until 2026-11-04: with the footer haze band the finisher drew the DARK badge; the no-haze footer (14:02 that day) put the
+  row straight on the photo, light backgrounds switched to the light badge, and every light ad since then ghosted. The file is in every
+  zip since Oct 27 (the 11-02 team zip included), so teammates on a zip still produce it.
+- `make_footer_assets.py`: the badge now comes from the approved row too (`badge_from_approved_row`): cut on luminance against the white
+  paper (full JPEG resolution), the green/teal shapes hole-filled so the stars / "4.9" / "EXCELLENT" are solid, the wordmark recoloured
+  per tone, the 1 px seams between the boxes carved; the removebg `user/` badge is now the fallback. Doctor / Ships ink curve hardened
+  (lum ≤ 155 solid) and faint haze (alpha < 24) cut, so the truck's thin lines are solid too.
+- `standard_footer.py`: **solid-art gate** `open_footer_art()` / `assert_solid_footer_art()`: a piece or row whose visible interior (3 px
+  in) or whose green shapes' insides are > 1% see-through is refused with a plain message. `finish_batch.art`, `finish_modern`,
+  `count_row_badge` and `row_art` (videos: premium_finish, full_layout) all load through it. The Oct-27 badge and the 15:53 local
+  ships piece are refused; every new piece passes at 0.0%. `make_footer_assets.py` runs the same check on each piece it saves.
+- Copied to `~/Everlife-Creative/tools` (code, pieces, composed rows). Before / after mock-ups of the five NAD+ ads + one real re-finish
+  (`_NAD-916/raw/nd04.png`) in `~/Everlife-Creative/output/_footer-fix-2026-11-05/`. Teammates need a new zip / patch: the fix is assets + code.
+  Originals in `_originals/2026-11-05/footer-solid/`.
+
+## 2026-11-05 — Trust row pieces replaced with the approved art (Mitansh: "Try to directly include these")
+Mitansh sent the approved proof row (Trustpilot 4.9 badge · heart-plus "DOCTOR PRESCRIBED" · truck "SHIPS FREE FROM PHARMACY"). The finisher
+already builds the row from three transparent pieces; the Doctor / Ships pieces were an older circle-icon design in thin spaced caps.
+- `core/tools/assets/footer/doctor_{light,dark}.png`, `ships_{light,dark}.png`: keyed from the sent row at 1:1 (black on white → alpha),
+  white or near-black fill, canvas 143 px like before, content in the reference's proportion to the badge. The badge art is unchanged.
+  Old pieces in `_originals/2026-11-05/footer-pieces/`. No code change: every `finish_batch.py` run (images) now lays the new row.
+- Before / after on PT-141 batch-17 (ad 1 dark 9:16 + 4:5, ad 3 light 4:5): same size, same position, new art.
+
 ## 2026-11-05 — Price plan follows the bible's new "Pricing & CTA mix": price HEADLINES (10% daily, Sermorelin 5% monthly)
 Why: bible 1793919328-c260 (PR #65) replaced the single "price on 10% of all ads" line with Standards 03 · Pricing & CTA mix: **daily pricing is a
 HEADLINE ("[Product Name] for only $X.XX/day") on 10% of all creatives; Sermorelin (Men and Women) gets the HEADLINE "Starting at $95/month" on 5%;

@@ -1,5 +1,7 @@
 # Everlife IMAGE flow (shared, every product) — the Restora-Z 2nd-batch recipe, made repeatable
 
+> **⛔ Images = the Ad Agent connector, ALWAYS (Mitansh 2026-11-05, HARD, every product, every image incl. start stills and resizes):** `composer_edit_image` (GPT Image 2.5, 2K, **1.0 credit flat per image**; `composer_import_asset` the render once per project, then pass its project path in `images`). **Never `model_playground_generate` for an image:** the Playground bills GPT Image 2.5 by quality and defaults to `max` = 2.5 credits (cost 2.5 on 2026-11-05). `batch_hook.py gate` refuses it. Playground stays for VIDEO models only (Seedance, Boreal).
+
 This is the golden flow from the Restora-Z batches of 2026-10-27/29 (235 ads, the team's diversity bar; local copy:
 `~/Everlife-Creative/references/restora-z-2nd-batch-2026-10-29/`, contact sheets in `_sheets/`). It is product-neutral.
 Each product skill adds only its facts (`product.json`, `references/product-bible.md`, its `image-batch.md` §0 copy rules).
@@ -124,7 +126,7 @@ Attach: bottle render, tablet render (if any), Trustpilot badge is NOT attached 
 reference ad: only you look at references.
 
 ## 5. Generate, both sizes, no pauses
-Fire every 9:16 (`model_playground_generate` GPT Image 2.5 on Creatify, 4 in flight), then every 4:5 straight after.
+Fire every 9:16 (`composer_edit_image` on the Ad Agent connector: GPT Image 2.5, 1.0 credit flat per image, 4 in flight; NEVER the Model Playground, which costs up to 2.5), then every 4:5 straight after.
 Download all raws, then `finish_batch.py <raw> <final> --ratio <r> --product <id> --proof <slot proof>` for each; the
 finisher refuses a raw whose content runs under the proof row: fix with the free-fix skill (0 cr), else re-roll that size.
 Log each generation (`teamlog.py gens --wave`), one record per wave.
@@ -159,7 +161,7 @@ These are the steps the old per-skill files carried; they live here once now. Co
 | 4 | Deal | `deal_worlds.py --product <id> --n N --audience A [--prefer …] [--skip …] --json > <job>/deal.json` (the MANIFEST: N slots × 2 ratios owed); proof per slot follows `finish_batch.py --proof-plan N` (42/28/30); price headline per slot: daily price on ~10% of ads, Sermorelin "Starting at $95/month" on ~5% (`price_plan.py`, shares read from the bible, kept in `~/Everlife-Creative/price-ledger.jsonl`; `--log` records the batch) | code |
 | 5 | Write | every ad: 9:16 prompt AND 4:5 prompt, each with its STRICT LAYOUT block (`prompt-layout-zones.md`), copy inside the Hard NOs; `prompts.md` | you + lint on the prompt (zones present) |
 | 6 | Approve | one AskUserQuestion with the cost: "Generate all N in both sizes (≈2N credits, includes one re-make per ad if needed)" | gate: never spend without it |
-| 7 | Generate | all 9:16 raws, then all 4:5 raws (GPT Image 2.5 on Creatify, 4 in flight); never crop / pad / mirror one size into the other. Every prompt ends with the batch reference line; the gate hook refuses it otherwise and counts what was fired | **code: `batch_hook.py gate` + `fired`** |
+| 7 | Generate | all 9:16 raws, then all 4:5 raws (`composer_edit_image`, Ad Agent connector, 1.0 cr/image, 4 in flight; never the Playground); never crop / pad / mirror one size into the other. Every prompt ends with the batch reference line; the gate hook refuses it otherwise and counts what was fired | **code: `batch_hook.py gate` + `fired`** |
 | 8 | Log generations | `teamlog.py gens <job> --wave W.json` per wave (exact prompt, model, cost, slot) | TEAM-LOGS §2 |
 | 9 | Finish | `finish_batch.py <raw> FINAL_<n>_<world>_<WxH>.png --ratio <r> --product <id> --proof <slot proof>` for EVERY raw of EVERY ad, both sizes: logo at the top, proof row inside the safe area (ends ≤ y 1385; on a collision the finisher drops it by the minimum needed, up to 20% of the height, approved 2026-11-05), verbatim disclaimer + AI disclosure from `product.json`; refuses a raw that runs under the footer → `free-fix` (0 cr) → else one re-make | code (`safezones.py`, `standard_footer.py`) |
 | 10 | QA | Read every final (text exact, legible, nothing covered, world recognisable, both sizes present); `teamlog.py qa <job> <doc_id…> --pass/--fail`; one automatic re-make per failed size inside the budget | you + TEAM-LOGS |

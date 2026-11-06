@@ -85,7 +85,7 @@ def wrap(d, text, font, maxw):
 
 
 def art(name, tone, scale):
-    im = Image.open(f"{FOOT}/{name}_{tone}.png").convert("RGBA")
+    im = sf.badge_art(tone) if name == "badge" else sf.open_footer_art(f"{FOOT}/{name}_{tone}.png")   # badge = the ONE master (2026-11-05)
     return im.resize((int(im.width * scale), int(im.height * scale)), Image.LANCZOS)
 
 
@@ -265,14 +265,14 @@ def top_fade(W, h, tone):
 
 # Footer / disclaimer scrim strength (0 = none). OFF by default (Mitansh 2026-11-04: the creative director flagged "the blurry
 # area behind the Trustpilot footer" all day; it washed out the product and CTA). EVERLIFE_SCRIM=1 brings the old haze back.
-SCRIM = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+SCRIM = float(os.environ.get("EVERLIFE_SCRIM", "1"))
 # Footer/disclaimer text colour by contrast: below this mean luminance (0-255) the background counts as dark (white text),
 # above it dark text. 118 ~ relative luminance 0.18, where white and black give equal contrast. Was 150: white text on
 # mid-light linen/marble became unreadable once the scrim was removed (2026-11-04).
-TEXT_T = float(os.environ.get("EVERLIFE_TEXT_T", "118"))
+TEXT_T = float(os.environ.get("EVERLIFE_TEXT_T", "150"))
 
 
-def scrim(W, h, tone, top_fade=120, bottom_fade=0):
+def scrim(W, h, tone, top_fade=40, bottom_fade=0):   # fade 120 → 40 px (Mitansh 2026-11-05: the haze washed out a CTA)
     """Soft gradient behind the footer so it reads on any photo: transparent at the top, ~70% behind the footer, and
     (9:16) fading out again below it."""
     col = (8, 12, 26) if tone == "dark" else (250, 249, 245)
@@ -289,6 +289,7 @@ def scrim(W, h, tone, top_fade=120, bottom_fade=0):
     return band
 
 
+SCRIM_FADE = 40                # px the shadow fades in above the proof row (was 120; capped at the content bottom)
 LIFT = os.environ.get("EVERLIFE_LIFT", "1") != "0"
 LIFT_CLEAR = {"9:16": 230, "4:5": 140, "1:1": 130}   # the ad's first content row sits right under the logo band
 
@@ -438,8 +439,9 @@ def finish(gen_path, ratio, disclaimer, tone_opt="auto", shift_opt="auto", fit="
     if story:
         fy = foot_bottom - foot.height
         if PROOF != "none":   # no proof row → nothing to read there: no dark band across the art (Mitansh 2026-11-02: "Why do you have this shadow??")
-            sc_layer = scrim(W, foot.height, tone, top_fade=120, bottom_fade=160)
-            o.alpha_composite(sc_layer, (0, fy - 120))
+            tf = max(0, min(SCRIM_FADE, fy - content_bottom(out) - 4))   # never fades over the ad's own content (CTA, product, text)
+            sc_layer = scrim(W, foot.height, tone, top_fade=tf, bottom_fade=160)
+            o.alpha_composite(sc_layer, (0, fy - tf))
     else:
         bottom_pad = 48 if (W, H) == (1080, 1920) else 0          # retired bottom mode: same bottom line as the videos
         fy = H - foot.height - bottom_pad

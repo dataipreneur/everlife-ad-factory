@@ -32,9 +32,9 @@ Scripts: `~/.claude/skills/resizing/scripts/` (setup.py, put.sh, finish.sh, shee
 3. **Cost**: ~1 Creatify credit per ad + ~10-15% re-rolls. State it; the user's "go"/"do it" is the approval. Creatify only, never Higgsfield.
 4. **Upload**: `mcp__creatify__upload_file` (filename, image/png) per ad → `put.sh <work> <id> '<upload_url>'` (expect 200;
    on 400 get a fresh link). Request links in parallel batches of 5-7; links live 1 h.
-5. **Generate** (`mcp__creatify__model_playground_generate`, model `gpt-image-2.5-sunburst/edit`, `quality: high`,
-   `output_format: png`, keep one `project_id` for the batch). `image_size`: 9:16 → `portrait_16_9`; 4:5 → `portrait_5_4`
-   (returns 832x1040, finisher upscales). Append `id<TAB>asset_id<TAB>proof` to `<work>/assets.tsv` right away.
+5. **Generate** on the Ad Agent connector ONLY (Mitansh 2026-11-05: 1.0 credit flat per image; the Playground is refused by the gate):
+   `composer_import_asset` the uploaded ad (its cdn_url) into one composer project, then `composer_edit_image(project_id, prompt,
+   images=[<its project path>], out=gen/<id>.png, aspect_ratio="9:16"|"4:5")` → `composer_task_status` → download the result. Append `id<TAB>asset_id<TAB>proof` to `<work>/assets.tsv` right away.
 6. **Prompt template** (fill per ad):
    ```
    Resize the attached <4:5|9:16> ad into a <9:16 vertical (1080x1920)|4:5 feed (1080x1350)> ad. Keep the SAME design:

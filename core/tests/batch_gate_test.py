@@ -5,7 +5,7 @@
 
 Proves, with fake prompts in a temp batch folder:
   gate   refuses an Everlife image prompt without the reference line · refuses a ratio mismatch · refuses a slot not in deal.json
-         · allows a correct prompt · ignores a video / non-Everlife prompt
+         · refuses the Model Playground (connector only, 1 cr) · allows a correct prompt · ignores a video / non-Everlife prompt
   fired  counts (slot, ratio) once per call
   stop   blocks while a size or a FINAL is owed, names exactly what is owed; once both sizes are finished it blocks until the
          next-batch questionnaire (an AskUserQuestion headed "Next batch") is asked, then stays silent; released batches owe nothing
@@ -16,7 +16,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 HOOK = os.path.join(REPO, 'core', 'hooks', 'batch_hook.py')
 CHECK = os.path.join(REPO, 'core', 'scripts', 'batch_check.py')
 DEAL = os.path.join(REPO, 'core', 'scripts', 'deal_worlds.py')
-TOOL = 'mcp__creatify__model_playground_generate'
+TOOL = 'mcp__plugin_creatify-ad-agent_creatify-ad-agent__composer_edit_image'
 fails = []
 
 
@@ -52,7 +52,12 @@ def main():
     d = hook('gate', prompt(7, '9:16', job), env).get('hookSpecificOutput', {})
     ok('gate refuses a slot that is not in deal.json', d.get('permissionDecision') == 'deny' and 'not in' in d.get('permissionDecisionReason', ''))
     ok('gate allows a correct prompt (silent)', hook('gate', prompt(1, '9:16', job), env) == {})
+    pg = dict(prompt(1, '9:16', job)); pg['tool_name'] = 'mcp__creatify__model_playground_generate'
+    d = hook('gate', pg, env).get('hookSpecificOutput', {})
+    ok('gate refuses an Everlife image on the Model Playground (2.5 cr) → connector only (1 cr)', d.get('permissionDecision') == 'deny' and 'composer_edit_image' in d.get('permissionDecisionReason', ''))
     ok('gate ignores a video prompt', hook('gate', {'tool_name': TOOL, 'tool_input': {'prompt': 'HOOK 0.0–1.5 s: a bottle flies across the gym'}}, env) == {})
+    vid = {'tool_name': 'mcp__creatify__model_playground_generate', 'tool_input': {'model_name': 'bytedance/seedance-2.5/reference-to-video', 'input_params': {'prompt': 'HOOK 0.0–1.5 s: Sermorelin GHK by Everlife, a bottle flies across the gym'}}}
+    ok('gate lets a Seedance video on the Playground through (videos are not images)', 'composer_edit_image' not in json.dumps(hook('gate', vid, env)))
 
     for s, r in [(1, '9:16'), (2, '9:16'), (1, '4:5')]:
         hook('fired', prompt(s, r, job), env)

@@ -16,7 +16,7 @@ import bible_model as bm  # noqa: E402
 import bible_sync  # noqa: E402
 
 HOOK = os.path.join(REPO, "core", "hooks", "batch_hook.py")
-TOOL = "mcp__creatify__model_playground_generate"
+TOOL = 'mcp__plugin_creatify-ad-agent_creatify-ad-agent__composer_edit_image'
 fails = []
 
 

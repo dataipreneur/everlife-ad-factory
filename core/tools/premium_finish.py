@@ -168,7 +168,7 @@ def product_group(img, cx, y, bh, pill_w, glow):
 
 def bottom_layers(scrim_rgb=(6, 10, 14)):
     # haze behind the footer OFF by default (Mitansh 2026-11-04: "the blurry area behind the Trustpilot footer"); EVERLIFE_SCRIM=1 = old band
-    k = float(os.environ.get("EVERLIFE_SCRIM", "0"))
+    k = float(os.environ.get("EVERLIFE_SCRIM", "1"))
     scr = canvas()
     if k: vgrad(scr, 960, 1300, 0, int(175 * k), scrim_rgb); vgrad(scr, 1300, 1920, int(175 * k), int(230 * k), scrim_rgb)
     scr.save(f"{L}/scrim.png")
